@@ -1,0 +1,36 @@
+{
+  "dataset": "vic-measles-exposure-sites",
+  "version": "2026-10-03",
+  "as_at": "",
+  "fetched_at": "2026-10-02T19:52:50+00:00",
+  "sha256": "d2612e349eb554d0be72107dd4cac6fab115c8c5fa2e6b36e6f7df15e91b2b94",
+  "bytes": 135,
+  "filename": "pub.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTey0eyH7cmyTVHqNS2wZCDYs2V9ML8HES4_CEx_jvndyM9VXAQEwbI32VZQrVJ27Grly5PrwBeAR3Q/pub?output=csv",
+    "portal": "https://discover.data.vic.gov.au",
+    "package": "measles-public-exposure-sites-in-victoria",
+    "package_id": "4b06bb83-b4bc-43fb-ba25-964b21d4f8bd",
+    "resource": "1714643a-2ddf-42fc-84de-b04fed98d3b5",
+    "resource_name": "Measles public exposure sites in Victoria",
+    "resource_last_modified": null,
+    "package_modified": "2026-08-03T00:24:44.843189",
+    "package_version": null,
+    "etag": "",
+    "http_last_modified": ""
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution 4.0 International",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://discover.data.vic.gov.au/api/3/action/package_show?id=measles-public-exposure-sites-in-victoria",
+    "read_at": "2026-10-02T19:52:46+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [
+    "The publisher serves this as a live feed of what is current, with no change date, so this version is what the feed held when it was fetched, dated by the fetch."
+  ],
+  "rows_sha256": "59efecda43c949b0e3bebf066f389a4513f8843bb75a31da98b59c0d3774d5e2"
+}

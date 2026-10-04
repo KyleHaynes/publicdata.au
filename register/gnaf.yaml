@@ -1,0 +1,1292 @@
+slug: gnaf
+kind: database
+title: Geocoded National Address File (G-NAF), Geoscape
+status: live
+topics:
+- housing
+- government
+order: 30
+publisher:
+  name: Geoscape Australia
+  short: Geoscape
+  jurisdiction: Cth
+  url: https://geoscape.com.au/
+licence:
+  id: OPEN-GNAF-EULA
+  reviewed: '2026-10-01'
+  portal_id: cc-by-4.0
+  evidence: https://data.gov.au/data/dataset/geocoded-national-address-file-g-naf
+  attribution: Incorporates or developed using G-NAF © Geoscape Australia licensed by the Commonwealth
+    of Australia under the Open Geo-coded National Address File (G-NAF) End User Licence Agreement, sourced
+    {sourced}, https://data.gov.au/data/dataset/geocoded-national-address-file-g-naf.
+source:
+  adapter: ckan-resource
+  portal: https://data.gov.au/data/
+  url: https://data.gov.au/data/dataset/geocoded-national-address-file-g-naf
+  package: geocoded-national-address-file-g-naf
+  resource_match: GDA2020$
+  cadence: quarterly
+search_title: G-NAF download (Geocoded National Address File)
+also_known_as:
+- G-NAF
+- GNAF
+- Geocoded National Address File
+- PSMA G-NAF
+- Australian address database
+keywords:
+- G-NAF
+- addresses
+- geocoded addresses
+- address database
+- Geoscape
+- PSMA
+- mesh block
+- locality
+- street
+- Australia
+row_label: Rows
+summary: 'Every physical address in Australia with its geocode, street, locality, postcode and mesh block,
+  as Geoscape''s quarterly G-NAF release: 37 related tables with about 131 million rows in all, including
+  about 17 million addresses, served as one DuckDB database and one Parquet file per table.'
+description: |-
+  G-NAF is the Geocoded National Address File, the address database Geoscape Australia builds from the address data of the states, territories and the Commonwealth and publishes each quarter on data.gov.au. Each release is a set of pipe-separated files that make up a relational database: addresses, the sites and geocodes behind them, aliases, streets, localities, states and the ABS mesh block each address falls in, with lookup tables for every code.
+
+  This site serves each release as one DuckDB database holding every table, the keys and references between them and Geoscape's own address view, which joins an address to its street, locality, state and default geocode. The same tables are also served as one Parquet file each. The database attaches read-only over HTTPS, so a query over addresses runs without downloading the release. Coordinates are GDA2020.
+faq:
+- q: What is the condition on use?
+  a: 'The Open G-NAF End User Licence Agreement is CC BY 4.0 with one condition added: the data must not
+    be used to generate an address, or a compilation of addresses, for the sending of mail unless each
+    address has been verified as capable of receiving mail by reference to a secondary source. Geoscape''s
+    fact sheet on the restriction is on the source page. Everything else CC BY 4.0 allows, this licence
+    allows, with the attribution kept.'
+- q: Which coordinate system is it in?
+  a: GDA2020. Geoscape publishes a GDA94 release beside it, which this site does not serve.
+- q: Where do I start?
+  a: The address_view view is one row per address with its street, locality, state, postcode and default
+    geocode already joined, from Geoscape's own script. The address_detail table is the same addresses
+    with every field and the keys into the other tables. Every code column has a lookup table ending in
+    _aut.
+- q: Why is there no CSV or Excel file?
+  a: A release is 37 tables and about 131 million rows, which is not one spreadsheet. The DuckDB file
+    holds every table and attaches over HTTPS, and each table is also a Parquet file that pandas, R, Spark
+    and DuckDB read directly. The publisher's pipe-separated files are beside every version as source.zip.
+- q: Does it include G-NAF Core?
+  a: No. G-NAF Core is a flattened single-table cut Geoscape publishes on its own site. The address view
+    here serves the same purpose from the full release.
+query: false
+database:
+  member_match: (?:[A-Z]{2,3}_|Authority_Code_)(?P<table>[A-Z0-9_]+)_psv\.psv$
+  delimiter: '|'
+  encoding: utf-8
+tables:
+- name: address_detail
+  source: ADDRESS_DETAIL
+  description: 'One row per address: its building, lot, flat, level and street numbers, the street and
+    locality it sits in, its postcode and confidence, and the dates it was created, last changed and retired.'
+  key:
+  - address_detail_pid
+  fields:
+  - name: address_detail_pid
+    source: ADDRESS_DETAIL_PID
+    type: string
+    description: The persistent identifier of the address, which never changes.
+  - name: date_created
+    source: DATE_CREATED
+    type: date
+    description: The date the row was created in G-NAF.
+  - name: date_last_modified
+    source: DATE_LAST_MODIFIED
+    type: date
+    description: The date the row last changed.
+  - name: date_retired
+    source: DATE_RETIRED
+    type: date
+    description: The date the row was retired. Blank for a current row.
+  - name: building_name
+    source: BUILDING_NAME
+    type: string
+    description: The building's name, where it has one.
+  - name: lot_number_prefix
+    source: LOT_NUMBER_PREFIX
+    type: string
+    description: The prefix of the lot number.
+  - name: lot_number
+    source: LOT_NUMBER
+    type: string
+    description: The lot number, for an address with no street number.
+  - name: lot_number_suffix
+    source: LOT_NUMBER_SUFFIX
+    type: string
+    description: The suffix of the lot number.
+  - name: flat_type_code
+    source: FLAT_TYPE_CODE
+    type: string
+    description: The kind of flat, from flat_type_aut.
+    references: flat_type_aut.code
+  - name: flat_number_prefix
+    source: FLAT_NUMBER_PREFIX
+    type: string
+    description: The prefix of the flat number.
+  - name: flat_number
+    source: FLAT_NUMBER
+    type: integer
+    description: The flat, unit, apartment or shop number.
+  - name: flat_number_suffix
+    source: FLAT_NUMBER_SUFFIX
+    type: string
+    description: The suffix of the flat number.
+  - name: level_type_code
+    source: LEVEL_TYPE_CODE
+    type: string
+    description: The kind of level, from level_type_aut.
+    references: level_type_aut.code
+  - name: level_number_prefix
+    source: LEVEL_NUMBER_PREFIX
+    type: string
+    description: The prefix of the level number.
+  - name: level_number
+    source: LEVEL_NUMBER
+    type: integer
+    description: The level number within the building.
+  - name: level_number_suffix
+    source: LEVEL_NUMBER_SUFFIX
+    type: string
+    description: The suffix of the level number.
+  - name: number_first_prefix
+    source: NUMBER_FIRST_PREFIX
+    type: string
+    description: The prefix of the first street number.
+  - name: number_first
+    source: NUMBER_FIRST
+    type: integer
+    description: The street number, or the first of a range.
+  - name: number_first_suffix
+    source: NUMBER_FIRST_SUFFIX
+    type: string
+    description: The suffix of the first street number.
+  - name: number_last_prefix
+    source: NUMBER_LAST_PREFIX
+    type: string
+    description: The prefix of the last street number.
+  - name: number_last
+    source: NUMBER_LAST
+    type: integer
+    description: The last street number of a range.
+  - name: number_last_suffix
+    source: NUMBER_LAST_SUFFIX
+    type: string
+    description: The suffix of the last street number.
+  - name: street_locality_pid
+    source: STREET_LOCALITY_PID
+    type: string
+    description: The street within a locality, from street_locality.
+    references: street_locality.street_locality_pid
+  - name: location_description
+    source: LOCATION_DESCRIPTION
+    type: string
+    description: A description of the location, for an address with no street.
+  - name: locality_pid
+    source: LOCALITY_PID
+    type: string
+    description: The locality, from locality.
+    references: locality.locality_pid
+  - name: alias_principal
+    source: ALIAS_PRINCIPAL
+    type: string
+    description: P for a principal address, A for an alias.
+  - name: postcode
+    source: POSTCODE
+    type: string
+    description: The postcode, as text.
+  - name: private_street
+    source: PRIVATE_STREET
+    type: string
+    description: The private street name, for an address on one.
+  - name: legal_parcel_id
+    source: LEGAL_PARCEL_ID
+    type: string
+    description: The legal parcel identifier of the land, where known.
+  - name: confidence
+    source: CONFIDENCE
+    type: integer
+    description: How many of the contributors hold the address, less one. A value below 0 means the address
+      was retired by every contributor.
+  - name: address_site_pid
+    source: ADDRESS_SITE_PID
+    type: string
+    description: The address site, from address_site.
+    references: address_site.address_site_pid
+  - name: level_geocoded_code
+    source: LEVEL_GEOCODED_CODE
+    type: integer
+    description: The level the address is geocoded to, from geocoded_level_type_aut.
+    references: geocoded_level_type_aut.code
+  - name: property_pid
+    source: PROPERTY_PID
+    type: string
+    description: The property the address belongs to, where known.
+  - name: gnaf_property_pid
+    source: GNAF_PROPERTY_PID
+    type: string
+    description: The G-NAF property identifier, where known.
+  - name: primary_secondary
+    source: PRIMARY_SECONDARY
+    type: string
+    description: P for a primary address, S for a secondary one such as a flat, blank where neither.
+- name: address_default_geocode
+  source: ADDRESS_DEFAULT_GEOCODE
+  description: 'The default geocode of each address: the longitude and latitude Geoscape recommends for
+    it and the type of feature the point sits on.'
+  key:
+  - address_default_geocode_pid
+  fields:
+  - name: address_default_geocode_pid
+    source: ADDRESS_DEFAULT_GEOCODE_PID
+    type: string
+    description: The persistent identifier of the default geocode.
+  - name: date_created
+    source: DATE_CREATED
+    type: date
+    description: The date the row was created in G-NAF.
+  - name: date_retired
+    source: DATE_RETIRED
+    type: date
+    description: The date the row was retired. Blank for a current row.
+  - name: address_detail_pid
+    source: ADDRESS_DETAIL_PID
+    type: string
+    description: The persistent identifier of the address.
+    references: address_detail.address_detail_pid
+  - name: geocode_type_code
+    source: GEOCODE_TYPE_CODE
+    type: string
+    description: What the point sits on, from geocode_type_aut.
+    references: geocode_type_aut.code
+  - name: longitude
+    source: LONGITUDE
+    type: number
+    description: Longitude in decimal degrees, GDA2020.
+  - name: latitude
+    source: LATITUDE
+    type: number
+    description: Latitude in decimal degrees, GDA2020.
+- name: address_site
+  source: ADDRESS_SITE
+  description: The site an address refers to, with its type and name. Several addresses can share one
+    site.
+  key:
+  - address_site_pid
+  fields:
+  - name: address_site_pid
+    source: ADDRESS_SITE_PID
+    type: string
+    description: The address site, from address_site.
+  - name: date_created
+    source: DATE_CREATED
+    type: date
+    description: The date the row was created in G-NAF.
+  - name: date_retired
+    source: DATE_RETIRED
+    type: date
+    description: The date the row was retired. Blank for a current row.
+  - name: address_type
+    source: ADDRESS_TYPE
+    type: string
+    description: The kind of site, from address_type_aut.
+    references: address_type_aut.code
+  - name: address_site_name
+    source: ADDRESS_SITE_NAME
+    type: string
+    description: The name of the site, where it has one.
+- name: address_site_geocode
+  source: ADDRESS_SITE_GEOCODE
+  description: Every geocode held for an address site, with its type, reliability and the elevation and
+    boundary extent where known.
+  key:
+  - address_site_geocode_pid
+  fields:
+  - name: address_site_geocode_pid
+    source: ADDRESS_SITE_GEOCODE_PID
+    type: string
+    description: The persistent identifier of the geocode.
+  - name: date_created
+    source: DATE_CREATED
+    type: date
+    description: The date the row was created in G-NAF.
+  - name: date_retired
+    source: DATE_RETIRED
+    type: date
+    description: The date the row was retired. Blank for a current row.
+  - name: address_site_pid
+    source: ADDRESS_SITE_PID
+    type: string
+    description: The address site, from address_site.
+    references: address_site.address_site_pid
+  - name: geocode_site_name
+    source: GEOCODE_SITE_NAME
+    type: string
+    description: The name of the feature the geocode sits on.
+  - name: geocode_site_description
+    source: GEOCODE_SITE_DESCRIPTION
+    type: string
+    description: A description of the feature the geocode sits on.
+  - name: geocode_type_code
+    source: GEOCODE_TYPE_CODE
+    type: string
+    description: What the point sits on, from geocode_type_aut.
+    references: geocode_type_aut.code
+  - name: reliability_code
+    source: RELIABILITY_CODE
+    type: integer
+    description: How reliable the geocode is, from geocode_reliability_aut.
+    references: geocode_reliability_aut.code
+  - name: boundary_extent
+    source: BOUNDARY_EXTENT
+    type: integer
+    description: The extent of the boundary the geocode was derived from, in metres, where known.
+  - name: planimetric_accuracy
+    source: PLANIMETRIC_ACCURACY
+    type: integer
+    description: The planimetric accuracy of the point, in metres, where known.
+  - name: elevation
+    source: ELEVATION
+    type: integer
+    description: The elevation of the point, in metres, where known.
+  - name: longitude
+    source: LONGITUDE
+    type: number
+    description: Longitude in decimal degrees, GDA2020.
+  - name: latitude
+    source: LATITUDE
+    type: number
+    description: Latitude in decimal degrees, GDA2020.
+- name: address_alias
+  source: ADDRESS_ALIAS
+  description: Pairs of addresses where one is an alias of the other, with the type of alias.
+  key:
+  - address_alias_pid
+  fields:
+  - name: address_alias_pid
+    source: ADDRESS_ALIAS_PID
+    type: string
+    description: The persistent identifier of the alias pair.
+  - name: date_created
+    source: DATE_CREATED
+    type: date
+    description: The date the row was created in G-NAF.
+  - name: date_retired
+    source: DATE_RETIRED
+    type: date
+    description: The date the row was retired. Blank for a current row.
+  - name: principal_pid
+    source: PRINCIPAL_PID
+    type: string
+    description: The principal address, from address_detail.
+    references: address_detail.address_detail_pid
+  - name: alias_pid
+    source: ALIAS_PID
+    type: string
+    description: The alias address, from address_detail.
+    references: address_detail.address_detail_pid
+  - name: alias_type_code
+    source: ALIAS_TYPE_CODE
+    type: string
+    description: The kind of alias, from the lookup table.
+    references: address_alias_type_aut.code
+  - name: alias_comment
+    source: ALIAS_COMMENT
+    type: string
+    description: A note on the alias.
+- name: address_feature
+  source: ADDRESS_FEATURE
+  description: 'Address features: a record per address of the change that created it, kept so a release
+    can be compared with the one before.'
+  key:
+  - address_feature_id
+  fields:
+  - name: address_feature_id
+    source: ADDRESS_FEATURE_ID
+    type: string
+    description: The identifier of the feature row.
+  - name: address_feature_pid
+    source: ADDRESS_FEATURE_PID
+    type: string
+    description: The persistent identifier of the feature.
+  - name: address_detail_pid
+    source: ADDRESS_DETAIL_PID
+    type: string
+    description: The persistent identifier of the address.
+    references: address_detail.address_detail_pid
+  - name: date_address_detail_created
+    source: DATE_ADDRESS_DETAIL_CREATED
+    type: date
+    description: The date the address was created.
+  - name: date_address_detail_retired
+    source: DATE_ADDRESS_DETAIL_RETIRED
+    type: date
+    description: The date the address was retired, where it has been.
+  - name: address_change_type_code
+    source: ADDRESS_CHANGE_TYPE_CODE
+    type: string
+    description: The kind of change, from address_change_type_aut.
+    references: address_change_type_aut.code
+- name: primary_secondary
+  source: PRIMARY_SECONDARY
+  description: Links a secondary address, such as a flat, to its primary address.
+  key:
+  - primary_secondary_pid
+  fields:
+  - name: primary_secondary_pid
+    source: PRIMARY_SECONDARY_PID
+    type: string
+    description: The persistent identifier of the link.
+  - name: primary_pid
+    source: PRIMARY_PID
+    type: string
+    references: address_detail.address_detail_pid
+  - name: secondary_pid
+    source: SECONDARY_PID
+    type: string
+    description: The secondary address, from address_detail.
+    references: address_detail.address_detail_pid
+  - name: date_created
+    source: DATE_CREATED
+    type: date
+    description: The date the row was created in G-NAF.
+  - name: date_retired
+    source: DATE_RETIRED
+    type: date
+    description: The date the row was retired. Blank for a current row.
+  - name: ps_join_type_code
+    source: PS_JOIN_TYPE_CODE
+    type: integer
+    description: The kind of link, from ps_join_type_aut.
+    references: ps_join_type_aut.code
+  - name: ps_join_comment
+    source: PS_JOIN_COMMENT
+    type: string
+    description: A note on the link.
+- name: street_locality
+  source: STREET_LOCALITY
+  description: One row per street within a locality, with the street's name, type, suffix and class.
+  key:
+  - street_locality_pid
+  fields:
+  - name: street_locality_pid
+    source: STREET_LOCALITY_PID
+    type: string
+    description: The street within a locality, from street_locality.
+  - name: date_created
+    source: DATE_CREATED
+    type: date
+    description: The date the row was created in G-NAF.
+  - name: date_retired
+    source: DATE_RETIRED
+    type: date
+    description: The date the row was retired. Blank for a current row.
+  - name: street_class_code
+    source: STREET_CLASS_CODE
+    type: string
+    description: The class of street, from street_class_aut.
+    references: street_class_aut.code
+  - name: street_name
+    source: STREET_NAME
+    type: string
+    description: The street's name without its type.
+  - name: street_type_code
+    source: STREET_TYPE_CODE
+    type: string
+    description: The street type, from street_type_aut.
+    references: street_type_aut.code
+  - name: street_suffix_code
+    source: STREET_SUFFIX_CODE
+    type: string
+    description: The street suffix, from street_suffix_aut.
+    references: street_suffix_aut.code
+  - name: locality_pid
+    source: LOCALITY_PID
+    type: string
+    description: The locality, from locality.
+    references: locality.locality_pid
+  - name: gnaf_street_pid
+    source: GNAF_STREET_PID
+    type: string
+  - name: gnaf_street_confidence
+    source: GNAF_STREET_CONFIDENCE
+    type: integer
+  - name: gnaf_reliability_code
+    source: GNAF_RELIABILITY_CODE
+    type: integer
+    description: How reliable the locality's point is, from geocode_reliability_aut.
+    references: geocode_reliability_aut.code
+- name: street_locality_alias
+  source: STREET_LOCALITY_ALIAS
+  description: Alternative names for a street within a locality.
+  key:
+  - street_locality_alias_pid
+  fields:
+  - name: street_locality_alias_pid
+    source: STREET_LOCALITY_ALIAS_PID
+    type: string
+    description: The persistent identifier of the alias.
+  - name: date_created
+    source: DATE_CREATED
+    type: date
+    description: The date the row was created in G-NAF.
+  - name: date_retired
+    source: DATE_RETIRED
+    type: date
+    description: The date the row was retired. Blank for a current row.
+  - name: street_locality_pid
+    source: STREET_LOCALITY_PID
+    type: string
+    description: The street within a locality, from street_locality.
+    references: street_locality.street_locality_pid
+  - name: street_name
+    source: STREET_NAME
+    type: string
+    description: The street's name without its type.
+  - name: street_type_code
+    source: STREET_TYPE_CODE
+    type: string
+    description: The street type, from street_type_aut.
+    references: street_type_aut.code
+  - name: street_suffix_code
+    source: STREET_SUFFIX_CODE
+    type: string
+    description: The street suffix, from street_suffix_aut.
+    references: street_suffix_aut.code
+  - name: alias_type_code
+    source: ALIAS_TYPE_CODE
+    type: string
+    description: The kind of alias, from the lookup table.
+    references: street_locality_alias_type_aut.code
+- name: street_locality_point
+  source: STREET_LOCALITY_POINT
+  description: A representative point for each street within a locality.
+  key:
+  - street_locality_point_pid
+  fields:
+  - name: street_locality_point_pid
+    source: STREET_LOCALITY_POINT_PID
+    type: string
+    description: The persistent identifier of the point.
+  - name: date_created
+    source: DATE_CREATED
+    type: date
+    description: The date the row was created in G-NAF.
+  - name: date_retired
+    source: DATE_RETIRED
+    type: date
+    description: The date the row was retired. Blank for a current row.
+  - name: street_locality_pid
+    source: STREET_LOCALITY_PID
+    type: string
+    description: The street within a locality, from street_locality.
+    references: street_locality.street_locality_pid
+  - name: boundary_extent
+    source: BOUNDARY_EXTENT
+    type: integer
+    description: The extent of the boundary the geocode was derived from, in metres, where known.
+  - name: planimetric_accuracy
+    source: PLANIMETRIC_ACCURACY
+    type: integer
+    description: The planimetric accuracy of the point, in metres, where known.
+  - name: longitude
+    source: LONGITUDE
+    type: number
+    description: Longitude in decimal degrees, GDA2020.
+  - name: latitude
+    source: LATITUDE
+    type: number
+    description: Latitude in decimal degrees, GDA2020.
+- name: locality
+  source: LOCALITY
+  description: One row per locality, which is a suburb, town or district, with its name, class, state
+    and primary postcode.
+  key:
+  - locality_pid
+  fields:
+  - name: locality_pid
+    source: LOCALITY_PID
+    type: string
+    description: The locality, from locality.
+  - name: date_created
+    source: DATE_CREATED
+    type: date
+    description: The date the row was created in G-NAF.
+  - name: date_retired
+    source: DATE_RETIRED
+    type: date
+    description: The date the row was retired. Blank for a current row.
+  - name: locality_name
+    source: LOCALITY_NAME
+    type: string
+    description: The locality's name.
+  - name: primary_postcode
+    source: PRIMARY_POSTCODE
+    type: string
+    description: The locality's primary postcode.
+  - name: locality_class_code
+    source: LOCALITY_CLASS_CODE
+    type: string
+    description: The class of locality, from locality_class_aut.
+    references: locality_class_aut.code
+  - name: state_pid
+    source: STATE_PID
+    type: string
+    description: The state or territory, from state.
+    references: state.state_pid
+  - name: gnaf_locality_pid
+    source: GNAF_LOCALITY_PID
+    type: string
+    description: The G-NAF locality identifier.
+  - name: gnaf_reliability_code
+    source: GNAF_RELIABILITY_CODE
+    type: integer
+    description: How reliable the locality's point is, from geocode_reliability_aut.
+    references: geocode_reliability_aut.code
+- name: locality_alias
+  source: LOCALITY_ALIAS
+  description: Alternative names for a locality.
+  key:
+  - locality_alias_pid
+  fields:
+  - name: locality_alias_pid
+    source: LOCALITY_ALIAS_PID
+    type: string
+    description: The persistent identifier of the alias.
+  - name: date_created
+    source: DATE_CREATED
+    type: date
+    description: The date the row was created in G-NAF.
+  - name: date_retired
+    source: DATE_RETIRED
+    type: date
+    description: The date the row was retired. Blank for a current row.
+  - name: locality_pid
+    source: LOCALITY_PID
+    type: string
+    description: The locality, from locality.
+    references: locality.locality_pid
+  - name: name
+    source: NAME
+    type: string
+    description: The alias name, or the lookup value's name.
+  - name: postcode
+    source: POSTCODE
+    type: string
+    description: The postcode, as text.
+  - name: alias_type_code
+    source: ALIAS_TYPE_CODE
+    type: string
+    description: The kind of alias, from the lookup table.
+    references: locality_alias_type_aut.code
+  - name: state_pid
+    source: STATE_PID
+    type: string
+    description: The state or territory, from state.
+- name: locality_neighbour
+  source: LOCALITY_NEIGHBOUR
+  description: Pairs of localities that share a boundary.
+  key:
+  - locality_neighbour_pid
+  fields:
+  - name: locality_neighbour_pid
+    source: LOCALITY_NEIGHBOUR_PID
+    type: string
+    description: The persistent identifier of the pair.
+  - name: date_created
+    source: DATE_CREATED
+    type: date
+    description: The date the row was created in G-NAF.
+  - name: date_retired
+    source: DATE_RETIRED
+    type: date
+    description: The date the row was retired. Blank for a current row.
+  - name: locality_pid
+    source: LOCALITY_PID
+    type: string
+    description: The locality, from locality.
+    references: locality.locality_pid
+  - name: neighbour_locality_pid
+    source: NEIGHBOUR_LOCALITY_PID
+    type: string
+    description: The neighbouring locality, from locality.
+    references: locality.locality_pid
+- name: locality_point
+  source: LOCALITY_POINT
+  description: A representative point for each locality.
+  key:
+  - locality_point_pid
+  fields:
+  - name: locality_point_pid
+    source: LOCALITY_POINT_PID
+    type: string
+    description: The persistent identifier of the point.
+  - name: date_created
+    source: DATE_CREATED
+    type: date
+    description: The date the row was created in G-NAF.
+  - name: date_retired
+    source: DATE_RETIRED
+    type: date
+    description: The date the row was retired. Blank for a current row.
+  - name: locality_pid
+    source: LOCALITY_PID
+    type: string
+    description: The locality, from locality.
+    references: locality.locality_pid
+  - name: planimetric_accuracy
+    source: PLANIMETRIC_ACCURACY
+    type: integer
+    description: The planimetric accuracy of the point, in metres, where known.
+  - name: longitude
+    source: LONGITUDE
+    type: number
+    description: Longitude in decimal degrees, GDA2020.
+  - name: latitude
+    source: LATITUDE
+    type: number
+    description: Latitude in decimal degrees, GDA2020.
+- name: state
+  source: STATE
+  description: The states and territories, by name and abbreviation.
+  key:
+  - state_pid
+  fields:
+  - name: state_pid
+    source: STATE_PID
+    type: string
+    description: The state or territory, from state.
+  - name: date_created
+    source: DATE_CREATED
+    type: date
+    description: The date the row was created in G-NAF.
+  - name: date_retired
+    source: DATE_RETIRED
+    type: date
+    description: The date the row was retired. Blank for a current row.
+  - name: state_name
+    source: STATE_NAME
+    type: string
+    description: The state or territory's name.
+  - name: state_abbreviation
+    source: STATE_ABBREVIATION
+    type: string
+    description: The state or territory's abbreviation, such as QLD.
+- name: address_mesh_block_2026
+  source: ADDRESS_MESH_BLOCK_2026
+  description: The ABS 2026 mesh block each address falls in, with how the match was made.
+  key:
+  - address_mesh_block_pid_2026
+  fields:
+  - name: address_mesh_block_pid_2026
+    source: ADDRESS_MESH_BLOCK_PID_2026
+    type: string
+    description: The persistent identifier of the match.
+  - name: date_created
+    source: DATE_CREATED
+    type: date
+    description: The date the row was created in G-NAF.
+  - name: date_retired
+    source: DATE_RETIRED
+    type: date
+    description: The date the row was retired. Blank for a current row.
+  - name: address_detail_pid
+    source: ADDRESS_DETAIL_PID
+    type: string
+    description: The persistent identifier of the address.
+    references: address_detail.address_detail_pid
+  - name: mb_match_code
+    source: MB_MATCH_CODE
+    type: string
+    description: How the address was matched to the mesh block, from mb_match_code_aut.
+    references: mb_match_code_aut.code
+  - name: mb_pid_2026
+    source: MB_PID_2026
+    type: string
+    description: The mesh block, from mb_2026.
+    references: mb_2026.mb_pid_2026
+- name: mb_2026
+  source: MB_2026
+  description: The ABS 2026 mesh block codes referred to by address_mesh_block_2026.
+  key:
+  - mb_pid_2026
+  fields:
+  - name: mb_pid_2026
+    source: MB_PID_2026
+    type: string
+    description: The mesh block, from mb_2026.
+  - name: date_created
+    source: DATE_CREATED
+    type: date
+    description: The date the row was created in G-NAF.
+  - name: date_retired
+    source: DATE_RETIRED
+    type: date
+    description: The date the row was retired. Blank for a current row.
+  - name: mb_code_2026
+    source: MB_CODE_2026
+    type: string
+    description: The ABS 2026 mesh block code.
+- name: address_mesh_block_2021
+  source: ADDRESS_MESH_BLOCK_2021
+  description: The ABS 2021 mesh block each address falls in, with how the match was made.
+  key:
+  - address_mesh_block_2021_pid
+  fields:
+  - name: address_mesh_block_2021_pid
+    source: ADDRESS_MESH_BLOCK_2021_PID
+    type: string
+    description: The persistent identifier of the match.
+  - name: date_created
+    source: DATE_CREATED
+    type: date
+    description: The date the row was created in G-NAF.
+  - name: date_retired
+    source: DATE_RETIRED
+    type: date
+    description: The date the row was retired. Blank for a current row.
+  - name: address_detail_pid
+    source: ADDRESS_DETAIL_PID
+    type: string
+    description: The persistent identifier of the address.
+    references: address_detail.address_detail_pid
+  - name: mb_match_code
+    source: MB_MATCH_CODE
+    type: string
+    description: How the address was matched to the mesh block, from mb_match_code_aut.
+    references: mb_match_code_aut.code
+  - name: mb_2021_pid
+    source: MB_2021_PID
+    type: string
+    description: The mesh block, from mb_2021.
+    references: mb_2021.mb_2021_pid
+- name: mb_2021
+  source: MB_2021
+  description: The ABS 2021 mesh block codes referred to by address_mesh_block_2021.
+  key:
+  - mb_2021_pid
+  fields:
+  - name: mb_2021_pid
+    source: MB_2021_PID
+    type: string
+    description: The mesh block, from mb_2021.
+  - name: date_created
+    source: DATE_CREATED
+    type: date
+    description: The date the row was created in G-NAF.
+  - name: date_retired
+    source: DATE_RETIRED
+    type: date
+    description: The date the row was retired. Blank for a current row.
+  - name: mb_2021_code
+    source: MB_2021_CODE
+    type: string
+    description: The ABS 2021 mesh block code.
+- name: address_mesh_block_2016
+  source: ADDRESS_MESH_BLOCK_2016
+  description: The ABS 2016 mesh block each address falls in, with how the match was made.
+  key:
+  - address_mesh_block_2016_pid
+  fields:
+  - name: address_mesh_block_2016_pid
+    source: ADDRESS_MESH_BLOCK_2016_PID
+    type: string
+    description: The persistent identifier of the match.
+  - name: date_created
+    source: DATE_CREATED
+    type: date
+    description: The date the row was created in G-NAF.
+  - name: date_retired
+    source: DATE_RETIRED
+    type: date
+    description: The date the row was retired. Blank for a current row.
+  - name: address_detail_pid
+    source: ADDRESS_DETAIL_PID
+    type: string
+    description: The persistent identifier of the address.
+    references: address_detail.address_detail_pid
+  - name: mb_match_code
+    source: MB_MATCH_CODE
+    type: string
+    description: How the address was matched to the mesh block, from mb_match_code_aut.
+    references: mb_match_code_aut.code
+  - name: mb_2016_pid
+    source: MB_2016_PID
+    type: string
+    description: The mesh block, from mb_2016.
+    references: mb_2016.mb_2016_pid
+- name: mb_2016
+  source: MB_2016
+  description: The ABS 2016 mesh block codes referred to by address_mesh_block_2016.
+  key:
+  - mb_2016_pid
+  fields:
+  - name: mb_2016_pid
+    source: MB_2016_PID
+    type: string
+    description: The mesh block, from mb_2016.
+  - name: date_created
+    source: DATE_CREATED
+    type: date
+    description: The date the row was created in G-NAF.
+  - name: date_retired
+    source: DATE_RETIRED
+    type: date
+    description: The date the row was retired. Blank for a current row.
+  - name: mb_2016_code
+    source: MB_2016_CODE
+    type: string
+    description: The ABS 2016 mesh block code.
+- name: address_alias_type_aut
+  source: ADDRESS_ALIAS_TYPE_AUT
+  description: 'Lookup: the kinds of address alias.'
+  key:
+  - code
+  fields:
+  - name: code
+    source: CODE
+    type: string
+    description: The code.
+  - name: name
+    source: NAME
+    type: string
+    description: The alias name, or the lookup value's name.
+  - name: description
+    source: DESCRIPTION
+    type: string
+    description: What the code means.
+- name: address_change_type_aut
+  source: ADDRESS_CHANGE_TYPE_AUT
+  description: 'Lookup: the kinds of change recorded in address_feature.'
+  key:
+  - code
+  fields:
+  - name: code
+    source: CODE
+    type: string
+    description: The code.
+  - name: name
+    source: NAME
+    type: string
+    description: The alias name, or the lookup value's name.
+  - name: description
+    source: DESCRIPTION
+    type: string
+    description: What the code means.
+- name: address_type_aut
+  source: ADDRESS_TYPE_AUT
+  description: 'Lookup: the kinds of address site.'
+  key:
+  - code
+  fields:
+  - name: code
+    source: CODE
+    type: string
+    description: The code.
+  - name: name
+    source: NAME
+    type: string
+    description: The alias name, or the lookup value's name.
+  - name: description
+    source: DESCRIPTION
+    type: string
+    description: What the code means.
+- name: flat_type_aut
+  source: FLAT_TYPE_AUT
+  description: 'Lookup: the kinds of flat, unit, apartment, shop and so on.'
+  key:
+  - code
+  fields:
+  - name: code
+    source: CODE
+    type: string
+    description: The code.
+  - name: name
+    source: NAME
+    type: string
+    description: The alias name, or the lookup value's name.
+  - name: description
+    source: DESCRIPTION
+    type: string
+    description: What the code means.
+- name: geocoded_level_type_aut
+  source: GEOCODED_LEVEL_TYPE_AUT
+  description: 'Lookup: the level an address is geocoded to, from locality down to the property.'
+  key:
+  - code
+  fields:
+  - name: code
+    source: CODE
+    type: integer
+    description: The code.
+  - name: name
+    source: NAME
+    type: string
+    description: The alias name, or the lookup value's name.
+  - name: description
+    source: DESCRIPTION
+    type: string
+    description: What the code means.
+- name: geocode_reliability_aut
+  source: GEOCODE_RELIABILITY_AUT
+  description: 'Lookup: how reliable a geocode is, as a code and a description.'
+  key:
+  - code
+  fields:
+  - name: code
+    source: CODE
+    type: integer
+    description: The code.
+  - name: name
+    source: NAME
+    type: string
+    description: The alias name, or the lookup value's name.
+  - name: description
+    source: DESCRIPTION
+    type: string
+    description: What the code means.
+- name: geocode_type_aut
+  source: GEOCODE_TYPE_AUT
+  description: 'Lookup: what feature a geocode point sits on, such as the building centroid, the frontage
+    or the property centroid.'
+  key:
+  - code
+  fields:
+  - name: code
+    source: CODE
+    type: string
+    description: The code.
+  - name: name
+    source: NAME
+    type: string
+    description: The alias name, or the lookup value's name.
+  - name: description
+    source: DESCRIPTION
+    type: string
+    description: What the code means.
+- name: level_type_aut
+  source: LEVEL_TYPE_AUT
+  description: 'Lookup: the kinds of level within a building.'
+  key:
+  - code
+  fields:
+  - name: code
+    source: CODE
+    type: string
+    description: The code.
+  - name: name
+    source: NAME
+    type: string
+    description: The alias name, or the lookup value's name.
+  - name: description
+    source: DESCRIPTION
+    type: string
+    description: What the code means.
+- name: locality_alias_type_aut
+  source: LOCALITY_ALIAS_TYPE_AUT
+  description: 'Lookup: the kinds of locality alias.'
+  key:
+  - code
+  fields:
+  - name: code
+    source: CODE
+    type: string
+    description: The code.
+  - name: name
+    source: NAME
+    type: string
+    description: The alias name, or the lookup value's name.
+  - name: description
+    source: DESCRIPTION
+    type: string
+    description: What the code means.
+- name: locality_class_aut
+  source: LOCALITY_CLASS_AUT
+  description: 'Lookup: the classes of locality.'
+  key:
+  - code
+  fields:
+  - name: code
+    source: CODE
+    type: string
+    description: The code.
+  - name: name
+    source: NAME
+    type: string
+    description: The alias name, or the lookup value's name.
+  - name: description
+    source: DESCRIPTION
+    type: string
+    description: What the code means.
+- name: mb_match_code_aut
+  source: MB_MATCH_CODE_AUT
+  description: 'Lookup: how an address was matched to its mesh block.'
+  key:
+  - code
+  fields:
+  - name: code
+    source: CODE
+    type: string
+    description: The code.
+  - name: name
+    source: NAME
+    type: string
+    description: The alias name, or the lookup value's name.
+  - name: description
+    source: DESCRIPTION
+    type: string
+    description: What the code means.
+- name: ps_join_type_aut
+  source: PS_JOIN_TYPE_AUT
+  description: 'Lookup: the kinds of link between a primary and a secondary address.'
+  key:
+  - code
+  fields:
+  - name: code
+    source: CODE
+    type: integer
+    description: The code.
+  - name: name
+    source: NAME
+    type: string
+    description: The alias name, or the lookup value's name.
+  - name: description
+    source: DESCRIPTION
+    type: string
+    description: What the code means.
+- name: street_class_aut
+  source: STREET_CLASS_AUT
+  description: 'Lookup: the classes of street.'
+  key:
+  - code
+  fields:
+  - name: code
+    source: CODE
+    type: string
+    description: The code.
+  - name: name
+    source: NAME
+    type: string
+    description: The alias name, or the lookup value's name.
+  - name: description
+    source: DESCRIPTION
+    type: string
+    description: What the code means.
+- name: street_locality_alias_type_aut
+  source: STREET_LOCALITY_ALIAS_TYPE_AUT
+  description: 'Lookup: the kinds of street alias.'
+  key:
+  - code
+  fields:
+  - name: code
+    source: CODE
+    type: string
+    description: The code.
+  - name: name
+    source: NAME
+    type: string
+    description: The alias name, or the lookup value's name.
+  - name: description
+    source: DESCRIPTION
+    type: string
+    description: What the code means.
+- name: street_suffix_aut
+  source: STREET_SUFFIX_AUT
+  description: 'Lookup: the street suffixes, such as North or Extension.'
+  key:
+  - code
+  fields:
+  - name: code
+    source: CODE
+    type: string
+    description: The code.
+  - name: name
+    source: NAME
+    type: string
+    description: The alias name, or the lookup value's name.
+  - name: description
+    source: DESCRIPTION
+    type: string
+    description: What the code means.
+- name: street_type_aut
+  source: STREET_TYPE_AUT
+  description: 'Lookup: the street types, such as Road, Street and Avenue.'
+  key:
+  - code
+  fields:
+  - name: code
+    source: CODE
+    type: string
+    description: The code.
+  - name: name
+    source: NAME
+    type: string
+    description: The alias name, or the lookup value's name.
+  - name: description
+    source: DESCRIPTION
+    type: string
+    description: What the code means.
+views:
+- name: address_view
+  description: One row per address with its street, locality, state, postcode and default geocode joined,
+    from Geoscape's address_view.sql script. Addresses with a confidence below 0 are left out, as the
+    script does.
+  example: postcode
+  sql: |-
+    SELECT
+    AD.ADDRESS_DETAIL_PID as ADDRESS_DETAIL_PID,
+    AD.STREET_LOCALITY_PID as STREET_LOCALITY_PID,
+    AD.LOCALITY_PID as LOCALITY_PID,
+    AD.BUILDING_NAME as BUILDING_NAME,
+    AD.LOT_NUMBER_PREFIX as LOT_NUMBER_PREFIX,
+    AD.LOT_NUMBER as LOT_NUMBER,
+    AD.LOT_NUMBER_SUFFIX as LOT_NUMBER_SUFFIX,
+    FTA.NAME as FLAT_TYPE,
+    AD.FLAT_NUMBER_PREFIX as FLAT_NUMBER_PREFIX,
+    AD.FLAT_NUMBER as FLAT_NUMBER,
+    AD.FLAT_NUMBER_SUFFIX as FLAT_NUMBER_SUFFIX,
+    LTA.NAME as LEVEL_TYPE,
+    AD.LEVEL_NUMBER_PREFIX as LEVEL_NUMBER_PREFIX,
+    AD.LEVEL_NUMBER as LEVEL_NUMBER,
+    AD.LEVEL_NUMBER_SUFFIX as LEVEL_NUMBER_SUFFIX,
+    AD.NUMBER_FIRST_PREFIX as NUMBER_FIRST_PREFIX,
+    AD.NUMBER_FIRST as NUMBER_FIRST,
+    AD.NUMBER_FIRST_SUFFIX as NUMBER_FIRST_SUFFIX,
+    AD.NUMBER_LAST_PREFIX as NUMBER_LAST_PREFIX,
+    AD.NUMBER_LAST as NUMBER_LAST,
+    AD.NUMBER_LAST_SUFFIX as NUMBER_LAST_SUFFIX,
+    SL.STREET_NAME as STREET_NAME,
+    SL.STREET_CLASS_CODE as STREET_CLASS_CODE,
+    SCA.NAME as STREET_CLASS_TYPE,
+    SL.STREET_TYPE_CODE as STREET_TYPE_CODE,
+    SL.STREET_SUFFIX_CODE as STREET_SUFFIX_CODE,
+    SSA.NAME as STREET_SUFFIX_TYPE,
+    L.LOCALITY_NAME as LOCALITY_NAME,
+    ST.STATE_ABBREVIATION as STATE_ABBREVIATION,
+    AD.POSTCODE as POSTCODE,
+    ADG.LATITUDE as LATITUDE,
+    ADG.LONGITUDE as LONGITUDE,
+    GTA.NAME as GEOCODE_TYPE,
+    AD.CONFIDENCE as CONFIDENCE,
+    AD.ALIAS_PRINCIPAL as ALIAS_PRINCIPAL,
+    AD.PRIMARY_SECONDARY as PRIMARY_SECONDARY,
+    AD.LEGAL_PARCEL_ID as LEGAL_PARCEL_ID,
+    AD.DATE_CREATED as DATE_CREATED
+    FROM
+    ADDRESS_DETAIL AD
+    LEFT JOIN FLAT_TYPE_AUT FTA ON AD.FLAT_TYPE_CODE=FTA.CODE
+    LEFT JOIN LEVEL_TYPE_AUT LTA ON AD.LEVEL_TYPE_CODE=LTA.CODE
+    JOIN STREET_LOCALITY SL ON AD.STREET_LOCALITY_PID=SL.STREET_LOCALITY_PID
+    LEFT JOIN STREET_SUFFIX_AUT SSA ON SL.STREET_SUFFIX_CODE=SSA.CODE
+    LEFT JOIN STREET_CLASS_AUT SCA ON SL.STREET_CLASS_CODE=SCA.CODE
+    LEFT JOIN STREET_TYPE_AUT STA ON SL.STREET_TYPE_CODE=STA.CODE
+    JOIN LOCALITY L ON AD.LOCALITY_PID = L.LOCALITY_PID
+    JOIN ADDRESS_DEFAULT_GEOCODE ADG ON AD.ADDRESS_DETAIL_PID=ADG.ADDRESS_DETAIL_PID
+    LEFT JOIN GEOCODE_TYPE_AUT GTA ON ADG.GEOCODE_TYPE_CODE=GTA.CODE
+    LEFT JOIN GEOCODED_LEVEL_TYPE_AUT GLTA ON AD.LEVEL_GEOCODED_CODE=GLTA.CODE
+    JOIN STATE ST ON L.STATE_PID=ST.STATE_PID
+    WHERE
+    AD.CONFIDENCE > -1

@@ -1,0 +1,422 @@
+slug: qld-public-library-council-statistics
+title: Public library statistics by council, Queensland
+status: live
+topics:
+- community
+order: 298
+collection: qld-public-libraries
+collection_title: Queensland public libraries
+search_title: Queensland public library statistics by council (State Library of Queensland)
+also_known_as:
+- Queensland public libraries annual statistics, council data
+- Queensland library loans and members by council
+keywords:
+- public library
+- library statistics
+- library loans
+- library members
+- council
+- Queensland
+faq:
+- q: What is in each row?
+  a: Each row is one council's library service for the financial year the file covers. It gives the population
+    served, grants, spending by category, the size of the physical and digital collection, items bought and
+    withdrawn, visits, loans of each kind, members, staff in full-time equivalents, programs and attendance,
+    public internet and Wi-Fi use, and the publisher's own per capita figures.
+- q: Are the per capita columns calculated here?
+  a: No. The per capita columns are in the publisher's file and are kept as published.
+- q: Which year does this cover?
+  a: The publisher adds one file per financial year. This entry follows the newest council file, which is 2024/2025
+    at the time of review, and each new year becomes a new version.
+summary: Spending, collections, loans, visits, members, staff and programs of each Queensland council's public
+  library service for the latest financial year.
+description: 'One row per council library service in Queensland for one financial year, from the annual statistics
+  the State Library of Queensland collects from councils. Columns cover the population served, the State Library
+  and First 5 Forever grants, expenditure by category, the collection by format, acquisitions and withdrawals,
+  physical and web visits, reference enquiries, reservations, loans and digital use, members, staff, programs
+  and their attendance by audience, public internet devices and Wi-Fi sessions. The publisher''s per capita
+  figures are included as published.
+
+
+  The publisher adds a new file for each financial year. This entry follows the newest.
+
+  '
+publisher:
+  name: State Library of Queensland
+  short: SLQ
+  jurisdiction: Qld
+  url: https://www.slq.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/slq-qld-public-libraries-annual-statistics
+  attribution: State Library of Queensland, Queensland Government, State Library of Queensland - Queensland
+    public libraries annual statistics, sourced {sourced}, https://www.data.qld.gov.au/dataset/slq-qld-public-libraries-annual-statistics,
+    licensed under CC BY 4.0.
+example:
+  group: council
+  metric: sum.usage_physical_visits
+  label: Visits to public libraries in each council area in the financial year
+sample:
+  order: [population.desc]
+  label: The ten councils with the largest population served, largest first.
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: slq-qld-public-libraries-annual-statistics
+  url: https://www.data.qld.gov.au/dataset/slq-qld-public-libraries-annual-statistics
+  encoding: utf-8-sig
+  resource_match: ^Council data
+  cadence: annually
+key:
+- council
+row_label: Councils
+fields:
+- name: council
+  label: Council
+  source: COUNCIL
+  type: string
+- name: service
+  label: Service
+  source: SERVICE
+  type: string
+- name: population
+  label: Population
+  source: POPULATION
+  type: integer
+- name: library_management_system
+  label: Library management system
+  source: LIBRARY MANAGEMENT SYSTEM
+  type: string
+- name: public_library_grant
+  label: Public library grant
+  source: PUBLIC LIBRARY GRANT
+  type: integer
+- name: first_5_forever_grant
+  label: First 5 forever grant
+  source: FIRST 5 FOREVER GRANT
+  type: integer
+- name: expenditure_salaries
+  label: Expenditure salaries
+  source: EXPENDITURE SALARIES
+  type: integer
+- name: expenditure_operating
+  label: Expenditure operating
+  source: EXPENDITURE OPERATING
+  type: integer
+- name: expenditure_print_materials
+  label: Expenditure print materials
+  source: EXPENDITURE PRINT MATERIALS
+  type: integer
+- name: expenditure_non_print_materials
+  label: Expenditure non print materials
+  source: EXPENDITURE NON-PRINT MATERIALS
+  type: integer
+- name: expenditure_digital_resources
+  label: Expenditure digital resources
+  source: EXPENDITURE DIGITAL RESOURCES
+  type: integer
+- name: expenditure_total_materials
+  label: Expenditure total materials
+  source: EXPENDITURE TOTAL MATERIALS
+  type: integer
+- name: expenditure_capital
+  label: Expenditure capital
+  source: EXPENDITURE CAPITAL
+  type: integer
+- name: expenditure_other_unclassified
+  label: Expenditure other unclassified
+  source: EXPENDITURE OTHER / UNCLASSIFIED
+  type: integer
+- name: expenditure_total_all_categories
+  label: Expenditure total all categories
+  source: EXPENDITURE TOTAL ALL CATEGORIES
+  type: integer
+- name: collection_printed_items
+  label: Collection printed items
+  source: COLLECTION PRINTED ITEMS
+  type: integer
+- name: collection_audio_items
+  label: Collection audio items
+  source: COLLECTION AUDIO ITEMS
+  type: integer
+- name: collection_video_items
+  label: Collection video items
+  source: COLLECTION VIDEO ITEMS
+  type: integer
+- name: collection_other_physical
+  label: Collection other physical
+  source: COLLECTION OTHER PHYSICAL
+  type: integer
+- name: collection_total_physical_items
+  label: Collection total physical items
+  source: COLLECTION TOTAL PHYSICAL ITEMS
+  type: integer
+- name: collection_ebook
+  label: Collection ebook
+  source: COLLECTION EBOOK
+  type: integer
+- name: collection_eaudio
+  label: Collection eaudio
+  source: COLLECTION EAUDIO
+  type: integer
+- name: collection_evideo
+  label: Collection evideo
+  source: COLLECTION EVIDEO
+  type: integer
+- name: collection_other_digital_items
+  label: Collection other digital items
+  source: COLLECTION OTHER DIGITAL ITEMS
+  type: integer
+- name: collection_total_electronic_items
+  label: Collection total electronic items
+  source: COLLECTION TOTAL ELECTRONIC ITEMS
+  type: integer
+- name: collection_total_all_categories
+  label: Collection total all categories
+  source: COLLECTION TOTAL ALL CATEGORIES
+  type: integer
+- name: acquisition_printed_items
+  label: Acquisition printed items
+  source: ACQUISITION PRINTED ITEMS
+  type: integer
+- name: acquisition_audio_items
+  label: Acquisition audio items
+  source: ACQUISITION AUDIO ITEMS
+  type: integer
+- name: acquisition_video_items
+  label: Acquisition video items
+  source: ACQUISITION VIDEO ITEMS
+  type: integer
+- name: acquisition_other_physical
+  label: Acquisition other physical
+  source: ACQUISITION OTHER PHYSICAL
+  type: integer
+- name: acquisition_total_physical_items
+  label: Acquisition total physical items
+  source: ACQUISITION TOTAL PHYSICAL ITEMS
+  type: integer
+- name: withdrawal_printed_items
+  label: Withdrawal printed items
+  source: WITHDRAWAL PRINTED ITEMS
+  type: integer
+- name: withdrawal_audio_items
+  label: Withdrawal audio items
+  source: WITHDRAWAL AUDIO ITEMS
+  type: integer
+- name: withdrawal_video_items
+  label: Withdrawal video items
+  source: WITHDRAWAL VIDEO ITEMS
+  type: integer
+- name: withdrawal_other_physical
+  label: Withdrawal other physical
+  source: WITHDRAWAL OTHER PHYSICAL
+  type: integer
+- name: withdrawal_total_physical_items
+  label: Withdrawal total physical items
+  source: WITHDRAWAL TOTAL PHYSICAL ITEMS
+  type: integer
+- name: usage_physical_visits
+  label: Usage physical visits
+  source: USAGE PHYSICAL VISITS
+  type: integer
+- name: usage_web_visits
+  label: Usage web visits
+  source: USAGE WEB VISITS
+  type: integer
+- name: usage_reference_enquiries
+  label: Usage reference enquiries
+  source: USAGE REFERENCE ENQUIRIES
+  type: integer
+- name: usage_reservations
+  label: Usage reservations
+  source: USAGE RESERVATIONS
+  type: integer
+- name: usage_printed_items
+  label: Usage printed items
+  source: USAGE PRINTED ITEMS
+  type: integer
+- name: usage_audio_items
+  label: Usage audio items
+  source: USAGE AUDIO ITEMS
+  type: integer
+- name: usage_video_items
+  label: Usage video items
+  source: USAGE VIDEO ITEMS
+  type: integer
+- name: usage_other_physical_items
+  label: Usage other physical items
+  source: USAGE OTHER PHYSICAL ITEMS
+  type: integer
+- name: usage_total_physical_items
+  label: Usage total physical items
+  source: USAGE TOTAL PHYSICAL ITEMS
+  type: integer
+- name: usage_ebook
+  label: Usage ebook
+  source: USAGE EBOOK
+  type: integer
+- name: usage_eaudio
+  label: Usage eaudio
+  source: USAGE EAUDIO
+  type: integer
+- name: usage_evideo
+  label: Usage evideo
+  source: USAGE EVIDEO
+  type: integer
+- name: usage_other_digital_items
+  label: Usage other digital items
+  source: USAGE OTHER DIGITAL ITEMS
+  type: integer
+- name: usage_retrievals_and_downloads
+  label: Usage retrievals and downloads
+  source: USAGE RETRIEVALS AND DOWNLOADS
+  type: integer
+- name: usage_other_usage_data
+  label: Usage other usage data
+  source: USAGE OTHER USAGE DATA
+  type: integer
+- name: usage_digital_electronic_collection_usage
+  label: Usage digital electronic collection usage
+  source: USAGE DIGITAL / ELECTRONIC COLLECTION USAGE
+  type: integer
+- name: usage_total_circulation
+  label: Usage total circulation
+  source: USAGE TOTAL CIRCULATION
+  type: integer
+- name: members_total
+  label: Members total
+  source: MEMBERS TOTAL
+  type: integer
+- name: members_new
+  label: Members new
+  source: MEMBERS NEW
+  type: integer
+- name: staff_ftes
+  label: Staff ftes
+  source: STAFF FTES
+  type: number
+- name: programs_for_children_0_to_5_years
+  label: Programs for children 0 to 5 years
+  source: PROGRAMS FOR CHILDREN 0 TO 5 YEARS
+  type: integer
+- name: programs_for_children_6_to_12_years
+  label: Programs for children 6 to 12 years
+  source: PROGRAMS FOR CHILDREN 6 TO 12 YEARS
+  type: integer
+- name: programs_for_young_adults_13_to_17_years
+  label: Programs for young adults 13 to 17 years
+  source: PROGRAMS FOR YOUNG ADULTS 13 TO 17 YEARS
+  type: integer
+- name: programs_literacy_and_lifelong_learning
+  label: 'Programs: literacy and lifelong learning'
+  source: PROGRAMS THAT SUPPORT LITERACY ANDLIFE LONG LEARNING
+  type: integer
+- name: programs_informed_and_connected_citizens
+  label: 'Programs: informed and connected citizens'
+  source: PROGRAMS THAT SUPPORT INFORMED AND CONNECTED CITIZENS
+  type: integer
+- name: programs_digital_inclusion
+  label: 'Programs: digital inclusion'
+  source: PROGRAMS THAT SUPPORT DIGITAL INCLUSION
+  type: integer
+- name: programs_personal_development_and_wellbeing
+  label: 'Programs: personal development and wellbeing'
+  source: PROGRAMS  THAT SUPPORT PERSONAL DEVELOPMENT AND WELLBEING
+  type: integer
+- name: programs_stronger_and_more_creative_communities
+  label: 'Programs: stronger and more creative communities'
+  source: PROGRAMS THAT SUPPORT STRONGER AND MORE CREATIVE COMMUNITIES
+  type: integer
+- name: programs_economic_and_workforce_development
+  label: 'Programs: economic and workforce development'
+  source: PROGRAMS THAT SUPPORT ECONOMIC AND WORKFORCE DEVELOPMENT
+  type: integer
+- name: programs_total_sessions
+  label: Programs total sessions
+  source: PROGRAMS TOTAL  SESSIONS
+  type: integer
+- name: programs_for_children_0_to_5_years_attendance
+  label: Programs for children 0 to 5 years attendance
+  source: PROGRAMS FOR CHILDREN 0 TO 5 YEARS ATTENDANCE
+  type: integer
+- name: programs_for_children_6_to_12_years_attendance
+  label: Programs for children 6 to 12 years attendance
+  source: PROGRAMS FOR CHILDREN 6 TO 12 YEARS  ATTENDANCE
+  type: integer
+- name: programs_for_young_adults_13_to_17_years_attendance
+  label: Programs for young adults 13 to 17 years attendance
+  source: PROGRAMS FOR YOUNG ADULTS 13 TO 17 YEARS  ATTENDANCE
+  type: integer
+- name: programs_literacy_and_lifelong_learning_attendance
+  label: 'Programs: literacy and lifelong learning attendance'
+  source: PROGRAMS THAT SUPPORT LITERACY AND LIFELONG LEARNING ATTENDANCE
+  type: integer
+- name: programs_informed_and_connected_citizens_attendance
+  label: 'Programs: informed and connected citizens attendance'
+  source: PROGRAMS THAT SUPPORT INFORMED AND CONNECTED CITIZENS ATTENDANCE
+  type: integer
+- name: programs_digital_inclusion_attendance
+  label: 'Programs: digital inclusion attendance'
+  source: PROGRAMS THAT SUPPORT DIGITAL INCLUSION ATTENDANCE
+  type: integer
+- name: programs_personal_development_and_wellbeing_attendance
+  label: 'Programs: personal development and wellbeing attendance'
+  source: PROGRAMS THAT SUPPORT PERSONAL DEVELOPMENT AND WELLBEING ATTENDANCE
+  type: integer
+- name: programs_stronger_and_more_creative_communities_attendance
+  label: 'Programs: stronger and more creative communities attendance'
+  source: PROGRAMS THAT SUPPORT STRONGER AND MORE CREATIVE COMMUNITIES ATTENDANCE
+  type: integer
+- name: programs_economic_and_workforce_development_attendance
+  label: 'Programs: economic and workforce development attendance'
+  source: PROGRAMS THAT SUPPORT ECONOMIC AND WORKFORCE DEVELOPMENT  ATTENDANCE
+  type: integer
+- name: programs_total_sessions_attendance
+  label: Programs total sessions attendance
+  source: PROGRAMS TOTAL  SESSIONS  ATTENDANCE
+  type: integer
+- name: services_public_access_internet_devices
+  label: Services public access internet devices
+  source: SERVICES PUBLIC ACCESS INTERNET DEVICES
+  type: integer
+- name: services_public_access_internet_hours
+  label: Services public access internet devices hours of usage
+  source: SERVICES PUBLIC ACCESS INTERNET DEVICES HOURS OF USAGE
+  type: integer
+- name: services_wifi_sessions
+  label: Services wifi sessions
+  source: SERVICES WIFI SESSIONS
+  type: integer
+- name: services_wifi_hours
+  label: Services wifi hours
+  source: SERVICES WIFI HOURS
+  type: integer
+- name: per_capita_operating_expenditure
+  label: Per capita operating expenditure
+  source: PER CAPITA OPERATING EXPENDITURE
+  type: number
+- name: per_capita_collection_items_physical
+  label: Per capita collection items physical
+  source: PER CAPITA COLLECTION ITEMS PHYSICAL
+  type: number
+- name: per_capita_collection_acquisition_physical
+  label: Per capita collection acquisition physical
+  source: PER CAPITA COLLECTION ACQUISITION PHYSICAL
+  type: number
+- name: per_capita_collection_withdrawal_physical
+  label: Per capita collection withdrawal physical
+  source: PER CAPITA COLLECTION WITHDRAWAL PHYSICAL
+  type: number
+- name: per_capita_circulation
+  label: Per capita circulation
+  source: PER CAPITA CIRCULATION
+  type: number
+- name: per_capita_reference_enquiries
+  label: Per capita reference enquiries
+  source: PER CAPITA REFERENCE ENQUIRIES
+  type: number
+- name: per_capita_physical_visits
+  label: Per capita physical visits
+  source: PER CAPITA PHYSICAL VISITS
+  type: number

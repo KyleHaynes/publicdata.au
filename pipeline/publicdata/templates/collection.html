@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block head %}<script type="application/ld+json">{{ jsonld|safe }}</script>{% endblock %}
+{% block disclaimer %}Published by {{ publisher.name }} under {{ licence.title }} and republished here without change to the content. {{ publisher.name }} has not endorsed this site.{% endblock %}
+{% block main %}
+<div class="crumbs"><a href="/">Datasets</a> / {% if jur_path %}<a href="{{ jur_path }}">{{ jur_long }}</a>{% else %}{{ jur_long }}{% endif %} / {% if publisher_path %}<a href="{{ publisher_path }}">{{ publisher.short }}</a>{% else %}{{ publisher.short }}{% endif %}</div>
+<div class="ds-head"><h1>{{ heading }}</h1><span class="chip {{ status }}">{{ status }}</span></div>
+<div class="meta-row"><span>Publisher <b>{{ publisher.name }}</b></span><span>Licence <b><a href="{{ licence.url }}" rel="license">{{ licence.title }}</a></b></span><span>Tables <b>{{ tables|length }}</b></span><span>Latest <b class="mono">{{ version }}</b></span>{% if as_at_long %}<span>As at <b>{{ as_at_long }}</b></span>{% endif %}{% if years %}<span>Covers <b>{{ years }}</b></span>{% endif %}</div>
+{% for para in collection_paras %}<p style="margin-top:14px">{{ para }}</p>{% endfor %}
+<p>{{ publisher.name }} releases these {{ tables|length }} tables as one dataset on <a href="{{ landing }}">its portal</a>, so every table here shares the version date {{ version }}. Each table has its own page with a format picker, a field list, a sample record and its version history.</p>
+{% if also_known_as %}<p class="muted" style="font-size:14.5px">Also called: {{ also_known_as|join(', ') }}.</p>{% endif %}
+<div class="tbl"><table class="ledger">
+<thead><tr><th>Table</th><th>Download latest</th><th class="n">Rows</th><th class="n">Fields</th></tr></thead>
+<tbody>
+{% for t in tables %}<tr><td class="t"><a href="/d/{{ t.slug }}/">{{ t.title }}</a><span class="sub">{{ t.summary }}</span></td>
+<td><div class="quick">{% for f in t.quick %}<a href="{{ f.url }}">{{ f.name }}</a>{% endfor %}<a href="/d/{{ t.slug }}/">all formats</a></div></td>
+<td class="n">{{ t.rows }}</td><td class="n">{{ t.fields }}</td></tr>
+{% endfor %}
+</tbody></table></div>
+<div class="ds" style="margin-top:28px">
+<div>
+  <div class="notice"><p><b>What this site did to the data.</b> Cells were typed, headers were renamed and the encoding was made UTF-8. Rows were left alone. The publisher's file sits beside every version so the change can be checked.</p></div>
+</div>
+<aside class="side">
+  <div class="card"><div class="k">Attribution and citation</div><p class="small" style="color:var(--ink)">{{ cite_request }}</p><div class="attr">{{ attribution }}<button class="copy abs" type="button" data-copy-target="attr-src">Copy</button></div><textarea id="attr-src" hidden>{{ attribution }}</textarea><p class="small">Each table's page has the sentence as text, HTML, Markdown and BibTeX.</p></div>
+  <div class="card"><div class="k">Source</div><p class="small" style="color:var(--ink)">{{ publisher.name }} publishes this dataset at <a href="{{ landing }}">{{ portal_host }}</a>. Questions about the content go to the publisher.</p></div>
+</aside>
+</div>
+{% endblock %}

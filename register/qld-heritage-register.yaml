@@ -1,0 +1,141 @@
+slug: qld-heritage-register
+title: Queensland Heritage Register places
+status: live
+topics:
+- places
+- government
+order: 241
+search_title: Queensland Heritage Register list of heritage places (Department of the Environment, Tourism,
+  Science and Innovation)
+place_field: lga
+also_known_as:
+- QHR heritage listed places
+- Queensland heritage listed buildings
+- State heritage places Queensland
+- Heritage register search Queensland data
+keywords:
+- heritage register
+- heritage listed
+- historic places
+- state heritage
+- cultural heritage
+- Queensland
+faq:
+- q: What is in each row?
+  a: One place entered in the Queensland Heritage Register, with its place reference, name and alternative
+    names, street address, suburb, council, the date it was entered in the register, its description and
+    history, and the statement for each heritage criterion it meets.
+- q: Why do some columns contain HTML tags?
+  a: The department exports the description, history and criteria as HTML paragraphs. They are kept as
+    published.
+- q: Which criteria does a place meet?
+  a: The criteria met column names each criterion, such as Criterion A, and the significance column holds
+    the register's statement for each, in the same order and joined with a vertical bar.
+- q: Are there coordinates or boundaries?
+  a: No. The export gives the street address, suburb and council. The department publishes heritage boundaries
+    separately as a spatial layer.
+summary: Every place entered in the Queensland Heritage Register, with name, address, council, entry date,
+  description, history and significance, from the department's export.
+description: The export of the Queensland Heritage Register kept by the Department of the Environment,
+  Tourism, Science and Innovation, one row per state heritage place. Each row has the place reference
+  and site id, the name and any alternative names, street address, suburb, local government area, the
+  date of entry in the register, and the department's description, history and statements of significance
+  against the heritage criteria. The department states the export was last updated in August 2025.
+publisher:
+  name: Department of the Environment, Tourism, Science and Innovation
+  short: DETSI
+  jurisdiction: Qld
+  url: https://www.detsi.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  evidence: https://www.data.qld.gov.au/dataset/the-queensland-heritage-register
+  reviewed: '2026-10-01'
+  attribution: Department of the Environment, Tourism, Science and Innovation, Queensland Government,
+    The Queensland heritage register, sourced {sourced}, https://www.data.qld.gov.au/dataset/the-queensland-heritage-register,
+    licensed under CC BY 4.0.
+example:
+  group: lga
+  metric: count
+  label: Heritage places in each council area
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: the-queensland-heritage-register
+  resource: 43ff6bb2-8dfb-4d87-90ab-b89cb20c7ef7
+  url: https://www.data.qld.gov.au/dataset/the-queensland-heritage-register
+  manual: true
+  record: place
+  cadence: irregular
+key:
+- place_ref
+partition_by:
+- lga
+row_label: Heritage places
+fields:
+- name: heritage_type
+  label: Register
+  source: '@type'
+  type: string
+  description: State Heritage for every place in this export.
+- name: site_id
+  label: Site ID
+  source: '@site_id'
+  type: integer
+  description: Blank for some places.
+- name: place_ref
+  label: Place reference
+  source: place_ref
+  type: integer
+  description: The register's place number, used in its online search.
+- name: name
+  label: Name
+  source: name
+  type: string
+- name: alternate_name
+  label: Other names
+  source: alternate_name
+  type: string
+  description: Joined with a vertical bar where a place has more than one.
+- name: street_address
+  label: Street address
+  source: street_address
+  type: string
+- name: suburb
+  label: Suburb
+  source: suburb
+  type: string
+- name: lga
+  label: Council
+  source: lga
+  type: string
+  description: Local government area, in capitals as published.
+- name: register_entry_date
+  label: Entered in register
+  source: register_entry_date
+  type: date
+  date_format: '%Y-%m-%d %H:%M:%S'
+- name: description
+  label: Description (HTML)
+  source: description
+  type: string
+- name: history
+  label: History (HTML)
+  source: history
+  type: string
+- name: criteria
+  label: Significance by criterion (HTML)
+  source: criterion
+  type: string
+  description: The statement for each criterion the place meets, joined with a vertical bar.
+- name: criteria_letters
+  label: Criteria met
+  source: criterion@type
+  type: string
+  description: The name of each criterion the place meets, such as Criterion A, joined with a vertical
+    bar in the same order as the statements.
+- name: criteria_definitions
+  label: Criteria definitions
+  source: criterion@detail
+  type: string
+  description: The register's wording of each criterion the place meets, joined with a vertical bar.
+note: Cells were typed and element names were made snake_case. Rows were left alone.

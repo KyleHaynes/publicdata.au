@@ -1,0 +1,101 @@
+slug: nt-bushfire-brigade-locations
+title: Bushfires NT brigade and office locations
+status: live
+topics:
+- emergencies
+- places
+order: 497
+search_title: Bushfires NT volunteer brigade and office locations (NT Fire and Emergency Services)
+also_known_as:
+- Bushfires NT Brigade and Office Headquarters Locations
+- NT volunteer bushfire brigade locations
+- Bushfires NT office addresses
+keywords:
+- bushfire brigade
+- volunteer bushfire brigade
+- fire station locations
+- Bushfires NT
+- Northern Territory
+faq:
+- q: What is in each row?
+  a: One Bushfires NT site, either an office headquarters or a volunteer bushfire brigade, with its site
+    code, name, fire management zone, street address, land parcel, and latitude and longitude.
+- q: Why do two rows share an address?
+  a: Where a brigade works from a Bushfires NT office, as in Alice Springs, the publisher lists the
+    office and the brigade as two sites at one address.
+- q: How often is it updated?
+  a: The publisher updates the file when a site changes. This site checks it weekly and adds a dated
+    version when the file changes.
+summary: The 23 offices and volunteer bushfire brigades of Bushfires NT, one row per site, with
+  address, fire management zone and coordinates.
+description: The office headquarters and volunteer bushfire brigade sites of Bushfires NT, part of
+  Northern Territory Fire and Emergency Services. Each row carries the site code, name and type, the
+  fire management zone, the street address, the land parcel, and the latitude and longitude. The
+  publisher ships the table as a workbook inside the shapefile download, and that workbook is read
+  here.
+publisher:
+  name: Northern Territory Fire and Emergency Services
+  short: NTFES
+  jurisdiction: NT
+  url: https://pfes.nt.gov.au/
+licence:
+  id: CC-BY-4.0
+  portal_id: cc-by
+  reviewed: '2026-10-01'
+  evidence: https://data.nt.gov.au/dataset/bushfires-nt-brigade-and-office-headquarters-locations
+  attribution: Bushfires NT, Northern Territory Fire and Emergency Services, Northern Territory
+    Government, Bushfires NT Brigade and Office Headquarters Locations,
+    https://data.nt.gov.au/dataset/bushfires-nt-brigade-and-office-headquarters-locations, accessed
+    {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: ckan-resource
+  portal: https://data.nt.gov.au
+  package: bushfires-nt-brigade-and-office-headquarters-locations
+  resource: 5501218b-3aa6-413c-b390-f752d28974ad
+  url: https://data.nt.gov.au/dataset/bushfires-nt-brigade-and-office-headquarters-locations
+  member: VBB_Office_Locations/Information/BFNT_Brigade_Office_Locations.xlsx
+  cadence: when a site changes
+key:
+- site_id
+geometry:
+  lon: longitude
+  lat: latitude
+  crs: EPSG:4283
+  crs_note: Decimal degrees as published. The publisher's shapefile of the same sites names GDA94.
+row_label: Sites
+fields:
+- name: site_id
+  label: Site code
+  source: SiteID
+  type: string
+- name: name
+  label: Name
+  source: Name
+  type: string
+- name: site_type
+  label: Site type
+  source: SiteType
+  type: string
+  description: Headquarters or Volunteer Bushfire Brigade.
+- name: fire_management_zone
+  label: Fire management zone
+  source: FMZone
+  type: string
+- name: address
+  label: Address
+  source: LocAddress
+  type: string
+- name: parcel
+  label: Land parcel
+  source: LocParcel
+  type: string
+- name: latitude
+  label: Latitude
+  source: Latitude
+  type: number
+- name: longitude
+  label: Longitude
+  source: Longitude
+  type: number
+note: Cells were typed and headers were made snake_case. The publisher's header is kept beside every
+  field in schema.json. Rows were left alone.

@@ -1,0 +1,32 @@
+{
+  "dataset": "asic-companies",
+  "version": "2026-09-29",
+  "as_at": "",
+  "fetched_at": "2026-09-30T19:28:16+00:00",
+  "sha256": "a4c65f347f7cb1f303bdf5077af7f79a964a60aa03d68f16be19acbdecebcf3e",
+  "bytes": 79151729,
+  "filename": "company_202609.zip",
+  "encoding": "zip",
+  "source": {
+    "url": "https://data.gov.au/data/dataset/7b8656f9-606d-4337-af29-66b89b2eeefb/resource/d6d03876-71a4-4e82-8c77-2e4df5da4236/download/company_202609.zip",
+    "portal": "https://data.gov.au/data",
+    "package": "asic-companies",
+    "package_id": "7b8656f9-606d-4337-af29-66b89b2eeefb",
+    "resource": "d6d03876-71a4-4e82-8c77-2e4df5da4236",
+    "resource_name": "Company Dataset - Current",
+    "resource_last_modified": "2026-09-28T14:51:38.654129",
+    "package_modified": "2026-09-28T15:24:24.297946",
+    "package_version": null,
+    "etag": "1790607100.09-79151729-3414298498",
+    "http_last_modified": "Mon, 28 Sep 2026 14:51:40 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution 3.0 Australia",
+    "url": "http://creativecommons.org/licenses/by/3.0/au/",
+    "read_at": "2026-09-30T19:28:14+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": []
+}

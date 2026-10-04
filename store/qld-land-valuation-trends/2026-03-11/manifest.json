@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-land-valuation-trends",
+  "version": "2026-03-11",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:00:45+00:00",
+  "sha256": "16232e035474a992109ad679cb1a96bc6c4516a607f050c6bc3ecca4a775bf78",
+  "bytes": 5185,
+  "filename": "valuations-lgas-2010-2026.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/4d2080dd-8fe6-45cf-a0ec-51cf0fdcc3c0/resource/2fd7c102-cafc-4d16-a6a5-ff4ed7c61c16/download/valuations-lgas-2010-2026.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "historical-trends-in-land-valuations",
+    "package_id": "4d2080dd-8fe6-45cf-a0ec-51cf0fdcc3c0",
+    "resource": "2fd7c102-cafc-4d16-a6a5-ff4ed7c61c16",
+    "resource_name": "Local government areas valued 2010 to 2026",
+    "resource_last_modified": "2026-03-11T05:14:40.190120",
+    "package_modified": "2026-03-11T05:15:09.653908",
+    "package_version": "1",
+    "etag": "42445d4d7085ebf0bff4e87e6a7bd274",
+    "http_last_modified": "Wed, 11 Mar 2026 05:14:41 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-3.0",
+    "title": "Creative Commons Attribution 3.0",
+    "url": "https://creativecommons.org/licenses/by/3.0/au/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=historical-trends-in-land-valuations",
+    "read_at": "2026-10-03T03:00:45+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "b94e7ce3ba0f4cf65f77ce1b36b4da25a65e8b0c775925b02742e446d9343309"
+}

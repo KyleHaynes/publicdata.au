@@ -1,0 +1,34 @@
+{
+  "dataset": "sa-adelaide-city-barbecues",
+  "version": "2025-11-10",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:10:24+00:00",
+  "sha256": "6c15a5aa85aeb3940fa13a36278c0de55170dd1fd1a4d72ae0dfc2a04607ac91",
+  "bytes": 5360,
+  "filename": "BBQs.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://s3.ap-southeast-2.amazonaws.com/dmzweb.adelaidecitycouncil.com/OpenData/BBQs/BBQs.csv",
+    "portal": "https://data.sa.gov.au/data",
+    "package": "bbq-s",
+    "package_id": "b3238d77-5866-434a-8360-fb9a22c001cf",
+    "resource": "ca4461df-bc8d-4d10-9882-5314d23aa36f",
+    "resource_name": "BBQ's in the Adelaide City Council",
+    "resource_last_modified": "2025-11-09T23:44:32",
+    "package_modified": "2022-11-11T01:17:53.615311",
+    "package_version": null,
+    "etag": "5b4d3fa2f425858838c92cf727bb01b9",
+    "http_last_modified": "Sun, 09 Nov 2025 23:44:32 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution",
+    "url": "http://creativecommons.org/licenses/by/4.0",
+    "read_from": "https://data.sa.gov.au/data/api/3/action/package_show?id=bbq-s",
+    "read_at": "2026-10-03T03:10:23+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "aca48f95799eec5f5ae1ca4407d15d801fc79755f184de882508a357099a8e74"
+}

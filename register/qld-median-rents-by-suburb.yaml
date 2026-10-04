@@ -1,0 +1,111 @@
+slug: qld-median-rents-by-suburb
+title: Median weekly rents by suburb and dwelling type, Queensland
+status: live
+topics:
+- housing
+order: 521
+collection: qld-rta-bond-statistics
+collection_title: RTA bond statistics
+collection_search_title: Queensland rental bond statistics and median rents (Residential Tenancies Authority)
+collection_description: Median weekly rents for new tenancies in Queensland from the Residential Tenancies
+  Authority's quarterly bond statistics workbook, built from the bonds lodged with the RTA, by suburb and
+  by postcode.
+publisher:
+  name: Residential Tenancies Authority
+  short: RTA
+  jurisdiction: Qld
+  url: https://www.rta.qld.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-10-01'
+  evidence: https://www.rta.qld.gov.au/copyright
+  statement: The RTA has applied the Creative Commons Attribution 3.0 Australia Licence
+  attribution: © The State of Queensland Residential Tenancies Authority, Bond statistics data, Median rents
+    by Suburb, sourced {sourced}, https://www.rta.qld.gov.au/sites/default/files/2023-04/rta-bond-statistics.xlsx,
+    licensed under CC BY 3.0 AU.
+temporal_start: '2017-07-01'
+search_title: Median rent by suburb, Brisbane and Queensland, each quarter (RTA bond data)
+also_known_as:
+- Brisbane median rent by suburb
+- Queensland rental bond data by suburb
+- RTA median rents suburb
+- Gold Coast and Sunshine Coast median rent by suburb
+keywords:
+- median rent
+- rent by suburb
+- Brisbane rent
+- rental bonds
+- Residential Tenancies Authority
+- Queensland
+faq:
+- q: What is in each row?
+  a: The median weekly rent of the new tenancies that began in one Queensland suburb in one quarter for
+    one dwelling type, such as a two bedroom flat or a three bedroom house, as the RTA works it out from
+    the bonds lodged with it. The series runs from the September quarter 2017.
+- q: Why are many medians blank?
+  a: The RTA leaves a cell empty where it gives no median for a suburb, dwelling type and quarter, which
+    is usually because few bonds were lodged. A cell holding an empty string is a null value here, and a
+    cell the workbook leaves wholly empty gives no row.
+- q: How are the dates given?
+  a: As the month that ends the quarter and its year, in two columns, as the RTA's workbook heads them.
+    A row for June 2026 covers tenancies that began from April to June 2026.
+summary: The median weekly rent of new tenancies in each Queensland suburb by dwelling type and number of
+  bedrooms, each quarter since September 2017, from the Residential Tenancies Authority.
+description: The Median rents by Suburb sheet of the RTA's bond statistics workbook. Each row is one suburb,
+  dwelling type and quarter, with the median weekly rent in dollars paid for new tenancies commencing in that
+  quarter, as recorded from the bonds lodged with the RTA. The dwelling types include an All dwellings
+  row for each suburb.
+example:
+  where: {year: newest, dwelling: All dwellings}
+  group: suburb
+  metric: max.median_weekly_rent
+  label: Highest quarterly median weekly rent for all dwellings in each suburb in the newest year, in dollars
+chart:
+  where: {dwelling: All dwellings}
+  split: none
+  metric: avg.median_weekly_rent
+  label: Average of the suburb medians for all dwellings, in dollars a week
+sample:
+  where: {median_weekly_rent: {gt: 0}}
+  label: Rows from the newest year that have a median, with the dwelling types taking turns.
+source:
+  adapter: file
+  url: https://www.rta.qld.gov.au/sites/default/files/2023-04/rta-bond-statistics.xlsx
+  cadence: quarterly
+wide:
+  sheets:
+  - 4 sub-rents
+  header_row: 6
+  header_rows: 2
+  first_column: 3
+  row_headers: 2
+key:
+- suburb
+- dwelling
+- year
+- quarter_month
+partition_by:
+- dwelling
+row_label: Suburb quarters
+fields:
+- name: suburb
+  label: Suburb
+  source: (row header 1)
+  type: string
+- name: dwelling
+  label: Dwelling type
+  source: (row header 2)
+  type: string
+- name: quarter_month
+  label: Quarter ending
+  source: (column header 1)
+  type: string
+  description: The month that ends the quarter, Mar, Jun, Sep or Dec.
+- name: year
+  label: Year
+  source: (column header 2)
+  type: integer
+- name: median_weekly_rent
+  label: Median weekly rent ($)
+  source: (cell)
+  type: number

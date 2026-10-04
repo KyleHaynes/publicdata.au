@@ -1,0 +1,34 @@
+{
+  "dataset": "nsw-public-holidays",
+  "version": "2025-02-05",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:03:30+00:00",
+  "sha256": "515378207e526921afef447d48f54fcdf44a1d5b1a232ff9d5c1c60fac6b12ba",
+  "bytes": 1560,
+  "filename": "public_holiday-2019-2023.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://opendata.transport.nsw.gov.au/data/dataset/963e4946-46c0-4c9c-b4dc-5033c9e61f5c/resource/15c69970-8fa3-4fe3-ac35-0f3cbe10447e/download/public_holiday-2019-2023.csv",
+    "portal": "https://data.nsw.gov.au/data",
+    "package": "2-school-and-public-holidays",
+    "package_id": "67e715b4-b116-45b6-ac5a-f2ffa92b2d92",
+    "resource": "fab9f1c5-b24f-4e06-a8ac-42f6642dd097",
+    "resource_name": "NSW Public Holidays",
+    "resource_last_modified": null,
+    "package_modified": "2025-02-04T22:24:50.410339",
+    "package_version": null,
+    "etag": "1692608728.059-1560-1999114934",
+    "http_last_modified": "Mon, 21 Aug 2023 09:05:28 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution",
+    "url": "http://www.opendefinition.org/licenses/cc-by",
+    "read_from": "https://data.nsw.gov.au/data/api/3/action/package_show?id=2-school-and-public-holidays",
+    "read_at": "2026-10-03T03:03:29+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "99162065314c6e029b025cb471375c133c10461f50ff0c769300cb97d82c995c"
+}

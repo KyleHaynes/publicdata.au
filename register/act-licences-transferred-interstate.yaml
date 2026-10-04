@@ -1,0 +1,73 @@
+slug: act-licences-transferred-interstate
+title: Driver licences transferred interstate, ACT
+status: live
+topics:
+- roads
+- migration
+example:
+  group: month
+  metric: sum.transferred_interstate
+  label: Licences transferred interstate
+chart:
+  split: none
+  metric: sum.transferred_interstate
+  label: Licences transferred interstate
+order: 460
+collection: act-vehicles-licences
+collection_title: Vehicle registrations and driver licence transfers in the ACT
+temporal_start: '2019-01-01'
+search_title: ACT driver licences transferred interstate by month (Access Canberra)
+also_known_as:
+- ACT licences transferred to other states
+- Canberra drivers moving interstate
+- ACT driver licence surrenders to other states
+keywords:
+- driver licences
+- licence transfers
+- interstate migration
+- Canberra
+- ACT
+faq:
+- q: What is in each row?
+  a: One month, with the number of ACT driver licences transferred to another Australian state or
+    territory in that month.
+- q: Does this measure people leaving the ACT?
+  a: It counts licence transfers, which usually follow a move. A person who leaves
+    without a licence, or does not transfer it, is not counted.
+summary: The number of ACT driver licences transferred to another state or territory each month since
+  January 2019.
+description: Monthly counts of ACT driver licences transferred interstate, from January 2019, as Access
+  Canberra records them. Each row carries the month and the number of licences transferred.
+publisher:
+  name: Access Canberra, City and Environment Directorate
+  short: Access Canberra
+  jurisdiction: ACT
+  url: https://www.accesscanberra.act.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.act.gov.au/d/97z4-7axj
+  attribution: Access Canberra, ACT Government, ACT Driver Licences Transferred Interstate,
+    https://www.data.act.gov.au/d/97z4-7axj, accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: socrata
+  portal: https://www.data.act.gov.au
+  package: 97z4-7axj
+  url: https://www.data.act.gov.au/d/97z4-7axj
+  cadence: monthly
+key:
+- month
+row_label: Months
+fields:
+- name: month
+  label: Month
+  source: Date
+  type: date
+  date_format: '%b %Y'
+  description: The month of the transfers, as its first day.
+- name: transferred_interstate
+  label: Licences transferred interstate
+  source: Number Transferred Interstate
+  type: integer
+note: Cells were typed and headers were made snake_case. The publisher's header is kept beside every field
+  in schema.json. Rows were left alone.

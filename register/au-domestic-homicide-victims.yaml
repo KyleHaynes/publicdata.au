@@ -1,0 +1,109 @@
+slug: au-domestic-homicide-victims
+title: Domestic homicide victims by sex and year, Australia
+status: live
+topics:
+- crime
+example:
+  where:
+    unit: Number
+    type_of_homicide: Intimate partner
+    period: newest
+  group: sex
+  metric: sum.value
+  label: Victims of intimate partner homicide in the newest year, by sex
+sample:
+  where:
+    period: newest
+    unit: Number
+  label: The victim counts for the newest year, for each sex and type of homicide.
+order: 66
+publisher:
+  name: Australian Institute of Health and Welfare
+  short: AIHW
+  jurisdiction: Cth
+  url: https://www.aihw.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.aihw.gov.au/copyright
+  statement: has been released under a Creative Commons BY 4.0 (CC-BY 4.0) licence
+  attribution: Based on Australian Institute of Health and Welfare material. Australian Institute of Health
+    and Welfare, Australian Government, Family, domestic and sexual violence data tables, National Homicide
+    Monitoring Program table NHMP 2, sourced {sourced}, https://www.aihw.gov.au/family-domestic-and-sexual-violence/resources/data-downloads,
+    licensed under CC BY 4.0.
+temporal_start: '1989-07-01'
+search_title: Domestic and intimate partner homicide victims each year since 1989-90, Australia (AIHW,
+  AIC data)
+also_known_as:
+- Intimate partner homicide statistics Australia
+- Domestic homicide victims by year
+- National Homicide Monitoring Program domestic homicide
+- AIHW FDSV data tables NHMP 2
+keywords:
+- domestic homicide
+- intimate partner homicide
+- homicide victims
+- family violence deaths
+- National Homicide Monitoring Program
+- AIHW
+- Australia
+faq:
+- q: What is counted?
+  a: Victims of domestic homicide in each financial year from 1989-90, with the two kinds the Institute
+    splits it into, intimate partner homicide and family homicide, by sex, as the number of victims and the rate per 100,000 people, compiled by the Institute
+    from the Australian Institute of Criminology's National Homicide Monitoring Program. A data flag column
+    carries the Institute's asterisk where a rate is calculated from fewer than 20 victims and should
+    be read with care.
+- q: Where is this table from?
+  a: The Institute's Family, domestic and sexual violence data tables workbook, which gathers tables from
+    several national collections. This dataset is one sheet of it. The data in this sheet is compiled
+    by the Institute from a government source it names, and the ABS and AIC publish their own material
+    under CC BY 4.0 as well.
+- q: Why does the attribution say "based on" AIHW material?
+  a: The Institute publishes its data tables under CC BY 4.0 and asks that material adapted from them,
+    which republishing in other formats is, carry the words "Based on Australian Institute of Health and
+    Welfare material". Every file here carries them. The Institute has not endorsed this site.
+summary: Domestic, intimate partner and family homicide victims in each year since 1989-90 by sex, as counts and
+  rates per 100,000, from the National Homicide Monitoring Program via the AIHW. Updated with the AIHW
+  data tables.
+description: Table NHMP 2 of the Australian Institute of Health and Welfare's Family, domestic and sexual
+  violence data tables, domestic homicide victims by sex and by type (intimate partner or family), 1989–90
+  to the latest year, one row per sex,
+  period, type of homicide and unit, with the Institute's data flag, compiled from the Australian Institute
+  of Criminology's National Homicide Monitoring Program.
+source:
+  adapter: file
+  url: https://www.aihw.gov.au/getmedia/f4a9196a-9797-4b03-acc8-d72a5b83d370/AIHW-FDSV-all-data-download.xlsx
+  sheet: NHMP 2
+  header_row: 9
+  cadence: yearly
+row_label: Table lines
+fields:
+- name: sex
+  label: Sex
+  source: Sex
+  type: string
+- name: period
+  label: Period
+  source: Period
+  type: string
+  description: The financial year, such as 2024–25.
+- name: type_of_homicide
+  label: Type of homicide
+  source: Type of homicide
+  type: string
+- name: unit
+  label: Unit
+  source: Unit
+  type: string
+- name: value
+  label: Value
+  source: Value
+  type: number
+  null_values:
+  - n.a.
+- name: data_flag
+  label: Data flag
+  source: Data flag
+  type: string
+  description: An asterisk where the rate is based on fewer than 20 victims.

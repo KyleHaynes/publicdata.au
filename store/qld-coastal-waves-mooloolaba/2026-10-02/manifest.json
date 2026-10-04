@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-coastal-waves-mooloolaba",
+  "version": "2026-10-02",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:00:49+00:00",
+  "sha256": "f93fde13337d2ca021bf45230081dee6a4b6f2d83e74db6499c8f7ce537fb369",
+  "bytes": 719571,
+  "filename": "mooloolaba_2026-01-01t00_00-2026-10-01t00_00_waveverifieddata.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/aafb52d6-7bb8-4601-966b-5153bd35d4f8/resource/e852c760-a562-4a24-b5e4-106719c0a0ad/download/mooloolaba_2026-01-01t00_00-2026-10-01t00_00_waveverifieddata.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "coastal-data-system-waves-mooloolaba",
+    "package_id": "aafb52d6-7bb8-4601-966b-5153bd35d4f8",
+    "resource": "e852c760-a562-4a24-b5e4-106719c0a0ad",
+    "resource_name": "Wave data - 2026",
+    "resource_last_modified": "2026-10-02T04:14:12.639835",
+    "package_modified": "2026-10-02T04:14:24.981668",
+    "package_version": "1",
+    "etag": "4fcd498c2f3c9100131df5dcf8cc8cc6",
+    "http_last_modified": "Fri, 02 Oct 2026 04:13:41 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=coastal-data-system-waves-mooloolaba",
+    "read_at": "2026-10-03T03:00:49+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "1c6b752d5a428c4604191f797d89a3e4324132cc0984dfd0dcd525bdb1da649e"
+}

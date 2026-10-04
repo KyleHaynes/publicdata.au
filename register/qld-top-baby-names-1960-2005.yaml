@@ -1,0 +1,88 @@
+slug: qld-top-baby-names-1960-2005
+title: Top 100 baby names by year, Queensland, 1960 to 2005
+status: live
+topics:
+- people
+order: 201
+collection: qld-bdm-statistics
+temporal_start: '1960-01-01'
+collection_title: Births, deaths and baby names registered in Queensland
+search_title: Queensland baby names by year 1960 to 2005 (Registry of Births, Deaths and Marriages)
+also_known_as:
+- Historical baby names Queensland
+- Popular baby names Queensland 1960s 1970s 1980s 1990s
+- QLD baby name history
+keywords:
+- baby names
+- historical names
+- name popularity
+- births
+- Queensland
+faq:
+- q: What is in each row?
+  a: One first name, one sex and one year from 1960 to 2005, with the number of babies registered with
+    that name. The registry gives the top 100 names for each sex in each year, so a name appears only
+    in the years it was in the top 100.
+- q: Why are the names in capitals?
+  a: The registry wrote them in capitals in this file. They are kept as published.
+summary: The 100 most registered girl and boy names in Queensland for each year from 1960 to 2005, one
+  row per name, sex and year, with the count of babies.
+description: A closed series from the Queensland Registry of Births, Deaths and Marriages of the top 100
+  first names given to girls and to boys whose births were registered in Queensland in each year from
+  1960 to 2005, with the number of babies given each name. The registry publishes later years as one file
+  each, which the latest year table follows.
+publisher:
+  name: Department of Justice
+  short: Justice
+  jurisdiction: Qld
+  url: https://www.justice.qld.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/top-100-baby-names
+  attribution: Department of Justice, Queensland Government, Top 100 Baby Names, sourced {sourced}, https://www.data.qld.gov.au/dataset/top-100-baby-names,
+    licensed under CC BY 3.0 AU.
+  portal_id: CC-BY-3.0
+example:
+  where:
+    year: newest
+  group: name
+  metric: sum.count
+  label: Babies given the name
+chart:
+  split: sex
+  metric: sum.count
+  label: Babies given a top 100 name
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: top-100-baby-names
+  resource: 3ae0300d-4835-4829-b3d7-69ed0792bc59
+  url: https://www.data.qld.gov.au/dataset/top-100-baby-names
+  encoding: utf-8-sig
+  cadence: closed
+key:
+- name
+- sex
+- year
+partition_by:
+- sex
+row_label: Names
+fields:
+- name: name
+  label: First name
+  source: Name
+  type: string
+- name: sex
+  label: Sex
+  source: Sex
+  type: string
+- name: year
+  label: Year of registration
+  source: Year
+  type: integer
+- name: count
+  label: Babies given the name
+  source: Count
+  type: integer
+note: Headers were made snake_case. Rows were left alone.

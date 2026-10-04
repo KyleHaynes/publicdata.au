@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-prison-locations",
+  "version": "2026-09-30",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:00:53+00:00",
+  "sha256": "c31e0cbaf27c7962f39622f5716e54113d71648774defbf120a480c7b330bcc6",
+  "bytes": 80093,
+  "filename": "prison-locations.csv",
+  "encoding": "cp1252",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/98e4496b-b013-4093-82f5-5b8c9dad32cd/resource/27bdf47c-6bc8-4b1c-848b-4bcb88de6cb2/download/prison-locations.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "prison-locations",
+    "package_id": "98e4496b-b013-4093-82f5-5b8c9dad32cd",
+    "resource": "27bdf47c-6bc8-4b1c-848b-4bcb88de6cb2",
+    "resource_name": "Queensland prison locations",
+    "resource_last_modified": "2026-09-30T02:17:51.165444",
+    "package_modified": "2026-09-30T02:17:56.352061",
+    "package_version": "1.0",
+    "etag": "W/\"8a9555f93d3b653a76e76ee3bb23ee38",
+    "http_last_modified": "Wed, 30 Sep 2026 02:17:52 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=prison-locations",
+    "read_at": "2026-10-03T03:00:52+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "250a8c71064498804437bacbf83499d9ffa993d0f2af5302d0964eb8ef339c6f"
+}

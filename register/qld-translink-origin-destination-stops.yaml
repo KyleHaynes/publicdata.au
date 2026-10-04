@@ -1,0 +1,84 @@
+slug: qld-translink-origin-destination-stops
+title: Translink origin-destination stops, Queensland
+status: live
+topics:
+- roads
+order: 292
+collection: qld-translink-origin-destination
+collection_title: Translink origin-destination trips
+search_title: Translink stop locations for origin-destination trips
+also_known_as:
+- Translink Origin-Destination Stops
+- Translink bus, train and ferry stop coordinates
+keywords:
+- bus stop
+- train station
+- stop locations
+- Translink
+- Queensland
+faq:
+- q: What is in each row?
+  a: Each row is one stop or station that appears in the origin-destination trips, with its id, name, type
+    and coordinates.
+- q: What is a virtual stop?
+  a: The publisher lists about 3,600 stops of type Virtual beside bus, rail, busway, ferry and light rail stops.
+    They are kept as published.
+summary: The id, name, type and coordinates of each stop used in Translink's origin-destination trip counts.
+description: 'One row per stop in Translink''s origin-destination trip data, with the stop id, its name, its
+  type (bus, busway, rail, ferry, light rail or virtual) and its latitude and longitude. The stop id matches
+  the origin and destination stop columns of the trips table.
+
+  '
+publisher:
+  name: Department of Transport and Main Roads
+  short: Transport and Main Roads
+  jurisdiction: Qld
+  url: https://www.tmr.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/translink-origin-destination-trips-2022-onwards
+  attribution: Department of Transport and Main Roads, Queensland Government, Translink Origin-Destination
+    Trips 2022 Onwards, sourced {sourced}, https://www.data.qld.gov.au/dataset/translink-origin-destination-trips-2022-onwards,
+    licensed under CC BY 4.0.
+example:
+  group: stop_type
+  metric: count
+  label: Stops
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: translink-origin-destination-trips-2022-onwards
+  resource: c76cbe1f-b42b-4e2a-acba-0f092cb21174
+  url: https://www.data.qld.gov.au/dataset/translink-origin-destination-trips-2022-onwards
+  cadence: monthly
+key:
+- stop_id
+geometry:
+  lon: stop_lon
+  lat: stop_lat
+  crs: EPSG:4326
+  crs_note: The publisher names no datum. The coordinates are decimal degrees, read as WGS84 (EPSG:4326) and
+    published as given.
+row_label: Stops
+fields:
+- name: stop_id
+  label: Stop id
+  source: stop_id
+  type: string
+- name: stop_name
+  label: Stop name
+  source: stop_name
+  type: string
+- name: stop_type
+  label: Stop type
+  source: stop_type
+  type: string
+- name: stop_lat
+  label: Latitude
+  source: stop_lat
+  type: number
+- name: stop_lon
+  label: Longitude
+  source: stop_lon
+  type: number

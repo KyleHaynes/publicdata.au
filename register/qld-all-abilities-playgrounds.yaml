@@ -1,0 +1,148 @@
+slug: qld-all-abilities-playgrounds
+title: All abilities playgrounds, Queensland
+status: live
+topics:
+- community
+order: 293
+search_title: Queensland all abilities playgrounds (inclusive and accessible playgrounds)
+also_known_as:
+- Accessible playgrounds Queensland
+- Inclusive playgrounds Queensland
+- Wheelchair accessible playgrounds QLD
+keywords:
+- playground
+- all abilities playground
+- accessible playground
+- disability
+- inclusive play
+- Queensland
+faq:
+- q: What is in each row?
+  a: Each row is one all abilities playground on the Queensland Government's list. It gives the name, address,
+    the play equipment and facilities, a web link, image names and descriptions, the council to contact, and
+    the coordinates.
+- q: Is this every accessible playground in Queensland?
+  a: No. It lists the 17 playgrounds on the publisher's all abilities playgrounds list. Councils run many other
+    accessible playgrounds that are not in this file.
+summary: The 17 all abilities playgrounds on the Queensland Government's list, with their equipment, facilities,
+  contacts and coordinates.
+description: 'One row per all abilities playground on the Queensland Government''s list. Each row gives the
+  playground name, street address, suburb and postcode, the play features and facilities, a web link where
+  one is given, the names and captions of four images, the council to contact and the latitude and longitude.
+
+  '
+publisher:
+  name: Department of Families, Seniors, Disability Services and Child Safety
+  short: DFSDSCS
+  jurisdiction: Qld
+  url: https://www.dcssds.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/all-abilities-playgrounds
+  attribution: Department of Families, Seniors, Disability Services and Child Safety, Queensland Government,
+    All Abilities Playgrounds, sourced {sourced}, https://www.data.qld.gov.au/dataset/all-abilities-playgrounds,
+    licensed under CC BY 4.0.
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: all-abilities-playgrounds
+  resource: a0afeaf1-e150-45df-91ff-9768799c3156
+  url: https://www.data.qld.gov.au/dataset/all-abilities-playgrounds
+  cadence: irregular
+  manual: true
+  encoding: cp1252
+key:
+- name
+geometry:
+  lon: longitude
+  lat: latitude
+  crs: EPSG:4326
+  crs_note: The publisher names no datum. The coordinates are decimal degrees, read as WGS84 (EPSG:4326) and
+    published as given.
+row_label: Playgrounds
+fields:
+- name: name
+  label: Playground
+  source: Name
+  type: string
+- name: address_1
+  label: Address line 1
+  source: Address1
+  type: string
+- name: address_2
+  label: Address line 2
+  source: Address2
+  type: string
+- name: suburb
+  label: Suburb
+  source: Suburb
+  type: string
+- name: postcode
+  label: Postcode
+  source: Postcode
+  type: string
+- name: playground_features
+  label: Playground features
+  source: Playground features
+  type: string
+- name: facilities
+  label: Facilities
+  source: Facilities
+  type: string
+- name: weblink
+  label: Web link
+  source: Weblink
+  type: string
+- name: image_1
+  label: Image 1
+  source: Image 1
+  type: string
+  description: The publisher's image file name. The images are on the publisher's website and are not part
+    of this data.
+- name: image_1_description
+  label: Image 1 description
+  source: Image 1 description
+  type: string
+- name: image_2
+  label: Image 2
+  source: Image 2
+  type: string
+  description: The publisher's image file name. The images are on the publisher's website and are not part
+    of this data.
+- name: image_2_description
+  label: Image 2 description
+  source: Image 2 description
+  type: string
+- name: image_3
+  label: Image 3
+  source: Image 3
+  type: string
+  description: The publisher's image file name. The images are on the publisher's website and are not part
+    of this data.
+- name: image_3_description
+  label: Image 3 description
+  source: Image 3 description
+  type: string
+- name: image_4
+  label: Image 4
+  source: Image 4
+  type: string
+  description: The publisher's image file name. The images are on the publisher's website and are not part
+    of this data.
+- name: image_4_description
+  label: Image 4 description
+  source: Image 4 description
+  type: string
+- name: contact
+  label: Contact
+  source: Contact
+  type: string
+- name: latitude
+  label: Latitude
+  source: Latitude
+  type: number
+- name: longitude
+  label: Longitude
+  source: Longitude
+  type: number

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title }}</title>
+<meta name="description" content="{{ description }}">
+<link rel="canonical" href="{{ canonical }}">
+{% if noindex %}<meta name="robots" content="noindex, follow">
+{% endif %}<link rel="alternate" type="text/markdown" href="{{ md_url }}" title="This page as Markdown">
+<link rel="alternate" type="application/ld+json" href="{{ site }}/catalog.json" title="DCAT catalogue">
+<link rel="ard" href="{{ site }}/.well-known/ard.json">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="{{ theme.light }}" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="{{ theme.dark }}" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-title" content="publicdata">
+{% if origin_trial %}<meta http-equiv="origin-trial" content="{{ origin_trial }}">
+{% endif %}{% if brand_fonts %}<link rel="preload" href="/static/fonts/RG-StandardBook.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/static/fonts/RG-StandardMedium.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/static/fonts/RG-StandardBold.woff2" as="font" type="font/woff2" crossorigin>
+{% endif %}<style>{{ css|safe }}</style>
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="publicdata.au">
+<meta property="og:locale" content="en_AU">
+<meta property="og:image" content="{{ og.url }}">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ og.alt }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:alt" content="{{ og.alt }}">
+{% block head %}{% endblock %}
+{% for j in extra_jsonld or [] %}<script type="application/ld+json">{{ j|safe }}</script>
+{% endfor %}<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ beacon }}"}'></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="site">
+<header class="top">
+  <a class="wordmark" href="/">publicdata<i class="dot"></i>au</a><span class="byline">by <a href="https://nationaldigital.com.au/" rel="noopener">National Digital</a></span>
+  <button class="menu" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+  <nav class="main" id="site-nav" aria-label="Site">
+    <a href="/" {% if nav == 'datasets' %}aria-current="page"{% endif %}>Datasets</a>
+    <a href="/browse/" {% if nav == 'browse' %}aria-current="page"{% endif %}>Governments</a>
+    <a href="/backlog/" {% if nav == 'backlog' %}aria-current="page"{% endif %}>Backlog</a>
+    <a href="/publishers/" {% if nav == 'publishers' %}aria-current="page"{% endif %}>For publishers</a>
+    <a href="/agents/" {% if nav == 'agents' %}aria-current="page"{% endif %}>For agents</a>
+    <a href="/about/" {% if nav == 'about' %}aria-current="page"{% endif %}>About</a>
+  </nav>
+  <form class="search" action="/backlog/" method="get" role="search" toolname="find_dataset_page" tooldescription="Search every dataset on Australia's government open-data portals by title, publisher or topic and open the results page. Datasets served here are marked." toolautosubmit><label for="q" class="vh">Search every government dataset</label><input id="q" name="q" type="search" placeholder="Search every government dataset" toolparamdescription="Words from a dataset title, publisher name or topic"></form>
+</header>
+<div class="disclaimer"><span class="long">{% block disclaimer %}This is an independent republication of open government data. No government agency is affiliated with it or has endorsed it. Every file names its publisher, its licence and the attribution the licence asks for.{% endblock %}</span><span class="short">An independent republication of open government data. No government agency has endorsed it. <a href="/government/">Read more</a></span></div>
+</div>
+<main id="main">
+{% block wrap %}<div class="site">
+{% block main %}{% endblock %}
+</div>{% endblock %}
+</main>
+<div class="footband">
+<div class="site foot">
+<footer>
+  <div><p><a class="wordmark" href="/">publicdata<i class="dot"></i>au</a></p><p>Built and operated by <a href="https://nationaldigital.com.au/" rel="noopener">National Digital</a>, Burleigh Heads, Queensland. This is a private website. No government agency runs or has endorsed it.</p></div>
+  <div><p>Data is republished under each publisher's licence, usually CC BY 3.0 AU or CC BY 4.0. The attribution string is inside every file.</p><p>Wrong value? It is almost always wrong in the source as well, because we publish what the publisher publishes. Wrong serialisation? <a href="/about/#corrections">Tell us</a> and we will fix it and record the fix.</p></div>
+  <div><p><a href="/">Datasets</a> · <a href="/browse/">Governments</a> · <a href="/backlog/">Backlog</a> · <a href="/government/">For government staff</a> · <a href="/publishers/">For publishers</a> · <a href="/agents/">For agents</a> · <a href="/health.json">Health</a> · <a href="/about/#corrections">Corrections</a> · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p><p><a href="{{ md_url }}">This page as Markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="/catalog.json">catalog.json</a> · <a href="/mcp/server-card">mcp</a></p></div>
+</footer>
+</div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="/static/site.js?v={{ js_v }}" defer></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

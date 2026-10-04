@@ -1,0 +1,34 @@
+{
+  "dataset": "sa-public-housing-new-households",
+  "version": "2022-06-06",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:10:24+00:00",
+  "sha256": "28452897bc62683c53124b340545cf3368f3c7ce94e34a851c66bd06aa3f4a7f",
+  "bytes": 23158,
+  "filename": "allocations_ph_2020-21_sa_housing_authority.xlsx",
+  "encoding": "xlsx",
+  "source": {
+    "url": "https://data.sa.gov.au/data/dataset/4e49f775-75d6-431a-9def-a37bd453faec/resource/2f308cef-1940-4af1-b024-15412f9df6cd/download/allocations_ph_2020-21_sa_housing_authority.xlsx",
+    "portal": "https://data.sa.gov.au/data",
+    "package": "social-housing-new-households-housed",
+    "package_id": "4e49f775-75d6-431a-9def-a37bd453faec",
+    "resource": "2f308cef-1940-4af1-b024-15412f9df6cd",
+    "resource_name": "New households housed Public Housing 2020-21",
+    "resource_last_modified": "2022-06-06T04:16:34.325774",
+    "package_modified": "2022-06-06T04:25:36.159462",
+    "package_version": null,
+    "etag": "1654488994.501-23158-1162221914",
+    "http_last_modified": "Mon, 06 Jun 2022 04:16:34 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution",
+    "url": "http://creativecommons.org/licenses/by/4.0",
+    "read_from": "https://data.sa.gov.au/data/api/3/action/package_show?id=social-housing-new-households-housed",
+    "read_at": "2026-10-03T03:10:24+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "58c7714f023280e150cebc922e39bef7da1ad841a82b3e73b91cdc6539d17edd"
+}

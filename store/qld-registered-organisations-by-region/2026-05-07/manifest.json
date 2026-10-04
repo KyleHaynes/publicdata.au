@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-registered-organisations-by-region",
+  "version": "2026-05-07",
+  "as_at": "",
+  "fetched_at": "2026-10-03T02:59:55+00:00",
+  "sha256": "d16a4a147b9a1d2972e0ee25de5146a16e54f3f199a3671173f543179a2257ed",
+  "bytes": 578,
+  "filename": "5.-oft-register-bachco-as-at-21-april-2026.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/b7868b35-945e-4fa7-bc4e-91370af406c0/resource/605d62f8-7b8e-4eb2-8103-1f730794f465/download/5.-oft-register-bachco-as-at-21-april-2026.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "number-of-registered-organisation-statistics-office-of-fair-trading",
+    "package_id": "b7868b35-945e-4fa7-bc4e-91370af406c0",
+    "resource": "605d62f8-7b8e-4eb2-8103-1f730794f465",
+    "resource_name": "OFT Register - BACHCO as at April 2026",
+    "resource_last_modified": "2026-05-07T05:58:27.283513",
+    "package_modified": "2026-05-07T05:58:05.959900",
+    "package_version": "1.0",
+    "etag": "2256f6cd6b492efe9ea8c08326f03427",
+    "http_last_modified": "Thu, 07 May 2026 05:57:49 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-3.0",
+    "title": "Creative Commons Attribution 3.0",
+    "url": "https://creativecommons.org/licenses/by/3.0/au/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=number-of-registered-organisation-statistics-office-of-fair-trading",
+    "read_at": "2026-10-03T02:59:55+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "c158cf34f837b569a188e66a346a8475e17bdc7504b9da2b46093065b4b57157"
+}

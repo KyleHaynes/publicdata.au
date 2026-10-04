@@ -1,0 +1,70 @@
+slug: qld-school-catchments-senior-secondary
+title: State school catchment areas, senior secondary, Queensland
+status: live
+topics:
+- education
+order: 279
+collection: qld-schools
+collection_title: 'Queensland schools: locations, enrolments and catchments'
+search_title: Queensland senior secondary school catchment areas (Department of Education)
+also_known_as:
+- Queensland state high school catchment boundaries Years 11 and 12
+- Queensland senior secondary school zones
+keywords:
+- school catchment
+- catchment area
+- school zone
+- enrolment management
+- state schools
+- Queensland
+faq:
+- q: What is in each row?
+  a: Each row is the catchment area of one Queensland state school for senior secondary students (Years 11
+    and 12), with the school's name, the publisher's description text and the boundary as a polygon.
+- q: Where is the school code?
+  a: The publisher puts the centre name and centre code in an HTML table inside the description of each area.
+    The text is kept as published in the description field.
+- q: Does living in a catchment guarantee a place?
+  a: The department's enrolment management rules give students living in a school's catchment an entitlement
+    to enrol there. Check the school's own enrolment management plan for the rules that apply.
+summary: The senior secondary catchment area of each Queensland state school for the current school year, as
+  polygons.
+description: One polygon per Queensland state school with a senior secondary catchment (Years 11 and 12), from
+  the Department of Education's state schools geographic information. Each area carries the school name and
+  a description holding the centre name and centre code. The publisher replaces the file for each school year,
+  and this entry follows the newest.
+publisher:
+  name: Department of Education
+  short: Education
+  jurisdiction: Qld
+  url: https://qed.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/queensland-state-schools-geographic-information
+  attribution: Department of Education, Queensland Government, Queensland state schools - geographic information,
+    sourced {sourced}, https://www.data.qld.gov.au/dataset/queensland-state-schools-geographic-information,
+    licensed under CC BY 4.0.
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: queensland-state-schools-geographic-information
+  resource_match: ^Senior Secondary catchments
+  url: https://www.data.qld.gov.au/dataset/queensland-state-schools-geographic-information
+  cadence: each school year
+geometry:
+  kind: polygon
+  crs: EPSG:4326
+  crs_note: KML coordinates are WGS84 (EPSG:4326). They are moved to GDA2020 for publication.
+  maxzoom: 10
+row_label: Catchment areas
+fields:
+- name: name
+  label: School
+  source: Name
+  type: string
+- name: description
+  label: Description
+  source: Description
+  type: string
+  description: The publisher's HTML table giving the centre name and centre code, kept as published.

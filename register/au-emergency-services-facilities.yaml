@@ -1,0 +1,175 @@
+slug: au-emergency-services-facilities
+title: Police, fire, ambulance and SES stations, Australia
+status: live
+topics:
+- emergencies
+example:
+  group: class
+  metric: count
+  label: Facilities of each class across Australia
+order: 512
+publisher:
+  name: Geoscience Australia
+  short: GA
+  jurisdiction: Cth
+  url: https://www.ga.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://ecat.ga.gov.au/geonetwork/srv/api/records/015c1b8c-7b47-4780-8206-1bd39ad2120b/formatters/xml
+  statement: Creative Commons Attribution 4.0 International Licence
+  attribution: Geoscience Australia, © Commonwealth of Australia (Geoscience Australia) 2022, Emergency
+    Management Facilities Database (eCat 147776). Incorporates or developed using G-NAF © Geoscape Australia
+    licensed by the Commonwealth of Australia under the Open Geo-coded National Address File (G-NAF) End
+    User Licence Agreement. Sourced {sourced}, https://pid.geoscience.gov.au/dataset/ga/147776, licensed
+    under CC BY 4.0.
+search_title: Police stations, fire stations and ambulance stations map data, Australia (Geoscience Australia)
+also_known_as:
+- Emergency Management Facilities Database
+- Fire station locations Australia
+- Police station locations Australia
+- Ambulance and SES station locations
+keywords:
+- police stations
+- fire stations
+- ambulance stations
+- SES
+- emergency services
+- Geoscience Australia
+- locations
+faq:
+- q: What is in each row?
+  a: One police, ambulance, metropolitan fire, rural or country fire, SES or other emergency management
+    facility, with its name, class, status, address, suburb, state and postcode, the state or territory
+    agency the record came from, its coordinates, and the G-NAF address Geoscience Australia matched it to
+    with that match's confidence and distance in metres.
+- q: Where do the records come from?
+  a: Geoscience Australia gathered them from each state and territory's emergency management agencies and
+    open data portals, with the Australian Federal Police, through the Emergency Management Spatial
+    Information Network Australia. The source columns name the agency for each row.
+- q: Why does the attribution mention G-NAF?
+  a: Geoscience Australia matched each facility to an address in the Geocoded National Address File, and
+    its licence statement asks that products using it carry the G-NAF acknowledgement. Every file here
+    carries it. Rows with the comment NO GNAF POINT have no matched address.
+summary: About 8,900 police, fire, ambulance, SES and other emergency management facilities across
+  Australia, one row per facility with its class, address and coordinates, from Geoscience Australia.
+description: The Emergency Management Facilities Database from Geoscience Australia, read from its CSV
+  download. Each row is one facility with its class, name, operational status, address, suburb, state,
+  postcode and source agency, its published latitude and longitude, and the matched G-NAF address, its
+  identifier, confidence and coordinates.
+source:
+  adapter: file
+  url: https://d28rz98at9flks.cloudfront.net/147776/147776_01_2.csv
+  encoding: utf-8-sig
+  cadence: irregular, about every one or two years
+key:
+- objectid
+partition_by:
+- state
+geometry:
+  lon: facility_longitude
+  lat: facility_latitude
+  crs: EPSG:4283
+  crs_note: Latitude and longitude in decimal degrees as published. Geoscience Australia's map service for
+    the dataset is in GDA94 (EPSG:4283), which differs from GDA2020 by under 2 metres.
+row_label: Facilities
+fields:
+- name: objectid
+  label: Object ID
+  source: OBJECTID
+  type: integer
+- name: class
+  label: Facility class
+  source: CLASS
+  type: string
+- name: facility_name
+  label: Facility
+  source: FACILITY_NAME
+  type: string
+- name: operational_status
+  label: Operational status
+  source: FACILITY_OPERATIONALSTATUS
+  type: string
+- name: facility_address
+  label: Address
+  source: FACILITY_ADDRESS
+  type: string
+- name: suburb
+  label: Suburb
+  source: ABS_SUBURB
+  type: string
+- name: state
+  label: State or territory
+  source: FACILITY_STATE
+  type: string
+- name: postcode
+  label: Postcode
+  source: ABS_POSTCODE
+  type: string
+- name: attribute_source
+  label: Attribute source
+  source: FACILITY_ATTRIBUTE_SOURCE
+  type: string
+- name: facility_source
+  label: Location source
+  source: FACILITY_SOURCE
+  type: string
+- name: spatial_confidence
+  label: Spatial confidence
+  source: FACILITY_SPATIAL_CONFIDENCE
+  type: integer
+- name: comment
+  label: Comment
+  source: COMMENT
+  type: string
+- name: facility_latitude
+  label: Latitude
+  source: FACILITY_LAT
+  type: number
+- name: facility_longitude
+  label: Longitude
+  source: FACILITY_LONG
+  type: number
+- name: gnaf_building_name
+  label: G-NAF building name
+  source: GNAF_BUILDING_NAME
+  type: string
+- name: gnaf_address_detail_pid
+  label: G-NAF address ID
+  source: GNAF_ADDRESS_DETAIL_PID
+  type: string
+- name: gnaf_formatted_address
+  label: G-NAF address
+  source: GNAF_FORMATTED_ADDRESS
+  type: string
+- name: gnaf_confidence
+  label: G-NAF confidence
+  source: GNAF_CONFIDENCE
+  type: integer
+- name: gnaf_postcode
+  label: G-NAF postcode
+  source: GNAF_POSTCODE
+  type: string
+- name: gnaf_suburb
+  label: G-NAF suburb
+  source: GNAF_SUBURB
+  type: string
+- name: distance_to_gnaf_m
+  label: Distance to G-NAF point (m)
+  source: DISTANCE_TO_GNAF
+  type: number
+- name: gnaf_latitude
+  label: G-NAF latitude
+  source: GNAF_LAT
+  type: number
+- name: gnaf_longitude
+  label: G-NAF longitude
+  source: GNAF_LONG
+  type: number
+omit:
+  FEATURETYPE: The words EMERGENCY FACILITY, the same on every row.
+  DESCRIPTON: One sentence defining an emergency facility, the same on every row.
+  FACILITY_ATTRIBUTE_DATE: Empty on every row.
+  FACILITY_DATE: Empty on every row.
+  FACILITY_REVISED: Empty on every row.
+  VALIDATED: Empty on every row.

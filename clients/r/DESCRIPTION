@@ -1,0 +1,45 @@
+Package: publicdataau
+Title: Australian Government Open Data from 'publicdata.au'
+Version: 0.4.1
+Authors@R: c(
+    person("Cameron", "Young", role = c("aut", "cre"), email = "cameron@nationaldigital.com.au"),
+    person("National Digital", role = c("cph", "fnd"))
+  )
+Description: Search, filter, total and download the Australian government open
+    data republished at <https://publicdata.au/>, where every version of a
+    dataset is kept at a URL that never changes. Rows and totals come from the
+    site's query API as typed, labelled 'tibble' data frames, and whole tables
+    from its files in any of twelve formats. Map layers come as 'sf' objects,
+    and rows that carry the code of an area join to the Australian Bureau of
+    Statistics boundaries in one call. The 'DuckDB' file of any version can be
+    attached over the web and queried in place with 'DBI' or 'dplyr'.
+    Downloads can be kept in a cache, since a version never changes, the
+    changes between versions are listed row by row, and the source file,
+    fetch time and checksum of every version are on record. Every answer
+    carries the version it came from and the attribution the publisher's
+    licence requires, and citations come as 'BibTeX'. Any dataset the site
+    serves works by its slug, so a new dataset needs no new release.
+License: MIT + file LICENSE
+Language: en-GB
+URL: https://publicdata.au/
+Encoding: UTF-8
+Depends: R (>= 4.1)
+Imports:
+    httr2 (>= 1.0.0),
+    jsonlite,
+    rlang,
+    tibble
+Suggests:
+    arrow,
+    DBI,
+    dbplyr,
+    dplyr,
+    duckdb,
+    knitr,
+    rmarkdown,
+    sf,
+    testthat (>= 3.0.0),
+    withr
+VignetteBuilder: knitr
+Config/testthat/edition: 3
+Config/roxygen2/version: 8.1.0

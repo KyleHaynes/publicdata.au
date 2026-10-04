@@ -1,0 +1,155 @@
+slug: qld-ehealth-contract-disclosure
+title: Contracts awarded by eHealth Queensland, current financial year
+status: live
+topics:
+- government
+- economy
+order: 234
+collection: qld-contract-disclosure
+collection_title: Contract disclosure reports, Queensland Government agencies
+search_title: eHealth Queensland contracts awarded, contract disclosure report (Queensland Health)
+also_known_as:
+- eHealth Queensland contract disclosure
+- Queensland Health ICT contracts
+- eHealth suppliers and contract values
+keywords:
+- contract disclosure
+- government contracts
+- procurement
+- eHealth Queensland
+- Queensland Health
+- ICT
+faq:
+- q: What is in each row?
+  a: One contract eHealth Queensland, the Queensland Health division that runs its digital systems, awarded
+    or varied, with its reference, category, description, award date, value, supplier ABN, name and address,
+    whether it was varied, the procurement method and the extra fields for large contracts.
+- q: What is a contract disclosure report?
+  a: Queensland Government agencies must publish details of each contract they award worth $10,000 or
+    more, including GST. Contracts over $500,000 carry extra fields such as the procurement method, evaluation
+    criteria and deliverables, so those columns are blank for smaller contracts.
+- q: Which year does it cover?
+  a: The newest financial year file eHealth Queensland has published, 2026-27 in the first version here.
+    This table follows the newest.
+- q: Why is the contract value text?
+  a: The publisher writes values with a dollar sign and thousands separators, such as $24,200,000.00,
+    so the column is kept as published.
+- q: Why do some contracts appear twice?
+  a: The publisher's file repeats some rows exactly, with the same reference, supplier, date and value.
+    They are kept as published, so check for exact copies before counting or adding up contracts.
+summary: Every contract worth $10,000 or more awarded by eHealth Queensland in the current financial year,
+  with supplier, value, date and procurement method.
+description: The contract disclosure report of eHealth Queensland, a division of Queensland Health, for
+  the newest financial year, one row per contract, with the reference, category, parent arrangement, description,
+  award date, value, supplier ABN, name and address, variation, confidentiality, procurement method and
+  the fields required for contracts over $500,000.
+publisher:
+  name: Queensland Health
+  short: Queensland Health
+  jurisdiction: Qld
+  url: https://www.health.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/ehealth-queensland-contract-disclosure-report
+  attribution: Queensland Health, Queensland Government, eHealth Queensland Contract Disclosure Report,
+    sourced {sourced}, https://www.data.qld.gov.au/dataset/ehealth-queensland-contract-disclosure-report,
+    licensed under CC BY 4.0.
+chart: none
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: ehealth-queensland-contract-disclosure-report
+  url: https://www.data.qld.gov.au/dataset/ehealth-queensland-contract-disclosure-report
+  encoding: utf-8-sig
+  resource_match: ^eHealth Queensland Contract Disclosure
+  cadence: monthly
+row_label: Contracts
+fields:
+- name: contract_reference
+  label: Contract reference
+  source: Contract reference number
+  type: string
+- name: agency
+  label: Agency
+  source: Agency name
+  type: string
+- name: agency_address
+  label: Agency address
+  source: Agency address
+  type: string
+- name: contract_category
+  label: Contract category
+  source: Contract category group
+  type: string
+- name: parent_contract
+  label: Parent contract or supply arrangement
+  source: Parent contract/Head agremeent/Common-use supply arrangement number
+  type: string
+- name: contract_description
+  label: Contract description
+  source: Contract description/name
+  type: string
+- name: award_date
+  label: Award date
+  source: Award contract date
+  type: date
+  date_format: '%d/%m/%Y'
+- name: contract_value
+  label: Contract value ($)
+  source: Contract value
+  type: string
+  description: As published, with a dollar sign and thousands separators.
+- name: supplier_abn
+  label: Supplier ABN
+  source: Supplier ABN
+  type: string
+- name: supplier_name
+  label: Supplier
+  source: Supplier name
+  type: string
+- name: supplier_address
+  label: Supplier address
+  source: Supplier address
+  type: string
+- name: variation
+  label: Varied
+  source: Variation to contract (Yes/No)
+  type: string
+- name: confidentiality_provision
+  label: Confidentiality provision used
+  source: Specific confidentiality provision used
+  type: string
+- name: procurement_method
+  label: Procurement method
+  source: Procurement method
+  type: string
+- name: limited_tender_reason
+  label: Reason for limited tender
+  source: Reason for use of limited tendering
+  type: string
+- name: form_of_contract
+  label: Form of contract
+  source: Form of contract
+  type: string
+- name: offers_sought
+  label: Offers sought
+  source: Number of offers sought
+  type: string
+- name: evaluation_criteria
+  label: Evaluation criteria
+  source: Evaluation criteria and weightings
+  type: string
+- name: deliverables
+  label: Deliverables
+  source: Deliverables
+  type: string
+- name: milestones
+  label: Milestones
+  source: Contract milestones
+  type: string
+- name: performance_management
+  label: Performance management
+  source: Contract performance management
+  type: string
+note: Cells were typed and headers were made snake_case. Rows were left alone.

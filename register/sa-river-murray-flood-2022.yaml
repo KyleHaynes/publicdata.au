@@ -1,0 +1,73 @@
+slug: sa-river-murray-flood-2022
+title: River Murray flood extent, 2022 to 2023, South Australia
+status: live
+topics:
+- emergencies
+- nature
+order: 411
+collection: sa-river-murray-flood-mapping
+collection_title: River Murray flood mapping, South Australia
+temporal_start: '2022-11-01'
+search_title: River Murray 2022 flood extent map, South Australia (DEW)
+also_known_as:
+- River Murray Flood 2022
+- 2022 2023 Murray River flood map SA
+- River Murray high water event extent
+keywords:
+- flood map
+- River Murray
+- 2022 flood
+- flood extent
+- inundation
+- Department for Environment and Water
+- South Australia
+faq:
+- q: What is in each row?
+  a: One polygon of land that was under water in South Australia during the 2022 to 2023 River Murray flood,
+    with the date of the imagery it was mapped from. The shapes are in the GeoParquet, GeoJSON, GeoPackage and
+    PMTiles files.
+- q: Which coordinates are these?
+  a: The publisher supplies the layer in GDA2020 South Australia Lambert (EPSG:8059). The shapes here have been
+    moved to GDA2020 longitude and latitude (EPSG:7844), as every polygon layer on this site is.
+summary: The mapped extent of land flooded along the River Murray in South Australia during the 2022 to 2023
+  flood, one polygon per mapped area with the date of the imagery.
+description: The boundary of the land flooded along the River Murray in South Australia during the 2022 to 2023
+  flood event, as mapped by the Department for Environment and Water. Each row is one polygon with the
+  acquisition date of the imagery it was drawn from.
+publisher:
+  name: Department for Environment and Water
+  short: Environment and Water
+  jurisdiction: SA
+  url: https://www.environment.sa.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.sa.gov.au/data/dataset/river-murray-flood-2022
+  attribution: Department for Environment and Water, Government of South Australia, River Murray Flood 2022,
+    https://data.sa.gov.au/data/dataset/river-murray-flood-2022, accessed {sourced}, licensed under CC BY 4.0.
+example:
+  group: acquisition_date
+  metric: count
+  label: Flood polygons by imagery date
+source:
+  adapter: ckan-resource
+  portal: https://data.sa.gov.au/data
+  package: river-murray-flood-2022
+  resource: e630b4d2-822f-46b5-8d0b-fa2384f269f6
+  member: MurrayFlood2022.shp
+  url: https://data.sa.gov.au/data/dataset/river-murray-flood-2022
+  cadence: closed
+geometry:
+  kind: polygon
+  crs: EPSG:8059
+  crs_note: The publisher's layer is in GDA2020 South Australia Lambert (EPSG:8059); the shapes are moved to GDA2020
+    (EPSG:7844).
+  maxzoom: 10
+row_label: Flood polygons
+fields:
+- name: acquisition_date
+  label: Imagery date
+  source: ACQ_DATE
+  type: date
+  date_format: '%d/%m/%Y'

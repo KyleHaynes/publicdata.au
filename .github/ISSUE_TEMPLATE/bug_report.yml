@@ -1,0 +1,36 @@
+name: Bug report
+description: Something on the site, in the API or in a client is broken
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not report security vulnerabilities here. See [SECURITY.md](../blob/main/SECURITY.md).
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you saw, and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: The URL, API call or client code, and what it returned.
+    validations:
+      required: true
+  - type: input
+    id: where
+    attributes:
+      label: Where
+      placeholder: "Firefox 140 on Windows / publicdata-au 0.4.0 on Python 3.13 / an MCP client"
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: This is not a security vulnerability
+          required: true
+        - label: I searched the existing issues
+          required: true

@@ -1,0 +1,110 @@
+slug: vic-beach-report-enterococci
+title: Beach Report enterococci samples, Port Phillip Bay, since 2013
+status: live
+topics:
+- nature
+- health
+example:
+  where:
+    enterococci:
+      gt: 400
+    sample_datetime:
+      gte: '2023-11-01'
+  group: site_name
+  metric: count
+  label: Samples over 400 enterococci/100 mL since November 2023
+sample:
+  order: [sample_datetime.desc]
+  label: The newest samples, newest first.
+order: 368
+collection: vic-beach-report
+collection_title: EPA Beach Report water quality
+collection_search_title: Port Phillip Bay beach water quality data (EPA Victoria Beach Report)
+collection_description: |
+  Each summer, from September to May, EPA Victoria samples the water at 36 Port Phillip Bay beaches and tests it for enterococci, a bacterium found in faeces. The results feed its Beach Report, and the full record of samples since December 2013 is released as one workbook.
+
+  Two tables are here. One holds every sample result with its beach and time, and the other the beaches themselves with their water body and coordinates.
+search_title: Port Phillip Bay beach water quality results since 2013 (EPA Victoria)
+also_known_as:
+- EPA Beach Report enterococci data
+- Port Phillip Bay beach bacteria results
+- Melbourne beach water quality history
+keywords:
+- beach water quality
+- enterococci
+- Beach Report
+- Port Phillip Bay
+- swimming
+- EPA Victoria
+- bacteria
+faq:
+- q: What does each row hold?
+  a: One water sample taken at one beach, with the beach's site number and name, the date and time it was
+    taken, the enterococci count in organisms per 100 mL, a qualifier and the sample type, such as Routine.
+- q: What does the qualifier mean?
+  a: An equals sign means the count is as measured. A less than or greater than sign means the true count
+    is below or above the figure given, which is the limit the laboratory test can report.
+- q: Where are the beaches?
+  a: The beaches and their coordinates are in the companion table of Beach Report sites, which joins on
+    the site number.
+- q: Why does one beach appear under more than one name?
+  a: The publisher renamed some sites and misspelt others, so site 99170 is Frankston LSC, Frankston Life
+    Saving Club and Frankston Surf Life Saving Club, and site 99700 is also Wiliamstown. Group by the site
+    number to count a beach across the whole record.
+summary: Every enterococci water sample EPA Victoria has taken at Port Phillip Bay beaches since December
+  2013, about 9,700 results, with beach, time and count.
+description: EPA Victoria's Beach Report sampling results, one row per water sample from December 2013.
+  The samples are taken at 36 Port Phillip Bay beaches between September and May and tested for
+  enterococci, the indicator EPA uses for faecal contamination of recreational water. Each row has the
+  beach, the sample time, the count per 100 mL with its qualifier and the sample type.
+publisher:
+  name: Environment Protection Authority Victoria
+  short: EPA Victoria
+  jurisdiction: Vic
+  url: https://www.epa.vic.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://discover.data.vic.gov.au/dataset/beach-report-enterococci-data
+  attribution: Environment Protection Authority Victoria, Victorian Government, Beach Report enterococci
+    data, sourced {sourced}, https://discover.data.vic.gov.au/dataset/beach-report-enterococci-data, licensed
+    under CC BY 4.0.
+temporal_start: '2013-12-03'
+source:
+  adapter: ckan-resource
+  portal: https://discover.data.vic.gov.au
+  package: beach-report-enterococci-data
+  resource: b4bc2d2b-6c20-4331-9069-baba2a1c4cdc
+  url: https://discover.data.vic.gov.au/dataset/beach-report-enterococci-data
+  cadence: weekly in the sampling season
+  sheet: Beach_Report
+row_label: Samples
+fields:
+- name: site_id
+  label: Site number
+  source: Site ID
+  type: integer
+- name: site_name
+  label: Beach
+  source: Site Name
+  type: string
+- name: sample_datetime
+  label: Sampled at
+  source: Sample datetime
+  type: string
+  description: Local date and time, as YYYY-MM-DD HH:MM:SS. Kept as text because some samples from 2023
+    carry fractions of a second from the publisher's system.
+- name: enterococci
+  label: Enterococci (orgs/100 mL)
+  source: Enterococci value (orgs/100 mL)
+  type: number
+- name: qualifier
+  label: Qualifier
+  source: Enterococci qualifier
+  type: string
+  description: '=, < or >, where < and > mark a count beyond what the test reports.'
+- name: sample_type
+  label: Sample type
+  source: Sample type
+  type: string

@@ -1,0 +1,34 @@
+{
+  "dataset": "sa-liquor-gaming-licences-2018",
+  "version": "2018-09-04",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:10:20+00:00",
+  "sha256": "178a279ead4409eb4896a878ba0433fc5041b64bedb2de1e974c7ef67a55a545",
+  "bytes": 844141,
+  "filename": "lglicences20180827.xlsx",
+  "encoding": "xlsx",
+  "source": {
+    "url": "https://data.sa.gov.au/data/dataset/cf466291-8740-4b54-ae11-8c98c347f201/resource/3ea20b6b-b018-48bc-8d6c-0a43c00369f4/download/lglicences20180827.xlsx",
+    "portal": "https://data.sa.gov.au/data",
+    "package": "liquor-gaming-licences",
+    "package_id": "cf466291-8740-4b54-ae11-8c98c347f201",
+    "resource": "3ea20b6b-b018-48bc-8d6c-0a43c00369f4",
+    "resource_name": "Liquor & Gaming licences as at September 2018",
+    "resource_last_modified": "2018-09-04T01:20:38.452583",
+    "package_modified": "2019-08-19T05:17:29.155418",
+    "package_version": null,
+    "etag": "1536024038.0-844141-1288968529",
+    "http_last_modified": "Tue, 04 Sep 2018 01:20:38 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution",
+    "url": "http://creativecommons.org/licenses/by/4.0",
+    "read_from": "https://data.sa.gov.au/data/api/3/action/package_show?id=liquor-gaming-licences",
+    "read_at": "2026-10-03T03:10:20+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "01047578f0fc75e2f90720a595470f777544f4a617f48e558402d35fb5c382a9"
+}

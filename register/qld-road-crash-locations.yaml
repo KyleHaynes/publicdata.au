@@ -1,0 +1,336 @@
+slug: qld-road-crash-locations
+title: Road crash locations, Queensland
+status: live
+topics:
+- roads
+example:
+  where:
+    crash_severity: Fatal
+  group: crash_nature
+chart:
+  where:
+    crash_severity:
+      neq: Property damage only
+order: 10
+collection: qld-road-crashes
+temporal_start: '2001-01-01'
+collection_title: Crash data from Queensland roads
+search_title: Queensland road crash locations
+collection_search_title: Queensland road crash data
+place_field: loc_local_government_area
+also_known_as:
+- Queensland road crash statistics
+- TMR crash data
+- Queensland car accident data
+- QLD crash locations
+- Queensland road crash map
+keywords:
+- road crash
+- car accident
+- crash statistics
+- road safety
+- fatal crashes
+- casualty crashes
+- crash locations
+- TMR
+- Queensland
+collection_description: |
+  Crash data from Queensland roads is the dataset the Department of Transport and Main Roads (TMR) publishes as its road crash statistics. It covers every crash reported to police on a Queensland road since 1 January 2001 in which a person was killed or injured, a vehicle was towed away or property damage met the reporting threshold. Cars, trucks, buses, motorcycles, bicycles and pedestrians are all in it.
+
+  The release is six tables. Road crash locations has one row per crash with coordinates. The other five are counts by year and police region: casualties, driver demographics, seatbelt and helmet use, vehicle types and contributing factors such as drink driving, speed and fatigue.
+faq:
+- q: Does it include every car accident in Queensland?
+  a: No. It holds the crashes reported to police that met the publisher's criteria, so a minor collision
+    that nobody reported is not here. Property damage only crashes stop after 31 December 2010, and from
+    then on a crash needs a casualty or a tow to be included.
+- q: Why are the most recent months lower than expected?
+  a: The publisher treats the last 12 months of each release as preliminary, because a police
+    investigation can take up to a year to finalise. The counts for those months rise in later releases.
+- q: Where is the Queensland road toll in this data?
+  a: Each crash row carries count_casualty_fatality, and the Road casualties table has fatalities counted
+    by year, police region, age group and road user type. The department also publishes a road toll
+    separately and updates it more often, so the two can differ for recent months.
+summary: Every reported crash on a Queensland road since 1 January 2001, one row per crash, with its coordinates,
+  severity, road conditions and casualty and vehicle counts.
+description: 'One row per reported road traffic crash in Queensland from 1 January 2001. The publisher
+  includes a crash when a person was killed or injured, a vehicle was towed away, or property damage met
+  its reporting threshold. Property damage only crashes stop after 31 December 2010. Crashes in the last
+  12 months of a release are preliminary because police investigations can take up to a year. Coordinates
+  are GDA2020.
+
+
+  This is the largest of six tables the publisher releases together. The other five are aggregate counts
+  by year and police region.'
+publisher:
+  name: Department of Transport and Main Roads
+  short: Transport and Main Roads
+  jurisdiction: Qld
+  url: https://www.tmr.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-09-25'
+  evidence: https://www.data.qld.gov.au/dataset/crash-data-from-queensland-roads
+  attribution: Department of Transport and Main Roads, Queensland Government, Crash data from Queensland
+    roads, sourced {sourced}, https://www.data.qld.gov.au/dataset/crash-data-from-queensland-roads, licensed
+    under CC BY 4.0.
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: crash-data-from-queensland-roads
+  resource: e88943c0-5968-4972-a15f-38e120d72ec0
+  url: https://www.data.qld.gov.au/dataset/crash-data-from-queensland-roads/resource/e88943c0-5968-4972-a15f-38e120d72ec0
+  cadence: about twice a year
+  encoding: utf-8-sig
+  as_at_regex: to:?[\s•]*(\d{1,2} [A-Za-z]+ \d{4})
+key:
+- crash_ref_number
+partition_by:
+- crash_year
+- loc_local_government_area
+enrich:
+- sa2
+- lga
+- suburb
+- postcode
+- state_electorate
+- federal_electorate
+geometry:
+  lon: crash_longitude
+  lat: crash_latitude
+  crs: EPSG:7844
+  crs_note: Coordinates are longitude and latitude in GDA2020 (EPSG:7844), as published.
+row_label: Crashes
+fields:
+- name: crash_ref_number
+  label: Crash reference number
+  source: Crash_Ref_Number
+  type: integer
+  description: The publisher's identifier for the crash. Unique within a release.
+- name: crash_severity
+  label: Severity
+  source: Crash_Severity
+  type: string
+  description: Fatal, Hospitalisation, Medical treatment, Minor injury or Property damage only. Property
+    damage only crashes stop after 31 December 2010.
+- name: crash_year
+  label: Year
+  source: Crash_Year
+  type: integer
+- name: crash_month
+  label: Month
+  source: Crash_Month
+  type: string
+  description: Month name.
+- name: crash_day_of_week
+  label: Day of week
+  source: Crash_Day_Of_Week
+  type: string
+- name: crash_hour
+  label: Hour of day
+  source: Crash_Hour
+  type: integer
+  description: Hour of the day, 0 to 23.
+- name: crash_nature
+  label: Nature of crash
+  source: Crash_Nature
+  type: string
+  description: For example Angle, Rear-end, Hit pedestrian.
+- name: crash_type
+  label: Crash type
+  source: Crash_Type
+  type: string
+  description: Single Vehicle, Multi-Vehicle, Hit pedestrian or Other.
+- name: crash_longitude
+  label: Longitude
+  source: Crash_Longitude
+  type: number
+  description: Decimal degrees, GDA2020. Blank for 598 crashes in the April 2026 release.
+- name: crash_latitude
+  label: Latitude
+  source: Crash_Latitude
+  type: number
+  description: Decimal degrees, GDA2020.
+- name: crash_street
+  label: Street
+  source: Crash_Street
+  type: string
+- name: crash_street_intersecting
+  label: Intersecting street
+  source: Crash_Street_Intersecting
+  type: string
+  description: Blank when the crash was not at an intersection.
+- name: state_road_name
+  label: State road
+  source: State_Road_Name
+  type: string
+  description: Blank on locally controlled roads.
+- name: loc_suburb
+  label: Suburb
+  source: Loc_Suburb
+  type: string
+- name: loc_local_government_area
+  label: Council area
+  source: Loc_Local_Government_Area
+  type: string
+- name: loc_post_code
+  label: Postcode
+  source: Loc_Post_Code
+  type: string
+  description: Kept as text.
+- name: loc_police_division
+  label: Police division
+  source: Loc_Police_Division
+  type: string
+- name: loc_police_district
+  label: Police district
+  source: Loc_Police_District
+  type: string
+- name: loc_police_region
+  label: Police region
+  source: Loc_Police_Region
+  type: string
+- name: loc_queensland_transport_region
+  label: Transport region
+  source: Loc_Queensland_Transport_Region
+  type: string
+- name: loc_main_roads_region
+  label: Main Roads region
+  source: Loc_Main_Roads_Region
+  type: string
+- name: loc_abs_statistical_area_2
+  label: ABS area (SA2)
+  source: Loc_ABS_Statistical_Area_2
+  type: string
+  description: ABS SA2 name.
+- name: loc_abs_statistical_area_3
+  label: ABS area (SA3)
+  source: Loc_ABS_Statistical_Area_3
+  type: string
+  description: ABS SA3 name.
+- name: loc_abs_statistical_area_4
+  label: ABS area (SA4)
+  source: Loc_ABS_Statistical_Area_4
+  type: string
+  description: ABS SA4 name.
+- name: loc_abs_remoteness
+  label: Remoteness
+  source: Loc_ABS_Remoteness
+  type: string
+  description: ABS remoteness class.
+- name: loc_state_electorate
+  label: State electorate
+  source: Loc_State_Electorate
+  type: string
+- name: loc_federal_electorate
+  label: Federal electorate
+  source: Loc_Federal_Electorate
+  type: string
+- name: crash_controlling_authority
+  label: Road authority
+  source: Crash_Controlling_Authority
+  type: string
+  description: State-controlled, Locally-controlled, Other or Not coded.
+- name: crash_roadway_feature
+  label: Road feature
+  source: Crash_Roadway_Feature
+  type: string
+- name: crash_traffic_control
+  label: Traffic control
+  source: Crash_Traffic_Control
+  type: string
+- name: crash_speed_limit
+  label: Speed limit
+  source: Crash_Speed_Limit
+  type: string
+  description: A band such as 60 km/h or 100 - 110 km/h. Kept as text because the publisher uses bands.
+- name: crash_road_surface_condition
+  label: Road surface
+  source: Crash_Road_Surface_Condition
+  type: string
+- name: crash_atmospheric_condition
+  label: Weather
+  source: Crash_Atmospheric_Condition
+  type: string
+- name: crash_lighting_condition
+  label: Lighting
+  source: Crash_Lighting_Condition
+  type: string
+- name: crash_road_horiz_align
+  label: Road curve
+  source: Crash_Road_Horiz_Align
+  type: string
+  description: Horizontal alignment.
+- name: crash_road_vert_align
+  label: Road slope
+  source: Crash_Road_Vert_Align
+  type: string
+  description: Vertical alignment.
+- name: crash_dca_code
+  label: DCA code
+  source: Crash_DCA_Code
+  type: string
+  description: DCA (Definitions for Coding Accidents) code. Kept as text to preserve leading zeros.
+- name: crash_dca_description
+  label: Crash movement
+  source: Crash_DCA_Description
+  type: string
+- name: crash_dca_group_description
+  label: Crash movement group
+  source: Crash_DCA_Group_Description
+  type: string
+- name: dca_key_approach_dir
+  label: Approach direction
+  source: DCA_Key_Approach_Dir
+  type: string
+  description: Compass direction of the key vehicle. Blank in about 8,000 rows.
+- name: count_casualty_fatality
+  label: Deaths
+  source: Count_Casualty_Fatality
+  type: integer
+- name: count_casualty_hospitalised
+  label: People hospitalised
+  source: Count_Casualty_Hospitalised
+  type: integer
+- name: count_casualty_medically_treated
+  label: People medically treated
+  source: Count_Casualty_MedicallyTreated
+  type: integer
+- name: count_casualty_minor_injury
+  label: People with minor injuries
+  source: Count_Casualty_MinorInjury
+  type: integer
+- name: count_casualty_total
+  label: All casualties
+  source: Count_Casualty_Total
+  type: integer
+- name: count_unit_car
+  label: Cars
+  source: Count_Unit_Car
+  type: integer
+  description: Number of cars involved.
+- name: count_unit_motorcycle_moped
+  label: Motorcycles and mopeds
+  source: Count_Unit_Motorcycle_Moped
+  type: integer
+- name: count_unit_truck
+  label: Trucks
+  source: Count_Unit_Truck
+  type: integer
+- name: count_unit_bus
+  label: Buses
+  source: Count_Unit_Bus
+  type: integer
+- name: count_unit_bicycle
+  label: Bicycles
+  source: Count_Unit_Bicycle
+  type: integer
+- name: count_unit_pedestrian
+  label: Pedestrians
+  source: Count_Unit_Pedestrian
+  type: integer
+- name: count_unit_other
+  label: Other road users
+  source: Count_Unit_Other
+  type: integer
+note: Cells were typed and headers were made snake_case. The publisher's header is kept beside every field
+  in schema.json. Rows were left alone.

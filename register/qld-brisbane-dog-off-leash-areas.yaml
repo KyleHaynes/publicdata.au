@@ -1,0 +1,133 @@
+slug: qld-brisbane-dog-off-leash-areas
+title: Dog off-leash areas, Brisbane
+status: live
+topics:
+- community
+order: 294
+collection: qld-brisbane-park-facilities
+collection_title: Brisbane park facilities
+search_title: Brisbane dog off-leash areas and dog parks (Brisbane City Council)
+also_known_as:
+- Brisbane dog parks
+- Brisbane off-leash dog areas map
+- Brisbane fenced dog parks
+keywords:
+- dog park
+- off-leash area
+- dogs
+- park
+- Brisbane City Council
+- Brisbane
+faq:
+- q: What is in each row?
+  a: Each row is one dog off-leash area in a Brisbane City Council park. It gives the location code, the park
+    name and number, the suburb, whether it is fenced and lit, whether it has a small dog enclosure and agility
+    equipment, a point for the area, and its area and perimeter.
+- q: Is the point the whole area?
+  a: No. The publisher maps each off-leash area as a shape and gives one longitude and latitude for it. Only
+    that point is published here.
+summary: Every dog off-leash area in Brisbane City Council parks, with its park, suburb, fencing, lighting,
+  small dog enclosure and agility equipment.
+description: 'One row per dog off-leash area in a Brisbane City Council park, from the council''s asset system.
+  Each row gives the object id, the location code, the item description and type, the park name and number,
+  the suburb, whether the area is fenced and lit, whether it has a small dog enclosure and agility equipment,
+  the longitude and latitude the publisher gives for the area, and the area and perimeter of its shape.
+
+  '
+publisher:
+  name: Brisbane City Council
+  short: Brisbane City Council
+  jurisdiction: Qld
+  url: https://www.brisbane.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://data.brisbane.qld.gov.au/explore/dataset/park-dog-off-leash-areas/
+  attribution: Brisbane City Council, Park - Dog off-leash areas, sourced {sourced}, https://data.brisbane.qld.gov.au/explore/dataset/park-dog-off-leash-areas/,
+    licensed under CC BY 4.0.
+source:
+  adapter: opendatasoft
+  portal: https://data.brisbane.qld.gov.au
+  package: park-dog-off-leash-areas
+  url: https://data.brisbane.qld.gov.au/explore/dataset/park-dog-off-leash-areas/
+  cadence: irregular, several times a year
+key:
+- objectid
+partition_by: []
+geometry:
+  lon: long
+  lat: lat
+  crs: EPSG:4326
+  crs_note: The coordinates are decimal degrees as the publisher's portal serves them, read as WGS84 (EPSG:4326)
+    and published as given.
+row_label: Off-leash areas
+fields:
+- name: objectid
+  label: Object id
+  source: objectid
+  type: integer
+  description: The publisher's row id.
+- name: sap_functional_location
+  label: Functional location
+  source: sap_functional_location
+  type: string
+  description: The council's asset system location code.
+- name: item_description
+  label: Item description
+  source: item_description
+  type: string
+- name: item_type
+  label: Item type
+  source: item_type
+  type: string
+- name: park_number
+  label: Park number
+  source: park_number
+  type: string
+- name: park_name
+  label: Park
+  source: park_name
+  type: string
+- name: suburb
+  label: Suburb
+  source: suburb
+  type: string
+- name: fencing
+  label: Fencing
+  source: fencing
+  type: string
+- name: lighting
+  label: Lighting
+  source: lighting
+  type: string
+- name: small_dog_enclosure
+  label: Small dog enclosure
+  source: small_dog_enclosure
+  type: string
+- name: dog_agility_equipment
+  label: Dog agility equipment
+  source: dog_agility_equipment
+  type: string
+- name: long
+  label: Longitude
+  source: long
+  type: number
+- name: lat
+  label: Latitude
+  source: lat
+  type: number
+- name: shape_area
+  label: Area
+  source: shape_area
+  type: number
+  description: The area's size as the publisher gives it, in the units of its own projection.
+- name: shape_length
+  label: Perimeter
+  source: shape_length
+  type: number
+  description: The perimeter as the publisher gives it, in the units of its own projection.
+omit:
+  geo_shape: The area's shape as GeoJSON text. The publisher's point for the area is published from the long
+    and lat columns.
+  geo_point_2d: The latitude and longitude again as one text value. They are published from the long and lat
+    columns.

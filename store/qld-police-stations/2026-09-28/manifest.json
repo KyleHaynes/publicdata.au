@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-police-stations",
+  "version": "2026-09-28",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:00:07+00:00",
+  "sha256": "0a74323c7c28e25e20ec7b443e6deb0e24bab27f20e7300a27db42613297920a",
+  "bytes": 26056,
+  "filename": "QPS_STATIONS.zip",
+  "encoding": "zip",
+  "source": {
+    "url": "https://open-crime-data.s3-ap-southeast-2.amazonaws.com/document/QPS_STATIONS.zip",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "qps-police-stations",
+    "package_id": "6f6493d6-3db4-4ac3-b04e-ff84ce9552ee",
+    "resource": "b0aa480e-f023-4bbf-9c54-3a8036edfb14",
+    "resource_name": "Queensland Police Service police station locations - Update Monthly",
+    "resource_last_modified": "2022-05-03T06:57:27.793884",
+    "package_modified": "2019-09-02T03:48:21.814761",
+    "package_version": "1.0",
+    "etag": "60ee9bc7510264d6162c5fa02f9de33f",
+    "http_last_modified": "Mon, 28 Sep 2026 03:28:21 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-3.0",
+    "title": "Creative Commons Attribution 3.0",
+    "url": "https://creativecommons.org/licenses/by/3.0/au/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=qps-police-stations",
+    "read_at": "2026-10-03T03:00:07+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "60c402167caf9a67c64f9de3463d8306f33268fa5fc9946bf2deed23039e22ee"
+}

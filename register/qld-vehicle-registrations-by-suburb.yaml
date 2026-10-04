@@ -1,0 +1,91 @@
+slug: qld-vehicle-registrations-by-suburb
+title: Registered vehicles by suburb, Queensland, October 2022
+status: live
+topics:
+- roads
+- places
+order: 212
+collection: qld-vehicle-register-2022
+collection_title: Queensland vehicle register extract, October 2022
+search_title: Queensland registered vehicles by suburb and postcode (Transport and Main Roads)
+collection_search_title: Queensland vehicle registration data (Transport and Main Roads)
+also_known_as:
+- Number of cars registered by suburb Queensland
+- QLD vehicle registrations by postcode
+- Vehicles per suburb Queensland
+keywords:
+- vehicle registrations
+- registered vehicles
+- cars by suburb
+- postcode
+- garaging address
+- Queensland
+collection_description: |
+  The Department of Transport and Main Roads published an extract of the Queensland vehicle register as it stood on 10 October 2022. It has one row for each registered vehicle, with no plate, owner or address, and a count of vehicles by suburb. Seasonal registrations are left out.
+
+  The department split the vehicle rows into eight files by category. Two are here, the counts by suburb and the motorcycles. The light vehicle and other vehicle files are each over 140 MB, in parts.
+faq:
+- q: What is in each row?
+  a: One postcode and suburb of a recorded garaging address, with the number of vehicles registered in
+    Queensland that are garaged there. Of the 6,467 rows, 2,830 are for addresses in other states, with
+    22,011 vehicles between them.
+- q: How current is it?
+  a: The department states the extract is the register as at 10 October 2022 and has not replaced it since.
+summary: The number of vehicles registered in Queensland on 10 October 2022 for each suburb and postcode
+  of their garaging address, from the Department of Transport and Main Roads.
+description: A count of the vehicles on the Queensland register on 10 October 2022 by the postcode, suburb
+  and state of each vehicle's recorded garaging address, one row per suburb. It covers cars, trucks, trailers,
+  caravans and motorcycles and leaves out seasonal registrations.
+publisher:
+  name: Department of Transport and Main Roads
+  short: Transport and Main Roads
+  jurisdiction: Qld
+  url: https://www.tmr.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/vehicle-registrations
+  attribution: Department of Transport and Main Roads, Queensland Government, Vehicle registrations, sourced
+    {sourced}, https://www.data.qld.gov.au/dataset/vehicle-registrations, licensed under CC BY 4.0.
+example:
+  where: {state: QLD}
+  group: suburb
+  metric: sum.vehicles
+  label: Registered vehicles by Queensland suburb of garaging address, most first
+sample:
+  where: {state: QLD}
+  order: [vehicles.desc]
+  spread: none
+  label: The ten Queensland suburbs and postcodes with the most registered vehicles, most first.
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: vehicle-registrations
+  resource: 9c479cfb-8c19-4759-ad34-bc3123079b94
+  url: https://www.data.qld.gov.au/dataset/vehicle-registrations
+  encoding: utf-8-sig
+  cadence: closed
+key:
+- postcode
+- suburb
+- state
+row_label: Suburbs
+fields:
+- name: postcode
+  label: Postcode
+  source: Postcode
+  type: string
+  description: Kept as text. Northern Territory postcodes are written without the leading zero, as published.
+- name: suburb
+  label: Suburb
+  source: Suburb
+  type: string
+- name: state
+  label: State
+  source: State
+  type: string
+- name: vehicles
+  label: Registered vehicles
+  source: Count
+  type: integer
+note: Cells were typed and headers were made snake_case. Rows were left alone.

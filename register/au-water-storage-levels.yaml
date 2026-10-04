@@ -1,0 +1,138 @@
+slug: au-water-storage-levels
+title: Daily water storage levels, Australian dams and reservoirs
+status: live
+topics:
+- nature
+chart:
+  where:
+    station_no: '212243.1'
+  split: none
+  metric: avg.volume_ml
+  label: Average megalitres held in Warragamba
+sample:
+  where:
+    volume_ml:
+      gt: 0
+  order:
+  - date.desc
+  - volume_ml.desc
+  spread: state
+  label: The latest day with a volume in each state, the largest storage on that day first, each state in
+    turn.
+order: 55
+publisher:
+  name: Bureau of Meteorology
+  short: BoM
+  jurisdiction: Cth
+  url: https://www.bom.gov.au/waterdata/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-10-01'
+  evidence: https://www.bom.gov.au/waterdata/
+  statement: all material on this page is licensed under the Creative Commons Attribution Australia Licence
+  attribution: Bureau of Meteorology, © Commonwealth of Australia, Water Data Online, Storage Volume daily
+    mean, sourced {sourced}, https://www.bom.gov.au/waterdata/, licensed under CC BY 3.0 AU.
+temporal_start: '1905-01-01'
+search_title: Dam levels Australia, daily storage volume of every major dam since the 1960s (BoM Water Data Online)
+also_known_as:
+- Dam levels NSW, Victoria, Queensland, WA, SA, Tasmania
+- Warragamba Dam level history
+- Wivenhoe Dam level history
+- Melbourne dam levels daily
+- Perth dam levels
+- Water storage volumes Bureau of Meteorology
+- Seqwater dam levels
+- Wivenhoe Dam level
+- Sydney dam levels
+- Warragamba Dam level
+keywords:
+- dam levels
+- water storage
+- reservoir volume
+- Warragamba
+- Wivenhoe
+- Bureau of Meteorology
+- Water Data Online
+- Australia
+faq:
+- q: Which dams are here?
+  a: Every storage whose owner reports a daily storage volume to the Bureau of Meteorology under the Water
+    Regulations 2008, about 540 dams, weirs and reservoirs in every state and territory, from Warragamba and
+    Wivenhoe to small town supplies. Each row is one storage on one day with the validated daily mean volume
+    in megalitres and the Bureau's quality code. The companion dataset of Australian water storages lists
+    each storage with its owner, coordinates and full storage volume.
+- q: Are the Seqwater and Sydney dams included?
+  a: Both are included. The Queensland Bulk Water Supply Authority (Seqwater) reports Wivenhoe (station 143036A), Somerset
+    (143305A), North Pine, Hinze, Baroon Pocket, Little Nerang, Leslie Harrison, Wyaralong, Moogerah, Maroon,
+    Borumba, Enoggera, Gold Creek, Lake Manchester, Lake Kurwongbah, Lake MacDonald, Ewen Maddock and the
+    other south east Queensland storages. WaterNSW reports the Sydney storages, Warragamba (212243), Avon,
+    Cataract, Cordeaux, Nepean, Woronora, Prospect Reservoir, Tallowa, Fitzroy Falls, Wingecarribee and the
+    Blue Mountains dams. The Bureau names many stations by the creek and dam wall, such as Nerang R at Hinze
+    Dam HW, and lists some Sydney storages more than once under numbers such as 212243.1, so search by name
+    and check the station number in the storages dataset.
+- q: How do I get a percentage full?
+  a: Divide the day's volume by the full storage volume in the companion storages dataset, joining on the
+    station number. The Bureau publishes no percentage itself, and this site derives nothing, so the figure is
+    yours to work out. A water utility's own page may differ by a point because it may quote an 8 am reading
+    against a different capacity.
+- q: What do the quality codes mean?
+  a: They are the Bureau's own codes for how a value was checked, from 10 for the best quality through 90 and
+    110 to 140 and above for estimated or unchecked values, as documented on the Water Data Online site. The
+    codes are kept as published.
+- q: Why the Bureau rather than each water utility?
+  a: The utilities report their storages to the Bureau under the Water Regulations, and the Bureau publishes
+    them under CC BY 3.0 AU. Most utilities' own pages carry no open licence, or challenge automated
+    requests, so the Bureau's feed is the one licensed national source. Melbourne Water also publishes its
+    ten storages through the Victorian open data portal under CC BY 4.0.
+summary: The daily mean volume held in about 540 Australian dams and reservoirs, every day since records
+  began, from the Bureau of Meteorology's Water Data Online. About 6.5 million rows, updated weekly.
+description: Daily storage volumes for every Australian storage that reports to the Bureau of Meteorology's
+  Water Data Online, one row per storage and day, with the validated daily mean volume in megalitres and the
+  Bureau's quality code. The series is the Bureau's DMQaQc.Merged.DailyMean.24HR time series of the Storage
+  Volume parameter, read whole for every station. Records run from the 1960s for the large dams, and the
+  storage's owner, state, coordinates and full storage volume are in the companion dataset of Australian
+  water storages.
+source:
+  adapter: kiwis
+  url: https://www.bom.gov.au/waterdata/services
+  search: Storage Volume
+  package: DMQaQc.Merged.DailyMean.24HR
+  resource: values
+  cadence: weekly
+key:
+- station_no
+- date
+partition_by:
+- state
+row_label: Storage days
+fields:
+- name: station_no
+  label: Station number
+  source: station_no
+  type: string
+  description: The Bureau's station number for the storage, the join key to the storages dataset.
+- name: station_name
+  label: Storage
+  source: station_name
+  type: string
+- name: state
+  label: State
+  source: state
+  type: string
+  description: The state or territory named in the Bureau's owner label for the station, MDB for a
+    Murray-Darling Basin Authority storage.
+- name: date
+  label: Date
+  source: date
+  type: date
+  date_format: '%Y-%m-%d'
+- name: volume_ml
+  label: Volume (ML)
+  source: value
+  type: number
+  description: The daily mean storage volume in megalitres.
+- name: quality_code
+  label: Quality code
+  source: quality_code
+  type: integer
+  description: The Bureau's quality code for the value.

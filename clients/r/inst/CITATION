@@ -1,0 +1,13 @@
+bibentry(
+  bibtype = "Manual",
+  title = "publicdataau: Australian Government Open Data from 'publicdata.au'",
+  author = person("Cameron", "Young"),
+  organization = "National Digital",
+  year = "2026",
+  note = paste("R package version", meta$Version),
+  url = "https://publicdata.au/",
+  textVersion = paste0(
+    "Young C (2026). publicdataau: Australian Government Open Data from 'publicdata.au'. ",
+    "National Digital. R package version ", meta$Version, ". https://publicdata.au/"
+  )
+)

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block head %}<script type="application/ld+json">{{ jsonld|safe }}</script>{% endblock %}
+{% block main %}
+<div class="crumbs"><a href="/">Datasets</a> / <a href="/browse/">By government</a> / {{ jur.name }}</div>
+<div class="ds-head"><h1>{{ heading }}</h1></div>
+<p class="lede" style="margin-top:10px">{{ intro }}</p>
+<div class="stats"><div class="stat"><b>{{ stats.publishers }}</b><span>publishers</span></div>{% if catalogue %}<div class="stat"><b>{{ stats.listed }}</b><span>datasets listed</span></div><div class="stat"><b>{{ stats.candidates }}</b><span>open with a download</span></div>{% endif %}<div class="stat"><b>{{ stats.live }}</b><span>served here</span></div></div>
+{% for n in notes or [] %}<p class="notice" style="margin-top:10px">{{ n }}</p>{% endfor %}
+{% if live %}
+<div class="sec-head"><h2>Served here</h2><a href="/">All datasets</a></div>
+<div class="cards">{% for d in live %}{% include "card.html" %}{% endfor %}</div>
+{% endif %}
+{% for group in groups %}
+<div class="sec-head"><h2>{{ group.title }}</h2><span class="muted" style="font-size:14px">{{ group.publishers|length }} publisher{{ '' if group.publishers|length == 1 else 's' }}{% if catalogue %}, by datasets listed{% endif %}</span></div>
+<div class="pubbars">{% for p in group.publishers %}<a class="pubbar" href="{{ p.path }}"><span class="pname">{{ p.name }}</span>{% if catalogue %}<span class="pbar"><i style="width:{{ p.bar }}%"></i></span><span class="pn">{{ p.listed_fmt }}</span>{% else %}<span class="pbar"></span><span class="pn"></span>{% endif %}<span class="pn live">{% if p.live %}{{ p.live }} served{% endif %}</span></a>{% endfor %}</div>
+{% endfor %}
+<p class="muted" style="font-size:14px;margin-top:24px">{% if catalogue %}Counts come from the portals' own catalogues, read {{ as_at_long }}. {% endif %}The list is also available as <a href="/catalogue/publishers.json" class="mono">/catalogue/publishers.json</a>.</p>
+{% endblock %}

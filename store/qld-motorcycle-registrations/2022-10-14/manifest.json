@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-motorcycle-registrations",
+  "version": "2022-10-14",
+  "as_at": "",
+  "fetched_at": "2026-10-03T02:59:36+00:00",
+  "sha256": "32ae5dc1bb62393f42ca40a301fc79ed8f10adf294d35ebf426f5c6c448ade33",
+  "bytes": 54748348,
+  "filename": "r44066_motorcycles_reg.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/6632a3a0-8cb2-41b6-9435-50f762850d72/resource/9f818bd5-4efa-4781-87e7-db600b62bfd8/download/r44066_motorcycles_reg.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "vehicle-registrations",
+    "package_id": "6632a3a0-8cb2-41b6-9435-50f762850d72",
+    "resource": "9f818bd5-4efa-4781-87e7-db600b62bfd8",
+    "resource_name": "Vehicle registrations — Motorcycles",
+    "resource_last_modified": "2022-10-14T07:45:57.963979",
+    "package_modified": "2022-10-14T09:40:51.618344",
+    "package_version": "October 2022",
+    "etag": "f4455b2db225f31f650ef504f689af3f",
+    "http_last_modified": "Fri, 14 Oct 2022 07:46:03 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=vehicle-registrations",
+    "read_at": "2026-10-03T02:59:35+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "09a60320b9b764de555040a2d212e47fec9f906cda7686614ae2a616f76500a3"
+}

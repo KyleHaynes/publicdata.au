@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-school-details",
+  "version": "2022-09-12",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:02:13+00:00",
+  "sha256": "d11ea41fa8605d0f97ad36e53c1b577d81f531bca28fa8a523c7211f51975298",
+  "bytes": 649133,
+  "filename": "centredetails_may_2020.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/0d7eee4a-2990-4195-9d3b-89f4af818e32/resource/5b39065c-df32-415c-994c-5ff12f8de997/download/centredetails_may_2020.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "state-and-non-state-school-details",
+    "package_id": "0d7eee4a-2990-4195-9d3b-89f4af818e32",
+    "resource": "5b39065c-df32-415c-994c-5ff12f8de997",
+    "resource_name": "State and non-state school details",
+    "resource_last_modified": "2022-09-11T23:47:12.589517",
+    "package_modified": "2024-07-29T02:23:52.009409",
+    "package_version": "1.0",
+    "etag": "W/\"8b012ca1acd3119a41435865d9beccca",
+    "http_last_modified": "Sun, 11 Sep 2022 23:47:14 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=state-and-non-state-school-details",
+    "read_at": "2026-10-03T03:02:13+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "d8e894df157bf956edfb467b5a305380df7a58701868def1a12eb390748a4085"
+}

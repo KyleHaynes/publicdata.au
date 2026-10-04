@@ -1,0 +1,34 @@
+{
+  "dataset": "vic-school-locations",
+  "version": "2025-08-29",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:07:29+00:00",
+  "sha256": "d2703eaa7569483bfe17c88d083b01efc7747306aa24e2d9db0decb924d3d939",
+  "bytes": 534679,
+  "filename": "dv402-SchoolLocations2025.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.education.vic.gov.au/Documents/about/research/datavic/dv402-SchoolLocations2025.csv",
+    "portal": "https://discover.data.vic.gov.au",
+    "package": "school-locations-2025",
+    "package_id": "baa49c22-79b7-4e65-bb3e-ac8ea91e6787",
+    "resource": "d26bf015-a1e5-48dd-a1d6-8edd4b0a511b",
+    "resource_name": "School Locations 2025",
+    "resource_last_modified": null,
+    "package_modified": "2025-08-29T00:51:26.276551",
+    "package_version": null,
+    "etag": "{CF36AD97-713C-495F-B0EC-9E45E057ADD8},5",
+    "http_last_modified": "Thu, 28 Aug 2025 22:57:47 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution 4.0 International",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://discover.data.vic.gov.au/api/3/action/package_show?id=school-locations-2025",
+    "read_at": "2026-10-03T03:07:28+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "02f2bd43b4a8d34cc0f9d119ab34f66eba1fd5bcb10a86e3425faebf9ee971a7"
+}

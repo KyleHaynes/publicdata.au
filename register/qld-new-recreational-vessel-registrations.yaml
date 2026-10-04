@@ -1,0 +1,90 @@
+slug: qld-new-recreational-vessel-registrations
+title: New recreational vessel registrations by make, model and year, Queensland
+status: live
+topics:
+- roads
+order: 219
+temporal_start: '2012-01-01'
+search_title: Queensland new boat registrations by make and model each year (Transport and Main Roads)
+also_known_as:
+- New boat registrations Queensland
+- QLD new recreational vessel registrations by year
+- Boat sales Queensland by make
+keywords:
+- boat registrations
+- recreational vessels
+- new registrations
+- make and model
+- Queensland
+faq:
+- q: What is in each row?
+  a: One year from 2012, one registration transaction type and one make, model and body shape, with the
+    number of new recreational vessel registrations.
+summary: The number of new recreational vessel registrations in Queensland each year since 2012, by transaction
+  type, make, model and body shape.
+description: Yearly counts of new recreational vessel registrations processed by the Department of Transport
+  and Main Roads, one row per year, transaction type, make, model and body shape. The file runs from 2012
+  to 2023.
+publisher:
+  name: Department of Transport and Main Roads
+  short: Transport and Main Roads
+  jurisdiction: Qld
+  url: https://www.tmr.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/new-recreational-vessel-registrations-by-year
+  attribution: Department of Transport and Main Roads, Queensland Government, New recreational vessel
+    registrations, by year, sourced {sourced}, https://www.data.qld.gov.au/dataset/new-recreational-vessel-registrations-by-year,
+    licensed under CC BY 4.0.
+example:
+  where: {year: newest}
+  group: body_shape
+  metric: sum.registrations
+  label: New recreational vessel registrations of each body shape in the newest year
+chart:
+  split: body_shape
+  metric: sum.registrations
+  label: New registrations
+sample:
+  where: {year: newest}
+  order: [registrations.desc]
+  spread: none
+  label: The ten makes and models with the most new registrations in the newest year, most first.
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: new-recreational-vessel-registrations-by-year
+  resource: 2094dccc-b2e6-496b-bb9e-2a084f283775
+  url: https://www.data.qld.gov.au/dataset/new-recreational-vessel-registrations-by-year
+  encoding: utf-8-sig
+  cadence: irregular
+partition_by:
+- year
+row_label: Registration counts
+fields:
+- name: year
+  label: Year
+  source: Year
+  type: integer
+- name: transaction_type
+  label: Transaction type
+  source: Transaction Type
+  type: string
+- name: make
+  label: Make
+  source: Make Name
+  type: string
+- name: model
+  label: Model
+  source: Model Name
+  type: string
+- name: body_shape
+  label: Body shape
+  source: Body Shape Name
+  type: string
+- name: registrations
+  label: New registrations
+  source: Transactions
+  type: integer
+note: Cells were typed and headers were made snake_case. Rows were left alone.

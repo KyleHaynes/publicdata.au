@@ -1,0 +1,122 @@
+slug: au-water-storages
+title: Water storages reporting to the Bureau of Meteorology, Australia
+status: live
+topics:
+- nature
+example:
+  group: state
+sample:
+  order:
+  - full_storage_volume_ml.desc
+  spread: state
+  label: The largest storage in each state by full storage volume, largest first.
+order: 56
+publisher:
+  name: Bureau of Meteorology
+  short: BoM
+  jurisdiction: Cth
+  url: https://www.bom.gov.au/waterdata/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-10-01'
+  evidence: https://www.bom.gov.au/waterdata/
+  statement: all material on this page is licensed under the Creative Commons Attribution Australia Licence
+  attribution: Bureau of Meteorology, © Commonwealth of Australia, Water Data Online, Storage Volume stations,
+    sourced {sourced}, https://www.bom.gov.au/waterdata/, licensed under CC BY 3.0 AU.
+search_title: Australian dams and reservoirs with owner, location and full storage volume (BoM stations)
+also_known_as:
+- List of dams in Australia with capacity
+- Dam capacities Australia
+- Water storage stations Bureau of Meteorology
+keywords:
+- dams
+- reservoirs
+- storage capacity
+- full storage volume
+- Bureau of Meteorology
+- Australia
+faq:
+- q: What is this list?
+  a: Every station that reports a storage volume to the Bureau of Meteorology's Water Data Online, about 570
+    stations on dams, weirs and reservoirs, with the owner as the Bureau labels it, the state, coordinates,
+    the full and dead storage volumes in megalitres and the full and dead storage levels in metres where the
+    owner supplied them, and the regulation clause the data is reported under. A large dam can have more
+    than one station, as Lake Argyle has several.
+- q: Why do some storages have no capacity?
+  a: About a third of the stations carry no full storage volume in the Bureau's attributes, mostly small
+    or minor storages. The cells are null. The daily volumes for every station are in the companion dataset
+    of daily water storage levels.
+summary: The dams, weirs and reservoirs whose storage volumes the Bureau of Meteorology publishes, with owner,
+  state, coordinates and full storage volume. About 570 storages, updated weekly.
+description: The stations of the Bureau of Meteorology's Water Data Online that report the Storage Volume
+  parameter, one row per storage, with the Bureau's station number and name, the data owner and its state or
+  territory, latitude and longitude, the full and dead storage volumes and levels the owner supplied, and the
+  Water Regulations 2008 clause the reporting falls under.
+source:
+  adapter: kiwis
+  url: https://www.bom.gov.au/waterdata/services
+  search: Storage Volume
+  package: DMQaQc.Merged.DailyMean.24HR
+  resource: stations
+  cadence: weekly
+key:
+- station_no
+enrich:
+- sa2
+- lga
+- suburb
+- postcode
+- state_electorate
+- federal_electorate
+geometry:
+  lon: longitude
+  lat: latitude
+  crs: EPSG:4283
+  crs_note: Latitude and longitude in decimal degrees as the Bureau publishes them.
+row_label: Storages
+fields:
+- name: station_no
+  label: Station number
+  source: station_no
+  type: string
+- name: station_name
+  label: Storage
+  source: station_name
+  type: string
+- name: latitude
+  label: Latitude
+  source: latitude
+  type: number
+- name: longitude
+  label: Longitude
+  source: longitude
+  type: number
+- name: data_owner
+  label: Data owner
+  source: data_owner
+  type: string
+  description: The owner as the Bureau labels it, with the state or territory first.
+- name: state
+  label: State
+  source: state
+  type: string
+- name: full_storage_volume_ml
+  label: Full storage volume (ML)
+  source: full_storage_volume_ml
+  type: number
+- name: dead_storage_volume_ml
+  label: Dead storage volume (ML)
+  source: dead_storage_volume_ml
+  type: number
+- name: full_storage_level_m
+  label: Full storage level (m)
+  source: full_storage_level_m
+  type: number
+- name: dead_storage_level_m
+  label: Dead storage level (m)
+  source: dead_storage_level_m
+  type: number
+- name: regulation
+  label: Regulation clause
+  source: regulation
+  type: string

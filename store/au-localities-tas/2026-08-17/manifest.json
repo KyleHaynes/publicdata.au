@@ -1,0 +1,33 @@
+{
+  "dataset": "au-localities-tas",
+  "version": "2026-08-17",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:15:37+00:00",
+  "sha256": "1eab4b0d180358d0159389f3b7b430f9b647b77b320a582a04097f10c3c85e94",
+  "bytes": 24727399,
+  "filename": "tas_loc_gda2020.zip",
+  "encoding": "zip",
+  "source": {
+    "url": "https://data.gov.au/data/dataset/8bd7b6c1-1258-4df5-a98f-b6706e87de1e/resource/27571a36-2afd-47c9-ac5a-1f87179b7b35/download/tas_loc_gda2020.zip",
+    "portal": "https://data.gov.au/data",
+    "package": "tas-suburb-locality-boundaries-geoscape-administrative-boundaries",
+    "package_id": "8bd7b6c1-1258-4df5-a98f-b6706e87de1e",
+    "resource": "27571a36-2afd-47c9-ac5a-1f87179b7b35",
+    "resource_name": "AUG26 - TAS - Geoscape Localities - Esri Shapefiles - GD2020",
+    "resource_last_modified": "2026-08-17T03:49:19.769878",
+    "package_modified": "2026-08-17T04:35:26.397546",
+    "package_version": null,
+    "etag": "1786938561.598-24727399-3454078893",
+    "http_last_modified": "Mon, 17 Aug 2026 03:49:21 GMT"
+  },
+  "licence": {
+    "id": "cc-by-4.0",
+    "title": "Creative Commons Attribution 4.0 International",
+    "url": "http://creativecommons.org/licenses/by/4.0",
+    "read_from": "https://data.gov.au/data/api/3/action/package_show?id=tas-suburb-locality-boundaries-geoscape-administrative-boundaries",
+    "read_at": "2026-10-03T03:15:36+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": []
+}

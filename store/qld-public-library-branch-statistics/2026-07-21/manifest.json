@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-public-library-branch-statistics",
+  "version": "2026-07-21",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:03:15+00:00",
+  "sha256": "342be5b94cccb090ed715f1f81d26778096933d9c1b93a4227370924a658f1eb",
+  "bytes": 28280,
+  "filename": "branch-data-2024-2025-queensland-public-libraries-annual-statistics.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/f78aa2f5-5fa8-4655-bd38-1b5f051e1adb/resource/e593c005-39a0-41f0-ad5b-da1e03fd0a06/download/branch-data-2024-2025-queensland-public-libraries-annual-statistics.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "slq-qld-public-libraries-annual-statistics",
+    "package_id": "f78aa2f5-5fa8-4655-bd38-1b5f051e1adb",
+    "resource": "e593c005-39a0-41f0-ad5b-da1e03fd0a06",
+    "resource_name": "Branch data 2024/2025 — Queensland public libraries annual statistics",
+    "resource_last_modified": "2026-07-20T21:50:43.454734",
+    "package_modified": "2026-07-24T05:13:04.282708",
+    "package_version": "1.0",
+    "etag": "66c1471413783f8893ec388b043922f5",
+    "http_last_modified": "Mon, 20 Jul 2026 21:39:30 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=slq-qld-public-libraries-annual-statistics",
+    "read_at": "2026-10-03T03:03:15+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "e7578f00c9e47f6a7124016df81778b8da8c998b91386d42ee0a1180909c4d4e"
+}

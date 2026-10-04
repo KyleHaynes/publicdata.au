@@ -1,0 +1,118 @@
+slug: vic-traffic-volume-aadt-2019
+title: Annual average daily traffic volume on declared roads, 2019, Victoria
+status: live
+topics:
+- roads
+example:
+  group: road_name
+  metric: max.aadt_all_vehicles
+  label: Vehicles per day (busiest segment)
+order: 355
+publisher:
+  name: Department of Transport and Planning
+  short: Transport and Planning
+  jurisdiction: Vic
+  url: https://www.transport.vic.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://discover.data.vic.gov.au/dataset/historical-annual-average-daily-traffic-volume
+  attribution: Department of Transport and Planning, Victorian Government, Historical Annual Average Daily
+    Traffic Volume, Annual Average Daily Traffic Volume - 2019, sourced {sourced}, https://discover.data.vic.gov.au/dataset/historical-annual-average-daily-traffic-volume,
+    licensed under CC BY 4.0.
+temporal_start: '2019-01-01'
+search_title: Victorian road traffic volumes map, AADT by road segment 2019 (Department of Transport and
+  Planning)
+also_known_as:
+- Victoria AADT 2019
+- Annual Average Daily Traffic Volume Victoria
+- Traffic counts on Victorian roads
+- VicRoads traffic volume data
+keywords:
+- traffic volume
+- AADT
+- annual average daily traffic
+- heavy vehicles
+- traffic counts
+- declared roads
+- VicRoads
+- Victoria
+faq:
+- q: What does each row hold?
+  a: One road segment of the Victorian declared road network in one direction of travel, with the
+    average number of vehicles and of heavy vehicles that used it each day in 2019, as a line in the
+    GeoParquet, GeoJSON, GeoPackage and PMTiles files.
+- q: Are the volumes counted or estimated?
+  a: Both. The publisher marks each row Actual where the volume comes from a traffic count and Estimated
+    where it was worked out by its own data processes. About one row in six is Actual.
+- q: Why only 2019?
+  a: The publisher's historical series has one file for each year from 2001 to 2019. This entry holds the
+    2019 file, the newest in the series. Local roads that councils manage are not in the network it covers.
+- q: What is the percentage of heavy vehicles?
+  a: The publisher's own share of the daily volume that is heavy vehicles, as a fraction, so 0.07 is
+    7 per cent. It is published as given.
+summary: The average daily traffic and heavy vehicle volume in 2019 on each segment and direction of
+  Victoria's declared arterial roads and freeways, as about 14,700 mapped lines.
+description: Annual average daily traffic (AADT) volumes for 2019 from the Department of Transport and
+  Planning, one row per road segment and direction of travel on the declared road network, with the road
+  name, section description, council area, whether the volume is actual or estimated, and the daily
+  volume of all vehicles and of heavy vehicles. The publisher's historical series runs from 2001, one
+  file a year.
+source:
+  adapter: ckan-resource
+  portal: https://discover.data.vic.gov.au
+  package: historical-annual-average-daily-traffic-volume
+  resource: 425799c9-658c-41cf-b9b0-6c9a145856cf
+  url: https://discover.data.vic.gov.au/dataset/historical-annual-average-daily-traffic-volume
+  cadence: no longer updated
+geometry:
+  kind: line
+  crs: EPSG:4326
+  crs_note: The publisher's GeoJSON names no datum, so it is read as WGS84 (EPSG:4326) as the GeoJSON
+    standard sets, and moved to GDA2020 for publication.
+  maxzoom: 10
+row_label: Road segments
+fields:
+- name: road_segment_id
+  label: Road segment id
+  source: Road Segment ID
+  type: number
+  description: The publisher's segment identifier. A segment has one row per direction of travel.
+- name: road_name
+  label: Road name
+  source: Road Name
+  type: string
+- name: road_section_description
+  label: Section
+  source: Road Section Description
+  type: string
+- name: travel_direction
+  label: Direction
+  source: Travel Direction
+  type: string
+- name: local_government_area
+  label: Council area
+  source: Local Government Area
+  type: string
+- name: calendar_year
+  label: Year
+  source: Calendar Year
+  type: number
+- name: calculation_methodology
+  label: Actual or estimated
+  source: Calculation Methodology
+  type: string
+- name: aadt_all_vehicles
+  label: Daily volume, all vehicles
+  source: Average Annual Daily Traffic Volume
+  type: number
+- name: aadt_heavy_vehicles
+  label: Daily volume, heavy vehicles
+  source: Average Annual Daily Heavy Vehicle Volume
+  type: number
+- name: heavy_vehicle_share
+  label: Share heavy vehicles
+  source: Percentage of Heavy Vehicles
+  type: number
+  description: The publisher's share of heavy vehicles as a fraction of the daily volume.

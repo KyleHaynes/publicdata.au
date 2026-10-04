@@ -1,0 +1,67 @@
+slug: vic-unclaimed-money-payments
+title: Unclaimed money paid out by year, Victoria
+status: live
+topics:
+- economy
+example:
+  group: financial_year
+  metric: sum.payments_million
+  label: Paid out ($ million)
+order: 378
+collection: vic-unclaimed-money
+collection_title: Unclaimed money held by the State Revenue Office Victoria
+publisher:
+  name: State Revenue Office Victoria
+  short: SRO
+  jurisdiction: Vic
+  url: https://www.sro.vic.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://discover.data.vic.gov.au/dataset/https-www-sro-vic-gov-au-sites-default-files-2025-11-unclaimed-money-payments-2025-csv
+  attribution: State Revenue Office, Victorian Government, Unclaimed money payments (made by SRO) - from
+    2004/05, sourced {sourced}, https://discover.data.vic.gov.au/dataset/https-www-sro-vic-gov-au-sites-default-files-2025-11-unclaimed-money-payments-2025-csv,
+    licensed under CC BY 4.0.
+temporal_start: '2004-07-01'
+search_title: Unclaimed money paid out each year in Victoria (State Revenue Office)
+also_known_as:
+- SRO unclaimed money payments
+- Victorian unclaimed money paid to owners
+- Unclaimed moneys payments Victoria
+keywords:
+- unclaimed money
+- unclaimed moneys
+- payments
+- State Revenue Office
+- Victoria
+faq:
+- q: What does each row hold?
+  a: One financial year from 2004-05 and the amount of unclaimed money the State Revenue Office paid to
+    claimants in it, in millions of dollars as the publisher rounds it.
+summary: The amount of unclaimed money the State Revenue Office Victoria paid out to claimants in each
+  financial year since 2004-05, in millions of dollars.
+description: Unclaimed money payments made by the State Revenue Office Victoria, one row per financial
+  year from 2004-05 with the amount paid in millions of dollars, rounded to one decimal place by the
+  publisher. The number of claims is in the companion dataset of unclaimed money claims.
+source:
+  adapter: ckan-resource
+  portal: https://discover.data.vic.gov.au
+  package: https-www-sro-vic-gov-au-sites-default-files-2025-11-unclaimed-money-payments-2025-csv
+  resource: 0c267411-26b1-499c-99b1-70a34a336ac7
+  url: https://discover.data.vic.gov.au/dataset/https-www-sro-vic-gov-au-sites-default-files-2025-11-unclaimed-money-payments-2025-csv
+  cadence: yearly
+  header_row: 2
+key:
+- financial_year
+row_label: Years
+fields:
+- name: financial_year
+  label: Financial year
+  source: Year
+  type: string
+  description: The financial year as the publisher writes it, for example 2024-25.
+- name: payments_million
+  label: Payments ($ million)
+  source: Unclaimed money payments ($ million)
+  type: number

@@ -1,0 +1,109 @@
+slug: qld-urban-fire-stations
+title: Urban fire stations, Queensland
+status: live
+topics:
+- emergencies
+order: 237
+collection: qld-emergency-stations
+collection_title: Fire and police station locations, Queensland
+search_title: Queensland fire station locations (Queensland Fire Department)
+collection_search_title: Queensland fire and police station locations
+also_known_as:
+- QFD urban fire stations
+- Fire and Rescue stations Queensland
+- Fire stations near me Queensland
+keywords:
+- fire stations
+- Fire and Rescue
+- emergency services
+- station locations
+- QFD
+- Queensland
+collection_description: |
+  The Queensland Fire Department publishes the locations of its urban fire stations and rural fire stations, and the Queensland Police Service publishes the locations of its police stations. Each list is refreshed monthly.
+
+  Each row is one station with its coordinates. Not every rural fire brigade has a station, so the rural list does not cover every brigade.
+faq:
+- q: What is in each row?
+  a: One urban fire station of the Queensland Fire Department, with its name, address, locality, an alternative
+    address where given, its crewing code, its emergency management levy class and its coordinates in
+    GDA94 and GDA2020.
+- q: What do the crewing codes mean?
+  a: The publisher writes P, A or C and does not define them in the file. They are kept as published.
+summary: Every urban fire station of the Queensland Fire Department, with address, crewing code, levy
+  class and coordinates in GDA94 and GDA2020. Updated monthly.
+description: The urban fire stations of the Queensland Fire Department, formerly Queensland Fire and Emergency
+  Services, one row per station, with its address, locality, alternative address, crewing code, emergency
+  management levy class and longitude and latitude in both GDA94 and GDA2020. The department uploads the
+  file automatically each month.
+publisher:
+  name: Queensland Fire Department
+  short: QFD
+  jurisdiction: Qld
+  url: https://www.fire.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  evidence: https://www.data.qld.gov.au/dataset/queensland-urban-fire-stations
+  reviewed: '2026-10-01'
+  attribution: Queensland Fire Department, Queensland Government, Queensland Fire Department, Urban Fire
+    Stations, sourced {sourced}, https://www.data.qld.gov.au/dataset/queensland-urban-fire-stations, licensed
+    under CC BY 4.0.
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: queensland-urban-fire-stations
+  resource: a4663955-168b-4b12-8990-4b3f40323ac0
+  url: https://www.data.qld.gov.au/dataset/queensland-urban-fire-stations
+  cadence: monthly
+key:
+- station
+geometry:
+  lon: long_gda20
+  lat: lat_gda20
+  crs: EPSG:7844
+  crs_note: The publisher gives each station in GDA94 and GDA2020. The map uses the GDA2020 pair (EPSG:7844);
+    both pairs are published as given.
+row_label: Stations
+fields:
+- name: station
+  label: Station
+  source: STATION
+  type: string
+- name: address
+  label: Address
+  source: ADDRESS
+  type: string
+- name: locality
+  label: Locality
+  source: LOCALITY
+  type: string
+- name: alt_address
+  label: Alternative address
+  source: ALTADDRESS
+  type: string
+- name: crewing
+  label: Crewing code
+  source: CREWING
+  type: string
+- name: levy_type
+  label: Levy class
+  source: LEVYTYPE
+  type: string
+  description: The emergency management levy class of the station area, as the publisher writes it.
+- name: long_gda94
+  label: Longitude (GDA94)
+  source: LONG_GDA94
+  type: number
+- name: lat_gda94
+  label: Latitude (GDA94)
+  source: LAT_GDA94
+  type: number
+- name: long_gda20
+  label: Longitude (GDA2020)
+  source: LONG_GDA20
+  type: number
+- name: lat_gda20
+  label: Latitude (GDA2020)
+  source: LAT_GDA20
+  type: number
+note: Cells were typed and headers were made snake_case. Rows were left alone.

@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block head %}
+<link rel="stylesheet" href="{{ vendor }}@perspective-dev/viewer/dist/css/pro.css">
+<link rel="stylesheet" href="{{ vendor }}@perspective-dev/viewer/dist/css/pro-dark.css">
+<style>{{ explorer_css|safe }}</style>
+{% endblock %}
+{% block disclaimer %}Published by {{ ds.publisher.name }} under {{ ds.licence.title }} and republished here without change to the content. {{ ds.publisher.name }} has not endorsed this site.{% endblock %}
+{% block main %}
+<div class="crumbs"><a href="/">Datasets</a> / {% if jur_path %}<a href="{{ jur_path }}">{{ jur_long }}</a>{% else %}{{ jur_long }}{% endif %} / {% if publisher_path %}<a href="{{ publisher_path }}">{{ ds.publisher.short }}</a>{% else %}{{ ds.publisher.short }}{% endif %} / <a href="{{ base }}">{{ ds.title }}</a> / Explore</div>
+<div class="ds-head"><h1>Explore {{ ds.title }}</h1></div>
+<p style="margin-top:14px">Charts and tables over the {{ latest.rows_fmt }} rows of the latest version, worked out in your browser from the Parquet file. Nothing you do here leaves the browser until you save a link.</p>
+<div class="xbar" id="x-bar" hidden>
+  <label class="lab" for="x-version">Version</label>
+  <select id="x-version">{% for v in explore_versions %}<option value="{{ v.version }}">{{ v.version }}{% if v.as_at_long %} · as at {{ v.as_at_long }}{% endif %}{% if loop.first %} (latest){% endif %}</option>{% endfor %}</select>
+  <button type="button" class="copy xadd" id="x-add">Add a chart</button>
+  <span class="xgap"></span>
+  <button type="button" class="copy" id="x-link">Copy link</button>
+  <button type="button" class="copy" id="x-save">Save a short link</button>
+  <button type="button" class="copy" id="x-embed-btn">Embed</button>
+  <button type="button" class="copy" id="x-reset">Start again</button>
+</div>
+<div class="urlbox xout" id="x-short" hidden><div class="path" id="x-short-url"></div><button class="copy" type="button" data-copy-target="x-short-url">Copy</button></div>
+<div class="xout" id="x-embed" hidden>
+  <p class="fmt-note">Paste this where the dashboard should appear. The frame shows the attribution and links back here.</p>
+  <label class="xcheck"><input type="checkbox" id="x-embed-edit"> Let readers change the charts in the frame. Their changes stay in their browser and never alter the saved dashboard.</label>
+  <pre><button class="copy abs" type="button" data-copy-target="x-embed-code">Copy</button><code id="x-embed-code"></code></pre>
+</div>
+<p class="xstatus" id="x-status" role="status" data-state="busy">The explorer needs JavaScript and a browser from the last few years. The <a href="{{ base }}">dataset page</a> has every file and the query API.</p>
+<p class="xhint" id="x-hint" hidden>Press <b>Edit</b> on any panel to change its chart type and drag fields into Group by, Split by and Filter. Drag a panel by its title to move or dock it, and click a bar in the first chart to filter the rest.</p>
+{% if fig.chart or fig.map %}<div class="xghost" id="x-ghost" aria-hidden="true"><div class="panels">{% if fig.chart %}<div class="panel p1"><div class="ptitle">{{ fig.what }} per year</div>{{ fig.chart|safe }}</div>{% endif %}{% if fig.map %}<div class="panel pmap"><div class="ptitle">Map</div>{{ fig.map|safe }}</div>{% endif %}</div></div>{% endif %}
+<div class="xhost" id="x-host"></div>
+<p class="xattr"><b>Data:</b> {{ attribution }} <a href="{{ ds.licence.url }}" rel="license">Licence terms</a>.</p>
+
+<div class="ds xhelp">
+<div>
+  <h2>How it works</h2>
+  <div class="faq">
+  <details open><summary>Change a panel</summary><p>Press Edit at the top right of a panel to open its settings. Drag fields into Group by, Split by, Sort by and Filter, pick a chart type at the top, and choose sum, count or average beside each number. More fields lists everything else in the dataset. The chart types include bars, lines, areas, scatter plots, heatmaps, treemaps and sunbursts{% if ds.geometry %}, and maps of the coordinates{% endif %}. Add a chart puts a new panel on the dashboard. Drag a panel's title bar to move it, or drag the line between panels to resize.</p></details>
+  <details><summary>Filter every panel at once</summary><p>{% if explore_master %}The chart marked Click to filter the others does just that: click a bar and the other panels show only those rows. Click it again to clear. {% endif %}Any panel can do the same. Open the menu at the left of its title bar and turn on filtering from there.</p></details>
+  <details><summary>Share or keep a dashboard</summary><p>The address bar holds the whole dashboard, so copying it is enough. Save a short link to store the dashboard on this site and get a shorter address. A saved dashboard never changes; saving again after an edit makes a new link. Embed gives a frame you can paste into a web page, with the attribution inside it.</p></details>
+  <details><summary>Download what you see</summary><p>The export button in a panel's settings toolbar downloads the panel as CSV, JSON or Arrow, or a chart as PNG. The copy button beside it puts the same data on the clipboard. The full files are on the <a href="{{ base }}">dataset page</a>.</p></details>
+  <details><summary>What the fields mean</summary>
+  <p>The explorer names each field in words. The files and the query API use the field name beside it.</p>
+  <div class="tbl"><table class="ledger schema"><thead><tr><th>In the explorer</th><th>Field name</th><th>Type</th><th>Note</th></tr></thead><tbody>
+  {% for f in ds.fields %}<tr><td>{{ f.display }}</td><td class="mono">{{ f.name }}</td><td class="ty">{{ f.type }}</td><td>{{ f.description }}</td></tr>{% endfor %}
+  </tbody></table></div></details>
+  <details><summary>How it runs</summary><p>The page downloads DuckDB and Perspective once, about {{ engine_size }}, then this version's <a href="{{ parquet_url }}" class="mono">data.parquet</a> ({{ parquet_size }}). Every chart is a query DuckDB answers in the browser, so there is no rate limit and the files stay the only source. Dated versions never change, so a saved dashboard over one shows the same numbers for good.{% if ds.geometry %} A map panel draws its background from OpenStreetMap tiles, so while one is on screen your browser asks OpenStreetMap for them and it sees your IP address. The data itself never leaves the browser.{% endif %}</p></details>
+  </div>
+</div>
+</div>
+<script type="application/json" id="ex-data">{{ ex_data|safe }}</script>
+{% endblock %}
+{% block scripts %}<script type="module" src="/static/explorer.js?v={{ ex_v }}"></script>
+{% endblock %}

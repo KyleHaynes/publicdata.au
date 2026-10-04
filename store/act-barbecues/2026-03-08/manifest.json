@@ -1,0 +1,28 @@
+{
+  "dataset": "act-barbecues",
+  "version": "2026-03-08",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:14:28+00:00",
+  "sha256": "5898d7533df906132f44bc6d9645a6443273516f60ab92f61a3efbaf0b1229df",
+  "bytes": 237480,
+  "filename": "qxhv-bxbv.geojson",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.act.gov.au/resource/qxhv-bxbv.geojson?$limit=50000&$order=:id",
+    "etag": "aW5kaWEuNDUyMThfMV8yNzE3QnVyWDl2MHl4c0YxZGlaYnVaNGE5bGVEMA---gzigyQyFplT1hXGXkB_W8NnM1_Tnjg--gzip--gzip",
+    "http_last_modified": "Sat, 07 Mar 2026 18:07:10 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "stated": "Creative Commons Attribution 4.0 International",
+    "normalised": "CC-BY-4.0",
+    "title": "CC BY 4.0",
+    "url": "https://www.data.act.gov.au/d/qxhv-bxbv",
+    "read_from": "https://www.data.act.gov.au/d/qxhv-bxbv",
+    "read_at": "2026-10-03T03:14:27+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "710e21822d209a898849780790de429d8d70f1d640207d24d6da5e43aaf2d7a3"
+}

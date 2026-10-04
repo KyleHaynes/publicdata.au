@@ -1,0 +1,119 @@
+slug: vic-recorded-offences-by-suburb
+title: Recorded offences by suburb and offence, Victoria
+status: live
+topics:
+- crime
+example:
+  where:
+    year: newest
+  group: suburb
+  metric: sum.offence_count
+  label: Offences
+sample:
+  where: {year: newest}
+  order: [offence_count.desc]
+  spread: lga
+  label: The largest count for one suburb and offence subgroup in each council area in the newest year, from the ten council areas where that count is largest, largest first.
+order: 41
+publisher:
+  name: Crime Statistics Agency
+  short: CSA
+  jurisdiction: Vic
+  url: https://www.crimestatistics.vic.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-09-29'
+  portal_id: cc-by
+  evidence: https://discover.data.vic.gov.au/dataset/data-tables-recorded-offences
+  attribution: Crime Statistics Agency, Victorian Government, Data tables - Recorded offences, sourced
+    {sourced}, https://discover.data.vic.gov.au/dataset/data-tables-recorded-offences, licensed under CC
+    BY 4.0.
+collection: vic-recorded-offences
+collection_title: Victorian recorded offences
+temporal_start: '2016-07-01'
+search_title: Victoria crime statistics by suburb (Crime Statistics Agency)
+also_known_as:
+- Melbourne crime statistics by suburb
+- Victorian crime rate by suburb and postcode
+- Crime Statistics Agency recorded offences by suburb
+keywords:
+- crime statistics by suburb
+- Melbourne crime
+- Victoria crime
+- Crime Statistics Agency
+- recorded offences
+- postcode
+- Victoria
+faq:
+- q: Can I look up my suburb?
+  a: Yes. Each row names the suburb or town, its postcode and its council area. A suburb appears only for
+    the offence subgroups that had at least one offence recorded in that year.
+- q: Why is there no rate for a suburb?
+  a: The CSA publishes counts for suburbs and does not publish a population for them, so this table has
+    counts only. Rates are published for council areas in the table of offences by council area.
+- q: What period does each year cover?
+  a: Each year is the twelve months ending in the month named in year_ending. A year of 2026 with a year_ending
+    of June covers July 2025 to June 2026.
+summary: Offences recorded by Victoria Police in each suburb and town, by offence subgroup, for each of
+  the last ten years.
+description: Offences recorded by Victoria Police for each suburb or town, with its postcode and local
+  government area, by offence division, subdivision and subgroup, for the ten years to the end of the
+  latest quarter. This is table 3 of the Crime Statistics Agency's workbook of recorded offences by local
+  government area.
+source:
+  adapter: ckan-resource
+  portal: https://discover.data.vic.gov.au
+  package: data-tables-recorded-offences
+  resource_match: LGA
+  url: https://discover.data.vic.gov.au/dataset/data-tables-recorded-offences
+  cadence: quarterly
+  sheet: Table 03
+key:
+- year
+- lga
+- postcode
+- suburb
+- offence_subgroup
+partition_by:
+- lga
+fields:
+- name: year
+  label: Year
+  source: Year
+  type: integer
+  description: The year the twelve months end in.
+- name: year_ending
+  label: Year ending
+  source: Year ending
+  type: string
+  description: The month the twelve months end in.
+- name: lga
+  label: Council area
+  source: Local Government Area
+  type: string
+  description: Local government area as the CSA names it.
+- name: postcode
+  label: Postcode
+  source: Postcode
+  type: string
+- name: suburb
+  label: Suburb or town
+  source: Suburb/Town Name
+  type: string
+- name: offence_division
+  label: Offence division
+  source: Offence Division
+  type: string
+- name: offence_subdivision
+  label: Offence subdivision
+  source: Offence Subdivision
+  type: string
+- name: offence_subgroup
+  label: Offence subgroup
+  source: Offence Subgroup
+  type: string
+- name: offence_count
+  label: Offences
+  source: Offence Count
+  type: integer
+  description: Offences recorded by Victoria Police in the twelve months.

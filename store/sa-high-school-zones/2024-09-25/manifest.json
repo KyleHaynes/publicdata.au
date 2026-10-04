@@ -1,0 +1,33 @@
+{
+  "dataset": "sa-high-school-zones",
+  "version": "2024-09-25",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:10:19+00:00",
+  "sha256": "b40439c88ad55e478c743191ae592552ae7aa2750bd8c2460d455aff296894ed",
+  "bytes": 280060,
+  "filename": "highschoolzones2025ey.zip",
+  "encoding": "zip",
+  "source": {
+    "url": "https://data.sa.gov.au/data/dataset/46832dee-6c89-4a09-b813-f7864f257bde/resource/2107f2b8-610c-4caa-a640-153c6e46176d/download/highschoolzones2025ey.zip",
+    "portal": "https://data.sa.gov.au/data",
+    "package": "school-zones-for-south-australian-govt-high-schools",
+    "package_id": "46832dee-6c89-4a09-b813-f7864f257bde",
+    "resource": "2107f2b8-610c-4caa-a640-153c6e46176d",
+    "resource_name": "HighSchoolZones2025EY.zip",
+    "resource_last_modified": "2024-09-25T02:59:36.744807",
+    "package_modified": "2024-09-25T03:16:32.003286",
+    "package_version": null,
+    "etag": "1727233177.077-280060-1067784433",
+    "http_last_modified": "Wed, 25 Sep 2024 02:59:37 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution",
+    "url": "http://creativecommons.org/licenses/by/4.0",
+    "read_from": "https://data.sa.gov.au/data/api/3/action/package_show?id=school-zones-for-south-australian-govt-high-schools",
+    "read_at": "2026-10-03T03:10:19+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": []
+}

@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-social-housing-maintenance",
+  "version": "2025-12-17",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:02:27+00:00",
+  "sha256": "41f32ec0ae643858abd704f331f2b4056c33147b472e5efe601049d40c5bd0ad",
+  "bytes": 412600,
+  "filename": "open-data-2024-25-final.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/fdea78e6-5371-4bad-bae3-91b112ad1a9b/resource/7c419dab-ea8a-4cf7-b4d6-826255aec01d/download/open-data-2024-25-final.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "property-management-government-owned-assets",
+    "package_id": "fdea78e6-5371-4bad-bae3-91b112ad1a9b",
+    "resource": "7c419dab-ea8a-4cf7-b4d6-826255aec01d",
+    "resource_name": "Social housing maintenance and modification expenditure-financial year 2024-25",
+    "resource_last_modified": "2025-12-16T23:15:09.751929",
+    "package_modified": "2026-04-23T00:38:55.159211",
+    "package_version": "2.1",
+    "etag": "e440bb4e095091e562d1d96f7a4ab967",
+    "http_last_modified": "Tue, 16 Dec 2025 23:14:22 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=property-management-government-owned-assets",
+    "read_at": "2026-10-03T03:02:27+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "a2b36bc347622ad857f729fefda91db9ec8c1a9b0aaebeeb4bce345215f9bc82"
+}

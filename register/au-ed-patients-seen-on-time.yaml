@@ -1,0 +1,137 @@
+slug: au-ed-patients-seen-on-time
+title: Emergency department patients seen on time by hospital and triage category, Australia
+status: live
+topics:
+- health
+example:
+  where:
+    year: newest
+    reporting_unit_type: State
+    triage_category: Urgent
+  group: reporting_unit
+  metric: avg.share_seen_on_time
+  label: Share of urgent patients seen within 30 minutes in each state in the newest year
+sample:
+  where:
+    year: newest
+    reporting_unit_type: Hospital
+    triage_category: Urgent
+  order:
+  - presentations.desc
+  spread: state
+  label: Urgent patients at the busiest hospitals in the newest year, the busiest hospital in each state first,
+    then the next busiest.
+order: 509
+collection: au-myhospitals
+collection_title: AIHW MyHospitals
+publisher:
+  name: Australian Institute of Health and Welfare
+  short: AIHW
+  jurisdiction: Cth
+  url: https://www.aihw.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.aihw.gov.au/copyright
+  statement: has been released under a Creative Commons BY 4.0 (CC-BY 4.0) licence
+  attribution: Based on Australian Institute of Health and Welfare material. Australian Institute of Health
+    and Welfare, Australian Government, MyHospitals Data API, emergency department data extract, sourced
+    {sourced}, https://myhospitalsapi.aihw.gov.au/, licensed under CC BY 4.0.
+temporal_start: '2011-07-01'
+search_title: Emergency department waiting times by hospital, patients seen on time, Australia (AIHW MyHospitals)
+also_known_as:
+- ED waiting times by hospital
+- Emergency department patients seen on time
+- Hospital emergency wait times Australia
+- Triage category waiting times by hospital
+keywords:
+- emergency department
+- ED waiting times
+- triage
+- public hospitals
+- MyHospitals
+- AIHW
+faq:
+- q: What is in each row?
+  a: One public hospital, Local Hospital Network, state or the nation, one financial year from 2011-12 and
+    one triage category. It gives the number of emergency presentations and the share of patients whose
+    care began within the recommended time for their triage category, beside the average for the
+    hospital's peer group.
+- q: What is on time?
+  a: Care must begin within 2 minutes for resuscitation, 10 minutes for emergency, 30 minutes for urgent,
+    60 minutes for semi-urgent and 120 minutes for non-urgent patients. The share is a fraction, so 0.8
+    means 80 per cent.
+- q: What do the blanks mean?
+  a: The Institute writes <5 for a count under five and NP where the data did not meet its criteria or more
+    than 10 per cent of times were missing. Those cells are null here with a suppressed flag. A dash, meaning
+    no patients were reported, and Not peered are null. The Institute's file also marks with an asterisk
+    the figures to interpret with caution, in a column with no heading, which is not carried here.
+summary: The share of emergency department patients seen within the recommended time for their triage
+  category, for each public hospital, network and state each year since 2011-12, from AIHW MyHospitals.
+description: The Patients seen on time sheet of the MyHospitals emergency department data extract from the
+  AIHW MyHospitals Data API. Each row is one reporting unit, financial year and triage category, with the
+  number of presentations, the percentage of patients seen on time and the peer group average.
+source:
+  adapter: file
+  url: https://myhospitalsapi.aihw.gov.au/api/v1/measure-downloads/myh-ed
+  format: xlsx
+  sheet: Patients seen on time
+  header_row: 17
+  cadence: several times a year
+suppression:
+- <5
+- NP
+- NP†
+key:
+- reporting_unit
+- reporting_unit_type
+- year
+- triage_category
+partition_by:
+- state
+row_label: Hospital, year and triage rows
+fields:
+- name: reporting_unit
+  label: Hospital or network
+  source: Reporting unit
+  type: string
+- name: reporting_unit_type
+  label: Reporting unit type
+  source: Reporting unit type
+  type: string
+- name: state
+  label: State
+  source: State
+  type: string
+- name: peer_group
+  label: Peer group
+  source: Peer group
+  type: string
+- name: year
+  label: Financial year
+  source: Year
+  type: string
+- name: triage_category
+  label: Triage category
+  source: Triage category
+  type: string
+- name: presentations
+  label: Presentations
+  source: Number of presentations
+  type: integer
+- name: share_seen_on_time
+  label: Share seen on time
+  source: Percentage of patients seen on time
+  type: number
+  null_values:
+  - '-'
+  description: The fraction of patients whose care began within the recommended time, 0.8 for 80 per cent.
+- name: peer_group_average
+  label: Peer group average
+  source: Peer group average
+  type: number
+  null_values:
+  - Not peered
+omit:
+  ? ''
+  : A column with no header in the publisher's file, which has no name to publish it under.

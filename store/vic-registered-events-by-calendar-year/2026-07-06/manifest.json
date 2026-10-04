@@ -1,0 +1,34 @@
+{
+  "dataset": "vic-registered-events-by-calendar-year",
+  "version": "2026-07-06",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:09:26+00:00",
+  "sha256": "91148ea7b16e03e03985d540f13cc41fe04b08548345db68da5a58e6d084efab",
+  "bytes": 10149,
+  "filename": "Registered-births-deaths-and-marriages-2025.xlsx",
+  "encoding": "xlsx",
+  "source": {
+    "url": "https://www.bdm.vic.gov.au/sites/default/files/2026-04/Registered-births-deaths-and-marriages-2025.xlsx",
+    "portal": "https://discover.data.vic.gov.au",
+    "package": "births-deaths-and-marriages-registered-events-by-calendar-year",
+    "package_id": "37d506a0-b5b6-4920-8ca1-919a982a6080",
+    "resource": "bd1134db-43c3-46eb-9853-959f65096b10",
+    "resource_name": "Registered Births, Deaths and Marriages by calendar year",
+    "resource_last_modified": null,
+    "package_modified": "2026-07-06T02:07:34.329516",
+    "package_version": null,
+    "etag": "69ddcd15-27a5",
+    "http_last_modified": "Tue, 14 Apr 2026 05:13:57 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution 4.0 International",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://discover.data.vic.gov.au/api/3/action/package_show?id=births-deaths-and-marriages-registered-events-by-calendar-year",
+    "read_at": "2026-10-03T03:09:26+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "98e5a9cb994222dfebbc36ac1f469f466877dc50a8d614106e56bd29cf48bbe0"
+}

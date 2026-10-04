@@ -1,0 +1,115 @@
+slug: act-traffic-camera-offences
+title: Traffic and camera offences and fines, ACT
+status: live
+topics:
+- roads
+- crime
+example:
+  group: offence_description
+  metric: sum.infringements
+  label: Infringements
+chart:
+  where: {offence_date: {gte: '2022-01-01'}}
+  split: none
+  metric: sum.infringements
+  label: Infringements
+order: 453
+collection: act-traffic-fines
+collection_title: Traffic and parking fines in the ACT
+collection_search_title: ACT traffic and parking fines data
+collection_description: |
+  Access Canberra publishes the traffic, camera and parking infringements it issues in the ACT, with the places its road safety cameras stand and the visits its mobile speed cameras make.
+
+  The collection holds six tables. Traffic and camera offences since July 2021 and parking offences since July 2021 are daily counts and penalty totals by offence and location. Traffic camera offences from July 2010 to June 2021 are the earlier monthly series. Mobile speed camera visits record each stay of a mobile camera with the vehicles it checked. The two location tables give the coordinates of every enforcement camera and every mobile phone and seatbelt detection camera site, which the offence tables name by location code.
+temporal_start: '2021-07-01'
+search_title: ACT traffic and camera fines since 2021 (Access Canberra)
+also_known_as:
+- ACT speeding fines data
+- Canberra speed camera fines
+- ACT red light camera infringements
+- ACT traffic infringement notices
+keywords:
+- speeding fines
+- speed cameras
+- red light cameras
+- traffic infringements
+- mobile phone detection cameras
+- Canberra
+- ACT
+faq:
+- q: What is in each row?
+  a: One offence on one day, at one camera location where there is one, for one registration state and
+    client type, with the number of infringements and the sum of their penalties in dollars.
+- q: What do the infringement types mean?
+  a: They are the publisher's codes. TRF_RLC covers red light and fixed speed cameras, TRF_CIN mobile
+    speed cameras, TRF_MDDC mobile phone detection cameras, TRF_DSB and TRF_PSB driver and passenger
+    seatbelt offences, TRF_P2P point to point cameras, TRF_TIN infringements issued by police and other
+    officers, and UNRGSTRD and UNINSRD unregistered and uninsured vehicles.
+    The publisher notes that TRF_TIN rows carry no camera location code.
+- q: How do I map the offences?
+  a: The camera location code matches the location codes in the ACT traffic camera locations and the
+    mobile distraction camera locations tables in this collection. The publisher says some cleaning may
+    be needed for the codes to match.
+summary: Traffic and camera infringements issued in the ACT since July 2021, one row per offence, day,
+  camera location, registration state and client type, with the count and the penalty total.
+description: Daily counts of the traffic and camera offences Access Canberra records in the ACT from 1
+  July 2021. Each row carries the offence date, the state of the vehicle's registration, whether the
+  client is a person or an organisation, the infringement type, the camera location code, the offence
+  description, the number of infringements and the sum of their penalty amounts.
+publisher:
+  name: Access Canberra, City and Environment Directorate
+  short: Access Canberra
+  jurisdiction: ACT
+  url: https://www.accesscanberra.act.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.act.gov.au/d/vr9h-djj8
+  attribution: Access Canberra, ACT Government, Traffic and Camera Offences and Fines,
+    https://www.data.act.gov.au/d/vr9h-djj8, accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: socrata
+  portal: https://www.data.act.gov.au
+  package: vr9h-djj8
+  url: https://www.data.act.gov.au/d/vr9h-djj8
+  cadence: weekly
+partition_by:
+- infringement_type
+row_label: Offence days
+fields:
+- name: offence_date
+  label: Date
+  source: Offence Date
+  type: date
+  date_format: '%d/%m/%Y'
+- name: registration_state
+  label: Registration state
+  source: Registration State
+  type: string
+- name: client_type
+  label: Client type
+  source: Client Type
+  type: string
+  description: PRSN for a person and ORGN for an organisation, as the publisher codes it.
+- name: infringement_type
+  label: Infringement type
+  source: Infringement Type
+  type: string
+- name: camera_location
+  label: Camera location code
+  source: Camera Location
+  type: string
+- name: offence_description
+  label: Offence
+  source: Offence Description
+  type: string
+- name: penalty_amount
+  label: Penalty total ($)
+  source: Sum of Penalty Amount
+  type: number
+- name: infringements
+  label: Infringements
+  source: Infringement Count
+  type: integer
+note: Cells were typed and headers were made snake_case. The publisher's header is kept beside every field
+  in schema.json. Rows were left alone.

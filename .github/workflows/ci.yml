@@ -1,0 +1,169 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  pipeline:
+    name: Pipeline checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      # Workflows land before the package does; skip until it exists.
+      - id: check
+        run: test -f pipeline/pyproject.toml && echo "exists=true" >> "$GITHUB_OUTPUT" || echo "exists=false" >> "$GITHUB_OUTPUT"
+      - if: steps.check.outputs.exists == 'true'
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version-file: .python-version
+      - if: steps.check.outputs.exists == 'true'
+        run: pip install -e './pipeline[dev,deploy,hubs]'
+      # The place spine's joins and tiles run in DuckDB's spatial extension, fetched before the build.
+      - if: steps.check.outputs.exists == 'true'
+        run: python -m publicdata spine install
+      - if: steps.check.outputs.exists == 'true'
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 24
+      # The explorer's browser libraries, copied into the build from the lockfile.
+      - if: steps.check.outputs.exists == 'true'
+        run: npm ci --ignore-scripts --no-audit --no-fund
+      - if: steps.check.outputs.exists == 'true'
+        working-directory: pipeline
+        run: ruff check . && ruff format --check .
+      # Each worker builds the shared fixture site once; the tests spread over the runner's cores.
+      - if: steps.check.outputs.exists == 'true'
+        working-directory: pipeline
+        run: pytest -n auto --durations=15
+
+  tdqs:
+    name: Tool definition quality
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version-file: .python-version
+      - run: pip install -e ./pipeline
+      # Scores are judged by a maintainer with `python -m publicdata.tdqs score` and committed;
+      # CI reads tdqs.json and calls nothing.
+      - working-directory: pipeline
+        run: python -m publicdata.tdqs check
+
+  register:
+    name: Register validates
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - id: check
+        run: test -f pipeline/pyproject.toml && echo "exists=true" >> "$GITHUB_OUTPUT" || echo "exists=false" >> "$GITHUB_OUTPUT"
+      - if: steps.check.outputs.exists == 'true'
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version-file: .python-version
+      - if: steps.check.outputs.exists == 'true'
+        run: pip install -e './pipeline[dev,deploy]'
+      # Every register entry must carry a licence decision with evidence before it can build.
+      - if: steps.check.outputs.exists == 'true'
+        run: python -m publicdata register validate
+
+  determinism:
+    name: Determinism
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - id: check
+        run: test -f pipeline/pyproject.toml && echo "exists=true" >> "$GITHUB_OUTPUT" || echo "exists=false" >> "$GITHUB_OUTPUT"
+      - if: steps.check.outputs.exists == 'true'
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version-file: .python-version
+      - if: steps.check.outputs.exists == 'true'
+        run: pip install -e './pipeline[dev,deploy]'
+      # The place spine's joins and tiles run in DuckDB's spatial extension, fetched before the build.
+      - if: steps.check.outputs.exists == 'true'
+        run: python -m publicdata spine install
+      - if: steps.check.outputs.exists == 'true'
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 24
+      # The explorer's browser libraries, copied into the build from the lockfile.
+      - if: steps.check.outputs.exists == 'true'
+        run: npm ci --ignore-scripts --no-audit --no-fund
+      # Two builds from the same snapshots must be byte-identical, and so must a build through the
+      # cache, except that a warm build leaves out the files it lists as already published. The
+      # gate runs on the full build and on the warm one. A DuckDB file's bytes depend on how its
+      # storage sampled each block, so those are compared by content instead (dbcheck).
+      - if: steps.check.outputs.exists == 'true'
+        run: |
+          python -m publicdata build --fixtures --out /tmp/build-a
+          python -m publicdata build --fixtures --out /tmp/build-b
+          diff -r --exclude=data.duckdb /tmp/build-a /tmp/build-b
+          python -m publicdata.dbcheck /tmp/build-a /tmp/build-b
+          python -m publicdata build --fixtures --out /tmp/build-cold --cache /tmp/build-cache --absent /tmp/absent-cold.json
+          python -m publicdata build --fixtures --out /tmp/build-warm --cache /tmp/build-cache --absent /tmp/absent-warm.json
+          diff -r --exclude=data.duckdb /tmp/build-a /tmp/build-cold
+          python -m publicdata.dbcheck /tmp/build-a /tmp/build-cold
+          test "$(cat /tmp/absent-cold.json)" = "[]"
+          cp -r /tmp/build-a /tmp/build-a-less
+          jq -r '.[]' /tmp/absent-warm.json | (cd /tmp/build-a-less && xargs -r rm --)
+          find /tmp/build-a-less -type d -empty -delete
+          diff -r --exclude=data.duckdb /tmp/build-a-less /tmp/build-warm
+          python -m publicdata.dbcheck /tmp/build-a-less /tmp/build-warm
+          # A cached version built with fewer formats grows into the full set without a rebuild:
+          # the missing files are written from the cached Parquet, and the result matches the
+          # full build, less the files the cache left out as already published.
+          python -m publicdata build --fixtures --out /tmp/build-few --cache /tmp/build-grow --absent /tmp/absent-few.json --formats ndjson,csv,parquet,sqlite,arrow,geojson
+          python -m publicdata build --fixtures --out /tmp/build-grown --cache /tmp/build-grow --absent /tmp/absent-grown.json | tee /tmp/grown.log
+          grep -E "^cache: [0-9]+ reused, 0 built, [1-9][0-9]* file\(s\) written" /tmp/grown.log
+          cp -r /tmp/build-a /tmp/build-a-grown
+          jq -r '.[]' /tmp/absent-grown.json | (cd /tmp/build-a-grown && xargs -r rm --)
+          find /tmp/build-a-grown -type d -empty -delete
+          diff -r --exclude=data.duckdb /tmp/build-a-grown /tmp/build-grown
+          python -m publicdata.dbcheck /tmp/build-a-grown /tmp/build-grown
+          python -m publicdata gate /tmp/build-grown --absent /tmp/absent-grown.json
+          python -m publicdata gate /tmp/build-a
+          python -m publicdata gate /tmp/build-warm --absent /tmp/absent-warm.json
+
+  accessibility:
+    name: Accessibility
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version-file: .python-version
+      - run: pip install -e './pipeline[dev,deploy]'
+      # The place spine's joins and tiles run in DuckDB's spatial extension, fetched before the build.
+      - run: python -m publicdata spine install
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 24
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      # Every representative page, in light and in dark, must pass axe's WCAG 2.2 AA rules.
+      - run: |
+          python -m publicdata build --fixtures --out dist
+          node scripts/a11y.mjs dist
+        env:
+          CHROME_PATH: /usr/bin/google-chrome
+
+  functions:
+    name: Functions
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 24
+      # The query builder's SQL runs against node:sqlite, the same engine D1 uses.
+      - run: node --test functions/*.test.mjs scripts/*.test.mjs

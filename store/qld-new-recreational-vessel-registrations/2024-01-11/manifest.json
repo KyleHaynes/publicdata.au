@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-new-recreational-vessel-registrations",
+  "version": "2024-01-11",
+  "as_at": "",
+  "fetched_at": "2026-10-03T02:59:47+00:00",
+  "sha256": "c802935db0af5881e6baee14689cf6a956e92007d2acc9b237566ce3404b6267",
+  "bytes": 6001784,
+  "filename": "20240110-27-yearly-new-registration-of-recreational-vessel-by-make-model-and-body-shape.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/6190290f-5520-4262-8518-2a018374b719/resource/2094dccc-b2e6-496b-bb9e-2a084f283775/download/20240110-27-yearly-new-registration-of-recreational-vessel-by-make-model-and-body-shape.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "new-recreational-vessel-registrations-by-year",
+    "package_id": "6190290f-5520-4262-8518-2a018374b719",
+    "resource": "2094dccc-b2e6-496b-bb9e-2a084f283775",
+    "resource_name": "New recreational vessel registrations by year",
+    "resource_last_modified": "2024-01-11T07:05:56.482543",
+    "package_modified": "2026-05-19T01:27:13.496891",
+    "package_version": "Obsolete - Reviewed and removed May 2026",
+    "etag": "W/\"2a57b54a37bb0057245bf924d8a1fa61",
+    "http_last_modified": "Thu, 11 Jan 2024 07:05:57 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=new-recreational-vessel-registrations-by-year",
+    "read_at": "2026-10-03T02:59:46+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "ff2743d7d5a3d1d564008c7f71e0b186eb8951e38ea96f3db4d554f7ae2013b9"
+}

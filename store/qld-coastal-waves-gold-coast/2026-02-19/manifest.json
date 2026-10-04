@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-coastal-waves-gold-coast",
+  "version": "2026-02-19",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:00:47+00:00",
+  "sha256": "98b27afd1c2aea37720b07755aed6afc438c14519c33f717993f8fe9f23dc166",
+  "bytes": 83165,
+  "filename": "gold-coast-mk4_2026-01-01t00_00-2026-01-31t23_30_waveverifieddata.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/d656d418-31b1-41fe-aae2-3d8a12588711/resource/9c7d8966-54b6-44d4-a7b4-7ce972013191/download/gold-coast-mk4_2026-01-01t00_00-2026-01-31t23_30_waveverifieddata.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "coastal-data-system-waves-gold-coast",
+    "package_id": "d656d418-31b1-41fe-aae2-3d8a12588711",
+    "resource": "9c7d8966-54b6-44d4-a7b4-7ce972013191",
+    "resource_name": "Wave data - 2026",
+    "resource_last_modified": "2026-02-18T22:35:51.503803",
+    "package_modified": "2026-03-23T00:07:57.444507",
+    "package_version": "1",
+    "etag": "12f30ca16fc0575c579522d8359caef7",
+    "http_last_modified": "Wed, 18 Feb 2026 22:31:51 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=coastal-data-system-waves-gold-coast",
+    "read_at": "2026-10-03T03:00:47+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "3d858a5d409197ed173cb196d39fc05400b430c25f6d9794e698737585e43443"
+}

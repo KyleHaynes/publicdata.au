@@ -1,0 +1,90 @@
+slug: qld-gambling-expenditure
+title: Gambling expenditure by stream, Queensland
+status: live
+topics:
+- economy
+- community
+order: 282
+collection: qld-gaming-gambling
+collection_title: Gaming machine and gambling data from Queensland
+temporal_start: '2004-07-01'
+search_title: Queensland gambling expenditure by month (OLGR)
+also_known_as:
+- All Gambling Data Queensland
+- Queensland gambling losses by type
+- Queensland casino, lottery, keno and wagering expenditure
+keywords:
+- gambling expenditure
+- player expenditure
+- casino
+- lottery
+- wagering
+- keno
+- pokies
+- Queensland
+faq:
+- q: What is in each row?
+  a: One gambling stream in one month, with the player expenditure in dollars. Player expenditure is the amount
+    players lost, which is what they bet less what they won. The streams are Casino, EGM (gaming machines in
+    hotels and clubs), Keno, Lottery and Wagering.
+- q: What is the CNP row?
+  a: The file holds one row for November 2013 with the stream CNP and no amount. The publisher does not define
+    it, and the row is kept as published.
+summary: The amount players lost each month in Queensland on casinos, gaming machines, keno, lotteries and
+  wagering, since July 2004.
+description: One row per gambling stream per month from July 2004, with player expenditure in dollars. The
+  streams are Casino, EGM, Keno, Lottery and Wagering. The EGM figure is the metered win on gaming machines
+  in hotels and clubs, so it matches the state total table.
+publisher:
+  name: Office of Liquor and Gaming Regulation
+  short: OLGR
+  jurisdiction: Qld
+  url: https://www.olgr.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/all-gambling-data-queensland
+  attribution: Office of Liquor and Gaming Regulation, Queensland Government, All Gambling Data Queensland,
+    sourced {sourced}, https://www.data.qld.gov.au/dataset/all-gambling-data-queensland, licensed under CC
+    BY 4.0.
+example:
+  where: {month: newest}
+  group: game_stream
+  metric: sum.player_expenditure
+  label: Player expenditure in dollars by gambling stream in the newest month
+chart:
+  where: {month: {gte: '2005-01-01'}, game_stream: {neq: CNP}}
+  split: game_stream
+  metric: sum.player_expenditure
+  label: Player expenditure in dollars
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: all-gambling-data-queensland
+  resource: 25eacd43-e0ce-431e-8314-ab37d57ef645
+  url: https://www.data.qld.gov.au/dataset/all-gambling-data-queensland
+  cadence: monthly
+  encoding: utf-8-sig
+key:
+- month
+- game_stream
+partition_by:
+- game_stream
+row_label: Stream months
+fields:
+- name: month
+  label: Month
+  source: Month Year
+  type: date
+  date_format: '%B %Y'
+  description: First day of the month the figure is for.
+- name: game_stream
+  label: Gambling stream
+  source: Game Stream
+  type: string
+  description: Casino, EGM, Keno, Lottery or Wagering.
+- name: player_expenditure
+  label: Player expenditure ($)
+  source: Player Expenditure $
+  type: number
+  description: The amount players lost in the month, in dollars.

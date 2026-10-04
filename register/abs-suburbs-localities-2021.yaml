@@ -1,0 +1,96 @@
+slug: abs-suburbs-localities-2021
+title: Suburb and locality boundaries, 2021, Australia
+status: live
+topics:
+- places
+example:
+  where: {area_sqkm: {gt: 0}}
+  group: state_name
+  label: Suburbs and localities in each state and territory
+order: 122
+collection: abs-boundaries
+collection_title: ABS boundaries
+publisher:
+  name: Australian Bureau of Statistics
+  short: ABS
+  jurisdiction: Cth
+  url: https://www.abs.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-3-july-2021-june-2026/access-and-downloads/digital-boundary-files
+  statement: Copyright Commonwealth of Australia administered by the ABS. Unless otherwise noted, content is licensed
+    under a Creative Commons Attribution 4.0 International licence.
+  attribution: Australian Bureau of Statistics, Australian Statistical Geography Standard (ASGS) Edition 3, SAL_2021_AUST_GDA2020_SHP.zip,
+    sourced {sourced}, https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-3-july-2021-june-2026/access-and-downloads/digital-boundary-files,
+    licensed under CC BY 4.0.
+search_title: 'Suburb boundaries: every suburb and locality shape, Australia (ABS 2021)'
+also_known_as:
+- suburb boundaries Australia
+- Suburbs and Localities 2021 shapefile
+- SAL boundaries
+- suburb GeoJSON Australia
+keywords:
+- suburb
+- locality
+- boundaries
+- shapefile
+- GeoJSON
+- SAL
+- ASGS
+- ABS
+faq:
+- q: What is in each row?
+  a: One of the Suburbs and Localities, the ABS's census approximation of the suburbs and localities the states
+    gazette, with its code, name and the other columns the ABS publishes, and its shape in the GeoParquet, GeoJSON,
+    GeoPackage and PMTiles files. The CSV, Excel and other table files hold the columns without the shape.
+- q: What coordinate system are the shapes in?
+  a: GDA2020 (EPSG:7844), the file the ABS publishes in that datum. GDA2020 differs from WGS84 by well under a metre,
+    so web maps can use it as it is.
+- q: How does this join to other datasets here?
+  a: Each dataset here with point coordinates carries the code and name of the area each point falls in, matched
+    by location against this layer. Those columns name the layer and its version in the dataset's schema, and the
+    ABS's attribution is in every file.
+summary: The 15,334 suburbs and localities of Australia as the ABS drew them for the 2021 Census, one shape each
+  with its state, in GDA2020.
+description: The ABS digital boundary file SAL_2021_AUST_GDA2020_SHP.zip, from the Australian Statistical Geography
+  Standard (ASGS) Edition 3. Each row is one area with the columns the ABS publishes. The ABS adds rows for no usual
+  address, migratory, offshore and shipping, which have no shape. They are kept, with a null geometry, so every
+  ABS code is in the table.
+key:
+- sal_2021_code
+geometry:
+  kind: polygon
+  crs: EPSG:7844
+  crs_note: Shapes in GDA2020 (EPSG:7844), as the ABS publishes them.
+  maxzoom: 10
+source:
+  adapter: file
+  url: https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-3-july-2021-june-2026/access-and-downloads/digital-boundary-files/SAL_2021_AUST_GDA2020_SHP.zip
+  member: SAL_2021_AUST_GDA2020.shp
+  cadence: when the ABS releases a new edition
+fields:
+- name: sal_2021_code
+  source: SAL_CODE21
+  label: Suburb or locality code (2021)
+- name: sal_2021_name
+  source: SAL_NAME21
+  label: Suburb or locality (2021)
+- name: state_code
+  source: STE_CODE21
+  label: State code
+- name: state_name
+  source: STE_NAME21
+  label: State or territory
+- name: area_sqkm
+  source: AREASQKM21
+  label: Area (km²)
+  type: number
+- name: loci_uri
+  source: LOCI_URI21
+  label: Linked data URI
+omit:
+  AUS_CODE21: The code for Australia, the same on every row.
+  AUS_NAME21: The word Australia, the same on every row.
+  SHAPE_Leng: The perimeter in degrees, which the shapefile computes from the shape.
+  SHAPE_Area: The area in square degrees, which the shapefile computes from the shape.

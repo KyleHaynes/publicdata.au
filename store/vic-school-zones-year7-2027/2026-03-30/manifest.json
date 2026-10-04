@@ -1,0 +1,33 @@
+{
+  "dataset": "vic-school-zones-year7-2027",
+  "version": "2026-03-30",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:07:36+00:00",
+  "sha256": "fc01d2c81f17e32922597150fad57e9db837c96ebf75143cc5ffa265d56f409c",
+  "bytes": 10673831,
+  "filename": "dv419_DataVic_School_Zones_2027_MAR26.zip",
+  "encoding": "zip",
+  "source": {
+    "url": "https://www.education.vic.gov.au/Documents/about/research/datavic/dv419_DataVic_School_Zones_2027_MAR26.zip",
+    "portal": "https://discover.data.vic.gov.au",
+    "package": "victorian-government-school-zones-2027",
+    "package_id": "eeed5501-2e67-4d4c-a5de-ed28ac817bb1",
+    "resource": "5b2a9b83-5635-48d0-85cd-e674e8912c69",
+    "resource_name": "School Zones 2027",
+    "resource_last_modified": null,
+    "package_modified": "2026-03-30T05:12:09.588248",
+    "package_version": null,
+    "etag": "{07CF29C9-8ED3-4D46-B5C1-219B6B062735},2",
+    "http_last_modified": "Mon, 23 Mar 2026 00:29:38 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution 4.0 International",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://discover.data.vic.gov.au/api/3/action/package_show?id=victorian-government-school-zones-2027",
+    "read_at": "2026-10-03T03:07:33+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": []
+}

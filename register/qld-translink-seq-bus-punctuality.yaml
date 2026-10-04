@@ -1,0 +1,75 @@
+slug: qld-translink-seq-bus-punctuality
+title: SEQ bus on-time running
+status: live
+topics:
+- roads
+order: 290
+collection: qld-translink-performance
+collection_title: Translink monthly performance data
+search_title: South East Queensland bus on-time running by month (Translink)
+also_known_as:
+- Brisbane bus punctuality
+- Translink bus on-time performance
+keywords:
+- punctuality
+- on-time running
+- bus
+- South East Queensland
+- Translink
+faq:
+- q: What is in each row?
+  a: Each row is one month and the proportion of Translink bus services in South East Queensland that ran on
+    time, written as a fraction of 1.
+- q: How far back does it go?
+  a: At review the file held about 30 months, starting in late 2023. Each fetch here is kept as a version,
+    so a month the publisher later drops stays in an earlier version.
+summary: The monthly share of Translink bus services in South East Queensland that ran on time.
+description: 'One row per month with the overall on-time running of Translink bus services in South East Queensland,
+  as published in Translink''s monthly performance data, as a proportion between 0 and 1. At review the file
+  started in late 2023.
+
+  '
+publisher:
+  name: Department of Transport and Main Roads
+  short: Transport and Main Roads
+  jurisdiction: Qld
+  url: https://www.tmr.qld.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/translink-monthly-performance-data
+  attribution: Department of Transport and Main Roads, Queensland Government, Translink monthly performance
+    data, sourced {sourced}, https://www.data.qld.gov.au/dataset/translink-monthly-performance-data, licensed
+    under CC BY 3.0 AU.
+  portal_id: CC-BY-3.0
+example:
+  group: month
+  metric: avg.on_time_running_overall
+  label: Share of bus services on time in each month, highest first
+chart:
+  where: {month: {gte: '2024-01-01'}}
+  split: none
+  metric: avg.on_time_running_overall
+  label: Average monthly share of bus services on time
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: translink-monthly-performance-data
+  resource: e12aa967-e3ca-491f-9b70-60bbea3f296e
+  url: https://www.data.qld.gov.au/dataset/translink-monthly-performance-data
+  cadence: monthly
+key:
+- month
+row_label: Months
+fields:
+- name: month
+  label: Month
+  source: Month-Year
+  type: date
+  date_format: '%b-%Y'
+  description: First day of the month reported.
+- name: on_time_running_overall
+  label: On-time running, overall
+  source: 'SEQ Bus: On-time running (overall)'
+  type: number
+  description: Proportion, 0 to 1.

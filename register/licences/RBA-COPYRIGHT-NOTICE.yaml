@@ -1,0 +1,17 @@
+# The RBA's numerical data is excluded from its CC BY 4.0 grant and given instead under sections 4
+# and 5 of its copyright notice.
+id: RBA-COPYRIGHT-NOTICE
+title: RBA copyright notice
+url: https://www.rba.gov.au/copyright/
+kind: notice
+read: '2026-10-01'
+hub: other
+grants:
+  reproduce: may be used, reproduced, published, communicated to the public or otherwise referenced for
+    personal or commercial use
+  adapt: any product, service or financial instrument that is created, relies on, references or is
+    otherwise derived from the Financial Data
+  commercial: may be used, reproduced, published, communicated to the public or otherwise referenced for
+    personal or commercial use
+  attribution: 'Unless any RBA Material specifies otherwise, the following form of attribution of RBA
+    Material is required: Source : Reserve Bank of Australia [year] OR Source : RBA [year]'

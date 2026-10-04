@@ -1,0 +1,34 @@
+{
+  "dataset": "nsw-top-baby-names-by-lga-female",
+  "version": "2026-06-02",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:03:22+00:00",
+  "sha256": "356dce5727784f36a763d021fc94c4c8a9d45a39f098d0ef5b6374d0df314286",
+  "bytes": 16157,
+  "filename": "top-3-names-by-lga-2025_female.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://data.nsw.gov.au/data/dataset/bd49c3e4-7f92-4a28-a3c2-c4a2c3a9123e/resource/677315bc-e8f2-4946-9c1b-36ae9189537f/download/top-3-names-by-lga-2025_female.csv",
+    "portal": "https://data.nsw.gov.au/data",
+    "package": "bdm-data-top-3-baby-names-by-lga",
+    "package_id": "bd49c3e4-7f92-4a28-a3c2-c4a2c3a9123e",
+    "resource": "677315bc-e8f2-4946-9c1b-36ae9189537f",
+    "resource_name": "Top 3 REGISTERED Names by LGA 2025 Female",
+    "resource_last_modified": "2026-06-02T06:28:47.108926",
+    "package_modified": "2026-06-02T06:30:08.457360",
+    "package_version": null,
+    "etag": "1780381727.0-16157-1069422832",
+    "http_last_modified": "Tue, 02 Jun 2026 06:28:47 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution",
+    "url": "http://www.opendefinition.org/licenses/cc-by",
+    "read_from": "https://data.nsw.gov.au/data/api/3/action/package_show?id=bdm-data-top-3-baby-names-by-lga",
+    "read_at": "2026-10-03T03:03:18+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "fadb4f72263006916b695e1b162a80e990fcff9f23e7100604a7a748b86d715d"
+}

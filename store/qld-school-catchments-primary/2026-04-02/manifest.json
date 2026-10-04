@@ -1,0 +1,33 @@
+{
+  "dataset": "qld-school-catchments-primary",
+  "version": "2026-04-02",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:02:17+00:00",
+  "sha256": "5c5bbe5221d602a41a2baeff9688effc4db6a43d95ddfab3f92b6d067fa67998",
+  "bytes": 31544480,
+  "filename": "primary_catchments_2026.kml",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/b01b50fc-b8ab-4c88-bc4a-34d42930fea8/resource/a35846d9-e320-46fc-aea1-b477001ca485/download/primary_catchments_2026.kml",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "queensland-state-schools-geographic-information",
+    "package_id": "b01b50fc-b8ab-4c88-bc4a-34d42930fea8",
+    "resource": "a35846d9-e320-46fc-aea1-b477001ca485",
+    "resource_name": "Primary catchments - 2026",
+    "resource_last_modified": "2026-04-01T23:32:55.917073",
+    "package_modified": "2026-04-01T23:46:19.027666",
+    "package_version": "4.0",
+    "etag": "86d389f09c9b4c5f157b682dfc3df5d2",
+    "http_last_modified": "Wed, 01 Apr 2026 23:32:57 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=queensland-state-schools-geographic-information",
+    "read_at": "2026-10-03T03:02:16+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": []
+}

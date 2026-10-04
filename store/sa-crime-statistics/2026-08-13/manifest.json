@@ -1,0 +1,34 @@
+{
+  "dataset": "sa-crime-statistics",
+  "version": "2026-08-13",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:10:10+00:00",
+  "sha256": "d8908686464d0fe98d79530ccbbd71254f3b7d60bc3fbc7c0ca7917bfb3be144",
+  "bytes": 9001184,
+  "filename": "data_sa_crime_q1_q2_q3_q4_2025-26.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://data.sa.gov.au/data/dataset/860126f7-eeb5-4fbc-be44-069aa0467d11/resource/cfce21c4-9712-454f-b32d-0f7c989accda/download/data_sa_crime_q1_q2_q3_q4_2025-26.csv",
+    "portal": "https://data.sa.gov.au/data",
+    "package": "crime-statistics",
+    "package_id": "860126f7-eeb5-4fbc-be44-069aa0467d11",
+    "resource": "cfce21c4-9712-454f-b32d-0f7c989accda",
+    "resource_name": "Crime Statistics 2025-26",
+    "resource_last_modified": "2026-08-13T06:26:03.830544",
+    "package_modified": "2026-08-25T23:13:37.478210",
+    "package_version": null,
+    "etag": "1786602364.665-9001184-1350441462",
+    "http_last_modified": "Thu, 13 Aug 2026 06:26:04 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution",
+    "url": "http://creativecommons.org/licenses/by/4.0",
+    "read_from": "https://data.sa.gov.au/data/api/3/action/package_show?id=crime-statistics",
+    "read_at": "2026-10-03T03:10:10+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "a594cd6a235ce00f43c8158fc48f29d93b24327c394d10e0764358b75fda2070"
+}

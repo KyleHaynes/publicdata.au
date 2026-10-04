@@ -1,0 +1,26 @@
+{
+  "dataset": "au-fdv-victims-recorded-crime",
+  "version": "2026-08-06",
+  "as_at": "",
+  "fetched_at": "2026-09-30T19:39:52+00:00",
+  "sha256": "d822a928d03fccd6ec1b6b970099e2e0f1b309e666c9d9636e87537ef53195b5",
+  "bytes": 966551,
+  "filename": "AIHW-FDSV-all-data-download.xlsx",
+  "encoding": "xlsx",
+  "source": {
+    "url": "https://www.aihw.gov.au/getmedia/f4a9196a-9797-4b03-acc8-d72a5b83d370/AIHW-FDSV-all-data-download.xlsx",
+    "etag": "639216332234209085",
+    "http_last_modified": "Thu, 06 Aug 2026 07:13:43 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "stated": "has been released under a Creative Commons BY 4.0 (CC-BY 4.0) licence",
+    "normalised": "CC-BY-4.0",
+    "title": "CC BY 4.0",
+    "url": "https://www.aihw.gov.au/copyright",
+    "read_at": "2026-09-30T19:39:52+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": []
+}

@@ -1,0 +1,89 @@
+slug: qld-youth-detention-daily-by-centre
+title: Young people in youth detention each day by detention centre, Queensland 2011 to 2016
+status: live
+topics:
+- crime
+order: 273
+collection: qld-youth-detention-daily
+collection_title: Young people in youth detention each day, Queensland 2011 to 2016
+temporal_start: '2011-07-01'
+search_title: Queensland youth detention daily numbers by centre (Youth Justice)
+also_known_as:
+- Brisbane and Cleveland youth detention centre numbers
+- Queensland youth detention centre population
+keywords:
+- youth detention
+- young offenders
+- youth justice
+- juvenile detention
+- Queensland
+faq:
+- q: What is in each row?
+  a: Each row is one day from 1 July 2011 to 30 June 2016, with the number of young people in youth detention
+    that day split by detention centre, and the total.
+- q: Who is counted?
+  a: Young people in youth detention who were remanded in custody or serving a sentenced detention order. Young
+    people held on pre-court custody are not counted.
+- q: Is there data after June 2016?
+  a: The publisher has not extended these tables past 30 June 2016.
+summary: The number of young people in Queensland youth detention on each day from July 2011 to June 2016,
+  by detention centre.
+description: One row per day from 1 July 2011 to 30 June 2016, with the financial year, the date, the number
+  of young people in youth detention that day in each detention centre group and the total in detention. The
+  count covers young people remanded in custody or sentenced, and leaves out pre-court custody.
+publisher:
+  name: Department of Youth Justice and Victim Support
+  short: Youth Justice
+  jurisdiction: Qld
+  url: https://www.youthjustice.qld.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/youth-justice-young-offenders-in-youth-detention
+  attribution: Department of Youth Justice and Victim Support, Queensland Government, Youth Justice - Young
+    offenders in youth detention, sourced {sourced}, https://www.data.qld.gov.au/dataset/youth-justice-young-offenders-in-youth-detention,
+    licensed under CC BY 3.0 AU.
+  portal_id: CC-BY-3.0
+example:
+  group: financial_year
+  metric: avg.cleveland_ydc
+  label: Average number of young people in Cleveland Youth Detention Centre each day, by financial year
+chart:
+  split: none
+  metric: avg.total
+  label: Average number of young people in detention each day
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: youth-justice-young-offenders-in-youth-detention
+  resource: 9fdfb3e0-db96-44f8-8ff6-45dafa8eb3c9
+  url: https://www.data.qld.gov.au/dataset/youth-justice-young-offenders-in-youth-detention
+  cadence: not updated since 2017
+  manual: true
+key:
+- date
+partition_by:
+- financial_year
+row_label: Days
+fields:
+- name: financial_year
+  label: Financial year
+  source: Financial year
+  type: string
+- name: date
+  label: Date
+  source: Date
+  type: date
+  date_format: '%d/%m/%Y'
+- name: brisbane_ydc
+  label: Brisbane Youth Detention Centre
+  source: Daily number in Brisbane Youth Detention Centre
+  type: integer
+- name: cleveland_ydc
+  label: Cleveland Youth Detention Centre
+  source: Daily number in Cleveland Youth Detention Centre
+  type: integer
+- name: total
+  label: Total in detention
+  source: Total daily number in detention
+  type: integer

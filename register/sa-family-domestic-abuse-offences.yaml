@@ -1,0 +1,94 @@
+slug: sa-family-domestic-abuse-offences
+title: Family and domestic abuse-related offences by postcode and quarter, South Australia
+status: live
+topics:
+- crime
+example:
+  group: offence_level_2
+  metric: sum.offence_count
+  label: Offences
+sample:
+  where: {quarter: newest}
+  order: [offence_count.desc]
+  spread: offence_level_2
+  label: The largest counts in the newest quarter, with each offence division taking turns, largest first.
+order: 415
+collection: sa-crime-statistics
+collection_title: Crime statistics, South Australia Police
+search_title: South Australia family and domestic abuse offences by postcode (SAPOL)
+also_known_as:
+- SAPOL family and domestic abuse-related offences
+- SA domestic violence offences by postcode
+- South Australian family violence crime data
+keywords:
+- domestic violence
+- family violence
+- domestic abuse
+- crime statistics
+- reported offences
+- South Australia Police
+- South Australia
+faq:
+- q: What is in each row?
+  a: The number of offences of one type flagged as family and domestic abuse-related that were reported to
+    police in one quarter of the financial year, in one postcode, with the offence named at three levels.
+- q: Can I add these to the crime statistics by suburb?
+  a: No. These offences are a subset of the offences in the crime statistics table, flagged as being of a family
+    and domestic abuse nature, so the publisher warns that the two files for one year must not be added together.
+- q: Which period does the table cover?
+  a: The financial year of the newest file South Australia Police has released, 2025-26 at the first version,
+    by quarter. Each new file becomes a version here, and the earlier years back to 2010-11 stay on the portal.
+summary: Offences flagged as family and domestic abuse-related that were reported to South Australia Police in the
+  newest financial year, counted by quarter, postcode and offence type. Updated quarterly.
+description: The family and domestic abuse-related offences file from South Australia Police's crime statistics.
+  Each row is one quarter, postcode and offence, with the number of offences of that type reported to police that
+  were flagged as being of a family and domestic abuse nature. The publisher writes NOT DISCLOSED where it does not
+  give the postcode, and that is kept as published.
+publisher:
+  name: South Australia Police
+  short: SAPOL
+  jurisdiction: SA
+  url: https://www.police.sa.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.sa.gov.au/data/dataset/crime-statistics
+  attribution: South Australia Police, Government of South Australia, Crime statistics,
+    https://data.sa.gov.au/data/dataset/crime-statistics, accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: ckan-resource
+  portal: https://data.sa.gov.au/data
+  package: crime-statistics
+  resource_match: ^Family & Domestic Abuse.related.offences \d{4}-\d{2}$
+  url: https://data.sa.gov.au/data/dataset/crime-statistics
+  cadence: quarterly
+row_label: Offence counts
+fields:
+- name: quarter
+  label: Quarter reported
+  source: Financial Quarter And Year Name - Reported
+  type: string
+  description: The quarter of the financial year, as the publisher writes it, such as Q1-2025/2026 for July to
+    September 2025.
+- name: postcode
+  label: Postcode
+  source: Postcode - Incident
+  type: string
+  description: Kept as text, since the publisher writes NOT DISCLOSED for some incidents.
+- name: offence_level_1
+  label: Offence group
+  source: Offence Level 1 Description
+  type: string
+- name: offence_level_2
+  label: Offence division
+  source: Offence Level 2 Description
+  type: string
+- name: offence_level_3
+  label: Offence
+  source: Offence Level 3 Description
+  type: string
+- name: offence_count
+  label: Offences
+  source: Offence Count
+  type: integer

@@ -1,0 +1,34 @@
+{
+  "dataset": "sa-air-quality-monitoring-sites",
+  "version": "2025-07-08",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:10:23+00:00",
+  "sha256": "496b2e080fd342c72128783369252f1ab164ae9aba06f69603abceaac9bc3e13",
+  "bytes": 4696,
+  "filename": "topo_epa_airqualitymonitoringsites_wgs84.geojson",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://data.sa.gov.au/data/dataset/a768c1f5-9714-4576-90bd-9dddaaa66ce4/resource/206bce6a-d345-4147-bebd-b16959e47718/download/topo_epa_airqualitymonitoringsites_wgs84.geojson",
+    "portal": "https://data.sa.gov.au/data",
+    "package": "air-quality-monitoring-sites",
+    "package_id": "a768c1f5-9714-4576-90bd-9dddaaa66ce4",
+    "resource": "206bce6a-d345-4147-bebd-b16959e47718",
+    "resource_name": "Air Quality Monitoring Sites (GeoJSON)",
+    "resource_last_modified": "2025-07-08T02:01:09.929840",
+    "package_modified": "2026-04-17T03:08:37.305946",
+    "package_version": null,
+    "etag": "1751940070.135-4696-1258232122",
+    "http_last_modified": "Tue, 08 Jul 2025 02:01:10 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution",
+    "url": "http://creativecommons.org/licenses/by/4.0",
+    "read_from": "https://data.sa.gov.au/data/api/3/action/package_show?id=air-quality-monitoring-sites",
+    "read_at": "2026-10-03T03:10:23+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "eabb5ff36179eeab858fa948af97ee3b2539b0cbf19343e2186bbed182b8ca7e"
+}

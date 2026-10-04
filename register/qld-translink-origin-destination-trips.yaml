@@ -1,0 +1,126 @@
+slug: qld-translink-origin-destination-trips
+title: Translink origin-destination trips, Queensland
+status: live
+topics:
+- roads
+order: 292
+collection: qld-translink-origin-destination
+collection_title: Translink origin-destination trips
+collection_search_title: Translink origin-destination trip data (Queensland public transport)
+collection_description: 'Translink publishes a monthly count of public transport trips between each pair of
+  stops, by operator, route, direction, time of day and ticket type, from its ticketing systems. A separate
+  stops table gives each stop''s name, type and coordinates, so a trip''s origin and destination can be placed
+  on a map.
+
+
+  The publisher adds one zip file per month from January 2022. Trips before 2022 are in a separate dataset
+  on the same portal.
+
+  '
+search_title: Translink origin-destination trips by stop, route and ticket type
+also_known_as:
+- Translink OD trips
+- Translink go card origin destination data
+- Brisbane public transport trips between stops
+keywords:
+- origin-destination
+- public transport
+- go card
+- patronage
+- bus
+- train
+- Translink
+- Queensland
+faq:
+- q: What is in each row?
+  a: Each row is the number of trips in one month on one operator's route and direction, in one time band and
+    on one ticket type, that began at one stop and ended at another. The stop numbers match the stop_id column
+    of the origin-destination stops table.
+- q: Why do some trips have no origin or destination stop?
+  a: About one row in ten has a blank stop, and some stops have codes starting DH. The publisher records what
+    its ticketing system logged, and its readme on the portal page explains these cases. They are kept as published.
+- q: Which month does this cover?
+  a: The publisher adds one file per month. This entry holds July 2026, the newest month at review. Earlier
+    months from January 2022 are on the same portal page.
+summary: The number of Translink public transport trips between each pair of stops in a month, by operator,
+  route, direction, time of day and ticket type.
+description: 'One row per combination of operator, month, route, direction, time band, ticket type, origin
+  stop and destination stop, with the number of trips, from Translink''s ticketing data. Ticket types include
+  go card, contactless payment (emv) and paper tickets. Stop numbers join to the origin-destination stops table
+  in this collection.
+
+
+  The publisher adds a new zip file each month. This entry reads the July 2026 file, the newest at review.
+
+  '
+publisher:
+  name: Department of Transport and Main Roads
+  short: Transport and Main Roads
+  jurisdiction: Qld
+  url: https://www.tmr.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/translink-origin-destination-trips-2022-onwards
+  attribution: Department of Transport and Main Roads, Queensland Government, Translink Origin-Destination
+    Trips 2022 Onwards, sourced {sourced}, https://www.data.qld.gov.au/dataset/translink-origin-destination-trips-2022-onwards,
+    licensed under CC BY 4.0.
+example:
+  group: operator
+  metric: sum.quantity
+  label: Trips
+sample:
+  order: [quantity.desc]
+  label: The row with the most trips for each operator, each operator in turn, busiest first.
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: translink-origin-destination-trips-2022-onwards
+  resource: 463c42eb-a991-46c2-a8a6-09c56e0bd802
+  url: https://www.data.qld.gov.au/dataset/translink-origin-destination-trips-2022-onwards
+  member: 202607 (Jul) TL Org-Dest Trips.csv
+  cadence: monthly
+partition_by:
+- operator
+row_label: Trip counts
+fields:
+- name: operator
+  label: Operator
+  source: OPERATOR
+  type: string
+- name: month
+  label: Month
+  source: MONTH
+  type: date
+  date_format: '%Y-%m'
+  description: First day of the month.
+- name: route
+  label: Route
+  source: ROUTE
+  type: string
+- name: direction
+  label: Direction
+  source: DIRECTION
+  type: string
+- name: time_grouping
+  label: Time band
+  source: TIME_GROUPING
+  type: string
+- name: ticket_type
+  label: Ticket type
+  source: TICKET_TYPE
+  type: string
+- name: origin_stop
+  label: Origin stop
+  source: ORIGIN_STOP
+  type: string
+  description: Stop id. Kept as text because some ids start with letters.
+- name: destination_stop
+  label: Destination stop
+  source: DESTINATION_STOP
+  type: string
+  description: Stop id. Kept as text because some ids start with letters.
+- name: quantity
+  label: Trips
+  source: QUANTITY
+  type: integer

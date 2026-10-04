@@ -1,0 +1,93 @@
+slug: vic-traffic-infringements-vs-official-warnings
+title: Traffic infringements and official warnings by issuing agency, Victoria, quarterly
+status: live
+topics:
+- roads
+example:
+  where:
+    issuing_agency:
+      neq: TOTAL
+  group: issuing_agency
+  metric: sum.infringements
+  label: Infringements
+order: 372
+publisher:
+  name: Cameras Save Lives
+  short: Cameras Save Lives
+  jurisdiction: Vic
+  url: https://www.vic.gov.au/cameras-save-lives
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://discover.data.vic.gov.au/dataset/road-safety-camera-network-official-warnings-vs-fines-quarterly
+  attribution: Cameras Save Lives, Victorian Government, Road Safety Camera Network - official warnings vs fines - quarterly, sourced {sourced}, https://discover.data.vic.gov.au/dataset/road-safety-camera-network-official-warnings-vs-fines-quarterly,
+    licensed under CC BY 4.0.
+search_title: Official warnings versus fines for speeding and tolls, Victoria (quarterly)
+also_known_as:
+- Official warnings vs fines quarterly
+- Victorian traffic fines and official warnings
+- Camera and police infringements versus warnings Victoria
+keywords:
+- official warnings
+- traffic fines
+- infringements
+- speed cameras
+- tolling
+- Cameras Save Lives
+- Victoria
+faq:
+- q: What does each row hold?
+  a: One kind of issuing agency for the quarter named on the row, such as fixed and mobile cameras,
+    police on the spot, tolling or distracted driver and seatbelt cameras, with the infringements issued
+    and the official warnings issued. The TOTAL row is the publisher's own.
+- q: How do warnings relate to the fines?
+  a: The publisher says an official warning is issued when an infringement is withdrawn after internal
+    review, and a warning may not relate to infringements issued in the same period. Police on the spot
+    figures cover speeding, red light and unregistered vehicle offences only.
+- q: Why might tolling figures lag?
+  a: Tolling infringements are counted at the date issued, which can be months after the trip, because
+    an unpaid toll becomes an infringement only after the toll operator has tried to recover it.
+- q: Which quarter is it?
+  a: Each version is the newest quarter released, and the quarter is in each row, taken from the sheet's
+    name. Earlier quarters back to 2019 are listed on the portal.
+summary: The number of traffic infringements and official warnings issued in the quarter by cameras,
+  police on the spot and tolling in Victoria, side by side.
+description: Official warnings versus fines from the Victorian road safety camera program, one row per
+  issuing agency for the quarter, with the number of infringements issued and of official warnings
+  issued, and the publisher's total. The notes beneath the publisher's table are summarised in the
+  questions here.
+source:
+  adapter: ckan-resource
+  portal: https://discover.data.vic.gov.au
+  package: road-safety-camera-network-official-warnings-vs-fines-quarterly
+  resource_match: ^Quarter
+  url: https://discover.data.vic.gov.au/dataset/road-safety-camera-network-official-warnings-vs-fines-quarterly
+  cadence: quarterly
+wide:
+  header_row: 6
+  header_rows: 1
+  first_column: 3
+  row_headers: 1
+key:
+- quarter
+- issuing_agency
+row_label: Agencies
+fields:
+- name: quarter
+  label: Quarter
+  source: (sheet)
+  type: string
+  description: The quarter as the publisher names the sheet, for example JUL - SEP 2025.
+- name: issuing_agency
+  label: Issuing agency
+  source: (row header 1)
+  type: string
+- name: infringements
+  label: Infringements issued
+  source: '(cell: Number of infringements issued)'
+  type: integer
+- name: official_warnings
+  label: Official warnings issued
+  source: '(cell: Official warnings issued)'
+  type: integer

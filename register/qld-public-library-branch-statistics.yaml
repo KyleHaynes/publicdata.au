@@ -1,0 +1,139 @@
+slug: qld-public-library-branch-statistics
+title: Public library branch statistics, Queensland
+status: live
+topics:
+- community
+order: 298
+collection: qld-public-libraries
+collection_title: Queensland public libraries
+search_title: Queensland public library branch statistics (State Library of Queensland)
+also_known_as:
+- Queensland public libraries annual statistics, branch data
+- Queensland library floor space and opening hours
+keywords:
+- public library
+- library statistics
+- opening hours
+- floor space
+- Queensland
+faq:
+- q: What is in each row?
+  a: Each row is one library branch or mobile library in the financial year the file covers. It gives the council
+    and its service type, the year the branch opened, its opening hours per week, mobile operating hours and
+    stops, total and public floor space in square metres, the internet connection and whether public Wi-Fi
+    and bookable spaces are offered.
+- q: What do IND, RLQ and IKC mean?
+  a: They are the publisher's service types. IND is an independent council library service, RLQ is a council
+    in the Rural Libraries Queensland partnership with the State Library, and IKC is an Indigenous Knowledge
+    Centre.
+- q: Which year does this cover?
+  a: The publisher adds one file per financial year. This entry follows the newest branch file, which is 2024/2025
+    at the time of review, and each new year becomes a new version.
+summary: Opening hours, floor space and services of each Queensland public library branch for the latest financial
+  year.
+description: 'One row per public library branch or mobile library in Queensland for one financial year, from
+  the annual statistics the State Library of Queensland collects from councils. Each row gives the council,
+  the service type, the branch name and year of opening, opening hours per week, mobile library hours and stops
+  per week, total and public access floor space, the internet connection type, and whether public Wi-Fi and
+  bookable spaces are offered.
+
+
+  The publisher adds a new file for each financial year. This entry follows the newest. A dash, kept as a null
+  value, means the measure does not apply, such as mobile stops for a fixed branch.
+
+  '
+publisher:
+  name: State Library of Queensland
+  short: SLQ
+  jurisdiction: Qld
+  url: https://www.slq.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/slq-qld-public-libraries-annual-statistics
+  attribution: State Library of Queensland, Queensland Government, State Library of Queensland - Queensland
+    public libraries annual statistics, sourced {sourced}, https://www.data.qld.gov.au/dataset/slq-qld-public-libraries-annual-statistics,
+    licensed under CC BY 4.0.
+example:
+  group: council
+  metric: sum.floor_space_total
+  label: Library floor space in each council area, in square metres
+chart:
+  split: service
+  metric: count
+  label: Branches opened
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: slq-qld-public-libraries-annual-statistics
+  url: https://www.data.qld.gov.au/dataset/slq-qld-public-libraries-annual-statistics
+  encoding: utf-8-sig
+  resource_match: ^Branch data
+  cadence: annually
+key:
+- council
+- branch_name
+row_label: Branches
+fields:
+- name: council
+  label: Council
+  source: COUNCIL
+  type: string
+- name: service
+  label: Service
+  source: SERVICE
+  type: string
+  description: IND is an independent council library service, RLQ a Rural Libraries Queensland council and
+    IKC an Indigenous Knowledge Centre.
+- name: branch_name
+  label: Branch
+  source: BRANCH Name
+  type: string
+- name: branch_year_of_opening
+  label: Year of opening
+  source: BRANCH YEAR OF OPENING
+  type: integer
+- name: branch_opening_hours_per_week
+  label: Opening hours per week
+  source: BRANCH OPENING HOURS PER WEEK
+  type: string
+  description: Hours per week. Kept as text because one row in the 2024/2025 file reads 50.5. with a trailing
+    full stop.
+- name: mobile_operating_hours_per_week
+  label: Mobile operating hours per week
+  source: MOBILE OPERATING HOURS PER WEEK
+  type: number
+  null_values:
+  - '-'
+- name: mobile_stops_per_week
+  label: Mobile stops per week
+  source: MOBILE STOPS PER WEEK
+  type: number
+  null_values:
+  - '-'
+- name: floor_space_total
+  label: Floor space total (m²)
+  source: FLOOR SPACE TOTAL
+  type: number
+  null_values:
+  - '-'
+  description: Square metres.
+- name: floor_space_public_access
+  label: Public floor space (m²)
+  source: FLOOR SPACE PUBLIC ACCESS
+  type: number
+  null_values:
+  - '-'
+  description: Square metres.
+- name: internet_connection_type
+  label: Internet connection type
+  source: INTERNET CONNECTION TYPE
+  type: string
+- name: services_public_access_wifi
+  label: Services public access wifi
+  source: SERVICES PUBLIC ACCESS WIFI
+  type: boolean
+- name: services_bookable_spaces
+  label: Services bookable spaces
+  source: SERVICES BOOKABLE SPACES
+  type: boolean

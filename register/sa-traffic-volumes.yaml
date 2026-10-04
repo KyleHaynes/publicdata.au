@@ -1,0 +1,139 @@
+slug: sa-traffic-volumes
+title: Traffic volume estimates on state roads, South Australia
+status: live
+topics:
+- roads
+order: 429
+search_title: South Australia traffic volumes map, AADT on every state road section (DIT)
+also_known_as:
+- SA Traffic Volume Estimates
+- South Australian annual average daily traffic
+- DIT traffic counts by road section
+- Adelaide road traffic volumes
+keywords:
+- traffic volumes
+- AADT
+- traffic counts
+- commercial vehicles
+- heavy vehicles
+- Department for Infrastructure and Transport
+- South Australia
+faq:
+- q: What is in each row?
+  a: One section of a state road, drawn as a line, with the road number, carriageway, the start and end of the
+    section in kilometres along the road, its annual average daily traffic in both directions, the year it was
+    counted and the year it was last updated, the share and number of commercial vehicles, counts by vehicle
+    class, and the publisher's traffic score.
+- q: What is annual average daily traffic?
+  a: The publisher defines it as the traffic travelling in both directions past a roadside point over a full
+    year, divided by the number of days in the year.
+- q: Which year does it cover?
+  a: The newest yearly snapshot, Traffic Volume Estimates 2026 at the first version. The publisher adds a snapshot
+    each financial year, and each becomes a version here. Each section carries the year it was counted and the
+    year its estimate was last updated, and both can be years before the snapshot.
+summary: The estimated annual average daily traffic on each section of South Australia's sealed state roads, with
+  commercial vehicle counts by class, from the newest yearly snapshot.
+description: Traffic Volume Estimates from the Department for Infrastructure and Transport. Each row is one section
+  of a sealed road the Department manages, with its road number and carriageway, its start and end in road running
+  kilometres, the annual average daily traffic (AADT), the year of the count and of the last update, the percentage
+  and number of commercial vehicles, the numbers in vehicle classes 3 to 5, 6 to 9, 10 and 11, and the traffic score,
+  which the publisher derives from AADT and commercial vehicles.
+publisher:
+  name: Department for Infrastructure and Transport
+  short: Infrastructure and Transport
+  jurisdiction: SA
+  url: https://www.dit.sa.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.sa.gov.au/data/dataset/traffic-volumes
+  attribution: Department for Infrastructure and Transport, Government of South Australia, Traffic Volumes, https://data.sa.gov.au/data/dataset/traffic-volumes, accessed {sourced}, licensed under CC BY 4.0.
+example:
+  group: base_year
+  metric: count
+  label: Road sections by the year their traffic was counted
+sample:
+  order: [aadt.desc]
+  spread: road_number
+  label: The busiest section of each of the ten roads with the highest annual average daily traffic, busiest first.
+source:
+  adapter: ckan-resource
+  portal: https://data.sa.gov.au/data
+  package: traffic-volumes
+  resource_match: ^Traffic Volume Estimates \d{4} \(shp\)$
+  member: TrafficVolumeEstimates_GDA2020.shp
+  url: https://data.sa.gov.au/data/dataset/traffic-volumes
+  cadence: yearly
+geometry:
+  kind: line
+  crs: EPSG:7844
+  crs_note: Lines in GDA2020 (EPSG:7844), from the GDA2020 layer the publisher ships beside a GDA94 copy.
+  maxzoom: 10
+key:
+- section_id
+row_label: Road sections
+fields:
+- name: road_number
+  label: Road number
+  source: ROAD_NO
+  type: string
+  description: Kept as text to preserve leading zeros.
+- name: carriageway
+  label: Carriageway
+  source: RLCWY_CODE
+  type: string
+  description: The side of the road, named against the direction the road's distances run.
+- name: section_start_km
+  label: Section start (km)
+  source: TESECN_STA
+  type: number
+- name: section_end_km
+  label: Section end (km)
+  source: TESECN_END
+  type: number
+- name: section_id
+  label: Section ID
+  source: TESECN_ID
+  type: number
+- name: aadt
+  label: Annual average daily traffic
+  source: TESECN_VOL
+  type: integer
+- name: base_year
+  label: Year counted
+  source: TESECN_BAS
+  type: string
+- name: projected_year
+  label: Year last updated
+  source: TESECN_PRO
+  type: string
+- name: commercial_vehicle_percent
+  label: Commercial vehicles (%)
+  source: CV_PERCENT
+  type: number
+- name: commercial_vehicles
+  label: Commercial vehicles
+  source: NUMBER_CVS
+  type: integer
+- name: class_3_to_5
+  label: Class 3 to 5 vehicles
+  source: CLASS3TO5
+  type: integer
+- name: class_6_to_9
+  label: Class 6 to 9 vehicles
+  source: CLASS6TO9
+  type: integer
+- name: class_10
+  label: Class 10 vehicles
+  source: CLASS10
+  type: integer
+- name: class_11
+  label: Class 11 vehicles
+  source: CLASS11
+  type: integer
+- name: traffic_score
+  label: Traffic score
+  source: TRAFFIC_SC
+  type: number
+  description: The publisher's figure derived from AADT and commercial vehicles.

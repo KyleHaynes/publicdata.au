@@ -1,0 +1,90 @@
+slug: vic-greater-dandenong-registered-dogs
+title: Registered dogs by suburb, breed and colour, City of Greater Dandenong
+status: live
+topics:
+- community
+example:
+  group: breed
+  metric: count
+  label: Dogs
+order: 356
+collection: vic-council-pet-registrations
+collection_title: Victorian council dog and cat registrations
+collection_search_title: Registered dogs and cats by suburb, Victorian councils
+collection_description: |
+  Victorian councils register the dogs and cats kept in their area, and several have published their register as a list of animals without owners' names or addresses. Each table here is one council's file as it published it, with its own columns.
+
+  The City of Greater Dandenong lists registered dogs by suburb with breed, colour and sex. Golden Plains Shire lists dogs and cats with breed, colour, desexing, microchip and registration class. Southern Grampians Shire lists dogs and cats by town and ABS mesh block.
+publisher:
+  name: City of Greater Dandenong
+  short: Greater Dandenong
+  jurisdiction: Local
+  url: https://www.greaterdandenong.vic.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.gov.au/data/dataset/dandenong-registered-dogs
+  attribution: City of Greater Dandenong, Registered Dogs - Greater Dandenong, sourced {sourced}, https://data.gov.au/data/dataset/dandenong-registered-dogs, licensed under CC BY 3.0 AU.
+search_title: Registered dogs in Greater Dandenong by suburb and breed (council register)
+also_known_as:
+- Greater Dandenong registered dogs
+- Dandenong dog registrations by breed
+- Dog breeds in Noble Park and Keysborough
+keywords:
+- registered dogs
+- dog breeds
+- pet registration
+- Dandenong
+- council
+faq:
+- q: What does each row hold?
+  a: One dog on the City of Greater Dandenong's register when the file was published, with its suburb,
+    postcode, breed, colour and sex. Owners and addresses are not in the file.
+- q: What do the breed and colour codes mean?
+  a: The council writes breeds and colours as short codes from its register, such as MALTX for a Maltese
+    cross and BLAWHI for black and white. They are kept as published, since the file gives no key.
+- q: Is it current?
+  a: The portal dates the file January 2021. It is a single snapshot of the register and has not been updated since.
+summary: Each of about 7,500 dogs on the City of Greater Dandenong's register, with suburb, postcode, breed
+  code, colour code and sex.
+description: The City of Greater Dandenong's list of registered dogs as published on data.gov.au, one row
+  per dog with its locality, postcode, animal type, breed and colour as the council's register codes them,
+  and sex. The council notes that it makes no guarantee about the accuracy of the data.
+source:
+  adapter: ckan-resource
+  portal: https://data.gov.au/data
+  package: dandenong-registered-dogs
+  resource: abdce0cb-33f0-42cd-908a-3ee39ad2c176
+  url: https://data.gov.au/data/dataset/dandenong-registered-dogs
+  cadence: no longer updated
+partition_by:
+- locality
+place_field: locality
+row_label: Dogs
+fields:
+- name: locality
+  label: Suburb
+  source: Locality
+  type: string
+- name: postcode
+  label: Postcode
+  source: Postcode
+  type: string
+- name: animal_type
+  label: Animal
+  source: Animal_Type
+  type: string
+- name: breed
+  label: Breed code
+  source: Breed_Description
+  type: string
+- name: colour
+  label: Colour code
+  source: Colour_Description
+  type: string
+- name: sex
+  label: Sex
+  source: GENDER
+  type: string
+  description: M, F or U as the council records it.

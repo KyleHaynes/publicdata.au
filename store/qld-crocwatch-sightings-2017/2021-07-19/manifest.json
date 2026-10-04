@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-crocwatch-sightings-2017",
+  "version": "2021-07-19",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:03:14+00:00",
+  "sha256": "48c5f5889c97263b6baf2b97fd3e3c376bb4dd1a5dda2d3714ae5060360ea87b",
+  "bytes": 70349,
+  "filename": "crocwatch-crocodile-sightings-jan-mar-2017.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/85c3fb83-999d-405b-941b-46b4618dab3c/resource/d46b873b-cf76-41ec-a5ed-fe33f7a41fcd/download/crocwatch-crocodile-sightings-jan-mar-2017.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "crocodile-sightings-in-queensland",
+    "package_id": "85c3fb83-999d-405b-941b-46b4618dab3c",
+    "resource": "d46b873b-cf76-41ec-a5ed-fe33f7a41fcd",
+    "resource_name": "CrocWatch crocodile sightings Jan-Mar 2017",
+    "resource_last_modified": "2021-07-19T01:23:27.430458",
+    "package_modified": "2022-06-21T00:33:13.975113",
+    "package_version": "2.0",
+    "etag": "W/\"d7d7286fd0a592d62e0c29e9a9de81ca",
+    "http_last_modified": "Mon, 19 Jul 2021 01:23:30 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=crocodile-sightings-in-queensland",
+    "read_at": "2026-10-03T03:03:14+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "33e5b07a9e54ffe577ceda5f2645eb88022699fb5e2fd272ecdec4ded4c16fff"
+}

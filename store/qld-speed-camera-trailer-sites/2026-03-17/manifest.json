@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-speed-camera-trailer-sites",
+  "version": "2026-03-17",
+  "as_at": "",
+  "fetched_at": "2026-10-03T02:59:34+00:00",
+  "sha256": "712349a8984a597a3700478e55b34db55645dadd9d267b3bef237baea48dc78e",
+  "bytes": 6398,
+  "filename": "RSCT_sites.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://open-crime-data.s3-ap-southeast-2.amazonaws.com/Crime%20Statistics/RSCT_sites.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "active-mobile-speed-camera-sites",
+    "package_id": "0fffea7f-6988-4b73-afee-5aa8af56afd2",
+    "resource": "d059503f-3685-4669-8c43-df5b74da8ba8",
+    "resource_name": "Road Safety Camera Trailer Sites",
+    "resource_last_modified": "2022-03-09T05:14:53.950773",
+    "package_modified": "2023-09-04T03:24:42.975838",
+    "package_version": "1.1",
+    "etag": "76b189f00bdacdcabc12dcc96bdf088e",
+    "http_last_modified": "Tue, 17 Mar 2026 05:45:27 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=active-mobile-speed-camera-sites",
+    "read_at": "2026-10-03T02:59:34+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "8172ead7e570ae55ef37e3a891382a5ed40085a951a669657a0859534503d03f"
+}

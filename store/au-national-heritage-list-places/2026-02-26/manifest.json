@@ -1,0 +1,41 @@
+{
+  "dataset": "au-national-heritage-list-places",
+  "version": "2026-02-26",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:15:52+00:00",
+  "sha256": "a1b7149328013c2d6de1a60632a8052347fac86c13f40ad70bd90c9f573bdb8c",
+  "bytes": 41222852,
+  "filename": "au-national-heritage-list-places.geojson",
+  "encoding": "utf-8",
+  "source": {
+    "url": "https://gis.environment.gov.au/gispubmap/rest/services/ogc_services/National_Heritage_List/FeatureServer/0",
+    "portal": "https://data.gov.au/data",
+    "package": "national-heritage-list-spatial-database-nhl-public",
+    "package_id": "6e3366ab-48db-4495-a457-7fb67154edc6",
+    "package_modified": "2024-07-17T07:12:10.605287",
+    "layer_name": "National_Heritage_List_Australia",
+    "object_id_field": "OBJECTID",
+    "last_edit_date": null,
+    "newest_record": 1772064000000,
+    "features": 151,
+    "date_fields": [
+      "UPDATED",
+      "REGISTER_DATE"
+    ]
+  },
+  "licence": {
+    "id": "cc-by",
+    "stated": "cc-by",
+    "normalised": "CC-BY-3.0-AU",
+    "title": "Creative Commons Attribution 3.0 Australia",
+    "url": "http://creativecommons.org/licenses/by/3.0/au/",
+    "read_from": "https://data.gov.au/data/api/3/action/package_show?id=national-heritage-list-spatial-database-nhl-public",
+    "read_at": "2026-10-03T03:15:44+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [
+    "The layer states no edit date, so this version is dated by the newest record it holds.",
+    "The publisher offers no file. These bytes are every feature of the layer as the service returned them in WGS84, ordered by its object id, so the same layer gives the same bytes."
+  ]
+}

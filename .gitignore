@@ -1,0 +1,27 @@
+__pycache__/
+*.egg-info/
+.venv/
+.pytest_cache/
+.ruff_cache/
+dist/
+snapshots/
+raw/
+.wrangler/
+.DS_Store
+.env
+.env.*
+store/*/*/source.*
+dist-large/
+# Lighthouse and Chrome write beside the working directory during local audits.
+lh-*.json
+C:*
+node_modules/
+
+# Written at publish time by python -m publicdata.api_text server.json.
+/server.json
+.build-cache/
+.venv*/
+clients/*/dist/
+
+# Licensed for the site only; store pull fetches them from R2.
+pipeline/publicdata/static/fonts/

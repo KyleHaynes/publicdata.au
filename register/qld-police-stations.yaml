@@ -1,0 +1,71 @@
+slug: qld-police-stations
+title: Police stations, Queensland
+status: live
+topics:
+- crime
+- emergencies
+order: 239
+collection: qld-emergency-stations
+collection_title: Fire and police station locations, Queensland
+search_title: Queensland police station locations (Queensland Police Service)
+also_known_as:
+- QPS police stations list
+- Police stations near me Queensland
+- Queensland Police station map
+keywords:
+- police stations
+- QPS
+- station locations
+- emergency services
+- Queensland
+faq:
+- q: What is in each row?
+  a: One Queensland Police Service station, with its name and its latitude and longitude in GDA94.
+- q: Is there an address or phone number?
+  a: No. The publisher gives the station name and coordinates only.
+summary: Every Queensland Police Service station, with its name and coordinates in GDA94. Updated monthly.
+description: The police stations of the Queensland Police Service, one row per station, with its name,
+  latitude and longitude. The publisher ships the list as a zip holding a CSV, a shapefile and a KML file,
+  and the CSV is read here. It updates the zip monthly.
+publisher:
+  name: Queensland Police Service
+  short: QPS
+  jurisdiction: Qld
+  url: https://www.police.qld.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  evidence: https://www.data.qld.gov.au/dataset/qps-police-stations
+  reviewed: '2026-10-01'
+  attribution: Queensland Police Service, Queensland Government, QPS Police Stations, sourced {sourced},
+    https://www.data.qld.gov.au/dataset/qps-police-stations, licensed under CC BY 3.0 AU.
+  portal_id: CC-BY-3.0
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: qps-police-stations
+  resource: b0aa480e-f023-4bbf-9c54-3a8036edfb14
+  url: https://www.data.qld.gov.au/dataset/qps-police-stations
+  member: QPS_STATIONS.csv
+  cadence: monthly
+key:
+- name
+geometry:
+  lon: longitude
+  lat: latitude
+  crs: EPSG:4283
+  crs_note: Longitude and latitude in GDA94 (EPSG:4283), as the shapefile beside the CSV states.
+row_label: Stations
+fields:
+- name: name
+  label: Station
+  source: Name
+  type: string
+- name: latitude
+  label: Latitude
+  source: Latitude
+  type: number
+- name: longitude
+  label: Longitude
+  source: Longitude
+  type: number
+note: Cells were typed and headers were made snake_case. Rows were left alone.

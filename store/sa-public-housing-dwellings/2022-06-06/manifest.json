@@ -1,0 +1,34 @@
+{
+  "dataset": "sa-public-housing-dwellings",
+  "version": "2022-06-06",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:10:24+00:00",
+  "sha256": "adcbb0aaa59f732cce548c412cf1668f856348acb4755bfdeeff1f3c0bf34c77",
+  "bytes": 22812,
+  "filename": "dwellings_ph_2020-21_sa_housing_authority.xlsx",
+  "encoding": "xlsx",
+  "source": {
+    "url": "https://data.sa.gov.au/data/dataset/d705d6c7-82a7-4e58-a6aa-89876fc23e12/resource/545ad202-772e-4d97-b9af-f065171b5915/download/dwellings_ph_2020-21_sa_housing_authority.xlsx",
+    "portal": "https://data.sa.gov.au/data",
+    "package": "social-housing-dwellings",
+    "package_id": "d705d6c7-82a7-4e58-a6aa-89876fc23e12",
+    "resource": "545ad202-772e-4d97-b9af-f065171b5915",
+    "resource_name": "Dwellings Public Housing 30 June 2021",
+    "resource_last_modified": "2022-06-06T07:18:03.954473",
+    "package_modified": "2022-06-06T07:19:07.027711",
+    "package_version": null,
+    "etag": "1654499884.043-22812-1087117530",
+    "http_last_modified": "Mon, 06 Jun 2022 07:18:04 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution",
+    "url": "http://creativecommons.org/licenses/by/4.0",
+    "read_from": "https://data.sa.gov.au/data/api/3/action/package_show?id=social-housing-dwellings",
+    "read_at": "2026-10-03T03:10:24+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "408e37a3de9b8fcfb442a30a9b47bc3f08b5a3ce7461753c842f249fcc7b4dfc"
+}

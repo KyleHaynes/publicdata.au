@@ -1,0 +1,130 @@
+slug: au-commonwealth-heritage-list-places
+title: Commonwealth Heritage List places, boundaries, Australia
+status: live
+topics:
+- places
+example:
+  where: {status: Listed place}
+  group: state
+  metric: count
+  label: Listed places in each state and territory
+chart:
+  label: Place records last updated
+order: 525
+collection: au-commonwealth-heritage-lists
+collection_title: Australian Government heritage lists
+publisher:
+  name: Department of Climate Change, Energy, the Environment and Water
+  short: DCCEEW
+  jurisdiction: Cth
+  url: https://www.dcceew.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.gov.au/data/dataset/commonwealth-heritage-list-spatial-database-chl-public
+  attribution: Department of Climate Change, Energy, the Environment and Water, Australian Government,
+    Commonwealth Heritage List Spatial Database (CHL) - public, sourced {sourced}, https://data.gov.au/data/dataset/commonwealth-heritage-list-spatial-database-chl-public,
+    licensed under CC BY 3.0 AU.
+search_title: Commonwealth Heritage List places map and boundaries, Australia (DCCEEW)
+also_known_as:
+- Commonwealth Heritage List spatial database
+- Commonwealth heritage places map
+- CHL boundaries shapefile GeoJSON
+- Heritage places on Commonwealth land
+keywords:
+- Commonwealth Heritage List
+- heritage places
+- heritage boundaries
+- EPBC Act
+- Indigenous heritage
+- DCCEEW
+faq:
+- q: What is in each row?
+  a: One place on the Commonwealth Heritage List, which holds heritage places owned or controlled by the
+    Australian Government, with its place ID and file number, name, class (Indigenous, natural or historic),
+    listing status, state, address, area in hectares, the date it was entered on the list and the date its
+    record was updated. Its boundary is
+    in the GeoParquet, GeoJSON, GeoPackage and PMTiles files.
+- q: Is every listed place here?
+  a: The department leaves out places subject to confidentiality agreements, and nominations under
+    assessment, rejected, ineligible, removed or destroyed. A few places are made of several parcels. The
+    status column marks the few nominated places the file does carry and the parts within a listed place.
+- q: What are the Shape area and length columns?
+  a: They are the area and perimeter the map service works out in its own coordinates, kept as published.
+    The area in hectares is the department's own figure.
+summary: The 372 places on the Commonwealth Heritage List and a few nominated places, each with its boundary,
+  class, state, address and listing date, from the Department of Climate Change, Energy, the Environment and Water.
+description: The public Commonwealth Heritage List spatial database, read from the department's map service.
+  Each row is one listed place with its identifiers, name, class, status, state, area, listing and update
+  dates and address, and its boundary as a polygon.
+source:
+  adapter: arcgis-feature
+  portal: https://data.gov.au/data
+  package: commonwealth-heritage-list-spatial-database-chl-public
+  url: https://gis.environment.gov.au/gispubmap/rest/services/ogc_services/Commonwealth_Heritage_List/FeatureServer/0
+  cadence: as places are listed
+key:
+- objectid
+geometry:
+  kind: polygon
+  crs: EPSG:4326
+  crs_note: The map service projects the boundaries to WGS84 (EPSG:4326) on request. They are moved to GDA2020
+    for publication.
+  maxzoom: 10
+row_label: Places
+fields:
+- name: objectid
+  label: Object ID
+  source: OBJECTID
+  type: integer
+- name: place_id
+  label: Place ID
+  source: PLACE_ID
+  type: integer
+- name: file_number
+  label: File number
+  source: FILE_
+  type: string
+- name: name
+  label: Place
+  source: NAME
+  type: string
+- name: class
+  label: Class
+  source: CLASS
+  type: string
+- name: status
+  label: Status
+  source: STATUS
+  type: string
+- name: state
+  label: State or territory
+  source: STATE
+  type: string
+- name: area_ha
+  label: Area (ha)
+  source: AREA_HA
+  type: number
+- name: updated
+  label: Record updated
+  source: UPDATE_
+  type: date
+  date_format: epoch_ms
+- name: register_date
+  label: Date listed
+  source: REGISTER
+  type: date
+  date_format: epoch_ms
+- name: address
+  label: Address
+  source: ADDRESS
+  type: string
+- name: shape_area
+  label: Shape area
+  source: Shape__Area
+  type: number
+- name: shape_length
+  label: Shape length
+  source: Shape__Length
+  type: number

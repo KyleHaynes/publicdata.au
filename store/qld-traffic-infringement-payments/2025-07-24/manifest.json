@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-traffic-infringement-payments",
+  "version": "2025-07-24",
+  "as_at": "",
+  "fetched_at": "2026-10-03T02:59:33+00:00",
+  "sha256": "60aa0d8e1881bd543afc3a217fca2da07f79c6f7e088fd1b58df342152cbe992",
+  "bytes": 797818,
+  "filename": "daily_traffic_infringement_payments_by_channel_2025_06_11_1155.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/4cd04a74-fa19-4348-9386-b6c704c0efd6/resource/4660e68e-2f27-40c8-92d1-79a96123cbfb/download/daily_traffic_infringement_payments_by_channel_2025_06_11_1155.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "traffic-infringement-notice-payments",
+    "package_id": "4cd04a74-fa19-4348-9386-b6c704c0efd6",
+    "resource": "4660e68e-2f27-40c8-92d1-79a96123cbfb",
+    "resource_name": "Daily traffic infringement notice payments by service channel",
+    "resource_last_modified": "2025-07-23T23:30:32.783602",
+    "package_modified": "2025-07-23T23:30:43.540377",
+    "package_version": "January 2024",
+    "etag": "b241db8188e6277a7a60762cdd7338ef",
+    "http_last_modified": "Wed, 23 Jul 2025 23:30:34 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=traffic-infringement-notice-payments",
+    "read_at": "2026-10-03T02:59:33+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "7e8cf5b36288791cc8b5a597e9195ec1403eb9f85c775bb2e6096a9950eb31ec"
+}

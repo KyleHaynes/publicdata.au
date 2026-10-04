@@ -1,0 +1,34 @@
+{
+  "dataset": "vic-ambulance-response-times-by-lga",
+  "version": "2025-06-04",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:07:54+00:00",
+  "sha256": "b4aeb40b76bcaab85f3e81513e23813764bb80686f645a97a8dc17c0ea14631d",
+  "bytes": 6790,
+  "filename": "LGA-Response-Time-Performance-FY-2019.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.ambulance.vic.gov.au/sites/default/files/2025-05/LGA-Response-Time-Performance-FY-2019.csv",
+    "portal": "https://discover.data.vic.gov.au",
+    "package": "ambulance-victoria-lga-response-time-performance",
+    "package_id": "8001f9e0-ea8f-4b92-9895-3376d78cc19f",
+    "resource": "80bf90b5-731f-46d5-a9e6-2876b29226fc",
+    "resource_name": "Ambulance Victoria LGA Reponse Times 2018-19",
+    "resource_last_modified": null,
+    "package_modified": "2025-06-04T00:42:34.588102",
+    "package_version": null,
+    "etag": "6822cad0-1a86",
+    "http_last_modified": "Tue, 13 May 2025 04:30:08 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution 4.0 International",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://discover.data.vic.gov.au/api/3/action/package_show?id=ambulance-victoria-lga-response-time-performance",
+    "read_at": "2026-10-03T03:07:53+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "b613d42798aab9f6e192b61a47c0413a6e7f2b1305d18ef2511dee3744c805e4"
+}

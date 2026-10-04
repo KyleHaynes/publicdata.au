@@ -1,0 +1,32 @@
+{
+  "dataset": "act-traffic-camera-locations",
+  "version": "2026-08-21",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:11:25+00:00",
+  "sha256": "267a8ceb6aaa207cc84ffa398c1ea4fc711b3e14c4d7f5cc00138e9ed9cf1be8",
+  "bytes": 175734,
+  "filename": "426s-vdu4.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.act.gov.au/api/views/426s-vdu4/rows.csv?accessType=DOWNLOAD",
+    "portal": "https://www.data.act.gov.au",
+    "package": "426s-vdu4",
+    "resource_name": "Traffic speed camera locations",
+    "rows_updated_at": 1787290543,
+    "etag": "Zm94dHJvdC41MzUyOV8zXzE0M2VWWjY3UG1GeUVEb0FDLWZnWm50LWE2NF9FMA---gzijoj-iVCAhJXEnA1xgHX3hRtExDO--gzip--gzip",
+    "http_last_modified": "Fri, 21 Aug 2026 05:35:45 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "stated": "CC_40_BY",
+    "normalised": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0 International",
+    "url": "http://creativecommons.org/licenses/by/4.0/legalcode",
+    "read_from": "https://www.data.act.gov.au/api/views/426s-vdu4.json",
+    "read_at": "2026-10-03T03:11:24+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "287106cf6fabc0cc21d30dc20d9903d7e8357960880d7241d0a9140b9c01caba"
+}

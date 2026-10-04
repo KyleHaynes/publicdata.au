@@ -1,0 +1,93 @@
+slug: vic-driver-licence-transfers-to-victoria
+title: Driver licences transferred to Victoria each quarter, by origin
+status: live
+topics:
+- migration
+example:
+  group: country_or_state
+  metric: sum.metro
+  label: Licences transferred to metro Melbourne
+sample:
+  order: [metro.desc]
+  label: The ten origins with the most licences transferred by holders in metropolitan Melbourne, most first.
+order: 395
+publisher:
+  name: Department of Transport and Planning
+  short: Transport and Planning
+  jurisdiction: Vic
+  url: https://www.vic.gov.au/department-transport-and-planning
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://discover.data.vic.gov.au/dataset/quarterly-driver-licence-transfers-to-victoria
+  attribution: Department of Transport and Planning, Victorian Government, Quarterly Driver Licence Transfers
+    to Victoria, sourced {sourced}, https://discover.data.vic.gov.au/dataset/quarterly-driver-licence-transfers-to-victoria,
+    licensed under CC BY 4.0.
+search_title: Interstate and overseas driver licence transfers to Victoria by state and country (quarterly)
+also_known_as:
+- Quarterly Driver Licence Transfers to Victoria
+- People moving to Victoria by driver licence transfer
+- Overseas licence conversions Victoria
+keywords:
+- driver licence transfers
+- interstate migration
+- overseas licence
+- VicRoads
+- moving to Victoria
+- Victoria
+faq:
+- q: What does each row hold?
+  a: One state, territory or country a driver licence came from, with the number of licences transferred
+    to Victoria in the quarter for holders living in metropolitan Melbourne, in rural Victoria and
+    elsewhere. The category marks interstate transfers as INTE and overseas ones as OVSE.
+- q: Which quarter is it?
+  a: Each version is the newest quarter the department has released, named on the portal. Earlier
+    quarters are listed there as separate files.
+- q: Is this a count of people moving to Victoria?
+  a: It counts licences transferred, which is one sign of people moving. People who do not hold a licence,
+    or who do not transfer it, are not counted. State names are as the register holds them, including
+    its spelling.
+summary: The number of interstate and overseas driver licences transferred to Victoria in the quarter, by
+  the state or country they came from and whether the holder lives in Melbourne or rural Victoria.
+description: Quarterly driver licence transfers to Victoria from the Department of Transport and Planning,
+  one row per state, territory or country of origin, with the code of origin, the interstate or overseas
+  category and the counts for metropolitan, rural and other addresses.
+source:
+  adapter: ckan-resource
+  portal: https://discover.data.vic.gov.au
+  package: quarterly-driver-licence-transfers-to-victoria
+  resource_match: ^Quarterly Driver Licence Transfers to Victoria Q\d \d{4}$
+  url: https://discover.data.vic.gov.au/dataset/quarterly-driver-licence-transfers-to-victoria
+  cadence: quarterly
+  encoding: utf-8-sig
+key:
+- code_of_origin
+row_label: Origins
+fields:
+- name: code_of_origin
+  label: Origin code
+  source: CODE_OF_ORIGIN
+  type: string
+  description: The register's code for the state or country, such as NSW or 155.
+- name: country_or_state
+  label: State or country of origin
+  source: COUNTRY_OR_STATE
+  type: string
+- name: category
+  label: Category
+  source: CATEGORY
+  type: string
+  description: INTE for interstate and OVSE for overseas.
+- name: metro
+  label: Metropolitan Melbourne
+  source: METRO
+  type: integer
+- name: rural
+  label: Rural Victoria
+  source: RURAL
+  type: integer
+- name: other
+  label: Other
+  source: OTHER
+  type: integer

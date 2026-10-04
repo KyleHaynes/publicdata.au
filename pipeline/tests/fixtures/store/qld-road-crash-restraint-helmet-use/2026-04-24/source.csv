@@ -1,0 +1,301 @@
+﻿Crash_Year,Crash_PoliceRegion,Casualty_Severity,Casualty_AgeGroup,Casualty_Gender,Casualty_Road_User_Type,Casualty_Restraint_Helmet_Use,Casualty_Count
+2001,Brisbane,Fatality,0 to 16,Female,Vehicle Occupant,Restrained,1
+2001,Brisbane,Fatality,17 to 24,Female,Vehicle Occupant,Restrained,1
+2001,Brisbane,Fatality,25 to 29,Female,Vehicle Occupant,Restraint Use Not determined,1
+2001,Brisbane,Fatality,30 to 39,Female,Vehicle Occupant,Restraint Use Not determined,1
+2001,Brisbane,Fatality,30 to 39,Female,Vehicle Occupant,Unrestrained,1
+2001,Brisbane,Fatality,40 to 49,Female,Vehicle Occupant,Restrained,1
+2001,Brisbane,Fatality,50 to 59,Female,Vehicle Occupant,Restraint Use Not determined,1
+2001,Brisbane,Fatality,60 to 74,Female,Vehicle Occupant,Restrained,2
+2001,Brisbane,Fatality,75 and over,Female,Vehicle Occupant,Restrained,1
+2001,Brisbane,Fatality,17 to 24,Male,Motorcyclist,Helmet Worn,2
+2001,Brisbane,Fatality,17 to 24,Male,Vehicle Occupant,Restrained,4
+2001,Brisbane,Fatality,17 to 24,Male,Vehicle Occupant,Restraint Use Not determined,5
+2001,Brisbane,Fatality,25 to 29,Male,Bicyclist,Helmet Worn,1
+2001,Brisbane,Fatality,25 to 29,Male,Motorcyclist,Helmet Worn,1
+2001,Brisbane,Fatality,25 to 29,Male,Vehicle Occupant,Restrained,1
+2001,Brisbane,Fatality,25 to 29,Male,Vehicle Occupant,Restraint Use Not determined,4
+2001,Brisbane,Fatality,30 to 39,Male,Motorcyclist,Helmet Worn,1
+2001,Brisbane,Fatality,30 to 39,Male,Vehicle Occupant,Restrained,2
+2001,Brisbane,Fatality,30 to 39,Male,Vehicle Occupant,Restraint Use Not determined,1
+2001,Brisbane,Fatality,30 to 39,Male,Vehicle Occupant,Unrestrained,1
+2001,Brisbane,Fatality,40 to 49,Male,Bicyclist,Helmet Worn,1
+2001,Brisbane,Fatality,40 to 49,Male,Motorcyclist,Helmet Worn,1
+2001,Brisbane,Fatality,50 to 59,Male,Vehicle Occupant,Unrestrained,1
+2001,Brisbane,Fatality,60 to 74,Male,Motorcyclist,Helmet Worn,1
+2001,Brisbane,Fatality,60 to 74,Male,Vehicle Occupant,Restrained,1
+2001,Brisbane,Hospitalised,0 to 16,Female,Bicyclist,Helmet Not Worn,1
+2001,Brisbane,Hospitalised,0 to 16,Female,Bicyclist,Helmet Worn,1
+2001,Brisbane,Hospitalised,0 to 16,Female,Vehicle Occupant,Restrained,16
+2001,Brisbane,Hospitalised,0 to 16,Female,Vehicle Occupant,Restraint Use Not determined,1
+2001,Brisbane,Hospitalised,17 to 24,Female,Motorcyclist,Helmet Worn,5
+2001,Brisbane,Hospitalised,17 to 24,Female,Vehicle Occupant,Restrained,107
+2001,Brisbane,Hospitalised,17 to 24,Female,Vehicle Occupant,Restraint Use Not determined,18
+2001,Brisbane,Hospitalised,17 to 24,Female,Vehicle Occupant,Unrestrained,7
+2001,Brisbane,Hospitalised,25 to 29,Female,Motorcyclist,Helmet Worn,2
+2001,Brisbane,Hospitalised,25 to 29,Female,Vehicle Occupant,Restrained,48
+2001,Brisbane,Hospitalised,25 to 29,Female,Vehicle Occupant,Restraint Use Not determined,12
+2001,Brisbane,Hospitalised,25 to 29,Female,Vehicle Occupant,Unrestrained,4
+2001,Brisbane,Hospitalised,30 to 39,Female,Bicyclist,Helmet Use Not determined,2
+2001,Brisbane,Hospitalised,30 to 39,Female,Motorcyclist,Helmet Use Not determined,1
+2001,Brisbane,Hospitalised,30 to 39,Female,Motorcyclist,Helmet Worn,4
+2001,Brisbane,Hospitalised,30 to 39,Female,Vehicle Occupant,Restrained,63
+2001,Brisbane,Hospitalised,30 to 39,Female,Vehicle Occupant,Restraint Use Not determined,10
+2001,Brisbane,Hospitalised,40 to 49,Female,Bicyclist,Helmet Worn,2
+2001,Brisbane,Hospitalised,40 to 49,Female,Motorcyclist,Helmet Worn,6
+2001,Brisbane,Hospitalised,40 to 49,Female,Vehicle Occupant,Not applicable,1
+2001,Brisbane,Hospitalised,40 to 49,Female,Vehicle Occupant,Restrained,61
+2001,Brisbane,Hospitalised,40 to 49,Female,Vehicle Occupant,Restraint Use Not determined,6
+2001,Brisbane,Hospitalised,40 to 49,Female,Vehicle Occupant,Unrestrained,4
+2001,Brisbane,Hospitalised,50 to 59,Female,Motorcyclist,Helmet Worn,2
+2001,Brisbane,Hospitalised,50 to 59,Female,Vehicle Occupant,Restrained,39
+2001,Brisbane,Hospitalised,50 to 59,Female,Vehicle Occupant,Restraint Use Not determined,6
+2001,Brisbane,Hospitalised,50 to 59,Female,Vehicle Occupant,Unrestrained,1
+2001,Brisbane,Hospitalised,60 to 74,Female,Vehicle Occupant,Restrained,31
+2001,Brisbane,Hospitalised,60 to 74,Female,Vehicle Occupant,Restraint Use Not determined,1
+2001,Brisbane,Hospitalised,60 to 74,Female,Vehicle Occupant,Unrestrained,4
+2001,Brisbane,Hospitalised,75 and over,Female,Vehicle Occupant,Restrained,22
+2001,Brisbane,Hospitalised,75 and over,Female,Vehicle Occupant,Restraint Use Not determined,4
+2001,Brisbane,Hospitalised,75 and over,Female,Vehicle Occupant,Unrestrained,1
+2001,Brisbane,Hospitalised,Unknown,Female,Vehicle Occupant,Restrained,1
+2001,Brisbane,Hospitalised,0 to 16,Male,Bicyclist,Helmet Not Worn,3
+2001,Brisbane,Hospitalised,0 to 16,Male,Bicyclist,Helmet Use Not determined,1
+2001,Brisbane,Hospitalised,0 to 16,Male,Bicyclist,Helmet Worn,11
+2001,Brisbane,Hospitalised,0 to 16,Male,Motorcyclist,Helmet Worn,2
+2001,Brisbane,Hospitalised,0 to 16,Male,Vehicle Occupant,Restrained,20
+2001,Brisbane,Hospitalised,0 to 16,Male,Vehicle Occupant,Restraint Use Not determined,6
+2001,Brisbane,Hospitalised,0 to 16,Male,Vehicle Occupant,Unrestrained,1
+2001,Brisbane,Hospitalised,17 to 24,Male,Bicyclist,Helmet Not Worn,2
+2001,Brisbane,Hospitalised,17 to 24,Male,Bicyclist,Helmet Worn,14
+2001,Brisbane,Hospitalised,17 to 24,Male,Motorcyclist,Helmet Not Worn,4
+2001,Brisbane,Hospitalised,17 to 24,Male,Motorcyclist,Helmet Worn,39
+2001,Brisbane,Hospitalised,17 to 24,Male,Vehicle Occupant,Restrained,111
+2001,Brisbane,Hospitalised,17 to 24,Male,Vehicle Occupant,Restraint Use Not determined,40
+2001,Brisbane,Hospitalised,17 to 24,Male,Vehicle Occupant,Unrestrained,12
+2001,Brisbane,Hospitalised,25 to 29,Male,Bicyclist,Helmet Use Not determined,2
+2001,Brisbane,Hospitalised,25 to 29,Male,Bicyclist,Helmet Worn,10
+2001,Brisbane,Hospitalised,25 to 29,Male,Motorcyclist,Helmet Not Worn,1
+2001,Brisbane,Hospitalised,25 to 29,Male,Motorcyclist,Helmet Use Not determined,1
+2001,Brisbane,Hospitalised,25 to 29,Male,Motorcyclist,Helmet Worn,25
+2001,Brisbane,Hospitalised,25 to 29,Male,Vehicle Occupant,Not applicable,1
+2001,Brisbane,Hospitalised,25 to 29,Male,Vehicle Occupant,Restrained,36
+2001,Brisbane,Hospitalised,25 to 29,Male,Vehicle Occupant,Restraint Use Not determined,13
+2001,Brisbane,Hospitalised,25 to 29,Male,Vehicle Occupant,Unrestrained,4
+2001,Brisbane,Hospitalised,30 to 39,Male,Bicyclist,Helmet Not Worn,2
+2001,Brisbane,Hospitalised,30 to 39,Male,Bicyclist,Helmet Worn,18
+2001,Brisbane,Hospitalised,30 to 39,Male,Motorcyclist,Helmet Use Not determined,2
+2001,Brisbane,Hospitalised,30 to 39,Male,Motorcyclist,Helmet Worn,39
+2001,Brisbane,Hospitalised,30 to 39,Male,Vehicle Occupant,Restrained,60
+2001,Brisbane,Hospitalised,30 to 39,Male,Vehicle Occupant,Restraint Use Not determined,20
+2001,Brisbane,Hospitalised,30 to 39,Male,Vehicle Occupant,Unrestrained,5
+2001,Brisbane,Hospitalised,40 to 49,Male,Bicyclist,Helmet Worn,7
+2001,Brisbane,Hospitalised,40 to 49,Male,Motorcyclist,Helmet Use Not determined,1
+2001,Brisbane,Hospitalised,40 to 49,Male,Motorcyclist,Helmet Worn,24
+2001,Brisbane,Hospitalised,40 to 49,Male,Vehicle Occupant,Not applicable,1
+2001,Brisbane,Hospitalised,40 to 49,Male,Vehicle Occupant,Restrained,43
+2001,Brisbane,Hospitalised,40 to 49,Male,Vehicle Occupant,Restraint Use Not determined,14
+2001,Brisbane,Hospitalised,40 to 49,Male,Vehicle Occupant,Unrestrained,3
+2001,Brisbane,Hospitalised,50 to 59,Male,Bicyclist,Helmet Worn,4
+2001,Brisbane,Hospitalised,50 to 59,Male,Motorcyclist,Helmet Use Not determined,1
+2001,Brisbane,Hospitalised,50 to 59,Male,Motorcyclist,Helmet Worn,7
+2001,Brisbane,Hospitalised,50 to 59,Male,Vehicle Occupant,Restrained,30
+2001,Brisbane,Hospitalised,50 to 59,Male,Vehicle Occupant,Restraint Use Not determined,7
+2001,Brisbane,Hospitalised,50 to 59,Male,Vehicle Occupant,Unrestrained,2
+2001,Brisbane,Hospitalised,60 to 74,Male,Motorcyclist,Helmet Use Not determined,1
+2001,Brisbane,Hospitalised,60 to 74,Male,Vehicle Occupant,Restrained,21
+2001,Brisbane,Hospitalised,60 to 74,Male,Vehicle Occupant,Restraint Use Not determined,8
+2001,Brisbane,Hospitalised,60 to 74,Male,Vehicle Occupant,Unrestrained,3
+2001,Brisbane,Hospitalised,75 and over,Male,Vehicle Occupant,Restrained,13
+2001,Brisbane,Hospitalised,75 and over,Male,Vehicle Occupant,Restraint Use Not determined,1
+2001,Brisbane,Hospitalised,75 and over,Male,Vehicle Occupant,Unrestrained,1
+2001,Brisbane,Hospitalised,Unknown,Male,Motorcyclist,Helmet Not Worn,1
+2001,Brisbane,Hospitalised,Unknown,Male,Vehicle Occupant,Restraint Use Not determined,1
+2001,Brisbane,Hospitalised,Unknown,Unknown,Vehicle Occupant,Restraint Use Not determined,1
+2001,Brisbane,Medically treated,0 to 16,Female,Bicyclist,Helmet Use Not determined,1
+2001,Brisbane,Medically treated,0 to 16,Female,Bicyclist,Helmet Worn,2
+2001,Brisbane,Medically treated,0 to 16,Female,Vehicle Occupant,Restrained,57
+2001,Brisbane,Medically treated,0 to 16,Female,Vehicle Occupant,Restraint Use Not determined,5
+2001,Brisbane,Medically treated,0 to 16,Female,Vehicle Occupant,Unrestrained,1
+2001,Brisbane,Medically treated,17 to 24,Female,Bicyclist,Helmet Worn,9
+2001,Brisbane,Medically treated,17 to 24,Female,Motorcyclist,Helmet Worn,4
+2001,Brisbane,Medically treated,17 to 24,Female,Vehicle Occupant,Restrained,290
+2001,Brisbane,Medically treated,17 to 24,Female,Vehicle Occupant,Restraint Use Not determined,34
+2001,Brisbane,Medically treated,17 to 24,Female,Vehicle Occupant,Unrestrained,6
+2001,Brisbane,Medically treated,25 to 29,Female,Bicyclist,Helmet Worn,3
+2001,Brisbane,Medically treated,25 to 29,Female,Motorcyclist,Helmet Worn,2
+2001,Brisbane,Medically treated,25 to 29,Female,Vehicle Occupant,Restrained,144
+2001,Brisbane,Medically treated,25 to 29,Female,Vehicle Occupant,Restraint Use Not determined,14
+2001,Brisbane,Medically treated,25 to 29,Female,Vehicle Occupant,Unrestrained,3
+2001,Brisbane,Medically treated,30 to 39,Female,Bicyclist,Helmet Use Not determined,1
+2001,Brisbane,Medically treated,30 to 39,Female,Bicyclist,Helmet Worn,4
+2001,Brisbane,Medically treated,30 to 39,Female,Motorcyclist,Helmet Worn,6
+2001,Brisbane,Medically treated,30 to 39,Female,Vehicle Occupant,Restrained,240
+2001,Brisbane,Medically treated,30 to 39,Female,Vehicle Occupant,Restraint Use Not determined,23
+2001,Brisbane,Medically treated,30 to 39,Female,Vehicle Occupant,Unrestrained,9
+2001,Brisbane,Medically treated,40 to 49,Female,Bicyclist,Helmet Worn,3
+2001,Brisbane,Medically treated,40 to 49,Female,Motorcyclist,Helmet Worn,3
+2001,Brisbane,Medically treated,40 to 49,Female,Vehicle Occupant,Restrained,168
+2001,Brisbane,Medically treated,40 to 49,Female,Vehicle Occupant,Restraint Use Not determined,15
+2001,Brisbane,Medically treated,40 to 49,Female,Vehicle Occupant,Unrestrained,3
+2001,Brisbane,Medically treated,50 to 59,Female,Bicyclist,Helmet Worn,1
+2001,Brisbane,Medically treated,50 to 59,Female,Motorcyclist,Helmet Worn,1
+2001,Brisbane,Medically treated,50 to 59,Female,Vehicle Occupant,Restrained,122
+2001,Brisbane,Medically treated,50 to 59,Female,Vehicle Occupant,Restraint Use Not determined,12
+2001,Brisbane,Medically treated,50 to 59,Female,Vehicle Occupant,Unrestrained,4
+2001,Brisbane,Medically treated,60 to 74,Female,Bicyclist,Helmet Worn,1
+2001,Brisbane,Medically treated,60 to 74,Female,Vehicle Occupant,Restrained,56
+2001,Brisbane,Medically treated,60 to 74,Female,Vehicle Occupant,Restraint Use Not determined,7
+2001,Brisbane,Medically treated,60 to 74,Female,Vehicle Occupant,Unrestrained,4
+2001,Brisbane,Medically treated,75 and over,Female,Vehicle Occupant,Restrained,29
+2001,Brisbane,Medically treated,75 and over,Female,Vehicle Occupant,Restraint Use Not determined,1
+2001,Brisbane,Medically treated,75 and over,Female,Vehicle Occupant,Unrestrained,2
+2001,Brisbane,Medically treated,Unknown,Female,Motorcyclist,Helmet Use Not determined,1
+2001,Brisbane,Medically treated,Unknown,Female,Vehicle Occupant,Restrained,4
+2001,Brisbane,Medically treated,Unknown,Female,Vehicle Occupant,Restraint Use Not determined,3
+2001,Brisbane,Medically treated,0 to 16,Male,Bicyclist,Helmet Not Worn,2
+2001,Brisbane,Medically treated,0 to 16,Male,Bicyclist,Helmet Use Not determined,2
+2001,Brisbane,Medically treated,0 to 16,Male,Bicyclist,Helmet Worn,10
+2001,Brisbane,Medically treated,0 to 16,Male,Motorcyclist,Helmet Worn,1
+2001,Brisbane,Medically treated,0 to 16,Male,Vehicle Occupant,Restrained,38
+2001,Brisbane,Medically treated,0 to 16,Male,Vehicle Occupant,Restraint Use Not determined,7
+2001,Brisbane,Medically treated,0 to 16,Male,Vehicle Occupant,Unrestrained,2
+2001,Brisbane,Medically treated,17 to 24,Male,Bicyclist,Helmet Use Not determined,4
+2001,Brisbane,Medically treated,17 to 24,Male,Bicyclist,Helmet Worn,18
+2001,Brisbane,Medically treated,17 to 24,Male,Motorcyclist,Helmet Not Worn,1
+2001,Brisbane,Medically treated,17 to 24,Male,Motorcyclist,Helmet Use Not determined,1
+2001,Brisbane,Medically treated,17 to 24,Male,Motorcyclist,Helmet Worn,29
+2001,Brisbane,Medically treated,17 to 24,Male,Vehicle Occupant,Restrained,208
+2001,Brisbane,Medically treated,17 to 24,Male,Vehicle Occupant,Restraint Use Not determined,34
+2001,Brisbane,Medically treated,17 to 24,Male,Vehicle Occupant,Unrestrained,4
+2001,Brisbane,Medically treated,25 to 29,Male,Bicyclist,Helmet Worn,13
+2001,Brisbane,Medically treated,25 to 29,Male,Motorcyclist,Helmet Not Worn,1
+2001,Brisbane,Medically treated,25 to 29,Male,Motorcyclist,Helmet Use Not determined,2
+2001,Brisbane,Medically treated,25 to 29,Male,Motorcyclist,Helmet Worn,25
+2001,Brisbane,Medically treated,25 to 29,Male,Vehicle Occupant,Not applicable,1
+2001,Brisbane,Medically treated,25 to 29,Male,Vehicle Occupant,Restrained,95
+2001,Brisbane,Medically treated,25 to 29,Male,Vehicle Occupant,Restraint Use Not determined,23
+2001,Brisbane,Medically treated,25 to 29,Male,Vehicle Occupant,Unrestrained,6
+2001,Brisbane,Medically treated,30 to 39,Male,Bicyclist,Helmet Worn,28
+2001,Brisbane,Medically treated,30 to 39,Male,Motorcyclist,Helmet Not Worn,1
+2001,Brisbane,Medically treated,30 to 39,Male,Motorcyclist,Helmet Use Not determined,3
+2001,Brisbane,Medically treated,30 to 39,Male,Motorcyclist,Helmet Worn,48
+2001,Brisbane,Medically treated,30 to 39,Male,Vehicle Occupant,Not applicable,2
+2001,Brisbane,Medically treated,30 to 39,Male,Vehicle Occupant,Restrained,156
+2001,Brisbane,Medically treated,30 to 39,Male,Vehicle Occupant,Restraint Use Not determined,22
+2001,Brisbane,Medically treated,30 to 39,Male,Vehicle Occupant,Unrestrained,6
+2001,Brisbane,Medically treated,40 to 49,Male,Bicyclist,Helmet Worn,8
+2001,Brisbane,Medically treated,40 to 49,Male,Motorcyclist,Helmet Use Not determined,1
+2001,Brisbane,Medically treated,40 to 49,Male,Motorcyclist,Helmet Worn,26
+2001,Brisbane,Medically treated,40 to 49,Male,Vehicle Occupant,Restrained,105
+2001,Brisbane,Medically treated,40 to 49,Male,Vehicle Occupant,Restraint Use Not determined,23
+2001,Brisbane,Medically treated,40 to 49,Male,Vehicle Occupant,Unrestrained,4
+2001,Brisbane,Medically treated,50 to 59,Male,Bicyclist,Helmet Worn,3
+2001,Brisbane,Medically treated,50 to 59,Male,Motorcyclist,Helmet Worn,10
+2001,Brisbane,Medically treated,50 to 59,Male,Vehicle Occupant,Not applicable,2
+2001,Brisbane,Medically treated,50 to 59,Male,Vehicle Occupant,Restrained,78
+2001,Brisbane,Medically treated,50 to 59,Male,Vehicle Occupant,Restraint Use Not determined,15
+2001,Brisbane,Medically treated,50 to 59,Male,Vehicle Occupant,Unrestrained,4
+2001,Brisbane,Medically treated,60 to 74,Male,Bicyclist,Helmet Worn,1
+2001,Brisbane,Medically treated,60 to 74,Male,Motorcyclist,Helmet Worn,2
+2001,Brisbane,Medically treated,60 to 74,Male,Vehicle Occupant,Restrained,52
+2001,Brisbane,Medically treated,60 to 74,Male,Vehicle Occupant,Restraint Use Not determined,7
+2001,Brisbane,Medically treated,60 to 74,Male,Vehicle Occupant,Unrestrained,4
+2001,Brisbane,Medically treated,75 and over,Male,Vehicle Occupant,Restrained,18
+2001,Brisbane,Medically treated,75 and over,Male,Vehicle Occupant,Restraint Use Not determined,3
+2001,Brisbane,Medically treated,Unknown,Male,Bicyclist,Helmet Not Worn,1
+2001,Brisbane,Medically treated,Unknown,Male,Vehicle Occupant,Restrained,2
+2001,Brisbane,Medically treated,Unknown,Male,Vehicle Occupant,Restraint Use Not determined,4
+2001,Brisbane,Medically treated,Unknown,Male,Vehicle Occupant,Unrestrained,1
+2001,Brisbane,Medically treated,Unknown,Unknown,Vehicle Occupant,Restrained,1
+2001,Brisbane,Medically treated,Unknown,Unknown,Vehicle Occupant,Restraint Use Not determined,5
+2001,Brisbane,Minor injury,0 to 16,Female,Bicyclist,Helmet Worn,1
+2001,Brisbane,Minor injury,0 to 16,Female,Vehicle Occupant,Restrained,34
+2001,Brisbane,Minor injury,0 to 16,Female,Vehicle Occupant,Restraint Use Not determined,4
+2001,Brisbane,Minor injury,0 to 16,Female,Vehicle Occupant,Unrestrained,2
+2001,Brisbane,Minor injury,17 to 24,Female,Bicyclist,Helmet Use Not determined,1
+2001,Brisbane,Minor injury,17 to 24,Female,Bicyclist,Helmet Worn,2
+2001,Brisbane,Minor injury,17 to 24,Female,Motorcyclist,Helmet Worn,2
+2001,Brisbane,Minor injury,17 to 24,Female,Vehicle Occupant,Restrained,227
+2001,Brisbane,Minor injury,17 to 24,Female,Vehicle Occupant,Restraint Use Not determined,22
+2001,Brisbane,Minor injury,17 to 24,Female,Vehicle Occupant,Unrestrained,5
+2001,Brisbane,Minor injury,25 to 29,Female,Bicyclist,Helmet Worn,1
+2001,Brisbane,Minor injury,25 to 29,Female,Motorcyclist,Helmet Worn,1
+2001,Brisbane,Minor injury,25 to 29,Female,Vehicle Occupant,Restrained,108
+2001,Brisbane,Minor injury,25 to 29,Female,Vehicle Occupant,Restraint Use Not determined,11
+2001,Brisbane,Minor injury,25 to 29,Female,Vehicle Occupant,Unrestrained,2
+2001,Brisbane,Minor injury,30 to 39,Female,Bicyclist,Helmet Use Not determined,2
+2001,Brisbane,Minor injury,30 to 39,Female,Motorcyclist,Helmet Worn,1
+2001,Brisbane,Minor injury,30 to 39,Female,Vehicle Occupant,Restrained,137
+2001,Brisbane,Minor injury,30 to 39,Female,Vehicle Occupant,Restraint Use Not determined,22
+2001,Brisbane,Minor injury,30 to 39,Female,Vehicle Occupant,Unrestrained,1
+2001,Brisbane,Minor injury,40 to 49,Female,Motorcyclist,Helmet Worn,1
+2001,Brisbane,Minor injury,40 to 49,Female,Vehicle Occupant,Not applicable,1
+2001,Brisbane,Minor injury,40 to 49,Female,Vehicle Occupant,Restrained,123
+2001,Brisbane,Minor injury,40 to 49,Female,Vehicle Occupant,Restraint Use Not determined,15
+2001,Brisbane,Minor injury,40 to 49,Female,Vehicle Occupant,Unrestrained,2
+2001,Brisbane,Minor injury,50 to 59,Female,Vehicle Occupant,Restrained,82
+2001,Brisbane,Minor injury,50 to 59,Female,Vehicle Occupant,Restraint Use Not determined,13
+2001,Brisbane,Minor injury,50 to 59,Female,Vehicle Occupant,Unrestrained,1
+2001,Brisbane,Minor injury,60 to 74,Female,Vehicle Occupant,Restrained,28
+2001,Brisbane,Minor injury,60 to 74,Female,Vehicle Occupant,Restraint Use Not determined,5
+2001,Brisbane,Minor injury,60 to 74,Female,Vehicle Occupant,Unrestrained,1
+2001,Brisbane,Minor injury,75 and over,Female,Vehicle Occupant,Restrained,9
+2001,Brisbane,Minor injury,75 and over,Female,Vehicle Occupant,Restraint Use Not determined,2
+2001,Brisbane,Minor injury,75 and over,Female,Vehicle Occupant,Unrestrained,1
+2001,Brisbane,Minor injury,Unknown,Female,Vehicle Occupant,Restrained,6
+2001,Brisbane,Minor injury,Unknown,Female,Vehicle Occupant,Restraint Use Not determined,1
+2001,Brisbane,Minor injury,0 to 16,Male,Bicyclist,Helmet Not Worn,1
+2001,Brisbane,Minor injury,0 to 16,Male,Bicyclist,Helmet Use Not determined,3
+2001,Brisbane,Minor injury,0 to 16,Male,Bicyclist,Helmet Worn,6
+2001,Brisbane,Minor injury,0 to 16,Male,Motorcyclist,Helmet Use Not determined,1
+2001,Brisbane,Minor injury,0 to 16,Male,Vehicle Occupant,Restrained,21
+2001,Brisbane,Minor injury,0 to 16,Male,Vehicle Occupant,Restraint Use Not determined,2
+2001,Brisbane,Minor injury,0 to 16,Male,Vehicle Occupant,Unrestrained,2
+2001,Brisbane,Minor injury,17 to 24,Male,Bicyclist,Helmet Not Worn,2
+2001,Brisbane,Minor injury,17 to 24,Male,Bicyclist,Helmet Use Not determined,1
+2001,Brisbane,Minor injury,17 to 24,Male,Bicyclist,Helmet Worn,6
+2001,Brisbane,Minor injury,17 to 24,Male,Motorcyclist,Helmet Not Worn,1
+2001,Brisbane,Minor injury,17 to 24,Male,Motorcyclist,Helmet Use Not determined,6
+2001,Brisbane,Minor injury,17 to 24,Male,Motorcyclist,Helmet Worn,18
+2001,Brisbane,Minor injury,17 to 24,Male,Vehicle Occupant,Not applicable,1
+2001,Brisbane,Minor injury,17 to 24,Male,Vehicle Occupant,Restrained,163
+2001,Brisbane,Minor injury,17 to 24,Male,Vehicle Occupant,Restraint Use Not determined,43
+2001,Brisbane,Minor injury,17 to 24,Male,Vehicle Occupant,Unrestrained,11
+2001,Brisbane,Minor injury,25 to 29,Male,Bicyclist,Helmet Use Not determined,1
+2001,Brisbane,Minor injury,25 to 29,Male,Bicyclist,Helmet Worn,7
+2001,Brisbane,Minor injury,25 to 29,Male,Motorcyclist,Helmet Use Not determined,4
+2001,Brisbane,Minor injury,25 to 29,Male,Motorcyclist,Helmet Worn,14
+2001,Brisbane,Minor injury,25 to 29,Male,Vehicle Occupant,Not applicable,2
+2001,Brisbane,Minor injury,25 to 29,Male,Vehicle Occupant,Restrained,79
+2001,Brisbane,Minor injury,25 to 29,Male,Vehicle Occupant,Restraint Use Not determined,14
+2001,Brisbane,Minor injury,25 to 29,Male,Vehicle Occupant,Unrestrained,1
+2001,Brisbane,Minor injury,30 to 39,Male,Bicyclist,Helmet Use Not determined,3
+2001,Brisbane,Minor injury,30 to 39,Male,Bicyclist,Helmet Worn,7
+2001,Brisbane,Minor injury,30 to 39,Male,Motorcyclist,Helmet Use Not determined,4
+2001,Brisbane,Minor injury,30 to 39,Male,Motorcyclist,Helmet Worn,22
+2001,Brisbane,Minor injury,30 to 39,Male,Vehicle Occupant,Not applicable,3
+2001,Brisbane,Minor injury,30 to 39,Male,Vehicle Occupant,Restrained,136
+2001,Brisbane,Minor injury,30 to 39,Male,Vehicle Occupant,Restraint Use Not determined,22
+2001,Brisbane,Minor injury,30 to 39,Male,Vehicle Occupant,Unrestrained,7
+2001,Brisbane,Minor injury,40 to 49,Male,Bicyclist,Helmet Use Not determined,2
+2001,Brisbane,Minor injury,40 to 49,Male,Bicyclist,Helmet Worn,6
+2001,Brisbane,Minor injury,40 to 49,Male,Motorcyclist,Helmet Use Not determined,5
+2001,Brisbane,Minor injury,40 to 49,Male,Motorcyclist,Helmet Worn,13
+2001,Brisbane,Minor injury,40 to 49,Male,Vehicle Occupant,Not applicable,2
+2001,Brisbane,Minor injury,40 to 49,Male,Vehicle Occupant,Restrained,85
+2001,Brisbane,Minor injury,40 to 49,Male,Vehicle Occupant,Restraint Use Not determined,17
+2001,Brisbane,Minor injury,40 to 49,Male,Vehicle Occupant,Unrestrained,6
+2001,Brisbane,Minor injury,50 to 59,Male,Bicyclist,Helmet Use Not determined,2
+2001,Brisbane,Minor injury,50 to 59,Male,Bicyclist,Helmet Worn,3
+2001,Brisbane,Minor injury,50 to 59,Male,Motorcyclist,Helmet Worn,4
+2001,Brisbane,Minor injury,50 to 59,Male,Vehicle Occupant,Restrained,72
+2001,Brisbane,Minor injury,50 to 59,Male,Vehicle Occupant,Restraint Use Not determined,14
+2001,Brisbane,Minor injury,50 to 59,Male,Vehicle Occupant,Unrestrained,3
+2001,Brisbane,Minor injury,60 to 74,Male,Motorcyclist,Helmet Use Not determined,1
+2001,Brisbane,Minor injury,60 to 74,Male,Vehicle Occupant,Restrained,36
+2001,Brisbane,Minor injury,60 to 74,Male,Vehicle Occupant,Restraint Use Not determined,11
+2001,Brisbane,Minor injury,60 to 74,Male,Vehicle Occupant,Unrestrained,2
+2001,Brisbane,Minor injury,75 and over,Male,Vehicle Occupant,Not applicable,1
+2001,Brisbane,Minor injury,75 and over,Male,Vehicle Occupant,Restrained,7
+2001,Brisbane,Minor injury,75 and over,Male,Vehicle Occupant,Restraint Use Not determined,1
+2001,Brisbane,Minor injury,Unknown,Male,Bicyclist,Helmet Not Worn,1

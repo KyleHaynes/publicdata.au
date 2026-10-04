@@ -1,0 +1,29 @@
+{
+  "dataset": "abs-sa2-2021",
+  "version": "2021-06-24",
+  "as_at": "",
+  "fetched_at": "2026-10-01T10:00:00+00:00",
+  "sha256": "bc92405c872eb69dcfe7944190e822ccdf1e5713f6821522c85055922b1dc119",
+  "bytes": 97664,
+  "filename": "SA2_2021_AUST_SHP_GDA2020.zip",
+  "encoding": "zip",
+  "source": {
+    "url": "https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-3-july-2021-june-2026/access-and-downloads/digital-boundary-files/SA2_2021_AUST_SHP_GDA2020.zip",
+    "etag": "",
+    "http_last_modified": ""
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "stated": "Copyright Commonwealth of Australia administered by the ABS.",
+    "normalised": "CC-BY-4.0",
+    "title": "CC BY 4.0",
+    "url": "https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-3-july-2021-june-2026/access-and-downloads/digital-boundary-files",
+    "read_from": "https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-3-july-2021-june-2026/access-and-downloads/digital-boundary-files",
+    "read_at": "2026-10-01T10:00:00+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [
+    "fixture: the 205 areas that hold a fixture crash point, simplified to 0.01 degrees"
+  ]
+}

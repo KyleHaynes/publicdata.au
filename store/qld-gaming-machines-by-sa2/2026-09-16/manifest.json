@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-gaming-machines-by-sa2",
+  "version": "2026-09-16",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:02:19+00:00",
+  "sha256": "e5c74fadb40828ec700efbbeffc6b41a1ef5f0715279ad131c729d999b671c35",
+  "bytes": 2586851,
+  "filename": "monthly-gaming-machine-data-for-all-statistical-area-2-sa2-in-queensland.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/fe9c0843-9512-4cad-a2bc-5ec144819baf/resource/27606d56-157b-4bfe-8882-78113de9cf9b/download/monthly-gaming-machine-data-for-all-statistical-area-2-sa2-in-queensland.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "gaming-machine-data-by-statistical-area-2",
+    "package_id": "fe9c0843-9512-4cad-a2bc-5ec144819baf",
+    "resource": "27606d56-157b-4bfe-8882-78113de9cf9b",
+    "resource_name": "Gaming Machine Data by Statistical Area 2",
+    "resource_last_modified": "2026-09-16T01:25:53.680751",
+    "package_modified": "2026-09-16T01:26:07.852775",
+    "package_version": "1.0",
+    "etag": "1cb23b655901503343d179f5041e54bd",
+    "http_last_modified": "Wed, 16 Sep 2026 01:25:54 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=gaming-machine-data-by-statistical-area-2",
+    "read_at": "2026-10-03T03:02:18+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "8b247ac4136a6decb6696102a4652664b177c8aeb2f63c900113ec3953779481"
+}

@@ -1,0 +1,99 @@
+slug: qld-shark-control-gbr-catches
+title: Shark Control Program catches in the Great Barrier Reef Marine Park
+status: live
+topics:
+- nature
+order: 296
+collection: qld-shark-control-program
+collection_title: Queensland Shark Control Program catches
+search_title: Shark Control Program catches in the Great Barrier Reef Marine Park by date
+also_known_as:
+- Queensland Shark Control Program catch statistics for Great Barrier Reef Marine Park
+- Great Barrier Reef drumline catches
+keywords:
+- shark
+- drumlines
+- Great Barrier Reef
+- marine park
+- Shark Control Program
+- Queensland
+faq:
+- q: What is in each row?
+  a: Each row is one animal caught by Shark Control Program gear inside the Great Barrier Reef marine parks,
+    with the date, area, beach, marine park, species, fate and the reason for the fate.
+- q: Which period does it cover?
+  a: The publisher adds one file per financial year. This entry follows the newest, which covered July 2025
+    to April 2026 at the time of review. Earlier years are on the same portal page.
+summary: Each animal caught by Queensland shark control gear inside the Great Barrier Reef marine parks in
+  the current financial year, by date and beach.
+description: 'One row per animal caught by the Queensland Shark Control Program inside the Commonwealth Great
+  Barrier Reef Marine Park or the Great Barrier Reef Coast Marine Park. Each row gives the date of capture,
+  the area and beach, the marine park, the common and scientific names, the fate and the reason for it.
+
+
+  The publisher adds a new file for each financial year and extends the current one as the year goes on. This
+  entry follows the newest.
+
+  '
+publisher:
+  name: Department of Primary Industries
+  short: DPI
+  jurisdiction: Qld
+  url: https://www.dpi.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/qld-shark-control-program-catch-statistics-great-barrier-reef-marine-park
+  attribution: Department of Primary Industries, Queensland Government, Queensland Shark Control Program catch
+    statistics for Great Barrier Reef Marine Park, sourced {sourced}, https://www.data.qld.gov.au/dataset/qld-shark-control-program-catch-statistics-great-barrier-reef-marine-park,
+    licensed under CC BY 4.0.
+example:
+  group: common_name
+  metric: count
+  label: Animals caught
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: qld-shark-control-program-catch-statistics-great-barrier-reef-marine-park
+  url: https://www.data.qld.gov.au/dataset/qld-shark-control-program-catch-statistics-great-barrier-reef-marine-park
+  encoding: utf-8-sig
+  resource_match: Queensland Shark Control Program catch statis
+  cadence: irregular, several times a year
+partition_by: []
+row_label: Animals
+fields:
+- name: date
+  label: Date
+  source: Date
+  type: date
+  date_format: '%d/%m/%Y'
+- name: area
+  label: Area
+  source: Area
+  type: string
+- name: location
+  label: Beach
+  source: Location
+  type: string
+- name: marine_park
+  label: Marine park
+  source: Marine Park
+  type: string
+- name: common_name
+  label: Common name
+  source: Common Name
+  type: string
+- name: scientific_name
+  label: Scientific name
+  source: Scientific Name
+  type: string
+- name: fate
+  label: Fate
+  source: Fate
+  type: string
+  description: Deceased, Released Alive or Euthanised.
+- name: fate_reason
+  label: Fate reason
+  source: Fate Reason
+  type: string
+  description: The publisher's reason for the fate. Often blank.

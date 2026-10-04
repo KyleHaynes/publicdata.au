@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-translink-complaints",
+  "version": "2026-08-11",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:02:51+00:00",
+  "sha256": "d544e541ecc4c4b0e67ce08b0952692c49ee39a7e781582b24108a75a8a406aa",
+  "bytes": 622,
+  "filename": "customer-service-complaints.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/b33b4ed9-0db4-4c1b-8f85-664ca0d42a54/resource/ab02ebe6-b4bd-47b6-9ec1-78638ff05a2e/download/customer-service-complaints.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "translink-monthly-performance-data",
+    "package_id": "b33b4ed9-0db4-4c1b-8f85-664ca0d42a54",
+    "resource": "ab02ebe6-b4bd-47b6-9ec1-78638ff05a2e",
+    "resource_name": "Customer service complaints - South East Queensland",
+    "resource_last_modified": "2026-08-11T00:05:50.755802",
+    "package_modified": "2026-08-11T00:09:05.549535",
+    "package_version": "1",
+    "etag": "a0a3b08c7b2bd9fd3aa0efb0e0a2aaa8",
+    "http_last_modified": "Tue, 11 Aug 2026 00:05:52 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-3.0",
+    "title": "Creative Commons Attribution 3.0",
+    "url": "https://creativecommons.org/licenses/by/3.0/au/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=translink-monthly-performance-data",
+    "read_at": "2026-10-03T03:02:51+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "7998152c7b13a49db4eb2ca1e42e6f153d374a4b23eab6c21dff320964e37b1e"
+}

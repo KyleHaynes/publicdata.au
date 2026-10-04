@@ -1,0 +1,159 @@
+slug: sa-boat-registrations
+title: Registered recreational boats by hull, engine and postcode, South Australia
+status: live
+topics:
+- roads
+- community
+example:
+  where:
+    breakdown: Hull Type
+    category:
+      neq: Totals
+  group: category
+  metric: sum.current_registrations
+  label: Boats registered at 30 June by hull type
+sample:
+  where: {breakdown: Hull Type, category: {neq: Totals}}
+  order: [current_registrations.desc]
+  spread: none
+  label: The ten hull types with the most boats registered at 30 June, most first.
+order: 435
+search_title: South Australia boat registrations by type, engine and postcode (DIT)
+also_known_as:
+- SA Boat Registrations
+- Analysis of Registered Motor Boats South Australia
+- RBA011 boat registration statistics
+- Number of registered boats by postcode SA
+keywords:
+- boat registrations
+- recreational boats
+- motor boats
+- personal water craft
+- boats by postcode
+- Department for Infrastructure and Transport
+- South Australia
+faq:
+- q: What is in each row?
+  a: One category of one breakdown, such as aluminium in the material breakdown or 5000 in the postcode breakdown,
+    with the number of new boat registrations in the financial year and the number of boats registered at its end.
+    The breakdowns are the sheets of the publisher's workbook, from hull type and make to engine, length, fee group,
+    postcode and where the boat is used.
+- q: What are the Totals and RBA011 rows?
+  a: Each breakdown ends with the publisher's total row and a footer row naming the report and page. Both are kept
+    as published, and the footer's page marker is a null.
+- q: Why are the percentage columns missing?
+  a: The publisher's percentage columns divide each count by the total, so they are left out.
+- q: Which year does the table cover?
+  a: The newest financial year, 2025-26 at the first version, with boats registered at 30 June 2026. The publisher
+    adds a workbook each July, and each becomes a version here.
+summary: The number of new boat registrations in the newest financial year and of boats registered at its end in
+  South Australia, by hull, material, length, engine, fee group, postcode and place of use. Updated yearly.
+description: The Analysis of Registered Motor Boats workbook (RBA011) from the Department for Infrastructure and
+  Transport. Each sheet breaks the boats down one way, and each row here is one category of one sheet, with the
+  number of new boat registrations between 1 July and 30 June and the number of registrations current at 30 June.
+publisher:
+  name: Department for Infrastructure and Transport
+  short: Infrastructure and Transport
+  jurisdiction: SA
+  url: https://www.dit.sa.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.sa.gov.au/data/dataset/boat-registrations
+  attribution: Department for Infrastructure and Transport, Government of South Australia, Boat Registrations, https://data.sa.gov.au/data/dataset/boat-registrations, accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: ckan-resource
+  portal: https://data.sa.gov.au/data
+  package: boat-registrations
+  resource_match: ^Boat Registrations \d{4}-\d{4}$
+  url: https://data.sa.gov.au/data/dataset/boat-registrations
+  cadence: yearly
+wide:
+  sheets:
+  - Hull Type
+  - Hull Make
+  - Material
+  - Boat Length Group
+  - ABP
+  - Engine Config
+  - Breadth
+  - Reg Fee Length Groups
+  - Levy Fee Length Groups
+  - Engine Type
+  - Engine Fuel
+  - Engine Make
+  - Horse Power
+  - Engine Capacity
+  - Sec Engine Fuel
+  - Sec Horse Power
+  - Sec Engine Capacity
+  - Post Code
+  - Location Used
+  header_row: 7
+  header_rows: 1
+  row_headers: 1
+partition_by:
+- breakdown
+row_label: Categories
+fields:
+- name: breakdown
+  label: Breakdown
+  source: (sheet)
+  type: string
+  description: The sheet of the publisher's workbook, such as Hull Type or Post Code.
+- name: category
+  label: Category
+  source: (row header 1)
+  type: string
+- name: new_registrations
+  label: New registrations
+  source: '(cell: New Boat Reg)'
+  type: integer
+  null_values:
+  - Page:1
+  - Page:2
+  - Page:3
+  - Page:4
+  - Page:5
+  - Page:6
+  - Page:7
+  - Page:8
+  - Page:9
+  - Page:10
+  - Page:11
+  - Page:12
+  - Page:13
+  - Page:14
+  - Page:15
+  - Page:16
+  - Page:17
+  - Page:18
+  - Page:19
+- name: current_registrations
+  label: Boats registered
+  source: '(cell: Boats Currently Reg)'
+  type: integer
+  null_values:
+  - Page:1
+  - Page:2
+  - Page:3
+  - Page:4
+  - Page:5
+  - Page:6
+  - Page:7
+  - Page:8
+  - Page:9
+  - Page:10
+  - Page:11
+  - Page:12
+  - Page:13
+  - Page:14
+  - Page:15
+  - Page:16
+  - Page:17
+  - Page:18
+  - Page:19
+omit:
+  '% New Boat Reg': The share of new registrations, worked out from the counts.
+  '% Boats Currently Reg': The share of current registrations, worked out from the counts.

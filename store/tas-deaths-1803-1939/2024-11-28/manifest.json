@@ -1,0 +1,34 @@
+{
+  "dataset": "tas-deaths-1803-1939",
+  "version": "2024-11-28",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:14:48+00:00",
+  "sha256": "fa067a1367ec8dcf2c29773cc56fed5185a518e53921257d4790a6a92321fcc6",
+  "bytes": 125639192,
+  "filename": "deaths.xml",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://data.gov.au/data/dataset/45d78601-0034-4da3-9b69-d277d880ab21/resource/f4825fdb-17a5-47ab-bb4e-6b9b21bfe6b5/download/deaths.xml",
+    "portal": "https://data.gov.au/data",
+    "package": "tasmanian-deaths-1803-1939",
+    "package_id": "45d78601-0034-4da3-9b69-d277d880ab21",
+    "resource": "f4825fdb-17a5-47ab-bb4e-6b9b21bfe6b5",
+    "resource_name": "Tasmanian Deaths - XML",
+    "resource_last_modified": "2024-11-27T00:00:00",
+    "package_modified": "2024-11-27T14:20:27.098892",
+    "package_version": null,
+    "etag": "1732717205.403-125639192-3718910099",
+    "http_last_modified": "Wed, 27 Nov 2024 14:20:05 GMT"
+  },
+  "licence": {
+    "id": "cc-by-4.0",
+    "title": "Creative Commons Attribution 4.0 International",
+    "url": "http://creativecommons.org/licenses/by/4.0",
+    "read_from": "https://data.gov.au/data/api/3/action/package_show?id=tasmanian-deaths-1803-1939",
+    "read_at": "2026-10-03T03:14:45+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "1932714f03dc39b999c8d5bd4f1be894222d5886f0835b755fdc793942b62935"
+}

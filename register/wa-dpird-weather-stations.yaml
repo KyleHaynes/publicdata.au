@@ -1,0 +1,127 @@
+slug: wa-dpird-weather-stations
+title: Automatic weather stations, DPIRD network, Western Australia
+status: live
+topics:
+- nature
+example:
+  group: owner
+  metric: count
+  label: Stations
+chart:
+  split: none
+  metric: count
+  label: Listed stations started
+order: 476
+temporal_start: '1989-04-26'
+search_title: WA weather station locations, DPIRD automatic weather station network (DPIRD)
+also_known_as:
+- DPIRD Weather Stations and Radar (DPIRD-075)
+- DPIRD weather station list
+- Agriculture WA weather stations
+- WA automatic weather stations
+keywords:
+- weather stations
+- automatic weather stations
+- rainfall
+- agriculture
+- Western Australia
+- DPIRD
+faq:
+- q: What is in each row?
+  a: One automatic weather station in the network the Department of Primary Industries and Regional
+    Development reports on its weather website, with its station code, the organisation that owns it,
+    its name, longitude, latitude and altitude, the date it started, the kinds of observation it
+    collects, and a link to its page.
+- q: Are the weather readings included?
+  a: No. Each row describes a station. The readings are on the department's weather website and
+    through its weather API, which this site does not copy.
+- q: Are all the stations DPIRD's?
+  a: No. The network includes stations owned by other agencies and companies, named in the owner
+    column. For five stations the owner column holds the publisher's caution not to use their
+    observations, and those rows are kept as published.
+- q: Where is the publisher's file?
+  a: The portal's file downloads need a sign-in, so this site reads every feature of the publisher's
+    public map service layer in pages, in WGS84, and keeps them as one GeoJSON file, which is the source
+    file beside every version.
+summary: The 246 automatic weather stations in the network the Department of Primary Industries and
+  Regional Development reports on, one row per station, with owner, coordinates, altitude, start date
+  and the observations it collects.
+description: The stations of the automatic weather station network reported on the Department of
+  Primary Industries and Regional Development's weather website, most of them DPIRD's own, read from
+  the DPIRD-075 layer of the Western Australian Government's public map service. Each row carries the
+  station code, owner, station name, longitude and latitude, altitude in metres, the date the station
+  started, the list of observation types it collects and a link to its page on the weather website.
+publisher:
+  name: Department of Primary Industries and Regional Development, Western Australia
+  short: DPIRD
+  jurisdiction: WA
+  url: https://www.dpird.wa.gov.au/
+licence:
+  id: CC-BY-4.0
+  portal_id: cc-by
+  reviewed: '2026-10-01'
+  evidence: https://catalogue.data.wa.gov.au/dataset/dpird-weather-stations
+  attribution: Department of Primary Industries and Regional Development, Government of Western
+    Australia, DPIRD Weather Stations and Radar (DPIRD-075), https://catalogue.data.wa.gov.au/dataset/dpird-weather-stations,
+    accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: arcgis-feature
+  portal: https://catalogue.data.wa.gov.au
+  package: dpird-weather-stations
+  url: https://public-services.slip.wa.gov.au/public/rest/services/SLIP_Public_Services/Environment/MapServer/60
+  cadence: as stations open and close
+key:
+- station_code
+partition_by:
+- owner
+geometry:
+  lon: longitude
+  lat: latitude
+  crs: EPSG:7844
+  crs_note: Longitude and latitude in decimal degrees from the publisher's own attribute columns. The
+    layer is held in GDA2020, which differs from WGS84 by under 2 metres.
+row_label: Stations
+fields:
+- name: station_code
+  label: Station code
+  source: station_code
+  type: string
+- name: owner
+  label: Owner
+  source: owner
+  type: string
+- name: station_name
+  label: Station name
+  source: station_name
+  type: string
+- name: longitude
+  label: Longitude
+  source: longitude
+  type: number
+- name: latitude
+  label: Latitude
+  source: latitude
+  type: number
+- name: altitude
+  label: Altitude (m)
+  source: altitude
+  type: number
+- name: start_date
+  label: Start date
+  source: start_date
+  type: datetime
+  date_format: epoch_ms
+  description: UTC, from the layer's date field.
+- name: data_types_collected
+  label: Observations collected
+  source: data_types_collected
+  type: string
+  description: The publisher's codes for each kind of observation, separated by commas.
+- name: link
+  label: Station page
+  source: link
+  type: string
+omit:
+  objectid: The layer's internal row number, which is not a publisher identifier.
+  (longitude): The feature's point as the service returns it, which repeats the publisher's own longitude column.
+  (latitude): The feature's point as the service returns it, which repeats the publisher's own latitude column.

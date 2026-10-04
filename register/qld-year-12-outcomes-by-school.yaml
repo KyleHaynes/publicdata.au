@@ -1,0 +1,21 @@
+slug: qld-year-12-outcomes-by-school
+title: Year 12 outcomes by school, Queensland
+status: backlog
+topics:
+- education
+order: 34
+summary: Year 12 certification and subject results published as one web page per school per year, with
+  no bulk download. We will ask the publisher for a file.
+publisher:
+  name: Queensland Curriculum and Assessment Authority
+  short: QCAA
+  jurisdiction: Qld
+  url: https://www.qcaa.qld.edu.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-09-25'
+  evidence: https://www.qcaa.qld.edu.au/copyright
+source:
+  adapter: none
+  url: https://www.qcaa.qld.edu.au/about/publications/statistics
+planned: Build from a bulk file when the publisher supplies one.

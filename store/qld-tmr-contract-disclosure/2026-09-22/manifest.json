@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-tmr-contract-disclosure",
+  "version": "2026-09-22",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:00:02+00:00",
+  "sha256": "3f7c5531d767ac6e840bc537b8b979017dfb5c2a0ee5a584803c7e390bea4fe5",
+  "bytes": 145787,
+  "filename": "20260908-transport-and-main-roads_contract-disclosure-report-fy26-27.csv",
+  "encoding": "cp1252",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/21a0f174-2f9e-4b01-a73a-7569eefbb0c8/resource/e870926d-672e-4bad-b877-db75140c97ae/download/20260908-transport-and-main-roads_contract-disclosure-report-fy26-27.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "tmr-contract-disclosure",
+    "package_id": "21a0f174-2f9e-4b01-a73a-7569eefbb0c8",
+    "resource": "e870926d-672e-4bad-b877-db75140c97ae",
+    "resource_name": "Contract Disclosure report 2026-2027",
+    "resource_last_modified": "2026-09-21T23:26:36.813519",
+    "package_modified": "2026-09-21T23:26:00.588309",
+    "package_version": "July 2026",
+    "etag": "95da6280831714b2f0176e6d2e109b46",
+    "http_last_modified": "Mon, 21 Sep 2026 23:25:54 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=tmr-contract-disclosure",
+    "read_at": "2026-10-03T03:00:01+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "09a570e6173709934bde79e4cc71fc0e83b7a538c91426f27074e936d17623e5"
+}

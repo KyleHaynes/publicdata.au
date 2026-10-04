@@ -1,0 +1,105 @@
+slug: act-vehicles-registered
+title: Vehicles registered by body type and fuel, ACT
+status: live
+topics:
+- roads
+- economy
+example:
+  where:
+    date: newest
+    vehicle_body_type: Light Vehicle
+  group: motive_power
+  metric: sum.vehicles
+  label: Vehicles
+chart:
+  where:
+    motive_power: Electric
+    vehicle_body_type: Light Vehicle
+  split: none
+  metric: avg.vehicles
+  label: Electric light vehicles registered
+sample:
+  where: {date: newest}
+  order: [vehicles.desc]
+  spread: none
+  label: The ten largest counts on the newest date, largest first.
+order: 459
+collection: act-vehicles-licences
+collection_title: Vehicle registrations and driver licence transfers in the ACT
+collection_search_title: ACT vehicle registration and driver licence data
+collection_description: |
+  Access Canberra publishes monthly counts of the vehicles registered in the ACT and of the driver licences that move between the ACT and other places.
+
+  The collection holds three tables. Vehicles registered gives the number of registered vehicles on the first day of each month by body type and motive power, which tracks the uptake of electric and other zero emission vehicles. The two licence tables count ACT driver licences transferred to another state and licences from other states and overseas transferred to the ACT, by month.
+temporal_start: '2015-07-01'
+search_title: ACT registered vehicles by fuel type, electric vehicles by month (Access Canberra)
+also_known_as:
+- Total vehicles registered in the ACT
+- Canberra electric vehicle registrations
+- ACT vehicle fleet by motive power
+- ACT zero emission vehicle uptake
+keywords:
+- vehicle registrations
+- electric vehicles
+- EV uptake
+- registered vehicles
+- motive power
+- Canberra
+- ACT
+faq:
+- q: What is in each row?
+  a: One vehicle body type and motive power on the first day of one month, with the number of vehicles
+    registered in the ACT. Motive power is the fuel source, such as petrol, diesel, electric or hybrid.
+- q: Why do the body types change over time?
+  a: The publisher reclassified heavy and light vehicles with no motive power as Trailers in May 2023,
+    and split Trailers into Heavy Trailer and Light Trailer in May 2024. It corrected and re-uploaded the
+    whole series on 22 July 2025.
+- q: Is it the number of new registrations?
+  a: No. It is the total on register at the start of each month, so the change from one month to the
+    next is the net change in the fleet.
+summary: The number of vehicles registered in the ACT on the first day of each month since July 2015, by
+  body type and motive power, one row per body type, fuel and month.
+description: Monthly totals of the vehicles registered in the ACT as at the first day of each month, from
+  July 2015, as Access Canberra counts them. Each row carries the date, the vehicle body type (light
+  vehicle, heavy vehicle, motorcycle or trailer), the motive power and the count.
+publisher:
+  name: Access Canberra, City and Environment Directorate
+  short: Access Canberra
+  jurisdiction: ACT
+  url: https://www.accesscanberra.act.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.act.gov.au/d/x4hp-vihn
+  attribution: Access Canberra, ACT Government, Total vehicles registered in the ACT,
+    https://www.data.act.gov.au/d/x4hp-vihn, accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: socrata
+  portal: https://www.data.act.gov.au
+  package: x4hp-vihn
+  url: https://www.data.act.gov.au/d/x4hp-vihn
+  cadence: monthly
+partition_by:
+- vehicle_body_type
+row_label: Counts
+fields:
+- name: date
+  label: Date
+  source: Date
+  type: date
+  date_format: '%b %d, %Y'
+  description: The first day of the month the count is taken.
+- name: vehicle_body_type
+  label: Body type
+  source: Vehicle body type
+  type: string
+- name: motive_power
+  label: Motive power
+  source: Motive power
+  type: string
+- name: vehicles
+  label: Vehicles registered
+  source: Count
+  type: integer
+note: Cells were typed and headers were made snake_case. The publisher's header is kept beside every field
+  in schema.json. Rows were left alone.

@@ -1,0 +1,189 @@
+slug: sa-camera-expiation-offences
+title: Speed and red light camera offences, South Australia
+status: live
+topics:
+- roads
+- crime
+example:
+  where: {offence_status: {neq: WITHDRAWN REISSUED}}
+  group: offence_description
+  metric: count
+  label: Camera offences by offence, counting a reissued notice once
+order: 419
+collection: sa-expiation-notices
+collection_title: Expiation notices, South Australia Police
+collection_description: Offences raised by South Australia Police for expiation, from the Expiation Notice Branch's
+  offence reports for each financial year. One table lists offences detected by fixed and mobile safety cameras and
+  another those on notices written by officers. A third lists camera detections that did not become an offence,
+  and a fourth names each mobile camera location code.
+collection_search_title: SA expiation notices and traffic fines data (South Australia Police)
+search_title: South Australia speed camera fines, every camera offence (SAPOL expiation notices)
+also_known_as:
+- SAPOL Camera Offence Report
+- SA speed camera offences
+- South Australian red light camera fines
+- Expiation notices from safety cameras
+keywords:
+- speed camera
+- red light camera
+- mobile phone camera
+- traffic fines
+- expiation notices
+- South Australia Police
+- South Australia
+faq:
+- q: What is in each row?
+  a: One offence detected by a fixed or mobile safety camera, with the incident date and time, the offence code
+    and description, the notice's revision and status, the camera's location, the vehicle, the speed and limit
+    where it was a speeding offence, and the penalty, levy, corporate fee and total.
+- q: Is each row one fine?
+  a: No. Each row is one offence. A notice may hold several offences and may be withdrawn and reissued, so one
+    Event ID can appear on several rows, each with its notice revision.
+- q: Which period does the table cover?
+  a: The financial year of the newest report, 2026-27 at the first version, which the publisher replaces as the
+    year goes on. Each new file becomes a version here, and the reports back to 2011-12 stay on the portal.
+- q: Why are the amounts text?
+  a: The publisher writes each amount with a dollar sign and a thousands separator, such as $1,002. The amounts
+    are kept as published.
+summary: Every offence detected by a fixed or mobile safety camera in South Australia in the newest financial year,
+  one row per offence with its location, vehicle, speed, status and penalty.
+description: 'The Camera Offence Report from South Australia Police''s Expiation Notice Branch. Each row is one
+  offence from a fixed or mobile camera, such as speeding, a red light or a mobile phone, with the event and
+  notice revision it belongs to, the notice and offence status and any withdrawal reason, the incident date and
+  time, the offence code and description, the issue date, the camera category and location, the police district,
+  the vehicle and the states of licence and registration, the speed and limit, and the amounts.
+
+
+  The report format changed from 2022-23. Earlier years on the portal follow the publisher''s legacy layout.'
+publisher:
+  name: South Australia Police
+  short: SAPOL
+  jurisdiction: SA
+  url: https://www.police.sa.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.sa.gov.au/data/dataset/expiation-notice-system-data
+  attribution: South Australia Police, Government of South Australia, Expiation Notice System Data,
+    https://data.sa.gov.au/data/dataset/expiation-notice-system-data, accessed {sourced}, licensed under CC BY
+    4.0.
+source:
+  adapter: ckan-resource
+  portal: https://data.sa.gov.au/data
+  package: expiation-notice-system-data
+  resource_match: ^Expiation Notices \d{4}-\d{4} Camera Offence Report\s+[Zz]ipped$
+  url: https://data.sa.gov.au/data/dataset/expiation-notice-system-data
+  cadence: monthly
+row_label: Offences
+partition_by:
+- camera_category
+fields:
+- name: event_id
+  label: Event ID
+  source: Event ID
+  type: string
+- name: notice_revision
+  label: Notice revision
+  source: Notice Revision
+  type: string
+- name: notice_type
+  label: Notice type
+  source: Notice Type Desc
+  type: string
+- name: notice_status
+  label: Notice status
+  source: Notice Status
+  type: string
+- name: offence_status
+  label: Offence status
+  source: Offence Status
+  type: string
+- name: withdrawn_reason
+  label: Withdrawn reason
+  source: Withdrawn Reason
+  type: string
+- name: incident_date
+  label: Incident date
+  source: Incident Start Date
+  type: date
+  date_format: '%d/%m/%Y'
+- name: incident_time
+  label: Incident time
+  source: Time 24 Hour - Incident Start
+  type: string
+  description: 24-hour time, as published, such as 0:05.
+- name: offence_code
+  label: Offence code
+  source: Expiation Offence Code
+  type: string
+- name: offence_description
+  label: Offence
+  source: Expiation Offence Description
+  type: string
+- name: issue_date
+  label: Issue date
+  source: Issue Date
+  type: date
+  date_format: '%d/%m/%Y'
+- name: camera_category
+  label: Camera category
+  source: Camera Category
+  type: string
+- name: location_code
+  label: Location code
+  source: Location Code
+  type: string
+  description: Kept as text to preserve leading zeros.
+- name: location_description
+  label: Location
+  source: Location Description
+  type: string
+- name: location_suburb
+  label: Suburb
+  source: Location Suburb
+  type: string
+- name: district
+  label: Police district or service area
+  source: District/Service Area
+  type: string
+- name: vehicle_description
+  label: Vehicle
+  source: Vehicle Description
+  type: string
+- name: licence_state
+  label: Licence state
+  source: Licence State
+  type: string
+- name: registration_state
+  label: Registration state
+  source: Registration State
+  type: string
+- name: vehicle_speed
+  label: Vehicle speed (km/h)
+  source: Vehicle Speed
+  type: integer
+- name: speed_limit
+  label: Speed limit (km/h)
+  source: Expiation Zone Speed Limit
+  type: integer
+- name: penalty_amount
+  label: Penalty
+  source: Offence Penalty Amount
+  type: string
+  description: The legislated penalty for the offence at the time. As published, in dollars with a dollar sign, such as $1,002.
+- name: victims_of_crime_levy
+  label: Victims of crime levy
+  source: Victim Of Crime Levy Amount
+  type: string
+  description: The levy at the time of the incident. As published, in dollars with a dollar sign, such as $1,002.
+- name: corporate_fee
+  label: Corporate fee
+  source: Corporate Fee Amount
+  type: string
+  description: The fee where the vehicle is registered to a company. As published, in dollars with a dollar sign, such as $1,002.
+- name: offence_total
+  label: Total
+  source: Offence Total
+  type: string
+  description: The penalty, levy and corporate fee together. As published, in dollars with a dollar sign, such as $1,002.

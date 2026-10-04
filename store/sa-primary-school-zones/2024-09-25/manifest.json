@@ -1,0 +1,33 @@
+{
+  "dataset": "sa-primary-school-zones",
+  "version": "2024-09-25",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:10:19+00:00",
+  "sha256": "e4d31845c3822975458ff7d13422cd5911e5352df15aacc77d1664d42449eade",
+  "bytes": 206507,
+  "filename": "primaryschoolzones2025ey.zip",
+  "encoding": "zip",
+  "source": {
+    "url": "https://data.sa.gov.au/data/dataset/4ec9b847-da5d-4ac6-82aa-5d653c17e19e/resource/3aca3689-0967-4239-8e03-4b0359fbbf95/download/primaryschoolzones2025ey.zip",
+    "portal": "https://data.sa.gov.au/data",
+    "package": "school-zones-for-south-australian-govt-primary-schools",
+    "package_id": "4ec9b847-da5d-4ac6-82aa-5d653c17e19e",
+    "resource": "3aca3689-0967-4239-8e03-4b0359fbbf95",
+    "resource_name": "PrimarySchoolZones2025EY.zip",
+    "resource_last_modified": "2024-09-25T03:13:48.811288",
+    "package_modified": "2024-09-25T03:15:11.719170",
+    "package_version": null,
+    "etag": "1727234029.078-206507-1023809763",
+    "http_last_modified": "Wed, 25 Sep 2024 03:13:49 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution",
+    "url": "http://creativecommons.org/licenses/by/4.0",
+    "read_from": "https://data.sa.gov.au/data/api/3/action/package_show?id=school-zones-for-south-australian-govt-primary-schools",
+    "read_at": "2026-10-03T03:10:19+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": []
+}

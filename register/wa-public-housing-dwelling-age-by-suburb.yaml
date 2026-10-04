@@ -1,0 +1,120 @@
+slug: wa-public-housing-dwelling-age-by-suburb
+title: Average age of public housing dwellings by suburb and bedrooms, Western Australia
+status: live
+topics:
+- housing
+example:
+  group: suburb
+  metric: avg.total_average_age
+  label: Average dwelling age (years)
+sample:
+  order: [total_average_age.desc]
+  label: The ten suburbs and towns whose public housing was oldest on average, oldest first.
+order: 475
+search_title: WA public housing dwelling age by suburb and number of bedrooms (Department of Housing WA)
+also_known_as:
+- WA Public Housing Dwelling Age by Suburb by Bedroom
+- Dwelling Suburb Age By Bedroom
+- Average age of public housing in WA suburbs
+keywords:
+- public housing
+- social housing
+- dwelling age
+- bedrooms
+- suburbs
+- Western Australia
+- Department of Housing
+faq:
+- q: What is in each row?
+  a: One Western Australian suburb or town, with the average age in years of the public housing
+    dwellings there that have no separate bedroom, one bedroom, and so on up to ten bedrooms, and the
+    average age across all of them, also given rounded to a whole year.
+- q: Why are many cells blank?
+  a: A blank cell means the suburb had no public housing dwelling with that number of bedrooms. There
+    is no column for nine bedrooms in the publisher's file.
+- q: When is it from?
+  a: The Department of Housing published the file in June 2015 and has not updated it. The ages are as
+    the department calculated them then.
+summary: The average age in years of public housing dwellings in each Western Australian suburb, by
+  number of bedrooms and overall, as the Department of Housing published it in 2015.
+description: One row per Western Australian suburb or town with public housing, from the Department of
+  Housing's 2015 file. Each row gives the average age in years of the department's dwellings there with
+  0, 1, 2, 3, 4, 5, 6, 7, 8 and 10 bedrooms, and the average age of all its dwellings in the suburb, both
+  to two decimal places and rounded to the year.
+publisher:
+  name: Department of Housing, Western Australia
+  short: Department of Housing WA
+  jurisdiction: WA
+  url: https://www.wa.gov.au/organisation/department-of-communities
+licence:
+  id: CC-BY-3.0-AU
+  portal_id: cc-by
+  reviewed: '2026-10-01'
+  evidence: https://data.gov.au/data/dataset/dwelling-suburb-age-by-bedroom
+  attribution: Department of Housing (Western Australia), Government of Western Australia, WA Public
+    Housing Dwelling Age by Suburb by Bedroom, https://data.gov.au/data/dataset/dwelling-suburb-age-by-bedroom,
+    accessed {sourced}, licensed under CC BY 3.0 AU.
+source:
+  adapter: ckan-resource
+  portal: https://data.gov.au/data
+  package: dwelling-suburb-age-by-bedroom
+  resource: 3c3a969d-9161-4397-93b4-75a04cee5c32
+  url: https://data.gov.au/data/dataset/dwelling-suburb-age-by-bedroom
+  encoding: utf-8-sig
+  cadence: no longer updated
+key:
+- suburb
+row_label: Suburbs
+fields:
+- name: suburb
+  label: Suburb
+  source: Suburb
+  type: string
+- name: bed_0
+  label: No bedroom average age (years)
+  source: 0 bed
+  type: number
+- name: bed_1
+  label: 1 bedroom average age (years)
+  source: 1 bed
+  type: number
+- name: bed_2
+  label: 2 bedrooms average age (years)
+  source: 2 bed
+  type: number
+- name: bed_3
+  label: 3 bedrooms average age (years)
+  source: 3 bed
+  type: number
+- name: bed_4
+  label: 4 bedrooms average age (years)
+  source: 4 bed
+  type: number
+- name: bed_5
+  label: 5 bedrooms average age (years)
+  source: 5 bed
+  type: number
+- name: bed_6
+  label: 6 bedrooms average age (years)
+  source: 6 bed
+  type: number
+- name: bed_7
+  label: 7 bedrooms average age (years)
+  source: 7 bed
+  type: number
+- name: bed_8
+  label: 8 bedrooms average age (years)
+  source: 8 bed
+  type: number
+- name: bed_10
+  label: 10 bedrooms average age (years)
+  source: 10 bed
+  type: number
+- name: total_average_age
+  label: Average age, all dwellings (years)
+  source: Total Average Age
+  type: number
+- name: total_average_age_rounded_to_year
+  label: Average age, rounded (years)
+  source: Total Average Age rounded to year
+  type: integer

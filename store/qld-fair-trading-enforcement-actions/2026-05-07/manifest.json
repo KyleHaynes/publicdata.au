@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-fair-trading-enforcement-actions",
+  "version": "2026-05-07",
+  "as_at": "",
+  "fetched_at": "2026-10-03T02:59:54+00:00",
+  "sha256": "eb24115eab8d0a421f9dc0ef7423808e3c2b5238c51bb97bc0a436424d56ebd7",
+  "bytes": 81242,
+  "filename": "4.-legal-and-enforcement-actions-01012026-31032026.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/a7cfbaf5-80f5-439f-8bf4-b6f5689349e5/resource/a8dc2bc6-7b65-4e82-92ab-acde95d01490/download/4.-legal-and-enforcement-actions-01012026-31032026.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "legal-and-enforcement-actions-office-of-fair-trading",
+    "package_id": "a7cfbaf5-80f5-439f-8bf4-b6f5689349e5",
+    "resource": "a8dc2bc6-7b65-4e82-92ab-acde95d01490",
+    "resource_name": "Legal and Enforcement actions - 01/01/2026 - 31/03/2026",
+    "resource_last_modified": "2026-05-07T05:53:25.805571",
+    "package_modified": "2026-05-07T05:55:38.384822",
+    "package_version": "1.0",
+    "etag": "e377e2ae1ff5e73fb672bd369e10d9c3",
+    "http_last_modified": "Thu, 07 May 2026 05:52:38 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-3.0",
+    "title": "Creative Commons Attribution 3.0",
+    "url": "https://creativecommons.org/licenses/by/3.0/au/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=legal-and-enforcement-actions-office-of-fair-trading",
+    "read_at": "2026-10-03T02:59:53+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "92ec2b8aa9d8e7d34ea1c4e033b04262e263147ee0dd4e82d0b50b248b5aed7a"
+}

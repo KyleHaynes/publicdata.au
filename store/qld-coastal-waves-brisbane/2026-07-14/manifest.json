@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-coastal-waves-brisbane",
+  "version": "2026-07-14",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:00:48+00:00",
+  "sha256": "d5089d152d019fca55ca7b027324b9f4073b7307c73c1bdc658ac5f2db609049",
+  "bytes": 467621,
+  "filename": "brisbane_2026-01-01t00_00-2026-07-01t00_00_waveverifieddata.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/0a54151e-5ef7-4257-85c7-84ba4662f03f/resource/130d3ff1-0bf6-4d18-bc57-30ee396e74be/download/brisbane_2026-01-01t00_00-2026-07-01t00_00_waveverifieddata.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "coastal-data-system-waves-brisbane",
+    "package_id": "0a54151e-5ef7-4257-85c7-84ba4662f03f",
+    "resource": "130d3ff1-0bf6-4d18-bc57-30ee396e74be",
+    "resource_name": "Wave data - 2026",
+    "resource_last_modified": "2026-07-14T03:00:03.010960",
+    "package_modified": "2026-07-14T03:00:36.979370",
+    "package_version": "1",
+    "etag": "64edd1aef9d8f2138dd95b6e5dbd72ad",
+    "http_last_modified": "Tue, 14 Jul 2026 03:00:09 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=coastal-data-system-waves-brisbane",
+    "read_at": "2026-10-03T03:00:48+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "ad4a34f57f0929f2d989025c866322f92f8045b60c53b4f653ec935b4f8cddfc"
+}

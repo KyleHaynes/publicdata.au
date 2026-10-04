@@ -1,0 +1,97 @@
+slug: vic-school-zones-primary-2027
+title: Government primary school zones for 2027, Victoria
+status: live
+topics:
+- education
+- places
+order: 353
+collection: vic-schools
+collection_title: Victorian schools and school zones
+publisher:
+  name: Department of Education
+  short: Education
+  jurisdiction: Vic
+  url: https://www.education.vic.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://discover.data.vic.gov.au/dataset/victorian-government-school-zones-2027
+  attribution: Department of Education, Victorian Government, Victorian Government School Zones 2027,
+    sourced {sourced}, https://discover.data.vic.gov.au/dataset/victorian-government-school-zones-2027,
+    licensed under CC BY 4.0.
+temporal_start: '2027-01-01'
+search_title: Victorian primary school zones map for 2027 (Department of Education)
+also_known_as:
+- Victorian Government School Zones 2027 primary
+- Melbourne primary school zones
+- Find my local primary school Victoria
+- Primary school catchment Victoria
+keywords:
+- school zones
+- primary school zone
+- school catchment
+- local school
+- government schools
+- enrolment
+- Victoria
+faq:
+- q: What does each row hold?
+  a: The neighbourhood zone of one government primary school for the 2027 school year, with the school
+    and campus name and the department's code, as a shape in the GeoParquet, GeoJSON, GeoPackage and
+    PMTiles files. A child whose permanent address is inside the zone has a right to enrol at that school.
+- q: Does every government school have a zone?
+  a: No. The zones are for designated neighbourhood schools. Specialist schools, selective entry schools,
+    English language schools and community schools have their own enrolment criteria and no zone.
+- q: Can a child enrol outside their zone?
+  a: Yes. The publisher states that a zone does not restrict a family's choice to seek a place at another
+    government school, and that a school outside the zone may take the child if it has room.
+- q: Is this the zone for this year?
+  a: It is the zone the department published in March 2026 for enrolments starting in 2027. Each year's
+    zones are a separate release, and the layer here follows the 2027 release.
+summary: The 2027 neighbourhood zone of each of about 1,270 Victorian government primary schools, one
+  shape per school, from the Department of Education.
+description: Victorian Government School Zones for 2027, primary layer. Each row is the zone of one
+  designated neighbourhood government primary school, Prep to Year 6, with the school, campus and
+  department code. The release also holds secondary zones for each year level and standalone junior,
+  senior and single sex zones, and the Year 7 layer is served as its own dataset.
+source:
+  adapter: ckan-resource
+  portal: https://discover.data.vic.gov.au
+  package: victorian-government-school-zones-2027
+  resource: 5b2a9b83-5635-48d0-85cd-e674e8912c69
+  url: https://discover.data.vic.gov.au/dataset/victorian-government-school-zones-2027
+  member: Primary_Integrated_2027.geojson
+  cadence: yearly, for the next school year
+key:
+- entity_code
+geometry:
+  kind: polygon
+  crs: EPSG:4326
+  crs_note: The publisher's GeoJSON is in WGS84 (CRS84), and the shapes are moved to GDA2020 for publication.
+  maxzoom: 10
+row_label: School zones
+fields:
+- name: school_name
+  label: School name
+  source: School_Name
+  type: string
+- name: campus_name
+  label: Campus
+  source: Campus_Name
+  type: string
+- name: entity_code
+  label: Entity code
+  source: ENTITY_CODE
+  type: integer
+  description: The department's code for the school campus.
+- name: year_level
+  label: Year level
+  source: Year_Level
+  type: string
+  description: P6, Prep to Year 6.
+- name: boundary_year
+  label: Zone year
+  source: Boundary_Year
+  type: integer
+  description: The school year the zone applies to.

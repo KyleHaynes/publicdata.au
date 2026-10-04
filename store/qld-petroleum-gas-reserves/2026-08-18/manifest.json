@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-petroleum-gas-reserves",
+  "version": "2026-08-18",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:00:57+00:00",
+  "sha256": "10873569263f83818dfaa7ce0f4043273078db5c2c771aea531237d8fc79ba5a",
+  "bytes": 246718,
+  "filename": "publication_pg_reserves_2025.xlsx",
+  "encoding": "xlsx",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/eab09d04-05a8-41c0-92bf-02255e4d7db8/resource/2d886955-87dc-4518-be29-1cd2c84b3087/download/publication_pg_reserves_2025.xlsx",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "petroleum-gas-production-and-reserve-statistics",
+    "package_id": "eab09d04-05a8-41c0-92bf-02255e4d7db8",
+    "resource": "2d886955-87dc-4518-be29-1cd2c84b3087",
+    "resource_name": "Petroleum and gas reserves statistics - 2025",
+    "resource_last_modified": "2026-08-18T02:15:58.537130",
+    "package_modified": "2026-09-04T02:42:37.473610",
+    "package_version": "1.0",
+    "etag": "31714905bf9a28a549937980892e5049",
+    "http_last_modified": "Tue, 18 Aug 2026 02:16:00 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=petroleum-gas-production-and-reserve-statistics",
+    "read_at": "2026-10-03T03:00:57+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "d9fce4150b8b852ad516a312e076b17109d1bcd286d511978c3989b92cbc9372"
+}

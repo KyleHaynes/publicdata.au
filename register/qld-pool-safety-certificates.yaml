@@ -1,0 +1,113 @@
+slug: qld-pool-safety-certificates
+title: Properties with pool safety certificates, Queensland
+status: live
+topics:
+- housing
+order: 275
+collection: qld-pool-safety-register
+collection_title: Pool safety register, Queensland
+search_title: Queensland pool safety certificate lookup (QBCC)
+also_known_as:
+- Queensland pool safety certificates register
+- QBCC pool safety certificate search
+- Pool compliance certificates Queensland
+keywords:
+- pool safety certificate
+- pool compliance
+- swimming pools
+- QBCC
+- Queensland
+faq:
+- q: What is in each row?
+  a: Each row is one property for which a pool safety certificate was lodged, with its lot and plan, street
+    address, the date the certificate was submitted, the number of pools, the local government area and whether
+    the pool is shared.
+- q: Does a row mean the certificate is still valid?
+  a: No. The row records that a certificate was submitted on the date shown. A certificate for a non-shared
+    pool lasts one year and for a shared pool two years, so an old date may have lapsed.
+summary: Queensland properties whose pools have been issued pool safety certificates, with the date each was
+  submitted.
+description: One row per property on the pool safety register with a pool safety certificate, giving the lot
+  and plan, unit and street address, suburb, postcode, the date the certificate was submitted, the number of
+  pools, the local government area and whether the pool is a shared pool. The file is current as at 1 August
+  2024.
+publisher:
+  name: Queensland Building and Construction Commission
+  short: QBCC
+  jurisdiction: Qld
+  url: https://www.qbcc.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/poolsafetyregister
+  attribution: Queensland Building and Construction Commission, Queensland Government, Pool safety register,
+    sourced {sourced}, https://www.data.qld.gov.au/dataset/poolsafetyregister, licensed under CC BY 4.0.
+example:
+  group: shared_pool_property
+  metric: count
+  label: Properties with a pool safety certificate, by whether the pool is shared
+chart:
+  where: {date_submitted: {gte: '2010-12-01'}}
+  split: shared_pool_property
+  metric: count
+  label: Properties whose listed certificate was submitted
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: poolsafetyregister
+  resource: 68b4583f-9611-46e6-8302-d28ecc43b421
+  url: https://www.data.qld.gov.au/dataset/poolsafetyregister
+  cadence: irregular
+  encoding: utf-16
+row_label: Certificates
+fields:
+- name: site_name
+  label: Lot and plan
+  source: Site Name
+  type: string
+  description: The lot and plan of the property, as the register gives it.
+- name: unit_number
+  label: Unit
+  source: Unit Number
+  type: string
+- name: street_number
+  label: Street number
+  source: Street Number
+  type: string
+- name: street_name
+  label: Street
+  source: Street Name
+  type: string
+- name: street_type
+  label: Street type
+  source: Street Type
+  type: string
+- name: suburb
+  label: Suburb
+  source: Suburb
+  type: string
+  description: As entered. Some rows are in capitals and some are not.
+- name: post_code
+  label: Postcode
+  source: Post Code
+  type: string
+  description: Kept as text. Blank on some rows.
+- name: date_submitted
+  label: Date submitted
+  source: Date Submitted
+  type: date
+  date_format: '%d/%m/%Y %H:%M:%S'
+- name: number_of_pools
+  label: Pools
+  source: Number of Pools
+  type: integer
+- name: local_government_authority_area
+  label: Council area
+  source: Local Government Authority Area  C
+  type: string
+  description: As entered. The same council can appear in capitals and in mixed case.
+- name: shared_pool_property
+  label: Shared pool
+  source: Shared Pool Property  C
+  type: string
+  description: Yes or No.

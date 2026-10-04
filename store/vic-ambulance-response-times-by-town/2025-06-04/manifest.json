@@ -1,0 +1,34 @@
+{
+  "dataset": "vic-ambulance-response-times-by-town",
+  "version": "2025-06-04",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:07:54+00:00",
+  "sha256": "730bd06a131d1b0c02135425a92613acad609f92e692f7068f3beb16e79d2c83",
+  "bytes": 2673,
+  "filename": "UCL-Response-Time-Performance-FY-2018.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.ambulance.vic.gov.au/sites/default/files/2025-05/UCL-Response-Time-Performance-FY-2018.csv",
+    "portal": "https://discover.data.vic.gov.au",
+    "package": "ambulance-victoria-ucl-response-time-performance",
+    "package_id": "41678ea1-f144-4e94-ac74-52fd9e89eaa4",
+    "resource": "3264077a-5269-4090-91a3-8dfa05639bfe",
+    "resource_name": "Ambulance Victoria UCL Response Time 2017-18",
+    "resource_last_modified": null,
+    "package_modified": "2025-06-04T00:43:41.312845",
+    "package_version": null,
+    "etag": "6822cae0-a71",
+    "http_last_modified": "Tue, 13 May 2025 04:30:24 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution 4.0 International",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://discover.data.vic.gov.au/api/3/action/package_show?id=ambulance-victoria-ucl-response-time-performance",
+    "read_at": "2026-10-03T03:07:54+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "7f01238001f06b35232b1110afe15ef810eea77dc1bffa8871646c1d7a4d9212"
+}

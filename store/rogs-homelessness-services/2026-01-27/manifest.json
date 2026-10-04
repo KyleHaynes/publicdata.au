@@ -1,0 +1,26 @@
+{
+  "dataset": "rogs-homelessness-services",
+  "version": "2026-01-27",
+  "as_at": "",
+  "fetched_at": "2026-09-30T19:39:47+00:00",
+  "sha256": "4cb38419eb586279269ee6f48b90cf3e1bc42e8926b1872b40a24526436e8df7",
+  "bytes": 1133782,
+  "filename": "rogs-2026-partg-section19-homelessness-services-dataset.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://assets.pc.gov.au/2026-01/rogs-2026-partg-section19-homelessness-services-dataset.csv",
+    "etag": "9eeee108440108f691a642f92e23870f",
+    "http_last_modified": "Tue, 27 Jan 2026 01:59:22 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "stated": "licensed under a Creative Commons Attribution 4.0 International licence",
+    "normalised": "CC-BY-4.0",
+    "title": "CC BY 4.0",
+    "url": "https://www.pc.gov.au/copyright",
+    "read_at": "2026-09-30T19:39:47+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": []
+}

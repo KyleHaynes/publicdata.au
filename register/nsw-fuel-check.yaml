@@ -1,0 +1,21 @@
+slug: nsw-fuel-check
+title: Fuel Check, NSW
+status: backlog
+topics:
+- economy
+order: 33
+summary: Fuel prices for every NSW service station, published monthly as XLSX. The licence is CC BY-SA,
+  so the files here would carry CC BY-SA as well.
+publisher:
+  name: NSW Fair Trading
+  short: Fair Trading
+  jurisdiction: NSW
+  url: https://www.fairtrading.nsw.gov.au/
+licence:
+  id: CC-BY-SA-4.0
+  reviewed: '2026-09-25'
+  evidence: https://data.nsw.gov.au/data/dataset/fuel-check
+source:
+  adapter: none
+  url: https://data.nsw.gov.au/data/dataset/fuel-check
+planned: Needs an XLSX adapter. Outputs carry the share-alike licence.

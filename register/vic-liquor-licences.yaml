@@ -1,0 +1,150 @@
+slug: vic-liquor-licences
+title: Current liquor licences by location, Victoria
+status: live
+topics:
+- community
+- places
+example:
+  group: licence_category
+  metric: count
+  label: Licences
+sample:
+  spread: licence_category
+order: 381
+publisher:
+  name: Liquor Control Victoria
+  short: Liquor Control Victoria
+  jurisdiction: Vic
+  url: https://www.liquor.vic.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://discover.data.vic.gov.au/dataset/victorian-liquor-licences-by-location
+  attribution: Liquor Control Victoria, Victorian Government, Victorian liquor licences by location, sourced
+    {sourced}, https://discover.data.vic.gov.au/dataset/victorian-liquor-licences-by-location, licensed
+    under CC BY 4.0.
+search_title: Victorian liquor licence register with addresses and map locations (Liquor Control Victoria)
+also_known_as:
+- Victorian liquor licences by location
+- Liquor licence lookup Victoria
+- List of licensed venues in Victoria
+- Liquor Control Victoria licence list
+keywords:
+- liquor licence
+- licensed venues
+- bottle shops
+- pubs
+- BYO permit
+- Liquor Control Victoria
+- Victoria
+place_field: council
+faq:
+- q: What does each row hold?
+  a: One liquor licence active at the end of the month the release names, with its number, the
+    licensee and trading name, the licence category, trading hours, patron capacity where one applies,
+    the premises address, council area, region and coordinates, and the licensee's postal address.
+- q: How accurate are the addresses and coordinates?
+  a: The publisher states that addresses are as given on the licence application, need not follow the
+    Australian address standard and may be outdated or inaccurate. About one licence in twenty has no
+    coordinates, and some licences, such as remote sellers, have no premises the public can visit.
+- q: How often does it change?
+  a: Liquor Control Victoria publishes a new stocktake of every active licence each month. Each version
+    here is one month's stocktake, so a licence that has lapsed is absent from later versions.
+summary: Every active Victorian liquor licence, about 23,000, with its category, trading hours, premises
+  address, council area and coordinates, from a monthly stocktake.
+description: Current Victorian liquor licences by location from Liquor Control Victoria. Each row is
+  one active licence at the end of the month, with the licence number, licensee, trading name, licence
+  category, trading hours, patron capacity, premises street address, suburb, postcode, council, region,
+  metropolitan or regional class, latitude and longitude, and postal address. The publisher states the
+  addresses are as supplied on the application and may be inaccurate.
+source:
+  adapter: ckan-resource
+  portal: https://discover.data.vic.gov.au
+  package: victorian-liquor-licences-by-location
+  resource_match: ^[A-Z][a-z]+ \d{4}$
+  url: https://discover.data.vic.gov.au/dataset/victorian-liquor-licences-by-location
+  cadence: monthly
+  header_row: 5
+key:
+- licence_number
+partition_by:
+- council
+geometry:
+  lon: longitude
+  lat: latitude
+  crs: EPSG:4326
+  crs_note: The publisher states no datum for its latitude and longitude, so they are read as WGS84 (EPSG:4326), which differs from GDA2020 by under two metres.
+row_label: Licences
+fields:
+- name: licence_number
+  label: Licence number
+  source: Licence Number
+  type: string
+- name: licensee
+  label: Licensee
+  source: Licensee
+  type: string
+- name: trading_as
+  label: Trading as
+  source: Trading As
+  type: string
+- name: licence_category
+  label: Licence category
+  source: Licence Category
+  type: string
+- name: trading_hours
+  label: Trading hours
+  source: Trading Hours
+  type: string
+- name: patron_capacity
+  label: Patron capacity
+  source: Patron Capacity (if applicable)
+  type: integer
+  description: Blank where the licence sets no capacity.
+- name: street_address
+  label: Premises address
+  source: Street Address
+  type: string
+- name: suburb
+  label: Suburb
+  source: Suburb
+  type: string
+- name: postcode
+  label: Postcode
+  source: Postcode
+  type: string
+- name: council
+  label: Council
+  source: Council
+  type: string
+- name: region
+  label: Region
+  source: Region
+  type: string
+- name: metro_regional
+  label: Metro or regional
+  source: Metro/Regional
+  type: string
+- name: latitude
+  label: Latitude
+  source: Latitude
+  type: number
+- name: longitude
+  label: Longitude
+  source: Longitude
+  type: number
+- name: postal_address
+  label: Postal address
+  source: Postal Address
+  type: string
+- name: postal_suburb
+  label: Postal suburb
+  source: Postal Suburb
+  type: string
+- name: postal_postcode
+  label: Postal postcode
+  source: Postal Postcode
+  type: string
+omit:
+  '': Blank columns the publisher leaves beside the address for layout.

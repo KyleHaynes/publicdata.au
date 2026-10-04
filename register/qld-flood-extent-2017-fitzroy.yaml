@@ -1,0 +1,101 @@
+slug: qld-flood-extent-2017-fitzroy
+title: Fitzroy River flood extent, April 2017
+status: live
+topics:
+- emergencies
+- places
+order: 248
+collection: qld-flood-extents
+collection_title: Historical flood extents, Queensland
+search_title: Fitzroy River 2017 flood extent map (Queensland Flood extent series)
+also_known_as:
+- Rockhampton 2017 flood map
+- Fitzroy River flood extent, April 2017 polygons
+- 2017 Floodline Fitzroy River layer
+keywords:
+- flood map
+- flood extent
+- historical floods
+- inundation
+- flood lines
+- Rockhampton
+- Fitzroy River
+faq:
+- q: What is in each row?
+  a: One polygon of mapped flood extent, with the feature type, the location name, the source the outline
+    was drawn from and the reliability dates the department records for the shape and its attributes.
+- q: Is this the peak of the flood?
+  a: Not always. The department describes the polygons as the approximate inundation when the source imagery
+    or survey was captured, and recommends them for use at about 1:5,000 to 1:10,000.
+- q: Can I use it to tell whether a property will flood?
+  a: No. It shows one past flood. Councils publish flood planning maps for present risk.
+summary: The mapped extent of the April 2017 flood in the Fitzroy River basin after cyclone Debbie, drawn
+  from 3 metre satellite imagery, as polygons from the Queensland Flood extent series.
+description: The 2017 Floodline Fitzroy River layer of the Queensland Flood extent series, one row per
+  polygon of mapped inundation for the April 2017 flood in the Fitzroy River basin after cyclone Debbie,
+  drawn from 3 metre satellite imagery. Each row has the feature type, location, source and the reliability
+  dates for the feature and its attributes. The polygons are read from the state's map service in WGS84
+  and published in GDA2020.
+publisher:
+  name: Department of Natural Resources and Mines, Manufacturing and Regional and Rural Development
+  short: Natural Resources and Mines
+  jurisdiction: Qld
+  url: https://www.nrmmrrd.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  evidence: https://www.data.qld.gov.au/dataset/flood-extent-series
+  reviewed: '2026-10-01'
+  attribution: Department of Natural Resources and Mines, Manufacturing and Regional and Rural Development,
+    Queensland Government, Flood extent series, 2017 Floodline Fitzroy River, sourced {sourced}, https://www.data.qld.gov.au/dataset/flood-extent-series,
+    licensed under CC BY 4.0.
+chart: none
+source:
+  adapter: arcgis-feature
+  portal: https://www.data.qld.gov.au
+  package: flood-extent-series
+  url: https://spatial-gis.information.qld.gov.au/arcgis/rest/services/InlandWaters/FloodLines/MapServer/18
+  cadence: closed
+key:
+- objectid
+geometry:
+  kind: polygon
+  crs: EPSG:4326
+  crs_note: The map service projects the polygons to WGS84 (EPSG:4326) on request. They are moved to GDA2020
+    for publication.
+  maxzoom: 10
+row_label: Flood polygons
+fields:
+- name: objectid
+  label: Object ID
+  source: objectid
+  type: integer
+- name: feature_type
+  label: Feature type
+  source: featuretype
+  type: string
+- name: location
+  label: Location
+  source: location
+  type: string
+- name: feature_reliability
+  label: Shape reliability date
+  source: featurereliability
+  type: date
+  date_format: epoch_ms
+  description: The date the department gives for the reliability of the outline, usually the capture date
+    of its source.
+- name: feature_source
+  label: Shape source
+  source: featuresource
+  type: string
+- name: attribute_reliability
+  label: Attribute reliability date
+  source: attributereliability
+  type: date
+  date_format: epoch_ms
+- name: attribute_source
+  label: Attribute source
+  source: attributesource
+  type: string
+note: Cells were typed and field names were made snake_case. Shapes were moved to GDA2020. Rows were left
+  alone.

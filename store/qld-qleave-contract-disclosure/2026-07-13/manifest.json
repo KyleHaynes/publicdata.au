@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-qleave-contract-disclosure",
+  "version": "2026-07-13",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:00:04+00:00",
+  "sha256": "96a23d5e86a5be19a829ccbc6cbfa13f049574e47871a9f4eaaa9cc93acd1d89",
+  "bytes": 557927,
+  "filename": "qleave_contract-disclosure-30-june.xlsx",
+  "encoding": "xlsx",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/b1348b43-5060-4b51-a77e-1e4b95a7da47/resource/4dd3cb0f-c10a-4d6e-a33c-12a2baf90b27/download/qleave_contract-disclosure-30-june.xlsx",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "contract-disclosure-report-2025-2026",
+    "package_id": "b1348b43-5060-4b51-a77e-1e4b95a7da47",
+    "resource": "4dd3cb0f-c10a-4d6e-a33c-12a2baf90b27",
+    "resource_name": "QLeave Contract Disclosure 2025-2026 FY.xlsx",
+    "resource_last_modified": "2026-07-13T04:50:19.719856",
+    "package_modified": "2026-07-13T04:50:19.754006",
+    "package_version": "2",
+    "etag": "08ccd3365335d471a245ba990fae5b13",
+    "http_last_modified": "Mon, 13 Jul 2026 04:50:21 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=contract-disclosure-report-2025-2026",
+    "read_at": "2026-10-03T03:00:04+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "c48995adf30005ffa8d77cfa72020dc49fb5535f1574f07f3b5777e65458c14b"
+}

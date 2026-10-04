@@ -1,0 +1,34 @@
+{
+  "dataset": "vic-gaming-expenditure-by-venue",
+  "version": "2025-08-26",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:09:34+00:00",
+  "sha256": "83e6adfcac7329b5f9c8c71f5760f4680f631c52ddbd85e1dcf87ba19b5f295c",
+  "bytes": 240103,
+  "filename": "current_gaming_expenditure_venue_0.xlsx",
+  "encoding": "xlsx",
+  "source": {
+    "url": "https://www.vgccc.vic.gov.au/sites/default/files/2025-07/current_gaming_expenditure_venue_0.xlsx",
+    "portal": "https://discover.data.vic.gov.au",
+    "package": "current-gaming-expenditure-by-venue",
+    "package_id": "22e0a891-4171-42d2-acc5-1fffd6711807",
+    "resource": "e85b4ea7-a96d-4995-91c6-64228aedad74",
+    "resource_name": "2022-23 to 2024-25",
+    "resource_last_modified": null,
+    "package_modified": "2025-08-26T06:26:02.031585",
+    "package_version": null,
+    "etag": "68818885-3a9e7",
+    "http_last_modified": "Thu, 24 Jul 2025 01:12:37 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution 4.0 International",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://discover.data.vic.gov.au/api/3/action/package_show?id=current-gaming-expenditure-by-venue",
+    "read_at": "2026-10-03T03:09:33+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "8752b3f3c363168e32cac747f4ca3df15e5f0f487f9a28542f9cd6117b281ad1"
+}

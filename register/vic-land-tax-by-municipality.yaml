@@ -1,0 +1,90 @@
+slug: vic-land-tax-by-municipality
+title: Land tax by municipality, Victoria, 2024
+status: live
+topics:
+- economy
+- housing
+example:
+  where:
+    municipality:
+      neq: TOTAL
+  group: municipality
+  metric: sum.total_proportionate_tax
+  label: Land tax ($)
+order: 377
+publisher:
+  name: State Revenue Office Victoria
+  short: SRO
+  jurisdiction: Vic
+  url: https://www.sro.vic.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://discover.data.vic.gov.au/dataset/land-tax-by-municipality-2024
+  attribution: State Revenue Office, Victorian Government, Land Tax by Municipality 2024, sourced {sourced},
+    https://discover.data.vic.gov.au/dataset/land-tax-by-municipality-2024, licensed under CC BY 4.0.
+temporal_start: '2024-01-01'
+search_title: Victorian land tax by council area, 2024 (State Revenue Office)
+also_known_as:
+- Land tax by municipality Victoria
+- SRO land tax statistics by council
+- Victorian land tax by LGA
+keywords:
+- land tax
+- unimproved value
+- council
+- municipality
+- State Revenue Office
+- property tax
+- Victoria
+faq:
+- q: What does each row hold?
+  a: One of Victoria's 79 municipalities in the 2024 land tax year, with the number of properties
+    assessed for land tax, their total unimproved value, the land tax apportioned to them and that tax
+    as a percentage of the state's land tax. The last row is the publisher's total for Victoria.
+- q: What is proportionate tax?
+  a: Land tax is assessed on an owner's total holdings, so an owner with land in several municipalities
+    pays one amount. The State Revenue Office apportions that amount across the municipalities in
+    proportion to the land's value, and the column holds the apportioned sum in dollars.
+- q: Where are other years?
+  a: The State Revenue Office publishes each year as its own dataset, and this entry holds the 2024
+    file. Earlier years have their own records on the Victorian portal.
+summary: For each Victorian municipality in 2024, the number of properties assessed for land tax, their
+  unimproved value and the land tax apportioned to them, with the state total.
+description: Land tax by municipality for 2024 from the State Revenue Office Victoria. Each row is one
+  of the 79 municipalities, named in capitals as published, with the property count, the total
+  unimproved value in dollars, the total proportionate land tax in dollars and the percentage of the
+  state's land tax. The publisher's TOTAL row is kept.
+source:
+  adapter: ckan-resource
+  portal: https://discover.data.vic.gov.au
+  package: land-tax-by-municipality-2024
+  resource: 7b8291f8-6c6a-442a-90ca-14f7e4aab2a8
+  url: https://discover.data.vic.gov.au/dataset/land-tax-by-municipality-2024
+  cadence: yearly
+  encoding: utf-8-sig
+key:
+- municipality
+row_label: Municipalities
+fields:
+- name: municipality
+  label: Municipality
+  source: Municipality
+  type: string
+- name: property_count
+  label: Properties assessed
+  source: Property count
+  type: integer
+- name: total_unimproved_value
+  label: Total unimproved value ($)
+  source: Total unimproved value
+  type: integer
+- name: total_proportionate_tax
+  label: Total proportionate tax ($)
+  source: Total proportionate tax
+  type: integer
+- name: percentage_of_total_tax
+  label: Share of total land tax (%)
+  source: Percentage of total tax
+  type: number

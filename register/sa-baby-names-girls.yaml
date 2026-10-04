@@ -1,0 +1,77 @@
+slug: sa-baby-names-girls
+title: Top 100 baby names for girls, South Australia
+status: live
+topics:
+- people
+example:
+  group: first_name
+  metric: sum.babies
+  label: Girls registered with each name in the list, most first
+order: 413
+collection: sa-baby-names
+collection_title: Baby names registered in South Australia
+search_title: Top 100 girls' names in South Australia (Attorney-General's Department)
+also_known_as:
+- SA top 100 baby names female
+- Popular girls names Adelaide
+- South Australian baby name rankings for girls
+keywords:
+- baby names
+- popular names
+- top 100 names
+- girls' names
+- births
+- Attorney-General's Department
+- South Australia
+faq:
+- q: What is in each row?
+  a: One name in the year's list of the 100 names given most often to girls registered in South Australia,
+    with its position in the list and the number of babies registered with it.
+- q: Which year does the list cover?
+  a: The newest list the publisher has released, which is the calendar year named in the resource on the
+    portal, Top 100 Baby Names 2025 at the first version. The file holds no year column, so each year's list
+    is a version here, dated by the day the publisher released it.
+- q: Why can a list run past 100 names?
+  a: Names with the same count share a position, so a tie at the bottom of the list can carry it past 100
+    rows. The rows are kept as published.
+summary: The 100 names given most often to girls born in South Australia in the newest year the publisher has
+  released, with each name's position and count. Updated yearly.
+description: The Top 100 Baby Names list for girls from the Attorney-General's Department, built from births
+  registered with South Australia's Births, Deaths and Marriages registry. Each row is one name with the number
+  of babies registered with it and its position in the year's list. Names are in capitals as published. The
+  publisher adds a new list each year, early in the following year.
+publisher:
+  name: Attorney-General's Department
+  short: Attorney-General's
+  jurisdiction: SA
+  url: https://www.agd.sa.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.sa.gov.au/data/dataset/popular-baby-names
+  attribution: Attorney-General's Department, Government of South Australia, Popular Baby Names,
+    https://data.sa.gov.au/data/dataset/popular-baby-names, accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: ckan-resource
+  portal: https://data.sa.gov.au/data
+  package: popular-baby-names
+  resource_match: ^Top 100 Baby Names \d{4} - Female$
+  url: https://data.sa.gov.au/data/dataset/popular-baby-names
+  cadence: yearly
+key:
+- first_name
+row_label: Names
+fields:
+- name: first_name
+  label: First name
+  source: First Name
+  type: string
+- name: babies
+  label: Babies registered
+  source: Amount
+  type: integer
+- name: position
+  label: Position
+  source: Position
+  type: integer

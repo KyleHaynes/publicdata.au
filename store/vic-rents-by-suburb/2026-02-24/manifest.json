@@ -1,0 +1,32 @@
+{
+  "dataset": "vic-rents-by-suburb",
+  "version": "2026-02-24",
+  "as_at": "",
+  "fetched_at": "2026-09-29T13:50:13+00:00",
+  "sha256": "817c5b8ea7985651af84519149276ef0281f8b6cfa4bcada39ea8aa87ed2952e",
+  "bytes": 1135709,
+  "filename": "moving-annual-rent-suburb-september-quarter-2025-excel.xlsx",
+  "encoding": "xlsx",
+  "source": {
+    "url": "https://www.dffh.vic.gov.au/moving-annual-rent-suburb-september-quarter-2025-excel",
+    "portal": "https://discover.data.vic.gov.au",
+    "package": "rental-report-quarterly-moving-annual-rents-by-suburb",
+    "package_id": "fd720bba-22ee-45e0-b935-e89c829f0849",
+    "resource": "ca75f2c7-0c61-4189-bdf2-3e38fd8bd5b7",
+    "resource_name": " Rental Report - Moving Annual Rents by LGA Sep 2025",
+    "resource_last_modified": null,
+    "package_modified": "2026-02-24T06:42:33.669980",
+    "package_version": null,
+    "etag": "6997bda2-11545d",
+    "http_last_modified": "Fri, 20 Feb 2026 01:49:22 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution 4.0 International",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_at": "2026-09-29T13:50:13+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": []
+}

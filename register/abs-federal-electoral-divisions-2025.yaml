@@ -1,0 +1,95 @@
+slug: abs-federal-electoral-divisions-2025
+title: Federal electorate boundaries, 2025, Australia
+status: live
+topics:
+- places
+example:
+  where: {area_sqkm: {gt: 0}}
+  group: state_name
+  label: Federal electorates in each state and territory
+sample:
+  where: {area_sqkm: {gt: 0}}
+  spread: state_name
+  label: Electorates with a shape, one from each state and territory in turn, in the ABS's code order.
+order: 125
+collection: abs-boundaries
+collection_title: ABS boundaries
+publisher:
+  name: Australian Bureau of Statistics
+  short: ABS
+  jurisdiction: Cth
+  url: https://www.abs.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-3-july-2021-june-2026/access-and-downloads/digital-boundary-files
+  statement: Copyright Commonwealth of Australia administered by the ABS. Unless otherwise noted, content is licensed
+    under a Creative Commons Attribution 4.0 International licence.
+  attribution: Australian Bureau of Statistics, Australian Statistical Geography Standard (ASGS) Edition 3, CED_2025_AUST_GDA2020.zip,
+    sourced {sourced}, https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-3-july-2021-june-2026/access-and-downloads/digital-boundary-files,
+    licensed under CC BY 4.0.
+search_title: 'Federal electorate boundaries 2025: every Commonwealth electoral division shape (ABS)'
+also_known_as:
+- federal electorate boundaries
+- Commonwealth Electoral Divisions 2025 shapefile
+- CED boundaries
+- federal seats map data
+keywords:
+- federal electorate
+- electoral division
+- boundaries
+- shapefile
+- GeoJSON
+- CED
+- elections
+- ABS
+faq:
+- q: What is in each row?
+  a: One of the Commonwealth Electoral Divisions, the ABS's mesh-block approximation of the federal electorates,
+    with its code, name and the other columns the ABS publishes, and its shape in the GeoParquet, GeoJSON, GeoPackage
+    and PMTiles files. The CSV, Excel and other table files hold the columns without the shape.
+- q: What coordinate system are the shapes in?
+  a: GDA2020 (EPSG:7844), the file the ABS publishes in that datum. GDA2020 differs from WGS84 by well under a metre,
+    so web maps can use it as it is.
+- q: How does this join to other datasets here?
+  a: Each dataset here with point coordinates carries the code and name of the area each point falls in, matched
+    by location against this layer. Those columns name the layer and its version in the dataset's schema, and the
+    ABS's attribution is in every file.
+summary: The 150 Commonwealth electoral divisions as the ABS built them from mesh blocks for 2025, one shape each
+  with its state, in GDA2020.
+description: The ABS digital boundary file CED_2025_AUST_GDA2020.zip, from the Australian Statistical Geography
+  Standard (ASGS) Edition 3. Each row is one area with the columns the ABS publishes. The ABS adds rows for no usual
+  address, migratory, offshore and shipping, which have no shape. They are kept, with a null geometry, so every
+  ABS code is in the table.
+key:
+- ced_2025_code
+geometry:
+  kind: polygon
+  crs: EPSG:7844
+  crs_note: Shapes in GDA2020 (EPSG:7844), as the ABS publishes them.
+  maxzoom: 8
+source:
+  adapter: file
+  url: https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-3-july-2021-june-2026/access-and-downloads/digital-boundary-files/CED_2025_AUST_GDA2020.zip
+  member: CED_2025_AUST_GDA2020.shp
+  cadence: when the ABS releases a new edition
+fields:
+- name: ced_2025_code
+  source: CED_CODE25
+  label: Federal electorate code (2025)
+- name: ced_2025_name
+  source: CED_NAME25
+  label: Federal electorate (2025)
+- name: state_code
+  source: STE_CODE21
+  label: State code
+- name: state_name
+  source: STE_NAME21
+  label: State or territory
+- name: area_sqkm
+  source: AREASQKM
+  label: Area (km²)
+  type: number
+omit:
+  AUS_CODE21: The code for Australia, the same on every row.
+  AUS_NAME21: The word Australia, the same on every row.

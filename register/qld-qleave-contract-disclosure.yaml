@@ -1,0 +1,170 @@
+slug: qld-qleave-contract-disclosure
+title: Contracts awarded by QLeave, Queensland, 2025-26
+status: live
+topics:
+- government
+- economy
+order: 236
+collection: qld-contract-disclosure
+collection_title: Contract disclosure reports, Queensland Government agencies
+search_title: QLeave contracts awarded 2025-26, contract disclosure report (Queensland)
+also_known_as:
+- QLeave contract disclosure
+- Long service leave authority contracts Queensland
+- QLeave suppliers and contract values
+keywords:
+- contract disclosure
+- government contracts
+- procurement
+- QLeave
+- long service leave
+- Queensland
+faq:
+- q: What is in each row?
+  a: One contract QLeave, the authority that runs portable long service leave schemes in Queensland, awarded
+    or varied in 2025-26, with the description, award date, value, supplier name and address, whether
+    it was varied, the procurement method, form of contract and number of offers sought.
+- q: What is a contract disclosure report?
+  a: Queensland Government agencies must publish details of each contract they award worth $10,000 or
+    more, including GST. Contracts over $500,000 should also carry fields such as the evaluation criteria
+    and deliverables. In this report those two columns are blank for every contract.
+- q: Why is this year only?
+  a: QLeave publishes each financial year as a separate portal dataset with its own name, so this table
+    is the 2025-26 report and later years need their own entries.
+- q: Why do some rows have no contract or an odd date?
+  a: The workbook holds eight rows that give the agency and nothing else, and they are kept as published.
+    Four contracts carry award dates in May and June 2025, before the financial year began, and one carries
+    the date 18/15/2025, which is not a real date. The award date is kept as text because of it.
+summary: Every contract worth $10,000 or more awarded by QLeave in the 2025-26 financial year, with supplier,
+  value, date and procurement method.
+description: The contract disclosure report of QLeave for the 2025-26 financial year, read from the upload
+  template sheet of its workbook, one row per contract, with the agency, description, award date, value,
+  supplier name and address, variation, confidentiality, procurement method, limited tender reason, form
+  of contract, offers sought and the fields required for larger contracts.
+publisher:
+  name: QLeave
+  short: QLeave
+  jurisdiction: Qld
+  url: https://www.qleave.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/contract-disclosure-report-2025-2026
+  attribution: QLeave, Queensland Government, QLeave Contract Disclosure, sourced {sourced}, https://www.data.qld.gov.au/dataset/contract-disclosure-report-2025-2026,
+    licensed under CC BY 4.0.
+example:
+  group: supplier_name
+  metric: sum.contract_value
+  label: Value of the contracts awarded to each supplier, in dollars
+chart: none
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: contract-disclosure-report-2025-2026
+  resource: 4dd3cb0f-c10a-4d6e-a33c-12a2baf90b27
+  url: https://www.data.qld.gov.au/dataset/contract-disclosure-report-2025-2026
+  cadence: closed
+  sheet: upload template
+row_label: Contracts
+fields:
+- name: agency
+  label: Agency
+  source: Agency (Dept or Stat Body)
+  type: string
+- name: agency_address
+  label: Agency address
+  source: Agency address
+  type: string
+- name: contract_description
+  label: Contract description
+  source: Contract description/name
+  type: string
+- name: award_date
+  label: Award date
+  source: Award contract date
+  type: string
+- name: contract_value
+  label: Contract value ($)
+  source: Contract value
+  type: number
+- name: supplier_name
+  label: Supplier
+  source: Supplier name
+  type: string
+- name: supplier_address
+  label: Supplier address
+  source: Supplier address
+  type: string
+- name: variation
+  label: Varied
+  source: Variation to contract (Yes/No)
+  type: string
+- name: confidentiality_provision
+  label: Confidentiality provision used
+  source: Specific confidentiality provision used
+  type: string
+- name: procurement_method
+  label: Procurement method
+  source: Procurement method
+  type: string
+- name: limited_tender_reason
+  label: Reason for limited tender
+  source: Reason for use of limited tendering
+  type: string
+- name: form_of_contract
+  label: Form of contract
+  source: Form of contract
+  type: string
+- name: offers_sought
+  label: Offers sought
+  source: Number of offers sought
+  type: string
+- name: evaluation_criteria
+  label: Evaluation criteria
+  source: Evaluation criteria and weightings
+  type: string
+- name: deliverables
+  label: Deliverables
+  source: Deliverables
+  type: string
+- name: milestones
+  label: Milestones
+  source: Contract milestones
+  type: string
+- name: performance_management
+  label: Performance management
+  source: Contract performance management
+  type: string
+- name: contract_reference
+  label: Contract reference
+  source: Contract reference number
+  type: string
+- name: contract_category
+  label: Contract category
+  source: Contract category group
+  type: string
+- name: parent_contract
+  label: Parent contract or supply arrangement
+  source: Parent contract number/SOA
+  type: string
+- name: variation_comments
+  label: Variation comments
+  source: Variation comments
+  type: string
+- name: commence_date
+  label: Commence date
+  source: Commence date
+  type: string
+- name: supplier_abn
+  label: Supplier ABN
+  source: Supplier ABN
+  type: string
+- name: finish_date
+  label: Finish date
+  source: Finish date
+  type: string
+- name: description
+  label: Description
+  source: Description
+  type: string
+note: Cells were typed and headers were made snake_case. Rows were left alone.

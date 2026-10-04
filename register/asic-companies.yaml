@@ -1,0 +1,167 @@
+slug: asic-companies
+title: Company Register, ASIC
+status: live
+topics:
+- government
+chart:
+  where: {current_name_indicator: 1, registration_date: {gte: '1960-01-01'}}
+  label: Companies on the file
+order: 32
+publisher:
+  name: Australian Securities and Investments Commission
+  short: ASIC
+  jurisdiction: Cth
+  url: https://asic.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.gov.au/data/dataset/asic-companies
+  attribution: Australian Securities and Investments Commission, Australian Government, ASIC Company
+    Dataset, sourced {sourced}, https://data.gov.au/data/dataset/asic-companies, licensed under CC BY
+    3.0 AU.
+temporal_start: '1900-01-01'
+search_title: ASIC company register download (ASIC Company Dataset)
+also_known_as:
+- ASIC Company Dataset
+- Australian company register
+- ACN lookup list
+- Registered companies Australia
+- ASIC Connect company search data
+keywords:
+- asic company register
+- company search
+- ACN
+- registered companies
+- company register australia
+- ASIC
+- Australia
+faq:
+- q: Why is there no query API for this dataset?
+  a: Each weekly version is a table of millions of rows, and this site loads a version's rows into its query
+    database only where they fit. The files carry the whole table in every format, and the Parquet file
+    answers most questions in one read.
+- q: Which companies are in the file?
+  a: Every company registered with ASIC, with its type, class, sub-class and status, and the companies
+    deregistered in recent years with their deregistration date. Each row is one company name, so a company
+    that has changed its name has one row for each name it has held, and the current name indicator says
+    which row is the name in force.
+- q: What do the type, class, sub-class and status codes mean?
+  a: The codes are ASIC's own. Type is APTY for an Australian proprietary company, APUB for an Australian
+    public company, FNOS for a foreign company, RACN for a registered Australian body and CCIV for a
+    corporate collective investment vehicle. Status is REGD for registered, DRGD for deregistered, EXAD for
+    external administration, SOFF for strike-off action in progress, NOAC for not active, CNCL for cancelled
+    and DISS for dissolved. The class and sub-class codes are set out in the publisher's help file on the
+    source page.
+- q: Why is the ABN blank for some companies?
+  a: The publisher writes 0 where a company has no ABN. That 0 is kept here as a null value.
+- q: Is this the whole ASIC register?
+  a: No. ASIC publishes selected public fields from its company register once a week. Officeholders,
+    addresses, share structure and documents are not in the file and are found through ASIC Connect.
+summary: Every company registered with ASIC and those deregistered in recent years, with ACN, type, class,
+  status, registration and deregistration dates, ABN and every name each company has held. About 4.4
+  million rows, updated weekly.
+description: The ASIC Company Dataset, one row per company name on ASIC's register, as ASIC publishes it
+  every week. Each row has the company name, its ACN, type, class and sub-class, status, dates of
+  registration and deregistration, the state and number of any registration before it moved to ASIC,
+  whether the record changed since the last release, whether the name shown is the current name, the
+  ABN, and for a former name, the current name and the date it started.
+source:
+  adapter: ckan-resource
+  portal: https://data.gov.au/data
+  package: asic-companies
+  resource: d6d03876-71a4-4e82-8c77-2e4df5da4236
+  url: https://data.gov.au/data/dataset/asic-companies
+  cadence: weekly
+  delimiter: tab
+partition_by:
+- status
+query: false
+row_label: Company names
+fields:
+- name: company_name
+  label: Company name
+  source: Company Name
+  type: string
+  description: The company name as it appears on the register, current or former.
+- name: acn
+  label: ACN
+  source: ACN
+  type: string
+  description: The Australian Company Number, nine digits with leading zeros. A registered Australian
+    body of type RACN carries its ARBN here.
+- name: type
+  label: Type
+  source: Type
+  type: string
+  description: APTY, APUB, FNOS, RACN or CCIV.
+- name: class
+  label: Class
+  source: Class
+  type: string
+  description: The class of company, such as LMSH for limited by shares or LMGT for limited by guarantee.
+- name: sub_class
+  label: Sub-class
+  source: Sub Class
+  type: string
+  description: The sub-class of company, such as PROP for proprietary or LIST for listed public.
+- name: status
+  label: Status
+  source: Status
+  type: string
+  description: REGD, DRGD, EXAD, SOFF, NOAC, CNCL or DISS.
+- name: registration_date
+  label: Registration date
+  source: Date of Registration
+  type: date
+  date_format: '%d/%m/%Y'
+- name: deregistration_date
+  label: Deregistration date
+  source: Date of Deregistration
+  type: date
+  date_format: '%d/%m/%Y'
+- name: previous_state_of_registration
+  label: Previous state of registration
+  source: Previous State of Registration
+  type: string
+  description: The state or territory that first registered the company, where it was registered
+    before it moved to ASIC.
+- name: state_registration_number
+  label: State registration number
+  source: State Registration number
+  type: string
+  description: The number the state or territory gave the company when it first registered it.
+- name: modified_since_last_report
+  label: Modified since last release
+  source: Modified since last report
+  type: boolean
+  true_values:
+  - Y
+  description: Y when the name, type, class, sub-class, status or a date changed since the previous
+    weekly file. Blank otherwise.
+- name: current_name_indicator
+  label: Current name
+  source: Current Name Indicator
+  type: boolean
+  true_values:
+  - Y
+  description: Y when the company name in this row is the name in force. Blank for a former name.
+- name: abn
+  label: ABN
+  source: ABN
+  type: string
+  null_values:
+  - '0'
+  description: The company's Australian Business Number. The publisher writes 0 where there is none,
+    kept here as null.
+- name: current_name
+  label: Current name of company
+  source: Current Name
+  type: string
+  description: For a former name, the name the company holds now. Blank on the current name's own row.
+- name: current_name_start_date
+  label: Current name start date
+  source: Current Name Start Date
+  type: date
+  date_format: '%d/%m/%Y'
+  description: For a former name, the date the current name began.

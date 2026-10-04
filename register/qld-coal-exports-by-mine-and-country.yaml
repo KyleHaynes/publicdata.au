@@ -1,0 +1,108 @@
+slug: qld-coal-exports-by-mine-and-country
+title: Coal exports by mine and destination country, Queensland
+status: live
+topics:
+- economy
+example:
+  where:
+    financial_year: newest
+  group: country
+  metric: sum.grand_total
+  label: Tonnes exported
+sample:
+  where:
+    financial_year: newest
+  order:
+  - grand_total.desc
+  spread: none
+  label: The ten largest mine and country lines in the newest financial year, by total tonnes exported.
+order: 266
+collection: qld-coal-statistics
+collection_title: Queensland coal production and sales statistics
+temporal_start: '2009-07-01'
+search_title: Queensland coal exports by mine and country (Natural Resources and Mines)
+also_known_as:
+- Queensland coal export destinations by mine
+- Where Queensland coal is exported
+- Queensland coal exports by country and financial year
+keywords:
+- coal exports
+- coking coal
+- thermal coal
+- export destinations
+- mining statistics
+- Queensland
+faq:
+- q: What is in each row?
+  a: Each row is one mine, one financial year and one destination country, with the tonnes exported of hard
+    coking coal, PCI, semi-soft coking coal and thermal coal, and their total.
+- q: What is PCI coal?
+  a: PCI is pulverised coal injection coal, which steelmakers inject into blast furnaces. The publisher reports
+    it as its own coal type.
+summary: Tonnes of coal each Queensland mine exported to each destination country by financial year since FY2010,
+  by coal type.
+description: One row per Queensland coal mine, financial year and destination country from FY2010, with export
+  tonnes of hard coking coal, PCI, semi-soft coking coal and thermal coal and the total. This is the Exports
+  by mine and country sheet of the coal industry review statistical tables.
+publisher:
+  name: Department of Natural Resources and Mines, Manufacturing and Regional and Rural Development
+  short: Natural Resources and Mines
+  jurisdiction: Qld
+  url: https://www.nrmmrrd.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/coal-industry-review-statistical-tables
+  attribution: Department of Natural Resources and Mines, Manufacturing and Regional and Rural Development,
+    Queensland Government, Coal industry review statistical tables, sourced {sourced}, https://www.data.qld.gov.au/dataset/coal-industry-review-statistical-tables,
+    licensed under CC BY 4.0.
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: coal-industry-review-statistical-tables
+  resource_match: ^Coal sales and exports data
+  url: https://www.data.qld.gov.au/dataset/coal-industry-review-statistical-tables
+  cadence: several times a year
+  sheet: Exports by mine and country
+  header_row: 6
+key:
+- mine
+- financial_year
+- country
+partition_by:
+- financial_year
+row_label: Mine, year and country lines
+fields:
+- name: mine
+  label: Mine
+  source: Mine
+  type: string
+- name: financial_year
+  label: Financial year
+  source: Financial year
+  type: string
+  description: As published, for example FY2025 for July 2024 to June 2025.
+- name: country
+  label: Destination country
+  source: Country
+  type: string
+- name: hard_coking_coal
+  label: Hard coking coal (t)
+  source: Hard Coking Coal
+  type: number
+- name: pci
+  label: PCI coal (t)
+  source: PCI
+  type: number
+- name: semi_soft_coking_coal
+  label: Semi-soft coking coal (t)
+  source: Semi-Soft Coking Coal
+  type: number
+- name: thermal_coal
+  label: Thermal coal (t)
+  source: Thermal Coal
+  type: number
+- name: grand_total
+  label: All coal (t)
+  source: Grand Total
+  type: number

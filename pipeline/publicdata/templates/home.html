@@ -1,0 +1,248 @@
+{% extends "base.html" %}
+{% block head %}<script type="application/ld+json">{{ jsonld|safe }}</script>{% endblock %}
+{% block wrap %}
+<div class="band hero">
+  <div class="site">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <p class="eyebrow live"><span class="dot-live"></span>Serving · {{ stats.governments }} Australian government{{ '' if stats.governments == 1 else 's' }} · {{ stats.live }} datasets · read every week</p>
+        <h1>{{ headline }}</h1>
+        <p class="lede">Every release a publisher makes becomes a dated version that stays where it is, with its schema, its provenance and a diff against the release before. Download it in {{ stats.formats }} formats, query it from a URL, chart it in your browser, or hand it to an agent. There are no keys and no accounts.</p>
+        <div class="ctas"><a class="btn" href="#topics">Find a dataset</a><a class="btn ghost" href="#agent">Connect your AI agent</a><a class="btn ghost" href="/government/">For government staff</a></div>
+        <div class="stats">
+          <div class="stat"><b>{{ stats.governments }}</b><span>governments</span></div>
+          <div class="stat"><b>{{ stats.publishers }}</b><span>publishers</span></div>
+          <div class="stat"><b>{{ stats.live }}</b><span>datasets served</span></div>
+          <div class="stat"><b>{{ stats.versions }}</b><span>versions kept</span></div>
+          {% if catalogue_total %}<div class="stat"><b>{{ catalogue_total }}</b><span>datasets searchable</span></div>{% else %}<div class="stat"><b>{{ stats.formats }}</b><span>formats</span></div>{% endif %}
+        </div>
+      </div>
+      {% if hero_map %}<figure class="hero-fig">
+        {{ hero_map.svg|safe }}
+        <figcaption><span class="k">Example dataset</span> <b>{{ hero_map.lede }}</b>{% if hero_map.gap_count %} {{ hero_map.covered }} {{ 'has' if hero_map.covered.count(' and ') == 0 and ',' not in hero_map.covered else 'have' }} located records. {{ hero_map.gaps }} {{ 'does' if hero_map.gap_count == 1 else 'do' }} not, so {{ 'it is' if hero_map.gap_count == 1 else 'they are' }} hatched.{% endif %} Each picture here is drawn from the same file you can download. <a href="{{ hero_map.explore }}">{{ hero_map.explore_label }}</a> {{ hero_map.outlines }}</figcaption>
+      </figure>{% endif %}
+    </div>
+    {% if newest %}<div class="ticker" aria-label="Newest versions">
+      <span class="lab">Newest versions</span>
+      {% for n in newest %}<a class="v" href="/d/{{ n.slug }}/v/{{ n.version }}/"><b>{{ n.version }}</b> {{ n.slug }} <i>{{ n.rows }} rows</i>{% if n.as_at_long %} <i>as at {{ n.as_at_long }}</i>{% endif %}{% if n.new %} <em>new dataset</em>{% elif n.change.added is defined %} <span class="chg">+{{ n.change.added }} added · {{ n.change.changed }} changed</span>{% endif %}</a>{% endfor %}
+    </div>{% endif %}
+  </div>
+</div>
+
+<div class="site">
+<div class="sec-head" id="topics"><h2>Find a dataset by topic</h2><a href="/browse/">Or by government</a></div>
+<p class="muted" style="margin-top:0">Every dataset served here sits under a topic. Each one comes with every format, a query API, a browser explorer and an agent that can answer from it.</p>
+<div class="ttiles">
+  {% for t in topics %}{% if t.count %}<a class="ttile" href="{{ t.href }}">
+    <span class="tname">{{ t.name }}</span>
+    <span class="tblurb">{{ t.blurb }}</span>
+    <span class="tn"><b>{{ t.count }}</b> dataset{{ '' if t.count == 1 else 's' }} · <b>{{ t.rows }}</b> rows</span><span class="tlist">{{ t.titles|join(' · ') }}</span>
+  </a>{% else %}<div class="ttile empty">
+    <a class="tname" href="{{ t.href }}">{{ t.name }}</a>
+    <span class="tblurb">{{ t.blurb }}</span>
+    {% if t.coming %}<span class="tn">Next to build, in vote order</span>
+    <ul class="tcoming">{% for c in t.coming %}<li><span>{{ c.title }}</span><button class="vote small" type="button" data-vote="{{ c.slug }}"><b>0</b><span>vote</span></button></li>{% endfor %}</ul>
+    {% else %}<span class="tn">Nothing chosen yet. <a href="{{ t.search }}">Search the portals</a> and vote for one.</span>{% endif %}
+  </div>{% endif %}{% endfor %}
+</div>
+
+<section class="feat" id="agent">
+  <div class="feat-text">
+    <p class="eyebrow">Made for agents</p>
+    <h2>Hand it to your agent</h2>
+    <p>The MCP server at <span class="mono">{{ site_host }}/mcp</span> gives any agent {{ tool_count }} tools over every dataset served here. It can find a dataset, read its fields, count and filter across the whole table, diff two versions and vote for one that is not here yet. Every answer names the version it came from and carries the publisher's attribution, so the agent's answer names the government and links to the data.</p>
+    {% set called = agent_demo.steps|map(attribute='tool')|list if agent_demo else [] %}
+    <div class="tool-row">{% for n in tool_names %}<a href="/agents/#tool-{{ n }}" title="{{ tool_titles[n] }}"{% if n in called %} class="on"{% endif %}>{{ n }}</a>{% endfor %}</div>
+    {% if called %}<p class="tool-key">The outlined names are the tools the demo beside this uses. Each name links to what its tool does.</p>{% endif %}
+    {% include "connect.html" %}
+  </div>
+  <div class="feat-demo">
+    {% if agent_demo %}<div class="term">
+      <div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="name">{{ site_host }}/mcp</span><span>Streamable HTTP</span><span class="right"><span class="dot-live"></span>connected · no key</span></div>
+      <div class="term-body">
+        <div class="tl user"><span class="g">›</span><p>{{ agent_demo.question }}</p></div>
+        {% for s in agent_demo.steps %}<div class="tl call"><span class="g">{{ loop.index }}</span><div><span class="tn">{{ s.tool }}</span> <span class="arg">{{ s.args }}</span><span class="res">→ {{ s.result }}</span></div></div>{% endfor %}
+        <div class="tl ai"><div><p>{{ agent_demo.answer }}</p><span class="cite">{{ agent_demo.cite }}</span></div></div>
+      </div>
+      <div class="term-foot"><span><b>{{ agent_demo.steps|length }}</b> tool calls</span><span>version <b>{{ agent_demo.version }}</b></span><span>licence <b>{{ agent_demo.licence }}</b></span><span>key <b>none</b></span></div>
+    </div>{% else %}<div class="term"><div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span class="name">{{ site_host }}/mcp</span></div><div class="term-body"><div class="tl user"><span class="g">›</span><p>Every dataset served here answers through the same {{ tool_count }} tools.</p></div></div></div>{% endif %}
+  </div>
+</section>
+
+<div class="sec-head"><h2>A few of the datasets served here</h2><a href="/browse/">All {{ stats.live }}, by government</a></div>
+<p class="muted" style="margin-top:0">One from each topic. Each has every format, a query API, a browser explorer and a version history. The small chart is drawn from the newest version, and the line under it says what it shows.</p>
+<div id="ledger">
+<div class="cards single">{% for d in showcase %}{% include "card.html" %}{% endfor %}{% for d in more_rows %}{% include "card.html" %}{% endfor %}</div>
+</div>
+<p class="muted small" id="ledger-none" hidden>No dataset served here matches. <a href="/backlog/">Search every dataset on the portals</a> and vote for it.</p>
+<p class="small" style="margin-top:12px"><button class="copy" type="button" id="ledger-more">Show all {{ stats.live }} datasets</button></p>
+
+{% if jur_rows %}<div class="sec-head"><h2>Every dataset, by government</h2><a href="/browse/">Browse all {{ catalogue_total }}</a></div>
+<p class="muted" style="margin-top:0">This is what Australian governments list on their open-data portals, read from the portals' own catalogues. A dataset with an open licence and a download can be voted for. Only the licence can block one.</p>
+<div class="jtiles">{% for j in jur_rows %}<a class="jtile" href="{{ j.path }}"><span class="jname">{{ j.name }}</span><span class="jbar"><i style="width:{{ j.bar }}%"></i></span><span class="jn"><b>{{ j.listed }}</b> listed</span><span class="jn"><b>{{ j.candidates }}</b> open with a download</span><span class="jn"><b>{{ j.live }}</b> served here</span><span class="jportal">{{ j.portals|join(', ') }}</span></a>{% endfor %}</div>{% endif %}
+</div>
+
+<div class="band soft">
+  <div class="site">
+    <p class="eyebrow">What a published file becomes</p>
+    <h2 class="big">One file from a portal. All of this.</h2>
+    <p class="lede">Example dataset: {{ becomes.publisher }} publishes <a href="/d/{{ becomes.slug }}/">{{ becomes.title|lower }}</a> as one download. Here that download is a dated version, {{ stats.formats }} formats, {% if becomes.map %}a map, {% endif %}{% if becomes.chart %}a chart, {% endif %}{% if becomes.query %}a query API, {% endif %}a diff against the release before and a citation that resolves in ten years. The rows are not changed.</p>
+    <div class="becomes">
+      <div class="srcfile">
+        <span class="k">The publisher's file</span>
+        <div class="glyph"></div>
+        <span class="fn">{{ becomes.filename }}</span>
+        <dl><dt>Publisher</dt><dd>{{ becomes.publisher }}</dd><dt>Size</dt><dd>{{ becomes.size }}</dd><dt>Licence</dt><dd>{{ becomes.licence }}</dd><dt>Fetched</dt><dd>{{ becomes.fetched }}</dd><dt>SHA-256</dt><dd class="mono">{{ becomes.sha }}…</dd></dl>
+      </div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="outs">
+        <a class="out" href="/d/{{ becomes.slug }}/v/{{ becomes.version }}/"><span class="k">A dated version</span><b>{{ becomes.version }}</b><p class="mono">/d/{{ becomes.slug }}/v/{{ becomes.version }}/</p><p>Never changes. Cached for a year. The publisher's file sits beside it, byte for byte.</p></a>
+        <a class="out" href="/d/{{ becomes.slug }}/#get"><span class="k">{{ becomes.formats|length }} formats</span><b>Same rows, your choice of file</b><div class="chips">{% for f in becomes.formats %}<span>{{ f }}</span>{% endfor %}</div><p>Change the extension and the same version comes back as a different file.</p></a>
+        {% if becomes.map %}<a class="out" href="/d/{{ becomes.slug }}/"><span class="k">A map</span><b>{{ becomes.rows }} {{ becomes.what|lower }}</b><div class="thumb">{{ becomes.map|safe }}</div></a>{% endif %}
+        {% if becomes.chart %}<a class="out wide" href="/d/{{ becomes.slug }}/"><span class="k">A chart</span><b>{{ becomes.what }} per year, {{ becomes.years }}</b><div class="thumb">{{ becomes.chart|safe }}</div></a>{% endif %}
+        {% if becomes.query %}<a class="out" href="{{ site }}{{ becomes.query }}"><span class="k">A query API</span><b>Counts from a URL</b><p class="mono">GET {{ becomes.query }}</p><p>Filters and group-bys across all {{ becomes.rows }} rows. No key.</p></a>{% endif %}
+        <a class="out" href="/d/{{ becomes.slug }}/#changes"><span class="k">A diff</span><b>Against the release before</b>{% if becomes.change.added is defined %}<div class="delta"><span class="add">+{{ becomes.change.added }} added</span><span class="rem">−{{ becomes.change.removed }} removed</span><span class="chg">{{ becomes.change.changed }} changed</span></div><p>Between the last two versions{% if becomes.key %}, by <span class="mono">{{ becomes.key }}</span>{% endif %}.</p>{% else %}<p>Rows added, removed and changed{% if becomes.key %} by <span class="mono">{{ becomes.key }}</span>{% endif %}, the moment {{ becomes.publisher }} releases again.</p>{% endif %}</a>
+        <a class="out" href="/agents/#mcp"><span class="k">{{ tool_count }} agent tools</span><b>Answers that cite the publisher</b><div class="chips">{% for n in tool_names[:5] %}<span>{{ n }}</span>{% endfor %}</div><p>Over MCP, with the version and the attribution in every answer.</p></a>
+        <a class="out" href="/d/{{ becomes.slug }}/#cite"><span class="k">A citation</span><b>That resolves in ten years</b><p>{{ becomes.cite }}</p></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="site">
+<section class="feat">
+  <div class="feat-text">
+    <p class="eyebrow">Versions</p>
+    <h2>Every release, kept</h2>
+    <p>A dataset here is the version history the portals do not keep. Each release becomes a dated version with the publisher's own file beside it, byte for byte, and a diff against the release before by the declared key. Cite a version URL and it will resolve to the same bytes in ten years.</p>
+  </div>
+  <div class="feat-demo card">
+    <div class="k">The URL contract</div>
+    <ul class="agent-list contract">
+      <li><span class="path">/d/&lt;slug&gt;/latest/data.csv</span><span>302 to the newest dated version</span></li>
+      <li><span class="path">/d/&lt;slug&gt;/v/{{ keeps.view.version }}/data.csv</span><span>never changes, cached for a year</span></li>
+      <li><span class="path">/d/&lt;slug&gt;/v/{{ keeps.view.version }}/source.{{ keeps.view.ext }}</span><span>the publisher's file, byte for byte</span></li>
+      <li><span class="path">/d/&lt;slug&gt;/v/{{ keeps.view.version }}/manifest.json</span><span>source URL, fetched-at, SHA-256</span></li>
+      <li><span class="path">/d/&lt;slug&gt;/diff/&lt;a&gt;..&lt;b&gt;.json</span><span>rows added, removed and changed by key</span></li>
+      <li><span class="path">/d/&lt;slug&gt;/history.tar.zst</span><span>every version's Parquet and manifest</span></li>
+    </ul>
+    <ul class="rail" style="margin-top:18px">
+      <li class="latest"><span class="vd"><a href="/d/{{ keeps.slug }}/v/{{ keeps.view.version }}/">{{ keeps.view.version }}</a></span>{% if keeps.view.as_at %}<span class="asat">as at {{ keeps.view.as_at_long }}</span>{% endif %}<div class="row2"><span>{{ keeps.view.rows_fmt }} rows</span>{% if keeps.view.change.added is defined %}<span class="delta"><span class="add">+{{ keeps.view.change.added }} added</span> <span class="rem">−{{ keeps.view.change.removed }} removed</span> <span class="chg">{{ keeps.view.change.changed }} changed</span></span>{% endif %}<span>{{ keeps.view.fields }} fields</span><span class="mono">{{ keeps.view.sha256[:12] }}</span><span class="chip live">latest</span></div><div class="note"><a href="/d/{{ keeps.slug }}/">{{ keeps.title }}</a>, {{ keeps.count }} version{{ '' if keeps.count == 1 else 's' }} kept. When {{ keeps.publisher }} releases again, the release becomes a new dated version here with its diff against this one{% if keeps.key %}, by <span class="mono">{{ keeps.key }}</span>{% endif %}.</div></li>
+    </ul>
+  </div>
+</section>
+</div>
+
+<div class="band pub">
+  <div class="site">
+    <div class="pubgrid">
+      <div>
+        <p class="eyebrow">For the agencies that publish</p>
+        <h2>The file you already published can look like this.</h2>
+        <p class="lede">A dataset listed on your portal with an open licence can be served here without a request. The file is kept byte for byte. The licence and the attribution travel inside every format. An agent that answers from it names your agency and links to the version. Listing costs nothing.</p>
+        <div class="ctas"><a class="btn" href="/publishers/">How it works for publishers</a><a class="btn ghost" href="/government/">Using it in government work</a><a class="btn ghost" href="/backlog/">Ask for a dataset</a></div>
+      </div>
+      <div class="pubfacts">
+        <div class="pubfact"><b>0</b><span><i>changes to your rows.</i> Cells are typed and headers renamed. Nothing is added, ranked or derived.</span></div>
+        <div class="pubfact"><b>{{ stats.formats }}</b><span><i>formats from one file.</i> CSV, Excel, JSON, Parquet, SQLite, DuckDB, Arrow, GeoJSON, GeoPackage and more.</span></div>
+        <div class="pubfact"><b>1</b><span><i>URL per version, kept.</i> A citation to it resolves to the same bytes in ten years.</span></div>
+        <div class="pubfact"><b>$0</b><span><i>to the publisher and to the reader.</i> No keys, no accounts, no download limit.</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="site">
+{% if query_demo %}<section class="feat rev">
+  <div class="feat-text">
+    <p class="eyebrow">Query API</p>
+    <h2>Ask from a URL</h2>
+    <p>{{ api_doc.summary|safe }} The answer names the version, the licence and the attribution. No key is needed, and the same call is what the agent tools make.</p>
+    <p><a href="/agents/#query-api">How the filters work</a></p>
+  </div>
+  <div class="feat-demo card qdemo">
+    <div class="qline"><span class="method">GET</span><span class="path mono">{{ query_demo.path }}</span><a class="btn small" href="{{ query_demo.url }}">Run</a></div>
+    <figure class="qfig">{{ query_demo.svg|safe }}<figcaption>{{ query_demo.caption }}</figcaption></figure>
+    <pre class="qjson"><code>{{ query_demo.json }}</code></pre>
+  </div>
+</section>{% endif %}
+
+<section class="feat" id="demo">
+  <div class="feat-text">
+    <p class="eyebrow">Files</p>
+    <h2>One URL, {{ stats.formats }} formats</h2>
+    <p>Change the extension and the same version comes back as a different file. A dated version is cached for a year and never changes. <span class="mono">latest/</span> redirects to the newest one. Files have no download limit.</p>
+    <p class="muted small">Sizes are <a href="/d/{{ demo.slug }}/">{{ demo.title }}</a>, {{ demo.rows }} rows.</p>
+  </div>
+  <div class="feat-demo getter" id="getter">
+    <div class="row"><span class="lab" id="fmt-lab">Format</span>
+      <div class="seg" role="group" aria-labelledby="fmt-lab" id="fmt-seg">
+        {% for f in demo.formats %}<button type="button" aria-pressed="{{ 'true' if loop.first else 'false' }}" data-fmt="{{ f.key }}">{{ f.label }}<span class="sz">{{ f.size }}</span></button>{% endfor %}
+      </div>
+    </div>
+    <div class="urlbox"><div class="path" id="url" tabindex="0">{{ site }}/d/{{ demo.slug }}/latest/{{ demo.formats[0].file }}</div><button class="copy" type="button" data-copy-target="url">Copy URL</button><a class="btn" id="dl" href="{{ site }}/d/{{ demo.slug }}/latest/{{ demo.formats[0].file }}">Download</a></div>
+    <p class="fmt-note" id="fmt-note"></p>
+    <div>
+      <div class="tools" role="tablist" aria-label="How to use" id="tools"></div>
+      <pre id="snippet"><button class="copy abs" type="button" data-copy-target="snippet-code">Copy</button><code id="snippet-code">curl -L -o {{ demo.formats[0].file }} {{ site }}/d/{{ demo.slug }}/latest/{{ demo.formats[0].file }}</code></pre>
+    </div>
+    <!--portal-text--><script type="application/json" id="ds-data">{{ demo.ds_data|safe }}</script><!--/portal-text-->
+  </div>
+</section>
+
+{% if preview %}<section class="feat rev">
+  <div class="feat-text">
+    <p class="eyebrow">Explorer</p>
+    <h2>Chart every row in your browser</h2>
+    <p>The explorer loads a version's Parquet file into DuckDB inside the browser and draws a dashboard over it. Click a bar to filter the other panels, add charts, and share the dashboard as a link or a frame. Nothing leaves the browser until you save a link, and there is no rate limit because there is no server in the way.</p>
+    <p><a class="btn ghost" href="{{ preview.explore }}">Open the explorer</a></p>
+  </div>
+  <a class="feat-demo dash" href="{{ preview.explore }}" aria-label="Open the explorer over {{ preview.title }}">
+    <div class="xbar"><span class="mono">{{ preview.explore }}</span><span class="xbtns"><i>Add a chart</i><i>Copy link</i><i>Save a short link</i><i>Embed</i></span></div>
+    <div class="panels">
+      <div class="panel p1"><div class="ptitle">{{ preview.chart_title }} <span class="muted">click to filter the others</span></div>{{ preview.chart|safe }}</div>
+      {% if preview.bars %}<div class="panel p2"><div class="ptitle">{{ preview.bars_title }}</div>{{ preview.bars|safe }}</div>{% endif %}
+      {% if preview.table.rows %}<div class="panel p3"><div class="ptitle">Rows</div><table class="mini"><tr>{% for f in preview.table.fields %}<th>{{ f }}</th>{% endfor %}</tr>{% for r in preview.table.rows %}<tr>{% for v in r %}<td>{{ v }}</td>{% endfor %}</tr>{% endfor %}</table></div>{% endif %}
+    </div>
+  </a>
+</section>{% endif %}
+
+<div class="mr">
+  <div>
+    <p class="eyebrow" style="margin-bottom:8px">Written for machines</p>
+    <h2>Every page has a version an agent can read</h2>
+    <p>The site describes itself in the formats agents and search engines already look for, so nothing here needs a scraper.</p>
+  </div>
+  <div class="ends">
+    <a class="end" href="/llms.txt"><span class="path">/llms.txt</span><span>the site, for language models</span></a>
+    <a class="end" href="/mcp/server-card"><span class="path">/mcp</span><span>remote MCP server, {{ tool_count }} tools, no key</span></a>
+    <a class="end" href="/openapi.json"><span class="path">/openapi.json</span><span>OpenAPI 3.1 for the query API</span></a>
+    <a class="end" href="/d/{{ becomes.slug }}/index.md"><span class="path">/d/&lt;slug&gt;/index.md</span><span>a Markdown twin of every page</span></a>
+    <a class="end" href="/d/{{ becomes.slug }}/fields.json"><span class="path">/d/&lt;slug&gt;/fields.json</span><span>fields, types, ranges and values</span></a>
+    <a class="end" href="/d/{{ becomes.slug }}/"><span class="path">schema.org Dataset</span><span>on every dataset page, for Dataset Search</span></a>
+    <a class="end" href="/catalog.json"><span class="path">/catalog.json</span><span>a DCAT catalogue of every dataset</span></a>
+    <a class="end" href="/.well-known/ard.json"><span class="path">/.well-known/ard.json</span><span>the site's tools, for agent directories</span></a>
+  </div>
+</div>
+
+<div class="sec-head"><h2>Most wanted</h2><a href="/backlog/">{% if catalogue_total %}Search all {{ catalogue_total }} and vote{% else %}Vote to move a dataset up{% endif %}</a></div>
+<div class="wanted">
+  {% if catalogue_total %}<form class="catsearch" action="/backlog/" method="get" role="search"><label for="cat-q-home" class="vh">Search every dataset</label><input id="cat-q-home" name="q" type="search" placeholder="Search by topic, title or publisher, such as school enrolments"><button class="btn" type="submit">Search</button></form>{% endif %}
+  <p class="muted" style="margin-top:12px">The datasets people have voted for most, which we build in this order. One click adds a vote, and nobody has to say who they are.</p>
+  <div class="tbl"><table class="ledger catlist" id="most-wanted" data-limit="5">
+  <thead><tr><th>Dataset</th><th>Publisher</th><th>Licence and formats</th><th>Votes</th></tr></thead>
+  <tbody>
+  {% for d in backlog_preview %}
+  <tr><td class="t">{{ d.title }}<span class="sub">{{ d.summary }}</span></td><td>{{ d.publisher }} <span class="chip jur">{{ d.jur }}</span></td><td>{{ d.licence }}</td><td><button class="vote" type="button" data-vote="{{ d.slug }}"><b>0</b><span>vote</span></button></td></tr>
+  {% endfor %}
+  </tbody></table></div>
+</div>
+
+<div class="strip trust">
+  <div><h3>Licence first</h3><p>Every dataset carries a licence id, an evidence URL from the publisher's own statement and the attribution the licence asks for. The build refuses to publish anything that is not open.</p></div>
+  <div><h3>Nothing derived</h3><p>Cells are typed and headers are renamed. Rows are left alone. No rates, rankings or thresholds are added, and a suppressed cell stays suppressed.</p></div>
+  <div><h3>Provenance in every file</h3><p>JSON, Parquet, SQLite and GeoJSON carry the publisher, licence, attribution, source URL and source hash inside the file.</p></div>
+  <div><h3>No tracking</h3><p>The only analytics is a first-party Cloudflare beacon. There are no cookies and no accounts.</p></div>
+</div>
+</div>
+{% endblock %}

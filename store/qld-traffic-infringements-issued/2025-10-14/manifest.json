@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-traffic-infringements-issued",
+  "version": "2025-10-14",
+  "as_at": "",
+  "fetched_at": "2026-10-03T02:59:32+00:00",
+  "sha256": "17ed0e7c0fb3961707f0d151ee13e68b9d1797b7c2a677eb1dd8828c0ad37a71",
+  "bytes": 11685510,
+  "filename": "trafficinfringementsissued_2013-2025.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/9dc71923-c651-4b71-8dbe-b9a963814f11/resource/44223888-84db-468e-8434-f5852184b3d9/download/trafficinfringementsissued_2013-2025.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "traffic-infringements-issued",
+    "package_id": "9dc71923-c651-4b71-8dbe-b9a963814f11",
+    "resource": "44223888-84db-468e-8434-f5852184b3d9",
+    "resource_name": "Traffic infringements issued by type, QPS district and region 2013 - 2025",
+    "resource_last_modified": "2025-10-14T03:53:08.922587",
+    "package_modified": "2025-10-15T02:32:09.301480",
+    "package_version": "2025-26",
+    "etag": "dc361755d3596a1717ac1babfb2c9f5a",
+    "http_last_modified": "Tue, 14 Oct 2025 03:53:10 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=traffic-infringements-issued",
+    "read_at": "2026-10-03T02:59:32+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "5b590ca612bfca1156098840cf926e462935912172c1b9ada33786e6a47597db"
+}

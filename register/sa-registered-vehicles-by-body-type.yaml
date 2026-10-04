@@ -1,0 +1,89 @@
+slug: sa-registered-vehicles-by-body-type
+title: Registered vehicles by body type and vehicle type, South Australia
+status: live
+topics:
+- roads
+example:
+  where:
+    vehicle_type:
+      neq: Total
+  group: vehicle_type_detail
+  metric: sum.vehicles
+  label: Registered vehicles
+sample:
+  where:
+    vehicle_type:
+      neq: Total
+  order: [vehicles.desc]
+  label: The ten body types with the most registered vehicles, most first.
+order: 425
+collection: sa-vehicles-and-licences
+collection_title: Registered vehicles and driver's licences, South Australia
+search_title: South Australia registered vehicles by body type, quarterly (DIT)
+also_known_as:
+- Registered Vehicles by Body Type SA
+- TRLB03 registered vehicles
+- Number of registered cars motorcycles and trailers South Australia
+keywords:
+- registered vehicles
+- body type
+- motorcycles
+- trailers
+- vehicle fleet
+- Department for Infrastructure and Transport
+- South Australia
+faq:
+- q: What is in each row?
+  a: The number of vehicles registered in South Australia at the end of the quarter with one body type, such as
+    sedan, solo motorcycle or box trailer, with the vehicle type and the group it falls in.
+- q: What are the Total and TRLB03 rows?
+  a: The publisher ends the table with a Total row for all vehicles and a footer row naming the report and page.
+    Both are kept as published. The footer's count reads DPTI and is a null here.
+- q: Which date does the table cover?
+  a: The newest quarter, the end of June 2026 at the first version. The publisher adds a file each quarter, and
+    each becomes a version here. The files back to 2010 stay on the portal.
+summary: The number of vehicles registered in South Australia at the end of the newest quarter, by body type within
+  each vehicle type. Updated quarterly.
+description: Registered vehicles by body type and vehicle type from the Department for Infrastructure and Transport,
+  which refers to the report as TRLB03. Each row is one body type with the vehicle type, such as vehicle, motorcycle
+  or trailer, the group it falls in, such as cars or buses, and the number registered.
+publisher:
+  name: Department for Infrastructure and Transport
+  short: Infrastructure and Transport
+  jurisdiction: SA
+  url: https://www.dit.sa.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.sa.gov.au/data/dataset/registered-vehicles-by-body-type
+  attribution: Department for Infrastructure and Transport, Government of South Australia, Registered Vehicles by Body Type,
+    https://data.sa.gov.au/data/dataset/registered-vehicles-by-body-type, accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: ckan-resource
+  portal: https://data.sa.gov.au/data
+  package: registered-vehicles-by-body-type
+  resource_match: ^Registered Vehicles by Body Type \(Q\d \d{4}\)$
+  url: https://data.sa.gov.au/data/dataset/registered-vehicles-by-body-type
+  cadence: quarterly
+  header_row: 7
+row_label: Body types
+fields:
+- name: vehicle_type
+  label: Vehicle type
+  source: Vehicle Type
+  type: string
+- name: vehicle_type_detail
+  label: Vehicle group
+  source: Vehicle Type Detail
+  type: string
+- name: body_type
+  label: Body type
+  source: Body Type Description
+  type: string
+- name: vehicles
+  label: Vehicles
+  source: No Of Vehicles
+  type: integer
+  null_values:
+  - DPTI

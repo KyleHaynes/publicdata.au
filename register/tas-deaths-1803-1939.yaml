@@ -1,0 +1,195 @@
+slug: tas-deaths-1803-1939
+title: Tasmanian deaths index, 1803 to 1939
+status: live
+topics:
+- people
+example:
+  where:
+    reg_place:
+      neq: Not stated
+  group: reg_place
+  metric: count
+  label: Deaths registered
+sample:
+  order: [year.desc]
+  label: Records from the newest year in the index, in the publisher's order, with every field.
+order: 486
+temporal_start: '1803-01-01'
+search_title: Tasmanian death records 1803 to 1939 (Libraries Tasmania)
+also_known_as:
+- Tasmanian Names Index deaths
+- Tasmanian Deaths 1803-1939
+- Tasmania death index
+- Tasmanian burial records
+keywords:
+- death records
+- family history
+- genealogy
+- burials
+- Tasmanian Names Index
+- Libraries Tasmania
+- Tasmania
+faq:
+- q: What is in each row?
+  a: One record from the deaths and burials part of the Tasmanian Names Index, with the person's name,
+    the year and date of death or burial, the age, gender, place and year of registration, and the
+    names of parents or spouse where the source gives them. Each row links to the record on the
+    Libraries Tasmania site.
+- q: Why do some cells hold two values?
+  a: Where a record names a person more than once, or gives two years, the values are kept in the
+    publisher's order and joined with a vertical bar.
+- q: Where are the links to the scanned pages?
+  a: The publisher's file nests the archive reference and the address of the scanned page inside each
+    record. They are not carried here. The record address in each row leads to the same record on the
+    Libraries Tasmania site, which shows the scanned page.
+- q: Is it complete?
+  a: The publisher describes it as people who died in Tasmania including some burial records, with
+    burials for 1900 to 1939 only. Some records were compiled by the Tasmanian Family History Society,
+    and the remarks say so on those rows. The series is closed.
+summary: More than 205,000 death and burial records for Tasmania from 1803 to 1939 from the Tasmanian
+  Names Index, one row per record, with name, date, age, gender and place of registration.
+description: The deaths and burials records of the Tasmanian Names Index kept by Libraries Tasmania,
+  covering 1803 to 1939, one row per index record. Each row carries the record number and address, the
+  name of the person, the year and date of death, the age, gender, place and year of registration, the
+  burial date and cemetery where known, and, for some records, the parents, spouse, ship of arrival,
+  military rank, will number or remarks. The publisher's XML file is read one row per record.
+publisher:
+  name: Libraries Tasmania
+  short: Libraries Tasmania
+  jurisdiction: Tas
+  url: https://libraries.tas.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://data.gov.au/data/dataset/tasmanian-deaths-1803-1939
+  attribution: Libraries Tasmania, Tasmanian Government, Tasmanian Deaths (1803-1939),
+    https://data.gov.au/data/dataset/tasmanian-deaths-1803-1939, accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: ckan-resource
+  portal: https://data.gov.au/data
+  package: tasmanian-deaths-1803-1939
+  resource: f4825fdb-17a5-47ab-bb4e-6b9b21bfe6b5
+  url: https://data.gov.au/data/dataset/tasmanian-deaths-1803-1939
+  record: record
+  cadence: closed
+key:
+- record_id
+row_label: Records
+omit:
+  DIGITAL_OBJECT: The archive reference and scanned page address are nested elements inside each record, which the XML reader does not read; the record address leads to the same page.
+fields:
+- name: record_id
+  label: Record ID
+  source: '@id'
+  type: integer
+  description: The publisher's number for the record in the Tasmanian Names Index.
+- name: record_url
+  label: Record address
+  source: RECORD_URL
+  type: string
+- name: name
+  label: Name
+  source: NAME
+  type: string
+  description: Surname, then given names. A second name the record gives follows a vertical bar.
+- name: year
+  label: Year
+  source: YEAR
+  type: string
+  description: The year of death or burial as the index gives it. A few records give two.
+- name: death_date
+  label: Date of death
+  source: DEATH_DATE
+  type: string
+  description: As the source gives it, which may be a full date, a month and year, or a year.
+- name: age
+  label: Age
+  source: AGE
+  type: string
+  description: As recorded, which may be in years or a phrase.
+- name: gender
+  label: Gender
+  source: GENDER
+  type: string
+- name: reg_place
+  label: Place of registration
+  source: REG_PLACE
+  type: string
+- name: reg_year
+  label: Year of registration
+  source: REG_YEAR
+  type: string
+- name: burial_date
+  label: Burial date
+  source: BURIAL_DATE
+  type: string
+- name: property
+  label: Cemetery or institution
+  source: PROPERTY
+  type: string
+- name: property_index
+  label: Cemetery or institution (index)
+  source: PROPERTY_INDEX
+  type: string
+- name: where_died
+  label: Where died
+  source: WHERE_DIED
+  type: string
+- name: desc
+  label: Description
+  source: DESC
+  type: string
+- name: desc_sr
+  label: Description (second)
+  source: DESC_SR
+  type: string
+- name: remarks
+  label: Remarks
+  source: REMARKS
+  type: string
+- name: father
+  label: Father
+  source: FATHER
+  type: string
+- name: mother
+  label: Mother
+  source: MOTHER
+  type: string
+- name: spouse
+  label: Spouse
+  source: SPOUSE
+  type: string
+- name: name_see_also
+  label: See also
+  source: NAME_SEE_ALSO
+  type: string
+- name: name_see_also_sp
+  label: See also (spouse)
+  source: NAME_SEE_ALSO_SP
+  type: string
+- name: name_rank
+  label: Rank
+  source: NAME_RANK
+  type: string
+- name: ship
+  label: Ship
+  source: SHIP
+  type: string
+- name: ship_native_place
+  label: Ship or native place
+  source: SHIP_NATIVE_PLACE
+  type: string
+- name: admiss_date
+  label: Admission date
+  source: ADMISS_DATE
+  type: string
+- name: birth_date
+  label: Birth date
+  source: BIRTH_DATE
+  type: string
+- name: will_no
+  label: Will number
+  source: WILL_NO
+  type: string
+note: Headers were made snake_case. The publisher's element names are kept beside every field in
+  schema.json. Rows were left alone.

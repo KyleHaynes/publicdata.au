@@ -1,0 +1,110 @@
+slug: sa-registered-vehicles-by-postcode
+title: Registered vehicles by owner postcode, make and body type, South Australia
+status: live
+topics:
+- roads
+example:
+  group: make
+  metric: sum.vehicles
+  label: Registered vehicles
+chart:
+  where:
+    year_of_manufacture:
+      gt: 1900
+  split: none
+  metric: sum.vehicles
+  label: Registered vehicles by year of manufacture
+sample:
+  order: [vehicles.desc]
+  label: The largest counts in the table, largest first, with each body type taking turns.
+order: 423
+collection: sa-vehicles-and-licences
+collection_title: Registered vehicles and driver's licences, South Australia
+collection_description: Counts of the vehicles registered and the driver's licences held in South Australia, from the
+  Department for Infrastructure and Transport. The tables count registered vehicles by owner postcode, by colour and
+  by body type, and current licences by postcode, age and sex.
+collection_search_title: SA vehicle registration and driver's licence statistics (DIT)
+search_title: South Australia registered vehicles by postcode, make and year (DIT)
+also_known_as:
+- Registered Vehicles by Postcode SA
+- TRLB04 registered vehicles
+- Number of cars by postcode South Australia
+- SA vehicle registrations by make and model year
+keywords:
+- registered vehicles
+- vehicle registrations
+- cars by postcode
+- vehicle make
+- motor vehicles
+- Department for Infrastructure and Transport
+- South Australia
+faq:
+- q: What is in each row?
+  a: The number of vehicles registered at 30 June to owners in one postcode that share one make, body type, number
+    of cylinders and year of manufacture. Trailers and caravans are counted with the other vehicles and have no
+    cylinders.
+- q: Which date does the table cover?
+  a: The newest file, vehicles registered at 30 June 2026 at the first version. The publisher adds a file each
+    July, and each becomes a version here. The files back to 2014 stay on the portal.
+- q: Why do so many vehicles date from 1900?
+  a: The publisher appears to use 1900 where the year of manufacture is not known. That year holds far more
+    vehicles than any year before the 1920s, most of them trailers. The chart leaves it out.
+- q: Why do some postcodes have three digits?
+  a: The publisher gives some Northern Territory postcodes without their leading zero, such as 835. They are kept
+    as published.
+summary: The number of vehicles registered in South Australia at 30 June, counted by owner postcode, make, body
+  type, cylinders and year of manufacture. Updated yearly.
+description: 'Registered vehicles by postcode from the Department for Infrastructure and Transport, which refers to
+  the report as TRLB04. Each row is one owner postcode, vehicle make, body type, number of cylinders and year of
+  manufacture, with the count of registered vehicles that share them.'
+publisher:
+  name: Department for Infrastructure and Transport
+  short: Infrastructure and Transport
+  jurisdiction: SA
+  url: https://www.dit.sa.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.sa.gov.au/data/dataset/registered-vehicles-by-postcode
+  attribution: Department for Infrastructure and Transport, Government of South Australia, Registered Vehicles by Postcode,
+    https://data.sa.gov.au/data/dataset/registered-vehicles-by-postcode, accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: ckan-resource
+  portal: https://data.sa.gov.au/data
+  package: registered-vehicles-by-postcode
+  resource_match: ^Registered [Vv]ehicles by [Pp]ostcode at 30 June \d{4}$
+  url: https://data.sa.gov.au/data/dataset/registered-vehicles-by-postcode
+  cadence: yearly
+row_label: Vehicle counts
+partition_by:
+- body_type
+fields:
+- name: owner_postcode
+  label: Owner postcode
+  source: Owner PostCode
+  type: string
+- name: make
+  label: Make
+  source: Vehicle Make
+  type: string
+- name: body_type
+  label: Body type
+  source: Vehicle Body Type
+  type: string
+- name: cylinders
+  label: Cylinders
+  source: Vehicle Number of Cylinders
+  type: string
+  description: As the publisher writes it, such as 4 Cylinders or Rotary. It is blank for trailers and caravans,
+    and for many electric vehicles.
+- name: year_of_manufacture
+  label: Year of manufacture
+  source: Vehicle Year of Manufacture
+  type: integer
+- name: vehicles
+  label: Vehicles
+  source: Count of Vehicle ROIDs
+  type: integer
+omit:
+  Total(TOTAL_VEHICLES): Blank in every row of the publisher's file.

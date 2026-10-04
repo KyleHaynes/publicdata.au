@@ -1,0 +1,30 @@
+{
+  "dataset": "act-road-crashes",
+  "version": "2026-09-30",
+  "as_at": "",
+  "fetched_at": "2026-09-30T12:10:18+00:00",
+  "sha256": "562d854d4e03821e4ceeb788a6a4f343e77988b31de124316de989e03a6bca93",
+  "bytes": 14256520,
+  "filename": "6jn4-m8rx.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.act.gov.au/api/views/6jn4-m8rx/rows.csv?accessType=DOWNLOAD",
+    "portal": "https://www.data.act.gov.au",
+    "package": "6jn4-m8rx",
+    "resource_name": "ACT Road Crash Data",
+    "rows_updated_at": 1790696218,
+    "etag": "Z29sZi45OTI3XzNfNzQzNlltSkY1eF96YThLbjNCQ1RLMWIta3VIeS1VSQ---gzinFfY4dwER7KqNOy03LOuP2O4aG0--gzip--gzip",
+    "http_last_modified": "Tue, 29 Sep 2026 15:37:11 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "stated": "CC_40_BY",
+    "normalised": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0 International",
+    "url": "http://creativecommons.org/licenses/by/4.0/legalcode",
+    "read_at": "2026-09-30T12:10:11+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": []
+}

@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-translink-origin-destination-stops",
+  "version": "2026-08-20",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:02:56+00:00",
+  "sha256": "37992131ac5f8e747a790678fdffeb78e8327695d4b4ca45e6645be407423189",
+  "bytes": 1187226,
+  "filename": "origin-destination-stops-jan25.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/aeee186f-da4c-41cd-a6b2-85d11c7bd503/resource/c76cbe1f-b42b-4e2a-acba-0f092cb21174/download/origin-destination-stops-jan25.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "translink-origin-destination-trips-2022-onwards",
+    "package_id": "aeee186f-da4c-41cd-a6b2-85d11c7bd503",
+    "resource": "c76cbe1f-b42b-4e2a-acba-0f092cb21174",
+    "resource_name": "Origin-Destination Stops",
+    "resource_last_modified": "2026-08-19T23:52:36.289801",
+    "package_modified": "2026-08-30T22:00:00.529212",
+    "package_version": "2.0",
+    "etag": "681d1cb2221da572e7b34379ecdf44d3",
+    "http_last_modified": "Wed, 26 Mar 2025 03:09:25 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=translink-origin-destination-trips-2022-onwards",
+    "read_at": "2026-10-03T03:02:55+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "c548961cfc6c1dc07e108bbd369738e38cd5015c4a2fe3af1e44b7eb3912c160"
+}

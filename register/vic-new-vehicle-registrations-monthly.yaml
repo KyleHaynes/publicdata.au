@@ -1,0 +1,87 @@
+slug: vic-new-vehicle-registrations-monthly
+title: New vehicles registered each month by make and model, Victoria
+status: live
+topics:
+- roads
+example:
+  group: make
+  metric: sum.vehicles
+  label: New vehicles
+sample:
+  order: [vehicles.desc]
+  label: The ten make, model and colour combinations with the most new vehicles registered in the month, most first.
+order: 394
+collection: vic-vehicle-registrations
+collection_title: Victorian vehicle registration counts
+publisher:
+  name: Department of Transport and Planning
+  short: Transport and Planning
+  jurisdiction: Vic
+  url: https://www.vic.gov.au/department-transport-and-planning
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://discover.data.vic.gov.au/dataset/monthly-new-vehicle-registration
+  attribution: Department of Transport and Planning, Victorian Government, Monthly New Vehicle Registration, sourced {sourced}, https://discover.data.vic.gov.au/dataset/monthly-new-vehicle-registration,
+    licensed under CC BY 4.0.
+search_title: New car registrations by make and model each month, Victoria (VicRoads)
+also_known_as:
+- Monthly New Vehicle Registration
+- New car sales Victoria by model
+- VicRoads new vehicle registrations
+keywords:
+- new vehicle registrations
+- new car registrations
+- car models
+- VicRoads
+- Victoria
+faq:
+- q: What does each row hold?
+  a: The number of new vehicles registered in Victoria in the month that share one make, model, body
+    colour and year of manufacture. Boats and trailers are not included.
+- q: Which month is it?
+  a: Each version is the newest month the department has released, named on the portal. The portal also
+    lists each earlier month of 2025 and 2026 as its own file, and 2023 and 2024 as zip files.
+- q: What do the codes mean?
+  a: Make and model are the register's codes of up to six characters and colour a three letter code, as
+    the register holds them.
+summary: The number of new vehicles registered in Victoria in the month by make, model, body colour and
+  year of manufacture.
+description: Monthly new vehicle registrations from the Department of Transport and Planning. Each row
+  is the count of new vehicles registered in the month that share a make, model, body colour and year of
+  manufacture. Boats and trailers are not included.
+chart: none
+source:
+  adapter: ckan-resource
+  portal: https://discover.data.vic.gov.au
+  package: monthly-new-vehicle-registration
+  resource_match: ^Monthly New Vehicle Registration [A-Z][a-z]+ \d{4}$
+  url: https://discover.data.vic.gov.au/dataset/monthly-new-vehicle-registration
+  cadence: monthly
+  encoding: utf-8-sig
+row_label: Vehicle counts
+fields:
+- name: make
+  label: Make
+  source: CD_MAKE_VEH
+  type: string
+  description: The register's make code, up to six characters.
+- name: model
+  label: Model
+  source: CD_MODEL_VEH
+  type: string
+  description: The register's model code, up to six characters.
+- name: colour
+  label: Body colour
+  source: CD_CLR_BDY_VEH_P
+  type: string
+  description: The register's three letter colour code.
+- name: year_of_manufacture
+  label: Year of manufacture
+  source: NB_YEAR_MFC_VEH
+  type: integer
+- name: vehicles
+  label: New vehicles registered
+  source: TOTAL
+  type: integer

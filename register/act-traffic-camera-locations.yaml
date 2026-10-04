@@ -1,0 +1,117 @@
+slug: act-traffic-camera-locations
+title: Traffic camera locations, ACT
+status: live
+topics:
+- roads
+- places
+example:
+  group: camera_type
+  metric: count
+chart:
+  label: Camera locations decommissioned
+sample:
+  where: {latitude: {lt: 0}}
+  order: [camera_type]
+  spread: camera_type
+  label: One location of each camera type in turn, in the publisher's order, leaving out rows with no coordinates.
+order: 457
+collection: act-traffic-fines
+collection_title: Traffic and parking fines in the ACT
+search_title: ACT speed camera and red light camera locations (Access Canberra)
+also_known_as:
+- Canberra speed camera locations
+- ACT red light camera locations
+- ACT point to point camera locations
+- ACT mobile speed camera sites
+keywords:
+- speed camera locations
+- red light cameras
+- point to point cameras
+- mobile speed camera sites
+- Canberra
+- ACT
+faq:
+- q: What is in each row?
+  a: One traffic enforcement camera or mobile speed camera site, with its camera type, its location codes,
+    its coordinates, a description of the place and the date it was decommissioned if it has been.
+- q: Are decommissioned cameras included?
+  a: Yes. The publisher keeps every location, including those no longer in use, and gives the date a
+    camera was decommissioned.
+- q: Does every location have coordinates?
+  a: No. Some older mobile sites have no latitude or longitude, and three rows carry only the
+    publisher's text of the coordinates with no camera type or code. They are kept as published, and one
+    row that is blank in every column is left out.
+- q: How do I link it to the fines?
+  a: The camera location code matches the camera location in the ACT traffic and camera fines tables in
+    this collection. The publisher says some cleaning may be needed for the codes to match.
+summary: Every traffic enforcement camera and mobile speed camera site in the ACT, including those
+  decommissioned, one row per location with its type and coordinates.
+description: The locations of the ACT's traffic enforcement cameras as Access Canberra lists them, with
+  fixed speed cameras, red light and speed cameras, point to point cameras and mobile speed camera sites.
+  Each row carries the camera type, the camera location code, the location code, the latitude and
+  longitude, a description of the location, the publisher's own text of the coordinates and the date the
+  camera was decommissioned where that applies.
+publisher:
+  name: Access Canberra, City and Environment Directorate
+  short: Access Canberra
+  jurisdiction: ACT
+  url: https://www.accesscanberra.act.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.act.gov.au/d/426s-vdu4
+  attribution: Access Canberra, ACT Government, Traffic speed camera locations, https://www.data.act.gov.au/d/426s-vdu4,
+    accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: socrata
+  portal: https://www.data.act.gov.au
+  package: 426s-vdu4
+  url: https://www.data.act.gov.au/d/426s-vdu4
+  cadence: monthly
+partition_by:
+- camera_type
+geometry:
+  lon: longitude
+  lat: latitude
+  crs: EPSG:4283
+  crs_note: Longitude and latitude in decimal degrees as published. The publisher does not name the
+    datum; GDA94 differs from GDA2020 and WGS84 by under 2 metres.
+row_label: Camera locations
+fields:
+- name: camera_type
+  label: Camera type
+  source: CAMERA TYPE
+  type: string
+- name: camera_location_code
+  label: Camera location code
+  source: CAMERA LOCATION CODE
+  type: string
+- name: location_code
+  label: Location code
+  source: LOCATION_CODE
+  type: string
+- name: latitude
+  label: Latitude
+  source: LATITUDE
+  type: number
+- name: longitude
+  label: Longitude
+  source: LONGITUDE
+  type: number
+- name: location_description
+  label: Location
+  source: LOCATION DESCRIPTION
+  type: string
+- name: location
+  label: Location as text
+  source: Location
+  type: string
+  description: The publisher's own text of the coordinates, as (latitude, longitude).
+- name: decommissioned_date
+  label: Decommissioned
+  source: Decommissioned Camera_Date
+  type: date
+  date_format: '%b %Y'
+  description: The month the camera was decommissioned, as its first day. Blank for a camera in use.
+note: Cells were typed and headers were made snake_case. The publisher's header is kept beside every field
+  in schema.json. Rows were left alone.

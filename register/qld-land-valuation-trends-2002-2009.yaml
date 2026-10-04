@@ -1,0 +1,144 @@
+slug: qld-land-valuation-trends-2002-2009
+title: Change in land values by council area, Queensland, 2002 to 2009
+status: live
+topics:
+- housing
+order: 251
+collection: qld-land-valuation-trends
+collection_title: Historical trends in land valuations, Queensland
+temporal_start: '2002-01-01'
+search_title: Queensland land valuation change by council area, 2002 to 2009
+also_known_as:
+- Queensland land valuation trends before amalgamation
+- QLD land value change by former council 2002 to 2009
+keywords:
+- land valuation
+- land values
+- statutory valuation
+- amalgamation
+- Queensland
+faq:
+- q: What does each figure mean?
+  a: Each figure is the overall percentage change in statutory land values in a local government area at that
+    year's annual valuation, compared with its previous valuation. A council area is not valued every year,
+    and the publisher writes NV for a year it was not valued. NV is kept as a null value here.
+- q: Why do the council names differ from today?
+  a: The table covers the councils as they were before the 2008 amalgamations. The last column names the council
+    each became part of.
+summary: The overall percentage change in statutory land values in each pre-amalgamation Queensland council
+  area at each annual valuation from 2002 to 2009.
+description: One row per council area as it stood before the 2008 amalgamations, with the overall percentage
+  change in statutory land values at its annual valuation for each year from 2002 to 2009 and the council it
+  became part of. A year in which the area was not valued is null, including two cells where the publisher's
+  NV carries a stray character. The first row counts the areas valued each year.
+publisher:
+  name: Department of Natural Resources and Mines, Manufacturing and Regional and Rural Development
+  short: Natural Resources and Mines
+  jurisdiction: Qld
+  url: https://www.nrmmrrd.qld.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/historical-trends-in-land-valuations
+  attribution: Department of Natural Resources and Mines, Manufacturing and Regional and Rural Development,
+    Queensland Government, Historical trends in land valuations, sourced {sourced}, https://www.data.qld.gov.au/dataset/historical-trends-in-land-valuations,
+    licensed under CC BY 3.0 AU.
+  portal_id: CC-BY-3.0
+example:
+  where: {lga: {neq: Total number of LGAs valued}}
+  group: post_amalgamation_lga
+  metric: count
+  label: Former council areas that became part of each council at the 2008 amalgamations
+sample:
+  where: {lga: {neq: Total number of LGAs valued}}
+  label: Council areas in the publisher's order, leaving out the row at the top that counts the areas valued.
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: historical-trends-in-land-valuations
+  resource: 74f9b06c-4917-4ee9-829c-a6af1c3cb3e9
+  url: https://www.data.qld.gov.au/dataset/historical-trends-in-land-valuations
+  cadence: historical, not updated
+  encoding: cp1252
+row_label: Council areas
+fields:
+- name: lga
+  label: Council area
+  source: LGA
+  type: string
+- name: change_2002
+  label: 2002 change (%)
+  source: '2002'
+  type: number
+  null_values:
+  - NV
+  - NVÿ
+  description: Overall change in statutory land values at the 2002 valuation since the previous one, in per
+    cent. Null where the publisher writes NV, the area not being valued that year.
+- name: change_2003
+  label: 2003 change (%)
+  source: '2003'
+  type: number
+  null_values:
+  - NV
+  - NVÿ
+  description: Overall change in statutory land values at the 2003 valuation since the previous one, in per
+    cent. Null where the publisher writes NV, the area not being valued that year.
+- name: change_2004
+  label: 2004 change (%)
+  source: '2004'
+  type: number
+  null_values:
+  - NV
+  - NVÿ
+  description: Overall change in statutory land values at the 2004 valuation since the previous one, in per
+    cent. Null where the publisher writes NV, the area not being valued that year.
+- name: change_2005
+  label: 2005 change (%)
+  source: '2005'
+  type: number
+  null_values:
+  - NV
+  - NVÿ
+  description: Overall change in statutory land values at the 2005 valuation since the previous one, in per
+    cent. Null where the publisher writes NV, the area not being valued that year.
+- name: change_2006
+  label: 2006 change (%)
+  source: '2006'
+  type: number
+  null_values:
+  - NV
+  - NVÿ
+  description: Overall change in statutory land values at the 2006 valuation since the previous one, in per
+    cent. Null where the publisher writes NV, the area not being valued that year.
+- name: change_2007
+  label: 2007 change (%)
+  source: '2007'
+  type: number
+  null_values:
+  - NV
+  - NVÿ
+  description: Overall change in statutory land values at the 2007 valuation since the previous one, in per
+    cent. Null where the publisher writes NV, the area not being valued that year.
+- name: change_2008
+  label: 2008 change (%)
+  source: '2008'
+  type: number
+  null_values:
+  - NV
+  - NVÿ
+  description: Overall change in statutory land values at the 2008 valuation since the previous one, in per
+    cent. Null where the publisher writes NV, the area not being valued that year.
+- name: change_2009
+  label: 2009 change (%)
+  source: '2009'
+  type: number
+  null_values:
+  - NV
+  - NVÿ
+  description: Overall change in statutory land values at the 2009 valuation since the previous one, in per
+    cent. Null where the publisher writes NV, the area not being valued that year.
+- name: post_amalgamation_lga
+  label: Council after amalgamation
+  source: Post-amalgamation LGA
+  type: string

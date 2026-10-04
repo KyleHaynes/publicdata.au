@@ -1,0 +1,34 @@
+{
+  "dataset": "nsw-popular-baby-names",
+  "version": "2026-03-26",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:03:17+00:00",
+  "sha256": "1335e7311868520ea172a1de107a1a1d5d655909c77afa531c1d92fbee1e37c2",
+  "bytes": 378688,
+  "filename": "popular_baby_names_1952_to_2025.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://data.nsw.gov.au/data/dataset/a677cbe2-91e1-4e45-b771-08830d3d9e41/resource/2adcb228-9101-4c95-a786-b3216539b4a2/download/popular_baby_names_1952_to_2025.csv",
+    "portal": "https://data.nsw.gov.au/data",
+    "package": "popular-baby-names-from-1952",
+    "package_id": "a677cbe2-91e1-4e45-b771-08830d3d9e41",
+    "resource": "2adcb228-9101-4c95-a786-b3216539b4a2",
+    "resource_name": "Popular Baby Names 1952 to 2025",
+    "resource_last_modified": "2026-03-25T22:00:37.643858",
+    "package_modified": "2026-07-16T03:41:27.012603",
+    "package_version": null,
+    "etag": "1774476037.0-378688-1131944138",
+    "http_last_modified": "Wed, 25 Mar 2026 22:00:37 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution",
+    "url": "http://www.opendefinition.org/licenses/cc-by",
+    "read_from": "https://data.nsw.gov.au/data/api/3/action/package_show?id=popular-baby-names-from-1952",
+    "read_at": "2026-10-03T03:03:16+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "c5e0c2e6bd2973cc596f85dd8637009f9113bb182329529bbc4d1aece3dfdbb0"
+}

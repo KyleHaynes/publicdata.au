@@ -1,0 +1,79 @@
+slug: act-licences-transferred-to-act
+title: Interstate and overseas driver licences transferred to the ACT
+status: live
+topics:
+- roads
+- migration
+example:
+  group: jurisdiction
+  metric: sum.transferred_to_act
+  label: Licences transferred
+chart:
+  split: jurisdiction
+  metric: sum.transferred_to_act
+  label: Licences transferred
+order: 461
+collection: act-vehicles-licences
+collection_title: Vehicle registrations and driver licence transfers in the ACT
+temporal_start: '2019-01-01'
+search_title: Interstate and overseas driver licences transferred to the ACT by month (Access Canberra)
+also_known_as:
+- Driver licences transferred to the ACT
+- Overseas licence conversions in Canberra
+- People moving to Canberra by licence transfer
+keywords:
+- driver licences
+- licence transfers
+- overseas licence conversion
+- interstate migration
+- Canberra
+- ACT
+faq:
+- q: What is in each row?
+  a: One month and one jurisdiction the licence came from, another state or territory or overseas, with
+    the number of licences transferred to the ACT.
+- q: Does this measure people moving to the ACT?
+  a: It counts licence transfers, which usually follow a move. A person who arrives
+    without a licence, or keeps another licence, is not counted.
+summary: The number of driver licences from other states and from overseas transferred to the ACT each
+  month since January 2019, by the jurisdiction they came from.
+description: Monthly counts of interstate and overseas driver licences transferred to the ACT, from
+  January 2019, as Access Canberra records them. Each row carries the month, the jurisdiction the licence
+  was transferred from and the number transferred.
+publisher:
+  name: Access Canberra, City and Environment Directorate
+  short: Access Canberra
+  jurisdiction: ACT
+  url: https://www.accesscanberra.act.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.act.gov.au/d/i499-ptev
+  attribution: Access Canberra, ACT Government, Interstate and Overseas Driver Licences Transferred to the ACT,
+    https://www.data.act.gov.au/d/i499-ptev, accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: socrata
+  portal: https://www.data.act.gov.au
+  package: i499-ptev
+  url: https://www.data.act.gov.au/d/i499-ptev
+  cadence: monthly
+partition_by:
+- jurisdiction
+row_label: Months
+fields:
+- name: month
+  label: Month
+  source: Date
+  type: date
+  date_format: '%b %Y'
+  description: The month of the transfers, as its first day.
+- name: jurisdiction
+  label: Previous jurisdiction
+  source: Jurisdiction
+  type: string
+- name: transferred_to_act
+  label: Licences transferred to the ACT
+  source: Sum_of_no_transferred_to_the_ACT
+  type: integer
+note: Cells were typed and headers were made snake_case. The publisher's header is kept beside every field
+  in schema.json. Rows were left alone.

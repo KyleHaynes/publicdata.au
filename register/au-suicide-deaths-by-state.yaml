@@ -1,0 +1,123 @@
+slug: au-suicide-deaths-by-state
+title: Deaths by suicide by state, sex and year, Australia
+status: live
+topics:
+- health
+example:
+  where:
+    measure: Age-standardised rate (per 100,000)
+    sex: Persons
+    year: newest
+  group: state
+  metric: avg.value
+  label: Age-standardised suicide rate per 100,000 people in each state in the newest year
+chart:
+  where:
+    measure: Number
+    state: Australia
+    sex:
+      neq: Persons
+  split: sex
+  metric: sum.value
+  label: Deaths by suicide
+sample:
+  where:
+    year: newest
+    measure: Number
+  spread: sex
+  label: Deaths by suicide in the newest year in each state, males, females and persons in turn.
+order: 67
+publisher:
+  name: Australian Institute of Health and Welfare
+  short: AIHW
+  jurisdiction: Cth
+  url: https://www.aihw.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.aihw.gov.au/copyright
+  statement: has been released under a Creative Commons BY 4.0 (CC-BY 4.0) licence
+  attribution: Based on Australian Institute of Health and Welfare material. Australian Institute of Health
+    and Welfare, Australian Government, Suicide and self-harm monitoring, National Mortality Database
+    table NMD 3a, sourced {sourced}, https://www.aihw.gov.au/suicide-self-harm-monitoring/resources/download-data-tables,
+    licensed under CC BY 4.0.
+temporal_start: '1979-01-01'
+search_title: Suicide rates and deaths by state and sex each year since 1979, Australia (AIHW)
+also_known_as:
+- Suicide statistics Australia by state
+- Suicide rate by state and year
+- Deaths by suicide National Mortality Database
+- AIHW suicide monitoring NMD 3a
+keywords:
+- suicide
+- suicide rate
+- deaths by suicide
+- suicide statistics
+- mental health
+- AIHW
+- Australia
+faq:
+- q: What is in each row?
+  a: Deaths by suicide for one sex, one year from 1979 and one state or territory, as the number of deaths,
+    the age-standardised rate per 100,000 or the crude rate per 100,000, whichever the measure column
+    names. The Australia column of the Institute's table is kept as a state value named Australia.
+- q: Where do the figures come from?
+  a: The Institute's Suicide and self-harm monitoring data tables, built from the National Mortality Database,
+    which holds the causes of death the ABS codes from registrations. The Institute writes n.p. where
+    a figure is not published because the count is small, and those cells are null here with a suppressed
+    flag. Year of death is the year the death was registered.
+- q: Why does the attribution say "based on" AIHW material?
+  a: The Institute publishes its data tables under CC BY 4.0 and asks that material adapted from them,
+    which republishing in other formats is, carry the words "Based on Australian Institute of Health and
+    Welfare material". Every file here carries them. The Institute has not endorsed this site.
+summary: Deaths by suicide and age-standardised suicide rates for each state and territory by sex and
+  year since 1979, from the AIHW National Mortality Database tables. Updated yearly.
+description: Table NMD 3a of the Australian Institute of Health and Welfare's Suicide and self-harm monitoring
+  data tables, deaths by suicide by state or territory, sex and year, one row per sex, year, measure and
+  state, with the number of deaths, the age-standardised rate or the crude rate per 100,000 population. The Institute
+  publishes the table with a column per state; it is one row per state here.
+source:
+  adapter: file
+  url: https://www.aihw.gov.au/getmedia/3b28804a-27e5-41a9-9914-473a26b09750/AIHW_suicide-and-self-harm-monitoring_NMD_suicide.xlsx
+  cadence: yearly
+wide:
+  sheets:
+  - Table NMD 3a
+  header_row: 2
+  header_rows: 1
+  row_headers: 3
+key:
+- sex
+- year
+- measure
+- state
+partition_by:
+- measure
+suppression:
+- n.p.
+row_label: Table lines
+fields:
+- name: sex
+  label: Sex
+  source: (row header 1)
+  type: string
+- name: year
+  label: Year
+  source: (row header 2)
+  type: integer
+- name: measure
+  label: Measure
+  source: (row header 3)
+  type: string
+- name: state
+  label: State
+  source: (column header 1)
+  type: string
+- name: value
+  label: Value
+  source: (cell)
+  type: number
+  null_values:
+  - —
+  description: The number of deaths or the rate, as the measure names. The Institute writes an em dash
+    where a figure is not applicable; it is null here.

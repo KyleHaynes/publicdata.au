@@ -1,0 +1,147 @@
+slug: qld-vessel-registrations
+title: Registered recreational vessels, Queensland, June 2020
+status: live
+topics:
+- roads
+order: 218
+search_title: Queensland registered boats by postcode, make and length (Transport and Main Roads)
+also_known_as:
+- Queensland boat registrations
+- QLD recreational vessel register
+- Registered boats by suburb Queensland
+- Jet ski registrations Queensland
+keywords:
+- boat registrations
+- recreational vessels
+- boats
+- personal watercraft
+- vessel register
+- Queensland
+faq:
+- q: What is in each row?
+  a: One recreational vessel on the Queensland register on 30 June 2020, with the postcode, suburb and
+    state of its owner's address, its registration category, term and purpose of use, make, model, colour,
+    body shape, length and draught in metres, whether it is fitted with sails, and the type, make and
+    model of up to two engines. No registration mark or owner is included.
+- q: Are commercial vessels included?
+  a: No. The department's extract covers recreational vessels only.
+- q: How current is it?
+  a: The department states the extract is the register as at 30 June 2020, and the portal record was last
+    changed in March 2026.
+summary: Every recreational vessel registered in Queensland on 30 June 2020, one row per vessel, with
+  the owner's postcode and suburb, make, model, length and engines.
+description: An extract of the Queensland recreational vessel register as at 30 June 2020 from the Department
+  of Transport and Main Roads, one row per registered vessel. Each row has the postcode, suburb and state
+  of the registered address, the registration category, term and purpose of use, the make, model, colour
+  and body shape, length and draught, whether it has sails, and up to two engines. Commercial vessels
+  are not included.
+publisher:
+  name: Department of Transport and Main Roads
+  short: Transport and Main Roads
+  jurisdiction: Qld
+  url: https://www.tmr.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/vessel-registrations
+  attribution: Department of Transport and Main Roads, Queensland Government, Vessel registrations, sourced
+    {sourced}, https://www.data.qld.gov.au/dataset/vessel-registrations, licensed under CC BY 4.0.
+sample:
+  where: {state: QLD}
+  spread: body_shape
+  label: Vessels with a Queensland address, in the publisher's order, with each body shape in turn.
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: vessel-registrations
+  resource: 5a49f720-b0ca-47a8-a19b-24f7fc9493b4
+  url: https://www.data.qld.gov.au/dataset/vessel-registrations
+  encoding: utf-8-sig
+  cadence: irregular
+partition_by:
+- state
+row_label: Vessels
+fields:
+- name: postcode
+  label: Postcode
+  source: POST_CODE
+  type: string
+  description: Postcode of the registered address. Kept as text.
+- name: suburb
+  label: Suburb
+  source: SUBURB
+  type: string
+- name: state
+  label: State
+  source: STATE
+  type: string
+- name: registration_category
+  label: Registration category
+  source: REG_CATEGORY
+  type: string
+- name: registration_term
+  label: Registration term (months)
+  source: REG_TERM
+  type: integer
+- name: purpose_of_use
+  label: Purpose of use
+  source: PURPOSE_OF_USE
+  type: string
+- name: make
+  label: Make
+  source: MAKE
+  type: string
+- name: model
+  label: Model
+  source: MODEL
+  type: string
+- name: colour
+  label: Colour
+  source: COLOUR
+  type: string
+- name: body_shape
+  label: Body shape
+  source: BODY_SHAPE
+  type: string
+- name: length_m
+  label: Length (m)
+  source: LENGTH
+  type: number
+- name: draught_m
+  label: Draught (m)
+  source: DRAUGHT
+  type: number
+- name: fitted_with_sails
+  label: Fitted with sails
+  source: FITTED_WITH_SAILS
+  type: boolean
+  true_values:
+  - 'YES'
+  false_values:
+  - 'NO'
+- name: engine_1_type
+  label: Engine 1 type
+  source: ENGINE_1_TYPE
+  type: string
+- name: engine_1_make
+  label: Engine 1 make
+  source: ENGINE_1_MAKE
+  type: string
+- name: engine_1_model
+  label: Engine 1 model
+  source: ENGINE_1_MODEL
+  type: string
+  description: Often the engine's power as the register records it, such as 150HP/111.8KW.
+- name: engine_2_type
+  label: Engine 2 type
+  source: ENGINE_2_TYPE
+  type: string
+- name: engine_2_make
+  label: Engine 2 make
+  source: ENGINE_2_MAKE
+  type: string
+- name: engine_2_model
+  label: Engine 2 model
+  source: ENGINE_2_MODEL
+  type: string
+note: Cells were typed and headers were made snake_case. Rows were left alone.

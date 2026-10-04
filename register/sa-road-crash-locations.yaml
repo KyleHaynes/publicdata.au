@@ -1,0 +1,204 @@
+slug: sa-road-crash-locations
+title: Road crash locations, South Australia
+status: live
+topics:
+- roads
+example:
+  group: lga_2025_name
+  metric: sum.total_fatalities
+sample:
+  order: [total_crashes.desc]
+  label: The ten sites with the most crashes in the five years, most first.
+order: 14
+temporal_start: '2020-01-01'
+search_title: South Australia road crash locations
+also_known_as:
+- Road Crash Locations in SA
+- SA crash sites
+- South Australian car accident locations
+- DIT road crash data
+keywords:
+- road crash
+- car accident
+- crash statistics
+- crash locations
+- road safety
+- South Australia
+- Department for Infrastructure and Transport
+faq:
+- q: Is each row one crash?
+  a: No. Each row is one location where crashes happened in the five years, with the number of crashes
+    there and counts by severity, crash type and road user. The publisher's separate Road Crash Data
+    files on the portal have one row per crash, without coordinates.
+- q: Why does the file cover only five years?
+  a: The publisher releases a new five-year file each year and keeps the earlier files on the portal.
+    This dataset follows the newest file, so each release becomes a version here.
+- q: Which coordinates are these?
+  a: The publisher supplies the same file in GDA94 and GDA2020. This dataset uses the GDA2020 file,
+    which is the current national datum.
+summary: Every location where a crash was reported on a South Australian road from 2020 to 2024, one row
+  per site, with counts of crashes by severity and type and of casualties.
+description: 'One row per location where a road crash was reported to South Australia Police from 2020
+  to 2024. Each row carries the site''s coordinates, the number of crashes there, and counts of those
+  crashes by severity (property damage, injury, serious injury, fatal), by type (rear end, hit fixed
+  object, head on and others), at night, and involving a bicycle or a pedestrian, with the numbers of
+  casualties, serious injuries and deaths.
+
+
+  The Department for Infrastructure and Transport releases a new five-year file each year.'
+publisher:
+  name: Department for Infrastructure and Transport
+  short: Infrastructure and Transport
+  jurisdiction: SA
+  url: https://www.dit.sa.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.sa.gov.au/data/dataset/road-crashes-in-sa
+  attribution: Department for Infrastructure and Transport, Government of South Australia, Road Crash
+    Locations in SA, https://data.sa.gov.au/data/dataset/road-crashes-in-sa, accessed {sourced},
+    licensed under CC BY 4.0.
+source:
+  adapter: ckan-resource
+  portal: https://data.sa.gov.au/data
+  package: road-crashes-in-sa
+  resource: 5fcbce14-ad30-4737-aa7d-5b1cfb939eb9
+  member: RoadCrashes_GDA2020.geojson
+  url: https://data.sa.gov.au/data/dataset/road-crashes-in-sa
+  cadence: yearly
+key:
+- unique_loc
+enrich:
+- sa2
+- lga
+- suburb
+- postcode
+- state_electorate
+- federal_electorate
+geometry:
+  lon: longitude
+  lat: latitude
+  crs: EPSG:7844
+  crs_note: Coordinates are longitude and latitude in GDA2020 (EPSG:7844), from the publisher's GDA2020
+    file.
+row_label: Crash sites
+fields:
+- name: unique_loc
+  label: Location ID
+  source: unique_loc
+  type: string
+  description: The publisher's identifier for the location. Kept as text to preserve leading zeros.
+- name: longitude
+  label: Longitude
+  source: (longitude)
+  type: number
+  description: Decimal degrees, GDA2020, from the point geometry.
+- name: latitude
+  label: Latitude
+  source: (latitude)
+  type: number
+  description: Decimal degrees, GDA2020, from the point geometry.
+- name: total_crashes
+  label: Crashes
+  source: total_crashes
+  type: integer
+- name: cse_pdo
+  label: Property damage only crashes
+  source: cse_pdo
+  type: integer
+- name: cse_inj
+  label: Injury crashes
+  source: cse_inj
+  type: integer
+- name: cse_fat
+  label: Fatal crashes
+  source: cse_fat
+  type: integer
+- name: cse_si
+  label: Serious injury crashes
+  source: cse_si
+  type: integer
+- name: total_casualties
+  label: Casualties
+  source: total_casualties
+  type: integer
+- name: total_fatalities
+  label: Deaths
+  source: total_fatalities
+  type: integer
+- name: total_serious_injuries
+  label: Serious injuries
+  source: total_serious_injuries
+  type: integer
+- name: cty_rear_end
+  label: Rear end crashes
+  source: cty_rear_end
+  type: integer
+- name: cty_hit_fixed_object
+  label: Hit fixed object crashes
+  source: cty_hit_fixed_object
+  type: integer
+- name: cty_side_swipe
+  label: Side swipe crashes
+  source: cty_side_swipe
+  type: integer
+- name: cty_right_angle
+  label: Right angle crashes
+  source: cty_right_angle
+  type: integer
+- name: cty_head_on
+  label: Head on crashes
+  source: cty_head_on
+  type: integer
+- name: cty_hit_pedestrian
+  label: Hit pedestrian crashes
+  source: cty_hit_pedestrian
+  type: integer
+- name: cty_roll_over
+  label: Roll over crashes
+  source: cty_roll_over
+  type: integer
+- name: cty_right_turn
+  label: Right turn crashes
+  source: cty_right_turn
+  type: integer
+- name: cty_hit_parked_vehile
+  label: Hit parked vehicle crashes
+  source: cty_hit_parked_vehile
+  type: integer
+  description: The publisher's header spells vehicle as vehile.
+- name: cty_hit_animal
+  label: Hit animal crashes
+  source: cty_hit_animal
+  type: integer
+- name: cty_hit_object_on_road
+  label: Hit object on road crashes
+  source: cty_hit_object_on_road
+  type: integer
+- name: cty_left_road_oc
+  label: Left road out of control crashes
+  source: cty_left_road_oc
+  type: integer
+- name: cty_other
+  label: Other crash types
+  source: cty_other
+  type: integer
+- name: cty_unknown
+  label: Unknown crash types
+  source: cty_unknown
+  type: integer
+- name: uty_bicycle
+  label: Crashes involving a bicycle
+  source: uty_bicycle
+  type: integer
+- name: uty_pedestrian
+  label: Crashes involving a pedestrian
+  source: uty_pedestrian
+  type: integer
+- name: lco_night
+  label: Crashes at night
+  source: lco_night
+  type: integer
+note: Cells were typed and the point geometry became longitude and latitude fields. The publisher's
+  property names are kept beside every field in schema.json. Rows were left alone.

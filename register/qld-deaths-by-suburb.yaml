@@ -1,0 +1,72 @@
+slug: qld-deaths-by-suburb
+title: Deaths registered by suburb, Queensland, latest year
+status: live
+topics:
+- people
+order: 205
+collection: qld-bdm-statistics
+collection_title: Births, deaths and baby names registered in Queensland
+search_title: Queensland deaths by suburb (Registry of Births, Deaths and Marriages)
+also_known_as:
+- Number of deaths by suburb QLD
+- Queensland death registrations by suburb
+- Deaths per suburb Queensland
+keywords:
+- deaths
+- death registrations
+- suburb
+- mortality
+- Queensland
+faq:
+- q: What is in each row?
+  a: One suburb, with the number of deaths registered in the newest year the registry has published. The
+    registry lists suburbs from the most deaths to the fewest.
+- q: Is the suburb where the person lived?
+  a: The registry does not say. The suburbs with the largest counts, such as Southport and Chermside,
+    hold large hospitals, so the suburb may be the place of death. The postcode and quarter table is by
+    residential postcode.
+- q: Why are some suburbs missing?
+  a: The registry publishes only counts of 5 or more, so a suburb with fewer than 5 deaths in the year
+    is left out.
+summary: The number of deaths registered in Queensland in the newest published year for each suburb with
+  5 or more, from the Registry of Births, Deaths and Marriages.
+description: Deaths registered with the Queensland Registry of Births, Deaths and Marriages in the newest
+  year it has published, one row per suburb. The registry leaves out suburbs with fewer than 5 deaths. It
+  adds a file for each year, and this table follows the newest one.
+publisher:
+  name: Department of Justice
+  short: Justice
+  jurisdiction: Qld
+  url: https://www.justice.qld.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/deaths-by-suburb
+  attribution: Department of Justice, Queensland Government, Deaths by Suburb, sourced {sourced}, https://www.data.qld.gov.au/dataset/deaths-by-suburb,
+    licensed under CC BY 3.0 AU.
+  portal_id: CC-BY-3.0
+example:
+  group: suburb
+  metric: sum.deaths_registered
+  label: Deaths registered in each suburb in the year
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: deaths-by-suburb
+  url: https://www.data.qld.gov.au/dataset/deaths-by-suburb
+  encoding: utf-8-sig
+  resource_match: ^\d{4} Deaths by Suburb$
+  cadence: yearly
+key:
+- suburb
+row_label: Suburbs
+fields:
+- name: suburb
+  label: Suburb
+  source: Suburb
+  type: string
+- name: deaths_registered
+  label: Deaths registered
+  source: Transactions
+  type: integer
+note: Headers were made snake_case. Rows were left alone.

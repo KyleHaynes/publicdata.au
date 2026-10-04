@@ -1,0 +1,108 @@
+slug: nsw-recorded-crime-by-lga
+title: Recorded criminal incidents by council area and month, NSW
+status: live
+topics:
+- crime
+example:
+  where:
+    month: newest
+  group: offence_category
+  metric: sum.incidents
+sample:
+  where:
+    month: newest
+  order:
+  - incidents.desc
+  spread: offence_category
+  label: The council area and subcategory with the most incidents in each of ten offence categories in the
+    newest month, largest first.
+order: 21
+publisher:
+  name: NSW Bureau of Crime Statistics and Research
+  short: BOCSAR
+  jurisdiction: NSW
+  url: https://bocsar.nsw.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-09-28'
+  portal_id: cc-by
+  evidence: https://data.nsw.gov.au/data/dataset/nsw-crime-and-policing-statistics
+  attribution: NSW Bureau of Crime Statistics and Research, Recorded criminal incidents by month by LGA,
+    https://data.nsw.gov.au/data/dataset/nsw-crime-and-policing-statistics, accessed {sourced}, licensed
+    under CC BY 4.0.
+temporal_start: '1995-01-01'
+search_title: NSW crime statistics by council area (BOCSAR)
+also_known_as:
+- BOCSAR recorded crime statistics
+- NSW recorded criminal incidents by LGA
+- NSW crime data by local government area
+- BOCSAR RCI offence by month
+keywords:
+- crime statistics
+- NSW crime
+- BOCSAR
+- recorded crime
+- local government area
+- offences
+- New South Wales
+faq:
+- q: Why is this one row per month when the publisher's file has one column per month?
+  a: The publisher's workbook has a column for every month since January 1995 and gains three columns
+    each quarter. Each cell here is one row, with its council area, offence category, subcategory and
+    month, so a new release adds rows instead of columns and every version has the same fields. No count
+    is changed.
+- q: Are these counts of offences or of people?
+  a: They are criminal incidents recorded by NSW Police in each month. One incident can involve more than
+    one person and more than one offence category. The publisher's notes on the portal explain how
+    incidents are counted.
+- q: How often is it updated?
+  a: BOCSAR releases this dataset every quarter. Recent months can change when police records are
+    updated, so a later version can revise an earlier month.
+summary: Criminal incidents recorded by NSW Police in each council area, month by month since January 1995,
+  for 21 offence categories and their subcategories.
+description: Recorded criminal incidents for each NSW local government area, by offence category and
+  subcategory, for every month since January 1995. BOCSAR publishes it as a workbook with one column per
+  month; each cell is one row here, keyed by council area, offence category, subcategory and month.
+source:
+  adapter: ckan-resource
+  portal: https://data.nsw.gov.au/data
+  package: nsw-crime-and-policing-statistics
+  resource: 1d5b2851-52e9-4327-a81b-19149c63f736
+  url: https://data.nsw.gov.au/data/dataset/nsw-crime-and-policing-statistics
+  cadence: quarterly
+  sheet: Data
+  header_row: 1
+unpivot:
+  headers: date
+key:
+- lga
+- offence_category
+- subcategory
+- month
+partition_by:
+- lga
+fields:
+- name: lga
+  label: Council area
+  source: LGA
+  type: string
+  description: Local government area as BOCSAR names it.
+- name: offence_category
+  label: Offence
+  source: Offence category
+  type: string
+- name: subcategory
+  label: Offence subcategory
+  source: Subcategory
+  type: string
+  description: Blank where the category has no subcategories. An asterisk on a name is BOCSAR's own.
+- name: month
+  label: Month
+  source: (column header)
+  type: date
+  description: First day of the month the incidents were recorded in.
+- name: incidents
+  label: Incidents
+  source: (cell)
+  type: integer
+  description: Criminal incidents recorded by NSW Police in that month.

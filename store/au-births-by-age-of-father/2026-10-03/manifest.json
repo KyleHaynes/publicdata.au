@@ -1,0 +1,30 @@
+{
+  "dataset": "au-births-by-age-of-father",
+  "version": "2026-10-03",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:15:09+00:00",
+  "sha256": "b2c651bd30255a1d0227d157a09d8c607122755854d39308605fef1ad9a39a5a",
+  "bytes": 1331317,
+  "filename": "au-births-by-age-of-father.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://data.api.abs.gov.au/rest/data/ABS,BIRTHS_AGE_FATHER,1.0.0/all?format=csvfilewithlabels",
+    "etag": "",
+    "http_last_modified": ""
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "stated": "All material presented on this website is provided under a Creative Commons Attribution 4.0 International licence",
+    "normalised": "CC-BY-4.0",
+    "title": "CC BY 4.0",
+    "url": "https://www.abs.gov.au/website-privacy-copyright-and-disclaimer",
+    "read_from": "https://www.abs.gov.au/website-privacy-copyright-and-disclaimer",
+    "read_at": "2026-10-03T03:15:07+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [
+    "The publisher's server states no change date, so this version is dated by the fetch."
+  ],
+  "rows_sha256": "6e4ea1f3a75643ddbe7e8887530200e92ea85cc01c1761f874cff3923ddc8de2"
+}

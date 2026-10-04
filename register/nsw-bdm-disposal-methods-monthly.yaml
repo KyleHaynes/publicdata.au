@@ -1,0 +1,88 @@
+slug: nsw-bdm-disposal-methods-monthly
+title: Registered deaths by method of disposal each month, New South Wales
+status: live
+topics:
+- people
+example:
+  where:
+    year: newest
+  group: month
+  metric: sum.cremated
+  label: Cremations registered in each month of the newest year
+order: 304
+publisher:
+  name: NSW Registry of Births Deaths and Marriages
+  short: NSW BDM
+  jurisdiction: NSW
+  url: https://www.nsw.gov.au/family-and-relationships/births-deaths-marriages
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.nsw.gov.au/data/dataset/bdm-data
+  attribution: NSW Registry of Births Deaths and Marriages, NSW Government, BDM Data - Monthly Data, sourced
+    {sourced}, https://data.nsw.gov.au/data/dataset/bdm-data, licensed under CC BY 4.0.
+collection: nsw-bdm-monthly
+collection_title: Monthly registrations, NSW Registry of Births Deaths and Marriages
+temporal_start: '2015-01-01'
+search_title: Cremations and burials in NSW by month (NSW Registry of Births Deaths and Marriages)
+also_known_as:
+- NSW cremation statistics
+- NSW burial statistics by month
+- Disposal methods of deceased people NSW
+keywords:
+- cremation
+- burial
+- deaths
+- funerals
+- registrations
+- NSW Registry of Births Deaths and Marriages
+- New South Wales
+faq:
+- q: What is in each row?
+  a: One month since January 2015, with the number of registered deaths in which the body was cremated,
+    buried or disposed of another way.
+- q: What does other method cover?
+  a: The Registry counts repatriation, body donation, alkaline hydrolysis and bodies not recovered as other
+    methods.
+- q: Are these the deaths that happened in the month?
+  a: No. They are the deaths the Registry registered in the month, which can be later than the death.
+summary: The number of registered deaths in New South Wales each month since January 2015 by whether the
+  body was cremated, buried or disposed of another way. Updated monthly.
+description: The REGISTERED Monthly Disposal Methods table from the NSW Registry of Births Deaths and Marriages.
+  Each row is one month, with the number of deaths registered in it whose body was cremated, buried or
+  disposed of by another method. Other methods are repatriation, body donation, alkaline hydrolysis and
+  bodies not recovered.
+source:
+  adapter: ckan-resource
+  portal: https://data.nsw.gov.au/data
+  package: bdm-data
+  resource: ca7ae52a-b1ef-40d2-b6d6-41281dbf89bf
+  url: https://data.nsw.gov.au/data/dataset/bdm-data
+  cadence: monthly
+  encoding: utf-8-sig
+key:
+- year
+- month
+row_label: Months
+fields:
+- name: year
+  label: Year
+  source: Year
+  type: integer
+- name: month
+  label: Month
+  source: Month
+  type: string
+- name: cremated
+  label: Cremated
+  source: Cremated
+  type: integer
+- name: buried
+  label: Buried
+  source: Buried
+  type: integer
+- name: other_method
+  label: Other method
+  source: Other Method
+  type: integer

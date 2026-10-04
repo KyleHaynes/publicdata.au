@@ -1,0 +1,28 @@
+{
+  "dataset": "act-recreational-water-quality-2018-19",
+  "version": "2019-05-02",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:14:45+00:00",
+  "sha256": "a946700881ff231a96abffc0b9bed748d26ae88743d439adbc8b138952be2a46",
+  "bytes": 300486,
+  "filename": "yh26-d6mg.geojson",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.act.gov.au/resource/yh26-d6mg.geojson?$limit=50000&$order=:id",
+    "etag": "Z29sZi4zMjI1M18xXzQ3ZjdrUm9DZTVUQmZoeXZvQkJfSzM2ZjdQU3Bv---gzipFcBW-bcAhIKGIyt55z7cPK4h_po--gzip--gzip",
+    "http_last_modified": "Thu, 02 May 2019 01:52:01 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "stated": "Creative Commons Attribution 4.0 International",
+    "normalised": "CC-BY-4.0",
+    "title": "CC BY 4.0",
+    "url": "https://www.data.act.gov.au/d/yh26-d6mg",
+    "read_from": "https://www.data.act.gov.au/d/yh26-d6mg",
+    "read_at": "2026-10-03T03:14:44+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "8b0273aeb96ccc152c59812bc6beba3858c20133a59e6376b0571aad5c7f479f"
+}

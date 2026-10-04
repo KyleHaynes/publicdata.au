@@ -1,0 +1,120 @@
+name: Clients
+
+# Tests the client packages on every pull request (the R client with R CMD check --as-cran, since it
+# goes to CRAN by hand), and publishes the Python client to PyPI from
+# main when its version is not on PyPI yet. Publishing uses PyPI's trusted publishing, so no token
+# is stored, and stays off until the repository variable PYPI_PUBLISH is true, which is set once
+# PyPI lists this workflow and the pypi environment as a trusted publisher.
+on:
+  push:
+    branches: [main]
+  pull_request:
+    types: [opened, synchronize, reopened]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  python:
+    name: Python client
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: clients/python
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - id: py
+        run: echo "version=$(cat .python-version)" >> "$GITHUB_OUTPUT"
+        working-directory: .
+      - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
+        with:
+          python-version: ${{ steps.py.outputs.version }}
+          activate-environment: true
+      - run: uv pip install -e '.[pandas,duckdb,geo,dev]'
+      - run: ruff check . && ruff format --check .
+      - run: pytest -q tests
+      - name: The oldest Python pyproject.toml claims passes the tests too
+        run: |
+          floor=$(python -c "import tomllib,re;print(re.search(r'[0-9.]+', tomllib.load(open('pyproject.toml','rb'))['project']['requires-python']).group())")
+          uv run --isolated --no-project --python "$floor" --with-editable '.[pandas,duckdb,geo,dev]' pytest -q tests
+      - name: The live site answers the client
+        if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+        env:
+          PUBLICDATA_LIVE: "1"
+        run: pytest -q tests -k live
+      - run: uv build
+      - name: The version in the package matches pyproject.toml
+        run: |
+          want=$(python -c "import tomllib;print(tomllib.load(open('pyproject.toml','rb'))['project']['version'])")
+          got=$(python -c "import publicdata_au;print(publicdata_au.__version__)")
+          [ "$want" = "$got" ] || { echo "::error::pyproject.toml says $want and __version__ says $got"; exit 1; }
+
+  r:
+    name: R client
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: r-lib/actions/setup-r@f9a764fea8d5c63df6ef9a5c7795bf7deb5d7e05 # v2.14.0
+        with:
+          use-public-rspm: true
+      - uses: r-lib/actions/setup-r-dependencies@f9a764fea8d5c63df6ef9a5c7795bf7deb5d7e05 # v2.14.0
+        with:
+          working-directory: clients/r
+          extra-packages: any::rcmdcheck, any::roxygen2
+          needs: check
+      # The man pages and NAMESPACE are generated from the roxygen comments and committed.
+      - name: The generated docs are current
+        working-directory: clients/r
+        run: |
+          Rscript -e 'roxygen2::roxygenise()'
+          git diff --exit-code -- man NAMESPACE DESCRIPTION || { echo "::error::run roxygen2::roxygenise() in clients/r and commit man/, NAMESPACE and DESCRIPTION"; exit 1; }
+      - uses: r-lib/actions/check-r-package@f9a764fea8d5c63df6ef9a5c7795bf7deb5d7e05 # v2.14.0
+        env:
+          PUBLICDATA_LIVE: ${{ (github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository) && '1' || '' }}
+        with:
+          working-directory: clients/r
+          args: 'c("--no-manual", "--as-cran")'
+          error-on: '"warning"'
+
+  python-publish:
+    name: Publish the Python client
+    needs: python
+    # Side effects run only in the public repo, never in a fork or a private copy.
+    if: github.repository == 'National-Digital/publicdata.au' && github.event_name == 'push' && github.ref == 'refs/heads/main' && vars.PYPI_PUBLISH == 'true'
+    runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - id: py
+        run: echo "version=$(cat .python-version)" >> "$GITHUB_OUTPUT"
+      - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
+        with:
+          python-version: ${{ steps.py.outputs.version }}
+      - name: Is this version on PyPI yet
+        id: pypi
+        working-directory: clients/python
+        run: |
+          v=$(python -c "import tomllib;print(tomllib.load(open('pyproject.toml','rb'))['project']['version'])")
+          code=$(curl -s -o /dev/null -w '%{http_code}' "https://pypi.org/pypi/publicdata-au/$v/json")
+          echo "version=$v" >> "$GITHUB_OUTPUT"
+          if [ "$code" = "200" ]; then
+            echo "publicdata-au $v is already on PyPI." >> "$GITHUB_STEP_SUMMARY"
+            echo "publish=false" >> "$GITHUB_OUTPUT"
+          elif [ "$code" = "404" ]; then
+            echo "publish=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::error::PyPI answered $code"; exit 1
+          fi
+      - if: steps.pypi.outputs.publish == 'true'
+        working-directory: clients/python
+        run: uv build
+      - if: steps.pypi.outputs.publish == 'true'
+        uses: pypa/gh-action-pypi-publish@dc37677b2e1c63e2034f94d8a5b11f265b73ba33 # v1.14.2
+        with:
+          packages-dir: clients/python/dist
+      - if: steps.pypi.outputs.publish == 'true'
+        run: echo "Published publicdata-au ${{ steps.pypi.outputs.version }} to PyPI." >> "$GITHUB_STEP_SUMMARY"

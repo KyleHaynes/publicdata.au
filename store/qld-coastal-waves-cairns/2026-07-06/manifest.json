@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-coastal-waves-cairns",
+  "version": "2026-07-06",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:00:52+00:00",
+  "sha256": "0d8eabc1d0f73ea7371346823bcc83390d9c93369e5b0467105dda46ae4d44da",
+  "bytes": 464618,
+  "filename": "cairns_2026-01-01t00_00-2026-07-01t00_00_waveverifieddata.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/a34ae7af-1561-443c-ad58-c19766d8354c/resource/6028081e-eb49-41ab-a4a3-00fd96ee5246/download/cairns_2026-01-01t00_00-2026-07-01t00_00_waveverifieddata.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "coastal-data-system-waves-cairns",
+    "package_id": "a34ae7af-1561-443c-ad58-c19766d8354c",
+    "resource": "6028081e-eb49-41ab-a4a3-00fd96ee5246",
+    "resource_name": "Wave data - 2026",
+    "resource_last_modified": "2026-07-06T04:07:33.693288",
+    "package_modified": "2026-07-06T04:22:12.920704",
+    "package_version": "1",
+    "etag": "5d2ae27baed6e7f6b02ac994ba35cf41",
+    "http_last_modified": "Mon, 06 Jul 2026 04:07:36 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=coastal-data-system-waves-cairns",
+    "read_at": "2026-10-03T03:00:51+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "d50dda218a25e6e9a3225303d5675a112a4839ca9a515f4852c4fc696a25c8c0"
+}

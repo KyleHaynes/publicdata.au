@@ -1,0 +1,34 @@
+{
+  "dataset": "gnaf",
+  "version": "2026-08-17",
+  "as_at": "",
+  "fetched_at": "2026-08-18T19:30:00+00:00",
+  "sha256": "85be1e001e068a81d431e2752d0f69484292b82c5f34e4aa0263ad75c5376b98",
+  "bytes": 29864,
+  "filename": "g-naf_aug26_allstates_gda2020_psv_110.zip",
+  "encoding": "zip",
+  "source": {
+    "url": "https://data.gov.au/data/dataset/19432f89-dc3a-4ef3-b943-5326ef1dbecc/resource/b023544a-5836-4d43-b6d8-da2f73e8d2bf/download/g-naf_aug26_allstates_gda2020_psv_110.zip",
+    "portal": "https://data.gov.au/data/",
+    "package": "geocoded-national-address-file-g-naf",
+    "package_id": "19432f89-dc3a-4ef3-b943-5326ef1dbecc",
+    "resource": "b023544a-5836-4d43-b6d8-da2f73e8d2bf",
+    "resource_name": "AUG 2026 - Geoscape G-NAF - GDA2020",
+    "resource_last_modified": "2026-08-17T03:24:56.565849",
+    "package_modified": "2026-08-17T22:52:44.113543",
+    "package_version": null,
+    "etag": "",
+    "http_last_modified": ""
+  },
+  "licence": {
+    "id": "cc-by-4.0",
+    "title": "Creative Commons Attribution 4.0 International",
+    "url": "http://creativecommons.org/licenses/by/4.0",
+    "read_at": "2026-08-18T19:30:00+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [
+    "Fixture: a sample of the ACT files of the release, with every row the sampled addresses refer to, for tests."
+  ]
+}

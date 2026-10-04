@@ -1,0 +1,80 @@
+slug: qld-translink-tram-punctuality
+title: SEQ tram punctuality and reliability
+status: live
+topics:
+- roads
+order: 290
+collection: qld-translink-performance
+collection_title: Translink monthly performance data
+search_title: Gold Coast tram punctuality and reliability by month (Translink)
+also_known_as:
+- G:link punctuality
+- Gold Coast light rail on-time performance
+keywords:
+- punctuality
+- reliability
+- tram
+- light rail
+- Gold Coast
+- Translink
+faq:
+- q: What is in each row?
+  a: Each row is one month with the tram's punctuality and reliability, written as fractions of 1.
+- q: How far back does it go?
+  a: At review the file held about 30 months, starting in late 2023. Each fetch here is kept as a version,
+    so a month the publisher later drops stays in an earlier version.
+summary: The monthly punctuality and reliability of the South East Queensland tram on the Gold Coast.
+description: 'One row per month with the punctuality and reliability of the South East Queensland tram, which
+  runs on the Gold Coast, as published in Translink''s monthly performance data. Both are proportions between
+  0 and 1. At review the file started in late 2023.
+
+  '
+publisher:
+  name: Department of Transport and Main Roads
+  short: Transport and Main Roads
+  jurisdiction: Qld
+  url: https://www.tmr.qld.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/translink-monthly-performance-data
+  attribution: Department of Transport and Main Roads, Queensland Government, Translink monthly performance
+    data, sourced {sourced}, https://www.data.qld.gov.au/dataset/translink-monthly-performance-data, licensed
+    under CC BY 3.0 AU.
+  portal_id: CC-BY-3.0
+example:
+  group: month
+  metric: avg.punctuality
+  label: Tram punctuality in each month, highest first
+chart:
+  where: {month: {gte: '2024-01-01'}}
+  split: none
+  metric: avg.punctuality
+  label: Average monthly tram punctuality
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: translink-monthly-performance-data
+  resource: 549c7dde-ab85-45ba-8b56-ead8f2f31129
+  url: https://www.data.qld.gov.au/dataset/translink-monthly-performance-data
+  cadence: monthly
+key:
+- month
+row_label: Months
+fields:
+- name: month
+  label: Month
+  source: Month-Year
+  type: date
+  date_format: '%b-%Y'
+  description: First day of the month reported.
+- name: punctuality
+  label: Punctuality
+  source: 'SEQ Tram: Punctuality'
+  type: number
+  description: Proportion, 0 to 1.
+- name: reliability
+  label: Reliability
+  source: 'SEQ Tram: Reliability'
+  type: number
+  description: Proportion of scheduled services that ran, 0 to 1.

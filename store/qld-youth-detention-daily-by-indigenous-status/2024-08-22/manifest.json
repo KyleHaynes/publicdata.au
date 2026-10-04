@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-youth-detention-daily-by-indigenous-status",
+  "version": "2024-08-22",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:01:47+00:00",
+  "sha256": "989ab3012a612b6fa0f65f8cbc1851cadaa410caa8e80400ce1f32e574620ae5",
+  "bytes": 59505,
+  "filename": "20170228-yj-daily-num-detention-indig-status-2011-12-2015-16.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.dcssds.qld.gov.au/__data/assets/file/0019/12736/20170228-yj-daily-num-detention-indig-status-2011-12-2015-16.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "youth-justice-young-offenders-in-youth-detention",
+    "package_id": "6b684d9e-727c-424f-ab6f-c056f1645375",
+    "resource": "b89e5823-44c5-420d-9be3-56e9b74e91d6",
+    "resource_name": "Daily number of young offenders in youth detention by Indigenous status, 2011-12 to 2015-16",
+    "resource_last_modified": "2024-08-22T05:09:04.603853",
+    "package_modified": "2025-09-29T01:25:13.628343",
+    "package_version": "1",
+    "etag": "",
+    "http_last_modified": ""
+  },
+  "licence": {
+    "id": "CC-BY-3.0",
+    "title": "Creative Commons Attribution 3.0",
+    "url": "https://creativecommons.org/licenses/by/3.0/au/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=youth-justice-young-offenders-in-youth-detention",
+    "read_at": "2026-10-03T03:01:45+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "4068f618495ded8515605ea7a8afd43f92decf94624e7eeabae67982661947c9"
+}

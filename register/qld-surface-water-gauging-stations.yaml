@@ -1,0 +1,102 @@
+slug: qld-surface-water-gauging-stations
+title: Open surface water gauging stations, Queensland
+status: live
+topics:
+- nature
+order: 288
+search_title: Queensland stream gauging station locations (water monitoring network)
+also_known_as:
+- Water monitoring network, surface water quantity, open gauging stations, Queensland
+- Queensland river gauge locations
+- Queensland stream flow monitoring sites
+keywords:
+- gauging stations
+- river gauges
+- stream flow
+- water monitoring
+- surface water
+- Queensland
+faq:
+- q: What is in each row?
+  a: One open gauging station in the Queensland Government's surface water quantity monitoring network, with
+    its identifier, name, drainage basin, the latitude and longitude of its instrument hut, and links to its
+    pages on the Water Monitoring Information Portal.
+- q: Where are the water level and flow readings?
+  a: This table lists the stations only. The readings for each station are on the Water Monitoring Information
+    Portal, which the station link in each row opens.
+summary: The location, name and drainage basin of every open stream gauging station in Queensland's surface
+  water monitoring network.
+description: One row per open gauging station in the surface water quantity monitoring network run by the Department
+  of Local Government, Water and Volunteers, with the station identifier, its name, its drainage basin, the
+  latitude and longitude of the instrument hut in GDA94, and links to the station's and basin's pages on the
+  Water Monitoring Information Portal. The file is read from the department's map service for the layer the
+  dataset describes.
+publisher:
+  name: Department of Local Government, Water and Volunteers
+  short: DLGWV
+  jurisdiction: Qld
+  url: https://www.dlgwv.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/water-monitoring-network-surface-water-quantity-open-gauging-stations-queensland
+  statement: License Creative Commons Attribution 4.0
+  attribution: Department of Local Government, Water and Volunteers, Queensland Government, Water monitoring
+    network, surface water quantity, open gauging stations, Queensland, sourced {sourced}, https://www.data.qld.gov.au/dataset/water-monitoring-network-surface-water-quantity-open-gauging-stations-queensland,
+    licensed under CC BY 4.0.
+example:
+  group: basin
+  metric: count
+  label: Gauging stations
+source:
+  adapter: file
+  url: https://spatial-gis.information.qld.gov.au/arcgis/rest/services/InlandWaters/GroundAndSurfaceWaterMonitoring/MapServer/13/query?where=1%3D1&outFields=identifier,title,basin,latitude,longitude,urlstation,urlbasin&orderByFields=identifier&returnGeometry=false&f=geojson
+  format: geojson
+  cadence: irregular
+key:
+- identifier
+partition_by:
+- basin
+geometry:
+  lon: longitude
+  lat: latitude
+  crs: EPSG:4283
+  crs_note: The publisher's metadata gives the latitude and longitude of each station's instrument hut in decimal
+    degrees on GDA94 (EPSG:4283). They are published as given.
+row_label: Gauging stations
+fields:
+- name: identifier
+  label: Station identifier
+  source: identifier
+  type: string
+- name: title
+  label: Station name
+  source: title
+  type: string
+- name: basin
+  label: Drainage basin
+  source: basin
+  type: string
+- name: latitude
+  label: Latitude
+  source: latitude
+  type: number
+- name: longitude
+  label: Longitude
+  source: longitude
+  type: number
+- name: urlstation
+  label: Station report
+  source: urlstation
+  type: string
+  description: The station's page on the Water Monitoring Information Portal.
+- name: urlbasin
+  label: Basin report
+  source: urlbasin
+  type: string
+  description: The basin's page on the Water Monitoring Information Portal.
+omit:
+  (longitude): The map service is asked for no geometry, so this is empty. The publisher's own latitude and
+    longitude fields are published.
+  (latitude): The map service is asked for no geometry, so this is empty. The publisher's own latitude and
+    longitude fields are published.

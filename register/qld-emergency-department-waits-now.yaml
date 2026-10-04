@@ -1,0 +1,115 @@
+slug: qld-emergency-department-waits-now
+title: People waiting and median waits in emergency departments, Queensland, live
+status: live
+topics:
+- health
+example:
+  group: facility_code
+  metric: sum.waiting
+sample:
+  order: [waiting.desc]
+  label: The ten facilities with the most people waiting when the figures were taken, most first.
+order: 230
+collection: qld-hospital-performance
+collection_title: Emergency department live data, Queensland
+search_title: Queensland emergency department waiting now by hospital, live (Queensland Health)
+also_known_as:
+- QLD ED wait times now
+- Queensland emergency department current wait
+- How long is the wait at Queensland emergency departments
+keywords:
+- emergency department
+- ED wait times
+- waiting patients
+- hospital performance
+- Queensland Health
+faq:
+- q: What is in each row?
+  a: One emergency department or minor injury and illness clinic, by facility code, with the time the
+    figures were taken, the number of people waiting, the median wait for all triage categories and for
+    categories 4 and 5, the publisher's data status and the delay in hours it states for the figures.
+- q: What unit are the median waits in?
+  a: The publisher does not state one in the data. Its emergency department wait time pages show waits
+    in minutes. A dash means no median was given, and those cells are null here with a suppressed flag.
+- q: How often does it change?
+  a: The publisher refreshes it through the day. This site reads it once a day, so each version is the
+    figures at the time of that read.
+summary: The number of people waiting and the median wait at each Queensland public emergency department
+  at the time of each daily read, from Queensland Health's live data.
+description: The current metrics behind Queensland Health's emergency department wait time pages, one
+  row per facility, with the number waiting, the median wait for all triage categories and for categories
+  4 and 5, a data status and the delay the publisher gives for the figures. Join to the facilities table
+  on facility_code for names and locations.
+publisher:
+  name: Queensland Health
+  short: Queensland Health
+  jurisdiction: Qld
+  url: https://www.health.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  evidence: https://www.data.qld.gov.au/dataset/hospital-performance
+  statement: Creative Commons Attribution 4.0
+  reviewed: '2026-10-01'
+  attribution: Queensland Health, Queensland Government, Hospital Performance, sourced {sourced}, https://www.data.qld.gov.au/dataset/hospital-performance,
+    licensed under CC BY 4.0.
+source:
+  adapter: file
+  url: https://www.data.qld.gov.au/datastore/dump/a5c8bddb-3ff5-442e-8cab-21729ab0390e
+  format: csv
+  feed: true
+  cadence: live
+key:
+- facility_code
+suppression:
+- '-'
+row_label: Facilities
+fields:
+- name: row_id
+  label: Row ID
+  source: _id
+  type: integer
+  description: The portal's row number.
+- name: facility_code
+  label: Facility code
+  source: FacilityCode
+  type: string
+  description: Kept as text to keep the leading zeros.
+- name: data_updated
+  label: Figures taken
+  source: DataUpdatedTimestamp
+  type: datetime
+  date_format: '%Y-%m-%dT%H:%M:%S'
+  description: In Queensland time.
+- name: waiting
+  label: People waiting
+  source: Waiting
+  type: integer
+  description: Empty while the publisher reports the facility closed.
+  null_values:
+  - Facility closed
+- name: median_wait_all_categories
+  label: Median wait for all categories
+  source: MedianWaitAllCat
+  type: integer
+  description: Empty while the publisher reports the facility closed.
+  null_values:
+  - Facility closed
+- name: median_wait_categories_4_5
+  label: Median wait for categories 4 and 5
+  source: MedianWaitCat45
+  type: integer
+  description: Empty while the publisher reports the facility closed.
+  null_values:
+  - Facility closed
+- name: data_status
+  label: Data status
+  source: DataStatus
+  type: string
+- name: data_delay_hours
+  label: Data delay (hours)
+  source: FacilityDataDelayHours
+  type: integer
+  description: Empty while the publisher reports the facility closed.
+  null_values:
+  - Facility closed
+note: Cells were typed and headers were made snake_case. Rows were left alone.

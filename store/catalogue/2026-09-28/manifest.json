@@ -1,0 +1,74 @@
+{
+  "dataset": "catalogue",
+  "version": "2026-09-28",
+  "as_at": "2026-09-28",
+  "fetched_at": "2026-09-28T04:16:10Z",
+  "sha256": "ed5389203d9c17d886b022e79c7ad342bf56a782184ae7459b29c193f6328092",
+  "bytes": 24715857,
+  "filename": "catalogue.ndjson.gz",
+  "encoding": "utf-8",
+  "source": {
+    "portals": {
+      "gov": "data.gov.au",
+      "nsw": "data.nsw.gov.au",
+      "vic": "discover.data.vic.gov.au",
+      "qld": "www.data.qld.gov.au",
+      "sa": "data.sa.gov.au",
+      "wa": "catalogue.data.wa.gov.au",
+      "nt": "data.nt.gov.au",
+      "infra": "catalogue.data.infrastructure.gov.au",
+      "act": "www.data.act.gov.au",
+      "abs": "data.api.abs.gov.au"
+    },
+    "stats": {
+      "gov": {
+        "records": 105054,
+        "dropped_duplicates": 36228
+      },
+      "nsw": {
+        "records": 17165,
+        "dropped_duplicates": 0
+      },
+      "vic": {
+        "records": 5603,
+        "dropped_duplicates": 0
+      },
+      "qld": {
+        "records": 0,
+        "error": "https://www.data.qld.gov.au/api/3/action/organization_list: HTTP 202, text/html; charset=UTF-8, 0 bytes, not JSON: b''",
+        "carried_from": null
+      },
+      "sa": {
+        "records": 1928,
+        "dropped_duplicates": 0
+      },
+      "wa": {
+        "records": 2914,
+        "dropped_duplicates": 0
+      },
+      "nt": {
+        "records": 1075,
+        "dropped_duplicates": 0
+      },
+      "infra": {
+        "records": 449,
+        "dropped_duplicates": 0
+      },
+      "act": {
+        "records": 783,
+        "dropped_duplicates": 0
+      },
+      "abs": {
+        "records": 1227,
+        "dropped_duplicates": 0
+      }
+    }
+  },
+  "licence": {
+    "id": "various",
+    "note": "Each record carries the licence its portal states."
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": []
+}

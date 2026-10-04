@@ -1,0 +1,93 @@
+slug: qld-gaming-machine-ranges
+title: Gaming venues by number of machines, Queensland
+status: live
+topics:
+- economy
+- community
+order: 283
+collection: qld-gaming-gambling
+collection_title: Gaming machine and gambling data from Queensland
+temporal_start: '2024-08-01'
+search_title: Queensland hotels and clubs by number of gaming machines (OLGR)
+also_known_as:
+- Monthly Gaming Machine range statistics for Clubs and Hotels
+- Queensland pokies venue size statistics
+keywords:
+- gaming machines
+- pokies
+- clubs
+- hotels
+- Queensland
+faq:
+- q: What is in each row?
+  a: One month, venue type and band of machine numbers, such as clubs with 11 to 20 machines. It gives how
+    many venues in that band were operating and how many machines they operated between them.
+- q: Why does the series start in 2024?
+  a: The publisher replaces the file each month with the latest two years of figures. Earlier months drop out
+    of the source, and this archive keeps each version as it was fetched.
+summary: How many Queensland clubs and hotels operate gaming machines in each size band each month, with the
+  machines they operate, for the latest two years.
+description: One row per month, site type (Club or Hotel) and band of operating electronic gaming machines,
+  with the number of operating sites in the band and the machines they operate. The publisher's file covers
+  about the latest 25 months.
+publisher:
+  name: Office of Liquor and Gaming Regulation
+  short: OLGR
+  jurisdiction: Qld
+  url: https://www.olgr.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/monthly-gaming-machine-range-statistics-for-clubs-and-hotels
+  attribution: Office of Liquor and Gaming Regulation, Queensland Government, Monthly Gaming Machine range
+    statistics for Clubs and Hotels, sourced {sourced}, https://www.data.qld.gov.au/dataset/monthly-gaming-machine-range-statistics-for-clubs-and-hotels,
+    licensed under CC BY 4.0.
+example:
+  where: {month: newest}
+  group: site_type
+  metric: sum.operational_sites
+  label: Clubs and hotels operating gaming machines in the newest month
+chart:
+  split: none
+  metric: avg.operational_egms
+  label: Average operating machines in a band in a month
+sample:
+  spread: site_type
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: monthly-gaming-machine-range-statistics-for-clubs-and-hotels
+  resource: 5b31ec33-2f32-4cee-a2e2-741d7dde979b
+  url: https://www.data.qld.gov.au/dataset/monthly-gaming-machine-range-statistics-for-clubs-and-hotels
+  cadence: monthly
+  encoding: utf-8-sig
+key:
+- month
+- site_type
+- egm_range
+row_label: Bands
+fields:
+- name: month
+  label: Month
+  source: Month Year
+  type: date
+  date_format: '%b-%y'
+  description: First day of the month the figures are for.
+- name: site_type
+  label: Site type
+  source: Site Type
+  type: string
+  description: Club or Hotel.
+- name: egm_range
+  label: Machines per venue
+  source: EGM Range
+  type: string
+  description: A band of operating machines per venue, such as 11 to 20. Clubs and hotels use different bands.
+- name: operational_egms
+  label: Operating machines
+  source: Operational EGMs
+  type: integer
+- name: operational_sites
+  label: Operating sites
+  source: Operational Sites
+  type: integer

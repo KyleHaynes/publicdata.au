@@ -1,0 +1,111 @@
+import assert from 'node:assert/strict';
+import { test } from 'node:test';
+import { onRequestGet } from './d/[[path]].js';
+
+const R2 = {
+  'd/x/v/2026-04-24/index.html': '<html>v</html>',
+  'd/x/v/2026-04-24/index.md': '# v',
+  'd/x/v/2026-04-24/data.csv': 'a,b\n1,2\n',
+};
+const BIG = 'd/x/v/2026-04-24/data.duckdb';
+const obj = (key, body, range) => ({
+  size: key === BIG ? 3e9 : body.length, httpEtag: '"e"', range,
+  body: key === BIG && body ? new Blob([body]).stream() : body,
+  writeHttpMetadata() {},
+});
+R2[BIG] = 'duck';
+const env = {
+  ASSETS: { fetch: async (r) => {
+    const u = new URL(r.url || r);
+    if (u.pathname === '/static/page-headers.json') return Response.json({ 'Content-Security-Policy': "default-src 'self'", 'X-Content-Type-Options': 'nosniff' });
+    if (u.pathname === '/latest.json') return Response.json({ x: '2026-04-24' });
+    if (u.pathname === '/withheld.json') return Response.json(['/d/x/v/2026-04-24/source.csv']);
+    return new Response('nf', { status: 404 });
+  } },
+  DIST: {
+    get: async (k, o) => (k in R2 ? obj(k, R2[k], o && o.range ? { offset: 0, length: R2[k].length } : undefined) : null),
+    head: async (k) => (k in R2 ? obj(k, '', undefined) : null),
+    list: async ({ prefix }) => ({ objects: Object.keys(R2).filter((k) => k.startsWith(prefix)).map((key) => ({ key })) }),
+  },
+};
+const get = (path, headers = {}) => onRequestGet({ request: new Request('https://publicdata.au' + path, { headers }), env });
+
+// First, because the headers are remembered once a lookup succeeds.
+test('a failed header lookup is not remembered, and the page still goes out with nosniff', async (t) => {
+  const logged = t.mock.method(console, 'error', () => {});
+  let calls = 0;
+  const flaky = { ...env, ASSETS: { fetch: async (r) => (new URL(r.url || r).pathname === '/static/page-headers.json' && ++calls === 1 ? new Response('no', { status: 500 }) : env.ASSETS.fetch(r)) } };
+  const one = await onRequestGet({ request: new Request('https://publicdata.au/d/x/v/2026-04-24/'), env: flaky });
+  assert.equal(one.headers.get('x-content-type-options'), 'nosniff');
+  assert.equal(one.headers.get('content-security-policy'), null);
+  assert.equal(logged.mock.callCount(), 1);
+  const two = await onRequestGet({ request: new Request('https://publicdata.au/d/x/v/2026-04-24/'), env: flaky });
+  assert.equal(two.headers.get('content-security-policy'), "default-src 'self'");
+});
+
+test('a version page read from R2 is HTML with the site headers and a short cache', async () => {
+  const r = await get('/d/x/v/2026-04-24/');
+  assert.equal(r.status, 200);
+  assert.equal(r.headers.get('content-type'), 'text/html; charset=utf-8');
+  assert.equal(r.headers.get('content-security-policy'), "default-src 'self'");
+  assert.match(r.headers.get('cache-control'), /max-age=300/);
+  assert.equal(await r.text(), '<html>v</html>');
+  const md = await get('/d/x/v/2026-04-24/index.md');
+  assert.equal(md.headers.get('content-type'), 'text/markdown; charset=utf-8');
+});
+
+test('a version page without its slash redirects, and a file keeps its long cache', async () => {
+  const r = await get('/d/x/v/2026-04-24');
+  assert.equal(r.status, 308);
+  assert.equal(r.headers.get('location'), '/d/x/v/2026-04-24/');
+  const f = await get('/d/x/v/2026-04-24/data.csv');
+  assert.equal(f.status, 200);
+  assert.match(f.headers.get('cache-control'), /immutable/);
+  assert.equal(f.headers.get('content-security-policy'), null);
+  assert.equal((await get('/d/x/v/2026-04-24/data.csv', { range: 'bytes=0-2' })).status, 206);
+  assert.equal((await get('/d/x/v/2026-04-24/nothing.csv')).status, 404);
+});
+
+test('a version page comes from R2 even when Pages still answers its path', async () => {
+  const stale = { ...env, ASSETS: { fetch: async (r) => (new URL(r.url || r).pathname === '/d/x/v/2026-04-24/' ? new Response('<html>old</html>', { headers: { 'x-robots-tag': 'noindex' } }) : env.ASSETS.fetch(r)) } };
+  const r = await onRequestGet({ request: new Request('https://publicdata.au/d/x/v/2026-04-24/'), env: stale });
+  assert.equal(await r.text(), '<html>v</html>');
+  assert.equal(r.headers.get('x-robots-tag'), null);
+  const gone = { ...stale, DIST: { get: async () => null, head: async () => null } };
+  const p = await onRequestGet({ request: new Request('https://publicdata.au/d/x/v/2026-04-24/'), env: gone });
+  assert.equal(await p.text(), '<html>old</html>');
+});
+
+test('a file over the edge cache limit is sent to its bypass URL, which serves the range', async () => {
+  for (const method of ['GET', 'HEAD']) {
+    const r = await onRequestGet({ request: new Request('https://publicdata.au/d/x/v/2026-04-24/data.duckdb', { method, headers: { range: 'bytes=0-1' } }), env });
+    assert.equal(r.status, 302);
+    assert.equal(r.headers.get('location'), 'https://publicdata.au/d/x/v/2026-04-24/data.duckdb?edge=bypass');
+  }
+  const r = await get('/d/x/v/2026-04-24/data.duckdb?edge=bypass', { range: 'bytes=0-1' });
+  assert.equal(r.status, 206);
+  const h = await onRequestGet({ request: new Request('https://publicdata.au/d/x/v/2026-04-24/data.duckdb?edge=bypass', { method: 'HEAD' }), env });
+  assert.equal(h.status, 200);
+  assert.equal(h.headers.get('content-length'), '3000000000');
+  assert.equal((await get('/d/x/v/2026-04-24/data.csv')).status, 200);
+  const cond = { ...env, DIST: { ...env.DIST, get: async (k) => ({ ...obj(k, ''), body: undefined }) } };
+  const reval = await onRequestGet({ request: new Request('https://publicdata.au/d/x/v/2026-04-24/data.duckdb', { headers: { 'if-none-match': '"e"' } }), env: cond });
+  assert.equal(reval.status, 304);
+});
+
+test('a dataset that is not live has its archived files refused', async () => {
+  R2['d/gone/v/2026-04-24/data.csv'] = 'a\n1\n';
+  const r = await get('/d/gone/v/2026-04-24/data.csv');
+  assert.equal(r.status, 410);
+  assert.match(await r.text(), /withheld/);
+  assert.equal((await get('/d/gone/v/2026-04-24/nothing.csv')).status, 404);
+  assert.equal((await get('/d/gone/latest/data.csv')).status, 410);
+  assert.equal((await get('/d/never/latest/data.csv')).status, 404);
+  assert.equal((await get('/d/x/v/2026-04-24/data.csv')).status, 200);
+});
+
+test('a publisher file the register no longer republishes is refused', async () => {
+  R2['d/x/v/2026-04-24/source.csv'] = 'a,icsea\n1,1000\n';
+  assert.equal((await get('/d/x/v/2026-04-24/source.csv')).status, 410);
+  assert.equal((await get('/d/x/v/2026-04-24/data.csv')).status, 200);
+});

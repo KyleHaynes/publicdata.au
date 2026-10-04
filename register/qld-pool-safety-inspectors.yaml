@@ -1,0 +1,77 @@
+slug: qld-pool-safety-inspectors
+title: Licensed pool safety inspectors, Queensland
+status: live
+topics:
+- housing
+order: 276
+collection: qld-pool-safety-register
+collection_title: Pool safety register, Queensland
+search_title: Queensland pool safety inspectors list (QBCC)
+also_known_as:
+- QBCC licensed pool inspectors
+- Find a pool safety inspector Queensland
+keywords:
+- pool safety inspector
+- pool inspection
+- licensed inspectors
+- QBCC
+- Queensland
+faq:
+- q: What is in each row?
+  a: Each row is one pool safety inspector licensed by QBCC, with the licence number, the licensee's name and
+    business address, the licence grade and the licence class.
+- q: How current is it?
+  a: The publisher's file is current as at 1 August 2024. QBCC's online licence search shows whether a licence
+    is current today.
+summary: Every pool safety inspector licensed by QBCC, with licence number, name, business address and licence
+  grade.
+description: One row per licensed pool safety inspector in Queensland, giving the QBCC licence number, the
+  licensee's name, the business address, the licence grade and the licence class type. The file is current
+  as at 1 August 2024.
+publisher:
+  name: Queensland Building and Construction Commission
+  short: QBCC
+  jurisdiction: Qld
+  url: https://www.qbcc.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/poolsafetyregister
+  attribution: Queensland Building and Construction Commission, Queensland Government, Pool safety register,
+    sourced {sourced}, https://www.data.qld.gov.au/dataset/poolsafetyregister, licensed under CC BY 4.0.
+example:
+  group: licence_grade
+  metric: count
+  label: Licensed pool safety inspectors by licence grade
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: poolsafetyregister
+  resource: a345195c-5175-4a7e-8696-e277deb21cc0
+  url: https://www.data.qld.gov.au/dataset/poolsafetyregister
+  cadence: irregular
+  encoding: utf-16
+key:
+- licence_number
+row_label: Inspectors
+fields:
+- name: licence_number
+  label: Licence number
+  source: Licence Number
+  type: string
+- name: licensee_name
+  label: Licensee
+  source: Licensee Name
+  type: string
+- name: licensee_business_address
+  label: Business address
+  source: Licensee Business Address
+  type: string
+- name: licence_grade
+  label: Licence grade
+  source: Licence Grade
+  type: string
+- name: licence_class_type
+  label: Licence class
+  source: Licence Class Type
+  type: string

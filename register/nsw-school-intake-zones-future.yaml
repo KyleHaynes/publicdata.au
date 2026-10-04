@@ -1,0 +1,178 @@
+slug: nsw-school-intake-zones-future
+title: Future school intake zones, New South Wales
+status: live
+topics:
+- education
+example:
+  group: catch_type
+  metric: count
+sample:
+  order:
+  - add_date.desc
+  spread: catch_type
+  label: The zones the Department added or changed most recently, each catchment type in turn.
+order: 316
+publisher:
+  name: NSW Department of Education
+  short: Department of Education
+  jurisdiction: NSW
+  url: https://education.nsw.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.nsw.gov.au/data/dataset/nsw-education-school-intake-zones-catchment-areas-for-nsw-government-schools
+  attribution: NSW Department of Education, NSW Government, School intake zones (catchment areas) for NSW government
+    schools, sourced {sourced}, https://data.nsw.gov.au/data/dataset/nsw-education-school-intake-zones-catchment-areas-for-nsw-government-schools,
+    licensed under CC BY 4.0.
+collection: nsw-school-intake-zones
+collection_title: School intake zones (catchment areas) for NSW government schools
+search_title: NSW school catchment changes for next year (NSW Department of Education)
+also_known_as:
+- NSW future school catchment areas
+- New and changed NSW school intake zones
+- NSW school zone changes
+keywords:
+- school catchment
+- intake zones
+- local enrolment area
+- school zones
+- NSW Department of Education
+- New South Wales
+faq:
+- q: What is in each row?
+  a: One polygon, a local enrolment area the Department has set to take effect for a coming enrolment year,
+    with the school code and name, the catchment type, the date the zone was added and, for each school year
+    from Kindergarten to Year 12, the enrolment year from which the zone applies, or 0 where it does not apply.
+- q: Can I rely on a zone for buying or renting a home?
+  a: The Department states that zones change as schools open and close and as populations shift, and that it
+    takes no responsibility where the zones are relied on for real estate purchases or rentals. Check a home
+    address with the school or the Department's School Finder.
+- q: How often is it updated?
+  a: The Department updates its zones nightly and refreshes the file on the portal from time to time. Each
+    version here is one file the Department published.
+summary: The intake zone polygons the NSW Department of Education has set for a coming enrolment year, with
+  the school, catchment type and the year each zone applies from for each school year.
+description: The catchments_future layer of the NSW Department of Education's School intake zones (catchment
+  areas) for NSW government schools. Each row is one zone polygon, a local enrolment area the Department has
+  set to take effect for a coming enrolment year, for a new school or a changed zone, with its school code
+  and name, catchment type, date added and, for each school year from Kindergarten to Year 12, the enrolment
+  year the zone applies from. The shapes are published in GDA94 and served here in GDA2020.
+source:
+  adapter: ckan-resource
+  portal: https://data.nsw.gov.au/data
+  package: nsw-education-school-intake-zones-catchment-areas-for-nsw-government-schools
+  resource: 32d6f502-ddb1-45d9-b114-5e34ddfd33ac
+  url: https://data.nsw.gov.au/data/dataset/nsw-education-school-intake-zones-catchment-areas-for-nsw-government-schools
+  cadence: as required
+  member: catchments_future.shp
+geometry:
+  kind: polygon
+  crs: EPSG:4283
+  crs_note: The shapefile's projection file names GDA94 (EPSG:4283). The shapes are moved to GDA2020 for serving.
+  maxzoom: 10
+row_label: Zones
+fields:
+- name: use_id
+  label: School code
+  source: USE_ID
+  type: string
+  description: The school the zone belongs to, by its Department school code.
+- name: catch_type
+  label: Catchment type
+  source: CATCH_TYPE
+  type: string
+- name: school_name
+  label: School
+  source: USE_DESC
+  type: string
+- name: add_date
+  label: Date added
+  source: ADD_DATE
+  type: date
+  date_format: '%Y%m%d'
+  description: The date the zone was added or last changed, as the Department records it. Blank for some older
+    zones.
+- name: kindergarten
+  label: Kindergarten from year
+  source: KINDERGART
+  type: integer
+  description: The enrolment year from which the zone applies to Kindergarten, or 0 where it does not apply
+    to Kindergarten.
+- name: year_1
+  label: Year 1 from year
+  source: YEAR1
+  type: integer
+  description: The enrolment year from which the zone applies to Year 1, or 0 where it does not apply to Year
+    1.
+- name: year_2
+  label: Year 2 from year
+  source: YEAR2
+  type: integer
+  description: The enrolment year from which the zone applies to Year 2, or 0 where it does not apply to Year
+    2.
+- name: year_3
+  label: Year 3 from year
+  source: YEAR3
+  type: integer
+  description: The enrolment year from which the zone applies to Year 3, or 0 where it does not apply to Year
+    3.
+- name: year_4
+  label: Year 4 from year
+  source: YEAR4
+  type: integer
+  description: The enrolment year from which the zone applies to Year 4, or 0 where it does not apply to Year
+    4.
+- name: year_5
+  label: Year 5 from year
+  source: YEAR5
+  type: integer
+  description: The enrolment year from which the zone applies to Year 5, or 0 where it does not apply to Year
+    5.
+- name: year_6
+  label: Year 6 from year
+  source: YEAR6
+  type: integer
+  description: The enrolment year from which the zone applies to Year 6, or 0 where it does not apply to Year
+    6.
+- name: year_7
+  label: Year 7 from year
+  source: YEAR7
+  type: integer
+  description: The enrolment year from which the zone applies to Year 7, or 0 where it does not apply to Year
+    7.
+- name: year_8
+  label: Year 8 from year
+  source: YEAR8
+  type: integer
+  description: The enrolment year from which the zone applies to Year 8, or 0 where it does not apply to Year
+    8.
+- name: year_9
+  label: Year 9 from year
+  source: YEAR9
+  type: integer
+  description: The enrolment year from which the zone applies to Year 9, or 0 where it does not apply to Year
+    9.
+- name: year_10
+  label: Year 10 from year
+  source: YEAR10
+  type: integer
+  description: The enrolment year from which the zone applies to Year 10, or 0 where it does not apply to Year
+    10.
+- name: year_11
+  label: Year 11 from year
+  source: YEAR11
+  type: integer
+  description: The enrolment year from which the zone applies to Year 11, or 0 where it does not apply to Year
+    11.
+- name: year_12
+  label: Year 12 from year
+  source: YEAR12
+  type: integer
+  description: The enrolment year from which the zone applies to Year 12, or 0 where it does not apply to Year
+    12.
+- name: priority
+  label: Priority
+  source: PRIORITY
+  type: string
+  description: The Department's priority flag, blank for most zones.

@@ -1,0 +1,34 @@
+{
+  "dataset": "sa-private-rents-by-suburb",
+  "version": "2026-08-11",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:10:11+00:00",
+  "sha256": "9ed02e20fe38a40827246501f3ee9a26111d8a8cf32b90b2b8ec15e8c7d9a20e",
+  "bytes": 251736,
+  "filename": "private-rental-report-2026-06.xlsx",
+  "encoding": "xlsx",
+  "source": {
+    "url": "https://data.sa.gov.au/data/dataset/8eb97a72-9919-448b-8de6-fc1530b3f7ec/resource/b4aa86f1-7efa-4690-9793-bd36df97ad29/download/private-rental-report-2026-06.xlsx",
+    "portal": "https://data.sa.gov.au/data",
+    "package": "private-rent-report",
+    "package_id": "8eb97a72-9919-448b-8de6-fc1530b3f7ec",
+    "resource": "b4aa86f1-7efa-4690-9793-bd36df97ad29",
+    "resource_name": "Private Rental Report 2026-06",
+    "resource_last_modified": "2026-08-11T06:37:43.277734",
+    "package_modified": "2026-08-11T06:38:49.658506",
+    "package_version": null,
+    "etag": "1786430264.509-251736-1362565548",
+    "http_last_modified": "Tue, 11 Aug 2026 06:37:44 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution",
+    "url": "http://creativecommons.org/licenses/by/4.0",
+    "read_from": "https://data.sa.gov.au/data/api/3/action/package_show?id=private-rent-report",
+    "read_at": "2026-10-03T03:10:11+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "5559307528ce8b779a89b823fcad2d0acdc32774f644ae7dc622fd0bb77a51dc"
+}

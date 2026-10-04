@@ -1,0 +1,33 @@
+{
+  "dataset": "sa-heritage-places",
+  "version": "2026-06-28",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:10:18+00:00",
+  "sha256": "23350fd4c0e0b1e340d1f8932b3e55e194de6e24f77b5b305c6ff0bada2ecc2e",
+  "bytes": 14690126,
+  "filename": "SAHeritagePlaces_shp.zip",
+  "encoding": "zip",
+  "source": {
+    "url": "https://www.dptiapps.com.au/dataportal/SAHeritagePlaces_shp.zip",
+    "portal": "https://data.sa.gov.au/data",
+    "package": "sa-heritage-places",
+    "package_id": "5ca4f0ea-74df-4743-8748-78320b052222",
+    "resource": "8532f47a-87fb-4881-8f2e-d811eedb190c",
+    "resource_name": "SA Heritage Places - (shp)",
+    "resource_last_modified": "2026-06-28T01:27:31",
+    "package_modified": "2025-04-29T08:12:45.876654",
+    "package_version": null,
+    "etag": "",
+    "http_last_modified": "Sun, 28 Jun 2026 01:27:31 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution",
+    "url": "http://creativecommons.org/licenses/by/4.0",
+    "read_from": "https://data.sa.gov.au/data/api/3/action/package_show?id=sa-heritage-places",
+    "read_at": "2026-10-03T03:10:18+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": []
+}

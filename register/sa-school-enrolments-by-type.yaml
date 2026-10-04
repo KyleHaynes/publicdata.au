@@ -1,0 +1,116 @@
+slug: sa-school-enrolments-by-type
+title: Full-time equivalent enrolments in government schools by school type, South Australia
+status: live
+topics:
+- education
+example:
+  group: school_type
+  metric: sum.fte_2023
+  label: FTE enrolments, 2023
+order: 441
+temporal_start: '2012-01-01'
+search_title: South Australia government school enrolments by school type, 2012 to 2023 (Department for Education)
+also_known_as:
+- Enrolments by School Type SA
+- SA public school enrolment numbers by type
+- South Australian government school FTE enrolments
+keywords:
+- school enrolments
+- government schools
+- primary schools
+- high schools
+- Department for Education
+- South Australia
+faq:
+- q: What is in each row?
+  a: One type of government school, such as primary, area or special schools, with its full-time equivalent
+    enrolments in each year's Term 3 census from 2012 to 2023, one column per year.
+- q: What is a full-time equivalent enrolment?
+  a: A student enrolled full time counts as one and a part-time student as the fraction of full time they attend,
+    so the figures can carry decimals.
+- q: Why do primary enrolments fall and high school enrolments rise in 2022?
+  a: South Australian government schools moved Year 7 from primary school to high school from 2022, so
+    about 12,000 FTE enrolments left primary schools and about 10,000 joined high schools that year.
+- q: Why are junior primary enrolments so high in 2012?
+  a: The publisher gives 4,900.4 for junior primary schools in 2012 and 488.0 in 2013, about a tenth as many.
+    The file gives no reason, and the figure is kept as published.
+summary: Full-time equivalent enrolments at South Australian government schools by type of school in each year from
+  2012 to 2023, from the Term 3 enrolment census.
+description: Enrolments by School Type from the Department for Education. Each row is one type of government school
+  with its full-time equivalent enrolments in each year from 2012 to 2023, collected in the annual Term 3 enrolment
+  census. The publisher leaves the years blank for a school type with no enrolments, such as rural schools after
+  2013.
+publisher:
+  name: Department for Education
+  short: Education
+  jurisdiction: SA
+  url: https://www.education.sa.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.sa.gov.au/data/dataset/enrolments-in-sa-government-by-school-type
+  attribution: Department for Education, Government of South Australia, Enrolments by School Type, https://data.sa.gov.au/data/dataset/enrolments-in-sa-government-by-school-type, accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: ckan-resource
+  portal: https://data.sa.gov.au/data
+  package: enrolments-in-sa-government-by-school-type
+  resource: c26553a1-b16e-4134-b21a-91ecf4522ca7
+  url: https://data.sa.gov.au/data/dataset/enrolments-in-sa-government-by-school-type
+  cadence: yearly
+key:
+- school_type
+row_label: School types
+fields:
+- name: school_type
+  label: School type
+  source: Type_of_School
+  type: string
+- name: fte_2012
+  label: FTE enrolments 2012
+  source: '2012'
+  type: number
+- name: fte_2013
+  label: FTE enrolments 2013
+  source: '2013'
+  type: number
+- name: fte_2014
+  label: FTE enrolments 2014
+  source: '2014'
+  type: number
+- name: fte_2015
+  label: FTE enrolments 2015
+  source: '2015'
+  type: number
+- name: fte_2016
+  label: FTE enrolments 2016
+  source: '2016'
+  type: number
+- name: fte_2017
+  label: FTE enrolments 2017
+  source: '2017'
+  type: number
+- name: fte_2018
+  label: FTE enrolments 2018
+  source: '2018'
+  type: number
+- name: fte_2019
+  label: FTE enrolments 2019
+  source: '2019'
+  type: number
+- name: fte_2020
+  label: FTE enrolments 2020
+  source: '2020'
+  type: number
+- name: fte_2021
+  label: FTE enrolments 2021
+  source: '2021'
+  type: number
+- name: fte_2022
+  label: FTE enrolments 2022
+  source: '2022'
+  type: number
+- name: fte_2023
+  label: FTE enrolments 2023
+  source: '2023'
+  type: number

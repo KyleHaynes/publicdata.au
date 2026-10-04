@@ -1,0 +1,34 @@
+{
+  "dataset": "sa-family-domestic-abuse-offences",
+  "version": "2026-08-13",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:10:10+00:00",
+  "sha256": "096c59ecc98502205a56c727d2fc5f10ee7f5b9335bc9efe32c03fbdaaa69380",
+  "bytes": 295651,
+  "filename": "data_sa_fdv_q1_q2_q3_q4_2025-26.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://data.sa.gov.au/data/dataset/860126f7-eeb5-4fbc-be44-069aa0467d11/resource/142bff97-816e-4fb4-9235-0f7372fb0f96/download/data_sa_fdv_q1_q2_q3_q4_2025-26.csv",
+    "portal": "https://data.sa.gov.au/data",
+    "package": "crime-statistics",
+    "package_id": "860126f7-eeb5-4fbc-be44-069aa0467d11",
+    "resource": "142bff97-816e-4fb4-9235-0f7372fb0f96",
+    "resource_name": "Family & Domestic Abuse related-offences 2025-26",
+    "resource_last_modified": "2026-08-13T06:28:22.523211",
+    "package_modified": "2026-08-25T23:13:37.478210",
+    "package_version": null,
+    "etag": "1786602502.953-295651-1146820886",
+    "http_last_modified": "Thu, 13 Aug 2026 06:28:22 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution",
+    "url": "http://creativecommons.org/licenses/by/4.0",
+    "read_from": "https://data.sa.gov.au/data/api/3/action/package_show?id=crime-statistics",
+    "read_at": "2026-10-03T03:10:10+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "e6d27362905714b07ec42d41c07ff127c36e99d871977367dfbbe8a64c570cf0"
+}

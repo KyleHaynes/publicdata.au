@@ -1,0 +1,113 @@
+slug: qld-pool-safety-register-pools
+title: Register of regulated pools, Queensland
+status: live
+topics:
+- housing
+order: 274
+collection: qld-pool-safety-register
+collection_title: Pool safety register, Queensland
+collection_search_title: Queensland pool safety register
+collection_description: 'The Queensland Building and Construction Commission (QBCC) keeps the pool safety
+  register under the state''s pool safety laws. Every property with a regulated swimming pool must be
+  on it, and a pool safety certificate is needed before a property with a pool is sold or leased.
+
+
+  The publisher releases three tables: the properties with registered pools, the properties that have
+  been issued pool safety certificates and the licensed pool safety inspectors. Each is a snapshot current
+  at the date the publisher gives, which for these files is 1 August 2024. The publisher says the content
+  of the registers is being reviewed.'
+search_title: Queensland pool register lookup by address (QBCC)
+also_known_as:
+- Queensland swimming pool register
+- QBCC pool register
+- Is my pool registered in Queensland
+keywords:
+- pool register
+- swimming pools
+- pool safety
+- QBCC
+- Queensland
+faq:
+- q: What is in each row?
+  a: 'Each row is one property with a registered regulated pool: its lot and plan, street address, suburb,
+    postcode, the number of pools, the local government area and whether the pool is shared, such as in
+    a unit complex.'
+- q: How current is it?
+  a: The publisher's file is current as at 1 August 2024. Pool owners are responsible for registering
+    their pool correctly, and the publisher asks owners to contact QBCC to correct errors.
+summary: Every Queensland property with a registered regulated swimming pool, by address and lot and plan,
+  with its number of pools.
+description: One row per property on the Queensland pool safety register, giving the lot and plan, unit
+  and street address, suburb, postcode, number of pools, local government area and whether the pool is
+  a shared pool. The file is current as at 1 August 2024. Addresses are kept as entered, so capitalisation
+  and street type abbreviations vary.
+publisher:
+  name: Queensland Building and Construction Commission
+  short: QBCC
+  jurisdiction: Qld
+  url: https://www.qbcc.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/poolsafetyregister
+  attribution: Queensland Building and Construction Commission, Queensland Government, Pool safety register,
+    sourced {sourced}, https://www.data.qld.gov.au/dataset/poolsafetyregister, licensed under CC BY 4.0.
+example:
+  group: shared_pool_property
+  metric: count
+  label: Properties with a registered pool, by whether the pool is shared
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: poolsafetyregister
+  resource: bb059c35-d826-4ccd-af31-24de4716864a
+  url: https://www.data.qld.gov.au/dataset/poolsafetyregister
+  cadence: irregular
+  encoding: utf-16
+row_label: Properties
+fields:
+- name: site_name
+  label: Lot and plan
+  source: Site Name
+  type: string
+  description: The lot and plan of the property, as the register gives it.
+- name: unit_number
+  label: Unit
+  source: Unit Number
+  type: string
+- name: street_number
+  label: Street number
+  source: Street Number
+  type: string
+- name: street_name
+  label: Street
+  source: Street Name
+  type: string
+- name: street_type
+  label: Street type
+  source: Street Type
+  type: string
+- name: suburb
+  label: Suburb
+  source: Suburb
+  type: string
+  description: As entered. Some rows are in capitals and some are not.
+- name: post_code
+  label: Postcode
+  source: Post Code
+  type: string
+  description: Kept as text. Blank on some rows.
+- name: number_of_pools
+  label: Pools
+  source: Number of Pools
+  type: integer
+- name: local_government_authority_area
+  label: Council area
+  source: Local Government Authority Area
+  type: string
+  description: As entered. The same council can appear in capitals and in mixed case.
+- name: shared_pool_property
+  label: Shared pool
+  source: Shared Pool Property
+  type: string
+  description: Yes or No.

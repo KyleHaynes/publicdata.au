@@ -1,0 +1,94 @@
+slug: nsw-bdm-registrations-monthly
+title: Births, deaths and marriages registered each month, New South Wales
+status: live
+topics:
+- people
+example:
+  where:
+    year: newest
+  group: month
+  metric: sum.births
+  label: Births registered in each month of the newest year
+order: 303
+publisher:
+  name: NSW Registry of Births Deaths and Marriages
+  short: NSW BDM
+  jurisdiction: NSW
+  url: https://www.nsw.gov.au/family-and-relationships/births-deaths-marriages
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.nsw.gov.au/data/dataset/bdm-data
+  attribution: NSW Registry of Births Deaths and Marriages, NSW Government, BDM Data - Monthly Data, sourced
+    {sourced}, https://data.nsw.gov.au/data/dataset/bdm-data, licensed under CC BY 4.0.
+collection: nsw-bdm-monthly
+collection_title: Monthly registrations, NSW Registry of Births Deaths and Marriages
+collection_description: Monthly counts from the NSW Registry of Births Deaths and Marriages since January
+  2015. One table counts the births, deaths and marriages registered each month. The other counts the
+  registered deaths by how the body was disposed of. Both count registrations in the month, which can
+  fall later than the event.
+collection_search_title: NSW births, deaths and marriages statistics by month (NSW Registry of Births Deaths and Marriages)
+temporal_start: '2015-01-01'
+search_title: Number of births, deaths and marriages registered in NSW each month (NSW BDM)
+also_known_as:
+- NSW birth statistics by month
+- NSW death registrations monthly
+- NSW marriage statistics by month
+- BDM monthly registrations NSW
+keywords:
+- births
+- deaths
+- marriages
+- registrations
+- vital statistics
+- NSW Registry of Births Deaths and Marriages
+- New South Wales
+faq:
+- q: What is in each row?
+  a: One month since January 2015, with the number of births, deaths and marriages the Registry registered
+    in that month.
+- q: Are these the births and deaths that happened in the month?
+  a: No. The Registry counts the registrations it completed in the month. A birth or death can be registered
+    weeks after it happened, so a month's count is not the number of events that occurred in it.
+- q: How often is it updated?
+  a: The Registry adds the latest month to the file every month.
+summary: The number of births, deaths and marriages registered in New South Wales each month since January
+  2015. Updated monthly.
+description: The REGISTERED Monthly Births, Deaths, and Marriages table from the NSW Registry of Births Deaths
+  and Marriages. Each row is one month, with the number of births, deaths and marriages registered in
+  it. The figures count registrations completed by the Registry, which can be later than the events they
+  record.
+source:
+  adapter: ckan-resource
+  portal: https://data.nsw.gov.au/data
+  package: bdm-data
+  resource: 96d3ce10-63c5-407e-a185-dcafa28ed895
+  url: https://data.nsw.gov.au/data/dataset/bdm-data
+  cadence: monthly
+  encoding: utf-8-sig
+key:
+- year
+- month
+row_label: Months
+fields:
+- name: year
+  label: Year
+  source: Year
+  type: integer
+- name: month
+  label: Month
+  source: Month
+  type: string
+- name: births
+  label: Births registered
+  source: Births
+  type: integer
+- name: deaths
+  label: Deaths registered
+  source: Deaths
+  type: integer
+- name: marriages
+  label: Marriages registered
+  source: Marriages
+  type: integer

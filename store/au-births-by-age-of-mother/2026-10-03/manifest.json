@@ -1,0 +1,30 @@
+{
+  "dataset": "au-births-by-age-of-mother",
+  "version": "2026-10-03",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:15:07+00:00",
+  "sha256": "f3ca30405353d1ba6298515e120aeab22eb593a19cbef1070c56450c3388a903",
+  "bytes": 1440691,
+  "filename": "au-births-by-age-of-mother.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://data.api.abs.gov.au/rest/data/ABS,BIRTHS_AGE_MOTHER,1.0.0/all?format=csvfilewithlabels",
+    "etag": "",
+    "http_last_modified": ""
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "stated": "All material presented on this website is provided under a Creative Commons Attribution 4.0 International licence",
+    "normalised": "CC-BY-4.0",
+    "title": "CC BY 4.0",
+    "url": "https://www.abs.gov.au/website-privacy-copyright-and-disclaimer",
+    "read_from": "https://www.abs.gov.au/website-privacy-copyright-and-disclaimer",
+    "read_at": "2026-10-03T03:15:05+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [
+    "The publisher's server states no change date, so this version is dated by the fetch."
+  ],
+  "rows_sha256": "ae94c4479ef8805cb37b07c326acc30259f32483db4b9ec21463821b9b39f9e4"
+}

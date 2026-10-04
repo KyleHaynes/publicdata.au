@@ -1,0 +1,33 @@
+{
+  "dataset": "sa-river-murray-flood-300gl",
+  "version": "2019-01-31",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:10:08+00:00",
+  "sha256": "9d4e50fd461abb7048628b2bcf11e82d303cf162b617297bc40e723658157da3",
+  "bytes": 2026585,
+  "filename": "FLOODAWARENESS_RiverMurrayFloodMit300GL_shp.zip",
+  "encoding": "zip",
+  "source": {
+    "url": "https://www.waterconnect.sa.gov.au/Content/Downloads/DEWNR/FLOODAWARENESS_RiverMurrayFloodMit300GL_shp.zip",
+    "portal": "https://data.sa.gov.au/data",
+    "package": "flood-mapping-of-the-river-murray-300gl",
+    "package_id": "f0a4c1de-2fa2-4c54-90f4-782812e98247",
+    "resource": "171673ce-fa8b-4200-aea2-ee388b181467",
+    "resource_name": "Flood Mapping 300GL (ShapeFile)",
+    "resource_last_modified": null,
+    "package_modified": "2020-02-18T05:47:04.986262",
+    "package_version": null,
+    "etag": "27cd492128b9d41:0",
+    "http_last_modified": "Thu, 31 Jan 2019 05:45:10 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution",
+    "url": "http://creativecommons.org/licenses/by/4.0",
+    "read_from": "https://data.sa.gov.au/data/api/3/action/package_show?id=flood-mapping-of-the-river-murray-300gl",
+    "read_at": "2026-10-03T03:10:08+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": []
+}

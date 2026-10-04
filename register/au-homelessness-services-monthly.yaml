@@ -1,0 +1,125 @@
+slug: au-homelessness-services-monthly
+title: Specialist homelessness services clients by month, Australia
+status: live
+topics:
+- housing
+example:
+  where:
+    state: National
+    sex: Total
+    month: newest
+    age_group:
+      neq: All Ages
+  group: age_group
+  metric: sum.clients
+  label: Clients in the newest month by age group, Australia
+chart:
+  where:
+    state: National
+    sex: Total
+    age_group: All Ages
+  split: none
+  metric: avg.clients
+  label: Clients in an average month, Australia
+sample:
+  where:
+    month: newest
+    sex: Total
+    age_group: All Ages
+  label: Clients of all ages in the newest month, for each state and territory and the national count.
+order: 63
+publisher:
+  name: Australian Institute of Health and Welfare
+  short: AIHW
+  jurisdiction: Cth
+  url: https://www.aihw.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.aihw.gov.au/copyright
+  statement: has been released under a Creative Commons BY 4.0 (CC-BY 4.0) licence
+  attribution: Based on Australian Institute of Health and Welfare material. Australian Institute of Health
+    and Welfare, Australian Government, Specialist Homelessness Services monthly data, sourced {sourced},
+    https://www.aihw.gov.au/reports/homelessness-services/specialist-homelessness-services-monthly-data/data,
+    licensed under CC BY 4.0.
+temporal_start: '2017-07-01'
+search_title: Homelessness services clients each month by state, sex and age (AIHW SHS monthly data)
+also_known_as:
+- SHS monthly data
+- Specialist homelessness services monthly clients
+- Homelessness statistics monthly Australia
+- AIHW homelessness data
+keywords:
+- homelessness
+- specialist homelessness services
+- SHS
+- homeless clients
+- monthly
+- AIHW
+- Australia
+faq:
+- q: What is counted?
+  a: The number of people who received support from a specialist homelessness agency in each month, by
+    state or territory, sex and age group, as agencies report to the Specialist Homelessness Services
+    Collection. A person supported in two states in one month is counted in each. The National column
+    is the Institute's own national count and is kept as a state value named National.
+- q: How current is it?
+  a: The Institute releases the monthly tables every few months, each release replacing the workbook with
+    a new file that runs to the latest month. Each version here is one release. Recent months are revised
+    in later releases as agencies finalise their reporting.
+- q: Why does the attribution say "based on" AIHW material?
+  a: The Institute publishes its data tables under CC BY 4.0 and asks that material adapted from them,
+    which republishing in other formats is, carry the words "Based on Australian Institute of Health and
+    Welfare material". Every file here carries them. The Institute has not endorsed this site.
+summary: Clients of specialist homelessness services in each month since July 2017, by state and territory,
+  sex and age group, from the AIHW monthly data tables. Updated with each release.
+description: The Clients sheet of the Australian Institute of Health and Welfare's Specialist Homelessness
+  Services monthly data tables, one row per month, sex, age group and state or territory, with the number
+  of clients supported. The Institute publishes the sheet with a column per state; it is one row per state
+  here.
+source:
+  adapter: aihw
+  url: https://www.aihw.gov.au/reports/homelessness-services/specialist-homelessness-services-monthly-data/data
+  resource_match: ^Data tables
+  cadence: monthly
+wide:
+  sheets:
+  - Clients
+  header_row: 4
+  header_rows: 1
+  row_headers: 3
+key:
+- month
+- sex
+- age_group
+- state
+partition_by:
+- state
+row_label: Month rows
+fields:
+- name: month
+  label: Month
+  source: (row header 1)
+  type: date
+  date_format: '%Y-%m-%d'
+  description: The first day of the month.
+- name: sex
+  label: Sex
+  source: (row header 2)
+  type: string
+- name: age_group
+  label: Age group
+  source: (row header 3)
+  type: string
+  description: An age band, or the row that totals every age, which is All Ages for the total, All Females
+    for females and All Males for males.
+- name: state
+  label: State
+  source: (column header 1)
+  type: string
+  description: The state or territory, or National for the Institute's national count.
+- name: clients
+  label: Clients
+  source: (cell)
+  type: integer
+  description: People who received support in the month.

@@ -1,0 +1,33 @@
+{
+  "dataset": "nsw-school-intake-zones-secondary",
+  "version": "2026-10-02",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:04:40+00:00",
+  "sha256": "074ca6582235ee1cc39ff09ef4c25087dc5c808e2d3837a05f9892431accae40",
+  "bytes": 8574060,
+  "filename": "catchments.zip",
+  "encoding": "zip",
+  "source": {
+    "url": "https://data.nsw.gov.au/data/dataset/8b1e8161-7252-43d9-81ed-6311569cb1d7/resource/32d6f502-ddb1-45d9-b114-5e34ddfd33ac/download/catchments.zip",
+    "portal": "https://data.nsw.gov.au/data",
+    "package": "nsw-education-school-intake-zones-catchment-areas-for-nsw-government-schools",
+    "package_id": "8b1e8161-7252-43d9-81ed-6311569cb1d7",
+    "resource": "32d6f502-ddb1-45d9-b114-5e34ddfd33ac",
+    "resource_name": "Individual catchment areas for NSW government schools",
+    "resource_last_modified": "2026-10-02T03:48:02.720277",
+    "package_modified": "2026-10-02T03:48:02.737864",
+    "package_version": null,
+    "etag": "1790912882.831248-8574060-1222449590",
+    "http_last_modified": "Fri, 02 Oct 2026 03:48:02 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution",
+    "url": "http://www.opendefinition.org/licenses/cc-by",
+    "read_from": "https://data.nsw.gov.au/data/api/3/action/package_show?id=nsw-education-school-intake-zones-catchment-areas-for-nsw-government-schools",
+    "read_at": "2026-10-03T03:04:39+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": []
+}

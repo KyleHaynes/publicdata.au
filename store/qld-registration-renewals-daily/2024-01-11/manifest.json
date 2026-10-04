@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-registration-renewals-daily",
+  "version": "2024-01-11",
+  "as_at": "",
+  "fetched_at": "2026-10-03T02:59:43+00:00",
+  "sha256": "729bb84c759c999d405193dc5fff794e9fe27a5f37d10146d2981208a66c48f1",
+  "bytes": 1413308,
+  "filename": "20240110-18-daily-registration-renewals-by-service-channel.csv",
+  "encoding": "utf-16",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/86f401e2-e1f8-4ce6-a98a-e40f442d48f4/resource/f953b714-49f2-4e49-823d-f2acd3296669/download/20240110-18-daily-registration-renewals-by-service-channel.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "registration-renewals",
+    "package_id": "86f401e2-e1f8-4ce6-a98a-e40f442d48f4",
+    "resource": "f953b714-49f2-4e49-823d-f2acd3296669",
+    "resource_name": "Daily registration renewals by service channel",
+    "resource_last_modified": "2024-01-11T03:57:35.013747",
+    "package_modified": "2024-01-11T04:00:17.302677",
+    "package_version": "January 2024",
+    "etag": "W/\"49b88850a359457e6883f0baf30dae09",
+    "http_last_modified": "Thu, 11 Jan 2024 03:57:36 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=registration-renewals",
+    "read_at": "2026-10-03T02:59:42+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "43426b55b69c265d5c2c00dcfdb5a351987e40d2fc5a3d6b47aa5e40ae154f2b"
+}

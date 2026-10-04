@@ -1,0 +1,111 @@
+slug: au-fdv-hospitalisations
+title: Family and domestic violence hospitalisations by relationship to perpetrator, Australia
+status: live
+topics:
+- crime
+example:
+  where:
+    unit: Number
+    year: newest
+    age_group: All ages
+    perpetrator_relationship: Spouse or domestic partner
+  group: sex
+  metric: sum.value
+  label: Hospitalisations for assault by a spouse or domestic partner in the newest year, by sex
+sample:
+  where:
+    year: newest
+    age_group: All ages
+    unit: Number
+  label: The hospitalisation counts for all ages in the newest year, for each sex and relationship to the
+    perpetrator.
+order: 65
+publisher:
+  name: Australian Institute of Health and Welfare
+  short: AIHW
+  jurisdiction: Cth
+  url: https://www.aihw.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.aihw.gov.au/copyright
+  statement: has been released under a Creative Commons BY 4.0 (CC-BY 4.0) licence
+  attribution: Based on Australian Institute of Health and Welfare material. Australian Institute of Health
+    and Welfare, Australian Government, Family, domestic and sexual violence data tables, National Hospital
+    Morbidity Database table NHMD 1, sourced {sourced}, https://www.aihw.gov.au/family-domestic-and-sexual-violence/resources/data-downloads,
+    licensed under CC BY 4.0.
+temporal_start: '2020-07-01'
+search_title: Domestic violence hospital admissions by age, sex and perpetrator relationship, Australia
+  (AIHW)
+also_known_as:
+- FDV hospitalisations
+- Domestic violence injury hospitalisations
+- AIHW FDSV data tables NHMD 1
+- Assault hospitalisations by perpetrator
+keywords:
+- domestic violence
+- hospitalisations
+- assault injuries
+- family violence
+- National Hospital Morbidity Database
+- AIHW
+- Australia
+faq:
+- q: What is counted?
+  a: Hospital admissions for assault injuries where the perpetrator was recorded as a spouse or domestic
+    partner, a parent or another family member, by financial year from 2020-21, age group and sex, as
+    the number of hospitalisations and the rate per 100,000 people, compiled by the Institute from the
+    National Hospital Morbidity Database. The Institute writes n.p. where a figure is not published.
+- q: Where is this table from?
+  a: The Institute's Family, domestic and sexual violence data tables workbook, which gathers tables from
+    several national collections. This dataset is one sheet of it. The data in this sheet is compiled
+    by the Institute from a government source it names, and the ABS and AIC publish their own material
+    under CC BY 4.0 as well.
+- q: Why does the attribution say "based on" AIHW material?
+  a: The Institute publishes its data tables under CC BY 4.0 and asks that material adapted from them,
+    which republishing in other formats is, carry the words "Based on Australian Institute of Health and
+    Welfare material". Every file here carries them. The Institute has not endorsed this site.
+summary: Hospital admissions for family and domestic violence assault injuries by financial year, age
+  group, sex and the perpetrator's relationship, as counts and rates per 100,000, from 2020-21. Updated
+  with the AIHW data tables.
+description: Table NHMD 1 of the Australian Institute of Health and Welfare's Family, domestic and sexual
+  violence data tables, family and domestic violence hospitalisations by relationship to perpetrator and
+  age group, one row per year, age group, sex, perpetrator relationship and unit, compiled from the National
+  Hospital Morbidity Database.
+source:
+  adapter: file
+  url: https://www.aihw.gov.au/getmedia/f4a9196a-9797-4b03-acc8-d72a5b83d370/AIHW-FDSV-all-data-download.xlsx
+  sheet: NHMD 1
+  header_row: 15
+  cadence: yearly
+suppression:
+- n.p.
+row_label: Table lines
+fields:
+- name: year
+  label: Year
+  source: Year
+  type: string
+  description: The financial year, such as 2024–25.
+- name: age_group
+  label: Age group
+  source: Age group
+  type: string
+- name: sex
+  label: Sex
+  source: Sex
+  type: string
+- name: perpetrator_relationship
+  label: Perpetrator's relationship
+  source: Perpetrator's relationship to victim
+  type: string
+- name: unit
+  label: Unit
+  source: Unit
+  type: string
+- name: value
+  label: Value
+  source: Value
+  type: number
+  null_values:
+  - n.a.

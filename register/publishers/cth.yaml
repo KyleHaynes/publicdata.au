@@ -1,0 +1,746 @@
+# Federal agencies whose data sits on more than one portal, and bodies that publish through data.gov.au
+# but are not federal agencies.
+# Generated from 'publicdata catalogue publishers', then reviewed. Edit by hand.
+- slug: arc-centre-of-excellence-for-coral-reef-studies-james-cook-university
+  name: ARC Centre of Excellence for Coral Reef Studies, James Cook University
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:arc-centre-of-excellence-for-coral-reef-studies-james-cook-university
+- slug: atlas-of-living-australia
+  name: Atlas of Living Australia
+  short: ALA
+  jurisdiction: Cth
+  level: federal
+  url: https://www.ala.org.au/
+  orgs: []
+- slug: attorney-generals-department
+  name: Attorney-Generals Department
+  jurisdiction: Cth
+  level: federal
+  orgs:
+  - gov:government-of-the-commonwealth-of-australia-attorney-generals-department-australian-urban-research-i
+- slug: australian-bureau-of-statistics
+  name: Australian Bureau of Statistics
+  short: ABS
+  jurisdiction: Cth
+  level: federal
+  url: https://www.abs.gov.au/
+  orgs:
+  - abs:abs
+  - gov:australianbureauofstatistics
+  - gov:australianbureauofstatistics-geography
+  - gov:government-of-the-commonwealth-of-australia-australian-bureau-of-statistics-australian-urban-researc
+  - nsw:australian-bureau-of-statistics
+  - act:australian-bureau-of-statistics
+  - act:source-australian-bureau-of-statistics
+- slug: australian-early-development-census
+  name: Australian Early Development Census
+  jurisdiction: Cth
+  level: federal
+  orgs:
+  - gov:government-of-the-commonwealth-of-australia-australian-early-development-census-australian-urban-res
+- slug: australian-electoral-commission
+  name: Australian Electoral Commission
+  jurisdiction: Cth
+  level: federal
+  orgs:
+  - gov:government-of-the-commonwealth-of-australia-australian-electoral-commission-australian-urban-researc
+- slug: australian-financial-security-authority
+  name: Australian Financial Security Authority
+  jurisdiction: Cth
+  level: federal
+  orgs:
+  - gov:government-of-the-commonwealth-of-australia-australian-financial-security-authority-australian-urban
+- slug: australian-institute-of-health-and-welfare
+  name: Australian Institute of Health and Welfare
+  short: AIHW
+  jurisdiction: Cth
+  level: federal
+  url: https://www.aihw.gov.au/
+  orgs:
+  - gov:aihw
+  - gov:government-of-the-commonwealth-of-australia-australian-institute-of-health-and-welfare-australian-ur
+- slug: australian-national-university
+  name: Australian National University
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:australian-national-university
+- slug: australian-ocean-data-network
+  name: Australian Ocean Data Network
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:australian-ocean-data-network
+- slug: australian-ocean-data-network-bluenet-data
+  name: Australian Ocean Data Network - BlueNet Data
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:australian-ocean-data-network-bluenet-data
+- slug: australian-tropical-herbarium-james-cook-university-ath-jcu
+  name: Australian Tropical Herbarium, James Cook University (ATH/JCU)
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:australian-tropical-herbarium-james-cook-university-ath-jcu
+- slug: bitre
+  name: Bureau of Infrastructure and Transport Research Economics
+  short: BITRE
+  jurisdiction: Cth
+  level: federal
+  url: https://www.bitre.gov.au/
+  orgs:
+  - gov:bureauofinfrastructuretransportandregionaleconomics
+  - infra:road-safety
+- slug: bureau-of-meteorology
+  name: Bureau of Meteorology
+  short: BoM
+  jurisdiction: Cth
+  level: federal
+  url: https://www.bom.gov.au/
+  orgs:
+  - gov:bureau-of-meteorology-bom
+  - gov:bureauofmeteorology
+  - nsw:bureau-of-meteorology
+- slug: centre-for-fish-and-fisheries-research-cffr-murdoch-university
+  name: Centre for Fish and Fisheries Research (CFFR), Murdoch University
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:centre-for-fish-and-fisheries-research-cffr-murdoch-university
+- slug: centre-for-marine-ecosystems-research-cmer-school-of-natural-sciences-edith
+  name: Centre for Marine Ecosystems Research (CMER), School of Natural Sciences, Edith Cowan University
+    (EDU)
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:centre-for-marine-ecosystems-research-cmer-school-of-natural-sciences-edith-cowan-university-edu
+- slug: centre-for-marine-science-and-technology-cmst-curtin-university
+  name: Centre for Marine Science and Technology (CMST), Curtin University
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:centre-for-marine-science-and-technology-cmst-curtin-university
+- slug: centre-for-marine-science-and-technology-curtin-university-of-technology
+  name: Centre for Marine Science and Technology, Curtin University of Technology
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:centre-for-marine-science-and-technology-curtin-university-of-technology
+- slug: centre-for-tropical-biodiversity-climate-change-james-cook-university-ctbcc-jcu
+  name: Centre for Tropical Biodiversity & Climate Change, James Cook University (CTBCC/JCU)
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:centre-for-tropical-biodiversity-climate-change-james-cook-university-ctbcc-jcu
+- slug: centre-for-tropical-biodiversity-and-climate-change-james-cook-university
+  name: Centre for Tropical Biodiversity and Climate Change, James Cook University
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:centre-for-tropical-biodiversity-and-climate-change-james-cook-university
+- slug: centre-for-tropical-environmental-sustainability-sciences-school-of-marine-and
+  name: Centre for Tropical Environmental & Sustainability Sciences, School of Marine and Tropical Biology,
+    James Cook University (JCU)
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:centre-for-tropical-environmental-sustainability-sciences-school-of-marine-and-tropical-biology-jam
+- slug: centre-for-tropical-waters-and-aquatic-research-tropwater-james-cook-university
+  name: Centre for Tropical Waters and Aquatic Research (TropWATER), James Cook University (JCU)
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:centre-for-tropical-waters-and-aquatic-research-tropwater-james-cook-university-jcu
+- slug: clean-energy-regulator
+  name: Clean Energy Regulator
+  jurisdiction: Cth
+  level: federal
+  orgs:
+  - gov:government-of-the-commonwealth-of-australia-clean-energy-regulator-australian-urban-research-infrast
+- slug: college-of-marine-and-environmental-sciences-cmes-james-cook-university-jcu
+  name: College of Marine And Environmental Sciences (CMES), James Cook University (JCU)
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:college-of-marine-and-environmental-sciences-cmes-james-cook-university-jcu
+- slug: college-of-science-technology-and-engineering-cste-james-cook-university-jcu
+  name: College of Science, Technology and Engineering (CSTE), James Cook University (JCU)
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:college-of-science-technology-and-engineering-cste-james-cook-university-jcu
+- slug: cooperative-institute-for-marine-and-atmospheric-studies-cimas-university-of
+  name: Cooperative Institute for Marine and Atmospheric Studies (CIMAS), University of Miami
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:cooperative-institute-for-marine-and-atmospheric-studies-cimas-university-of-miami
+- slug: cooperative-institute-for-meteorological-satellite-studies-cimss-university-of
+  name: Cooperative Institute for Meteorological Satellite Studies (CIMSS), University of Wisconsin-Madison
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:cooperative-institute-for-meteorological-satellite-studies-cimss-university-of-wisconsin-madison
+- slug: coral-reef-studies-arc-centre-of-excellence-james-cook-university
+  name: Coral Reef Studies ARC Centre of Excellence, James Cook University
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:coral-reef-studies-arc-centre-of-excellence-james-cook-university
+- slug: crawford-school-of-public-policy-cspp-the-australian-national-university-anu
+  name: Crawford School of Public Policy (CSPP), The Australian National University (ANU)
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:crawford-school-of-public-policy-cspp-the-australian-national-university-anu
+- slug: curtin-university
+  name: Curtin University
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:curtin-university
+- slug: department-of-applied-geology-curtin-university
+  name: Department of Applied Geology, Curtin University
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:department-of-applied-geology-curtin-university
+- slug: department-of-biological-sciences-macquarie-university
+  name: Department of Biological Sciences, Macquarie University
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:department-of-biological-sciences-macquarie-university
+- slug: department-of-civil-engineering-monash-university
+  name: Department of Civil Engineering, Monash University
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:department-of-civil-engineering-monash-university
+- slug: department-of-ecology-evolution-and-environmental-biology-e3b-columbia
+  name: Department of Ecology, Evolution and Environmental Biology (E3B), Columbia University
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:department-of-ecology-evolution-and-environmental-biology-e3b-columbia-university
+- slug: department-of-environment-and-agriculture-curtin-university
+  name: Department of Environment and Agriculture, Curtin University
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:department-of-environment-and-agriculture-curtin-university
+- slug: department-of-health
+  name: Department of Health
+  jurisdiction: Cth
+  level: federal
+  orgs:
+  - gov:government-of-the-commonwealth-of-australia-department-of-health-australian-urban-research-infrastru
+- slug: department-of-home-affairs
+  name: Department of Home Affairs
+  jurisdiction: Cth
+  level: federal
+  orgs:
+  - gov:australian-government-department-of-home-affairs-australian-urban-research-infrastructure-network
+- slug: department-of-human-services
+  name: Department of Human Services
+  jurisdiction: Cth
+  level: federal
+  orgs:
+  - gov:australian-government-department-of-human-services-australian-urban-research-infrastructure-network
+- slug: department-of-industry-innovation-and-science
+  name: Department of Industry, Innovation and Science
+  jurisdiction: Cth
+  level: federal
+  orgs:
+  - gov:government-of-the-commonwealth-of-australia-department-of-industry-innovation-and-science-australian
+- slug: department-of-infrastructure
+  name: Department of Infrastructure, Transport, Regional Development, Communications, Sport and the Arts
+  short: Department of Infrastructure
+  jurisdiction: Cth
+  level: federal
+  url: https://www.infrastructure.gov.au/
+  orgs:
+  - gov:department-of-communications
+  - gov:government-of-the-commonwealth-of-australia-department-of-infrastructure-transport-regional-developm
+  - infra:national-freight-data
+  - infra:regional-data-hub
+  - wa:department-of-infrastructure-and-regional-development
+- slug: department-of-jobs-and-small-businesses
+  name: Department of Jobs and Small Businesses
+  jurisdiction: Cth
+  level: federal
+  orgs:
+  - gov:government-of-the-commonwealth-of-australia-department-of-jobs-and-small-businesses-australian-urban
+- slug: department-of-social-services
+  name: Department of Social Services
+  jurisdiction: Cth
+  level: federal
+  orgs:
+  - gov:australian-government-department-of-social-services-australian-urban-research-infrastructure-network
+- slug: department-of-spatial-sciences-curtin-university
+  name: Department of Spatial Sciences, Curtin University
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:department-of-spatial-sciences-curtin-university
+- slug: department-of-the-environment
+  name: Department of the Environment
+  jurisdiction: Cth
+  level: federal
+  orgs:
+  - gov:government-of-the-commonwealth-of-australia-department-of-the-environment-australian-urban-research-
+- slug: department-of-the-environment-and-energy
+  name: Department of the Environment and Energy
+  jurisdiction: Cth
+  level: federal
+  orgs:
+  - gov:government-of-the-commonwealth-of-australia-department-of-the-environment-and-energy-australian-urba
+- slug: environmental-research-center-sohar-university-oman
+  name: Environmental Research Center, Sohar University, Oman
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:environmental-research-center-sohar-university-oman
+- slug: flinders-university
+  name: Flinders University
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:flinders-university
+- slug: food-standards-australia-new-zealand-fsanz
+  name: Food Standards Australia New Zealand (FSANZ)
+  jurisdiction: Cth
+  level: federal
+  orgs:
+  - gov:food-standards-australia-new-zealand-fsanz
+- slug: geoscience-australia
+  name: Geoscience Australia
+  jurisdiction: Cth
+  level: federal
+  orgs:
+  - gov:government-of-the-commonwealth-of-australia-geoscience-australia-australian-urban-research-infrastru
+- slug: gisail-geospatial-informatics-and-intelligence-group-rmit-university
+  name: GISail (Geospatial Informatics and Intelligence) Group, RMIT University
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:gisail-geospatial-informatics-and-intelligence-group-rmit-university-australian-urban-research-infra
+- slug: griffith-university-urban-research-program
+  name: Griffith University - Urban Research Program
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:griffith-university-urban-research-program-australian-urban-research-infrastructure-network
+- slug: hydronumerics-pty-ltd
+  name: HydroNumerics Pty Ltd
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:hydronumerics-pty-ltd
+- slug: integrated-catchment-assessment-and-management-centre-icam-the-australian
+  name: Integrated Catchment Assessment and Management Centre (iCAM), The Australian National University
+    (ANU)
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:integrated-catchment-assessment-and-management-centre-icam-the-australian-national-university-anu
+- slug: integrated-marine-observing-system-imos
+  name: Integrated Marine Observing System (IMOS)
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:integrated-marine-observing-system-imos
+- slug: james-cook-university
+  name: James Cook University
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:james-cook-university
+- slug: james-cook-university-jcu
+  name: James Cook University (JCU)
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:james-cook-university-jcu
+- slug: mscience-pty-ltd
+  name: Mscience Pty Ltd
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:mscience-pty-ltd
+- slug: murdoch-university
+  name: Murdoch University
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:murdoch-university
+- slug: national-information-communications-technology-australia-ltd
+  name: National Information Communications Technology Australia Ltd
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:national-information-communications-technology-australia-ltd-australian-urban-research-infrastructur
+- slug: north-australia-research-unit-naru-the-australian-national-university-anu
+  name: North Australia Research Unit (NARU), The Australian National University (ANU)
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:north-australia-research-unit-naru-the-australian-national-university-anu
+- slug: oregon-state-university-osu
+  name: Oregon State University (OSU)
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:oregon-state-university-osu
+- slug: poplin-pty-ltd
+  name: Poplin Pty Ltd
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:poplin-pty-ltd
+- slug: remote-sensing-and-satellite-research-group-rssrg-curtin-university
+  name: Remote Sensing and Satellite Research Group (RSSRG), Curtin University
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:remote-sensing-and-satellite-research-group-rssrg-curtin-university
+- slug: research-school-of-asia-and-the-pacific-rsap-the-australian-national-university
+  name: Research School of Asia and the Pacific (RSAP), The Australian National University (ANU)
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:research-school-of-asia-and-the-pacific-rsap-the-australian-national-university-anu
+- slug: romberg-tiburon-center-for-environmental-studies-rtc-san-francisco-state
+  name: Romberg Tiburon Center for Environmental Studies (RTC), San Francisco State University (SFSU)
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:romberg-tiburon-center-for-environmental-studies-rtc-san-francisco-state-university-sfsu
+- slug: school-of-archaeology-and-anthropology-the-australian-national-university-anu
+  name: School of Archaeology and Anthropology, The Australian National University (ANU)
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:school-of-archaeology-and-anthropology-the-australian-national-university-anu
+- slug: school-of-biological-sciences-and-biotechnology-bsb-murdoch-university
+  name: School of Biological Sciences and Biotechnology (BSB), Murdoch University
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:school-of-biological-sciences-and-biotechnology-bsb-murdoch-university
+- slug: school-of-business-james-cook-university-jcu
+  name: School of Business, James Cook University (JCU)
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:school-of-business-james-cook-university-jcu
+- slug: school-of-business-james-cook-university-and-the-cairns-institute
+  name: School of Business, James Cook University and The Cairns Institute
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:school-of-business-james-cook-university-and-the-cairns-institute
+- slug: school-of-earth-and-environment-james-cook-university
+  name: School of Earth and Environment, James Cook University
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:school-of-earth-and-environment-james-cook-university
+- slug: school-of-earth-and-environmental-science-james-cook-university-jcu
+  name: School of Earth and Environmental Science, James Cook University (JCU)
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:school-of-earth-and-environmental-science-james-cook-university-jcu
+- slug: school-of-earth-and-environmental-sciences-james-cook-university
+  name: School of Earth and Environmental Sciences, James Cook University
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:school-of-earth-and-environmental-sciences-james-cook-university
+- slug: school-of-earth-and-environmental-sciences-james-cook-university-jcu
+  name: School of Earth and Environmental Sciences, James Cook University (JCU)
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:school-of-earth-and-environmental-sciences-james-cook-university-jcu
+- slug: school-of-electrical-engineering-computing-and-mathematical-sciences-curtin
+  name: School of Electrical Engineering, Computing and Mathematical Sciences, Curtin University
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:school-of-electrical-engineering-computing-and-mathematical-sciences-curtin-university-australian-ur
+- slug: school-of-environment-griffith-university-gu
+  name: School of Environment, Griffith University (GU)
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:school-of-environment-griffith-university-gu
+- slug: school-of-environmental-sciences-charles-sturt-university-csu
+  name: School of Environmental Sciences, Charles Sturt University (CSU)
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:school-of-environmental-sciences-charles-sturt-university-csu
+- slug: school-of-humanities-and-social-sciences-shss-deakin-university
+  name: School of Humanities and Social Sciences (SHSS), Deakin University
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:school-of-humanities-and-social-sciences-shss-deakin-university
+- slug: school-of-life-and-environmental-sciences-les-deakin-university
+  name: School of Life and Environmental Sciences (LES), Deakin University
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:school-of-life-and-environmental-sciences-les-deakin-university
+- slug: school-of-marine-and-tropical-biology-and-the-australian-centre-of-excellence
+  name: School of Marine and Tropical Biology and the Australian Centre of Excellence for Coral Reef Studies,
+    James Cook University
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:school-of-marine-and-tropical-biology-and-the-australian-centre-of-excellence-for-coral-reef-studie
+- slug: school-of-marine-and-tropical-biology-james-cook-university
+  name: School of Marine and Tropical Biology, James Cook University
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:school-of-marine-and-tropical-biology-james-cook-university
+- slug: school-of-marine-and-tropical-biology-james-cook-university-jcu
+  name: School of Marine and Tropical Biology, James Cook University (JCU)
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:school-of-marine-and-tropical-biology-james-cook-university-jcu
+- slug: school-of-veterinary-and-life-sciences-vls-murdoch-university
+  name: School of Veterinary and Life Sciences (VLS), Murdoch University
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:school-of-veterinary-and-life-sciences-vls-murdoch-university
+- slug: sip-register-advatel-wireless-pty-ltd
+  name: SIP Register - Advatel Wireless Pty Ltd
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:sip_advatel
+- slug: sip-register-asn-telecom
+  name: SIP Register - ASN Telecom
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:sip_asn_telecom
+- slug: sip-register-australian-communications-group-pty-ltd-formerly-telair-holdings
+  name: SIP Register - Australian Communications Group Pty Ltd formerly Telair Holdings Pty Ltd
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:sip_australian_communications_group
+- slug: sip-register-ciphertel-pty-ltd
+  name: SIP Register - CipherTel Pty Ltd
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:sip_ciphertel
+- slug: sip-register-cntcorp-pty-ltd
+  name: SIP Register - CNTCorp Pty Ltd
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:sip_cntcorp
+- slug: sip-register-commsol-holdings-pty-ltd
+  name: SIP Register - CommSol Holdings Pty Ltd
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:sip_commsol
+- slug: sip-register-fiber-asset-management-pty-ltd
+  name: SIP Register - Fiber Asset Management Pty Ltd
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:sip_fam
+- slug: sip-register-frontier-networks-pty-ltd
+  name: SIP Register - Frontier Networks Pty Ltd
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:sip_frontier
+- slug: sip-register-interphone-pty-ltd
+  name: SIP Register - Interphone Pty Ltd
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:sip_interphone
+- slug: sip-register-lbn-co-pty-ltd
+  name: SIP Register - LBN Co Pty Ltd
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:sip_lbn
+- slug: sip-register-lynham-networks-pty-ltd
+  name: SIP Register - Lynham Networks Pty Ltd
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:sip_lynham
+- slug: sip-register-myport-pty-ltd
+  name: SIP Register - Myport Pty Ltd
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:sip_myport
+- slug: sip-register-nbn-co-limited
+  name: SIP Register - NBN Co Limited
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:statutory-infrastructure-provider-nbn-co
+- slug: sip-register-omniconnect-pty-ltd
+  name: SIP Register - OMNIconnect Pty Ltd
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:sip_omniconnect
+- slug: sip-register-openetworks-pty-ltd
+  name: SIP Register - OPENetworks Pty Ltd
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:sip_opennetworks
+- slug: sip-register-opticomm
+  name: SIP Register - OptiComm
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:statutory-infrastructure-provider-opticomm
+- slug: sip-register-pipe-networks-pty-ltd
+  name: SIP Register - PIPE Networks Pty Ltd
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:sip_pipe
+- slug: sip-register-prospecta-utilities-apac-pty-ltd
+  name: SIP Register - Prospecta Utilities APAC Pty Ltd
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:sip-prospecta-utilities
+- slug: sip-register-real-world-networks-pty-ltd
+  name: SIP Register - Real World Networks Pty Ltd
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:sip_rwn
+- slug: sip-register-reddenet-pty-ltd
+  name: SIP Register - Reddenet Pty Ltd
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:sip_reddenet
+- slug: sip-register-transact-capital-communications-pty-ltd
+  name: SIP Register - Transact Capital Communications Pty Ltd
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:sip_transact
+- slug: sip-register-vostronet-australia-pty-ltd
+  name: SIP Register - VostroNet (Australia) Pty Ltd
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:sip-register-vostronet
+- slug: sip-register-bottle-communications-pty-ltd
+  name: SIP Register – Bottle Communications Pty Ltd
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:sip-register-bottle-communications-pty-ltd
+- slug: sip-register-core-fibre-networks-pty-ltd
+  name: SIP Register – Core Fibre Networks Pty Ltd
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:sip-register-core-fibre-networks-pty-ltd
+- slug: sip-register-dgtek-pty-ltd
+  name: SIP Register – DGTek Pty Ltd
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:sip-register-dgtek-pty-ltd
+- slug: sip-register-fiboss-pty-ltd
+  name: SIP Register – Fiboss Pty Ltd
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:sip-register-fiboss-pty-ltd
+- slug: sip-register-lightfast-networks-pty-ltd
+  name: SIP Register – LightFast Networks Pty Ltd
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:sip-register-lightfast-networks-pty-ltd
+- slug: sip-register-netbay-free-wifi-pty-ltd
+  name: SIP Register – Netbay Free WiFi Pty Ltd
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:sip-register-netbay-free-wifi-pty-ltd
+- slug: sip-register-superopti
+  name: SIP Register – Superopti
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:sip-register-superopti
+- slug: terrestrial-ecosystem-research-networks-data-discovery
+  name: Terrestrial Ecosystem Research Network's Data Discovery
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:tern-data-discovery
+- slug: the-university-of-texas-at-austin
+  name: The University of Texas at Austin
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:the-university-of-texas-at-austin
+- slug: torrens-university-australia-public-health-information-development-unit
+  name: Torrens University Australia - Public Health Information Development Unit
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:torrens-university-australia-public-health-information-development-unit-australian-urban-research-in
+- slug: tropwater-james-cook-university
+  name: TropWATER, James Cook University
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:tropwater-james-cook-university
+- slug: tropwater-james-cook-university-jcu
+  name: TropWATER, James Cook University (JCU)
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:tropwater-james-cook-university-jcu
+- slug: tropwater-james-cook-university-tropwater-jcu
+  name: TropWATER, James Cook University (TropWATER/JCU)
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:tropwater-james-cook-university-tropwater-jcu
+- slug: university-of-wollongong-centre-for-atmospheric-chemistry
+  name: University of Wollongong - Centre for Atmospheric Chemistry
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:university-of-wollongong-centre-for-atmospheric-chemistry-australian-urban-research-infrastructure-n
+- slug: water-studies-centre-wsc-monash-university
+  name: Water Studies Centre (WSC), Monash University
+  jurisdiction: Cth
+  level: other
+  orgs:
+  - gov:water-studies-centre-wsc-monash-university

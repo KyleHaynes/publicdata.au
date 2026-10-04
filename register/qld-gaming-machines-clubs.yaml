@@ -1,0 +1,95 @@
+slug: qld-gaming-machines-clubs
+title: Gaming machine data for clubs, Queensland
+status: live
+topics:
+- economy
+- community
+order: 281
+collection: qld-gaming-gambling
+collection_title: Gaming machine and gambling data from Queensland
+temporal_start: '2004-07-01'
+search_title: Queensland club gaming machine statistics (OLGR)
+also_known_as:
+- Queensland club pokies statistics
+- Total Queensland Club Gaming Machine Data
+keywords:
+- gaming machines
+- pokies
+- metered win
+- gambling losses
+- Queensland
+faq:
+- q: What is in each row?
+  a: One month, with the number of venues approved and operating gaming machines, the number of machines approved
+    and operating, and the metered win, which is the amount players lost on the machines, for clubs in Queensland.
+summary: Monthly counts of gaming venues and machines and the amount players lost on them, for clubs in Queensland,
+  since July 2004.
+description: One row per month from July 2004 for clubs in Queensland, with the venues approved and operating
+  electronic gaming machines, the machines approved and operating on the last day of the month, and the metered
+  win in dollars.
+publisher:
+  name: Office of Liquor and Gaming Regulation
+  short: OLGR
+  jurisdiction: Qld
+  url: https://www.olgr.qld.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/total-queensland-club-gaming-machine-data
+  attribution: Office of Liquor and Gaming Regulation, Queensland Government, Total Queensland Club Gaming
+    Machine Data, sourced {sourced}, https://www.data.qld.gov.au/dataset/total-queensland-club-gaming-machine-data,
+    licensed under CC BY 3.0 AU.
+  portal_id: CC-BY-3.0
+example:
+  where: {month: newest}
+  group: month
+  metric: sum.metered_win
+  label: Amount players lost on gaming machines in clubs in the newest month, in dollars
+chart:
+  where: {month: {gte: '2005-01-01'}}
+  split: none
+  metric: sum.metered_win
+  label: Metered win in dollars
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: total-queensland-club-gaming-machine-data
+  resource: c6694bab-36ce-48c8-9b05-917f9363d4e0
+  url: https://www.data.qld.gov.au/dataset/total-queensland-club-gaming-machine-data
+  cadence: monthly
+  encoding: utf-8-sig
+key:
+- month
+row_label: Months
+fields:
+- name: month
+  label: Month
+  source: Month Year
+  type: date
+  date_format: '%B %Y'
+  description: First day of the month the figures are for.
+- name: approved_sites
+  label: Approved sites
+  source: Approved Sites
+  type: integer
+  description: Venues approved to operate electronic gaming machines.
+- name: operational_sites
+  label: Operating sites
+  source: Operational Sites
+  type: integer
+  description: Venues operating gaming machines on the last day of the month.
+- name: approved_egms
+  label: Approved machines
+  source: Approved EGMs
+  type: integer
+  description: The most electronic gaming machines the venues are approved to operate.
+- name: operational_egms
+  label: Operating machines
+  source: Operational EGMs
+  type: integer
+  description: Electronic gaming machines operating on the last day of the month.
+- name: metered_win
+  label: Metered win ($)
+  source: Metered Win $
+  type: number
+  description: The amount players lost on the machines in the month, in dollars.

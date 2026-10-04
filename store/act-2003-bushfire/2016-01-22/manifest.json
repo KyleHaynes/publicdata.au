@@ -1,0 +1,27 @@
+{
+  "dataset": "act-2003-bushfire",
+  "version": "2016-01-22",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:14:42+00:00",
+  "sha256": "d84ab8002434464e55608fb63fe9749c8c2f5d5e8a1086563814cd63982b1735",
+  "bytes": 751433,
+  "filename": "sksx-b49e.geojson",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.act.gov.au/resource/sksx-b49e.geojson?$limit=50000&$order=:id",
+    "etag": "Zm94dHJvdC40MzE2MF8xXzV4Sk40TVE5SDFHa0FDalJ4MzJGSzNKSjRJSjA---gzirgGfQK8AQZwUO_vqR6S-EqipFkNg--gzip--gzip",
+    "http_last_modified": "Fri, 22 Jan 2016 01:58:24 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "stated": "Creative Commons Attribution 4.0 International",
+    "normalised": "CC-BY-4.0",
+    "title": "CC BY 4.0",
+    "url": "https://www.data.act.gov.au/d/sksx-b49e",
+    "read_from": "https://www.data.act.gov.au/d/sksx-b49e",
+    "read_at": "2026-10-03T03:14:41+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": []
+}

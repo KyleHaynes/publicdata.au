@@ -1,0 +1,26 @@
+{
+  "dataset": "rogs-corrective-services",
+  "version": "2026-01-27",
+  "as_at": "",
+  "fetched_at": "2026-09-30T19:39:48+00:00",
+  "sha256": "efac91e04ce671da4aaca85369ef4b9aacf0a74a85be9152311ea1e1d44995d6",
+  "bytes": 265517,
+  "filename": "rogs-2026-partc-section8-corrective-services-dataset_0.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://assets.pc.gov.au/2026-01/rogs-2026-partc-section8-corrective-services-dataset_0.csv",
+    "etag": "0d322fda03b0cf2c5498ce5c5c49b71a",
+    "http_last_modified": "Tue, 27 Jan 2026 01:24:50 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "stated": "licensed under a Creative Commons Attribution 4.0 International licence",
+    "normalised": "CC-BY-4.0",
+    "title": "CC BY 4.0",
+    "url": "https://www.pc.gov.au/copyright",
+    "read_at": "2026-09-30T19:39:47+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": []
+}

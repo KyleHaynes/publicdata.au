@@ -1,0 +1,27 @@
+{
+  "dataset": "abs-state-electoral-divisions-2025",
+  "version": "2025-07-14",
+  "as_at": "",
+  "fetched_at": "2026-10-01T14:36:23+00:00",
+  "sha256": "7b5c7c9a2965cd4b7523dc91dc612598ce0c0ca8a1bb0798c8d703f4b3cfc1aa",
+  "bytes": 35417023,
+  "filename": "SED_2025_AUST_GDA2020.zip",
+  "encoding": "zip",
+  "source": {
+    "url": "https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-3-july-2021-june-2026/access-and-downloads/digital-boundary-files/SED_2025_AUST_GDA2020.zip",
+    "etag": "",
+    "http_last_modified": "Mon, 14 Jul 2025 07:13:48 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "stated": "Copyright Commonwealth of Australia administered by the ABS. Unless otherwise noted, content is licensed under a Creative Commons Attribution 4.0 International licence.",
+    "normalised": "CC-BY-4.0",
+    "title": "CC BY 4.0",
+    "url": "https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-3-july-2021-june-2026/access-and-downloads/digital-boundary-files",
+    "read_from": "https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-3-july-2021-june-2026/access-and-downloads/digital-boundary-files",
+    "read_at": "2026-10-01T14:36:22+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": []
+}

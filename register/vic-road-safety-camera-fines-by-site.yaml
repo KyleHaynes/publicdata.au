@@ -1,0 +1,91 @@
+slug: vic-road-safety-camera-fines-by-site
+title: Infringements and fines by road safety camera site, Victoria, quarterly
+status: live
+topics:
+- roads
+example:
+  group: camera_site
+  metric: sum.fines_dollars
+  label: Fines in dollars
+order: 371
+publisher:
+  name: Cameras Save Lives
+  short: Cameras Save Lives
+  jurisdiction: Vic
+  url: https://www.vic.gov.au/cameras-save-lives
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://discover.data.vic.gov.au/dataset/road-safety-camera-network-fines-by-camera-system-quarterly
+  attribution: Cameras Save Lives, Victorian Government, Road Safety Camera Network - fines by camera system - quarterly, sourced {sourced}, https://discover.data.vic.gov.au/dataset/road-safety-camera-network-fines-by-camera-system-quarterly,
+    licensed under CC BY 4.0.
+search_title: Speed and red light camera fines by camera site, Victoria (quarterly)
+also_known_as:
+- Fines by camera and system quarterly
+- Victorian speed camera revenue by camera
+- Highest earning speed cameras Victoria
+- Road Safety Camera Network fines by camera system
+keywords:
+- speed cameras
+- red light cameras
+- camera fines
+- infringements
+- Cameras Save Lives
+- CityLink
+- Victoria
+faq:
+- q: What does each row hold?
+  a: One camera site or one camera system for the quarter named on the row, with the number of
+    infringements issued and the value of the fines in dollars. Sites are the intersection, freeway and
+    distracted driver cameras, described as the program describes them, including the lanes covered.
+- q: What are the rows in capitals?
+  a: Each camera system, such as SPEED AND RED-LIGHT INTERSECTION CAMERA SYSTEMS, CITYLINK CAMERA SYSTEM
+    or MOBILE CAMERA SYSTEM, has a row of its own with the system's total, followed by its sites. The
+    mobile camera system has a total only. The last row is the publisher's total for every system in the
+    quarter. Add only the system rows, or only the site rows, to avoid counting twice.
+- q: What do the figures include?
+  a: The publisher counts infringements for speeding, red light and unregistered vehicle offences by
+    offence date. The fine value includes the nominated value of operator onus infringements, and the
+    numbers can change as infringements are withdrawn or reissued.
+- q: Which quarter is it?
+  a: Each version is the newest quarter released, and the quarter is in each row, taken from the sheet's
+    name, for example JUL - SEP 2025. Earlier quarters back to 2018 are listed on the portal, many as
+    older .xls workbooks.
+summary: The number of infringements issued and the dollar value of fines at each Victorian fixed road
+  safety camera site and for each camera system in the quarter.
+description: Fines by camera and system from the Victorian road safety camera program, one row per
+  camera site or camera system for the quarter, with the infringements issued and the value of the fines.
+  The system rows are totals of their sites as the publisher lays them out. The notes beneath the
+  publisher's table are summarised in the questions here.
+source:
+  adapter: ckan-resource
+  portal: https://discover.data.vic.gov.au
+  package: road-safety-camera-network-fines-by-camera-system-quarterly
+  resource_match: ^Quarter
+  url: https://discover.data.vic.gov.au/dataset/road-safety-camera-network-fines-by-camera-system-quarterly
+  cadence: quarterly
+wide:
+  header_row: 6
+  header_rows: 1
+  first_column: 2
+  row_headers: 1
+row_label: Camera sites
+fields:
+- name: quarter
+  label: Quarter
+  source: (sheet)
+  type: string
+  description: The quarter as the publisher names the sheet, for example JUL - SEP 2025.
+- name: camera_site
+  label: Camera site or system
+  source: (row header 1)
+  type: string
+- name: infringements
+  label: Infringements issued
+  source: '(cell: Number of infringements)'
+  type: integer
+- name: fines_dollars
+  label: Fines ($)
+  source: '(cell: Fines ($))'
+  type: integer

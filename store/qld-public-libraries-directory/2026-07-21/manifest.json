@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-public-libraries-directory",
+  "version": "2026-07-21",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:03:15+00:00",
+  "sha256": "4abe1acf0d109c448b4e34014551c2bb7267f5575c5b407d85378da77256ad7b",
+  "bytes": 156498,
+  "filename": "opendata_2026_public_library_directory_.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/537ff4c4-b49a-41f6-8c56-489b8bc731af/resource/0cfcb57e-4cfc-41ca-a337-39ce1cb99344/download/opendata_2026_public_library_directory_.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "public-libraries",
+    "package_id": "537ff4c4-b49a-41f6-8c56-489b8bc731af",
+    "resource": "0cfcb57e-4cfc-41ca-a337-39ce1cb99344",
+    "resource_name": "Queensland Public Libraries 2026",
+    "resource_last_modified": "2026-07-20T21:43:57.046157",
+    "package_modified": "2026-07-24T05:13:54.186651",
+    "package_version": "1.0",
+    "etag": "83313c875314baa8aef94d88e3920d5b",
+    "http_last_modified": "Mon, 20 Jul 2026 21:42:04 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=public-libraries",
+    "read_at": "2026-10-03T03:03:14+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "54f87bd3118f5d39b48e364d13ea2475f14c441eb19f9806fc317aaa7c5cdbb3"
+}

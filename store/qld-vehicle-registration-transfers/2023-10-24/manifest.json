@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-vehicle-registration-transfers",
+  "version": "2023-10-24",
+  "as_at": "",
+  "fetched_at": "2026-10-03T02:59:39+00:00",
+  "sha256": "70631f40ca4c02050adc72a92ebe01ba4a3fbcbf4c8903a1258376e802503548",
+  "bytes": 45865096,
+  "filename": "20231023_30-yearly-vehicle-registration-transfers-by-transfer-type-make-model-and-body-shape.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/e030a61c-5094-4f21-8dea-e11574e86fd4/resource/38ec1985-e8dd-485b-8d38-a08f93472e98/download/20231023_30-yearly-vehicle-registration-transfers-by-transfer-type-make-model-and-body-shape.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "vehicle-registration-transfers-by-year",
+    "package_id": "e030a61c-5094-4f21-8dea-e11574e86fd4",
+    "resource": "38ec1985-e8dd-485b-8d38-a08f93472e98",
+    "resource_name": "Yearly vehicle registration transfers by transfer type, make, model and body shape",
+    "resource_last_modified": "2023-10-24T01:21:21.415588",
+    "package_modified": "2026-04-23T05:34:38.685942",
+    "package_version": "Obsolete - Reviewed and removed April 2026",
+    "etag": "362e76bf90de338100d0991c33c85a59",
+    "http_last_modified": "Tue, 24 Oct 2023 01:21:23 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=vehicle-registration-transfers-by-year",
+    "read_at": "2026-10-03T02:59:38+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "bc36c9b8d70ca34042f0dbaf57c5c845f555ccab4643bcf0459fa7f40e476646"
+}

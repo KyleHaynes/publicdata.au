@@ -1,0 +1,79 @@
+slug: vic-beach-report-sites
+title: Beach Report sampling sites, Port Phillip Bay
+status: live
+topics:
+- nature
+order: 369
+collection: vic-beach-report
+collection_title: EPA Beach Report water quality
+search_title: Port Phillip Bay Beach Report beaches and their locations (EPA Victoria)
+also_known_as:
+- EPA Beach Report site list
+- Port Phillip Bay monitored beaches
+keywords:
+- Beach Report
+- beaches
+- Port Phillip Bay
+- water quality monitoring
+- EPA Victoria
+faq:
+- q: What does each row hold?
+  a: One beach EPA Victoria samples for its Beach Report, with its site number, name, the water body it is
+    on and its latitude and longitude.
+- q: What datum are the coordinates in?
+  a: The publisher gives decimal degrees without naming a datum. They are published as given and taken
+    as WGS84 for mapping, which differs from GDA2020 by under two metres.
+summary: The 36 Port Phillip Bay beaches EPA Victoria samples for its Beach Report, with their site numbers
+  and coordinates.
+description: The site list from EPA Victoria's Beach Report enterococci workbook, one row per beach, with
+  the site number used in the sample results, the beach name, its water body and its coordinates.
+publisher:
+  name: Environment Protection Authority Victoria
+  short: EPA Victoria
+  jurisdiction: Vic
+  url: https://www.epa.vic.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://discover.data.vic.gov.au/dataset/beach-report-enterococci-data
+  attribution: Environment Protection Authority Victoria, Victorian Government, Beach Report enterococci
+    data, sourced {sourced}, https://discover.data.vic.gov.au/dataset/beach-report-enterococci-data, licensed
+    under CC BY 4.0.
+source:
+  adapter: ckan-resource
+  portal: https://discover.data.vic.gov.au
+  package: beach-report-enterococci-data
+  resource: b4bc2d2b-6c20-4331-9069-baba2a1c4cdc
+  url: https://discover.data.vic.gov.au/dataset/beach-report-enterococci-data
+  cadence: weekly in the sampling season
+  sheet: site_metadata
+key:
+- site_id
+geometry:
+  lon: longitude
+  lat: latitude
+  crs: EPSG:4326
+  crs_note: Decimal degrees as published. The publisher names no datum, so they are taken as WGS84 (EPSG:4326).
+row_label: Beaches
+fields:
+- name: site_id
+  label: Site number
+  source: site_ID
+  type: integer
+- name: site_name
+  label: Beach
+  source: site_name
+  type: string
+- name: water_body
+  label: Water body
+  source: water_body
+  type: string
+- name: latitude
+  label: Latitude
+  source: latitude
+  type: number
+- name: longitude
+  label: Longitude
+  source: longitude
+  type: number

@@ -1,0 +1,130 @@
+slug: wa-wave-stations-current
+title: Wave buoy stations in operation, Department of Transport, Western Australia
+status: live
+topics:
+- nature
+order: 477
+collection: wa-wave-stations
+collection_title: Wave buoy stations of the Department of Transport, Western Australia
+collection_search_title: WA wave buoy stations (Department of Transport WA)
+collection_description: |
+  The Department of Transport measures waves off the Western Australian coast with Datawell wave rider buoys. Older deployments used non-directional buoys and newer ones record wave direction as well.
+
+  The publisher lists its buoys in two layers. One holds the buoys in operation and the other holds past deployments since 1974. Each row links to the publisher's own downloads of that deployment's readings.
+search_title: WA wave buoy stations in operation (Department of Transport WA)
+also_known_as:
+- Wave Stations, Department of Transport (DOT-024)
+- Wave Stations Operational
+- WA wave rider buoy locations
+keywords:
+- wave buoys
+- wave data
+- waverider
+- coastal data
+- Western Australia
+- Department of Transport
+faq:
+- q: What is in each row?
+  a: One deployment of a Department of Transport wave rider buoy, with its location name and identifier,
+    the dates its data covers, its latitude, longitude and depth, the publisher's links to the data
+    readme, deployment metadata, live readings and yearly data download, the licence the publisher
+    attaches to the record, the date the record was produced and its status.
+- q: Are the wave readings included?
+  a: No. The publisher serves each deployment's readings as a zip of yearly workbooks linked from the
+    download column, which this site does not copy. Each row here describes a buoy deployment.
+- q: Where is the publisher's file?
+  a: There is none for the station list. This site reads every feature of the publisher's public map
+    service layer in pages, in WGS84, and keeps them as one GeoJSON file, which is the source file
+    beside every version.
+- q: How current is the list?
+  a: The records fetched in October 2026 were produced on 2 July 2021, and the dates of data for every
+    buoy end on 31 December 2020, the end of the yearly processed download. The live readings link goes
+    to the department's current tide and wave page for the location.
+summary: The Department of Transport's wave rider buoys in operation off the Western Australian coast, one row per buoy, with location, depth, the dates of its data and links to its readings.
+description: The Department of Transport's list of its wave rider buoys in operation, from the Wave Stations Operational layer of DOT-024 on the Western Australian Government's public map service. Each row carries the location name and identifier, the dates its data covers, its coordinates and depth, and the publisher's links to its readme, deployment metadata, live readings and yearly processed data.
+publisher:
+  name: Department of Transport, Western Australia
+  short: Department of Transport WA
+  jurisdiction: WA
+  url: https://www.transport.wa.gov.au/
+licence:
+  id: CC-BY-4.0
+  portal_id: cc-by
+  reviewed: '2026-10-01'
+  evidence: https://catalogue.data.wa.gov.au/dataset/wave-stations
+  attribution: Department of Transport, Government of Western Australia, Wave Stations (DOT-024),
+    https://catalogue.data.wa.gov.au/dataset/wave-stations, accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: arcgis-feature
+  portal: https://catalogue.data.wa.gov.au
+  package: wave-stations
+  url: https://public-services.slip.wa.gov.au/public/rest/services/SLIP_Public_Services/Marine_and_Estuaries/MapServer/14
+  cadence: as buoys are deployed and retired
+key:
+- location_id
+geometry:
+  lon: longitude
+  lat: latitude
+  crs: EPSG:7844
+  crs_note: Longitude and latitude in decimal degrees from the publisher's own attribute columns. The
+    layer is held in GDA2020, which differs from WGS84 by under 2 metres.
+row_label: Buoy deployments
+fields:
+- name: location_name
+  label: Location
+  source: location_name
+  type: string
+- name: location_id
+  label: Location ID
+  source: location_id
+  type: string
+- name: data_available_between
+  label: Data available
+  source: data_available_between
+  type: string
+  description: The first and last dates of the deployment's data, as the publisher writes them.
+- name: latitude
+  label: Latitude
+  source: latitude
+  type: number
+- name: longitude
+  label: Longitude
+  source: longitude
+  type: number
+- name: depth
+  label: Depth
+  source: depth
+  type: string
+  description: Water depth at the buoy as the publisher writes it, for example 60m.
+- name: readme
+  label: Readme link
+  source: readme
+  type: string
+- name: download_metadata
+  label: Deployment metadata link
+  source: download_metadata
+  type: string
+- name: live_wave
+  label: Live readings link
+  source: live_wave
+  type: string
+- name: download_data
+  label: Yearly data download link
+  source: download_data
+  type: string
+- name: licence
+  label: Licence
+  source: licence
+  type: string
+- name: production_date
+  label: Record produced
+  source: production_date
+  type: string
+- name: status
+  label: Status
+  source: status
+  type: string
+omit:
+  objectid: The layer's internal row number, which is not a publisher identifier.
+  (longitude): The feature's point as the service returns it, which repeats the publisher's own longitude column.
+  (latitude): The feature's point as the service returns it, which repeats the publisher's own latitude column.

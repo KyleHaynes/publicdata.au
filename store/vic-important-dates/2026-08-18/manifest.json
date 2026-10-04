@@ -1,0 +1,34 @@
+{
+  "dataset": "vic-important-dates",
+  "version": "2026-08-18",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:09:27+00:00",
+  "sha256": "31dc69d7458190d4bcdb2e0c4504b721857b3c382c51423f3d81d0c2c2fcda44",
+  "bytes": 437149,
+  "filename": "important-dates-august-2026.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://discover.data.vic.gov.au/dataset/a8bc540d-181b-4fb5-8110-5fe52a04f6a7/resource/caaa47de-8626-46a6-aa28-3d948c15c5d9/download/important-dates-august-2026.csv",
+    "portal": "https://discover.data.vic.gov.au",
+    "package": "government-dates-api-data",
+    "package_id": "a8bc540d-181b-4fb5-8110-5fe52a04f6a7",
+    "resource": "caaa47de-8626-46a6-aa28-3d948c15c5d9",
+    "resource_name": "Important Dates - August 2026",
+    "resource_last_modified": "2026-08-18T00:44:10.743358",
+    "package_modified": "2026-08-18T00:48:57.331442",
+    "package_version": null,
+    "etag": "1787013885.737263-437149-2978550703",
+    "http_last_modified": "Tue, 18 Aug 2026 00:44:45 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution 4.0 International",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://discover.data.vic.gov.au/api/3/action/package_show?id=government-dates-api-data",
+    "read_at": "2026-10-03T03:09:26+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "fd95c5b6e3df1812c34e7685bf846c3ca7545089390beb9c9a3fbc266f0020fd"
+}

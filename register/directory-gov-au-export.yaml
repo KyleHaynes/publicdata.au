@@ -1,0 +1,21 @@
+slug: directory-gov-au-export
+title: directory.gov.au daily export
+status: backlog
+topics:
+- government
+order: 32
+summary: A daily XML dump of directory.gov.au, which includes the organisations register. Would add a
+  daily version between the quarterly releases.
+publisher:
+  name: Department of Finance
+  short: Finance
+  jurisdiction: Cth
+  url: https://www.finance.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-09-25'
+  evidence: https://data.gov.au/data/dataset/directory-gov-au-export
+source:
+  adapter: none
+  url: https://data.gov.au/data/dataset/directory-gov-au-export
+planned: Needs an XML adapter.

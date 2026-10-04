@@ -1,0 +1,33 @@
+{
+  "dataset": "sa-river-murray-flood-2022",
+  "version": "2024-03-22",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:10:09+00:00",
+  "sha256": "e44526aef8e0abf58dbebe7224048650a79745023a9dc240e41fcaf97b82523f",
+  "bytes": 10625686,
+  "filename": "murrayflood2022-shp.zip",
+  "encoding": "zip",
+  "source": {
+    "url": "https://data.sa.gov.au/data/dataset/f6a4bc32-a489-4f5e-955b-48d11efa8195/resource/e630b4d2-822f-46b5-8d0b-fa2384f269f6/download/murrayflood2022-shp.zip",
+    "portal": "https://data.sa.gov.au/data",
+    "package": "river-murray-flood-2022",
+    "package_id": "f6a4bc32-a489-4f5e-955b-48d11efa8195",
+    "resource": "e630b4d2-822f-46b5-8d0b-fa2384f269f6",
+    "resource_name": "River Murray flood 2022 (shp)",
+    "resource_last_modified": "2024-03-22T07:01:13.371330",
+    "package_modified": "2024-03-22T07:02:18.375054",
+    "package_version": null,
+    "etag": "1711090873.82-10625686-1175132474",
+    "http_last_modified": "Fri, 22 Mar 2024 07:01:13 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution",
+    "url": "http://creativecommons.org/licenses/by/4.0",
+    "read_from": "https://data.sa.gov.au/data/api/3/action/package_show?id=river-murray-flood-2022",
+    "read_at": "2026-10-03T03:10:09+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": []
+}

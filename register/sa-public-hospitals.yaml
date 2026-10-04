@@ -1,0 +1,95 @@
+slug: sa-public-hospitals
+title: Public hospital locations, South Australia
+status: live
+topics:
+- health
+example:
+  group: emergency
+  metric: count
+order: 432
+collection: sa-hospitals
+collection_title: Hospital locations, South Australia
+collection_description: The locations of South Australia's hospitals from SA Health, one layer for public
+  hospitals and one for private hospitals, each with the hospital's name, address and type.
+collection_search_title: SA hospital locations (SA Health)
+search_title: South Australia public hospitals list and map (SA Health)
+also_known_as:
+- SA Public Hospitals
+- Public hospitals in Adelaide and regional South Australia
+- SA Health public hospital locations
+keywords:
+- hospitals
+- public hospitals
+- hospital locations
+- SA Health
+- South Australia
+faq:
+- q: What is in each row?
+  a: One public hospital with its name, street address, suburb, postcode and type, whether it has an emergency department or an emergency service, and its location.
+- q: Which coordinates are these?
+  a: Longitude and latitude in GDA2020 (EPSG:7844), from the GDA2020 file the publisher ships beside a GDA94 copy.
+summary: The name, address and location of each public hospital in South Australia, 73 at the first version.
+description: SA Public Hospitals from SA Health. Each row is one hospital, with its name, address, suburb and postcode
+  and its type, such as public hospital, public psychiatric hospital or public rehabilitation hospital, and its point location.
+publisher:
+  name: SA Health
+  short: SA Health
+  jurisdiction: SA
+  url: https://www.sahealth.sa.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.sa.gov.au/data/dataset/sa-public-hospitals
+  attribution: SA Health, Government of South Australia, SA Public Hospitals, https://data.sa.gov.au/data/dataset/sa-public-hospitals, accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: ckan-resource
+  portal: https://data.sa.gov.au/data
+  package: sa-public-hospitals
+  resource: 12582d6a-ec8d-45ae-b6ee-34e4a40cdc66
+  member: PublicHospitals_GDA2020.geojson
+  url: https://data.sa.gov.au/data/dataset/sa-public-hospitals
+  cadence: when the publisher updates the list
+geometry:
+  lon: longitude
+  lat: latitude
+  crs: EPSG:7844
+  crs_note: Coordinates are longitude and latitude in GDA2020 (EPSG:7844), from the publisher's GDA2020 file.
+row_label: Hospitals
+fields:
+- name: name
+  label: Hospital
+  source: name
+  type: string
+- name: address
+  label: Address
+  source: address
+  type: string
+- name: suburb
+  label: Suburb
+  source: suburb
+  type: string
+- name: postcode
+  label: Postcode
+  source: postcode
+  type: string
+- name: type
+  label: Type
+  source: type
+  type: string
+- name: emergency
+  label: Emergency care
+  source: emergency
+  type: string
+  description: Emergency Department, Emergency Service or No, as the publisher writes it. Most country hospitals
+    have an emergency service.
+- name: longitude
+  label: Longitude
+  source: (longitude)
+  type: number
+  description: Decimal degrees, GDA2020, from the point geometry.
+- name: latitude
+  label: Latitude
+  source: (latitude)
+  type: number
+  description: Decimal degrees, GDA2020, from the point geometry.

@@ -1,0 +1,123 @@
+slug: qld-fair-trading-licences-by-region
+title: Occupational licences held by type and region, Queensland, latest count
+status: live
+topics:
+- economy
+order: 224
+collection: qld-fair-trading
+collection_title: Office of Fair Trading complaints, enforcement and registers, Queensland
+search_title: Queensland real estate, motor dealer and security licences by region (Office of Fair Trading)
+also_known_as:
+- Office of Fair Trading licence statistics
+- Number of real estate agents in Queensland
+- Licensed security providers Queensland by region
+keywords:
+- occupational licences
+- real estate licences
+- motor dealers
+- security providers
+- tattoo licences
+- Fair Trading
+- Queensland
+faq:
+- q: What is in each row?
+  a: One type of occupational or industry licence the Office of Fair Trading administers, such as real
+    estate, motor dealer, security provider or tattoo industry, with the number of distinct licences in
+    each office region on the count date and a Grand Total row and column.
+- q: What does a blank cell mean?
+  a: The office leaves a cell blank where a region has none of that licence type in its table. Those cells
+    are null here.
+- q: When is the count taken?
+  a: The office counts licences on 1 April and 1 October each year. The first version here is the count
+    as at 1 April 2026.
+summary: The number of occupational and industry licences the Queensland Office of Fair Trading administers,
+  by licence type and office region, on the newest count date.
+description: Counts of the distinct licences held under the occupational and industry licensing laws the
+  Queensland Office of Fair Trading administers, one row per licence type, with one column for each office
+  region and a Grand Total. The office publishes a count as at 1 April and 1 October each year, and this
+  table follows the newest.
+publisher:
+  name: Department of Justice
+  short: Justice
+  jurisdiction: Qld
+  url: https://www.justice.qld.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  evidence: https://www.data.qld.gov.au/dataset/occupational-and-industry-licensing-statistics-office-of-fair-trading
+  reviewed: '2026-10-01'
+  attribution: Department of Justice, Queensland Government, Occupational and industry licensing statistics,
+    Office of Fair Trading, sourced {sourced}, https://www.data.qld.gov.au/dataset/occupational-and-industry-licensing-statistics-office-of-fair-trading,
+    licensed under CC BY 3.0 AU.
+  portal_id: CC-BY-3.0
+example:
+  where: {licence_type: {neq: Grand Total}}
+  group: licence_type
+  metric: sum.all_regions
+  label: Licences held in all regions, by licence type
+sample:
+  where: {licence_type: {neq: Grand Total}}
+  order: [all_regions.desc]
+  label: The ten licence types with the most licences held in all regions, most first.
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: occupational-and-industry-licensing-statistics-office-of-fair-trading
+  resource_match: ^OFT Register
+  url: https://www.data.qld.gov.au/dataset/occupational-and-industry-licensing-statistics-office-of-fair-trading
+  cadence: twice a year
+  encoding: utf-8-sig
+  header_row: 2
+key:
+- licence_type
+row_label: Types
+fields:
+- name: licence_type
+  label: Licence type
+  source: Row Labels
+  type: string
+- name: brisbane
+  label: Brisbane
+  source: BRISBANE
+  type: integer
+- name: cairns
+  label: Cairns
+  source: CAIRNS
+  type: integer
+- name: mackay
+  label: Mackay
+  source: MACKAY
+  type: integer
+- name: rockhampton
+  label: Rockhampton
+  source: ROCKHAMPTON
+  type: integer
+- name: southport
+  label: Southport
+  source: SOUTHPORT
+  type: integer
+- name: sunshine_coast
+  label: Sunshine Coast
+  source: SUNSHINE COAST
+  type: integer
+- name: toowoomba
+  label: Toowoomba
+  source: TOOWOOMBA
+  type: integer
+- name: townsville
+  label: Townsville
+  source: TOWNSVILLE
+  type: integer
+- name: wide_bay
+  label: Wide Bay
+  source: WIDE BAY
+  type: integer
+- name: other
+  label: Other
+  source: OTHER
+  type: integer
+- name: all_regions
+  label: All regions
+  source: Grand Total
+  type: integer
+note: Cells were typed and headers were made snake_case. The Grand Total row is the office's own and is
+  kept. Rows were left alone.

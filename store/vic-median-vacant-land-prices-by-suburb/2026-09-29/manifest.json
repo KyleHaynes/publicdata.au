@@ -1,0 +1,34 @@
+{
+  "dataset": "vic-median-vacant-land-prices-by-suburb",
+  "version": "2026-09-29",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:09:44+00:00",
+  "sha256": "0dccc5e1543812d239971ccc4d270a2e9d4ab9f1ae0ca0316e16055987273136",
+  "bytes": 46134,
+  "filename": "land-by-suburb-2015-2025.xlsx",
+  "encoding": "xlsx",
+  "source": {
+    "url": "https://www.land.vic.gov.au/__data/assets/excel_doc/0035/775619/land-by-suburb-2015-2025.xlsx",
+    "portal": "https://discover.data.vic.gov.au",
+    "package": "victorian-property-sales-report-median-vacant-land-by-suburb-time-series",
+    "package_id": "4c544a98-86f1-41a2-bb67-7f0777cd3ca5",
+    "resource": "5b89cbea-62ea-42b6-b310-fcbff98afc7f",
+    "resource_name": "Land by suburb 2015-2025",
+    "resource_last_modified": null,
+    "package_modified": "2026-09-29T00:42:03.364297",
+    "package_version": null,
+    "etag": "",
+    "http_last_modified": ""
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution 4.0 International",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://discover.data.vic.gov.au/api/3/action/package_show?id=victorian-property-sales-report-median-vacant-land-by-suburb-time-series",
+    "read_at": "2026-10-03T03:09:43+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "5342cca54aef85fe15dd6e71fea0f1c30d836fea37c642087bc5a0341cfaf284"
+}

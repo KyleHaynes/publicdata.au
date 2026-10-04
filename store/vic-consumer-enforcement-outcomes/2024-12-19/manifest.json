@@ -1,0 +1,34 @@
+{
+  "dataset": "vic-consumer-enforcement-outcomes",
+  "version": "2024-12-19",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:09:29+00:00",
+  "sha256": "d4993a72a1a081b6c5f33b7306a530c42c379923ff879bbfdcfc12f733d89321",
+  "bytes": 241,
+  "filename": "enforcement-outcomes-2012-13-onward.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.consumer.vic.gov.au/library/data-sets/cav-activity/enforcement-outcomes-2012-13-onward.csv?la=en",
+    "portal": "https://discover.data.vic.gov.au",
+    "package": "enforcement-outcomes",
+    "package_id": "e64c32c6-ceca-47e1-942b-601009eb56ca",
+    "resource": "b615f6fd-a8fe-4e02-9ff6-2d3e73f72149",
+    "resource_name": "Enforcement outcomes",
+    "resource_last_modified": null,
+    "package_modified": "2024-12-18T14:18:59.061662",
+    "package_version": null,
+    "etag": "",
+    "http_last_modified": "Thu, 31 Oct 2019 04:27:48 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution 4.0 International",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://discover.data.vic.gov.au/api/3/action/package_show?id=enforcement-outcomes",
+    "read_at": "2026-10-03T03:09:28+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "f6b5b1f8aecb97fc3b136dc575fd07fc7791d28e51438a5ba287dc2e2ba3536c"
+}

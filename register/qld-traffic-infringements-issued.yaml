@@ -1,0 +1,117 @@
+slug: qld-traffic-infringements-issued
+title: Traffic infringements and charges issued by police district, Queensland, from 2013-14
+status: live
+topics:
+- roads
+- crime
+order: 208
+temporal_start: '2013-07-01'
+search_title: Queensland traffic fines issued by offence and police district (Transport and Main Roads)
+also_known_as:
+- Queensland traffic infringement notices issued
+- QLD speeding fines statistics
+- Traffic offences by police district Queensland
+- TINs issued Queensland
+keywords:
+- traffic fines
+- infringement notices
+- speeding fines
+- traffic offences
+- police district
+- drink driving
+- Queensland
+faq:
+- q: What is in each row?
+  a: One financial year from 2013-14, one police region and district, and one offence code, with the number
+    of infringement notices or charges issued for that offence. The Breach or Ticket column says which,
+    with T for a ticket (infringement notice) and B for a breach (charge).
+- q: Why are recent counts lower?
+  a: The department allows a three month lag before it extracts the data, and it notes that some categories,
+    such as drink driving, stay understated for longer because those matters take time to finalise. The
+    figures can change as offences are finalised.
+- q: What are the last rows?
+  a: The publisher ends the file with three rows of notes about the extract. They are kept as published,
+    so their text sits in the financial year column and the other columns are empty.
+- q: Why does North Brisbane have so many offences?
+  a: Almost every camera-detected offence in the file is recorded against the North Brisbane police district,
+    and no other district has more than a few dozen. Toll offences are all recorded under the UNKNOWN region. Compare
+    districts on offences that are not camera or toll offences.
+summary: The number of traffic infringement notices and charges issued in Queensland each financial year
+  since 2013-14, by police region and district and by offence code and description.
+description: Counts of traffic offence infringement notices and charges issued in Queensland from 1 July
+  2013, one row per financial year, police region, police district and offence. Each row names the offence
+  type, code and description and whether it was a ticket or a breach. The Department of Transport and
+  Main Roads extracts it from its registration and licensing system, TRAILS, once a year.
+publisher:
+  name: Department of Transport and Main Roads
+  short: Transport and Main Roads
+  jurisdiction: Qld
+  url: https://www.tmr.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/traffic-infringements-issued
+  attribution: Department of Transport and Main Roads, Queensland Government, Traffic infringements issued,
+    sourced {sourced}, https://www.data.qld.gov.au/dataset/traffic-infringements-issued, licensed under
+    CC BY 4.0.
+example:
+  group: offence_type
+  metric: sum.offences
+  label: Notices or charges issued
+sample:
+  where:
+    police_region:
+      neq: UNKNOWN
+  order: [offences.desc]
+  label: The offence with the most notices or charges in one financial year in each police region, each
+    region in turn, largest first. Rows with no region or the UNKNOWN region are left out.
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: traffic-infringements-issued
+  resource: 44223888-84db-468e-8434-f5852184b3d9
+  url: https://www.data.qld.gov.au/dataset/traffic-infringements-issued
+  encoding: utf-8-sig
+  cadence: yearly
+partition_by:
+- police_region
+row_label: Offence counts
+fields:
+- name: fiscal_year
+  label: Financial year
+  source: Fiscal Year
+  type: string
+  description: A financial year such as 2013-14. The last three rows hold the publisher's notes in this
+    column.
+- name: police_region
+  label: Police region
+  source: Police Region
+  type: string
+- name: police_district
+  label: Police district
+  source: Police District
+  type: string
+- name: offence_type
+  label: Offence type
+  source: Offence Type
+  type: string
+- name: breach_or_ticket
+  label: Breach or ticket
+  source: Breach or Ticket
+  type: string
+  description: T for an infringement notice (ticket) and B for a charge (breach).
+- name: offence_code
+  label: Offence code
+  source: Offence Code
+  type: string
+  description: Kept as text because some codes carry letters.
+- name: offence_description
+  label: Offence
+  source: Offence Description
+  type: string
+- name: offences
+  label: Notices or charges issued
+  source: Total
+  type: integer
+note: Cells were typed and headers were made snake_case. Rows were left alone, including the three rows
+  of notes at the end of the file.

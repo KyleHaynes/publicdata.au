@@ -1,0 +1,137 @@
+slug: nt-crime-statistics
+title: Recorded offences by region and month, Northern Territory
+status: live
+topics:
+- crime
+example:
+  where:
+    alcohol_involvement: 'Yes'
+  group: reporting_region
+  metric: sum.offences
+chart:
+  where:
+    year:
+      gte: 2024
+  split: none
+  metric: sum.offences
+  label: Offences recorded
+sample:
+  order:
+  - year.desc
+  - month.desc
+  - offences.desc
+  spread: none
+  label: The ten rows with the most offences in the newest month, largest first.
+order: 42
+publisher:
+  name: Department of the Attorney-General and Justice
+  short: Attorney-General and Justice
+  jurisdiction: NT
+  url: https://justice.nt.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-09-29'
+  portal_id: cc-by
+  evidence: https://data.nt.gov.au/dataset/current-nt-crime-statistics-july-2026
+  attribution: Department of the Attorney-General and Justice, Northern Territory Government, NT Crime
+    Statistics, sourced {sourced}, https://data.nt.gov.au/, licensed under CC BY 3.0 AU.
+temporal_start: '2023-12-01'
+search_title: NT crime statistics by region and month (Darwin, Alice Springs)
+also_known_as:
+- Northern Territory crime statistics
+- Alice Springs crime statistics
+- Darwin crime statistics
+- NT Police recorded offences by month
+keywords:
+- crime statistics
+- NT crime
+- Alice Springs crime
+- Darwin crime
+- recorded offences
+- Northern Territory
+- assault
+faq:
+- q: Why does the series start in December 2023?
+  a: NT Police moved to a new records system, SerPro, in November 2023. The publisher says figures from
+    December 2023 onwards should not be compared directly with earlier figures, and its current release
+    starts there.
+- q: Are recent months final?
+  a: No. The publisher marks recent months as provisional because offences are entered later in an investigation
+    under SerPro, so a month can take several months to settle. Each monthly release is kept here as its
+    own version, so a later version can revise an earlier month.
+- q: What does a dash mean in the alcohol and domestic violence columns?
+  a: The publisher records alcohol and domestic violence involvement for assault offences only. Other offences
+    carry a dash, which is kept as published.
+summary: Offences recorded by NT Police each month since December 2023, by offence category and type,
+  region and statistical area, with alcohol and domestic violence involvement for assaults.
+description: Counts of offences recorded by NT Police in each month since December 2023, by offence category
+  and type, reporting region and, outside the main towns, Statistical Area 2. Assault offences are split
+  by alcohol involvement and domestic violence involvement. The publisher releases a new dataset each month,
+  and this entry follows the newest.
+source:
+  adapter: ckan-resource
+  portal: https://data.nt.gov.au
+  package: current-nt-crime-statistics
+  package_match: ^current-nt-crime-statistics-[a-z]+-\d{4}$
+  resource_match: (?i)\.csv$
+  url: https://data.nt.gov.au/organization/department-of-attorney-general-and-justice
+  cadence: monthly
+  encoding: utf-8-sig
+key:
+- year
+- month
+- offence_category
+- offence_type
+- alcohol_involvement
+- dv_involvement
+- reporting_region
+- sa2
+partition_by:
+- reporting_region
+fields:
+- name: as_at
+  label: As at
+  source: As At
+  type: date
+  date_format: '%d/%m/%Y'
+  description: The date the publisher extracted the figures.
+- name: year
+  label: Year
+  source: Year
+  type: integer
+- name: month
+  label: Month
+  source: Month number
+  type: integer
+  description: Month of the year, 1 for January.
+- name: offence_category
+  label: Offence category
+  source: Offence category
+  type: string
+- name: offence_type
+  label: Offence type
+  source: Offence type
+  type: string
+- name: alcohol_involvement
+  label: Alcohol involved
+  source: Alcohol involvement
+  type: string
+  description: Yes or No for assault offences, and a dash for other offences.
+- name: dv_involvement
+  label: Domestic violence involved
+  source: DV involvement
+  type: string
+  description: Yes or No for assault offences, and a dash for other offences.
+- name: reporting_region
+  label: Reporting region
+  source: Reporting Region
+  type: string
+- name: sa2
+  label: Statistical Area 2
+  source: Statistical Area 2
+  type: string
+  description: Blank for the main towns, which the publisher reports as regions.
+- name: offences
+  label: Offences
+  source: Number of offences
+  type: integer

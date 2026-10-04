@@ -1,0 +1,238 @@
+slug: au-taxable-income-by-postcode-2023-24
+title: Taxable income, salary, rent, tax and super by postcode, Australia, 2023-24
+status: live
+topics:
+- economy
+example:
+  group: postcode
+  metric: max.median_taxable_income_or_loss_aud
+  label: Median taxable income in each postcode, 2023-24 ($)
+sample:
+  order:
+  - individuals.desc
+  label: The postcodes with the most individuals lodging a return, most first.
+order: 511
+publisher:
+  name: Australian Taxation Office
+  short: ATO
+  jurisdiction: Cth
+  url: https://www.ato.gov.au/
+licence:
+  id: CC-BY-2.5-AU
+  reviewed: '2026-10-01'
+  portal_id: cc-by-2.5
+  evidence: https://data.gov.au/data/dataset/taxation-statistics-2023-24
+  attribution: Australian Taxation Office, Australian Government, Taxation Statistics 2023-24, Individuals
+    Table 25, sourced {sourced}, https://data.gov.au/data/dataset/taxation-statistics-2023-24, licensed under
+    CC BY 2.5 AU.
+temporal_start: '2023-07-01'
+search_title: Average and median taxable income by postcode, 2023-24, Australia (ATO Taxation Statistics)
+also_known_as:
+- Average income by postcode Australia
+- Median income by postcode ATO
+- ATO taxation statistics postcode data
+- Taxation statistics individuals table 25
+keywords:
+- taxable income
+- income by postcode
+- median income
+- salary and wages
+- superannuation
+- ATO
+- taxation statistics
+faq:
+- q: What is in each row?
+  a: One postcode, with the number of individuals who lodged a tax return for the 2023-24 income year and,
+    for each of taxable income, salary and wages, net rent, total income, deductions, business income and
+    expenses, net tax and super balances, the count of individuals with the item and its average and
+    median in dollars. Some items also give the share of individuals with the item, as a fraction.
+- q: Which individuals are counted?
+  a: Counts, averages and medians for taxable income, total income and deductions use every individual,
+    including zeroes. Net rent counts everyone who reported at the label. The other items count only
+    individuals with a value other than zero. The figures come from 2024 returns processed by 31 October
+    2025 and are not necessarily complete.
+- q: Where are the other years?
+  a: The ATO publishes each income year as its own release with its own columns, so each year is its own
+    table.
+summary: The count, average and median of taxable income, salary and wages, rent, deductions, business
+  income, net tax and super balance for individuals in every Australian postcode, 2023-24, from the ATO.
+description: Table 25 of the ATO's Taxation Statistics 2023-24 for individuals, selected items by postcode.
+  Each row is one postcode, with the number of individuals who lodged and, for each item, the number with
+  the item, the share with it where the ATO gives one, and its average and median in dollars.
+source:
+  adapter: ckan-resource
+  portal: https://data.gov.au/data
+  package: taxation-statistics-2023-24
+  resource: d6122018-989a-453c-bd40-294990adbe40
+  url: https://data.gov.au/data/dataset/taxation-statistics-2023-24
+  sheet: Table 25
+  header_row: 2
+  cadence: yearly
+key:
+- postcode
+row_label: Postcodes
+fields:
+- name: postcode
+  label: Postcode
+  source: Postcode
+  type: integer
+  description: The postcode as the ATO publishes it, as a number, so Northern Territory postcodes such as 0800 appear
+    as 800.
+- name: individuals
+  label: Individuals lodging a return
+  source: 'Individuals
+
+    no.'
+  type: integer
+- name: count_taxable_income_or_loss
+  label: Taxable income or loss (individuals)
+  source: "Taxable income or loss \nno."
+  type: integer
+- name: average_taxable_income_or_loss_aud
+  label: Average taxable income or loss ($)
+  source: Average taxable income or loss $
+  type: integer
+- name: median_taxable_income_or_loss_aud
+  label: Median taxable income or loss ($)
+  source: Median taxable income or loss $
+  type: integer
+- name: proportion_salary_or_wages
+  label: Share with salary or wages
+  source: Proportion with salary or wages
+  type: number
+- name: count_salary_or_wages
+  label: Salary or wages (individuals)
+  source: 'Salary or wages
+
+    no.'
+  type: integer
+- name: average_salary_or_wages_aud
+  label: Average salary or wages ($)
+  source: "Average salary or wages \n$"
+  type: integer
+- name: median_salary_or_wages_aud
+  label: Median salary or wages ($)
+  source: "Median salary or wages \n$"
+  type: integer
+- name: count_net_rent
+  label: Net rent (individuals)
+  source: 'Net rent
+
+    no.'
+  type: integer
+- name: proportion_net_rent
+  label: Share with net rent
+  source: Proportion with net rent
+  type: number
+- name: average_net_rent_aud
+  label: Average net rent ($)
+  source: "Average net rent \n$"
+  type: integer
+- name: median_net_rent_aud
+  label: Median net rent ($)
+  source: 'Median net rent
+
+    $'
+  type: integer
+- name: count_total_income_or_loss
+  label: Total income or loss (individuals)
+  source: 'Total income or loss
+
+    no.'
+  type: integer
+- name: average_total_income_or_loss_aud
+  label: Average total income or loss ($)
+  source: 'Average total income or loss
+
+    $'
+  type: integer
+- name: median_total_income_or_loss_aud
+  label: Median total income or loss ($)
+  source: "Median total income or loss \n$"
+  type: integer
+- name: count_total_deductions
+  label: Total deductions (individuals)
+  source: 'Total deductions
+
+    no.'
+  type: integer
+- name: average_total_deductions_aud
+  label: Average total deductions ($)
+  source: "Average total deductions \n$"
+  type: integer
+- name: median_total_deductions_aud
+  label: Median total deductions ($)
+  source: Median total deductions $
+  type: integer
+- name: count_total_business_income
+  label: Total business income (individuals)
+  source: 'Total business income
+
+    no.'
+  type: integer
+- name: proportion_total_business_income
+  label: Share with total business income
+  source: Proportion with total business income
+  type: number
+- name: average_total_business_income_aud
+  label: Average total business income ($)
+  source: Average total business income $
+  type: integer
+- name: median_total_business_income_aud
+  label: Median total business income ($)
+  source: Median total business income $
+  type: integer
+- name: count_total_business_expenses
+  label: Total business expenses (individuals)
+  source: 'Total business expenses
+
+    no.'
+  type: integer
+- name: proportion_total_business_expenses
+  label: Share with total business expenses
+  source: Proportion with total business expenses
+  type: number
+- name: average_total_business_expenses_aud
+  label: Average total business expenses ($)
+  source: "Average total business expenses \n$"
+  type: integer
+- name: median_total_business_expenses_aud
+  label: Median total business expenses ($)
+  source: "Median total business expenses \n$"
+  type: integer
+- name: count_net_tax
+  label: Net tax (individuals)
+  source: 'Net tax
+
+    no.'
+  type: integer
+- name: proportion_net_tax
+  label: Share with net tax
+  source: Proportion with net tax
+  type: number
+- name: average_net_tax_aud
+  label: Average net tax ($)
+  source: "Average net tax \n$"
+  type: integer
+- name: median_net_tax_aud
+  label: Median net tax ($)
+  source: "Median net tax \n$"
+  type: integer
+- name: count_super_total_accounts_balance
+  label: Super total accounts balance (individuals)
+  source: 'Super total accounts balance
+
+    no.'
+  type: integer
+- name: average_super_total_accounts_balance_aud
+  label: Average super total accounts balance ($)
+  source: 'Average super total accounts balance
+
+    $'
+  type: integer
+- name: median_super_total_accounts_balance_aud
+  label: Median super total accounts balance ($)
+  source: 'Median super total accounts balance
+
+    $'
+  type: integer

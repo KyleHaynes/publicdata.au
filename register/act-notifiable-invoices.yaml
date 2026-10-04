@@ -1,0 +1,112 @@
+slug: act-notifiable-invoices
+title: Notifiable invoices register, ACT Government
+status: live
+topics:
+- government
+- economy
+example:
+  group: reporting_entity
+  metric: sum.payment_amount
+  label: Dollars paid on notifiable invoices
+chart:
+  where: {date_invoice_received: {gte: '2018-01-01'}}
+  metric: count
+  split: none
+  label: Invoices
+sample:
+  spread: reporting_entity
+order: 470
+collection: act-procurement
+collection_title: ACT Government contracts and invoices
+collection_search_title: ACT Government contracts register and invoice data
+collection_description: |
+  The ACT Government publishes its contracts and the large invoices it pays so the community can see what it buys and from whom.
+
+  The collection holds two tables. The notifiable invoices register lists every invoice of 25,000 dollars or more that a Territory entity has paid since July 2015, and is updated monthly. The contracts register table is the portal's copy of the ACT Government Contracts Register, last changed in July 2017. The current contracts register is on the Tenders ACT website.
+temporal_start: '2015-07-01'
+search_title: ACT Government notifiable invoices register, payments over 25000 dollars (Procurement ACT)
+also_known_as:
+- ACT Government invoices over 25000 dollars
+- ACT Government supplier payments
+- Notifiable Invoices Register
+keywords:
+- government spending
+- invoices
+- supplier payments
+- procurement
+- Government Procurement Act 2001
+- Canberra
+- ACT
+faq:
+- q: What is in each row?
+  a: One invoice of 25,000 dollars or more paid by an ACT Government entity, with the supplier's name and
+    ABN, the entity that reported it, a description of the goods, services or works, the date the invoice
+    was received, the payment date, the amount and the contract number where there is one.
+- q: Why is the date received blank in older rows?
+  a: The publisher began recording the date an invoice was received for reporting from 1 July 2017, so
+    most earlier invoices have none.
+- q: How current is it?
+  a: The publisher adds each month's invoices within 21 days of the end of the month in which they were
+    paid. This site checks the register weekly and adds a dated version when it changes.
+summary: Every invoice of 25,000 dollars or more paid by the ACT Government and its entities since July
+  2015, one row per invoice with the supplier, description, payment date and amount.
+description: The register the ACT Government publishes under the Government Procurement Act 2001 of
+  notifiable invoices, those of 25,000 dollars or more for goods, services or works paid by the Territory
+  or a Territory entity. Each row carries the supplier name and ABN, the reporting entity, the description
+  of the invoice, the date it was received (from July 2017), the payment date, the payment amount and the
+  contract number where the publisher gives one.
+publisher:
+  name: Procurement ACT, Chief Minister, Treasury and Economic Development Directorate
+  short: Procurement ACT
+  jurisdiction: ACT
+  url: https://www.procurement.act.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.act.gov.au/d/kzmf-7uhp
+  attribution: ACT Government, Notifiable Invoices Register, https://www.data.act.gov.au/d/kzmf-7uhp, accessed
+    {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: socrata
+  portal: https://www.data.act.gov.au
+  package: kzmf-7uhp
+  url: https://www.data.act.gov.au/d/kzmf-7uhp
+  cadence: monthly
+row_label: Invoices
+fields:
+- name: supplier_name
+  label: Supplier
+  source: Supplier Name
+  type: string
+- name: supplier_abn
+  label: Supplier ABN
+  source: Supplier ABN
+  type: string
+- name: reporting_entity
+  label: Reporting entity
+  source: Reporting Entity
+  type: string
+- name: publish_description
+  label: Description
+  source: Publish Description
+  type: string
+- name: date_invoice_received
+  label: Invoice received
+  source: Date Invoice Received
+  type: date
+  date_format: '%d/%m/%Y'
+- name: payment_date
+  label: Payment date
+  source: Payment Date
+  type: date
+  date_format: '%d/%m/%Y'
+- name: payment_amount
+  label: Payment amount ($)
+  source: Payment Amount
+  type: number
+- name: contract_number
+  label: Contract number
+  source: Contract Number
+  type: string
+note: Cells were typed and headers were made snake_case. The publisher's header is kept beside every field
+  in schema.json. Rows were left alone.

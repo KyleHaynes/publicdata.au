@@ -1,0 +1,289 @@
+slug: nsw-public-schools
+title: NSW government schools, locations and enrolments
+status: live
+topics:
+- education
+example:
+  group: lga
+  metric: sum.latest_year_enrolment_fte
+  label: Students (FTE)
+chart:
+  split: none
+  metric: count
+  label: Openings of schools still open
+order: 313
+publisher:
+  name: NSW Department of Education
+  short: Department of Education
+  jurisdiction: NSW
+  url: https://education.nsw.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.nsw.gov.au/data/dataset/nsw-education-nsw-public-schools-master-dataset
+  attribution: 'NSW Department of Education, NSW Government, Master dataset: NSW government school locations
+    and student enrolment numbers, sourced {sourced}, https://data.nsw.gov.au/data/dataset/nsw-education-nsw-public-schools-master-dataset,
+    licensed under CC BY 4.0.'
+search_title: List of NSW public schools with addresses, enrolments and locations (NSW Department of Education)
+also_known_as:
+- NSW public schools master dataset
+- NSW government school locations
+- NSW public school enrolment numbers
+- Find a NSW public school by suburb
+keywords:
+- public schools
+- school locations
+- school enrolments
+- selective schools
+- government schools
+- NSW Department of Education
+- New South Wales
+faq:
+- q: What is in each row?
+  a: One NSW government school, with its code, name, address and contacts, the level of schooling and
+    the kinds of classes it offers, its latest full-time equivalent enrolment, the share of Aboriginal
+    and Torres Strait Islander students and of students from a language background other than English,
+    the areas it falls in and its latitude and longitude.
+- q: What does a null percentage mean?
+  a: The Department writes np where five or fewer students are counted, so the percentage is not published.
+    Those cells are null here with a suppressed flag.
+- q: Are the fields all current?
+  a: The file carries the date it was extracted, but the fields come from different collections. Enrolments
+    are as at August of the latest year, language background as at March, and the index of disadvantage
+    as at May, each updated once a year.
+- q: Why is the ICSEA value not here?
+  a: The Department's file carries each school's ICSEA value, which it sources from ACARA. ACARA's terms
+    for My School allow its content to be reproduced for non-commercial educational use only, so the
+    column is left out until the Department confirms that its CC BY 4.0 licence covers it. Every other
+    column is published.
+summary: Every NSW government school with its address, contacts, school type, latest enrolment, student
+  background shares, electorates, council area and coordinates. Updated monthly.
+description: The NSW public schools master dataset from the NSW Department of Education, one row per government
+  school. It holds the school code and name, street address, phone, email and website, the level of schooling,
+  selective, opportunity class, speciality and distance education flags, the latest FTE enrolment, the
+  per cent of Aboriginal and Torres Strait Islander students and of students with a language background
+  other than English, the family occupation and education index, the date the school opened, and the
+  council area, state and federal electorates, departmental regions, health district, remoteness and
+  latitude and longitude.
+omit:
+  ICSEA_value: ACARA's My School terms allow ICSEA values to be reproduced for non-commercial educational
+    use only, and the Department has been asked whether its CC BY 4.0 licence covers them.
+source_withheld: The ICSEA value column is left out because ACARA licenses ICSEA for non-commercial
+  educational use only, and the Department has been asked whether its CC BY 4.0 licence covers it. The
+  publisher's own file includes that column, so it is not kept beside each version.
+source:
+  adapter: ckan-resource
+  portal: https://data.nsw.gov.au/data
+  package: nsw-education-nsw-public-schools-master-dataset
+  resource: 3e6d5f6a-055c-440d-a690-fc0537c31095
+  url: https://data.nsw.gov.au/data/dataset/nsw-education-nsw-public-schools-master-dataset
+  cadence: monthly
+  encoding: utf-8-sig
+suppression:
+- np
+key:
+- school_code
+geometry:
+  lon: longitude
+  lat: latitude
+  crs: EPSG:4283
+  crs_note: Latitude and longitude in decimal degrees as published. The Department's data dictionary
+    does not state the datum; GDA94 is the NSW Government's standard and differs from GDA2020 and WGS84
+    by under 2 metres.
+row_label: Schools
+fields:
+- name: school_code
+  label: School code
+  source: School_code
+  type: integer
+- name: ageid
+  label: Commonwealth location ID (AGE ID)
+  source: AgeID
+  type: integer
+- name: school_name
+  label: School name
+  source: School_name
+  type: string
+- name: street
+  label: Street
+  source: Street
+  type: string
+- name: town_suburb
+  label: Town suburb
+  source: Town_suburb
+  type: string
+- name: postcode
+  label: Postcode
+  source: Postcode
+  type: string
+- name: phone
+  label: Phone
+  source: Phone
+  type: string
+- name: school_email
+  label: School email
+  source: School_Email
+  type: string
+- name: website
+  label: Website
+  source: Website
+  type: string
+- name: fax
+  label: Fax
+  source: Fax
+  type: string
+- name: latest_year_enrolment_fte
+  label: Enrolments (FTE, latest year)
+  source: latest_year_enrolment_FTE
+  type: number
+  description: Full-time equivalent enrolments as reported to the ABS National Schools Statistics Collection,
+    as at August.
+- name: indigenous_pct
+  label: Aboriginal and Torres Strait Islander students (%)
+  source: Indigenous_pct
+  type: integer
+  description: Per cent of FTE students who identify as Aboriginal or Torres Strait Islander. The Department
+    writes np where the student number is five or fewer; it is null here with a suppressed flag.
+- name: lbote_pct
+  label: Language background other than English (%)
+  source: LBOTE_pct
+  type: integer
+  description: Per cent of students, by headcount, from a language background other than English, as at March.
+    np where the student number is five or fewer.
+- name: level_of_schooling
+  label: Level of schooling
+  source: Level_of_schooling
+  type: string
+- name: selective_school
+  label: Selective school
+  source: Selective_school
+  type: string
+- name: opportunity_class
+  label: Opportunity class
+  source: Opportunity_class
+  type: boolean
+- name: school_specialty_type
+  label: School specialty type
+  source: School_specialty_type
+  type: string
+- name: school_subtype
+  label: School subtype
+  source: School_subtype
+  type: string
+- name: preschool_ind
+  label: Preschool ind
+  source: Preschool_ind
+  type: boolean
+- name: distance_education
+  label: Distance education
+  source: Distance_education
+  type: string
+- name: intensive_english_centre
+  label: Intensive english centre
+  source: Intensive_english_centre
+  type: boolean
+- name: school_gender
+  label: School gender
+  source: School_gender
+  type: string
+- name: late_opening_school
+  label: Late opening school
+  source: Late_opening_school
+  type: boolean
+- name: date_1st_teacher
+  label: Date first teacher on duty
+  source: Date_1st_teacher
+  type: date
+  date_format: '%Y-%m-%d'
+  description: The date the first teacher was on duty, which the Department treats as the date the school opened.
+- name: lga
+  label: Council area
+  source: LGA
+  type: string
+- name: electorate_from_2023
+  label: State electorate from 2023
+  source: electorate_from_2023
+  type: string
+- name: electorate_2015_2022
+  label: State electorate 2015 to 2022
+  source: electorate_2015_2022
+  type: string
+- name: fed_electorate_from_2025
+  label: Federal electorate from 2025
+  source: fed_electorate_from_2025
+  type: string
+- name: fed_electorate_2016_2024
+  label: Federal electorate 2016 to 2024
+  source: fed_electorate_2016_2024
+  type: string
+- name: operational_directorate
+  label: Operational directorate
+  source: Operational_directorate
+  type: string
+- name: principal_network
+  label: Principal network
+  source: Principal_network
+  type: string
+- name: operational_directorate_office
+  label: Operational directorate office
+  source: Operational_directorate_office
+  type: string
+- name: operational_directorate_office_phone
+  label: Operational directorate office phone
+  source: Operational_directorate_office_phone
+  type: string
+- name: operational_directorate_office_address
+  label: Operational directorate office address
+  source: Operational_directorate_office_address
+  type: string
+- name: facs_district
+  label: FACS district
+  source: FACS_district
+  type: string
+- name: local_health_district
+  label: Local health district
+  source: Local_health_district
+  type: string
+- name: aecg_region
+  label: AECG region
+  source: AECG_region
+  type: string
+- name: asgs_remoteness
+  label: Remoteness (ASGS 2016)
+  source: ASGS_remoteness
+  type: string
+- name: latitude
+  label: Latitude
+  source: Latitude
+  type: number
+  description: As published. The Department's data dictionary does not state the datum.
+- name: longitude
+  label: Longitude
+  source: Longitude
+  type: number
+  description: As published. The Department's data dictionary does not state the datum.
+- name: assets_unit
+  label: Assets unit
+  source: Assets unit
+  type: string
+- name: sa4
+  label: SA4
+  source: SA4
+  type: string
+- name: foei_value
+  label: FOEI value
+  source: FOEI_Value
+  type: number
+  description: Family Occupation and Education Index, the Department's school-level index of educational disadvantage.
+    A higher value means more disadvantage.
+- name: date_extracted
+  label: Date extracted
+  source: Date_extracted
+  type: date
+  date_format: '%Y-%m-%d'
+  description: The night the file was extracted. Fields come from different update cycles, so not every field
+    was refreshed on this date.
+- name: support_classes
+  source: Support_classes
+  label: Support classes

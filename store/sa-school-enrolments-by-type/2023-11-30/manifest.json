@@ -1,0 +1,34 @@
+{
+  "dataset": "sa-school-enrolments-by-type",
+  "version": "2023-11-30",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:10:23+00:00",
+  "sha256": "577a492480517ce9376bb6e6e39019c9bd9e3ac2c7238e78d340e01c94c48d44",
+  "bytes": 1218,
+  "filename": "19-enrolments-by-school-type.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://data.sa.gov.au/data/dataset/d5326064-60d6-45cd-ae04-4d4d59e7172c/resource/c26553a1-b16e-4134-b21a-91ecf4522ca7/download/19-enrolments-by-school-type.csv",
+    "portal": "https://data.sa.gov.au/data",
+    "package": "enrolments-in-sa-government-by-school-type",
+    "package_id": "d5326064-60d6-45cd-ae04-4d4d59e7172c",
+    "resource": "c26553a1-b16e-4134-b21a-91ecf4522ca7",
+    "resource_name": "Enrolments in SA Government schools by school type",
+    "resource_last_modified": "2023-11-29T22:35:10.863161",
+    "package_modified": "2023-11-29T22:43:05.350973",
+    "package_version": null,
+    "etag": "1701297310.973-1218-1076959518",
+    "http_last_modified": "Wed, 29 Nov 2023 22:35:10 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution",
+    "url": "http://creativecommons.org/licenses/by/4.0",
+    "read_from": "https://data.sa.gov.au/data/api/3/action/package_show?id=enrolments-in-sa-government-by-school-type",
+    "read_at": "2026-10-03T03:10:23+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "f06a33404492a94da83c1c93612f9685803c1e4d773c3bfeee4ab8158831eb85"
+}

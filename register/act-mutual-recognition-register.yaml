@@ -1,0 +1,96 @@
+slug: act-mutual-recognition-register
+title: Automatic mutual recognition register, ACT
+status: live
+topics:
+- economy
+- government
+example:
+  group: licence_category
+  metric: count
+order: 463
+collection: act-licence-registers
+collection_title: Occupational licence registers in the ACT
+search_title: ACT automatic mutual recognition public register of interstate licences (Access Canberra)
+also_known_as:
+- ACT AMR public register
+- Interstate licence holders working in the ACT
+- ACT automatic mutual recognition notifications
+keywords:
+- automatic mutual recognition
+- AMR
+- interstate licences
+- occupational licences
+- security licences
+- Canberra
+- ACT
+faq:
+- q: What is in each row?
+  a: One registration of a person working in the ACT under the Automatic Mutual Recognition scheme, with
+    their name, licence number, licence category, type and subclass, any conditions, the state that issued
+    the home licence and its expiry date.
+- q: How accurate is it?
+  a: The publisher says the fields reflect what the interstate registrant gave when they applied, and
+    recommends checking the home state's public register to confirm a licence.
+summary: Every registration of a person working in the ACT on an interstate licence under the Automatic
+  Mutual Recognition scheme, one row per registration with the licence category and issuing state.
+description: The public register of Automatic Mutual Recognition registrations Access Canberra keeps.
+  Each row carries the licensee's name, the licence number, the licence category (such as security,
+  professional engineer, agent or architect), the licence type, the subclass, any conditions, the state or
+  territory that issued the licence and the expiry date.
+publisher:
+  name: Access Canberra, City and Environment Directorate
+  short: Access Canberra
+  jurisdiction: ACT
+  url: https://www.accesscanberra.act.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.act.gov.au/d/w3me-b75k
+  attribution: Access Canberra, ACT Government, Automatic Mutual Recognition Public Register,
+    https://www.data.act.gov.au/d/w3me-b75k, accessed {sourced}, licensed under CC BY 4.0.
+chart: none
+source:
+  adapter: socrata
+  portal: https://www.data.act.gov.au
+  package: w3me-b75k
+  url: https://www.data.act.gov.au/d/w3me-b75k
+  cadence: weekly
+partition_by:
+- licence_category
+row_label: Registrations
+fields:
+- name: licensee_name
+  label: Name
+  source: Licensee Name
+  type: string
+- name: licence_number
+  label: Licence number
+  source: Licence Number
+  type: string
+- name: licence_category
+  label: Licence category
+  source: Licence Category
+  type: string
+- name: licence_type
+  label: Licence type
+  source: Licence Type
+  type: string
+- name: subclass
+  label: Subclass
+  source: Subclass
+  type: string
+- name: conditions
+  label: Conditions
+  source: Conditions
+  type: string
+- name: licence_issued_in
+  label: Issuing state or territory
+  source: Licence Issued In
+  type: string
+- name: date_expiry
+  label: Expires
+  source: Date Expiry
+  type: date
+  date_format: '%d/%m/%Y'
+note: Cells were typed and headers were made snake_case. The publisher's header is kept beside every field
+  in schema.json. Rows were left alone.

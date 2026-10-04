@@ -1,0 +1,42 @@
+{
+  "dataset": "qld-flood-extent-2013-bundaberg",
+  "version": "2013-01-29",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:00:39+00:00",
+  "sha256": "a8172d56f6086ab1487822c33addab809b057fab4c67c35be68779e7d6ad1bec",
+  "bytes": 3842737,
+  "filename": "qld-flood-extent-2013-bundaberg.geojson",
+  "encoding": "utf-8",
+  "source": {
+    "url": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/InlandWaters/FloodLines/MapServer/17",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "flood-extent-series",
+    "package_id": "0ed82e91-e856-49f5-a844-2674e51d63c4",
+    "package_modified": "2025-07-22T15:22:55.461073",
+    "layer_name": "2013 Floodline Bundaberg",
+    "object_id_field": "objectid",
+    "last_edit_date": null,
+    "newest_record": 1359417600000,
+    "features": 25,
+    "date_fields": [
+      "se_anno_cad_data",
+      "featurereliability",
+      "attributereliability"
+    ]
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "stated": "CC-BY-4.0",
+    "normalised": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=flood-extent-series",
+    "read_at": "2026-10-03T03:00:38+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [
+    "The layer states no edit date, so this version is dated by the newest record it holds.",
+    "The publisher offers no file. These bytes are every feature of the layer as the service returned them in WGS84, ordered by its object id, so the same layer gives the same bytes."
+  ]
+}

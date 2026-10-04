@@ -1,0 +1,83 @@
+slug: qld-traveltrain-patronage
+title: Traveltrain patronage by quarter, Queensland
+status: live
+topics:
+- roads
+order: 291
+temporal_start: '2008-07-01'
+search_title: Queensland Traveltrain patronage by quarter (long-distance rail)
+also_known_as:
+- Traveltrain service patronage quarterly
+- Queensland long distance train passenger numbers
+- Spirit of Queensland and Tilt Train patronage
+keywords:
+- Traveltrain
+- long-distance rail
+- train patronage
+- passenger trips
+- Queensland
+faq:
+- q: What is in each row?
+  a: Each row is one financial year, written as 2008-09, with the number of passenger trips on Traveltrain
+    long-distance rail services in each of its four quarters. Quarter 1 is July to September. The newest
+    financial year leaves a quarter blank until the publisher reports it.
+summary: Passenger trips on Queensland's Traveltrain long-distance rail services in each quarter of each financial
+  year from 2008-09.
+description: 'One row per financial year from 2008-09 with the number of passenger trips on Traveltrain services
+  in each quarter, from the Department of Transport and Main Roads. Traveltrain is the state''s long-distance
+  passenger rail network. Each quarter is its own column, as the publisher lays it out, and quarter 1 is July
+  to September.
+
+  '
+publisher:
+  name: Department of Transport and Main Roads
+  short: Transport and Main Roads
+  jurisdiction: Qld
+  url: https://www.tmr.qld.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/traveltrain-patronage
+  attribution: Department of Transport and Main Roads, Queensland Government, Traveltrain patronage, sourced
+    {sourced}, https://www.data.qld.gov.au/dataset/traveltrain-patronage, licensed under CC BY 3.0 AU.
+  portal_id: CC-BY-3.0
+example:
+  group: year
+  metric: sum.quarter_1
+  label: Traveltrain passenger trips in the July to September quarter of each financial year, busiest first
+sample:
+  order: [year.desc]
+  spread: none
+  label: The ten most recent financial years, newest first.
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: traveltrain-patronage
+  resource: 95887069-69a7-457c-ae00-c1342d742201
+  url: https://www.data.qld.gov.au/dataset/traveltrain-patronage
+  encoding: utf-8-sig
+  cadence: irregular
+key:
+- year
+row_label: Financial years
+fields:
+- name: year
+  label: Financial year
+  source: Year
+  type: string
+- name: quarter_1
+  label: '1'
+  source: Quarter 1
+  type: integer
+- name: quarter_2
+  label: '2'
+  source: Quarter 2
+  type: integer
+- name: quarter_3
+  label: '3'
+  source: Quarter 3
+  type: integer
+- name: quarter_4
+  label: '4'
+  source: Quarter 4
+  type: integer

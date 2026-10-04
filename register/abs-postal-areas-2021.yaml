@@ -1,0 +1,91 @@
+slug: abs-postal-areas-2021
+title: Postcode (postal area) boundaries, 2021, Australia
+status: live
+topics:
+- places
+example:
+  where: {area_sqkm: {gt: 0}}
+  group: poa_2021_name
+  metric: sum.area_sqkm
+  label: Area of each postal area in km²
+order: 123
+collection: abs-boundaries
+collection_title: ABS boundaries
+publisher:
+  name: Australian Bureau of Statistics
+  short: ABS
+  jurisdiction: Cth
+  url: https://www.abs.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-3-july-2021-june-2026/access-and-downloads/digital-boundary-files
+  statement: Copyright Commonwealth of Australia administered by the ABS. Unless otherwise noted, content is licensed
+    under a Creative Commons Attribution 4.0 International licence.
+  attribution: Australian Bureau of Statistics, Australian Statistical Geography Standard (ASGS) Edition 3, POA_2021_AUST_GDA2020_SHP.zip,
+    sourced {sourced}, https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-3-july-2021-june-2026/access-and-downloads/digital-boundary-files,
+    licensed under CC BY 4.0.
+search_title: 'Postcode boundaries: every postal area shape, Australia (ABS 2021)'
+also_known_as:
+- postcode boundaries Australia
+- Postal Areas 2021 shapefile
+- POA boundaries
+- postcode GeoJSON Australia
+keywords:
+- postcode
+- postal area
+- boundaries
+- shapefile
+- GeoJSON
+- POA
+- ASGS
+- ABS
+faq:
+- q: What is in each row?
+  a: One of the Postal Areas, the ABS's approximation of Australia Post's postcodes from mesh blocks, with its code,
+    name and the other columns the ABS publishes, and its shape in the GeoParquet, GeoJSON, GeoPackage and PMTiles
+    files. The CSV, Excel and other table files hold the columns without the shape.
+- q: What coordinate system are the shapes in?
+  a: GDA2020 (EPSG:7844), the file the ABS publishes in that datum. GDA2020 differs from WGS84 by well under a metre,
+    so web maps can use it as it is.
+- q: How does this join to other datasets here?
+  a: Each dataset here with point coordinates carries the code and name of the area each point falls in, matched
+    by location against this layer. Those columns name the layer and its version in the dataset's schema, and the
+    ABS's attribution is in every file.
+summary: The 2,641 postal areas of Australia, the ABS's census approximation of postcodes for 2021, one shape each,
+  in GDA2020.
+description: The ABS digital boundary file POA_2021_AUST_GDA2020_SHP.zip, from the Australian Statistical Geography
+  Standard (ASGS) Edition 3. Each row is one area with the columns the ABS publishes. The ABS adds rows for no usual
+  address, migratory, offshore and shipping, which have no shape. They are kept, with a null geometry, so every
+  ABS code is in the table.
+key:
+- poa_2021_code
+geometry:
+  kind: polygon
+  crs: EPSG:7844
+  crs_note: Shapes in GDA2020 (EPSG:7844), as the ABS publishes them.
+  maxzoom: 10
+source:
+  adapter: file
+  url: https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-3-july-2021-june-2026/access-and-downloads/digital-boundary-files/POA_2021_AUST_GDA2020_SHP.zip
+  member: POA_2021_AUST_GDA2020.shp
+  cadence: when the ABS releases a new edition
+fields:
+- name: poa_2021_code
+  source: POA_CODE21
+  label: Postal area code (2021)
+- name: poa_2021_name
+  source: POA_NAME21
+  label: Postcode (postal area 2021)
+- name: area_sqkm
+  source: AREASQKM21
+  label: Area (km²)
+  type: number
+- name: loci_uri
+  source: LOCI_URI21
+  label: Linked data URI
+omit:
+  AUS_CODE21: The code for Australia, the same on every row.
+  AUS_NAME21: The word Australia, the same on every row.
+  SHAPE_Leng: The perimeter in degrees, which the shapefile computes from the shape.
+  SHAPE_Area: The area in square degrees, which the shapefile computes from the shape.

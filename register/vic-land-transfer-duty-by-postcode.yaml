@@ -1,0 +1,78 @@
+slug: vic-land-transfer-duty-by-postcode
+title: Land transfer duty by postcode, Victoria, 2021-22
+status: live
+topics:
+- economy
+- housing
+order: 379
+publisher:
+  name: State Revenue Office Victoria
+  short: SRO
+  jurisdiction: Vic
+  url: https://www.sro.vic.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://discover.data.vic.gov.au/dataset/land-transfer-duty-by-postcode-2021-22
+  attribution: State Revenue Office, Victorian Government, Land Transfer Duty by Postcode 2021-22, sourced
+    {sourced}, https://discover.data.vic.gov.au/dataset/land-transfer-duty-by-postcode-2021-22, licensed
+    under CC BY 4.0.
+temporal_start: '2021-07-01'
+search_title: Stamp duty paid by postcode in Victoria, 2021-22 (land transfer duty, SRO)
+also_known_as:
+- Victorian stamp duty by postcode
+- Land transfer duty by postcode 2021-22
+- SRO land transfer duty statistics
+keywords:
+- land transfer duty
+- stamp duty
+- postcode
+- property transactions
+- State Revenue Office
+- Victoria
+faq:
+- q: What does each row hold?
+  a: One Victorian postcode, the land transfer duty the State Revenue Office collected on property
+    transfers there in the 2021-22 financial year, in dollars, and the number of dutiable transactions.
+- q: Is land transfer duty the same as stamp duty?
+  a: Yes. Land transfer duty is the Victorian name for the stamp duty paid when land or property changes
+    hands.
+- q: Where are other years?
+  a: The State Revenue Office publishes each financial year as its own dataset, from 2013-14 to 2021-22,
+    and their columns differ from year to year. This entry holds 2021-22, the latest year published.
+summary: The land transfer duty (stamp duty) paid and the number of dutiable property transactions in
+  each Victorian postcode in the 2021-22 financial year.
+description: Land transfer duty by postcode for 2021-22 from the State Revenue Office Victoria. Each row
+  is one postcode with the duty collected in dollars and the number of dutiable transactions. Postcodes
+  are kept as text.
+example:
+  group: postcode
+  metric: sum.duty
+  label: Land transfer duty paid ($)
+sample:
+  order: [duty.desc]
+  label: The ten postcodes where the most duty was paid, most first.
+source:
+  adapter: ckan-resource
+  portal: https://discover.data.vic.gov.au
+  package: land-transfer-duty-by-postcode-2021-22
+  resource: 4c1048fa-4820-409e-9f6c-98969eedf033
+  url: https://discover.data.vic.gov.au/dataset/land-transfer-duty-by-postcode-2021-22
+  cadence: no longer updated
+key:
+- postcode
+row_label: Postcodes
+fields:
+- name: postcode
+  label: Postcode
+  source: Postcode
+  type: string
+- name: duty
+  label: Duty paid ($)
+  source: Duty
+  type: integer
+- name: transactions
+  label: Dutiable transactions
+  source: Number of Transactions
+  type: integer

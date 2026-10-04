@@ -1,0 +1,79 @@
+slug: qld-traffic-infringement-payments
+title: Traffic infringement notice payments by day and channel, Queensland
+status: live
+topics:
+- roads
+order: 209
+search_title: Queensland traffic fine payments by day and payment channel (Transport and Main Roads)
+also_known_as:
+- Traffic infringement notice payments Queensland
+- QLD fine payments by channel
+- TMR infringement payment transactions
+keywords:
+- traffic fines
+- infringement payments
+- payment channel
+- transactions
+- Queensland
+faq:
+- q: What is in each row?
+  a: One day, one transaction type and one service channel, such as Online Services, BPAY or a customer
+    service centre, with the number of traffic infringement notice payments made that way.
+- q: Is this the value of fines paid?
+  a: No. Each row counts payments. The file holds no dollar amounts.
+summary: The daily number of traffic infringement notice payments made to the Department of Transport
+  and Main Roads in Queensland, by service channel.
+description: The number of traffic infringement notice payments the Department of Transport and Main Roads
+  processed each day, one row per day, transaction type and service channel. The department replaces the
+  file with a longer one from time to time.
+publisher:
+  name: Department of Transport and Main Roads
+  short: Transport and Main Roads
+  jurisdiction: Qld
+  url: https://www.tmr.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/traffic-infringement-notice-payments
+  attribution: Department of Transport and Main Roads, Queensland Government, Traffic infringement notice
+    payments, sourced {sourced}, https://www.data.qld.gov.au/dataset/traffic-infringement-notice-payments,
+    licensed under CC BY 4.0.
+example:
+  group: channel
+  metric: sum.transactions
+  label: Payments
+chart:
+  where:
+    date:
+      gte: '2016-01-01'
+  split: none
+  metric: sum.transactions
+  label: Payments
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: traffic-infringement-notice-payments
+  resource: 4660e68e-2f27-40c8-92d1-79a96123cbfb
+  url: https://www.data.qld.gov.au/dataset/traffic-infringement-notice-payments
+  encoding: utf-8-sig
+  cadence: irregular
+row_label: Day and channel counts
+fields:
+- name: transaction
+  label: Transaction
+  source: TRANSACTION_DESCRIPTION
+  type: string
+- name: date
+  label: Date
+  source: Date
+  type: date
+  date_format: '%Y-%m-%d'
+- name: channel
+  label: Service channel
+  source: CHANNEL
+  type: string
+- name: transactions
+  label: Payments
+  source: NUMBER_OF_TRANSACTIONS
+  type: integer
+note: Cells were typed and headers were made snake_case. Rows were left alone.

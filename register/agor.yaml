@@ -1,0 +1,22 @@
+slug: agor
+title: Australian Government Organisations Register
+status: building
+topics:
+- government
+order: 20
+summary: Every Australian Government body with its portfolio, classification, auditor, ABN and head office.
+  Quarterly since December 2014, with 49 releases on the portal to backfill as versions.
+publisher:
+  name: Department of Finance
+  short: Finance
+  jurisdiction: Cth
+  url: https://www.finance.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-09-25'
+  attribution: 'Department of Finance, Australian Government, Australian Government Organisations Register, sourced {sourced}, https://data.gov.au/data/dataset/australian-government-organisations-register, licensed under CC BY 3.0 AU.'
+  evidence: https://data.gov.au/data/dataset/australian-government-organisations-register
+source:
+  adapter: none
+  url: https://data.gov.au/data/dataset/australian-government-organisations-register
+planned: One file per body under by/id/. Every quarterly release since 2014 as a version.

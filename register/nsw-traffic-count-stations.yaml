@@ -1,0 +1,278 @@
+slug: nsw-traffic-count-stations
+title: Traffic count stations, New South Wales
+status: live
+topics:
+- roads
+example:
+  group: rms_region
+  metric: count
+order: 319
+publisher:
+  name: Transport for NSW
+  short: TfNSW
+  jurisdiction: NSW
+  url: https://www.transport.nsw.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.nsw.gov.au/data/dataset/2-nsw-roads-traffic-volume-counts-api
+  attribution: Transport for NSW, NSW Government, NSW Roads Traffic Volume Counts API, sourced {sourced}, https://data.nsw.gov.au/data/dataset/2-nsw-roads-traffic-volume-counts-api,
+    licensed under CC BY 4.0.
+collection: nsw-traffic-volume-counts
+collection_title: NSW Roads Traffic Volume Counts
+collection_description: Traffic counts from Transport for NSW's permanent and sample counting stations on NSW
+  roads. One table describes each counting station and where it is. The other gives the yearly traffic count
+  at each station by direction, vehicle class and period of the week. The two join on the station key.
+collection_search_title: NSW traffic volume data by road and station (Transport for NSW)
+search_title: NSW traffic counter locations (Transport for NSW traffic count stations)
+also_known_as:
+- NSW traffic counting stations
+- TfNSW traffic counter sites
+- NSW road traffic count station reference
+keywords:
+- traffic counts
+- traffic counters
+- road traffic
+- traffic volume
+- Transport for NSW
+- New South Wales
+faq:
+- q: What is in each row?
+  a: One traffic counting station, with its station key and ID, its road, nearest intersection, road hierarchy
+    and classification, council area and suburb, the counting device, whether it is a permanent station or
+    classifies vehicles, its quality rating and its latitude and longitude.
+- q: How do I get the counts for a station?
+  a: The yearly traffic counts are in the other table of this collection, keyed by the same station key.
+summary: Every Transport for NSW traffic counting station, with its road, location, counting device and coordinates.
+description: The Road Traffic Counts Station Reference table from Transport for NSW's NSW Roads Traffic Volume
+  Counts dataset, as the publisher exports it from its traffic volume API. Each row is one counting station
+  with its road and intersection, road classifications, region, council area, suburb and postcode, device type
+  and flags for permanent and classifying stations, Lambert coordinates and WGS84 latitude and longitude, and
+  the date the record was updated.
+source:
+  adapter: ckan-resource
+  portal: https://data.nsw.gov.au/data
+  package: 2-nsw-roads-traffic-volume-counts-api
+  resource: f4092c24-87d8-44dc-b23d-83f2ff2a414f
+  url: https://data.nsw.gov.au/data/dataset/2-nsw-roads-traffic-volume-counts-api
+  cadence: irregular
+key:
+- station_key
+geometry:
+  lon: wgs84_longitude
+  lat: wgs84_latitude
+  crs: EPSG:4326
+  crs_note: The publisher names the coordinates WGS84 latitude and longitude, in decimal degrees. They are
+    published as given.
+row_label: Stations
+fields:
+- name: station_key
+  label: Station key
+  source: station_key
+  type: integer
+- name: station_id
+  label: Station ID
+  source: station_id
+  type: string
+  null_values:
+  - 'NULL'
+- name: name
+  label: Name
+  source: name
+  type: string
+  null_values:
+  - 'NULL'
+- name: road_name
+  label: Road name
+  source: road_name
+  type: string
+  null_values:
+  - 'NULL'
+- name: full_name
+  label: Full name
+  source: full_name
+  type: string
+  null_values:
+  - 'NULL'
+- name: common_road_name
+  label: Common road name
+  source: common_road_name
+  type: string
+  null_values:
+  - 'NULL'
+- name: secondary_name
+  label: Secondary name
+  source: secondary_name
+  type: string
+  null_values:
+  - 'NULL'
+- name: road_name_base
+  label: Road name base
+  source: road_name_base
+  type: string
+  null_values:
+  - 'NULL'
+- name: road_name_type
+  label: Road name type
+  source: road_name_type
+  type: string
+  null_values:
+  - 'NULL'
+- name: intersection
+  label: Intersection
+  source: intersection
+  type: string
+  null_values:
+  - 'NULL'
+- name: distance_to_intersection
+  label: Distance to intersection
+  source: distance_to_intersection
+  type: integer
+- name: road_number
+  label: Road number
+  source: road_number
+  type: string
+  null_values:
+  - 'NULL'
+- name: link_number
+  label: Link number
+  source: link_number
+  type: string
+  null_values:
+  - 'NULL'
+- name: mab_way_type
+  label: MAB way type
+  source: mab_way_type
+  type: string
+  null_values:
+  - 'NULL'
+- name: mab_way_number
+  label: MAB way number
+  source: mab_way_number
+  type: string
+  null_values:
+  - 'NULL'
+- name: mab_identifier
+  label: MAB identifier
+  source: mab_identifier
+  type: string
+  null_values:
+  - 'NULL'
+- name: road_functional_hierarchy
+  label: Road functional hierarchy
+  source: road_functional_hierarchy
+  type: string
+  null_values:
+  - 'NULL'
+- name: road_on_type
+  label: Road on type
+  source: road_on_type
+  type: string
+  null_values:
+  - 'NULL'
+- name: lane_count
+  label: Lane count
+  source: lane_count
+  type: string
+  null_values:
+  - 'NULL'
+- name: road_classification_type
+  label: Road classification type
+  source: road_classification_type
+  type: string
+  null_values:
+  - 'NULL'
+- name: road_classification_admin
+  label: Road classification admin
+  source: road_classification_admin
+  type: string
+  null_values:
+  - 'NULL'
+- name: rms_region
+  label: Region
+  source: rms_region
+  type: string
+  null_values:
+  - 'NULL'
+- name: lga
+  label: Council area
+  source: lga
+  type: string
+  null_values:
+  - 'NULL'
+- name: suburb
+  label: Suburb
+  source: suburb
+  type: string
+  null_values:
+  - 'NULL'
+- name: post_code
+  label: Post code
+  source: post_code
+  type: string
+  null_values:
+  - 'NULL'
+- name: device_type
+  label: Device type
+  source: device_type
+  type: string
+  null_values:
+  - 'NULL'
+- name: heavy_vehicle_checking_station
+  label: Heavy vehicle checking station
+  source: heavy_vehicle_checking_station
+  type: boolean
+- name: permanent_station
+  label: Permanent station
+  source: permanent_station
+  type: integer
+  description: 1 for a permanent counting station, 0 otherwise, as published.
+- name: vehicle_classifier
+  label: Vehicle classifier
+  source: vehicle_classifier
+  type: integer
+  description: 1 where the station classifies vehicles, 0 otherwise, as published.
+- name: lambert_easting
+  label: Lambert easting
+  source: lambert_easting
+  type: integer
+- name: lambert_northing
+  label: Lambert northing
+  source: lambert_northing
+  type: number
+- name: wgs84_latitude
+  label: Latitude
+  source: wgs84_latitude
+  type: number
+- name: wgs84_longitude
+  label: Longitude
+  source: wgs84_longitude
+  type: number
+- name: direction_seq
+  label: Direction seq
+  source: direction_seq
+  type: integer
+- name: quality_rating
+  label: Quality rating
+  source: quality_rating
+  type: integer
+- name: updated_on
+  label: Updated on
+  source: updated_on
+  type: string
+  null_values:
+  - 'NULL'
+omit:
+  the_geom: A column the publisher's Carto service adds for its own maps and records; the station coordinates are
+    kept in their own columns.
+  cartodb_id: A column the publisher's Carto service adds for its own maps and records; the station coordinates
+    are kept in their own columns.
+  the_geom_webmercator: A column the publisher's Carto service adds for its own maps and records; the station coordinates
+    are kept in their own columns.
+  record_id: A column the publisher's Carto service adds for its own maps and records; the station coordinates are
+    kept in their own columns.
+  publish: A column the publisher's Carto service adds for its own maps and records; the station coordinates are
+    kept in their own columns.
+  md5: A column the publisher's Carto service adds for its own maps and records; the station coordinates are kept
+    in their own columns.

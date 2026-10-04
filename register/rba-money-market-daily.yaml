@@ -1,0 +1,191 @@
+slug: rba-money-market-daily
+title: Money market interest rates, daily, Reserve Bank of Australia
+status: live
+topics:
+- economy
+example:
+  group: cash_rate_target
+chart:
+  metric: avg.interbank_overnight_cash_rate
+  label: Average interbank overnight cash rate (%)
+sample:
+  where: {interbank_overnight_cash_rate: {gt: 0}}
+  label: The ten newest business days with a published interbank overnight cash rate, newest first.
+order: 51
+publisher:
+  name: Reserve Bank of Australia
+  short: RBA
+  jurisdiction: Cth
+  url: https://www.rba.gov.au/
+licence:
+  id: RBA-COPYRIGHT-NOTICE
+  reviewed: '2026-10-01'
+  evidence: https://www.rba.gov.au/copyright/
+  statement: may be used, reproduced, published, communicated to the public or otherwise referenced for
+    personal or commercial use
+  attribution: 'Source: Reserve Bank of Australia, statistical table F1 Interest Rates and Yields, Money
+    Market, sourced {sourced} from https://www.rba.gov.au/statistics/tables/, republished under sections
+    4 and 5 of the RBA copyright notice, https://www.rba.gov.au/copyright/. The RBA does not endorse this
+    site or any use of this data. The RBA publishes this data free of charge at rba.gov.au.'
+temporal_start: '2011-01-04'
+search_title: 'RBA cash rate by day: target, interbank overnight cash rate and Treasury Note yields (table
+  F1)'
+also_known_as:
+- Table F1 Interest Rates and Yields Money Market
+- Interbank overnight cash rate history
+- AONIA daily
+- Cash rate daily series
+- Treasury note yields
+keywords:
+- cash rate
+- interbank overnight cash rate
+- money market
+- interest rates
+- treasury notes
+- Reserve Bank of Australia
+- Australia
+faq:
+- q: What is in each row?
+  a: One business day since 4 January 2011, with the cash rate target in force, any change announced that
+    day, the interbank overnight cash rate the RBA publishes as the benchmark with its highest and lowest
+    traded rates, the volume and number of cash market transactions, the cash rate total return index
+    and the one, three and six month Treasury Note yields.
+- q: Why are some columns blank for long stretches?
+  a: The series start and stop at different dates. The one and three month Treasury Note yields run from
+    January 2011 to 17 May 2013, and the six month yield has only 12 days, in March 2011. The traded high
+    and low, the volume and the number of transactions start on 20 May 2013. The newest day can have
+    only the total return index until the cash rate for that day is published.
+- q: Why are the bank bill and OIS series not here?
+  a: The RBA table also carries end-of-day bank accepted bill and negotiable certificate of deposit rates
+    sourced from the ASX and overnight indexed swap rates sourced from FENICS. The RBA marks them as third
+    party material that may not be republished without the owner's consent, so they are left out. The
+    RBA-sourced series are all here.
+- q: What does N/A in the source mean?
+  a: The publisher writes N/A where a value was not observed, for example the traded high and low on a
+    day with no transactions. It is kept as null.
+- q: Under what licence is RBA data republished here?
+  a: The RBA excludes its numerical data from the CC BY 4.0 licence that covers the rest of its site,
+    and instead permits it to be used, reproduced, published and communicated to the public for personal
+    or commercial use under sections 4 and 5 of its copyright notice, with attribution and no claim of
+    endorsement. The RBA does not endorse this site or any use of this data, and it publishes the same
+    figures free of charge at rba.gov.au. Every file here carries that attribution.
+summary: The cash rate target, the interbank overnight cash rate with its daily high, low, volume and
+  count, the cash rate total return index and Treasury Note yields, one row per business day since 2011.
+  Updated each business day.
+description: The RBA-sourced series of statistical table F1, Interest Rates and Yields, Money Market,
+  one row per business day from 4 January 2011. The cash rate target and its changes, the interbank overnight
+  cash rate and its highest and lowest traded rates, the volume in millions of dollars and number of transactions
+  in the cash market, the cash rate total return index (4 January 2011 = 100) and the one, three and six
+  month Treasury Note yields. The ASX and FENICS series in the RBA table are third party material and
+  are not republished.
+source:
+  adapter: file
+  url: https://www.rba.gov.au/statistics/tables/csv/f1-data.csv
+  header_row: 11
+  cadence: daily
+key:
+- date
+row_label: Business days
+fields:
+- name: date
+  label: Date
+  source: Series ID
+  type: date
+  date_format: '%d-%b-%Y'
+  description: The date of the observation.
+- name: cash_rate_target
+  label: Cash rate target
+  source: FIRMMCRTD
+  type: number
+  description: 'Cash Rate Target on date. Units: Per cent. RBA series FIRMMCRTD, source RBA.'
+  null_values:
+  - N/A
+- name: cash_rate_target_change
+  label: Change in cash rate target
+  source: FIRMMCCRT
+  type: number
+  description: 'Change in the Cash Rate Target (in percentage points). Units: Per cent. RBA series FIRMMCCRT,
+    source RBA.'
+  null_values:
+  - N/A
+- name: interbank_overnight_cash_rate
+  label: Interbank overnight cash rate
+  source: FIRMMCRID
+  type: number
+  description: 'Interbank Overnight Cash Rate on date. Units: Per cent. RBA series FIRMMCRID, source RBA.'
+  null_values:
+  - N/A
+- name: interbank_overnight_cash_rate_high
+  label: Interbank overnight cash rate, high
+  source: FIRMMCRIH
+  type: number
+  description: 'Highest Interbank Overnight Cash Rate on date. Units: Per cent. RBA series FIRMMCRIH,
+    source RBA.'
+  null_values:
+  - N/A
+- name: interbank_overnight_cash_rate_low
+  label: Interbank overnight cash rate, low
+  source: FIRMMCRIL
+  type: number
+  description: 'Lowest Interbank Overnight Cash Rate on date. Units: Per cent. RBA series FIRMMCRIL, source
+    RBA.'
+  null_values:
+  - N/A
+- name: cash_market_volume
+  label: Cash market volume ($m)
+  source: FIRMMCRIV
+  type: number
+  description: 'Volume of Interbank Overnight Cash Market Transactions on date. Units: $m. RBA series
+    FIRMMCRIV, source RBA.'
+  null_values:
+  - N/A
+- name: cash_market_transactions
+  label: Cash market transactions
+  source: FIRMMCRIN
+  type: integer
+  description: 'Number of Interbank Overnight Cash Market Transactions on date. Units: Number. RBA series
+    FIRMMCRIN, source RBA.'
+  null_values:
+  - N/A
+- name: total_return_index
+  label: Cash rate total return index
+  source: FIRMMCTRI
+  type: number
+  description: 'Cash Rate Total Return Index on date. Units: Index 04-Jan-2011=100. RBA series FIRMMCTRI,
+    source RBA.'
+  null_values:
+  - N/A
+- name: treasury_note_1_month
+  label: Treasury Note, 1 month
+  source: FIRMMTN1D
+  type: number
+  description: 'Treasury Note-1 month. Units: Per cent. RBA series FIRMMTN1D, source RBA.'
+  null_values:
+  - N/A
+- name: treasury_note_3_month
+  label: Treasury Note, 3 month
+  source: FIRMMTN3D
+  type: number
+  description: 'Treasury Note-3 month. Units: Per cent. RBA series FIRMMTN3D, source RBA.'
+  null_values:
+  - N/A
+- name: treasury_note_6_month
+  label: Treasury Note, 6 month
+  source: FIRMMTN6D
+  type: number
+  description: 'Treasury Note-6 month. Units: Per cent. RBA series FIRMMTN6D, source RBA.'
+  null_values:
+  - N/A
+omit:
+  FIRMMBAB30D: Bank accepted bill and negotiable certificate of deposit rates sourced from the ASX, third
+    party material the RBA's notice does not permit republishing.
+  FIRMMBAB90D: Bank accepted bill and negotiable certificate of deposit rates sourced from the ASX, third
+    party material the RBA's notice does not permit republishing.
+  FIRMMBAB180D: Bank accepted bill and negotiable certificate of deposit rates sourced from the ASX, third
+    party material the RBA's notice does not permit republishing.
+  FIRMMOIS1D: Overnight indexed swap rates sourced from FENICS, third party material the RBA's notice
+    does not permit republishing.
+  FIRMMOIS3D: Overnight indexed swap rates sourced from FENICS, third party material the RBA's notice
+    does not permit republishing.
+  FIRMMOIS6D: Overnight indexed swap rates sourced from FENICS, third party material the RBA's notice
+    does not permit republishing.

@@ -1,0 +1,175 @@
+slug: qld-emergency-department-facilities
+title: Public hospital emergency departments and minor injury clinics, Queensland, live list
+status: live
+topics:
+- health
+example:
+  group: facility_name
+  metric: sum.treatment_spaces
+chart: none
+order: 229
+collection: qld-hospital-performance
+collection_title: Emergency department live data, Queensland
+search_title: Queensland public hospital emergency departments list with locations (Queensland Health)
+collection_search_title: Queensland emergency department wait times live data (Queensland Health)
+also_known_as:
+- Queensland emergency departments list
+- QLD hospital ED locations
+- Minor injury and illness clinics Queensland
+keywords:
+- emergency department
+- hospitals
+- minor injury clinic
+- MIIC
+- hospital locations
+- Queensland Health
+collection_description: |
+  Queensland Health publishes three live tables behind its emergency department wait time pages. One lists the public hospital emergency departments and minor injury and illness clinics, one gives the number of people waiting and the median wait at each right now, and one gives the usual busyness of each by day of the week and hour.
+
+  The publisher refreshes them through the day. This site reads them once a day, and each day they change is one version, so the archive holds a daily snapshot.
+faq:
+- q: What is in each row?
+  a: One public hospital emergency department or minor injury and illness clinic (MIIC) in the publisher's
+    wait time pages, with its facility code, name, address, phone, coordinates, the number of treatment
+    spaces and when it was last updated, its opening hours and days, its website and any alert message
+    the publisher shows.
+- q: Why do the description and alert text contain tags?
+  a: The publisher stores those columns as HTML for its web pages. They are kept as published.
+summary: Every public emergency department and minor injury and illness clinic in Queensland Health's
+  live wait time data, with address, coordinates, treatment spaces and opening hours.
+description: The facility list behind Queensland Health's emergency department wait time pages, one row
+  per hospital emergency department or minor injury and illness clinic, with its code, name, address,
+  phone, latitude and longitude, treatment spaces, opening hours and days, website, First Nations name
+  where given, and the alert message shown on its page. The publisher stamps every row with the time of
+  its last upload.
+publisher:
+  name: Queensland Health
+  short: Queensland Health
+  jurisdiction: Qld
+  url: https://www.health.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  evidence: https://www.data.qld.gov.au/dataset/hospital-performance
+  statement: Creative Commons Attribution 4.0
+  reviewed: '2026-10-01'
+  attribution: Queensland Health, Queensland Government, Hospital Performance, sourced {sourced}, https://www.data.qld.gov.au/dataset/hospital-performance,
+    licensed under CC BY 4.0.
+source:
+  adapter: file
+  url: https://www.data.qld.gov.au/datastore/dump/ee37a52f-0874-4023-91f5-6a640f4f3712
+  format: csv
+  feed: true
+  cadence: live
+key:
+- facility_code
+geometry:
+  lon: longitude
+  lat: latitude
+  crs: EPSG:4326
+  crs_note: Latitude and longitude in decimal degrees as published. The publisher does not name the datum;
+    GDA2020 and WGS84 differ by under 2 metres.
+row_label: Facilities
+fields:
+- name: row_id
+  label: Row ID
+  source: _id
+  type: integer
+  description: The portal's row number.
+- name: facility_code
+  label: Facility code
+  source: FacilityCode
+  type: string
+  description: Kept as text to keep the leading zeros.
+- name: facility_name
+  label: Facility
+  source: FacilityName
+  type: string
+- name: address
+  label: Address
+  source: Address
+  type: string
+- name: phone
+  label: Phone
+  source: ContactPhone
+  type: string
+- name: latitude
+  label: Latitude
+  source: FacilityLatitude
+  type: number
+- name: longitude
+  label: Longitude
+  source: FacilityLongitude
+  type: number
+- name: facility_type
+  label: Facility type
+  source: FacilityType
+  type: string
+  description: Hospital or MIIC (minor injury and illness clinic).
+- name: treatment_spaces
+  label: Treatment spaces
+  source: NumberOfTreatmentSpaces
+  type: integer
+- name: open_hours
+  label: Opening hours
+  source: OpenHours
+  type: string
+- name: open_days
+  label: Opening days
+  source: OpenDays
+  type: string
+- name: facility_description
+  label: Description (HTML)
+  source: FacilityDescription
+  type: string
+- name: treatment_spaces_updated
+  label: Treatment spaces updated
+  source: TreatmentSpacesUpdatedDate
+  type: datetime
+  date_format: '%Y-%m-%dT%H:%M:%S'
+- name: web_url
+  label: Website
+  source: WebUrl
+  type: string
+- name: limited_open_hours
+  label: Limited opening hours
+  source: LimitedOpenHours
+  type: boolean
+  true_values:
+  - Y
+  false_values:
+  - N
+- name: open_time
+  label: Opens
+  source: OpenTime
+  type: string
+- name: close_time
+  label: Closes
+  source: CloseTime
+  type: string
+- name: data_uploaded
+  label: Uploaded
+  source: DataUploadedTimestamp
+  type: datetime
+  date_format: '%Y-%m-%dT%H:%M:%S'
+  description: When the publisher last uploaded the row, in Queensland time.
+- name: facility_name_short
+  label: Short name
+  source: FacilityNameShort
+  type: string
+- name: facility_first_nation_name
+  label: First Nations or other short name
+  source: FacilityFirstNationName
+  type: string
+- name: custom_alert_active
+  label: Alert showing
+  source: CustomAlertActive
+  type: boolean
+  true_values:
+  - Y
+  false_values:
+  - N
+- name: custom_alert_message
+  label: Alert message (HTML)
+  source: CustomAlertMessage
+  type: string
+note: Cells were typed and headers were made snake_case. Rows were left alone.

@@ -1,0 +1,32 @@
+{
+  "dataset": "nt-crime-statistics",
+  "version": "2026-09-14",
+  "as_at": "",
+  "fetched_at": "2026-09-29T13:50:12+00:00",
+  "sha256": "a7e4eaa8aedb53b18c9fd4f86738b90c3bef495ceffb81879d069e327465def9",
+  "bytes": 939180,
+  "filename": "nt_crime_statistics_july_2026.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://data.nt.gov.au/dataset/d275f870-9e2d-46f5-9054-f48c3ea5d79b/resource/ba2d5649-4b64-40e2-8c25-884398adda0e/download/nt_crime_statistics_july_2026.csv",
+    "portal": "https://data.nt.gov.au",
+    "package": "current-nt-crime-statistics-july-2026",
+    "package_id": "d275f870-9e2d-46f5-9054-f48c3ea5d79b",
+    "resource": "ba2d5649-4b64-40e2-8c25-884398adda0e",
+    "resource_name": "NT_crime_statistics_July_2026.csv",
+    "resource_last_modified": "2026-09-14T03:03:55.841930",
+    "package_modified": "2026-09-18T01:30:04.246370",
+    "package_version": "",
+    "etag": "1789355036.131481-939180-859509110",
+    "http_last_modified": "Mon, 14 Sep 2026 03:03:56 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution",
+    "url": "http://www.opendefinition.org/licenses/cc-by",
+    "read_at": "2026-09-29T13:50:11+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": []
+}

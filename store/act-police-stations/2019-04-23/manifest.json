@@ -1,0 +1,28 @@
+{
+  "dataset": "act-police-stations",
+  "version": "2019-04-23",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:11:40+00:00",
+  "sha256": "0bb4d980601b46de39bf3200d1550efa48a7498f327c685a00f07435dac5cae9",
+  "bytes": 1824,
+  "filename": "t6hf-u79n.geojson",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.act.gov.au/resource/t6hf-u79n.geojson?$order=:id",
+    "etag": "Zm94dHJvdC4yOTU4N18yXzI5Q2VNSFNaTzkwTThOcnllcVdFX0xvWTZNRFRN---gzipSKe1Zc6YNuyc548tpU5-DU0X4PQ--gzip--gzip",
+    "http_last_modified": "Mon, 22 Apr 2019 22:56:08 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "stated": "Creative Commons Attribution 4.0 International",
+    "normalised": "CC-BY-4.0",
+    "title": "CC BY 4.0",
+    "url": "https://www.data.act.gov.au/d/t6hf-u79n",
+    "read_from": "https://www.data.act.gov.au/d/t6hf-u79n",
+    "read_at": "2026-10-03T03:11:40+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "f3c48ad34196239542be8f8394c82f2733ca52455bbf1a79c8fa8d653240625c"
+}

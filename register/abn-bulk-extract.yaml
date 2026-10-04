@@ -1,0 +1,21 @@
+slug: abn-bulk-extract
+title: ABN Bulk Extract
+status: backlog
+topics:
+- government
+order: 31
+summary: Every ABN with entity type, status, GST registration and postcode. Two 475 MiB XML archives,
+  updated weekly.
+publisher:
+  name: Australian Business Register
+  short: ABR
+  jurisdiction: Cth
+  url: https://abr.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-09-25'
+  evidence: https://data.gov.au/data/dataset/abn-bulk-extract
+source:
+  adapter: none
+  url: https://data.gov.au/data/dataset/abn-bulk-extract
+planned: Parquet split by state and postcode. Needs an XML adapter.

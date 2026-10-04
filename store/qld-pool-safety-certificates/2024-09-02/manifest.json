@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-pool-safety-certificates",
+  "version": "2024-09-02",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:01:56+00:00",
+  "sha256": "454c50cc442a915d0391d66350b6f27d92239ae9857b2861b372d7cadf297356",
+  "bytes": 24667912,
+  "filename": "certificates_at_2024-08-012024-08-01-06.40.57.734.csv",
+  "encoding": "utf-16",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/1b4c7d46-7e52-4c77-ab79-6e935dd5c691/resource/68b4583f-9611-46e6-8302-d28ecc43b421/download/certificates_at_2024-08-012024-08-01-06.40.57.734.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "poolsafetyregister",
+    "package_id": "1b4c7d46-7e52-4c77-ab79-6e935dd5c691",
+    "resource": "68b4583f-9611-46e6-8302-d28ecc43b421",
+    "resource_name": "Registered properties with pool safety certificates",
+    "resource_last_modified": "2024-09-02T05:41:44.296758",
+    "package_modified": "2024-09-02T05:45:34.235091",
+    "package_version": "22016",
+    "etag": "cc75573ccc9a8eb1e19f0819b817d378",
+    "http_last_modified": "Mon, 02 Sep 2024 05:41:49 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=poolsafetyregister",
+    "read_at": "2026-10-03T03:01:55+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "aa97635f82643c3c38871a53d2d49f8bfc880aa2f2c987eb21d00f7d208ba47d"
+}

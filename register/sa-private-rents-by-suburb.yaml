@@ -1,0 +1,116 @@
+slug: sa-private-rents-by-suburb
+title: Median weekly rents and bonds lodged by suburb, South Australia
+status: live
+topics:
+- housing
+example:
+  where:
+    dwelling_type: Houses
+    bedrooms: 3 bedrooms
+  group: suburb
+  metric: avg.median_weekly_rent
+  label: Median weekly rent
+sample:
+  where:
+    bonds_lodged:
+      gte: 10
+  spread: none
+  label: The first ten rows with at least 10 bonds lodged, in the publisher's order.
+order: 417
+collection: sa-private-rent-report
+collection_title: Private rent report, South Australia
+collection_description: The SA Housing Trust's Private Rent Report, built from the rental bonds lodged with Consumer
+  and Business Services each quarter. It gives the number of new bonds and the median weekly rent by dwelling
+  type and number of bedrooms. One table gives the figures by suburb and the other by postcode.
+collection_search_title: South Australia private rent report data (SA Housing Trust)
+search_title: Adelaide median rent by suburb, quarterly bonds lodged (SA Housing Trust)
+also_known_as:
+- SA Private Rent Report by suburb
+- Adelaide rental prices by suburb
+- South Australian median weekly rent by suburb
+keywords:
+- median rent
+- rent by suburb
+- rental bonds
+- rental market
+- Adelaide
+- SA Housing Trust
+- South Australia
+faq:
+- q: What is in each row?
+  a: One suburb, dwelling type and number of bedrooms, with the number of rental bonds lodged in the quarter and
+    the median weekly rent of those bonds. Dwelling types are flats and units, houses, and other or unknown.
+    Flats and houses run from 1 to 4 or more bedrooms, and other or unknown dwellings have no bedroom count.
+- q: What does a star mean?
+  a: The publisher writes a star in place of the number of bonds where there are 1 to 5 dwellings. That count is
+    a null here, flagged as suppressed, and the median beside it is kept.
+- q: Which quarter does the table cover?
+  a: The newest quarterly report, April to June 2026 at the first version. The publisher adds a report each
+    quarter, and each becomes a version here. The reports back to 2013 stay on the portal.
+- q: What are the Total rows?
+  a: The publisher's Metro Total, Country Total and Grand Total rows are kept as published, in the suburb column.
+    The publisher's total columns across dwelling types are left out, since they sum the other columns.
+summary: The number of new rental bonds and the median weekly rent in each South Australian suburb for the newest
+  quarter, by dwelling type and number of bedrooms. Updated quarterly.
+description: 'The Suburb sheet of the Private Rent Report from the SA Housing Trust, built from the Rental Bond
+  Data Set of the Tenancies Branch of Consumer and Business Services. Each row is one suburb, dwelling type and
+  number of bedrooms, with the number of bonds lodged in the quarter and their median weekly rent.
+
+
+  The publisher excludes bonds that were cancelled or unlodged, rounds the flat and house totals to the nearest
+  5, and replaces the number with a star where there are 1 to 5 dwellings.'
+publisher:
+  name: South Australian Housing Trust
+  short: SA Housing Trust
+  jurisdiction: SA
+  url: https://www.housing.sa.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.sa.gov.au/data/dataset/private-rent-report
+  attribution: South Australian Housing Trust, Government of South Australia, Private Rent Report,
+    https://data.sa.gov.au/data/dataset/private-rent-report, accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: ckan-resource
+  portal: https://data.sa.gov.au/data
+  package: private-rent-report
+  resource_match: ^Private Rental Report \d{4}-\d{2}$
+  url: https://data.sa.gov.au/data/dataset/private-rent-report
+  cadence: quarterly
+wide:
+  sheets:
+  - Suburb
+  header_row: 15
+  header_rows: 3
+  row_headers: 1
+key:
+- suburb
+- dwelling_type
+- bedrooms
+suppression:
+- '*'
+partition_by:
+- dwelling_type
+row_label: Rent figures
+fields:
+- name: suburb
+  label: Suburb
+  source: (row header 1)
+  type: string
+- name: dwelling_type
+  label: Dwelling type
+  source: (column header 1)
+  type: string
+- name: bedrooms
+  label: Bedrooms
+  source: (column header 2)
+  type: string
+- name: bonds_lodged
+  label: Bonds lodged
+  source: '(cell: Count)'
+  type: integer
+- name: median_weekly_rent
+  label: Median weekly rent ($)
+  source: '(cell: Median)'
+  type: number

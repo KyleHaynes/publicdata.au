@@ -1,0 +1,82 @@
+slug: act-historic-marriage-index
+title: Historic marriage index, ACT
+status: live
+topics:
+- people
+order: 452
+temporal_start: '1930-01-01'
+search_title: ACT historic marriage index, marriages registered from 1930 (Access Canberra)
+also_known_as:
+- ACT marriage records index
+- Canberra historic marriages register
+- ACT BDM historic marriage index
+keywords:
+- marriage index
+- family history
+- genealogy
+- marriages
+- Canberra
+- ACT
+faq:
+- q: What is in each row?
+  a: One marriage registered in the ACT, with the registration number, the surname and given names of
+    each party and the date of the marriage.
+- q: Why are recent marriages missing?
+  a: The publisher's index holds only marriages registered in the ACT more than 75 years ago. Later
+    marriages are added as they pass that age.
+- q: Is this a marriage certificate?
+  a: No. It is an index with limited details. A certificate is ordered from the ACT Registry of Births,
+    Deaths and Marriages.
+summary: An index of marriages registered in the ACT more than 75 years ago, from 1930, one row per
+  marriage with the names of both parties and the date.
+description: The historic marriage index Access Canberra keeps for marriages registered in the ACT more
+  than 75 years ago. Each row carries the registration number, the surname and given names of each of the
+  two parties and the date of the marriage.
+publisher:
+  name: Access Canberra, City and Environment Directorate
+  short: Access Canberra
+  jurisdiction: ACT
+  url: https://www.accesscanberra.act.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.act.gov.au/d/uzaz-dbkr
+  attribution: Access Canberra, ACT Government, Historic marriage index, https://www.data.act.gov.au/d/uzaz-dbkr,
+    accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: socrata
+  portal: https://www.data.act.gov.au
+  package: uzaz-dbkr
+  url: https://www.data.act.gov.au/d/uzaz-dbkr
+  cadence: yearly
+key:
+- registration_number
+row_label: Marriages
+fields:
+- name: registration_number
+  label: Registration number
+  source: Registration number
+  type: string
+- name: party_1_surname
+  label: Party 1 surname
+  source: Party 1 surname
+  type: string
+- name: party_1_given_names
+  label: Party 1 given names
+  source: Party 1 given names
+  type: string
+- name: party_2_surname
+  label: Party 2 surname
+  source: Party 2 surname
+  type: string
+- name: party_2_given_names
+  label: Party 2 given names
+  source: Party 2 given names
+  type: string
+- name: date_of_marriage
+  label: Date of marriage
+  source: Date of Marriage
+  type: date
+  date_format: '%d/%m/%Y'
+note: Cells were typed and headers were made snake_case. The publisher's header is kept beside every field
+  in schema.json. Rows were left alone.

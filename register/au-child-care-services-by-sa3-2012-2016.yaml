@@ -1,0 +1,117 @@
+slug: au-child-care-services-by-sa3-2012-2016
+title: Child care services, children and hourly fees by area, Greater Sydney and Melbourne, 2012-13 to 2015-16
+status: live
+topics:
+- education
+example:
+  where: {financial_year: newest, service_type: LDC, child_age: '9: Total'}
+  group: sa3_name_2011
+  metric: sum.child_count
+  label: Children in long day care in each area in the newest year
+sample:
+  where: {financial_year: newest, service_type: LDC, child_age: '9: Total'}
+  order: [child_count.desc]
+  label: The ten areas with the most children in long day care in the newest year, most first.
+order: 507
+publisher:
+  name: Department of Education
+  short: Education
+  jurisdiction: Cth
+  url: https://www.education.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.gov.au/data/dataset/child-care-administrative-data
+  attribution: Department of Education, Australian Government, Child Care Administrative Data, sourced
+    {sourced}, https://data.gov.au/data/dataset/child-care-administrative-data, licensed under CC BY 3.0
+    AU.
+temporal_start: '2012-07-01'
+search_title: Child care fees per hour and places by area, Sydney and Melbourne, 2012 to 2016 (Education)
+also_known_as:
+- Child Care Administrative Data
+- Long day care fees by SA3
+- Before and after school care fees Sydney Melbourne
+- Child Care Benefit approved services by area
+keywords:
+- child care
+- childcare fees
+- long day care
+- outside school hours care
+- Sydney
+- Melbourne
+faq:
+- q: What is in each row?
+  a: One ABS Statistical Area Level 3 (2011) in Greater Sydney or Greater Melbourne, one financial year from
+    2012-13 to 2015-16, one service type and one age group of children. It gives the number of children
+    using Child Care Benefit approved services of that type, the number of services, and the mean and
+    standard deviation of their fees per hour.
+- q: What are the service types?
+  a: LDC is long day care, for children who have not yet started school. BSC and ASC are before and after
+    school hours care, mostly for school children.
+- q: What do the blanks mean?
+  a: The department rounds child counts to the nearest 10 and shows counts under 5 as <10, and service
+    counts under 5 as <5. Those cells are null here with a suppressed flag. Fees are rounded to the nearest
+    5 cents and are kept as the department wrote them, with the dollar sign.
+summary: Children, services and the mean hourly fee of Child Care Benefit approved long day care and
+  outside school hours care in each area of Greater Sydney and Greater Melbourne, 2012-13 to 2015-16.
+description: The Department of Education's Child Care Administrative Data, for Child Care Benefit approved
+  long day care, before school hours care and after school hours care services in Greater Sydney and
+  Greater Melbourne. Each row is one SA3 area, financial year, service type and age group of children, with
+  the number of children, the number of services and the mean and standard deviation of hourly fees. The
+  department no longer updates the file.
+source:
+  adapter: ckan-resource
+  portal: https://data.gov.au/data
+  package: child-care-administrative-data
+  resource: 5b6f578d-1d1e-4f97-a285-706dafdb9cbc
+  url: https://data.gov.au/data/dataset/child-care-administrative-data
+  encoding: utf-8-sig
+  cadence: no longer updated
+suppression:
+- <10
+- <5
+key:
+- sa3_code_2011
+- financial_year
+- service_type
+- child_age
+row_label: Area, year and service rows
+fields:
+- name: sa3_code_2011
+  label: SA3 code (2011)
+  source: SA3_code_2011
+  type: string
+- name: sa3_name_2011
+  label: SA3 area (2011)
+  source: SA3_name_2011
+  type: string
+- name: financial_year
+  label: Financial year
+  source: FY
+  type: string
+  description: The department's code for the financial year, FY201213 for 2012-13.
+- name: service_type
+  label: Service type
+  source: Servicetype
+  type: string
+- name: child_age
+  label: Age of child
+  source: child_age
+  type: string
+- name: child_count
+  label: Children
+  source: child_count
+  type: integer
+- name: service_count
+  label: Services
+  source: service_count
+  type: integer
+- name: fee_hr_mean
+  label: Mean fee per hour
+  source: fee_hr_mean
+  type: string
+- name: fee_hr_std
+  label: Fee per hour standard deviation
+  source: fee_hr_std
+  type: string

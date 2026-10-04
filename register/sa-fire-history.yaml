@@ -1,0 +1,137 @@
+slug: sa-fire-history
+title: Bushfire and prescribed burn history, South Australia
+status: live
+topics:
+- emergencies
+- nature
+order: 400
+temporal_start: '1931-01-01'
+search_title: South Australia bushfire history map, fire scars and prescribed burns (DEW)
+also_known_as:
+- SA fire history
+- Bushfires and Prescribed Burns History
+- South Australian fire scar mapping
+- DEW fire history shapefile
+keywords:
+- bushfire history
+- fire scar
+- prescribed burn
+- fire map
+- burnt area
+- Department for Environment and Water
+- South Australia
+faq:
+- q: What is in each row?
+  a: One mapped fire scar, the area burnt by a bushfire or a prescribed burn, with its incident name and
+    number, the fire date, financial year, calendar year and season, the area in hectares, and the
+    publisher's codes for how reliable the date is and how the shape was captured. The shape itself is in
+    the GeoParquet, GeoJSON, GeoPackage and PMTiles files.
+- q: Does it cover every fire in South Australia?
+  a: No. The Department maps major bushfires across the state and prescribed burns on land managed by state
+    agencies. It says the mapping may be incomplete for a given reserve or region, and burn-offs on private
+    land are left out.
+- q: Why is the incident number 0 in some rows?
+  a: The publisher writes 0 where a fire has no incident number on record. Every fire before 2000 has 0, and so
+    do about two in three bushfires since then. Most prescribed burns since 2000 carry a number. The value is
+    kept as published.
+summary: The mapped extent of major bushfires and of prescribed burns on state-managed land in South Australia,
+  one shape per fire scar with its date, type and area.
+description: 'State-wide fire scar mapping from the Department for Environment and Water. Each row is one area
+  burnt by a bushfire or by a prescribed burn on land managed by state agencies, with the incident name and
+  number, the date, financial year, calendar year and season of the fire, the area in hectares, comments, and
+  the publisher''s codes for date reliability, imagery, feature source and capture method.
+
+
+  The publisher notes that a landscape approach is used, so the mapping may be incomplete for a given reserve
+  or region, and that burn-offs on private land are excluded.'
+publisher:
+  name: Department for Environment and Water
+  short: Environment and Water
+  jurisdiction: SA
+  url: https://www.environment.sa.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.sa.gov.au/data/dataset/fire-history
+  attribution: Department for Environment and Water, Government of South Australia, Bushfires and Prescribed
+    Burns History, https://data.sa.gov.au/data/dataset/fire-history, accessed {sourced}, licensed under CC BY
+    4.0.
+source:
+  adapter: ckan-resource
+  portal: https://data.sa.gov.au/data
+  package: fire-history
+  resource: 0f1d159a-6302-4e51-b0c3-6f6beb43ee9a
+  member: FIREMGT_FireHistory_GDA2020.shp
+  url: https://data.sa.gov.au/data/dataset/fire-history
+  cadence: when the publisher maps new fires
+geometry:
+  kind: polygon
+  crs: EPSG:7844
+  crs_note: Shapes in GDA2020 (EPSG:7844), from the GDA2020 layer the publisher ships beside a GDA94 copy.
+  maxzoom: 10
+row_label: Fire scars
+fields:
+- name: incident_number
+  label: Incident number
+  source: INCIDENTNU
+  type: integer
+  description: The publisher's incident number, or 0 where none is on record.
+- name: incident_name
+  label: Incident name
+  source: INCIDENTNA
+  type: string
+- name: incident_type
+  label: Fire type
+  source: INCIDENTTY
+  type: string
+  description: Bushfire or Prescribed Burn.
+- name: fire_date
+  label: Fire date
+  source: FIREDATE
+  type: date
+- name: financial_year
+  label: Financial year
+  source: FINANCIALY
+  type: string
+- name: fire_year
+  label: Year
+  source: FIREYEAR
+  type: integer
+- name: season
+  label: Season
+  source: SEASON
+  type: string
+- name: date_reliability
+  label: Date reliability code
+  source: DATERELIAB
+  type: integer
+  description: The publisher's code for how reliable the fire date is.
+- name: image_information
+  label: Imagery
+  source: IMAGEINFOR
+  type: string
+  description: The satellite or aerial imagery the scar was mapped from, as the publisher wrote it.
+- name: feature_source
+  label: Feature source code
+  source: FEATURESOU
+  type: integer
+- name: capture_method
+  label: Capture method code
+  source: CAPTUREMET
+  type: integer
+- name: capture_source
+  label: Capture source code
+  source: CAPTURESOU
+  type: integer
+- name: comments
+  label: Comments
+  source: COMMENTS
+  type: string
+- name: hectares
+  label: Area (ha)
+  source: HECTARES
+  type: number
+omit:
+  SHAPE_Leng: The perimeter in degrees from the publisher's GIS; the shape carries it.
+  SHAPE_Area: The area in square degrees from the publisher's GIS; HECTARES gives the area.

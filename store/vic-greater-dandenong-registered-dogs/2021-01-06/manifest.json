@@ -1,0 +1,34 @@
+{
+  "dataset": "vic-greater-dandenong-registered-dogs",
+  "version": "2021-01-06",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:07:38+00:00",
+  "sha256": "316d65396e7dde79b5bf7b1c53eda3b2f2cb9bde0b556d191dd3caa173aff5be",
+  "bytes": 368240,
+  "filename": "registered-dogs.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://data.gov.au/data/dataset/638fb09b-5ec5-4b8c-9af7-919cb879e752/resource/abdce0cb-33f0-42cd-908a-3ee39ad2c176/download/registered-dogs.csv",
+    "portal": "https://data.gov.au/data",
+    "package": "dandenong-registered-dogs",
+    "package_id": "638fb09b-5ec5-4b8c-9af7-919cb879e752",
+    "resource": "abdce0cb-33f0-42cd-908a-3ee39ad2c176",
+    "resource_name": "Register Dogs - Greater Dandenong",
+    "resource_last_modified": "2021-01-06T00:00:00",
+    "package_modified": "2023-08-09T06:35:52.589247",
+    "package_version": null,
+    "etag": "W/\"1609910032.0-368240-3920302213",
+    "http_last_modified": "Wed, 06 Jan 2021 05:13:52 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution 3.0 Australia",
+    "url": "http://creativecommons.org/licenses/by/3.0/au/",
+    "read_from": "https://data.gov.au/data/api/3/action/package_show?id=dandenong-registered-dogs",
+    "read_at": "2026-10-03T03:07:37+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "89b4208018a9f0efa067b779095b916abb4543d52203ae22c85782c8ffb77580"
+}

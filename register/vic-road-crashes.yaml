@@ -1,0 +1,308 @@
+slug: vic-road-crashes
+title: Road crashes, Victoria
+status: live
+topics:
+- roads
+example:
+  where:
+    severity: Fatal accident
+  group: accident_type
+order: 13
+temporal_start: '2012-01-01'
+search_title: Victoria road crash data
+also_known_as:
+- Victoria Road Crash Data
+- VicRoads crash statistics
+- Victorian car accident data
+- Road Crash Information System (RCIS) data
+keywords:
+- road crash
+- car accident
+- crash statistics
+- road safety
+- crash locations
+- VicRoads
+- Victoria
+faq:
+- q: Does it include every crash?
+  a: No. The publisher includes crashes reported to Victoria Police in which a person was killed or
+    injured, consolidated with hospital injury records. A crash with no injury that nobody reported
+    is not here.
+- q: Why do recent months have fewer crashes?
+  a: The publisher adds crashes as police reports and hospital records are matched, which can take
+    months. Recent months rise in later releases, and each release becomes a version here.
+- q: What are the other files on the portal?
+  a: The publisher also releases person, vehicle, event, node and condition tables that join to this one
+    on accident_no. This dataset is the flattened file the publisher provides with one row per crash
+    and its coordinates.
+summary: Every crash reported to Victoria Police since 2012 in which someone was killed or injured, one
+  row per crash, with its coordinates, road, lighting, speed zone and counts of people and vehicles.
+description: 'One row per crash on a Victorian road in which a person was killed or injured, from 2012 to
+  the latest month released. Each row carries the date and time, the crash movement (DCA) code, light
+  condition, road geometry, severity, speed zone, road and council area, coordinates, and counts of
+  people killed and injured by road user and age group, and of vehicles by type.
+
+
+  The publisher consolidates Victoria Police reports with hospital injury records and releases the
+  file monthly.'
+publisher:
+  name: Department of Transport and Planning
+  short: Transport and Planning
+  jurisdiction: Vic
+  url: https://www.vic.gov.au/department-transport-and-planning
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-09-30'
+  portal_id: cc-by
+  evidence: https://discover.data.vic.gov.au/dataset/victoria-road-crash-data
+  attribution: Department of Transport and Planning, Victoria, Victoria Road Crash Data,
+    https://discover.data.vic.gov.au/dataset/victoria-road-crash-data, accessed {sourced}, licensed
+    under CC BY 4.0.
+source:
+  adapter: ckan-resource
+  portal: https://discover.data.vic.gov.au
+  package: victoria-road-crash-data
+  resource: 5df1f373-0c90-48f5-80e1-7b2a35507134
+  url: https://discover.data.vic.gov.au/dataset/victoria-road-crash-data
+  cadence: monthly
+  encoding: utf-8-sig
+key:
+- accident_no
+partition_by:
+- lga_name
+enrich:
+- sa2
+- lga
+- suburb
+- postcode
+- state_electorate
+- federal_electorate
+geometry:
+  lon: longitude
+  lat: latitude
+  crs: EPSG:4283
+  crs_note: Latitude and longitude in decimal degrees as published, with the publisher's VicGrid
+    easting and northing beside them. The publisher does not name the datum in the file; GDA94 is
+    the Victorian Government's standard and differs from GDA2020 and WGS84 by under 2 metres.
+row_label: Crashes
+fields:
+- name: accident_no
+  label: Accident number
+  source: ACCIDENT_NO
+  type: string
+  description: The publisher's identifier for the crash.
+- name: accident_date
+  label: Date
+  source: ACCIDENT_DATE
+  type: date
+- name: accident_time
+  label: Time
+  source: ACCIDENT_TIME
+  type: string
+  description: 24-hour time.
+- name: accident_type
+  label: Accident type
+  source: ACCIDENT_TYPE
+  type: string
+- name: day_of_week
+  label: Day of week
+  source: DAY_OF_WEEK
+  type: string
+- name: dca_code
+  label: DCA code
+  source: DCA_CODE
+  type: string
+  description: DCA (Definitions for Classifying Accidents) code. Kept as text.
+- name: dca_code_description
+  label: Crash movement
+  source: DCA_CODE_DESCRIPTION
+  type: string
+- name: light_condition
+  label: Light condition
+  source: LIGHT_CONDITION
+  type: string
+- name: police_attend
+  label: Police attended
+  source: POLICE_ATTEND
+  type: string
+  description: Yes, No or Not known.
+- name: road_geometry
+  label: Road geometry
+  source: ROAD_GEOMETRY
+  type: string
+- name: severity
+  label: Severity
+  source: SEVERITY
+  type: string
+  description: Fatal accident, Serious injury accident, Other injury accident or Non injury accident.
+- name: speed_zone
+  label: Speed zone
+  source: SPEED_ZONE
+  type: string
+  description: A band such as 60 km/hr. Kept as text because the publisher uses bands.
+- name: run_offroad
+  label: Ran off road
+  source: RUN_OFFROAD
+  type: string
+- name: road_name
+  label: Road name
+  source: ROAD_NAME
+  type: string
+- name: road_type
+  label: Road type
+  source: ROAD_TYPE
+  type: string
+- name: road_route_1
+  label: Route number
+  source: ROAD_ROUTE_1
+  type: string
+  description: Kept as text.
+- name: lga_name
+  label: Council area
+  source: LGA_NAME
+  type: string
+- name: dtp_region
+  label: Transport region
+  source: DTP_REGION
+  type: string
+- name: latitude
+  label: Latitude
+  source: LATITUDE
+  type: number
+  description: Decimal degrees. Blank for 85 crashes in the September 2026 release.
+- name: longitude
+  label: Longitude
+  source: LONGITUDE
+  type: number
+  description: Decimal degrees.
+- name: vicgrid_x
+  label: VicGrid easting
+  source: VICGRID_X
+  type: number
+- name: vicgrid_y
+  label: VicGrid northing
+  source: VICGRID_Y
+  type: number
+- name: total_persons
+  label: People involved
+  source: TOTAL_PERSONS
+  type: integer
+- name: inj_or_fatal
+  label: People killed or injured
+  source: INJ_OR_FATAL
+  type: integer
+- name: fatality
+  label: Deaths
+  source: FATALITY
+  type: integer
+- name: seriousinjury
+  label: People seriously injured
+  source: SERIOUSINJURY
+  type: integer
+- name: otherinjury
+  label: People with other injuries
+  source: OTHERINJURY
+  type: integer
+- name: noninjured
+  label: People not injured
+  source: NONINJURED
+  type: integer
+- name: males
+  label: Males
+  source: MALES
+  type: integer
+- name: females
+  label: Females
+  source: FEMALES
+  type: integer
+- name: bicyclist
+  label: Cyclists
+  source: BICYCLIST
+  type: integer
+- name: passenger
+  label: Passengers
+  source: PASSENGER
+  type: integer
+- name: driver
+  label: Drivers
+  source: DRIVER
+  type: integer
+- name: pedestrian
+  label: Pedestrians
+  source: PEDESTRIAN
+  type: integer
+- name: pillion
+  label: Pillion passengers
+  source: PILLION
+  type: integer
+- name: motorcyclist
+  label: Motorcyclists
+  source: MOTORCYCLIST
+  type: integer
+- name: unknown
+  label: Unknown road users
+  source: UNKNOWN
+  type: integer
+- name: ped_cyclist_5_12
+  label: Pedestrians and cyclists aged 5 to 12
+  source: PED_CYCLIST_5_12
+  type: integer
+- name: ped_cyclist_13_18
+  label: Pedestrians and cyclists aged 13 to 18
+  source: PED_CYCLIST_13_18
+  type: integer
+- name: old_ped_65_and_over
+  label: Pedestrians aged 65 and over
+  source: OLD_PED_65_AND_OVER
+  type: integer
+- name: old_driver_75_and_over
+  label: Drivers aged 75 and over
+  source: OLD_DRIVER_75_AND_OVER
+  type: integer
+- name: young_driver_18_25
+  label: Drivers aged 18 to 25
+  source: YOUNG_DRIVER_18_25
+  type: integer
+- name: no_of_vehicles
+  label: Vehicles
+  source: NO_OF_VEHICLES
+  type: integer
+- name: heavyvehicle
+  label: Heavy vehicles
+  source: HEAVYVEHICLE
+  type: integer
+- name: passengervehicle
+  label: Passenger vehicles
+  source: PASSENGERVEHICLE
+  type: integer
+- name: motorcycle
+  label: Motorcycles
+  source: MOTORCYCLE
+  type: integer
+- name: pt_vehicle
+  label: Public transport vehicles
+  source: PT_VEHICLE
+  type: integer
+- name: deg_urban_name
+  label: Urban or rural
+  source: DEG_URBAN_NAME
+  type: string
+- name: srns
+  label: State road network
+  source: SRNS
+  type: string
+- name: rma
+  label: Road class
+  source: RMA
+  type: string
+  description: Road Management Act class, such as Freeway, Arterial Highway or Local Road.
+- name: divided
+  label: Divided road
+  source: DIVIDED
+  type: string
+- name: stat_div_name
+  label: Metro or country
+  source: STAT_DIV_NAME
+  type: string
+note: Cells were typed and headers were made snake_case. The publisher's header is kept beside every field
+  in schema.json. Rows were left alone.

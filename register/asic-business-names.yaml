@@ -1,0 +1,121 @@
+slug: asic-business-names
+title: Business Names Register, ASIC
+status: live
+topics:
+- government
+chart:
+  where: {registration_date: {gte: '1990-01-01'}}
+  label: Business names on the file
+order: 31
+publisher:
+  name: Australian Securities and Investments Commission
+  short: ASIC
+  jurisdiction: Cth
+  url: https://asic.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.gov.au/data/dataset/asic-business-names
+  attribution: Australian Securities and Investments Commission, Australian Government, ASIC Business
+    Names Dataset, sourced {sourced}, https://data.gov.au/data/dataset/asic-business-names, licensed
+    under CC BY 3.0 AU.
+temporal_start: '1900-01-01'
+search_title: Business names register download (ASIC Business Names Dataset)
+also_known_as:
+- ASIC Business Names Dataset
+- Australian business name register
+- ABN business name lookup list
+- Registered business names Australia
+keywords:
+- business names register
+- business name search
+- ASIC
+- registered business names
+- business name ABN
+- business register
+- Australia
+faq:
+- q: Why is there no query API for this dataset?
+  a: Each weekly version is a table of millions of rows, and this site loads a version's rows into its query
+    database only where they fit. The files carry the whole table in every format, and the Parquet file
+    answers most questions in one read.
+- q: Which business names are in the file?
+  a: Every business name registered with ASIC on the day the file was made, and every name deregistered
+    in the twelve months before it. Each row is one name with its status, the date it was registered, the
+    date it was cancelled if it has been, and the ABN of its holder when ASIC holds one.
+- q: Is this the whole ASIC register?
+  a: No. ASIC publishes selected public fields from its Business Names register once a week. The holder's
+    name, address and the register's other details are not in the file and are found through ASIC Connect.
+- q: Why are some names deregistered?
+  a: A name is deregistered when its holder cancels it or ASIC cancels it, for example when the renewal
+    fee is not paid. The publisher keeps deregistered names in the file for twelve months, with the
+    cancellation date.
+- q: What are the state registration number and state of registration?
+  a: Business names were registered by each state and territory until the national register began in
+    2012. A name carried across from a state register keeps the number that state gave it and the state
+    that gave it. Names registered nationally since then have neither.
+summary: Every business name registered with ASIC, with its status, registration and cancellation dates,
+  the holder's ABN and any state registration it was carried over from. About 3.3 million names, updated
+  weekly.
+description: The ASIC Business Names Dataset, one row per business name on the national Business Names
+  register, as ASIC publishes it every Wednesday. Each row has the name as registered, whether it is
+  registered or deregistered, its registration date, its cancellation date when it has one, the holder's
+  ABN, and for names carried over from a state or territory register before 2012, the number and state of
+  that registration. Deregistered names stay in the file for twelve months.
+source:
+  adapter: ckan-resource
+  portal: https://data.gov.au/data
+  package: asic-business-names
+  resource: 45eddcf9-07c1-4c5c-a1aa-ff109a033977
+  url: https://data.gov.au/data/dataset/asic-business-names
+  cadence: weekly
+  delimiter: tab
+partition_by:
+- status
+query: false
+row_label: Business names
+fields:
+- name: register_name
+  label: Register
+  source: REGISTER_NAME
+  type: string
+  description: The name of the ASIC register the row comes from.
+- name: business_name
+  label: Business name
+  source: BN_NAME
+  type: string
+  description: The business name as it appears on the register.
+- name: status
+  label: Status
+  source: BN_STATUS
+  type: string
+  description: Registered, or Deregistered for a name cancelled in the last twelve months.
+- name: registration_date
+  label: Registration date
+  source: BN_REG_DT
+  type: date
+  date_format: '%d/%m/%Y'
+  description: The date the business name was registered.
+- name: cancellation_date
+  label: Cancellation date
+  source: BN_CANCEL_DT
+  type: date
+  date_format: '%d/%m/%Y'
+  description: The date the business name ceased, for a deregistered name.
+- name: state_registration_number
+  label: State registration number
+  source: BN_STATE_NUM
+  type: string
+  description: The number a state or territory register gave the name before the national register
+    began in 2012, where there was one.
+- name: state_of_registration
+  label: State of registration
+  source: BN_STATE_OF_REG
+  type: string
+  description: The state or territory whose register the name was carried over from, where it was.
+- name: abn
+  label: ABN
+  source: BN_ABN
+  type: string
+  description: The Australian Business Number of the name's holder, where ASIC holds one.

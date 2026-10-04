@@ -1,0 +1,89 @@
+slug: qld-driver-licence-renewals-early
+title: Driver licence renewals by how early they were paid, Queensland
+status: live
+topics:
+- roads
+order: 216
+temporal_start: '2013-05-01'
+search_title: Queensland driver licence renewals paid early by month (Transport and Main Roads)
+also_known_as:
+- Driver licence renewal timing Queensland
+- QLD licence renewals paid early or late
+- TMR driver licence renewals monthly
+keywords:
+- driver licence
+- licence renewals
+- renewal timing
+- transactions
+- Queensland
+faq:
+- q: What is in each row?
+  a: One month, one transaction type and one lead time in days, with the number of driver licence renewals
+    paid that many days before the licence expired, and the band the department groups that lead time
+    into, such as 03 Days Early. A late renewal is labelled separately.
+summary: The monthly number of Queensland driver licence renewals by how many days before expiry they
+  were paid, from the Department of Transport and Main Roads.
+description: Driver licence renewals processed by the Department of Transport and Main Roads, one row
+  per month, transaction type and lead time in days, with the department's band for the lead time and
+  the number of renewals. The monthly counts run from May 2015. Four earlier rows, dated from May 2013,
+  hold one to three renewals each. The department replaces the file with a longer one from time to time.
+publisher:
+  name: Department of Transport and Main Roads
+  short: Transport and Main Roads
+  jurisdiction: Qld
+  url: https://www.tmr.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/driver-licence-renewals-paid-early
+  attribution: Department of Transport and Main Roads, Queensland Government, Monthly driver licence renewals
+    paid early, sourced {sourced}, https://www.data.qld.gov.au/dataset/driver-licence-renewals-paid-early,
+    licensed under CC BY 4.0.
+example:
+  group: renewal_lag
+  metric: sum.renewals
+  label: Driver licence renewals in the whole file by how early they were paid
+chart:
+  where: {month: {gte: '2016-01-01'}}
+  split: none
+  metric: sum.renewals
+  label: Driver licence renewals
+sample:
+  where: {month: newest}
+  order: [renewals.desc]
+  label: The ten lead times with the most renewals in the newest month, most first.
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: driver-licence-renewals-paid-early
+  resource: 10af9b07-68b7-4bc4-ac87-4fd9a20ed453
+  url: https://www.data.qld.gov.au/dataset/driver-licence-renewals-paid-early
+  encoding: utf-8-sig
+  cadence: irregular
+row_label: Month and lead time counts
+fields:
+- name: transaction_type
+  label: Transaction type
+  source: TRANSACTION_TYPE
+  type: string
+- name: month
+  label: Month
+  source: MONTH_OF_TRANSACTION
+  type: date
+  date_format: '%Y-%m-%d'
+  description: The first day of the month of the renewal.
+- name: lead_time_days
+  label: Days before expiry
+  source: LEAD_TIME
+  type: integer
+  description: Days between payment and the licence's expiry. The publisher writes these as negative numbers,
+    so -3 is 3 days early.
+- name: renewal_lag
+  label: Lead time band
+  source: RENEWAL_LAG
+  type: string
+- name: renewals
+  label: Renewals
+  source: NUMBER_OF_RENEWALS
+  type: integer
+note: Cells were typed and headers were made snake_case. Rows were left alone.

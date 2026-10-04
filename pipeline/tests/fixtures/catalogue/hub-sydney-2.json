@@ -1,0 +1,42 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "07992e8b3797443a8b24e3a2b46c4375",
+    "title": "Free Tree Giveaway",
+    "type": "Feature Service",
+    "license": "CC-BY-SA-4.0",
+    "licenseInfo": "<p>This work is licensed under <a style='display:inline-block;' target='_blank' href='https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1' rel='nofollow ugc noopener noreferrer'>CC BY-SA 4.0<img style='height:22px!important; margin-left:3px;' src='https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1' /><img style='height:22px!important; margin-left:3px;' src='https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1' /><img style='height:22px!important; margin-left:3px;' src='https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1' /></a></p>",
+    "description": "<p>Tree species available at the City of Sydney free tree giveaway March 2026.</p><p>Data is a subset of the&nbsp;<a target='_blank' href='https://data.cityofsydney.nsw.gov.au/datasets/cityofsydney::city-of-sydney-tree-species-list/about' rel='nofollow ugc noopener noreferrer'>City of Sydney suitable Tree Species list</a>.</p>",
+    "snippet": "Tree species available at the City of Sydney free free giveaway.",
+    "created": 1771976969000,
+    "modified": 1771977817000,
+    "url": "https://services1.arcgis.com/cNVyNtjGVZybOQWZ/arcgis/rest/services/Free_Tree_Giveaway/FeatureServer"
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "123b48733a4145e6a7e4802de770e581",
+    "title": "Library details",
+    "type": "Feature Service",
+    "license": "none",
+    "licenseInfo": "",
+    "description": "<p>This dataset contains details on accessibility features including &nbsp;opening hours, mobility parking, printing and computer services, accessible toilet facilities, wheelchair access etc.&nbsp;</p>",
+    "snippet": "Accessible features available at our library branches.",
+    "created": 1740711075000,
+    "modified": 1759363639000,
+    "url": "https://services1.arcgis.com/cNVyNtjGVZybOQWZ/arcgis/rest/services/Library_details/FeatureServer"
+   }
+  }
+ ],
+ "numberMatched": 4,
+ "numberReturned": 2,
+ "links": [
+  {
+   "rel": "self"
+  }
+ ]
+}

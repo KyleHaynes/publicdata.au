@@ -1,0 +1,91 @@
+slug: sa-suburb-boundaries
+title: Suburb and locality boundaries, South Australia
+status: live
+topics:
+- places
+order: 427
+search_title: South Australia suburb boundaries map, gazetted suburbs and localities (Housing and Urban Development)
+also_known_as:
+- SA Suburbs shapefile
+- South Australian suburb and locality boundaries
+- Adelaide suburb boundaries GeoJSON
+keywords:
+- suburb boundaries
+- localities
+- suburbs map
+- postcodes
+- shapefile
+- Department for Housing and Urban Development
+- South Australia
+faq:
+- q: What is in each row?
+  a: One gazetted suburb or locality of South Australia with its name, the postcode the publisher gives it, its
+    suburb number and the date its boundary took legal effect where the publisher records one. The shape is in
+    the GeoParquet, GeoJSON, GeoPackage and PMTiles files.
+- q: How does this differ from the national localities layer?
+  a: This is the South Australian Government's own suburb layer, kept by the Department for Housing and Urban
+    Development. The national localities on this site come from Geoscape's Administrative Boundaries, and the
+    two may differ at the edges and in naming.
+- q: Why is the legal start date blank for some suburbs?
+  a: The publisher leaves it blank where it records no date. The blank is kept as a null.
+summary: The boundaries of every gazetted suburb and locality in South Australia, one shape each with its name,
+  postcode and suburb number, from the state's own layer.
+description: South Australian suburb and locality boundaries from the Department for Housing and Urban Development.
+  Each row is one suburb or locality with its name in capitals, the postcode, the publisher's suburb number and
+  the date the boundary took legal effect.
+publisher:
+  name: Department for Housing and Urban Development
+  short: Housing and Urban Development
+  jurisdiction: SA
+  url: https://www.dhud.sa.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.sa.gov.au/data/dataset/suburb-boundaries
+  attribution: Department for Housing and Urban Development, Government of South Australia, Suburbs, https://data.sa.gov.au/data/dataset/suburb-boundaries, accessed {sourced}, licensed under CC BY 4.0.
+example:
+  group: postcode
+  metric: count
+  label: Suburbs and localities in each postcode
+chart:
+  split: none
+  metric: count
+  label: Suburb boundaries taking legal effect
+source:
+  adapter: ckan-resource
+  portal: https://data.sa.gov.au/data
+  package: suburb-boundaries
+  resource: 764134e4-4fb0-4cf2-8fe6-22daa2f9a30f
+  member: Suburbs_GDA2020.shp
+  url: https://data.sa.gov.au/data/dataset/suburb-boundaries
+  cadence: when the publisher updates the layer
+geometry:
+  kind: polygon
+  crs: EPSG:7844
+  crs_note: Shapes in GDA2020 (EPSG:7844), from the GDA2020 layer the publisher ships beside a GDA94 copy.
+  maxzoom: 10
+key:
+- suburb_number
+row_label: Suburbs
+fields:
+- name: suburb
+  label: Suburb
+  source: suburb
+  type: string
+- name: postcode
+  label: Postcode
+  source: postcode
+  type: string
+  description: Kept as text to preserve leading zeros.
+- name: suburb_number
+  label: Suburb number
+  source: suburb_num
+  type: integer
+- name: legal_start
+  label: Legal start date
+  source: legalstart
+  type: date
+omit:
+  shape_Leng: The perimeter in degrees from the publisher's GIS; the shape carries it.
+  shape_Area: The area in square degrees from the publisher's GIS; the shape carries it.

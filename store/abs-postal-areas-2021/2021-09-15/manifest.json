@@ -1,0 +1,27 @@
+{
+  "dataset": "abs-postal-areas-2021",
+  "version": "2021-09-15",
+  "as_at": "",
+  "fetched_at": "2026-10-01T14:36:22+00:00",
+  "sha256": "92182d5e491a2dc0d49bd282283722701eef8a347ae072c04c344b4aeac2c49a",
+  "bytes": 55939167,
+  "filename": "POA_2021_AUST_GDA2020_SHP.zip",
+  "encoding": "zip",
+  "source": {
+    "url": "https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-3-july-2021-june-2026/access-and-downloads/digital-boundary-files/POA_2021_AUST_GDA2020_SHP.zip",
+    "etag": "",
+    "http_last_modified": "Wed, 15 Sep 2021 01:55:05 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "stated": "Copyright Commonwealth of Australia administered by the ABS. Unless otherwise noted, content is licensed under a Creative Commons Attribution 4.0 International licence.",
+    "normalised": "CC-BY-4.0",
+    "title": "CC BY 4.0",
+    "url": "https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-3-july-2021-june-2026/access-and-downloads/digital-boundary-files",
+    "read_from": "https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-3-july-2021-june-2026/access-and-downloads/digital-boundary-files",
+    "read_at": "2026-10-01T14:36:20+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": []
+}

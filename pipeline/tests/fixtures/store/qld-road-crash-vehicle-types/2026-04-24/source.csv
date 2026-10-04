@@ -1,0 +1,301 @@
+﻿Crash_Year,Crash_Police_Region,Crash_Severity,Involving_Motorcycle_Moped,Involving_Truck,Involving_Bus,Count_Crashes,Count_Casualty_Fatality,Count_Casualty_Hospitalised,Count_Casualty_MedicallyTreated,Count_Casualty_MinorInjury,Count_Casualty_All
+2001,Brisbane,Fatal,No,No,No,36,38,18,1,0,57
+2001,Brisbane,Fatal,No,No,Yes,1,1,1,0,0,2
+2001,Brisbane,Fatal,No,Yes,No,1,1,0,1,2,4
+2001,Brisbane,Fatal,Yes,No,No,5,5,0,2,0,7
+2001,Brisbane,Fatal,Yes,Yes,No,1,1,0,0,0,1
+2001,Brisbane,Hospitalisation,No,No,No,872,0,1034,109,69,1212
+2001,Brisbane,Hospitalisation,No,No,Yes,19,0,21,5,1,27
+2001,Brisbane,Hospitalisation,No,Yes,No,73,0,83,4,4,91
+2001,Brisbane,Hospitalisation,Yes,No,No,165,0,173,10,5,188
+2001,Brisbane,Hospitalisation,Yes,No,Yes,1,0,1,0,0,1
+2001,Brisbane,Hospitalisation,Yes,Yes,No,5,0,5,0,0,5
+2001,Brisbane,Medical treatment,No,No,No,1730,0,0,2070,122,2192
+2001,Brisbane,Medical treatment,No,No,Yes,54,0,0,63,1,64
+2001,Brisbane,Medical treatment,No,Yes,No,135,0,0,156,7,163
+2001,Brisbane,Medical treatment,No,Yes,Yes,1,0,0,1,0,1
+2001,Brisbane,Medical treatment,Yes,No,No,156,0,0,162,6,168
+2001,Brisbane,Medical treatment,Yes,Yes,No,8,0,0,8,0,8
+2001,Brisbane,Minor injury,No,No,No,1170,0,0,0,1393,1393
+2001,Brisbane,Minor injury,No,No,Yes,23,0,0,0,27,27
+2001,Brisbane,Minor injury,No,Yes,No,103,0,0,0,128,128
+2001,Brisbane,Minor injury,Yes,No,No,87,0,0,0,93,93
+2001,Brisbane,Minor injury,Yes,Yes,No,2,0,0,0,2,2
+2001,Brisbane,Property damage only,No,No,No,2145,0,0,0,0,0
+2001,Brisbane,Property damage only,No,No,Yes,35,0,0,0,0,0
+2001,Brisbane,Property damage only,No,Yes,No,189,0,0,0,0,0
+2001,Brisbane,Property damage only,Yes,No,No,3,0,0,0,0,0
+2001,Brisbane,Property damage only,Yes,No,Yes,1,0,0,0,0,0
+2001,Brisbane,Property damage only,Yes,Yes,No,1,0,0,0,0,0
+2001,Central,Fatal,No,No,No,29,34,11,3,1,49
+2001,Central,Fatal,No,Yes,No,11,11,5,5,1,22
+2001,Central,Fatal,Yes,No,No,3,3,0,0,0,3
+2001,Central,Hospitalisation,No,No,No,337,0,410,62,22,494
+2001,Central,Hospitalisation,No,No,Yes,6,0,13,3,0,16
+2001,Central,Hospitalisation,No,Yes,No,35,0,41,5,1,47
+2001,Central,Hospitalisation,No,Yes,Yes,1,0,6,26,0,32
+2001,Central,Hospitalisation,Yes,No,No,43,0,45,2,1,48
+2001,Central,Hospitalisation,Yes,Yes,No,2,0,2,0,0,2
+2001,Central,Medical treatment,No,No,No,390,0,0,479,39,518
+2001,Central,Medical treatment,No,No,Yes,5,0,0,5,1,6
+2001,Central,Medical treatment,No,Yes,No,23,0,0,27,1,28
+2001,Central,Medical treatment,Yes,No,No,49,0,0,50,0,50
+2001,Central,Minor injury,No,No,No,212,0,0,0,247,247
+2001,Central,Minor injury,No,No,Yes,4,0,0,0,6,6
+2001,Central,Minor injury,No,Yes,No,16,0,0,0,18,18
+2001,Central,Minor injury,Yes,No,No,17,0,0,0,19,19
+2001,Central,Property damage only,No,No,No,741,0,0,0,0,0
+2001,Central,Property damage only,No,No,Yes,1,0,0,0,0,0
+2001,Central,Property damage only,No,Yes,No,71,0,0,0,0,0
+2001,Central,Property damage only,Yes,No,No,5,0,0,0,0,0
+2001,Central,Property damage only,Yes,Yes,No,1,0,0,0,0,0
+2001,Far Northern,Fatal,No,No,No,16,21,15,3,0,39
+2001,Far Northern,Fatal,No,No,Yes,1,1,0,0,0,1
+2001,Far Northern,Fatal,No,Yes,No,6,6,2,0,0,8
+2001,Far Northern,Fatal,Yes,No,No,1,1,1,0,0,2
+2001,Far Northern,Hospitalisation,No,No,No,215,0,280,35,25,340
+2001,Far Northern,Hospitalisation,No,No,Yes,7,0,10,17,0,27
+2001,Far Northern,Hospitalisation,No,Yes,No,15,0,18,2,1,21
+2001,Far Northern,Hospitalisation,Yes,No,No,49,0,54,3,2,59
+2001,Far Northern,Hospitalisation,Yes,No,Yes,1,0,1,0,0,1
+2001,Far Northern,Hospitalisation,Yes,Yes,No,1,0,1,0,0,1
+2001,Far Northern,Medical treatment,No,No,No,223,0,0,270,16,286
+2001,Far Northern,Medical treatment,No,No,Yes,7,0,0,8,2,10
+2001,Far Northern,Medical treatment,No,Yes,No,7,0,0,7,0,7
+2001,Far Northern,Medical treatment,Yes,No,No,32,0,0,34,0,34
+2001,Far Northern,Medical treatment,Yes,No,Yes,1,0,0,1,0,1
+2001,Far Northern,Minor injury,No,No,No,144,0,0,0,174,174
+2001,Far Northern,Minor injury,No,No,Yes,3,0,0,0,3,3
+2001,Far Northern,Minor injury,No,Yes,No,6,0,0,0,6,6
+2001,Far Northern,Minor injury,No,Yes,Yes,1,0,0,0,1,1
+2001,Far Northern,Minor injury,Yes,No,No,13,0,0,0,15,15
+2001,Far Northern,Minor injury,Yes,No,Yes,1,0,0,0,1,1
+2001,Far Northern,Property damage only,No,No,No,506,0,0,0,0,0
+2001,Far Northern,Property damage only,No,No,Yes,13,0,0,0,0,0
+2001,Far Northern,Property damage only,No,Yes,No,39,0,0,0,0,0
+2001,Far Northern,Property damage only,Yes,No,No,4,0,0,0,0,0
+2001,Far Northern,Property damage only,Yes,No,Yes,1,0,0,0,0,0
+2001,North Coast,Fatal,No,No,No,50,52,28,12,1,93
+2001,North Coast,Fatal,No,Yes,No,12,14,5,0,3,22
+2001,North Coast,Fatal,Yes,No,No,3,3,0,0,0,3
+2001,North Coast,Hospitalisation,No,No,No,603,0,788,102,43,933
+2001,North Coast,Hospitalisation,No,No,Yes,3,0,3,3,0,6
+2001,North Coast,Hospitalisation,No,Yes,No,37,0,47,5,1,53
+2001,North Coast,Hospitalisation,Yes,No,No,101,0,104,4,6,114
+2001,North Coast,Hospitalisation,Yes,Yes,No,2,0,3,0,0,3
+2001,North Coast,Medical treatment,No,No,No,904,0,0,1142,91,1233
+2001,North Coast,Medical treatment,No,No,Yes,19,0,0,30,6,36
+2001,North Coast,Medical treatment,No,Yes,No,50,0,0,58,2,60
+2001,North Coast,Medical treatment,No,Yes,Yes,1,0,0,1,0,1
+2001,North Coast,Medical treatment,Yes,No,No,95,0,0,100,4,104
+2001,North Coast,Medical treatment,Yes,Yes,No,1,0,0,1,0,1
+2001,North Coast,Minor injury,No,No,No,453,0,0,0,537,537
+2001,North Coast,Minor injury,No,No,Yes,2,0,0,0,2,2
+2001,North Coast,Minor injury,No,Yes,No,28,0,0,0,34,34
+2001,North Coast,Minor injury,Yes,No,No,24,0,0,0,25,25
+2001,North Coast,Minor injury,Yes,Yes,No,1,0,0,0,1,1
+2001,North Coast,Property damage only,No,No,No,1426,0,0,0,0,0
+2001,North Coast,Property damage only,No,No,Yes,8,0,0,0,0,0
+2001,North Coast,Property damage only,No,Yes,No,97,0,0,0,0,0
+2001,North Coast,Property damage only,Yes,No,No,4,0,0,0,0,0
+2001,Northern,Fatal,No,No,No,11,13,8,0,0,21
+2001,Northern,Fatal,No,No,Yes,1,1,0,0,0,1
+2001,Northern,Fatal,No,Yes,No,4,4,0,0,0,4
+2001,Northern,Fatal,Yes,No,No,1,1,0,0,0,1
+2001,Northern,Hospitalisation,No,No,No,187,0,232,17,10,259
+2001,Northern,Hospitalisation,No,No,Yes,3,0,3,1,0,4
+2001,Northern,Hospitalisation,No,Yes,No,13,0,15,4,0,19
+2001,Northern,Hospitalisation,Yes,No,No,48,0,52,2,1,55
+2001,Northern,Medical treatment,No,No,No,227,0,0,287,17,304
+2001,Northern,Medical treatment,No,No,Yes,2,0,0,2,0,2
+2001,Northern,Medical treatment,No,Yes,No,17,0,0,20,0,20
+2001,Northern,Medical treatment,Yes,No,No,22,0,0,24,0,24
+2001,Northern,Medical treatment,Yes,Yes,No,1,0,0,1,0,1
+2001,Northern,Minor injury,No,No,No,121,0,0,0,152,152
+2001,Northern,Minor injury,No,No,Yes,2,0,0,0,2,2
+2001,Northern,Minor injury,No,Yes,No,6,0,0,0,9,9
+2001,Northern,Minor injury,Yes,No,No,12,0,0,0,12,12
+2001,Northern,Property damage only,No,No,No,419,0,0,0,0,0
+2001,Northern,Property damage only,No,No,Yes,3,0,0,0,0,0
+2001,Northern,Property damage only,No,Yes,No,41,0,0,0,0,0
+2001,Northern,Property damage only,Yes,No,No,2,0,0,0,0,0
+2001,South Eastern,Fatal,No,No,No,32,33,28,10,2,73
+2001,South Eastern,Fatal,No,Yes,No,4,4,3,0,0,7
+2001,South Eastern,Fatal,Yes,No,No,7,7,1,3,0,11
+2001,South Eastern,Hospitalisation,No,No,No,623,0,796,93,53,942
+2001,South Eastern,Hospitalisation,No,No,Yes,15,0,18,11,3,32
+2001,South Eastern,Hospitalisation,No,Yes,No,39,0,48,3,1,52
+2001,South Eastern,Hospitalisation,Yes,No,No,100,0,103,5,3,111
+2001,South Eastern,Hospitalisation,Yes,No,Yes,1,0,1,1,0,2
+2001,South Eastern,Hospitalisation,Yes,Yes,No,1,0,1,0,0,1
+2001,South Eastern,Medical treatment,No,No,No,964,0,0,1211,59,1270
+2001,South Eastern,Medical treatment,No,No,Yes,33,0,0,62,15,77
+2001,South Eastern,Medical treatment,No,Yes,No,37,0,0,39,3,42
+2001,South Eastern,Medical treatment,Yes,No,No,75,0,0,81,5,86
+2001,South Eastern,Medical treatment,Yes,Yes,No,2,0,0,2,0,2
+2001,South Eastern,Minor injury,No,No,No,529,0,0,0,649,649
+2001,South Eastern,Minor injury,No,No,Yes,12,0,0,0,13,13
+2001,South Eastern,Minor injury,No,Yes,No,16,0,0,0,23,23
+2001,South Eastern,Minor injury,Yes,No,No,21,0,0,0,22,22
+2001,South Eastern,Property damage only,No,No,No,1050,0,0,0,0,0
+2001,South Eastern,Property damage only,No,No,Yes,16,0,0,0,0,0
+2001,South Eastern,Property damage only,No,Yes,No,55,0,0,0,0,0
+2001,South Eastern,Property damage only,No,Yes,Yes,1,0,0,0,0,0
+2001,South Eastern,Property damage only,Yes,No,No,1,0,0,0,0,0
+2001,Southern,Fatal,No,No,No,42,51,30,2,6,89
+2001,Southern,Fatal,No,No,Yes,1,1,0,1,1,3
+2001,Southern,Fatal,No,Yes,No,9,9,0,0,0,9
+2001,Southern,Fatal,Yes,No,No,8,8,0,0,0,8
+2001,Southern,Hospitalisation,No,No,No,417,0,521,79,26,626
+2001,Southern,Hospitalisation,No,No,Yes,8,0,8,3,2,13
+2001,Southern,Hospitalisation,No,Yes,No,52,0,60,6,3,69
+2001,Southern,Hospitalisation,Yes,No,No,58,0,61,2,1,64
+2001,Southern,Hospitalisation,Yes,No,Yes,1,0,1,0,0,1
+2001,Southern,Hospitalisation,Yes,Yes,No,1,0,1,0,0,1
+2001,Southern,Medical treatment,No,No,No,507,0,0,617,42,659
+2001,Southern,Medical treatment,No,No,Yes,5,0,0,12,3,15
+2001,Southern,Medical treatment,No,Yes,No,42,0,0,49,3,52
+2001,Southern,Medical treatment,Yes,No,No,37,0,0,39,1,40
+2001,Southern,Minor injury,No,No,No,308,0,0,0,376,376
+2001,Southern,Minor injury,No,No,Yes,5,0,0,0,8,8
+2001,Southern,Minor injury,No,Yes,No,31,0,0,0,35,35
+2001,Southern,Minor injury,Yes,No,No,13,0,0,0,14,14
+2001,Southern,Minor injury,Yes,No,Yes,1,0,0,0,1,1
+2001,Southern,Property damage only,No,No,No,1087,0,0,0,0,0
+2001,Southern,Property damage only,No,No,Yes,5,0,0,0,0,0
+2001,Southern,Property damage only,No,Yes,No,119,0,0,0,0,0
+2001,Southern,Property damage only,Yes,No,No,6,0,0,0,0,0
+2001,Unknown,Hospitalisation,No,No,No,52,0,72,18,4,94
+2001,Unknown,Hospitalisation,No,No,Yes,2,0,4,8,0,12
+2001,Unknown,Hospitalisation,No,Yes,No,3,0,3,1,0,4
+2001,Unknown,Hospitalisation,Yes,No,No,9,0,10,0,0,10
+2001,Unknown,Medical treatment,No,No,No,57,0,0,72,2,74
+2001,Unknown,Medical treatment,No,No,Yes,3,0,0,3,0,3
+2001,Unknown,Medical treatment,No,Yes,No,3,0,0,3,0,3
+2001,Unknown,Medical treatment,Yes,No,No,2,0,0,2,0,2
+2001,Unknown,Minor injury,No,No,No,24,0,0,0,26,26
+2001,Unknown,Minor injury,No,No,Yes,2,0,0,0,3,3
+2001,Unknown,Minor injury,No,Yes,No,3,0,0,0,3,3
+2001,Unknown,Minor injury,Yes,No,No,2,0,0,0,2,2
+2001,Unknown,Property damage only,No,No,No,56,0,0,0,0,0
+2001,Unknown,Property damage only,No,Yes,No,4,0,0,0,0,0
+2002,Brisbane,Fatal,No,No,No,23,26,9,1,2,38
+2002,Brisbane,Fatal,No,No,Yes,1,1,0,0,1,2
+2002,Brisbane,Fatal,No,Yes,No,4,4,2,0,0,6
+2002,Brisbane,Fatal,Yes,No,No,7,7,1,1,0,9
+2002,Brisbane,Fatal,Yes,Yes,No,2,2,0,0,0,2
+2002,Brisbane,Hospitalisation,No,No,No,935,0,1140,149,89,1378
+2002,Brisbane,Hospitalisation,No,No,Yes,35,0,43,14,3,60
+2002,Brisbane,Hospitalisation,No,Yes,No,77,0,84,7,3,94
+2002,Brisbane,Hospitalisation,No,Yes,Yes,2,0,2,0,0,2
+2002,Brisbane,Hospitalisation,Yes,No,No,189,0,197,6,7,210
+2002,Brisbane,Hospitalisation,Yes,No,Yes,1,0,1,0,0,1
+2002,Brisbane,Hospitalisation,Yes,Yes,No,7,0,7,0,0,7
+2002,Brisbane,Medical treatment,No,No,No,1715,0,0,2024,130,2154
+2002,Brisbane,Medical treatment,No,No,Yes,40,0,0,50,4,54
+2002,Brisbane,Medical treatment,No,Yes,No,112,0,0,132,7,139
+2002,Brisbane,Medical treatment,No,Yes,Yes,3,0,0,4,2,6
+2002,Brisbane,Medical treatment,Yes,No,No,134,0,0,140,1,141
+2002,Brisbane,Medical treatment,Yes,No,Yes,2,0,0,2,0,2
+2002,Brisbane,Medical treatment,Yes,Yes,No,3,0,0,3,0,3
+2002,Brisbane,Minor injury,No,No,No,1032,0,0,0,1252,1252
+2002,Brisbane,Minor injury,No,No,Yes,21,0,0,0,30,30
+2002,Brisbane,Minor injury,No,Yes,No,77,0,0,0,82,82
+2002,Brisbane,Minor injury,Yes,No,No,78,0,0,0,80,80
+2002,Brisbane,Property damage only,No,No,No,2107,0,0,0,0,0
+2002,Brisbane,Property damage only,No,No,Yes,25,0,0,0,0,0
+2002,Brisbane,Property damage only,No,Yes,No,217,0,0,0,0,0
+2002,Brisbane,Property damage only,Yes,No,No,6,0,0,0,0,0
+2002,Central,Fatal,No,No,No,27,34,29,3,0,66
+2002,Central,Fatal,No,No,Yes,1,2,1,0,0,3
+2002,Central,Fatal,No,Yes,No,7,10,3,2,0,15
+2002,Central,Fatal,Yes,No,No,2,2,0,0,0,2
+2002,Central,Hospitalisation,No,No,No,341,0,424,64,21,509
+2002,Central,Hospitalisation,No,No,Yes,6,0,7,1,4,12
+2002,Central,Hospitalisation,No,Yes,No,29,0,36,7,5,48
+2002,Central,Hospitalisation,Yes,No,No,76,0,82,5,4,91
+2002,Central,Hospitalisation,Yes,Yes,No,1,0,1,0,0,1
+2002,Central,Medical treatment,No,No,No,329,0,0,401,27,428
+2002,Central,Medical treatment,No,No,Yes,5,0,0,5,0,5
+2002,Central,Medical treatment,No,Yes,No,30,0,0,37,5,42
+2002,Central,Medical treatment,Yes,No,No,45,0,0,49,2,51
+2002,Central,Minor injury,No,No,No,225,0,0,0,259,259
+2002,Central,Minor injury,No,No,Yes,4,0,0,0,4,4
+2002,Central,Minor injury,No,Yes,No,12,0,0,0,13,13
+2002,Central,Minor injury,Yes,No,No,22,0,0,0,23,23
+2002,Central,Property damage only,No,No,No,805,0,0,0,0,0
+2002,Central,Property damage only,No,No,Yes,3,0,0,0,0,0
+2002,Central,Property damage only,No,Yes,No,74,0,0,0,0,0
+2002,Far Northern,Fatal,No,No,No,17,18,15,3,1,37
+2002,Far Northern,Fatal,No,No,Yes,2,2,1,0,0,3
+2002,Far Northern,Fatal,No,Yes,No,3,4,2,1,0,7
+2002,Far Northern,Fatal,Yes,No,No,1,1,0,0,0,1
+2002,Far Northern,Hospitalisation,No,No,No,222,0,287,45,22,354
+2002,Far Northern,Hospitalisation,No,No,Yes,2,0,5,0,1,6
+2002,Far Northern,Hospitalisation,No,Yes,No,16,0,16,0,0,16
+2002,Far Northern,Hospitalisation,Yes,No,No,62,0,67,2,1,70
+2002,Far Northern,Hospitalisation,Yes,No,Yes,1,0,1,0,0,1
+2002,Far Northern,Hospitalisation,Yes,Yes,No,2,0,2,0,0,2
+2002,Far Northern,Medical treatment,No,No,No,245,0,0,303,18,321
+2002,Far Northern,Medical treatment,No,No,Yes,5,0,0,14,0,14
+2002,Far Northern,Medical treatment,No,Yes,No,6,0,0,10,0,10
+2002,Far Northern,Medical treatment,Yes,No,No,23,0,0,25,1,26
+2002,Far Northern,Medical treatment,Yes,Yes,No,2,0,0,2,0,2
+2002,Far Northern,Minor injury,No,No,No,156,0,0,0,189,189
+2002,Far Northern,Minor injury,No,No,Yes,6,0,0,0,9,9
+2002,Far Northern,Minor injury,No,Yes,No,4,0,0,0,4,4
+2002,Far Northern,Minor injury,No,Yes,Yes,1,0,0,0,1,1
+2002,Far Northern,Minor injury,Yes,No,No,20,0,0,0,21,21
+2002,Far Northern,Property damage only,No,No,No,513,0,0,0,0,0
+2002,Far Northern,Property damage only,No,No,Yes,11,0,0,0,0,0
+2002,Far Northern,Property damage only,No,Yes,No,40,0,0,0,0,0
+2002,Far Northern,Property damage only,Yes,No,No,2,0,0,0,0,0
+2002,North Coast,Fatal,No,No,No,45,50,43,7,3,103
+2002,North Coast,Fatal,No,Yes,No,8,8,1,2,1,12
+2002,North Coast,Fatal,Yes,No,No,15,16,2,2,3,23
+2002,North Coast,Fatal,Yes,Yes,No,1,1,0,0,0,1
+2002,North Coast,Hospitalisation,No,No,No,627,0,798,121,58,977
+2002,North Coast,Hospitalisation,No,No,Yes,7,0,7,0,0,7
+2002,North Coast,Hospitalisation,No,Yes,No,46,0,59,11,8,78
+2002,North Coast,Hospitalisation,Yes,No,No,106,0,114,6,1,121
+2002,North Coast,Hospitalisation,Yes,Yes,No,1,0,1,0,0,1
+2002,North Coast,Medical treatment,No,No,No,853,0,0,1060,78,1138
+2002,North Coast,Medical treatment,No,No,Yes,15,0,0,43,10,53
+2002,North Coast,Medical treatment,No,Yes,No,56,0,0,68,4,72
+2002,North Coast,Medical treatment,Yes,No,No,87,0,0,95,2,97
+2002,North Coast,Medical treatment,Yes,Yes,No,1,0,0,1,0,1
+2002,North Coast,Minor injury,No,No,No,472,0,0,0,577,577
+2002,North Coast,Minor injury,No,No,Yes,7,0,0,0,9,9
+2002,North Coast,Minor injury,No,Yes,No,30,0,0,0,35,35
+2002,North Coast,Minor injury,Yes,No,No,44,0,0,0,47,47
+2002,North Coast,Property damage only,No,No,No,1547,0,0,0,0,0
+2002,North Coast,Property damage only,No,No,Yes,14,0,0,0,0,0
+2002,North Coast,Property damage only,No,Yes,No,93,0,0,0,0,0
+2002,North Coast,Property damage only,Yes,No,No,4,0,0,0,0,0
+2002,Northern,Fatal,No,No,No,14,15,12,2,1,30
+2002,Northern,Fatal,No,Yes,No,3,3,4,1,0,8
+2002,Northern,Fatal,Yes,No,No,2,2,1,1,0,4
+2002,Northern,Fatal,Yes,Yes,No,1,1,0,0,0,1
+2002,Northern,Hospitalisation,No,No,No,201,0,247,39,16,302
+2002,Northern,Hospitalisation,No,No,Yes,4,0,6,1,0,7
+2002,Northern,Hospitalisation,No,Yes,No,20,0,21,5,3,29
+2002,Northern,Hospitalisation,Yes,No,No,50,0,51,2,2,55
+2002,Northern,Hospitalisation,Yes,Yes,No,2,0,2,0,0,2
+2002,Northern,Medical treatment,No,No,No,222,0,0,276,20,296
+2002,Northern,Medical treatment,No,No,Yes,4,0,0,4,0,4
+2002,Northern,Medical treatment,No,Yes,No,9,0,0,11,1,12
+2002,Northern,Medical treatment,Yes,No,No,28,0,0,28,1,29
+2002,Northern,Medical treatment,Yes,Yes,No,1,0,0,1,0,1
+2002,Northern,Minor injury,No,No,No,121,0,0,0,143,143
+2002,Northern,Minor injury,No,Yes,No,11,0,0,0,19,19
+2002,Northern,Minor injury,Yes,No,No,15,0,0,0,16,16
+2002,Northern,Property damage only,No,No,No,477,0,0,0,0,0
+2002,Northern,Property damage only,No,No,Yes,3,0,0,0,0,0
+2002,Northern,Property damage only,No,Yes,No,47,0,0,0,0,0
+2002,Northern,Property damage only,Yes,No,No,1,0,0,0,0,0
+2002,South Eastern,Fatal,No,No,No,29,34,15,6,1,56
+2002,South Eastern,Fatal,No,No,Yes,1,1,0,0,0,1
+2002,South Eastern,Fatal,No,Yes,No,3,3,0,0,0,3
+2002,South Eastern,Fatal,Yes,No,No,13,13,3,2,0,18
+2002,South Eastern,Fatal,Yes,No,Yes,1,1,0,0,0,1
+2002,South Eastern,Hospitalisation,No,No,No,636,0,794,84,33,911

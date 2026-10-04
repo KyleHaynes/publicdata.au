@@ -1,0 +1,82 @@
+slug: qld-translink-passenger-injuries
+title: Translink passenger injuries per 10,000 trips
+status: live
+topics:
+- roads
+order: 290
+collection: qld-translink-performance
+collection_title: Translink monthly performance data
+search_title: Translink passenger injuries per 10,000 trips by month
+also_known_as:
+- Public transport passenger injury rate Queensland
+- Translink safety data
+keywords:
+- injuries
+- safety
+- bus
+- tram
+- train
+- Translink
+faq:
+- q: What is in each row?
+  a: Each row is one month with the publisher's count of passenger injuries for every 10,000 trips on each
+    of the three modes.
+- q: How far back does it go?
+  a: At review the file held about 30 months, starting in late 2023. Each fetch here is kept as a version,
+    so a month the publisher later drops stays in an earlier version.
+summary: Passenger injuries per 10,000 trips on SEQ bus, tram and Citytrain services, by month.
+description: 'One row per month with the publisher''s rate of passenger injuries per 10,000 trips on South
+  East Queensland buses, the tram and Citytrain, as published in Translink''s monthly performance data. At
+  review the file started in late 2023.
+
+  '
+publisher:
+  name: Department of Transport and Main Roads
+  short: Transport and Main Roads
+  jurisdiction: Qld
+  url: https://www.tmr.qld.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/translink-monthly-performance-data
+  attribution: Department of Transport and Main Roads, Queensland Government, Translink monthly performance
+    data, sourced {sourced}, https://www.data.qld.gov.au/dataset/translink-monthly-performance-data, licensed
+    under CC BY 3.0 AU.
+  portal_id: CC-BY-3.0
+chart:
+  where:
+    month:
+      gte: '2024-01-01'
+  split: none
+  metric: avg.seq_bus_injuries_per_10000_trips
+  label: Average monthly SEQ bus injuries per 10,000 trips
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: translink-monthly-performance-data
+  resource: e0c4aa24-3748-4c92-8cbe-19ad7dd55032
+  url: https://www.data.qld.gov.au/dataset/translink-monthly-performance-data
+  cadence: monthly
+key:
+- month
+row_label: Months
+fields:
+- name: month
+  label: Month
+  source: Month-Year
+  type: date
+  date_format: '%b-%Y'
+  description: First day of the month reported.
+- name: seq_bus_injuries_per_10000_trips
+  label: SEQ bus injuries per 10,000 trips
+  source: 'SEQ Bus: Passenger injuries per 10,000 trips'
+  type: number
+- name: seq_tram_injuries_per_10000_trips
+  label: SEQ tram injuries per 10,000 trips
+  source: 'SEQ Tram: Passenger injuries per 10,000 trips'
+  type: number
+  description: At review the publisher gave 0 for every month.
+- name: citytrain_injuries_per_10000_trips
+  label: Citytrain injuries per 10,000 trips
+  source: 'Citytrain: Passenger injuries per 10,000 trips'
+  type: number

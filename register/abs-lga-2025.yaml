@@ -1,0 +1,95 @@
+slug: abs-lga-2025
+title: Local Government Area (council) boundaries, 2025, Australia
+status: live
+topics:
+- places
+example:
+  where: {area_sqkm: {gt: 0}}
+  group: state_name
+  label: Council and unincorporated areas in each state and territory
+sample:
+  where: {area_sqkm: {gt: 0}}
+  spread: state_name
+  label: Areas with a shape, one from each state and territory in turn, in the ABS's code order.
+order: 121
+collection: abs-boundaries
+collection_title: ABS boundaries
+publisher:
+  name: Australian Bureau of Statistics
+  short: ABS
+  jurisdiction: Cth
+  url: https://www.abs.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-3-july-2021-june-2026/access-and-downloads/digital-boundary-files
+  statement: Copyright Commonwealth of Australia administered by the ABS. Unless otherwise noted, content is licensed
+    under a Creative Commons Attribution 4.0 International licence.
+  attribution: Australian Bureau of Statistics, Australian Statistical Geography Standard (ASGS) Edition 3, LGA_2025_AUST_GDA2020.zip,
+    sourced {sourced}, https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-3-july-2021-june-2026/access-and-downloads/digital-boundary-files,
+    licensed under CC BY 4.0.
+search_title: 'Council boundaries 2025: every Local Government Area shape, Australia (ABS)'
+also_known_as:
+- LGA boundaries Australia
+- council area boundaries
+- Local Government Areas 2025 shapefile
+- LGA GeoJSON
+keywords:
+- LGA
+- council
+- local government area
+- boundaries
+- shapefile
+- GeoJSON
+- ASGS
+- ABS
+faq:
+- q: What is in each row?
+  a: One of the Local Government Areas, the ABS's approximation of each council's area from mesh blocks, updated
+    each year, with its code, name and the other columns the ABS publishes, and its shape in the GeoParquet, GeoJSON,
+    GeoPackage and PMTiles files. The CSV, Excel and other table files hold the columns without the shape.
+- q: What coordinate system are the shapes in?
+  a: GDA2020 (EPSG:7844), the file the ABS publishes in that datum. GDA2020 differs from WGS84 by well under a metre,
+    so web maps can use it as it is.
+- q: How does this join to other datasets here?
+  a: Each dataset here with point coordinates carries the code and name of the area each point falls in, matched
+    by location against this layer. Those columns name the layer and its version in the dataset's schema, and the
+    ABS's attribution is in every file.
+summary: The 542 Local Government Areas of Australia and its six unincorporated areas as the ABS approximated them
+  for 2025, one shape each with its state, in GDA2020.
+description: The ABS digital boundary file LGA_2025_AUST_GDA2020.zip, from the Australian Statistical Geography
+  Standard (ASGS) Edition 3. Each row is one area with the columns the ABS publishes. The ABS adds rows for no usual
+  address, migratory, offshore and shipping, which have no shape. They are kept, with a null geometry, so every
+  ABS code is in the table.
+key:
+- lga_2025_code
+geometry:
+  kind: polygon
+  crs: EPSG:7844
+  crs_note: Shapes in GDA2020 (EPSG:7844), as the ABS publishes them.
+  maxzoom: 9
+source:
+  adapter: file
+  url: https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-3-july-2021-june-2026/access-and-downloads/digital-boundary-files/LGA_2025_AUST_GDA2020.zip
+  member: LGA_2025_AUST_GDA2020.shp
+  cadence: when the ABS releases a new edition
+fields:
+- name: lga_2025_code
+  source: LGA_CODE25
+  label: Council area code (LGA 2025)
+- name: lga_2025_name
+  source: LGA_NAME25
+  label: Council area (LGA 2025)
+- name: state_code
+  source: STE_CODE21
+  label: State code
+- name: state_name
+  source: STE_NAME21
+  label: State or territory
+- name: area_sqkm
+  source: AREASQKM
+  label: Area (km²)
+  type: number
+omit:
+  AUS_CODE21: The code for Australia, the same on every row.
+  AUS_NAME21: The word Australia, the same on every row.

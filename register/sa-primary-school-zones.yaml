@@ -1,0 +1,79 @@
+slug: sa-primary-school-zones
+title: Government primary school zones, South Australia
+status: live
+topics:
+- education
+- places
+order: 431
+collection: sa-school-zones
+collection_title: Government school zones, South Australia
+search_title: South Australia primary school zones map, government schools (Department for Education)
+also_known_as:
+- School Zones for South Australian Government Primary Schools
+- Adelaide primary school zones
+- SA primary school catchment areas
+keywords:
+- school zones
+- school catchments
+- primary school
+- enrolment zone
+- Department for Education
+- South Australia
+faq:
+- q: What is in each row?
+  a: The zone of one government primary school with a zone, with the school's name, its site number and its type. The
+    shape is in the GeoParquet, GeoJSON, GeoPackage and PMTiles files.
+- q: Does every school have a zone?
+  a: No. Only the schools that manage their enrolments with a zone have one. A school gives priority enrolment to
+    children who live inside its zone.
+- q: Which year do the zones apply to?
+  a: The zones for the newest enrolment year the publisher has released, the 2025 enrolment year at the first
+    version. Each new year's layer becomes a version here.
+summary: The zones of South Australian government primary schools that take their core intake from a zone, one shape
+  per school, for the newest enrolment year.
+description: School Zones for South Australian Government Primary Schools from the Department for Education. A school
+  zone is the area from which the school accepts its core intake, and the school gives priority enrolment to children
+  who live inside it. Each row is one school's zone with its name, site number and type, PRIM for a primary school or PRSEC for a combined primary and secondary school.
+publisher:
+  name: Department for Education
+  short: Education
+  jurisdiction: SA
+  url: https://www.education.sa.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.sa.gov.au/data/dataset/school-zones-for-south-australian-govt-primary-schools
+  attribution: Department for Education, Government of South Australia, School Zones for South Australian Government Primary Schools, https://data.sa.gov.au/data/dataset/school-zones-for-south-australian-govt-primary-schools, accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: ckan-resource
+  portal: https://data.sa.gov.au/data
+  package: school-zones-for-south-australian-govt-primary-schools
+  resource_match: ^PrimarySchoolZones\d{4}EY\.zip$
+  url: https://data.sa.gov.au/data/dataset/school-zones-for-south-australian-govt-primary-schools
+  cadence: yearly
+geometry:
+  kind: polygon
+  crs: EPSG:4283
+  crs_note: The publisher's layer is in GDA94 (EPSG:4283); the shapes are moved to GDA2020 (EPSG:7844).
+  maxzoom: 10
+key:
+- site_number
+row_label: School zones
+fields:
+- name: school
+  label: School
+  source: school
+  type: string
+- name: site_number
+  label: Site number
+  source: org_num
+  type: integer
+- name: school_type
+  label: School type
+  source: type
+  type: string
+omit:
+  shape_leng: The perimeter in degrees from the publisher's GIS; the shape carries it.
+  Shape_Le_1: A second perimeter in degrees from the publisher's GIS; the shape carries it.
+  Shape_Area: The area in square degrees from the publisher's GIS; the shape carries it.

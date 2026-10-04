@@ -1,0 +1,85 @@
+slug: qld-registration-renewals-daily
+title: Vehicle registration renewals by day and channel, Queensland, 2018 to 2023
+status: live
+topics:
+- roads
+order: 217
+temporal_start: '2018-07-01'
+search_title: Queensland vehicle registration renewals per day by payment channel (Transport and Main
+  Roads)
+also_known_as:
+- Rego renewals Queensland by channel
+- QLD registration renewal transactions daily
+- TMR registration renewals
+keywords:
+- vehicle registrations
+- registration renewals
+- rego
+- payment channel
+- Queensland
+faq:
+- q: What is in each row?
+  a: One day from 1 July 2018 to 31 December 2023 and one channel, such as Online Services, BPAY, Australia
+    Post or a motor dealer, with the number of vehicle registration renewals paid that way.
+- q: Why does it stop at 2023?
+  a: The department last replaced the file in January 2024. This site checks it weekly and adds a version
+    when it changes.
+- q: Why does the Internet channel stop in April 2023?
+  a: Internet runs to 3 April 2023 and Online Services starts on 4 April 2023, so add the two for online
+    renewals across the whole period. QGAP/QPS and Contact Centre also start on 4 April 2023 and run beside
+    COC/QGAP/QPS and Call Centre for the rest of the year.
+summary: The daily number of Queensland vehicle registration renewals from July 2018 to December 2023
+  by payment channel, from the Department of Transport and Main Roads.
+description: Vehicle registration renewals processed by the Department of Transport and Main Roads, one
+  row per day and service channel, from 1 July 2018 to 31 December 2023. The file is UTF-16 text and is
+  read as such.
+publisher:
+  name: Department of Transport and Main Roads
+  short: Transport and Main Roads
+  jurisdiction: Qld
+  url: https://www.tmr.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  evidence: https://www.data.qld.gov.au/dataset/registration-renewals
+  reviewed: '2026-10-01'
+  attribution: Department of Transport and Main Roads, Queensland Government, Registration renewals, sourced
+    {sourced}, https://www.data.qld.gov.au/dataset/registration-renewals, licensed under CC BY 4.0.
+example:
+  group: channel
+  metric: sum.renewals
+  label: Renewals
+chart:
+  where:
+    date:
+      gte: '2019-01-01'
+  split: none
+  metric: sum.renewals
+  label: Renewals
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: registration-renewals
+  resource: f953b714-49f2-4e49-823d-f2acd3296669
+  url: https://www.data.qld.gov.au/dataset/registration-renewals
+  cadence: irregular
+  encoding: utf-16
+row_label: Day and channel counts
+fields:
+- name: transaction_type
+  label: Transaction type
+  source: Transaction Type
+  type: string
+- name: date
+  label: Date
+  source: Date
+  type: date
+  date_format: '%Y-%m-%d'
+- name: channel
+  label: Service channel
+  source: Channel
+  type: string
+- name: renewals
+  label: Renewals
+  source: Number of Transactions
+  type: integer
+note: Cells were typed and headers were made snake_case. Rows were left alone.

@@ -1,0 +1,17 @@
+{"success": true, "result": {
+  "id": "7c0f7a1e-1111-4222-8333-944455556666",
+  "name": "school-enrolments-by-region",
+  "title": "School enrolments by region",
+  "notes": "Full-time enrolments at state schools by **region** and year level, as at the August census.",
+  "license_id": "cc-by-4.0",
+  "license_title": "Creative Commons Attribution 4.0",
+  "organization": {"name": "department-of-education", "title": "Department of Education"},
+  "resources": [
+    {"id": "aaaaaaaa-0000-4000-8000-000000000001", "name": "Enrolments", "format": "CSV",
+     "url": "https://www.data.qld.gov.au/dataset/x/resource/aaaaaaaa-0000-4000-8000-000000000001/download/enrolments.csv"},
+    {"id": "aaaaaaaa-0000-4000-8000-000000000002", "name": "Guide", "format": "PDF",
+     "url": "https://www.data.qld.gov.au/guide.pdf"},
+    {"id": "aaaaaaaa-0000-4000-8000-000000000003", "name": "Enrolments workbook", "format": "XLSX",
+     "url": "https://www.data.qld.gov.au/enrolments.xlsx"}
+  ]
+}}

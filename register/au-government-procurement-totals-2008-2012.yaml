@@ -1,0 +1,107 @@
+slug: au-government-procurement-totals-2008-2012
+title: Australian Government procurement totals by year, 2008-09 to 2011-12
+status: live
+topics:
+- government
+example:
+  group: financial_year
+  metric: sum.total_contract_value
+  label: Value of contracts reported in each financial year ($)
+order: 523
+publisher:
+  name: Department of Finance
+  short: Finance
+  jurisdiction: Cth
+  url: https://www.finance.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.gov.au/data/dataset/aggregated-yearly-australian-government-procurement-statistics
+  attribution: Department of Finance, Australian Government, Aggregated yearly Australian Government
+    procurement statistics, sourced {sourced}, https://data.gov.au/data/dataset/aggregated-yearly-australian-government-procurement-statistics,
+    licensed under CC BY 3.0 AU.
+temporal_start: '2008-07-01'
+search_title: Australian Government contract spending totals 2008-09 to 2011-12 (AusTender, Finance)
+also_known_as:
+- AusTender aggregated procurement statistics
+- Commonwealth procurement by year
+- Australian Government contracts value by financial year
+- SME share of Commonwealth procurement
+keywords:
+- procurement
+- government contracts
+- AusTender
+- Defence procurement
+- SME
+- Department of Finance
+faq:
+- q: What is in each row?
+  a: One financial year from 2008-09 to 2011-12, with the total value in dollars of the contracts
+    Australian Government agencies reported on AusTender, split into goods and services, the Defence
+    share of each, goods and services sourced in Australia and overseas, and the value awarded to small
+    and medium enterprises.
+- q: Is this updated?
+  a: The department published these four years in 2013 and has not added to the file. Later figures are in
+    the department's yearly statistics on Australian Government procurement contracts.
+summary: The total value of Australian Government contracts reported on AusTender each year from 2008-09
+  to 2011-12, by goods and services, Defence, source country and small business share.
+description: The Department of Finance's aggregated procurement statistics from the AusTender contract
+  system for 2008-09 to 2011-12. Each row is one financial year with the dollar value of contracts reported,
+  in total and split by goods and services, Defence, Australian or overseas sourcing, and the value awarded
+  to small and medium enterprises.
+source:
+  adapter: ckan-resource
+  portal: https://data.gov.au/data
+  package: aggregated-yearly-australian-government-procurement-statistics
+  resource: bc267eb2-7416-46f9-86d7-5ab766c1142e
+  url: https://data.gov.au/data/dataset/aggregated-yearly-australian-government-procurement-statistics
+  cadence: no longer updated
+key:
+- financial_year
+row_label: Financial years
+fields:
+- name: financial_year
+  label: Financial year
+  source: Financial Year
+  type: string
+- name: total_contract_value
+  label: Contract value ($)
+  source: Total Contract Value
+  type: integer
+- name: total_goods_value
+  label: Goods value ($)
+  source: Total Goods Value
+  type: integer
+- name: total_services_value
+  label: Services value ($)
+  source: Total Services Value
+  type: integer
+- name: defence_goods_value
+  label: Defence goods value ($)
+  source: Defence Goods Value
+  type: integer
+- name: defence_services_value
+  label: Defence services value ($)
+  source: Defence Services Value
+  type: integer
+- name: australian_sourced_goods
+  label: Australian sourced goods ($)
+  source: Australian Sourced Goods
+  type: integer
+- name: australian_sourced_services
+  label: Australian sourced services ($)
+  source: Australian Sourced Services
+  type: integer
+- name: overseas_sourced_goods
+  label: Overseas sourced goods ($)
+  source: Overseas Sourced Goods
+  type: integer
+- name: overseas_sourced_services
+  label: Overseas sourced services ($)
+  source: Overseas Sourced Services
+  type: integer
+- name: sme_value
+  label: SME value ($)
+  source: SME Value per year
+  type: integer

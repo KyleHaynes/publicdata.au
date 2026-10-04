@@ -1,0 +1,33 @@
+{
+  "dataset": "au-localities-nt",
+  "version": "2026-08-17",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:15:37+00:00",
+  "sha256": "961a9a668a23509117342b3ad06560f2542e68175c9e60b5a2c696806659fbc7",
+  "bytes": 1135376,
+  "filename": "nt_loc_gda2020.zip",
+  "encoding": "zip",
+  "source": {
+    "url": "https://data.gov.au/data/dataset/12eca357-6bad-4130-9c47-eaaf4c11e039/resource/06e660a5-bdc7-4777-bb79-3ae3c0ee3d3b/download/nt_loc_gda2020.zip",
+    "portal": "https://data.gov.au/data",
+    "package": "nt-suburb-locality-boundaries-geoscape-administrative-boundaries",
+    "package_id": "12eca357-6bad-4130-9c47-eaaf4c11e039",
+    "resource": "06e660a5-bdc7-4777-bb79-3ae3c0ee3d3b",
+    "resource_name": "AUG26 - NT- Localities - Esri Shapefiles - GDA2020",
+    "resource_last_modified": "2026-08-17T03:36:00.015239",
+    "package_modified": "2026-08-17T03:37:28.987368",
+    "package_version": null,
+    "etag": "1786937761.988-1135376-3542487092",
+    "http_last_modified": "Mon, 17 Aug 2026 03:36:01 GMT"
+  },
+  "licence": {
+    "id": "cc-by-4.0",
+    "title": "Creative Commons Attribution 4.0 International",
+    "url": "http://creativecommons.org/licenses/by/4.0",
+    "read_from": "https://data.gov.au/data/api/3/action/package_show?id=nt-suburb-locality-boundaries-geoscape-administrative-boundaries",
+    "read_at": "2026-10-03T03:15:37+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": []
+}

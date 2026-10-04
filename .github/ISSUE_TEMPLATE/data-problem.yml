@@ -1,0 +1,29 @@
+name: Data problem
+description: A value, file or version does not match what the publisher published
+labels: ["data"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        publicdata.au republishes the publisher's data without changing it. A value that is wrong at
+        the publisher is theirs to correct, and the next version made from their fix will carry it.
+        This form is for a copy here that differs from the publisher's own.
+  - type: input
+    id: dataset
+    attributes:
+      label: Dataset and version
+      placeholder: "https://publicdata.au/d/qld-road-crash-locations/v/2026-04-24/"
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What differs
+      description: The rows, fields or files affected, and what the publisher's copy says instead.
+    validations:
+      required: true
+  - type: input
+    id: evidence
+    attributes:
+      label: The publisher's copy
+      description: A link to the publisher's own file or page that shows the right value.

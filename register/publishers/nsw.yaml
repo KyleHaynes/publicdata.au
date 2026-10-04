@@ -1,0 +1,126 @@
+# Publishers placed in New South Wales that no portal of its own lists, or that one portal lists twice.
+# Generated from 'publicdata catalogue publishers', then reviewed. Edit by hand.
+- slug: city-of-parramatta
+  name: City of Parramatta
+  jurisdiction: NSW
+  level: local
+  orgs:
+  - gov:city-of-parramatta
+- slug: data-nsw
+  name: Data.NSW
+  jurisdiction: NSW
+  level: state
+  orgs:
+  - gov:data-nsw
+- slug: department-of-education
+  name: Department of Education
+  jurisdiction: NSW
+  level: state
+  orgs:
+  - gov:government-of-new-south-wales-department-of-education-australian-urban-research-infrastructure-netwo
+- slug: department-of-planning-and-environment
+  name: Department of Planning and Environment
+  jurisdiction: NSW
+  level: state
+  orgs:
+  - gov:government-of-new-south-wales-department-of-planning-and-environment-australian-urban-research-infra
+  - nsw:dpe-department-of-planning-and-environment
+- slug: department-of-planning-industry-and-environment
+  name: Department of Planning, Industry and Environment
+  jurisdiction: NSW
+  level: state
+  orgs:
+  - gov:government-of-new-south-wales-department-of-planning-industry-and-environment-australian-urban-resea
+- slug: fire-rescue-nsw
+  name: Fire & Rescue NSW
+  jurisdiction: NSW
+  level: state
+  orgs:
+  - gov:fireandrescuensw
+  - nsw:fire-rescue-nsw
+- slug: industry-and-investment-nsw
+  name: Industry and Investment NSW
+  jurisdiction: NSW
+  level: state
+  orgs:
+  - gov:industry-and-investment-nsw
+- slug: lake-macquarie-city-council
+  name: Lake Macquarie City Council
+  jurisdiction: NSW
+  level: local
+  orgs:
+  - gov:lake-macquarie-city-council
+  - nsw:lakemac
+- slug: new-south-wales-datasets
+  name: New South Wales Datasets
+  jurisdiction: NSW
+  level: state
+  orgs:
+  - gov:new-south-wales-datasets
+- slug: bocsar
+  name: NSW Bureau of Crime Statistics and Research
+  short: BOCSAR
+  jurisdiction: NSW
+  level: state
+  url: https://bocsar.nsw.gov.au/
+  orgs:
+  - nsw:nsw-bureau-of-crime-statistics-and-research
+  - gov:nswbureauofcrimestatisticsandresearch
+  - gov:government-of-nsw-bureau-of-crime-statistics-and-research-australian-urban-research-infrastructure-n
+- slug: nsw-health
+  name: NSW Health
+  jurisdiction: NSW
+  level: state
+  orgs:
+  - gov:nswhealth
+- slug: nsw-premiers-council-for-active-living
+  name: NSW Premier's Council for Active Living
+  jurisdiction: NSW
+  level: state
+  orgs:
+  - gov:nswpremierscouncilforactiveliving
+- slug: ocean-technology-group-otg-the-university-of-sydney-usyd
+  name: Ocean Technology Group (OTG), The University of Sydney (USYD)
+  jurisdiction: NSW
+  level: other
+  orgs:
+  - gov:ocean-technology-group-otg-the-university-of-sydney-usyd
+- slug: parliament-of-nsw
+  name: Parliament of NSW
+  jurisdiction: NSW
+  level: state
+  orgs:
+  - gov:parliamentofnsw
+  - nsw:parliament-of-nsw
+- slug: school-of-biological-earth-and-environmental-sciences-bees-the-university-of-new
+  name: School of Biological, Earth and Environmental Sciences (BEES), The University of New South Wales
+    (UNSW)
+  jurisdiction: NSW
+  level: other
+  orgs:
+  - gov:school-of-biological-earth-and-environmental-sciences-bees-the-university-of-new-south-wales-unsw
+- slug: state-library-of-new-south-wales
+  name: State Library of New South Wales
+  jurisdiction: NSW
+  level: state
+  orgs:
+  - gov:statelibraryofnewsouthwales
+- slug: transport-for-nsw
+  name: Transport for NSW
+  jurisdiction: NSW
+  level: state
+  orgs:
+  - gov:government-of-new-south-wales-transport-for-nsw-australian-urban-research-infrastructure-network
+  - nsw:transport-for-nsw
+- slug: university-of-sydney
+  name: University of Sydney
+  jurisdiction: NSW
+  level: other
+  orgs:
+  - gov:university-of-sydney
+- slug: western-parkland-councils
+  name: Western Parkland Councils
+  jurisdiction: NSW
+  level: local
+  orgs:
+  - wpc:wpc

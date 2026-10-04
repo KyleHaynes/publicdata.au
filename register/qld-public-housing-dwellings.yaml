@@ -1,0 +1,119 @@
+slug: qld-public-housing-dwellings
+title: Public housing dwellings, Queensland
+status: live
+topics:
+- housing
+order: 287
+collection: qld-social-housing
+collection_title: Social housing data from Queensland
+search_title: Queensland public housing dwellings by postcode (RoGS data, Department of Housing)
+also_known_as:
+- Queensland housing data for the Report on Government Services
+- Queensland public housing stock by postcode
+- State owned and managed Indigenous housing dwellings Queensland
+keywords:
+- public housing
+- social housing
+- Indigenous housing
+- dwellings
+- market rent
+- Report on Government Services
+- Queensland
+faq:
+- q: What is in each row?
+  a: One public rental or state owned and managed Indigenous housing dwelling at 30 June of the collection
+    year, with its program, dwelling type, bedrooms, postcode, weekly market rent and whether it was tenantable,
+    occupied or under major redevelopment.
+- q: What do the numbers in the program and status columns mean?
+  a: The publisher codes them. Program 1 is public rental housing and 3 is state owned and managed Indigenous
+    housing. Dwelling type 1 is a separate house, 2 a semi-detached, terrace or townhouse, 3 a flat or apartment
+    and 8 a boarding house unit. For tenantable, occupied and redevelopment the codes are 1 for yes, 2 for
+    no and 9 for not stated.
+- q: Which year does a version cover?
+  a: The department publishes one package of data a year for the Productivity Commission's Report on Government
+    Services, and this entry follows the newest. The 2025 report's data describes dwellings at 30 June 2024.
+summary: Every Queensland public rental and state owned Indigenous housing dwelling, with its type, bedrooms,
+  postcode and market rent, as supplied for the Report on Government Services.
+description: One row per dwelling in Queensland's public rental housing and state owned and managed Indigenous
+  housing programs at 30 June, as the Department of Housing and Public Works supplies it for the Report on
+  Government Services. Each row has the program, dwelling structure, number of bedrooms, postcode, weekly market
+  rent and coded flags for whether the dwelling was tenantable, occupied or under major redevelopment. The
+  package also holds register, household, community housing and assistance tables that are not in this entry.
+publisher:
+  name: Department of Housing and Public Works
+  short: Housing and Public Works
+  jurisdiction: Qld
+  url: https://www.housing.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/housing-data-rogs-2025
+  attribution: Department of Housing and Public Works, Queensland Government, Queensland housing data for inclusion
+    in the Report on Government Services (RoGS), sourced {sourced}, https://www.data.qld.gov.au/dataset/housing-data-rogs-2025,
+    licensed under CC BY 4.0.
+example:
+  group: postcode
+  metric: count
+  label: Public housing dwellings in each postcode
+sample:
+  spread: dwelling_type
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: housing data rogs
+  package_match: ^housing-data-rogs-\d{4}$
+  resource_match: Indigenous housing.dwelling data$
+  url: https://www.data.qld.gov.au/dataset/housing-data-rogs-2025
+  cadence: annually
+  encoding: utf-8-sig
+key:
+- row_id
+partition_by:
+- program
+row_label: Dwellings
+fields:
+- name: row_id
+  label: Row number
+  source: row_id
+  type: integer
+- name: program
+  label: Program
+  source: Program
+  type: integer
+  description: 1 public rental housing, 3 state owned and managed Indigenous housing.
+- name: dwelling_type
+  label: Dwelling type
+  source: DwelType
+  type: integer
+  description: 1 separate house, 2 semi-detached, terrace or townhouse, 3 flat or apartment, 8 boarding house
+    unit, 9 other, 99 not stated.
+- name: bedrooms
+  label: Bedrooms
+  source: NBedroom
+  type: integer
+- name: postcode
+  label: Postcode
+  source: Postcode
+  type: string
+- name: market_rent
+  label: Weekly market rent ($)
+  source: Rnt_Mrkt
+  type: number
+  description: Weekly market rent at 30 June. Blank where the publisher gives none.
+- name: tenantable
+  label: Tenantable
+  source: TenStat
+  type: integer
+  description: 1 tenantable, 2 untenantable, 9 not stated.
+- name: occupied
+  label: Occupied
+  source: OccStat
+  type: integer
+  description: 1 occupied, 2 unoccupied.
+- name: major_redevelopment
+  label: Under major redevelopment
+  source: DevStat
+  type: integer
+  description: 1 yes, 2 no, 9 not stated.
+omit:
+  State: The state code, 3 in every row, which is Queensland.

@@ -1,0 +1,29 @@
+{
+  "dataset": "abs-suburbs-localities-2021",
+  "version": "2021-09-13",
+  "as_at": "",
+  "fetched_at": "2026-10-01T10:00:00+00:00",
+  "sha256": "b7d01c3569d8d8fdc0873370aa8e7130bc66262aa46d6ad613fa58990028ac30",
+  "bytes": 41897,
+  "filename": "SAL_2021_AUST_GDA2020_SHP.zip",
+  "encoding": "zip",
+  "source": {
+    "url": "https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-3-july-2021-june-2026/access-and-downloads/digital-boundary-files/SAL_2021_AUST_GDA2020_SHP.zip",
+    "etag": "",
+    "http_last_modified": ""
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "stated": "Copyright Commonwealth of Australia administered by the ABS.",
+    "normalised": "CC-BY-4.0",
+    "title": "CC BY 4.0",
+    "url": "https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-3-july-2021-june-2026/access-and-downloads/digital-boundary-files",
+    "read_from": "https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-3-july-2021-june-2026/access-and-downloads/digital-boundary-files",
+    "read_at": "2026-10-01T10:00:00+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [
+    "fixture: the 240 areas that hold a fixture crash point, simplified to 0.01 degrees"
+  ]
+}

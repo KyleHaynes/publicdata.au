@@ -1,0 +1,125 @@
+slug: qld-qbcc-licensed-contractors
+title: QBCC licensed builders and contractors register, Queensland
+status: live
+topics:
+- housing
+- economy
+order: 221
+search_title: QBCC licensed builders and contractors register (Queensland Building and Construction Commission)
+also_known_as:
+- QBCC licence search data
+- Queensland builder licence register
+- QBCC licensed contractors list
+- Licensed tradespeople Queensland
+keywords:
+- QBCC
+- builder licence
+- trade contractor
+- licensed builders
+- plumbers
+- electricians
+- construction
+- Queensland
+faq:
+- q: What is in each row?
+  a: One licence class held by one licensee, with the licence number, the licensee's name, ACN or ABN
+    where given, business address, whether the licensee is an individual or a company, the financial category
+    and the licence grade and class, such as a trade contractor licence for plumbing and drainage. A licensee
+    with several classes has several rows under one licence number.
+- q: Are cancelled licences included?
+  a: No. The commission includes active licences and suspended ones, and leaves out cancelled licences.
+    It points readers to its online licence search for the status of an individual licensee on a given
+    day.
+- q: How current is it?
+  a: The commission states the file is current as at the date it was generated, 23 September 2026 in the
+    first version here, and replaces it from time to time.
+summary: Every active and suspended licence on the Queensland Building and Construction Commission register,
+  one row per licence class, with the licensee's name, ABN or ACN, business address and licence grade.
+description: The Queensland Building and Construction Commission register of licensed builders, trade
+  contractors, building designers, nominee and site supervisors and occupational licence holders, one
+  row per licence class held. Each row has the licence number, licensee name, ACN, ABN and business address,
+  the licence type, financial category, licence grade and licence class. Cancelled licences are left out.
+publisher:
+  name: Queensland Building and Construction Commission
+  short: QBCC
+  jurisdiction: Qld
+  url: https://www.qbcc.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/qbcc-licensed-contractors-register
+  attribution: Queensland Building and Construction Commission, Queensland Government, QBCC Licensed Contractors
+    Register, sourced {sourced}, https://www.data.qld.gov.au/dataset/qbcc-licensed-contractors-register,
+    licensed under CC BY 4.0.
+example:
+  where: {licence_grade: Trade Contractor Licence}
+  group: licence_class
+  metric: count
+  label: Trade contractor licences held in each class
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: qbcc-licensed-contractors-register
+  resource: 25608781-b28c-44f8-8545-0ab18d84082f
+  url: https://www.data.qld.gov.au/dataset/qbcc-licensed-contractors-register
+  encoding: utf-8-sig
+  cadence: monthly
+key:
+- id
+partition_by:
+- licence_grade
+row_label: Licence classes
+fields:
+- name: id
+  label: Row number
+  source: id
+  type: integer
+  description: The commission's row number in this release. It is not a licence number and may change
+    between releases.
+- name: licence_number
+  label: Licence number
+  source: Licence Number
+  type: integer
+- name: licensee_name
+  label: Licensee
+  source: Licensee Name
+  type: string
+- name: acn
+  label: ACN
+  source: ACN
+  type: string
+  description: Australian Company Number as published, with spaces. Blank for most individuals.
+- name: abn
+  label: ABN
+  source: ABN
+  type: string
+- name: business_address
+  label: Business address
+  source: Licensee Business Address
+  type: string
+- name: licence_type
+  label: Licence type
+  source: Licence Type DESC
+  type: string
+  description: Individual or Company.
+- name: licence_type_code
+  label: Licence type code
+  source: Licence Type CODE
+  type: string
+- name: financial_category
+  label: Financial category
+  source: Financial Category DESC
+  type: string
+- name: financial_category_code
+  label: Financial category code
+  source: Financial Category CODE
+  type: string
+- name: licence_grade
+  label: Licence grade
+  source: Licence Grade
+  type: string
+- name: licence_class
+  label: Licence class
+  source: Licence Class Type
+  type: string
+note: Cells were typed and headers were made snake_case. Rows were left alone.

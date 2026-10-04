@@ -1,0 +1,34 @@
+{
+  "dataset": "vic-road-safety-camera-fines-by-site",
+  "version": "2026-04-17",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:09:25+00:00",
+  "sha256": "93d80028551069cff03e60fdbf8c99bcb357d1ac0f7d55ff28dc1130e6f4443c",
+  "bytes": 44988,
+  "filename": "Q1_Sep_2025_fines-by-camera-and-system.xlsx",
+  "encoding": "xlsx",
+  "source": {
+    "url": "https://www.vic.gov.au/sites/default/files/2026-02/Q1_Sep_2025_fines-by-camera-and-system.xlsx",
+    "portal": "https://discover.data.vic.gov.au",
+    "package": "road-safety-camera-network-fines-by-camera-system-quarterly",
+    "package_id": "804192f6-868a-47d5-af1e-4a573badb59d",
+    "resource": "8f1f03a7-c7a7-4b16-9c17-8508752fb0e4",
+    "resource_name": "Quarter 1 - 2025 - 26",
+    "resource_last_modified": null,
+    "package_modified": "2026-04-16T23:03:36.255212",
+    "package_version": null,
+    "etag": "698be141-afbc",
+    "http_last_modified": "Wed, 11 Feb 2026 01:54:09 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution 4.0 International",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://discover.data.vic.gov.au/api/3/action/package_show?id=road-safety-camera-network-fines-by-camera-system-quarterly",
+    "read_at": "2026-10-03T03:09:24+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "fc323d3feacb2841a543cfa1e00f176a75c6a564f0305edb52e6d7ebc66d1309"
+}

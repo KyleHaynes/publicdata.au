@@ -1,0 +1,87 @@
+slug: nsw-top-baby-names-by-lga-male
+title: Top three names registered for boys by council area, New South Wales
+status: live
+topics:
+- people
+example:
+  where:
+    rank: 1
+  group: name
+  metric: count
+  label: Council areas
+sample:
+  order:
+  - rank
+  spread: lga
+  label: The first-ranked name in each of ten council areas, taken in the Registry's order of council areas.
+    Where names tie for first, one of them is shown.
+order: 301
+publisher:
+  name: NSW Registry of Births Deaths and Marriages
+  short: NSW BDM
+  jurisdiction: NSW
+  url: https://www.nsw.gov.au/family-and-relationships/births-deaths-marriages
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.nsw.gov.au/data/dataset/bdm-data-top-3-baby-names-by-lga
+  attribution: NSW Registry of Births Deaths and Marriages, NSW Government, BDM Data - Top 3 REGISTERED
+    Baby Names by LGA, sourced {sourced}, https://data.nsw.gov.au/data/dataset/bdm-data-top-3-baby-names-by-lga,
+    licensed under CC BY 4.0.
+collection: nsw-baby-names
+collection_title: Baby names registered in New South Wales
+search_title: Most popular boys names by council area, NSW (NSW Registry of Births Deaths and Marriages)
+also_known_as:
+- Top 3 boys names by LGA NSW
+- Popular boys names in my council area NSW
+- NSW BDM top registered boys names by local government area
+keywords:
+- baby names
+- boys names
+- popular names by council
+- local government area
+- births
+- NSW Registry of Births Deaths and Marriages
+- New South Wales
+faq:
+- q: What is in each row?
+  a: One of the three names registered most often for boys in one NSW council area, with its rank there.
+    Names with the same count share a rank, so a council area can have more than three rows.
+- q: Which year does a version cover?
+  a: The Registry publishes one file for each year of registrations and sex. This entry follows the newest
+    year's file for boys, so each version holds one year. The year is not a column in the file, and the
+    version date and the source file name beside each version say which year it is.
+- q: Are the counts published?
+  a: No. The Registry's file gives the rank of each name in the council area and not the number of babies.
+summary: The three names registered most often for boys in each NSW council area, with their rank, for
+  the newest year the Registry has published. Updated yearly.
+description: The Top 3 REGISTERED Baby Names by LGA files from the NSW Registry of Births Deaths and Marriages,
+  for boys. Each row is one council area and one name, with the name's rank among the boys registered there
+  in the year. Council areas are named in capitals as the Registry writes them. The Registry publishes
+  a file for each year since 2020, and each version here is the newest of them.
+source:
+  adapter: ckan-resource
+  portal: https://data.nsw.gov.au/data
+  package: bdm-data-top-3-baby-names-by-lga
+  resource_match: 'Names by LGA \d{4} Male$'
+  url: https://data.nsw.gov.au/data/dataset/bdm-data-top-3-baby-names-by-lga
+  cadence: yearly
+  encoding: utf-8-sig
+key:
+- lga
+- name
+row_label: Names
+fields:
+- name: lga
+  label: Council area
+  source: LGA
+  type: string
+- name: name
+  label: Name
+  source: Male
+  type: string
+- name: rank
+  label: Rank in council area
+  source: Rank
+  type: integer

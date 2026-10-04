@@ -1,0 +1,136 @@
+---
+title: "Getting started with publicdataau"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Getting started with publicdataau}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+<!-- Built from publicdataau.Rmd.orig by knitting it against the live site, so the check never needs the network. -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>", fig.path = "figures/", fig.width = 6, fig.height = 5)
+options(publicdataau.quiet = TRUE, width = 90)
+```
+
+publicdata.au republishes Australian government open data that the publishers already release under open licences. It keeps every version at a URL that never changes, serves each one in twelve formats, and answers queries over the whole table. This package reads all of it from R. Every function takes a dataset's slug, the part of its page's URL after `/d/`.
+
+```{r}
+library(publicdataau)
+```
+
+## Find a dataset
+
+`pd_datasets()` searches what the site serves, and filters by publisher, topic and government.
+
+```{r}
+pd_datasets("road crashes")[, c("slug", "title")]
+pd_datasets(topic = "roads", jurisdiction = "Qld")$slug
+```
+
+`pd_catalogue()` searches every dataset on the government portals, including the many the site does not serve yet. Each record says whether it is served; one that is not can be voted for on its page.
+
+```{r}
+pd_catalogue("water quality", jurisdiction = "Queensland", limit = 3)[, c("title", "publisher", "status")]
+```
+
+## See what a dataset holds
+
+`pd_fields()` lists each field with its type, the publisher's description, its range, and its values when it holds few. A query names fields and values exactly, so this is the first call to make.
+
+```{r}
+pd_fields("act-road-crashes")[1:8, c("name", "type", "min", "max")]
+pd_fields("act-road-crashes")$values[[11]]
+```
+
+## Query rows and totals
+
+`pd_rows()` and `pd_aggregate()` ask the query API, so a filter or a total runs over the whole table without a download. Each column comes back typed as its field says and labelled with its description.
+
+```{r}
+crashes <- pd_rows("act-road-crashes", crash_severity = "Fatal", crash_date = pd_gte("2025-01-01"),
+                   .select = c("crash_id", "crash_date", "crash_type", "sa2_2021_name"))
+crashes
+class(crashes$crash_date)
+
+pd_aggregate("act-road-crashes", group = "crash_severity")
+```
+
+Every answer carries the attribution the publisher's licence requires.
+
+```{r}
+pd_attribution(crashes)
+```
+
+## Whole tables
+
+`pd_read()` downloads a version's Parquet file and reads it with 'arrow'. `columns` reads only the fields asked for.
+
+```{r}
+rate <- pd_read("rba-cash-rate")
+tail(rate, 3)
+```
+
+A version never changes once published, so a file can be kept and reused. Nothing is kept unless you ask, with `cache = TRUE` on a call or `options(publicdataau.cache = TRUE)` for every call; `pd_cache_list()` shows what is kept and `pd_cache_clear()` deletes it.
+
+## Query a version in place with dplyr
+
+Every version has a DuckDB file. `pd_tbl()` attaches it over HTTPS and returns a table for 'dplyr'; verbs become SQL that runs against the file, reading only the blocks they touch.
+
+```{r}
+library(dplyr, warn.conflicts = FALSE)
+pd_tbl("act-road-crashes") |>
+  filter(crash_severity == "Fatal") |>
+  count(lighting_condition, sort = TRUE) |>
+  collect()
+```
+
+G-NAF, the national address file, is a database of 37 tables served as one DuckDB file. Its licence sets a condition beyond attribution, on compiling addresses for mail, and the package states it once per session when G-NAF is first read; this vignette turns that notice off with `options(publicdataau.quiet = TRUE)`.
+
+```{r}
+pd_tables("gnaf")[1:5, c("name", "rows")]
+```
+
+## Maps
+
+Rows of a point dataset carry the codes of the ABS areas their point falls in. Total by one of them and `pd_join_boundaries()` attaches the boundaries, in GDA2020.
+
+```{r map}
+by_sa2 <- pd_aggregate("act-road-crashes", group = "sa2_2021_code")
+map <- pd_join_boundaries(by_sa2)
+map
+plot(map["count"], main = "Road crashes by SA2, ACT", border = NA, logz = TRUE)
+```
+
+`pd_boundary_layers()` lists the layers, and `pd_sf()` reads any dataset's own map layer.
+
+## Versions, changes and provenance
+
+Each release is compared with the one before it on the dataset's key.
+
+```{r}
+pd_changes("rba-money-market-daily")[, c("from", "to", "added", "removed", "changed")]
+```
+
+`pd_provenance()` gives the record kept with a version: the publisher's file it was read from, its checksum and when it was fetched.
+
+```{r}
+pd_provenance("act-road-crashes")
+```
+
+## Reproducible work
+
+An answer without a version comes from the newest one and changes when the publisher releases again. Pass a date from `pd_versions()` for one that never changes. `pd_url()` gives a fixed file address for another tool, such as a 'targets' pipeline with `format = "url"`.
+
+```{r}
+pd_url("act-road-crashes", "parquet", pd_latest("act-road-crashes"))
+```
+
+## Citing
+
+`pd_cite()` gives a version's citation, with the attribution its licence requires; `utils::toBibtex()` turns it into a BibTeX entry.
+
+```{r}
+utils::toBibtex(pd_cite("rba-cash-rate"))
+```

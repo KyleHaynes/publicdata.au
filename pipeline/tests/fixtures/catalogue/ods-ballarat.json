@@ -1,0 +1,114 @@
+{
+ "total_count": 6,
+ "results": [
+  {
+   "dataset_id": "public-toilets",
+   "dataset_uid": "da_n3u0cp",
+   "has_records": true,
+   "features": [
+    "geo",
+    "analyze"
+   ],
+   "metas": {
+    "default": {
+     "title": "Public Toilets",
+     "description": "<p style=\"font-family: Arial; margin-bottom: 1em; color: rgb(34, 30, 31); font-size: 14px;\">This dataset describes the location of public toilets located in Ballarat.</p><p style=\"font-family: Arial; margin-bottom: 1em; color: rgb(34, 30, 31); font-size: 14px;\">The information was collected as the toilets were constructed.</p><p style=\"font-family: Arial; margin-bottom: 0px; color: rgb(34, 30, 31); font-size: 14px;\">The intended use of the information is to inform the public of the locations of Ballarat's public toilets.</p><p style=\"font-family: Arial; margin-bottom: 0px; color: rgb(34, 30, 31); font-size: 14px;\"><br></p><p style=\"font-family: Arial; margin-bottom: 0px; color: rgb(34, 30, 31); font-size: 14px;\">This dataset is typically updated monthly on an automated schedule.</p>",
+     "license": "CC BY 3",
+     "license_url": "https://creativecommons.org/licenses/by/3.0/au/",
+     "modified": "2025-08-27T05:05:00+00:00",
+     "publisher": "City of Ballarat"
+    }
+   }
+  },
+  {
+   "dataset_id": "libraries",
+   "dataset_uid": "da_dlbbxy",
+   "has_records": true,
+   "features": [
+    "analyze",
+    "geo"
+   ],
+   "metas": {
+    "default": {
+     "title": "Libraries",
+     "description": null,
+     "license": null,
+     "license_url": null,
+     "modified": "2022-05-04T22:51:21+00:00",
+     "publisher": null
+    }
+   }
+  },
+  {
+   "dataset_id": "local-workers-occupation-by-industry",
+   "dataset_uid": "da_khingm",
+   "has_records": true,
+   "features": [
+    "analyze"
+   ],
+   "metas": {
+    "default": {
+     "title": "Local Workers Occupation by Industry",
+     "description": null,
+     "license": null,
+     "license_url": null,
+     "modified": "2025-09-04T00:44:46+00:00",
+     "publisher": null
+    }
+   }
+  },
+  {
+   "dataset_id": "kerbside-waste-properties",
+   "dataset_uid": "da_ehjkcv",
+   "has_records": true,
+   "features": [
+    "analyze"
+   ],
+   "metas": {
+    "default": {
+     "title": "Kerbside Waste Properties",
+     "description": "<p style=\"font-family: Arial; margin-bottom: 1em; color: rgb(34, 30, 31); font-size: 14px;\">This dataset describes the waste type, suburb, year and count of properties that pay for kerbside pickup of waste, located in Ballarat.</p><p style=\"font-family: Arial; margin-bottom: 1em; color: rgb(34, 30, 31); font-size: 14px;\">The information was collected as the rates were levied.</p><p style=\"font-family: Arial; margin-bottom: 0px; color: rgb(34, 30, 31); font-size: 14px;\">The intended use of the information is to inform the public of the number of kerbside waste pickup properties in Ballarat.</p><p style=\"font-family: Arial; margin-bottom: 0px; color: rgb(34, 30, 31); font-size: 14px;\"><br/></p><p style=\"font-family: Arial; margin-bottom: 0px; color: rgb(34, 30, 31); font-size: 14px;\">This dataset is typically updated yearly on an manual basis.</p>",
+     "license": "CC BY 3",
+     "license_url": "https://creativecommons.org/licenses/by/3.0/au/",
+     "modified": "2020-04-08T01:07:43+00:00",
+     "publisher": "City of Ballarat"
+    }
+   }
+  },
+  {
+   "dataset_id": "superseded-plans-collection",
+   "dataset_uid": "da_links1",
+   "has_records": false,
+   "features": [],
+   "metas": {
+    "default": {
+     "title": "Superseded plans collection",
+     "description": "<p>Links to the plans.</p>",
+     "license": "CC BY 4.0",
+     "license_url": "https://creativecommons.org/licenses/by/4.0/",
+     "modified": "2024-06-03T01:33:06+00:00",
+     "publisher": "City of Ballarat"
+    }
+   }
+  },
+  {
+   "dataset_id": "public-toilets@othercouncil",
+   "dataset_uid": "da_federated",
+   "has_records": true,
+   "features": [
+    "geo",
+    "analyze"
+   ],
+   "metas": {
+    "default": {
+     "title": "Public Toilets",
+     "description": "<p style=\"font-family: Arial; margin-bottom: 1em; color: rgb(34, 30, 31); font-size: 14px;\">This dataset describes the location of public toilets located in Ballarat.</p><p style=\"font-family: Arial; margin-bottom: 1em; color: rgb(34, 30, 31); font-size: 14px;\">The information was collected as the toilets were constructed.</p><p style=\"font-family: Arial; margin-bottom: 0px; color: rgb(34, 30, 31); font-size: 14px;\">The intended use of the information is to inform the public of the locations of Ballarat's public toilets.</p><p style=\"font-family: Arial; margin-bottom: 0px; color: rgb(34, 30, 31); font-size: 14px;\"><br></p><p style=\"font-family: Arial; margin-bottom: 0px; color: rgb(34, 30, 31); font-size: 14px;\">This dataset is typically updated monthly on an automated schedule.</p>",
+     "license": "CC BY 3",
+     "license_url": "https://creativecommons.org/licenses/by/3.0/au/",
+     "modified": "2025-08-27T05:05:00+00:00",
+     "publisher": "City of Ballarat"
+    }
+   }
+  }
+ ]
+}

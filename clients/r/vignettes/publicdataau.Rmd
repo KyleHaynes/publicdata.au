@@ -1,0 +1,274 @@
+---
+title: "Getting started with publicdataau"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Getting started with publicdataau}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+<!-- Built from publicdataau.Rmd.orig by knitting it against the live site, so the check never needs the network. -->
+
+
+
+publicdata.au republishes Australian government open data that the publishers already release under open licences. It keeps every version at a URL that never changes, serves each one in twelve formats, and answers queries over the whole table. This package reads all of it from R. Every function takes a dataset's slug, the part of its page's URL after `/d/`.
+
+
+``` r
+library(publicdataau)
+```
+
+## Find a dataset
+
+`pd_datasets()` searches what the site serves, and filters by publisher, topic and government.
+
+
+``` r
+pd_datasets("road crashes")[, c("slug", "title")]
+#> # A tibble: 12 × 2
+#>    slug                                title                                              
+#>    <chr>                               <chr>                                              
+#>  1 act-road-crashes                    Road crashes, ACT                                  
+#>  2 qld-road-casualties                 Road casualties, Queensland                        
+#>  3 qld-road-crash-restraint-helmet-use Seatbelt and helmet use in road crash casualties, …
+#>  4 qld-road-crash-locations            Road crash locations, Queensland                   
+#>  5 qld-road-crash-vehicle-types        Vehicle types in road crashes, Queensland          
+#>  6 sa-road-crash-locations             Road crash locations, South Australia              
+#>  7 tas-road-crashes                    Road crashes, Tasmania                             
+#>  8 qld-road-crash-factors              Factors in road crashes, Queensland                
+#>  9 nsw-road-crashes                    Road crashes, New South Wales                      
+#> 10 vic-road-crashes                    Road crashes, Victoria                             
+#> 11 qld-road-crash-driver-demographics  Driver demographics in road crashes, Queensland    
+#> 12 au-road-deaths                      Australian Road Deaths Database, fatalities
+pd_datasets(topic = "roads", jurisdiction = "Qld")$slug
+#> [1] "qld-road-crash-driver-demographics"  "qld-road-crash-factors"             
+#> [3] "qld-road-casualties"                 "qld-road-crash-locations"           
+#> [5] "qld-road-crash-restraint-helmet-use" "qld-road-crash-vehicle-types"
+```
+
+`pd_catalogue()` searches every dataset on the government portals, including the many the site does not serve yet. Each record says whether it is served; one that is not can be voted for on its page.
+
+
+``` r
+pd_catalogue("water quality", jurisdiction = "Queensland", limit = 3)[, c("title", "publisher", "status")]
+#> # A tibble: 3 × 3
+#>   title                                                          publisher          status
+#>   <chr>                                                          <chr>              <chr> 
+#> 1 Pumicestone Passage Bulcock Beach - Water quality monitoring   Environment, Tour… votab…
+#> 2 Brisbane River - Colmslie Site - Water Quality Monitoring Buoy Environment, Tour… votab…
+#> 3 Sentinel Water Quality                                         City of Gold Coast votab…
+```
+
+## See what a dataset holds
+
+`pd_fields()` lists each field with its type, the publisher's description, its range, and its values when it holds few. A query names fields and values exactly, so this is the first call to make.
+
+
+``` r
+pd_fields("act-road-crashes")[1:8, c("name", "type", "min", "max")]
+#> # A tibble: 8 × 4
+#>   name            type    min          max         
+#>   <chr>           <chr>   <chr>        <chr>       
+#> 1 crash_id        integer 1            354433      
+#> 2 crash_date      date    2015-01-01   2026-09-07  
+#> 3 crash_time      string  <NA>         <NA>        
+#> 4 suburb_location string  <NA>         <NA>        
+#> 5 longitude       number  148.7876728  149.39631165
+#> 6 latitude        number  -35.89116025 -35.14329768
+#> 7 intersection    boolean <NA>         <NA>        
+#> 8 midblock        boolean <NA>         <NA>
+pd_fields("act-road-crashes")$values[[11]]
+#> [1] "Fatal"                "Injury"               "Property damage only"
+```
+
+## Query rows and totals
+
+`pd_rows()` and `pd_aggregate()` ask the query API, so a filter or a total runs over the whole table without a download. Each column comes back typed as its field says and labelled with its description.
+
+
+``` r
+crashes <- pd_rows("act-road-crashes", crash_severity = "Fatal", crash_date = pd_gte("2025-01-01"),
+                   .select = c("crash_id", "crash_date", "crash_type", "sa2_2021_name"))
+crashes
+#> # A tibble: 14 × 4
+#>    crash_id crash_date crash_type                        sa2_2021_name   
+#>       <int> <date>     <chr>                             <chr>           
+#>  1   340074 2025-10-01 Struck pedestrian (Off Road)      Canberra East   
+#>  2   347129 2026-02-16 Struck object (Off Road)          Hume            
+#>  3   336058 2025-03-11 Right angle collision             Nicholls        
+#>  4   351537 2025-11-02 Collision with parked vehicle     Mitchell        
+#>  5   342444 2025-12-05 Head on collision                 Kaleen          
+#>  6   343635 2026-01-09 Right angle collision             Tuggeranong     
+#>  7   330178 2025-03-11 Other - vehicle to vehicle        Lyneham         
+#>  8   340260 2025-09-27 Struck pedestrian (Off Road)      Lyneham         
+#>  9   347489 2025-03-23 Struck object (Off Road)          Watson          
+#> 10   343981 2025-12-03 Rear end collision                ACT - South West
+#> 11   340806 2025-10-06 Struck object (Off Road)          ACT - South West
+#> 12   345222 2026-01-24 Struck object (Off Road)          O'Malley        
+#> 13   347390 2026-04-04 Other - Single vehicle (Off Road) ACT - South West
+#> 14   345211 2026-02-17 Struck pedestrian (On Road)       Lyneham
+class(crashes$crash_date)
+#> [1] "Date"
+
+pd_aggregate("act-road-crashes", group = "crash_severity")
+#> # A tibble: 3 × 2
+#>   crash_severity       count
+#>   <chr>                <int>
+#> 1 Fatal                  105
+#> 2 Injury                6576
+#> 3 Property damage only 69976
+```
+
+Every answer carries the attribution the publisher's licence requires.
+
+
+``` r
+pd_attribution(crashes)
+#> [1] "Roads ACT, City and Environment Directorate, ACT Government, ACT Road Crash Data, https://www.data.act.gov.au/d/6jn4-m8rx, accessed 30 September 2026, licensed under CC BY 4.0."
+```
+
+## Whole tables
+
+`pd_read()` downloads a version's Parquet file and reads it with 'arrow'. `columns` reads only the fields asked for.
+
+
+``` r
+rate <- pd_read("rba-cash-rate")
+tail(rate, 3)
+#> # A tibble: 3 × 7
+#>   date       cash_rate_target_change cash_rate_target es_rate_change es_rate
+#>   <date>                       <dbl>            <dbl>          <dbl>   <dbl>
+#> 1 2026-03-18                    0.25             4.1            0.25    4   
+#> 2 2026-05-06                    0.25             4.35           0.25    4.25
+#> 3 2026-09-30                    0.25             4.6            0.25    4.5 
+#> # ℹ 2 more variables: overnight_repo_rate_change <dbl>, overnight_repo_rate <dbl>
+```
+
+A version never changes once published, so a file can be kept and reused. Nothing is kept unless you ask, with `cache = TRUE` on a call or `options(publicdataau.cache = TRUE)` for every call; `pd_cache_list()` shows what is kept and `pd_cache_clear()` deletes it.
+
+## Query a version in place with dplyr
+
+Every version has a DuckDB file. `pd_tbl()` attaches it over HTTPS and returns a table for 'dplyr'; verbs become SQL that runs against the file, reading only the blocks they touch.
+
+
+``` r
+library(dplyr, warn.conflicts = FALSE)
+pd_tbl("act-road-crashes") |>
+  filter(crash_severity == "Fatal") |>
+  count(lighting_condition, sort = TRUE) |>
+  collect()
+#> # A tibble: 5 × 2
+#>   lighting_condition              n
+#>   <chr>                       <dbl>
+#> 1 Daylight                       63
+#> 2 Dark - good street lighting    21
+#> 3 Dark - no street lights        11
+#> 4 Dark - poor street lighting     6
+#> 5 Semi-darkness                   4
+```
+
+G-NAF, the national address file, is a database of 37 tables served as one DuckDB file. Its licence sets a condition beyond attribution, on compiling addresses for mail, and the package states it once per session when G-NAF is first read; this vignette turns that notice off with `options(publicdataau.quiet = TRUE)`.
+
+
+``` r
+pd_tables("gnaf")[1:5, c("name", "rows")]
+#> # A tibble: 5 × 2
+#>   name                        rows
+#>   <chr>                      <dbl>
+#> 1 address_detail          16970406
+#> 2 address_default_geocode 16970406
+#> 3 address_site            16970406
+#> 4 address_site_geocode    20754564
+#> 5 address_alias             878895
+```
+
+## Maps
+
+Rows of a point dataset carry the codes of the ABS areas their point falls in. Total by one of them and `pd_join_boundaries()` attaches the boundaries, in GDA2020.
+
+
+``` r
+by_sa2 <- pd_aggregate("act-road-crashes", group = "sa2_2021_code")
+map <- pd_join_boundaries(by_sa2)
+map
+#> Simple feature collection with 100 features and 3 fields
+#> Geometry type: MULTIPOLYGON
+#> Dimension:     XY
+#> Bounding box:  xmin: 148.9614 ymin: -35.48032 xmax: 149.3993 ymax: -35.1244
+#> Geodetic CRS:  GDA2020
+#> # A tibble: 100 × 4
+#>    sa2_2021_code count sa2_2021_name                                              geometry
+#>    <chr>         <int> <chr>                                            <MULTIPOLYGON [°]>
+#>  1 101021012         2 Queanbeyan West - Jerrabomberra (((149.1957 -35.36126, 149.1997 -3…
+#>  2 801011001       107 Aranda                          (((149.0741 -35.25529, 149.0742 -3…
+#>  3 801011002      2712 Belconnen                       (((149.057 -35.23908, 149.0574 -35…
+#>  4 801011003      1836 Bruce                           (((149.0738 -35.24299, 149.0734 -3…
+#>  5 801011004       301 Charnwood                       (((149.0285 -35.19852, 149.0284 -3…
+#>  6 801011005       191 Cook                            (((149.0572 -35.25635, 149.058 -35…
+#>  7 801011006       200 Dunlop                          (((149.0077 -35.19727, 149.0082 -3…
+#>  8 801011007       431 Evatt                           (((149.0673 -35.20722, 149.0673 -3…
+#>  9 801011008       671 Florey                          (((149.0409 -35.22017, 149.0411 -3…
+#> 10 801011009       338 Flynn (ACT)                     (((149.0495 -35.2059, 149.0492 -35…
+#> # ℹ 90 more rows
+plot(map["count"], main = "Road crashes by SA2, ACT", border = NA, logz = TRUE)
+```
+
+![plot of chunk map](figures/map-1.png)
+
+`pd_boundary_layers()` lists the layers, and `pd_sf()` reads any dataset's own map layer.
+
+## Versions, changes and provenance
+
+Each release is compared with the one before it on the dataset's key.
+
+
+``` r
+pd_changes("rba-money-market-daily")[, c("from", "to", "added", "removed", "changed")]
+#> # A tibble: 1 × 5
+#>   from       to         added removed changed
+#>   <chr>      <chr>      <dbl>   <dbl>   <dbl>
+#> 1 2026-09-30 2026-10-01     1       0       1
+```
+
+`pd_provenance()` gives the record kept with a version: the publisher's file it was read from, its checksum and when it was fetched.
+
+
+``` r
+pd_provenance("act-road-crashes")
+#> <pd_provenance> act-road-crashes 2026-10-01
+#> Source       https://www.data.act.gov.au/api/views/6jn4-m8rx/rows.csv?accessType=DOWNLOAD
+#> File         6jn4-m8rx.csv
+#> Bytes        14,256,520
+#> SHA-256      45dbb9445b51fdbd831d2c89efa8965f5a3071d50ccf04e0e63374a49ed39a00
+#> Fetched      2026-09-30T19:25:31+00:00
+#> Licence      Creative Commons Attribution 4.0 International (read 2026-09-30T19:25:24+00:00)
+#> Rows         76,657
+#> Version      https://publicdata.au/d/act-road-crashes/v/2026-10-01/
+```
+
+## Reproducible work
+
+An answer without a version comes from the newest one and changes when the publisher releases again. Pass a date from `pd_versions()` for one that never changes. `pd_url()` gives a fixed file address for another tool, such as a 'targets' pipeline with `format = "url"`.
+
+
+``` r
+pd_url("act-road-crashes", "parquet", pd_latest("act-road-crashes"))
+#> [1] "https://publicdata.au/d/act-road-crashes/v/2026-10-01/data.parquet"
+```
+
+## Citing
+
+`pd_cite()` gives a version's citation, with the attribution its licence requires; `utils::toBibtex()` turns it into a BibTeX entry.
+
+
+``` r
+utils::toBibtex(pd_cite("rba-cash-rate"))
+#> @Misc{rba-cash-rate-2026-09-29,
+#>   title = {Cash rate target changes, Reserve Bank of Australia},
+#>   author = {{Reserve Bank of Australia}},
+#>   year = {2026},
+#>   howpublished = {Version 2026-09-29, serialised and versioned by National Digital at publicdata.au},
+#>   url = {https://publicdata.au/d/rba-cash-rate/v/2026-09-29/},
+#>   note = {Source: Reserve Bank of Australia, statistical table A2 Changes in Monetary Policy and Administered Rates, sourced 30 September 2026 from https://www.rba.gov.au/statistics/tables/, republished under sections 4 and 5 of the RBA copyright notice, https://www.rba.gov.au/copyright/. The RBA does not endorse this site or any use of this data. The RBA publishes this data free of charge at rba.gov.au},
+#> }
+```

@@ -1,0 +1,27 @@
+{
+  "dataset": "abs-lga-2025",
+  "version": "2026-07-20",
+  "as_at": "",
+  "fetched_at": "2026-10-01T14:36:17+00:00",
+  "sha256": "acc3015a0ac78ade978c41a2e4110269b5219b60d6a56cbb70393ae647f31b15",
+  "bytes": 40731005,
+  "filename": "LGA_2025_AUST_GDA2020.zip",
+  "encoding": "zip",
+  "source": {
+    "url": "https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-3-july-2021-june-2026/access-and-downloads/digital-boundary-files/LGA_2025_AUST_GDA2020.zip",
+    "etag": "",
+    "http_last_modified": "Mon, 20 Jul 2026 02:40:45 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "stated": "Copyright Commonwealth of Australia administered by the ABS. Unless otherwise noted, content is licensed under a Creative Commons Attribution 4.0 International licence.",
+    "normalised": "CC-BY-4.0",
+    "title": "CC BY 4.0",
+    "url": "https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-3-july-2021-june-2026/access-and-downloads/digital-boundary-files",
+    "read_from": "https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-3-july-2021-june-2026/access-and-downloads/digital-boundary-files",
+    "read_at": "2026-10-01T14:36:15+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": []
+}

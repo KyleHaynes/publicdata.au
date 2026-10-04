@@ -1,0 +1,30 @@
+{
+  "dataset": "vic-cfa-incident-responses",
+  "version": "2026-10-03",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:07:39+00:00",
+  "sha256": "da15e636c66bb8710c5e2594f2ecb5a46b6306c9cbd935691dd4dabdb56d7e6c",
+  "bytes": 20398495,
+  "filename": "vic-cfa-incident-responses.xlsx",
+  "encoding": "xlsx",
+  "source": {
+    "url": "https://www.cfa.vic.gov.au/ArticleDocuments/195/CFA_Incident_Response.xlsx.aspx",
+    "etag": "",
+    "http_last_modified": ""
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "stated": "License Creative Commons Attribution 4.0 International",
+    "normalised": "CC-BY-4.0",
+    "title": "CC BY 4.0",
+    "url": "https://discover.data.vic.gov.au/dataset/cfa-incident-responses",
+    "read_from": "https://discover.data.vic.gov.au/dataset/cfa-incident-responses",
+    "read_at": "2026-10-03T03:07:39+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [
+    "The publisher's server states no change date, so this version is dated by the fetch."
+  ],
+  "rows_sha256": "32fe4d014fbb62fdc5f783284db5ca0793dfdc4e37933185954b3cdd8aa6ee9f"
+}

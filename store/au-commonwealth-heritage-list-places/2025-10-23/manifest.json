@@ -1,0 +1,41 @@
+{
+  "dataset": "au-commonwealth-heritage-list-places",
+  "version": "2025-10-23",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:15:53+00:00",
+  "sha256": "17f46053768a82bfc76fa1177d8ff3712275c3e84e7849a56c39700fcf5e1b1d",
+  "bytes": 3484862,
+  "filename": "au-commonwealth-heritage-list-places.geojson",
+  "encoding": "utf-8",
+  "source": {
+    "url": "https://gis.environment.gov.au/gispubmap/rest/services/ogc_services/Commonwealth_Heritage_List/FeatureServer/0",
+    "portal": "https://data.gov.au/data",
+    "package": "commonwealth-heritage-list-spatial-database-chl-public",
+    "package_id": "4d4ab6a0-172f-4b1c-b360-7557a2d70692",
+    "package_modified": "2022-05-17T06:38:20.872513",
+    "layer_name": "Commonwealth_Heritage_List_Australia",
+    "object_id_field": "OBJECTID",
+    "last_edit_date": null,
+    "newest_record": 1761177600000,
+    "features": 385,
+    "date_fields": [
+      "UPDATE_",
+      "REGISTER"
+    ]
+  },
+  "licence": {
+    "id": "cc-by",
+    "stated": "cc-by",
+    "normalised": "CC-BY-3.0-AU",
+    "title": "Creative Commons Attribution 3.0 Australia",
+    "url": "http://creativecommons.org/licenses/by/3.0/au/",
+    "read_from": "https://data.gov.au/data/api/3/action/package_show?id=commonwealth-heritage-list-spatial-database-chl-public",
+    "read_at": "2026-10-03T03:15:52+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [
+    "The layer states no edit date, so this version is dated by the newest record it holds.",
+    "The publisher offers no file. These bytes are every feature of the layer as the service returned them in WGS84, ordered by its object id, so the same layer gives the same bytes."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "dataset": "au-ed-patients-seen-on-time",
+  "version": "2026-10-03",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:15:29+00:00",
+  "sha256": "196e28ee35121da2afcfcd3f9bc25e32e30901f5012729d01ce42f7157ef01f6",
+  "bytes": 5171662,
+  "filename": "au-ed-patients-seen-on-time.xlsx",
+  "encoding": "xlsx",
+  "source": {
+    "url": "https://myhospitalsapi.aihw.gov.au/api/v1/measure-downloads/myh-ed",
+    "etag": "",
+    "http_last_modified": ""
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "stated": "has been released under a Creative Commons BY 4.0 (CC-BY 4.0) licence",
+    "normalised": "CC-BY-4.0",
+    "title": "CC BY 4.0",
+    "url": "https://www.aihw.gov.au/copyright",
+    "read_from": "https://www.aihw.gov.au/copyright",
+    "read_at": "2026-10-03T03:15:28+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [
+    "The publisher's server states no change date, so this version is dated by the fetch."
+  ],
+  "rows_sha256": "ab0d7ba5efcd8ae97a67da9e9db7e528d5f7a6306056a828c873ab4af443ec2a"
+}

@@ -1,0 +1,117 @@
+slug: qld-state-school-enrolments-february
+title: State school enrolments by school and year level, February census, Queensland 2015 to 2019
+status: live
+topics:
+- education
+order: 278
+collection: qld-schools
+collection_title: 'Queensland schools: locations, enrolments and catchments'
+temporal_start: '2015-01-01'
+search_title: Queensland state school enrolment numbers by school and year level (Department of Education)
+also_known_as:
+- Queensland school enrolments by year level
+- How many students at each Queensland state school
+- Queensland February school census enrolments
+keywords:
+- school enrolments
+- student numbers
+- year level
+- state schools
+- February census
+- Queensland
+faq:
+- q: What is in each row?
+  a: Each row is one state school, one year and one year level, with the number of full-time students enrolled
+    at the February census, and the school's region, council area, remoteness area, category and type.
+- q: Why does a school have enrolments before it opened?
+  a: The publisher combined the history of schools that were amalgamated, using the school structure as at
+    February 2019, so a school created by amalgamation can show enrolments for earlier years.
+- q: Why is there a small Year 12 group in 2019?
+  a: A half cohort entered Prep in 2007 when the school starting age changed, and that cohort was in Year 12
+    in 2019.
+summary: Full-time enrolments at each Queensland state school by year level at the February census, 2015 to
+  2019.
+description: One row per Queensland state school, collection year and year level from February 2015 to February
+  2019, with the number of full-time students enrolled at the February census. Each row also gives the school
+  code, the Department of Education region, local government area, remoteness area, school category and school
+  type. The school structure is as at February 2019, with amalgamated schools' history combined. This is Table
+  2 of the publisher's workbook.
+publisher:
+  name: Department of Education
+  short: Education
+  jurisdiction: Qld
+  url: https://qed.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/state-school-enrolments-by-school-and-year-level-february-census
+  attribution: Department of Education, Queensland Government, State school enrolments by school and year level
+    - February census, sourced {sourced}, https://www.data.qld.gov.au/dataset/state-school-enrolments-by-school-and-year-level-february-census,
+    licensed under CC BY 4.0.
+sample:
+  where:
+    collection_year: newest
+  order: [ft_enrolments.desc]
+  spread: year_level
+  label: The largest single year-level groups in the newest year, one school per year level, largest first.
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: state-school-enrolments-by-school-and-year-level-february-census
+  resource: 4d8a3dcc-30c7-40dd-be11-f13e97e26414
+  url: https://www.data.qld.gov.au/dataset/state-school-enrolments-by-school-and-year-level-february-census
+  cadence: not updated since 2022
+  sheet: Table 2
+  header_row: 15
+key:
+- school_code
+- collection_year
+- year_level
+partition_by:
+- collection_year
+row_label: School, year and year level lines
+fields:
+- name: school_name
+  label: School
+  source: School Name
+  type: string
+- name: school_code
+  label: School code
+  source: School Code
+  type: string
+  description: Kept as text to keep leading zeros.
+- name: collection_year
+  label: Year
+  source: Collection Year
+  type: integer
+- name: year_level
+  label: Year level
+  source: Year Level
+  type: string
+- name: region
+  label: Education region
+  source: Region
+  type: string
+- name: local_government_area
+  label: Council area
+  source: Local Government Area
+  type: string
+- name: remoteness_area
+  label: Remoteness
+  source: Remoteness Area
+  type: string
+- name: school_category
+  label: School category
+  source: School Category
+  type: string
+- name: school_type
+  label: School type
+  source: School Type
+  type: string
+- name: ft_enrolments
+  label: Full-time students
+  source: FT Enrolments
+  type: integer
+omit:
+  ? ''
+  : A blank column with no header and no values at the left of the table.

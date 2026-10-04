@@ -1,0 +1,240 @@
+slug: qld-school-details
+title: State and non-state school details, Queensland
+status: live
+topics:
+- education
+order: 278
+collection: qld-schools
+collection_title: 'Queensland schools: locations, enrolments and catchments'
+collection_search_title: Queensland schools data
+collection_description: 'The Queensland Department of Education publishes a list of every state and non-state
+  school in Queensland with its address and location, the full-time enrolments of each state school by
+  year level from its February census, and the catchment boundaries that set which state school a student
+  is entitled to attend.
+
+
+  The tables come from separate releases and carry different dates. The school list was last replaced in
+  September 2022 and its student counts are from July 2019. The enrolment table covers February 2015 to 2019. The catchment boundaries are for the 2026 school year.'
+search_title: List of Queensland schools with addresses and locations (Department of Education)
+also_known_as:
+- Queensland schools directory download
+- Queensland state and private schools list
+- QLD school locations
+keywords:
+- schools
+- school list
+- state schools
+- private schools
+- school locations
+- Queensland
+faq:
+- q: What is in each row?
+  a: Each row is one open Queensland school, state or non-state, with its centre code, type, year levels,
+    contact details, street and postal address, education region, electorates, council area, ABS SA2,
+    remoteness, a student count and its latitude and longitude.
+- q: How current is it?
+  a: The file was last replaced in September 2022 and its student counts are from the July 2019 census.
+    The department's online Schools Directory is kept current.
+- q: Why are the student counts blank for some schools?
+  a: The department gives student counts for state schools only. Non-state schools have a blank count,
+    and so do a few state schools.
+summary: Every Queensland state and non-state school with its address, year levels, contacts, region,
+  electorates and coordinates.
+description: One row per Queensland school, state and non-state, from the Department of Education's list.
+  Each row gives the centre code and name, the school type and sector, the lowest and highest year levels,
+  contact details, street and postal addresses, the education region, federal and state electorates, local
+  government area, ABS SA2 and remoteness area, the July 2019 student count and the ABN for state schools,
+  and latitude and longitude.
+publisher:
+  name: Department of Education
+  short: Education
+  jurisdiction: Qld
+  url: https://qed.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/state-and-non-state-school-details
+  attribution: Department of Education, Queensland Government, State and non-state school details, sourced
+    {sourced}, https://www.data.qld.gov.au/dataset/state-and-non-state-school-details, licensed under
+    CC BY 4.0.
+example:
+  group: centre_type
+  metric: count
+  label: Schools
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: state-and-non-state-school-details
+  resource: 5b39065c-df32-415c-994c-5ff12f8de997
+  url: https://www.data.qld.gov.au/dataset/state-and-non-state-school-details
+  cadence: irregular
+key:
+- centre_code
+geometry:
+  lon: longitude
+  lat: latitude
+  crs: EPSG:4326
+  crs_note: The publisher names no datum. The coordinates are decimal degrees, read as WGS84 (EPSG:4326)
+    and published as given.
+row_label: Schools
+fields:
+- name: centre_code
+  label: School code
+  source: Centre Code
+  type: string
+  description: The department's centre code, kept as text.
+- name: centre_name
+  label: School
+  source: Centre Name
+  type: string
+- name: centre_type
+  label: School type
+  source: Centre Type
+  type: string
+  description: For example State School, State High School, Special School or Non-State School.
+- name: centre_status
+  label: Status
+  source: Centre Status
+  type: string
+- name: host_centre_code
+  label: Host school code
+  source: Host Centre Code
+  type: string
+- name: host_centre_name
+  label: Host school
+  source: Host Centre Name
+  type: string
+- name: official_low_year_level
+  label: Lowest year level
+  source: Official Low Year Level
+  type: string
+- name: official_high_year_level
+  label: Highest year level
+  source: Official High Year Level
+  type: string
+- name: officer_in_charge_title
+  label: Head of school title
+  source: Officer In Charge Title
+  type: string
+- name: school_band
+  label: School band
+  source: School Band
+  type: integer
+  description: The department's classification band for a state school. Blank for non-state schools.
+- name: show_holiday_date
+  label: Show holiday
+  source: Show Holiday Date
+  type: string
+  description: The local show holiday the school observed, as published (for example 10-Aug-20).
+- name: internet_site
+  label: Website
+  source: Internet Site
+  type: string
+- name: phone_number
+  label: Phone
+  source: Phone Number
+  type: string
+- name: restrict_contact_outside_teaching_hours
+  label: Restricts contact outside teaching hours
+  source: Restrict Contact Outside Teaching Hours
+  type: string
+  description: Y, N or blank.
+- name: fax_number
+  label: Fax
+  source: Fax Number
+  type: string
+- name: actual_address_line_1
+  label: Street address line 1
+  source: Actual Address Line 1
+  type: string
+- name: actual_address_line_2
+  label: Street address line 2
+  source: Actual Address Line 2
+  type: string
+- name: actual_address_line_3
+  label: Street address line 3
+  source: Actual Address Line 3
+  type: string
+- name: actual_address_post_code
+  label: Postcode
+  source: Actual Address Post Code
+  type: string
+- name: postal_address_line_1
+  label: Postal address line 1
+  source: Postal Address Line 1
+  type: string
+- name: postal_address_line_2
+  label: Postal address line 2
+  source: Postal Address Line 2
+  type: string
+- name: postal_address_line_3
+  label: Postal address line 3
+  source: Postal Address Line 3
+  type: string
+- name: postal_address_post_code
+  label: Postal postcode
+  source: Postal Address Post Code
+  type: string
+- name: education_geographic_region
+  label: Education region
+  source: Education Geographic Region
+  type: string
+- name: federal_electorate
+  label: Federal electorate
+  source: Federal Electorate
+  type: string
+- name: state_electorate
+  label: State electorate
+  source: State Electorate
+  type: string
+- name: local_government_area
+  label: Council area
+  source: Local Government Area
+  type: string
+- name: statistical_area_level2
+  label: ABS area (SA2)
+  source: Statistical Area Level2
+  type: string
+- name: statistical_area_level2_code
+  label: SA2 code
+  source: Statistical Area Level2 Code
+  type: string
+- name: remoteness_area
+  label: Remoteness
+  source: Remoteness Area
+  type: string
+- name: enrolment_effective_date
+  label: Enrolment as at
+  source: Enrolment Effective Date
+  type: string
+  description: The census the student count is from, for example 2019 July. Blank for non-state schools.
+- name: all_student_count
+  label: Students
+  source: All Student Count
+  type: integer
+- name: campus_all_student_count
+  label: Campus students
+  source: Campus All Student Count
+  type: integer
+- name: abn
+  label: ABN
+  source: ABN
+  type: string
+- name: sector
+  label: Sector
+  source: Sector
+  type: string
+  description: State or Non-State.
+- name: non_state_sector
+  label: Non-state sector
+  source: Non-State Sector
+  type: string
+  description: Catholic or Independent.
+- name: longitude
+  label: Longitude
+  source: Longitude
+  type: number
+- name: latitude
+  label: Latitude
+  source: Latitude
+  type: number

@@ -1,0 +1,38 @@
+{
+  "dataset": "catalogue",
+  "version": "2026-09-28",
+  "as_at": "2026-09-28",
+  "fetched_at": "2026-09-28T02:00:00Z",
+  "sha256": "ae928f8157c76b163b90aa52af55db79a19733c09fe3b77cadfb283c4ab927a3",
+  "bytes": 1194,
+  "filename": "catalogue.ndjson.gz",
+  "encoding": "utf-8",
+  "source": {
+    "portals": {
+      "gov": "data.gov.au",
+      "nsw": "data.nsw.gov.au",
+      "vic": "discover.data.vic.gov.au",
+      "qld": "www.data.qld.gov.au",
+      "sa": "data.sa.gov.au",
+      "wa": "catalogue.data.wa.gov.au",
+      "nt": "data.nt.gov.au",
+      "infra": "catalogue.data.infrastructure.gov.au",
+      "act": "www.data.act.gov.au",
+      "abs": "data.api.abs.gov.au"
+    },
+    "stats": {
+      "act": {
+        "records": 1,
+        "error": "HTTP 503",
+        "carried_from": "2026-09-21"
+      }
+    }
+  },
+  "licence": {
+    "id": "various",
+    "note": "Each record carries the licence its portal states."
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": []
+}

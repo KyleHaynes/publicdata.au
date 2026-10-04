@@ -1,0 +1,114 @@
+slug: au-migration-program-by-citizenship
+title: Migration Program outcome by stream and citizenship, Australia, 1996-97 onwards
+status: live
+topics:
+- migration
+example:
+  where:
+    year: newest
+    stream: Skill stream
+    citizenship:
+      neq: Skill stream total
+  group: citizenship
+  metric: sum.places
+  label: Skill stream places in the newest year by country of citizenship
+sample:
+  where:
+    year: newest
+    stream: Family stream (includes Child visas)
+    citizenship:
+      neq: Family stream (includes Child visas) Total
+  order:
+  - places.desc
+  spread: none
+  label: The countries of citizenship with the most Family stream places in the newest year, most first.
+order: 46
+publisher:
+  name: Department of Home Affairs
+  short: Home Affairs
+  jurisdiction: Cth
+  url: https://www.homeaffairs.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-09-29'
+  portal_id: cc-by
+  evidence: https://data.gov.au/data/dataset/historical-migration-statistics
+  attribution: Department of Home Affairs, Australian Government, Historical Migration Statistics, sourced
+    {sourced}, https://data.gov.au/data/dataset/historical-migration-statistics, licensed under CC BY 3.0
+    AU.
+collection: au-historical-migration
+collection_title: Historical Migration Statistics
+temporal_start: '1996-07-01'
+search_title: Australian permanent migration by country of citizenship
+also_known_as:
+- Australian immigration statistics by country
+- Migration Program outcome by citizenship
+- Permanent visas granted by nationality
+keywords:
+- immigration statistics
+- migration by country
+- citizenship
+- Migration Program
+- permanent visas
+- Australia
+faq:
+- q: Why are there two tables?
+  a: The publisher reports a break in the series from 2017-18 because of system changes and reporting conventions.
+    Table 3.2 covers 1996-97 to 2016-17 and table 3.3 covers 2017-18 onwards. The table column says which
+    one a row comes from.
+- q: What does a suppressed value mean?
+  a: The publisher shows fewer than 5 visas as "<5", and a small negative figure as "> -5". Each is kept
+    here as a null value with a suppressed flag, and never as 0 or 5.
+summary: Permanent visas granted under the Migration Program each financial year since 1996-97, by stream
+  and country of citizenship.
+description: The Migration Program outcome for each financial year since 1996-97, by stream and country
+  of citizenship, from tables 3.2 and 3.3 of Historical Migration Statistics. Each row is one year, stream
+  and citizenship, including the publisher's totals.
+source:
+  adapter: ckan-resource
+  portal: https://data.gov.au/data
+  package: historical-migration-statistics
+  resource: b59a15df-86ea-4c4c-95be-4dd9fc9f8ac4
+  url: https://data.gov.au/data/dataset/historical-migration-statistics
+  cadence: yearly
+wide:
+  sheets:
+  - '3.2'
+  - '3.3'
+  header_row: 3
+  header_rows: 2
+  first_column: 2
+  row_headers: 1
+suppression:
+- '<5'
+- '>-5'
+- '> -5'
+key:
+- table
+- year
+- stream
+- citizenship
+partition_by:
+- table
+fields:
+- name: table
+  label: Table
+  source: (sheet)
+  type: string
+  description: 3.2 for 1996-97 to 2016-17, and 3.3 from 2017-18.
+- name: year
+  label: Financial year
+  source: (row header 1)
+  type: string
+- name: stream
+  label: Stream
+  source: (column header 1)
+  type: string
+- name: citizenship
+  label: Citizenship
+  source: (column header 2)
+  type: string
+- name: places
+  label: Visas granted
+  source: (cell)
+  type: integer

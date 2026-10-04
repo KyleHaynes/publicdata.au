@@ -1,0 +1,133 @@
+slug: act-recreational-water-quality-2018-19
+title: Recreational lakes and rivers water quality, ACT, 2018-19 season
+status: live
+topics:
+- health
+- nature
+example:
+  where:
+    micro_compliance: 'No'
+    micro_result: {lt: 'N'}
+  group: name
+  metric: count
+  label: Samples that did not meet the enterococci guideline
+chart:
+  where: {micro_result: {lt: 'N'}}
+  split: micro_compliance
+  metric: count
+  label: Samples
+sample:
+  where: {micro_result: {lt: 'N'}}
+  label: The newest samples with a result, leaving out the weeks a site was not sampled.
+order: 481
+collection: act-recreational-water-quality
+collection_title: Recreational water quality at ACT lakes and rivers
+temporal_start: '2018-10-08'
+search_title: ACT swimming spot water quality results 2018-19 season, Lake Ginninderra, Lake Tuggeranong and the Murrumbidgee (ACT Health)
+also_known_as:
+- ACT Recreational Lakes and Rivers Compliance 2018-19
+- Canberra swimming water quality 2018-19
+- Murrumbidgee River swimming water quality 2018-19
+keywords:
+- water quality
+- swimming
+- enterococci
+- blue-green algae
+- Lake Ginninderra
+- Lake Tuggeranong
+- Murrumbidgee River
+- Canberra
+- ACT
+faq:
+- q: What is in each row?
+  a: One weekly sample at one swimming site during the 2018-19 season, with the site code and name, the
+    intestinal enterococci result per 100 millilitres, whether it met the guideline, the algae result and
+    final compliance where recorded, any comment, and the site's coordinates.
+- q: What do NS and NR mean in the result?
+  a: They are the publisher's codes for a site not sampled or a result not recorded that week. A result
+    above or below the laboratory's range is written with a greater than or less than sign. The result is
+    kept as text so these survive. The publisher marks some unsampled weeks as meeting the guideline and
+    some as not, so leave them out before counting results.
+- q: Are later seasons here?
+  a: No. The publisher's tables for the 2021-22 season onwards state no licence on the portal, so they are
+    not republished here.
+summary: Weekly intestinal enterococci results at the ACT's recreational swimming sites in the 2018-19
+  season, one row per site and sample with the result and whether it met the guideline. About 1,000 rows.
+description: The results of ACT Health's recreational water quality monitoring at 17 swimming sites on Lake
+  Ginninderra, Lake Tuggeranong, the Molonglo at its water ski ramp, Paddys River and the Murrumbidgee for
+  the 2018-19 swimming season. Each row carries the publisher's row identifier, the sample date, the site
+  code and name, the intestinal enterococci result, whether it complied, the algae result, the final
+  compliance, any comment and the point's longitude and latitude.
+publisher:
+  name: Health Protection Service, ACT Health Directorate
+  short: ACT Health
+  jurisdiction: ACT
+  url: https://www.act.gov.au/health
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.act.gov.au/d/yh26-d6mg
+  statement: Creative Commons Attribution 4.0 International
+  title: Creative Commons Attribution 4.0 International
+  attribution: Health Protection Service, ACT Government, Recreational Lakes and Rivers Compliance 2018-19,
+    https://www.data.act.gov.au/d/yh26-d6mg, accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: file
+  url: https://www.data.act.gov.au/resource/yh26-d6mg.geojson?$limit=50000&$order=:id
+  cadence: closed
+key:
+- row_id
+geometry:
+  lon: longitude
+  lat: latitude
+  crs: EPSG:4326
+  crs_note: Longitude and latitude in decimal degrees from the portal's GeoJSON export, which is WGS84.
+row_label: Samples
+fields:
+- name: row_id
+  label: Row ID
+  source: row_id
+  type: string
+- name: date
+  label: Date
+  source: date
+  type: date
+  date_format: '%Y-%m-%dT%H:%M:%S.000'
+- name: site
+  label: Site code
+  source: site
+  type: string
+- name: name
+  label: Site
+  source: name
+  type: string
+- name: micro_result
+  label: Enterococci result (per 100 mL)
+  source: micro_result
+  type: string
+- name: micro_compliance
+  label: Enterococci guideline met
+  source: micro_compliance
+  type: string
+- name: algae_result
+  label: Algae result
+  source: algee_result
+  type: string
+- name: final_compliance
+  label: Final compliance
+  source: final_compliance
+  type: string
+- name: comments
+  label: Comments
+  source: comments
+  type: string
+- name: longitude
+  label: Longitude
+  source: (longitude)
+  type: number
+- name: latitude
+  label: Latitude
+  source: (latitude)
+  type: number
+note: Cells were typed and headers were made snake_case. The point of each feature is given as longitude and
+  latitude columns. Rows were left alone.

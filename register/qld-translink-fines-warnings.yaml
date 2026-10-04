@@ -1,0 +1,75 @@
+slug: qld-translink-fines-warnings
+title: Translink passenger fines and warnings
+status: live
+topics:
+- roads
+order: 290
+collection: qld-translink-performance
+collection_title: Translink monthly performance data
+search_title: Translink passenger fines and warnings by month
+also_known_as:
+- Public transport fines Queensland
+- Translink fare evasion fines
+keywords:
+- fines
+- warnings
+- fare evasion
+- public transport
+- Translink
+faq:
+- q: What is in each row?
+  a: Each row is one month with the number of fines and of warnings issued to Translink passengers.
+- q: How far back does it go?
+  a: At review the file held about 30 months, starting in late 2023. Each fetch here is kept as a version,
+    so a month the publisher later drops stays in an earlier version.
+summary: The number of fines and warnings issued to Translink passengers each month.
+description: 'One row per month with the number of fines and the number of warnings issued to passengers on
+  Translink services, as published in Translink''s monthly performance data. At review the file started in
+  late 2023.
+
+  '
+publisher:
+  name: Department of Transport and Main Roads
+  short: Transport and Main Roads
+  jurisdiction: Qld
+  url: https://www.tmr.qld.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/translink-monthly-performance-data
+  attribution: Department of Transport and Main Roads, Queensland Government, Translink monthly performance
+    data, sourced {sourced}, https://www.data.qld.gov.au/dataset/translink-monthly-performance-data, licensed
+    under CC BY 3.0 AU.
+  portal_id: CC-BY-3.0
+chart:
+  where:
+    month:
+      gte: '2024-01-01'
+  split: none
+  metric: sum.passenger_fines
+  label: Passenger fines
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: translink-monthly-performance-data
+  resource: 5b81fcf1-b80f-45e0-8d6d-8616807b85c7
+  url: https://www.data.qld.gov.au/dataset/translink-monthly-performance-data
+  cadence: monthly
+key:
+- month
+row_label: Months
+fields:
+- name: month
+  label: Month
+  source: Month-Year
+  type: date
+  date_format: '%b-%Y'
+  description: First day of the month reported.
+- name: passenger_fines
+  label: Passenger fines
+  source: Passenger fines
+  type: integer
+- name: passenger_warnings
+  label: Passenger warnings
+  source: Passenger warnings
+  type: integer

@@ -1,0 +1,100 @@
+slug: vic-ballarat-lightning-observations
+title: Lightning sensor observations, Ballarat, 2023 to 2025
+status: live
+topics:
+- nature
+order: 399
+publisher:
+  name: City of Ballarat
+  short: City of Ballarat
+  jurisdiction: Local
+  url: https://www.ballarat.vic.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-10-01'
+  evidence: https://data.ballarat.vic.gov.au/explore/dataset/lightning-observations/information/
+  attribution: City of Ballarat, Lightning Observations, sourced {sourced}, https://data.ballarat.vic.gov.au/explore/dataset/lightning-observations/information/,
+    licensed under CC BY 3.0 AU.
+temporal_start: '2023-03-20'
+search_title: Ballarat lightning strike observations from a council sensor (City of Ballarat)
+also_known_as:
+- Ballarat lightning observations
+- Lightning strikes Ballarat sensor data
+- City of Ballarat lightning sensor
+keywords:
+- lightning
+- thunderstorms
+- weather sensor
+- Ballarat
+- Lake Wendouree
+- City of Ballarat
+faq:
+- q: What does each row hold?
+  a: One reading from a City of Ballarat lightning sensor, with its time in UTC, the sensor's location, the
+    number of strikes it registered in the measurement period and their average distance. Most readings
+    record no strikes.
+- q: How does the sensor work?
+  a: The council's description says the sensor listens for the disturbance a strike makes in an AM radio
+    signal, and reports the count of strikes and their average distance in each period, as set out in the
+    ATMOS41 manual. The council says it is not an official source of weather information.
+- q: What are the rows with location none?
+  a: About 1,400 readings name no location and give 0 for latitude and longitude. They are kept as
+    published. They run from 27 March to 7 April 2025. The rest come from the sensor at the rowing course
+    and stop on 2 April 2024, so the table holds no readings from 2 April 2024 to 27 March 2025.
+- q: Is it still updated?
+  a: The council's portal says the dataset is typically updated every 15 minutes, but the last reading is
+    from 7 April 2025 and the portal has not changed since.
+summary: About 29,000 readings from a City of Ballarat lightning sensor between March 2023 and April 2025,
+  each with the count of strikes registered and their average distance.
+description: Lightning observations published by the City of Ballarat on its open data portal, one row
+  per sensor reading from 20 March 2023 to 7 April 2025, with the time, location description, latitude,
+  longitude, number of strikes and average distance to them. Nearly all readings come from one sensor at
+  the rowing course on Lake Wendouree, and those stop on 2 April 2024. The readings from 27 March 2025 name
+  no location.
+example:
+  group: location_description
+  metric: sum.strikes
+  label: Strikes registered by sensor location
+chart:
+  split: none
+  metric: sum.strikes
+  label: Strikes registered
+sample:
+  order: [strikes.desc]
+  label: The ten readings with the most strikes, most first.
+source:
+  adapter: opendatasoft
+  portal: https://data.ballarat.vic.gov.au
+  package: lightning-observations
+  url: https://data.ballarat.vic.gov.au/explore/dataset/lightning-observations/
+  cadence: no new readings since April 2025
+row_label: Readings
+fields:
+- name: date_time
+  label: Time of reading
+  source: date_time
+  type: datetime
+  date_format: '%Y-%m-%dT%H:%M:%S%z'
+  description: The time of the reading, in UTC as the portal gives it.
+- name: location_description
+  label: Location
+  source: location_description
+  type: string
+- name: latitude
+  label: Latitude
+  source: latitude
+  type: number
+- name: longitude
+  label: Longitude
+  source: longitude
+  type: number
+- name: strikes
+  label: Strikes
+  source: strikes
+  type: integer
+  description: The number of strikes the sensor registered in the measurement period.
+- name: average_distance
+  label: Average distance
+  source: average_distance
+  type: number
+  description: The average distance to the strikes as the sensor reports it. The portal gives no unit.

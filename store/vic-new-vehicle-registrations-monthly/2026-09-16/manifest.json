@@ -1,0 +1,34 @@
+{
+  "dataset": "vic-new-vehicle-registrations-monthly",
+  "version": "2026-09-16",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:09:49+00:00",
+  "sha256": "1d5bdd08fde48f570ccda0dc9cbe662263e8834c52840175653da605adf68d44",
+  "bytes": 107532,
+  "filename": "monthly_new_vehicle_registration_august_2026.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://opendata.transport.vic.gov.au/dataset/6a84d623-0e7f-4996-aa5c-090825e3ba7e/resource/5a62c31e-1b4d-492f-83be-12f6d9ab5730/download/monthly_new_vehicle_registration_august_2026.csv",
+    "portal": "https://discover.data.vic.gov.au",
+    "package": "monthly-new-vehicle-registration",
+    "package_id": "eae77e2c-c9ba-40fb-a063-352b253e5272",
+    "resource": "5a62c31e-1b4d-492f-83be-12f6d9ab5730",
+    "resource_name": "Monthly New Vehicle Registration August 2026",
+    "resource_last_modified": "2026-09-16T02:39:13.267817",
+    "package_modified": "2026-09-16T23:21:14.151876",
+    "package_version": null,
+    "etag": "1789526353.5365462-107532-2064126640",
+    "http_last_modified": "Wed, 16 Sep 2026 02:39:13 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution 4.0 International",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://discover.data.vic.gov.au/api/3/action/package_show?id=monthly-new-vehicle-registration",
+    "read_at": "2026-10-03T03:09:49+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "0fbdc328be9239f450ff2e4657ca4bfa80b43967bee56a520be5ace07b314e65"
+}

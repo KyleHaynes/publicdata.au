@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-translink-origin-destination-trips",
+  "version": "2026-08-20",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:02:57+00:00",
+  "sha256": "aaf9603c5b806334d73155d1a952ab33399e2c8dfa981376a4f06ad66184ff33",
+  "bytes": 5097090,
+  "filename": "202607-jul-tl-org-dest-trips.zip",
+  "encoding": "zip",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/aeee186f-da4c-41cd-a6b2-85d11c7bd503/resource/463c42eb-a991-46c2-a8a6-09c56e0bd802/download/202607-jul-tl-org-dest-trips.zip",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "translink-origin-destination-trips-2022-onwards",
+    "package_id": "aeee186f-da4c-41cd-a6b2-85d11c7bd503",
+    "resource": "463c42eb-a991-46c2-a8a6-09c56e0bd802",
+    "resource_name": "July 2026 - Translink Public Transport Origin-Destination trips",
+    "resource_last_modified": "2026-08-19T23:52:35.740136",
+    "package_modified": "2026-08-30T22:00:00.529212",
+    "package_version": "2.0",
+    "etag": "c0258a4514da0e3eca08e15311de3c65",
+    "http_last_modified": "Wed, 19 Aug 2026 23:48:37 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=translink-origin-destination-trips-2022-onwards",
+    "read_at": "2026-10-03T03:02:56+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "1787c50634588387c8b98070e35ebf6a0a69722713a3342eb87c2981612ce3e0"
+}

@@ -1,0 +1,126 @@
+slug: au-fdv-victims-recorded-crime
+title: Victims of family and domestic violence crimes by state, sex and year, Australia
+status: live
+topics:
+- crime
+example:
+  where:
+    unit: Number
+    year: newest
+    sex: Persons
+    offence: Assault
+  group: location
+  metric: sum.value
+  label: Victims of family and domestic violence assault in each state in the newest year
+chart:
+  where:
+    unit: Number
+    location: Australia
+    offence: Sexual assault
+    sex:
+      neq: Persons
+  split: sex
+  metric: sum.value
+  label: Victims of sexual assault
+sample:
+  where:
+    year: newest
+    unit: Number
+    sex: Persons
+    location:
+      neq: Australia
+  order:
+  - value.desc
+  spread: offence
+  label: Victims in each state in the newest year, each offence in turn, the states with the most victims
+    first.
+order: 64
+publisher:
+  name: Australian Institute of Health and Welfare
+  short: AIHW
+  jurisdiction: Cth
+  url: https://www.aihw.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.aihw.gov.au/copyright
+  statement: has been released under a Creative Commons BY 4.0 (CC-BY 4.0) licence
+  attribution: Based on Australian Institute of Health and Welfare material. Australian Institute of Health
+    and Welfare, Australian Government, Family, domestic and sexual violence data tables, Recorded Crime
+    Victims table RCV 1, sourced {sourced}, https://www.aihw.gov.au/family-domestic-and-sexual-violence/resources/data-downloads,
+    licensed under CC BY 4.0.
+temporal_start: '2014-01-01'
+search_title: 'Family and domestic violence statistics by state: victims of FDV assault, sexual assault
+  and homicide since 2014 (AIHW)'
+also_known_as:
+- Family and domestic violence statistics Australia
+- Domestic violence victims by state
+- FDV recorded crime victims
+- AIHW FDSV data tables RCV 1
+keywords:
+- domestic violence
+- family violence
+- domestic violence statistics
+- FDV
+- recorded crime victims
+- AIHW
+- Australia
+faq:
+- q: What is counted?
+  a: Victims of assault, sexual assault, homicide and related offences, and kidnapping or abduction that
+    police recorded as family and domestic violence related, by state and territory, sex and year from 2014, as the number of victims
+    and as a victimisation rate per 100,000, compiled by the Institute from the ABS Recorded Crime, Victims
+    collection. Not every state records the family and domestic violence flag for every offence, and the
+    Institute writes n.a. where data is not available and n.p. where it is not published.
+- q: Where is this table from?
+  a: The Institute's Family, domestic and sexual violence data tables workbook, which gathers tables from
+    several national collections. This dataset is one sheet of it. The data in this sheet is compiled
+    by the Institute from a government source it names, and the ABS and AIC publish their own material
+    under CC BY 4.0 as well.
+- q: Why does the attribution say "based on" AIHW material?
+  a: The Institute publishes its data tables under CC BY 4.0 and asks that material adapted from them,
+    which republishing in other formats is, carry the words "Based on Australian Institute of Health and
+    Welfare material". Every file here carries them. The Institute has not endorsed this site.
+summary: Victims of family and domestic violence related assault, sexual assault, homicide and kidnapping
+  recorded by police, by state and territory, sex and year since 2014, as counts and rates. Updated with the AIHW
+  data tables.
+description: Table RCV 1 of the Australian Institute of Health and Welfare's Family, domestic and sexual
+  violence data tables, victims of family and domestic violence crimes by sex, 2014 to the latest year,
+  one row per sex, year, offence, state or territory and unit. Values are the number of victims or the
+  victimisation rate per 100,000 people, compiled from the ABS Recorded Crime, Victims collection.
+source:
+  adapter: file
+  url: https://www.aihw.gov.au/getmedia/f4a9196a-9797-4b03-acc8-d72a5b83d370/AIHW-FDSV-all-data-download.xlsx
+  sheet: RCV 1
+  header_row: 13
+  cadence: yearly
+suppression:
+- n.p.
+row_label: Table lines
+fields:
+- name: sex
+  label: Sex
+  source: Sex
+  type: string
+- name: year
+  label: Year
+  source: Year
+  type: integer
+- name: offence
+  label: Offence
+  source: Offence
+  type: string
+- name: location
+  label: State or territory
+  source: Location
+  type: string
+- name: unit
+  label: Unit
+  source: Unit
+  type: string
+- name: value
+  label: Value
+  source: Value
+  type: number
+  null_values:
+  - n.a.

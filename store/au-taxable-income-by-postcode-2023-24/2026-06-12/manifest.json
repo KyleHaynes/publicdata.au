@@ -1,0 +1,34 @@
+{
+  "dataset": "au-taxable-income-by-postcode-2023-24",
+  "version": "2026-06-12",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:15:32+00:00",
+  "sha256": "93cde81b46fa00e00dece5f9d8dac9315774fb70f9987aa06f2805124fd34cf6",
+  "bytes": 590864,
+  "filename": "ts24individual25countaveragemedianbypostcode.xlsx",
+  "encoding": "xlsx",
+  "source": {
+    "url": "https://data.gov.au/data/dataset/faea4485-f407-457d-97f8-3f0822ccd654/resource/d6122018-989a-453c-bd40-294990adbe40/download/ts24individual25countaveragemedianbypostcode.xlsx",
+    "portal": "https://data.gov.au/data",
+    "package": "taxation-statistics-2023-24",
+    "package_id": "faea4485-f407-457d-97f8-3f0822ccd654",
+    "resource": "d6122018-989a-453c-bd40-294990adbe40",
+    "resource_name": "Individuals - Table 25",
+    "resource_last_modified": "2026-06-12T06:38:22.116812",
+    "package_modified": "2026-06-25T06:04:24.579262",
+    "package_version": null,
+    "etag": "1781246302.932-590864-3257732930",
+    "http_last_modified": "Fri, 12 Jun 2026 06:38:22 GMT"
+  },
+  "licence": {
+    "id": "cc-by-2.5",
+    "title": "Creative Commons Attribution 2.5 Australia",
+    "url": "http://creativecommons.org/licenses/by/2.5/au/",
+    "read_from": "https://data.gov.au/data/api/3/action/package_show?id=taxation-statistics-2023-24",
+    "read_at": "2026-10-03T03:15:32+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "238be98f8dc7f9dafa84f48840f3dc40ff3356eba052beb5d92ddec882f85a34"
+}

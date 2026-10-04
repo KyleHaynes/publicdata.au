@@ -1,0 +1,103 @@
+slug: au-localities-vic
+title: Suburb and locality boundaries, Victoria (Geoscape)
+status: live
+topics:
+- places
+example:
+  group: date_created
+  metric: count
+  label: Locality polygons by the date Geoscape created their current record
+chart:
+  split: none
+  metric: count
+  label: Locality polygons by the year Geoscape created their current record
+order: 514
+collection: au-geoscape-localities
+collection_title: Geoscape suburb and locality boundaries
+publisher:
+  name: Department of Industry, Science and Resources
+  short: DISR
+  jurisdiction: Cth
+  url: https://www.industry.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by-4.0
+  evidence: https://data.gov.au/data/dataset/vic-suburb-locality-boundaries-geoscape-administrative-boundaries
+  attribution: Incorporates or developed using Administrative Boundaries © Geoscape Australia licensed by
+    the Commonwealth of Australia under Creative Commons Attribution 4.0 International licence (CC BY 4.0).
+    Victoria Suburb/Locality Boundaries - Geoscape Administrative Boundaries, sourced {sourced},
+    https://data.gov.au/data/dataset/vic-suburb-locality-boundaries-geoscape-administrative-boundaries, licensed under CC BY 4.0.
+search_title: Victoria suburb and locality boundaries, current shapes (Geoscape Administrative Boundaries)
+also_known_as:
+- Victoria suburb boundaries
+- Victoria locality boundaries GeoJSON
+- Melbourne suburb boundaries shapefile
+- Geoscape Localities Victoria
+keywords:
+- suburb boundaries
+- locality boundaries
+- suburbs
+- GeoJSON
+- shapefile
+- Geoscape
+- Victoria
+faq:
+- q: What is in each row?
+  a: One suburb or locality of Victoria, with Geoscape's identifiers for the polygon and the locality, the
+    date the record was created, the locality's name, its class, such as Gazetted Locality, and the state.
+    Its shape is in the GeoParquet, GeoJSON, GeoPackage and PMTiles files. A locality made of separate
+    pieces, such as one with islands, has a row for each piece.
+- q: How do these differ from the ABS suburbs and localities?
+  a: These follow the official locality boundaries in the Victorian cadastre and change each quarter as
+    localities are named or moved. The ABS Suburbs and Localities layer is built from mesh blocks for one
+    census, so its edges differ from these.
+- q: Can I use it for a commercial product?
+  a: The Commonwealth released Administrative Boundaries under CC BY 4.0. The release notes ask that use is
+    consistent with the Australian Privacy Principles and that adapted material carry the words in the
+    attribution here, which every file carries. Geoscape Australia has not endorsed this site.
+summary: The current boundary of every suburb and locality in Victoria, with its name and class, from
+  Geoscape Administrative Boundaries, updated each quarter.
+description: The Victoria suburb and locality layer of Geoscape Administrative Boundaries, read from the
+  GDA2020 Esri shapefile release on data.gov.au. Each row is one locality polygon with Geoscape's polygon and
+  locality identifiers, its creation date, name, class and state. The newest quarterly release is followed.
+key:
+- lc_ply_pid
+geometry:
+  kind: polygon
+  crs: EPSG:7844
+  crs_note: Shapes in GDA2020 (EPSG:7844), the datum of the shapefile release read.
+  maxzoom: 10
+source:
+  adapter: ckan-resource
+  portal: https://data.gov.au/data
+  package: vic-suburb-locality-boundaries-geoscape-administrative-boundaries
+  resource_match: Localities - Esri Shapefiles - GDA?2020$
+  url: https://data.gov.au/data/dataset/vic-suburb-locality-boundaries-geoscape-administrative-boundaries
+  cadence: quarterly
+row_label: Localities
+fields:
+- name: lc_ply_pid
+  label: Locality polygon ID
+  source: LC_PLY_PID
+  type: string
+- name: loc_pid
+  label: Locality ID
+  source: LOC_PID
+  type: string
+- name: date_created
+  label: Date created
+  source: DT_CREATE
+  type: date
+- name: locality_name
+  label: Suburb or locality
+  source: LOC_NAME
+  type: string
+- name: locality_class
+  label: Locality class
+  source: LOC_CLASS
+  type: string
+- name: state
+  label: State or territory
+  source: STATE
+  type: string

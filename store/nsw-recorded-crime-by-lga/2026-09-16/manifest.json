@@ -1,0 +1,32 @@
+{
+  "dataset": "nsw-recorded-crime-by-lga",
+  "version": "2026-09-16",
+  "as_at": "",
+  "fetched_at": "2026-09-28T03:57:05+00:00",
+  "sha256": "9b13b9e878875b01a80d27703dc858c385ae693b5c929539079e135202e9484f",
+  "bytes": 11892016,
+  "filename": "RCI_offencebymonth.xlsm",
+  "encoding": "xlsx",
+  "source": {
+    "url": "https://bocsarblob.blob.core.windows.net/bocsar-open-data/RCI_offencebymonth.xlsm",
+    "portal": "https://data.nsw.gov.au/data",
+    "package": "nsw-crime-and-policing-statistics",
+    "package_id": "c18d2459-47c7-46b8-b9db-91d9365b1850",
+    "resource": "1d5b2851-52e9-4327-a81b-19149c63f736",
+    "resource_name": "Recorded criminal incidents by month – by LGA",
+    "resource_last_modified": "2026-04-23T03:08:32.397993",
+    "package_modified": "2026-04-28T08:08:24.935644",
+    "package_version": null,
+    "etag": "0x8DF1352C83F1174",
+    "http_last_modified": "Tue, 15 Sep 2026 17:57:17 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution",
+    "url": "http://www.opendefinition.org/licenses/cc-by",
+    "read_at": "2026-09-28T03:57:00+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": []
+}

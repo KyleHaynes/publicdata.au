@@ -1,0 +1,32 @@
+{
+  "dataset": "act-historic-marriage-index",
+  "version": "2026-09-27",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:10:36+00:00",
+  "sha256": "339cc6869fdf9e16774388711fe1365135273039f78dfccf63f80d7606d6ca3b",
+  "bytes": 149925,
+  "filename": "uzaz-dbkr.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.act.gov.au/api/views/uzaz-dbkr/rows.csv?accessType=DOWNLOAD",
+    "portal": "https://www.data.act.gov.au",
+    "package": "uzaz-dbkr",
+    "resource_name": "Historic marriage index",
+    "rows_updated_at": 1790471381,
+    "etag": "Z29sZi45ODM4XzNfNjA2ZHVDc0JiMExxak9IRWp6NzRtS2RHNUJPMmxR---gzip7vyzO07WBrIISIC8KIq0qd52cw8--gzip--gzip",
+    "http_last_modified": "Sun, 27 Sep 2026 01:09:40 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "stated": "CC_40_BY",
+    "normalised": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0 International",
+    "url": "http://creativecommons.org/licenses/by/4.0/legalcode",
+    "read_from": "https://www.data.act.gov.au/api/views/uzaz-dbkr.json",
+    "read_at": "2026-10-03T03:10:34+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "315f3cd567d228319aecf366de4cada7230e493575de349ce1f940c2f5e3aac4"
+}

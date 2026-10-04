@@ -1,0 +1,147 @@
+slug: qld-elective-surgery-by-specialty
+title: Elective surgery by specialty and hospital, Queensland, September quarter 2025
+status: live
+topics:
+- health
+order: 228
+collection: qld-elective-surgery
+collection_title: Elective surgery performance by hospital, Queensland
+search_title: Queensland elective surgery by specialty and hospital (Queensland Health)
+also_known_as:
+- Elective surgery by specialty Queensland
+- QLD orthopaedic surgery waiting list
+- Queensland hospital surgery waiting by specialty
+keywords:
+- elective surgery
+- waiting list
+- surgical specialty
+- orthopaedics
+- hospital performance
+- Queensland Health
+faq:
+- q: What is in each row?
+  a: One public hospital and one surgical specialty, such as general surgery, orthopaedics or ENT surgery,
+    or ALL, for the quarter, with the patients treated and the share treated within the recommended time,
+    the patients waiting, the long waits and the share waiting within the recommended time.
+- q: What does a dash mean?
+  a: Queensland Health writes a dash where it gives no figure for a hospital, such as a percentage with
+    no patients behind it. Those cells are null here and flagged as suppressed. A few cells read NULL,
+    and those are null too.
+- q: Which quarter is it?
+  a: The quarter ending September 2025. This table is fixed to that file, and later quarters need the
+    entry pointed at the new file.
+summary: Elective surgery at each Queensland public hospital in the September quarter 2025 by surgical
+  specialty, with patients treated, patients waiting and the share within the recommended time.
+description: Queensland Health elective surgery summary 2 for the quarter ending September 2025, one row
+  per public hospital and surgical specialty. Each row has the volumes treated and waiting, the long waits,
+  and the percentages treated and waiting within the clinically recommended time.
+publisher:
+  name: Queensland Health
+  short: Queensland Health
+  jurisdiction: Qld
+  url: https://www.health.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/elective-surgery
+  attribution: Queensland Health, Queensland Government, Elective surgery, sourced {sourced}, https://www.data.qld.gov.au/dataset/elective-surgery,
+    licensed under CC BY 4.0.
+example:
+  where: {facility_code: '99999', specialty_code: {neq: ALL}}
+  group: specialty_desc
+  metric: sum.long_waits
+  label: Patients waiting longer than recommended in each specialty, all reporting hospitals
+chart:
+  where: {specialty_code: {neq: ALL}, facility_code: {neq: '99999'}}
+  split: none
+  metric: sum.treated
+  label: Patients treated
+sample:
+  where: {specialty_code: {neq: ALL}, facility_code: {neq: '99999'}}
+  order: [long_waits.desc]
+  spread: none
+  label: The ten hospital specialties with the most patients waiting longer than recommended, most first.
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: elective-surgery
+  resource: 49a1a9ef-ca67-4568-8b90-b08cb9c94bd5
+  url: https://www.data.qld.gov.au/dataset/elective-surgery
+  encoding: utf-8-sig
+  cadence: quarterly
+key:
+- facility_code
+- specialty_code
+partition_by:
+- specialty_desc
+suppression:
+- '-'
+row_label: Hospital specialties
+fields:
+- name: facility_code
+  label: Facility code
+  source: Facility_Code
+  type: string
+  description: Kept as text.
+- name: facility
+  label: Hospital
+  source: Facility_Name
+  type: string
+  description: A public hospital, or a group such as Queensland Reporting Hospitals for the state total.
+- name: report_month
+  label: Quarter ending
+  source: Report_Month
+  type: string
+  description: The last month of the quarter, as the publisher writes it, such as Sep-25.
+- name: specialty_code
+  label: Specialty code
+  source: Specialty_Code
+  type: string
+- name: specialty_desc
+  label: Specialty
+  source: Specialty_Desc
+  type: string
+- name: treated
+  label: Patients treated
+  source: Vol_Treated
+  type: integer
+- name: percent_treated_in_time
+  label: Treated in recommended time (%)
+  source: Percent_Treated_InTime
+  type: number
+- name: percent_change_treated_on_prior_year
+  label: Change in treated on a year before (%)
+  source: Percent_Variation_Treated_Prior_Year
+  type: number
+  null_values:
+  - 'NULL'
+- name: waiting
+  label: Patients waiting
+  source: Vol_Waiting
+  type: integer
+- name: long_waits
+  label: Waiting longer than recommended
+  source: Vol_LongWaits
+  type: integer
+- name: percent_waiting_in_time
+  label: Waiting in recommended time (%)
+  source: Percent_Waiting_InTime_Total
+  type: number
+- name: data_last_update
+  label: Data last updated
+  source: data_last_update
+  type: date
+  date_format: '%d/%m/%Y'
+- name: long_waits_ready_for_surgery
+  label: Long waits, ready for surgery
+  source: Vol_LongWaits_RFS
+  type: integer
+- name: long_waits_not_ready_for_surgery
+  label: Long waits, not ready for surgery
+  source: Vol_LongWaits_NRFS
+  type: integer
+- name: percent_waiting_in_time_ready_for_surgery
+  label: Ready for surgery, waiting in time (%)
+  source: Percent_Waiting_InTime_RFS
+  type: number
+note: Cells were typed and headers were made snake_case. Rows were left alone.

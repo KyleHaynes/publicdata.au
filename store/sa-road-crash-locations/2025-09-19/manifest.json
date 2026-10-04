@@ -1,0 +1,32 @@
+{
+  "dataset": "sa-road-crash-locations",
+  "version": "2025-09-19",
+  "as_at": "",
+  "fetched_at": "2026-09-29T15:09:30+00:00",
+  "sha256": "b78b3d9e8fb19be285e359e2aed26127e45c173eeb6de0f152e6003ce45c9037",
+  "bytes": 2745157,
+  "filename": "roadcrashes_2020_2024_geojson.zip",
+  "encoding": "zip",
+  "source": {
+    "url": "https://data.sa.gov.au/data/dataset/cf8d8549-b976-4523-88ad-46dd32053696/resource/5fcbce14-ad30-4737-aa7d-5b1cfb939eb9/download/roadcrashes_2020_2024_geojson.zip",
+    "portal": "https://data.sa.gov.au/data",
+    "package": "road-crashes-in-sa",
+    "package_id": "cf8d8549-b976-4523-88ad-46dd32053696",
+    "resource": "5fcbce14-ad30-4737-aa7d-5b1cfb939eb9",
+    "resource_name": "Road Crashes 2020-2024 (geojson)",
+    "resource_last_modified": "2025-09-19T12:01:23.439001",
+    "package_modified": "2025-10-03T02:12:30.848145",
+    "package_version": null,
+    "etag": "1758283283.878-2745157-1499863587",
+    "http_last_modified": "Fri, 19 Sep 2025 12:01:23 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution",
+    "url": "http://creativecommons.org/licenses/by/4.0",
+    "read_at": "2026-09-29T15:09:29+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": []
+}

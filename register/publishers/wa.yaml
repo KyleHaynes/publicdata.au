@@ -1,0 +1,153 @@
+# Publishers placed in Western Australia that no portal of its own lists, or that one portal lists twice.
+# Generated from 'publicdata catalogue publishers', then reviewed. Edit by hand.
+- slug: centre-of-excellence-in-natural-resource-management-cenrm-the-university-of
+  name: Centre of Excellence in Natural Resource Management (CENRM), The University of Western Australia
+    (UWA)
+  jurisdiction: WA
+  level: other
+  orgs:
+  - gov:centre-of-excellence-in-natural-resource-management-cenrm-the-university-of-western-australia-uwa
+- slug: cockburn-sound-management-council-csmc-department-of-environment-regulation-der
+  name: Cockburn Sound Management Council (CSMC), Department of Environment Regulation (DER), Western
+    Australia Government
+  jurisdiction: WA
+  level: state
+  orgs:
+  - gov:cockburn-sound-management-council-csmc-department-of-environment-regulation-der-western-australia-g
+- slug: conservation-council-of-western-australia-ccwa
+  name: Conservation Council of Western Australia (CCWA)
+  jurisdiction: WA
+  level: other
+  orgs:
+  - gov:conservation-council-of-western-australia-ccwa
+- slug: department-of-finance-western-australia
+  name: Department of Finance (Western Australia)
+  jurisdiction: WA
+  level: state
+  orgs:
+  - gov:western-australian-department-of-finance
+- slug: department-of-health-western-australia
+  name: Department of Health (Western Australia)
+  jurisdiction: WA
+  level: state
+  orgs:
+  - gov:department-of-health-western-australia
+- slug: department-of-housing-western-australia
+  name: Department of Housing (Western Australia)
+  jurisdiction: WA
+  level: state
+  orgs:
+  - gov:department-of-housing
+- slug: department-of-parks-and-wildlife-dpaw-western-australian-government
+  name: Department of Parks and Wildlife (DPaW), Western Australian Government
+  jurisdiction: WA
+  level: state
+  orgs:
+  - gov:department-of-parks-and-wildlife-dpaw-western-australian-government
+- slug: department-of-the-attorney-general-western-australia
+  name: Department of the Attorney General (Western Australia)
+  jurisdiction: WA
+  level: state
+  orgs:
+  - gov:department-of-the-attorney-general-wa
+- slug: department-of-water-dow-western-australian-government
+  name: Department of Water (DoW), Western Australian Government
+  jurisdiction: WA
+  level: state
+  orgs:
+  - gov:department-of-water-dow-western-australian-government
+- slug: department-of-water-government-of-western-australia
+  name: Department of Water, Government of Western Australia
+  jurisdiction: WA
+  level: state
+  orgs:
+  - gov:department-of-water-government-of-western-australia
+- slug: main-roads-western-australia
+  name: Main Roads Western Australia
+  jurisdiction: WA
+  level: state
+  orgs:
+  - gov:government-of-western-australia-main-roads-western-australia-australian-urban-research-infrastructur
+  - wa:main-roads-western-australia
+- slug: public-sector-commission-western-australia
+  name: Public Sector Commission (Western Australia)
+  jurisdiction: WA
+  level: state
+  orgs:
+  - gov:public-sector-commission-wa
+- slug: school-curriculum-and-standards-authority-western-australia
+  name: School Curriculum and Standards Authority (Western Australia)
+  jurisdiction: WA
+  level: state
+  orgs:
+  - gov:school-curriculum-and-standards-authority-wa
+- slug: school-of-animal-biology-sab-the-university-of-western-australia-uwa
+  name: School of Animal Biology (SAB), The University of Western Australia (UWA)
+  jurisdiction: WA
+  level: other
+  orgs:
+  - gov:school-of-animal-biology-sab-the-university-of-western-australia-uwa
+- slug: school-of-civil-environmental-and-mining-engineering-ceme-the-university-of
+  name: School of Civil, Environmental and Mining Engineering (CEME), The University of Western Australia
+    (UWA)
+  jurisdiction: WA
+  level: other
+  orgs:
+  - gov:school-of-civil-environmental-and-mining-engineering-ceme-the-university-of-western-australia-uwa
+- slug: school-of-earth-and-environment-see-the-university-of-western-australia-uwa
+  name: School of Earth and Environment (SEE), The University of Western Australia (UWA)
+  jurisdiction: WA
+  level: other
+  orgs:
+  - gov:school-of-earth-and-environment-see-the-university-of-western-australia-uwa
+- slug: school-of-environmental-systems-engineering-the-university-of-western-australia
+  name: School of Environmental Systems Engineering, The University of Western Australia (UWA)
+  jurisdiction: WA
+  level: other
+  orgs:
+  - gov:school-of-environmental-systems-engineering-the-university-of-western-australia-uwa
+- slug: school-of-plant-biology-spb-uwa-oceans-institute-oi-the-university-of-western
+  name: School of Plant Biology (SPB) / UWA Oceans Institute (OI), The University of Western Australia
+    (UWA)
+  jurisdiction: WA
+  level: other
+  orgs:
+  - gov:school-of-plant-biology-spb-uwa-oceans-institute-oi-the-university-of-western-australia-uwa
+- slug: school-of-plant-biology-spb-the-university-of-western-australia-uwa
+  name: School of Plant Biology (SPB), The University of Western Australia (UWA)
+  jurisdiction: WA
+  level: other
+  orgs:
+  - gov:school-of-plant-biology-spb-the-university-of-western-australia-uwa
+- slug: state-library-of-western-australia
+  name: State Library of Western Australia
+  jurisdiction: WA
+  level: state
+  orgs:
+  - gov:statelibraryofwesternaustralia
+  - wa:state-library-of-western-australia
+- slug: the-university-of-western-australia-uwa
+  name: The University of Western Australia (UWA)
+  jurisdiction: WA
+  level: other
+  orgs:
+  - gov:the-university-of-western-australia-uwa
+- slug: uwa-oceans-institute-uwa-school-of-agriculture-and-environment-the-university-of
+  name: UWA Oceans Institute & UWA School of Agriculture and Environment, The University of Western Australia
+    (UWA)
+  jurisdiction: WA
+  level: other
+  orgs:
+  - gov:uwa-oceans-institute-uwa-school-of-agriculture-and-environment-the-university-of-western-australia-
+- slug: uwa-oceans-institute-oi-the-university-of-western-australia-uwa
+  name: UWA Oceans Institute (OI), The University of Western Australia (UWA)
+  jurisdiction: WA
+  level: other
+  orgs:
+  - gov:uwa-oceans-institute-oi-the-university-of-western-australia-uwa
+- slug: western-australian-museum-wam
+  name: Western Australian Museum (WAM)
+  jurisdiction: WA
+  level: state
+  orgs:
+  - gov:western-australian-museum-wam

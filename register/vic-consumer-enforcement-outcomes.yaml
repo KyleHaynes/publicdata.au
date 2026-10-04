@@ -1,0 +1,94 @@
+slug: vic-consumer-enforcement-outcomes
+title: Consumer Affairs Victoria enforcement outcomes by year
+status: live
+topics:
+- government
+example:
+  group: type_of_enforcement_action
+  metric: sum.fy_2018_19
+  label: Actions, 2018-19
+order: 380
+publisher:
+  name: Consumer Affairs Victoria
+  short: Consumer Affairs Victoria
+  jurisdiction: Vic
+  url: https://www.consumer.vic.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://discover.data.vic.gov.au/dataset/enforcement-outcomes
+  attribution: Consumer Affairs Victoria, Victorian Government, Consumer Affairs Victoria - Enforcement
+    outcomes, sourced {sourced}, https://discover.data.vic.gov.au/dataset/enforcement-outcomes, licensed
+    under CC BY 4.0.
+temporal_start: '2012-07-01'
+search_title: Consumer Affairs Victoria prosecutions and enforceable undertakings by year (CAV)
+also_known_as:
+- Consumer Affairs Victoria enforcement outcomes
+- CAV prosecutions finalised
+- Victorian consumer law enforcement statistics
+keywords:
+- Consumer Affairs Victoria
+- enforcement
+- prosecutions
+- civil proceedings
+- enforceable undertakings
+- consumer law
+- Victoria
+faq:
+- q: What does each row hold?
+  a: Each row is one kind of enforcement action, with the number Consumer Affairs Victoria finalised
+    in each financial year from 2012-13 to 2018-19. The kinds are prosecutions finalised, parties to
+    civil proceedings and parties who signed enforceable undertakings.
+- q: Is the series still updated?
+  a: The publisher's file ends at 2018-19. A new year would arrive as a new column, which would be held
+    for review before it is published.
+summary: The number of prosecutions, civil proceedings and enforceable undertakings Consumer Affairs
+  Victoria finalised in each financial year from 2012-13 to 2018-19.
+description: Enforcement outcomes from Consumer Affairs Victoria, one row per kind of action with a count
+  for each financial year from 2012-13 to 2018-19. Prosecutions and civil proceedings are counted when
+  finalised, and enforceable undertakings by the parties who signed them.
+source:
+  adapter: ckan-resource
+  portal: https://discover.data.vic.gov.au
+  package: enforcement-outcomes
+  resource: b615f6fd-a8fe-4e02-9ff6-2d3e73f72149
+  url: https://discover.data.vic.gov.au/dataset/enforcement-outcomes
+  cadence: no longer updated
+  encoding: utf-8-sig
+key:
+- type_of_enforcement_action
+row_label: Kinds of action
+fields:
+- name: type_of_enforcement_action
+  label: Type of enforcement action
+  source: Type of enforcement action
+  type: string
+- name: fy_2012_13
+  label: 2012-13
+  source: 2012-13
+  type: integer
+- name: fy_2013_14
+  label: 2013-14
+  source: 2013-14
+  type: integer
+- name: fy_2014_15
+  label: 2014-15
+  source: 2014-15
+  type: integer
+- name: fy_2015_16
+  label: 2015-16
+  source: 2015-16
+  type: integer
+- name: fy_2016_17
+  label: 2016-17
+  source: 2016-17
+  type: integer
+- name: fy_2017_18
+  label: 2017-18
+  source: 2017-18
+  type: integer
+- name: fy_2018_19
+  label: 2018-19
+  source: 2018-19
+  type: integer

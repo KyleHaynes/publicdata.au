@@ -1,0 +1,184 @@
+slug: au-building-approvals-by-lga-2025-26
+title: Building approvals by Local Government Area, monthly, 2025-26, Australia
+status: live
+topics:
+- housing
+example:
+  where: {month: newest, measure_code: '1', work_type_code: TOT, building_type_code: TOT}
+  group: lga_name
+  metric: sum.value
+  label: Dwelling units approved in the newest month
+chart:
+  where: {measure_code: '1', work_type_code: TOT, building_type_code: TOT}
+  split: none
+  metric: sum.value
+  label: Dwelling units approved
+sample:
+  where: {month: newest, measure_code: '1', work_type_code: TOT, building_type_code: TOT}
+  order: [value.desc]
+  spread: none
+  label: The ten council areas with the most dwelling units approved in the newest month, most first.
+order: 503
+publisher:
+  name: Australian Bureau of Statistics
+  short: ABS
+  jurisdiction: Cth
+  url: https://www.abs.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.abs.gov.au/website-privacy-copyright-and-disclaimer
+  statement: All material presented on this website is provided under a Creative Commons Attribution 4.0
+    International licence
+  attribution: Australian Bureau of Statistics, Building Approvals by Local Government Area (LGA 2025) (BA_LGA2025),
+    ABS Data Explorer, sourced {sourced}, https://explore.data.abs.gov.au/vis?df[ds]=ABS_ABS_TOPICS&df[id]=BA_LGA2025&df[ag]=ABS&df[vs]=1.0.0,
+    licensed under CC BY 4.0.
+temporal_start: '2025-07-01'
+search_title: Building approvals by council area each month, 2025-26, Australia (ABS)
+also_known_as:
+- Dwelling approvals by LGA
+- New houses approved by council area
+- Building approvals by Local Government Area ABS
+- Residential building approvals by council
+keywords:
+- building approvals
+- dwelling approvals
+- new houses
+- apartments
+- council area
+- LGA
+- ABS
+faq:
+- q: What is in each row?
+  a: One measure for one council area, one month from July 2025 to June 2026, one type of work and one
+    type of building. The measures are the number of dwelling units approved, the number of building jobs
+    valued at $50,000 or more, and the value of building jobs in thousands of dollars. All rows are for
+    the private and public sectors together.
+- q: Why are some values blank?
+  a: The ABS marks a figure it does not publish for a council area, usually to protect confidentiality,
+    with observation status n. The value is blank and the status column carries the ABS's code and
+    meaning. Those figures are still counted in the ABS's state and national totals.
+- q: Which council boundaries are used?
+  a: The Local Government Areas of the ABS's 2025 edition, the same edition as the council boundaries
+    dataset here. The ABS publishes each financial year as its own table on that year's boundaries, so
+    earlier and later years are separate tables.
+- q: Which building types are included?
+  a: Total residential and its parts (houses, townhouses and other semi-detached dwellings, apartments
+    and other residential), the commercial, industrial and other non-residential totals, total
+    non-residential and the total of all building. The finer non-residential types the ABS publishes are
+    left out of this table.
+summary: Dwellings and building jobs approved each month in 2025-26 in every Australian council area, by
+  type of work and type of building, with their value, from the ABS.
+description: The ABS Data Explorer table BA_LGA2025, building approvals by Local Government Area (LGA 2025),
+  read for the total of both sectors, Local Government Areas only, and the residential types with the
+  non-residential totals. Each row is one month, council area, measure, type of work and type of building,
+  with its value, unit and the ABS observation status. The ABS codes are kept beside the names it gives
+  them.
+source:
+  adapter: file
+  url: https://data.api.abs.gov.au/rest/data/ABS,BA_LGA2025,1.0.0/.9..100+110+120+130+150+200+300+400+700+TOT.LGA2025..M?format=csvfilewithlabels
+  format: csv
+  cadence: monthly
+key:
+- lga_code
+- month
+- measure_code
+- work_type_code
+- building_type_code
+partition_by:
+- measure
+row_label: Council area monthly approvals
+fields:
+- name: lga_code
+  label: Council area code (LGA 2025)
+  source: REGION
+  type: string
+- name: lga_name
+  label: Council area (LGA 2025)
+  source: Region
+  type: string
+- name: month
+  label: Month
+  source: TIME_PERIOD
+  type: date
+  date_format: '%Y-%m'
+  description: First day of the month the approvals were made in.
+- name: measure_code
+  label: Measure code
+  source: MEASURE
+  type: string
+- name: measure
+  label: Measure
+  source: Measure
+  type: string
+- name: work_type_code
+  label: Type of work code
+  source: WORK_TYPE
+  type: string
+- name: work_type
+  label: Type of work
+  source: Type of work
+  type: string
+- name: building_type_code
+  label: Type of building code
+  source: BUILDING_TYPE
+  type: string
+- name: building_type
+  label: Type of building
+  source: Type of building
+  type: string
+- name: value
+  label: Value
+  source: OBS_VALUE
+  type: number
+  description: The count, or for the value of building jobs the dollars in thousands, as the unit and
+    multiplier columns state.
+- name: unit
+  label: Unit
+  source: Unit of Measure
+  type: string
+- name: unit_multiplier
+  label: Unit multiplier
+  source: Unit of Multiplier
+  type: string
+- name: obs_status
+  label: Observation status
+  source: OBS_STATUS
+  type: string
+- name: obs_status_meaning
+  label: Observation status meaning
+  source: Observation Status
+  type: string
+omit:
+  STRUCTURE: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the label or
+    code beside a kept column.
+  STRUCTURE_ID: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the label
+    or code beside a kept column.
+  STRUCTURE_NAME: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the label
+    or code beside a kept column.
+  ACTION: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the label or code
+    beside a kept column.
+  SECTOR: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the label or code
+    beside a kept column.
+  Sector of Ownership: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the
+    label or code beside a kept column.
+  REGION_TYPE: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the label
+    or code beside a kept column.
+  Region Type: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the label
+    or code beside a kept column.
+  FREQ: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the label or code
+    beside a kept column.
+  Frequency: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the label or
+    code beside a kept column.
+  Time Period: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the label
+    or code beside a kept column.
+  Observation Value: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the
+    label or code beside a kept column.
+  UNIT_MEASURE: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the label
+    or code beside a kept column.
+  UNIT_MULT: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the label or
+    code beside a kept column.
+  OBS_COMMENT: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the label
+    or code beside a kept column.
+  Observation Comment: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the
+    label or code beside a kept column.

@@ -1,0 +1,34 @@
+{
+  "dataset": "nsw-liquor-licence-premises",
+  "version": "2024-06-18",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:05:39+00:00",
+  "sha256": "3ced76483494c19200230b8d200d48db0c345ad906537135324e1cc4274347ad",
+  "bytes": 6266323,
+  "filename": "premises-list-as-at-7-jun-2024.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://data.nsw.gov.au/data/dataset/297dfb0e-3b94-433b-be64-3bb0905e28a4/resource/3d905957-13aa-4fd8-abda-91860169fb5b/download/premises-list-as-at-7-jun-2024.csv",
+    "portal": "https://data.nsw.gov.au/data",
+    "package": "liquor-licence-premises-list",
+    "package_id": "297dfb0e-3b94-433b-be64-3bb0905e28a4",
+    "resource": "3d905957-13aa-4fd8-abda-91860169fb5b",
+    "resource_name": "Premises list as at 7 Jun 2024",
+    "resource_last_modified": "2024-06-18T05:47:27.792292",
+    "package_modified": "2024-06-18T05:56:49.711656",
+    "package_version": null,
+    "etag": "1718689648.0-6266323-1161894249",
+    "http_last_modified": "Tue, 18 Jun 2024 05:47:28 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution",
+    "url": "http://www.opendefinition.org/licenses/cc-by",
+    "read_from": "https://data.nsw.gov.au/data/api/3/action/package_show?id=liquor-licence-premises-list",
+    "read_at": "2026-10-03T03:05:19+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "761bd501d3948985c5ea9409d54593b1d8a670f6a2f24814173edb6a80292bae"
+}

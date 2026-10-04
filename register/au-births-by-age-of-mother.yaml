@@ -1,0 +1,145 @@
+slug: au-births-by-age-of-mother
+title: Registered births by age of mother and nuptiality, Australia, 1975 onwards
+status: live
+topics:
+- people
+example:
+  where: {year: newest, nuptiality_code: TOT, age_code: {neq: TOT}}
+  group: age_of_mother
+  metric: sum.births
+  label: Births in the newest year by age of mother
+chart:
+  where: {nuptiality_code: {neq: TOT}, age_code: TOT}
+  split: nuptiality
+  metric: sum.births
+  label: Births
+sample:
+  where: {year: newest, nuptiality_code: TOT, age_code: {neq: TOT}}
+  order: [births.desc]
+  spread: none
+  label: The ten ages of mother with the most births in the newest year, counting every nuptiality group, most first.
+order: 500
+collection: au-abs-births
+collection_title: ABS registered births
+collection_search_title: Births in Australia by year, age of parents and state (ABS)
+collection_description: Registered births in Australia each year since 1975 from the ABS Births collection,
+  by the age of the mother, the age of the father and the state or territory of usual residence, as the
+  ABS publishes them in its Data Explorer.
+publisher:
+  name: Australian Bureau of Statistics
+  short: ABS
+  jurisdiction: Cth
+  url: https://www.abs.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.abs.gov.au/website-privacy-copyright-and-disclaimer
+  statement: All material presented on this website is provided under a Creative Commons Attribution 4.0
+    International licence
+  attribution: Australian Bureau of Statistics, Registered births, nuptiality by age of mother, 1975 onwards
+    (BIRTHS_AGE_MOTHER), ABS Data Explorer, sourced {sourced}, https://explore.data.abs.gov.au/vis?df[ds]=ABS_ABS_TOPICS&df[id]=BIRTHS_AGE_MOTHER&df[ag]=ABS&df[vs]=1.0.0,
+    licensed under CC BY 4.0.
+temporal_start: '1975-01-01'
+search_title: Births by age of mother each year since 1975, Australia (ABS)
+also_known_as:
+- Average age of mothers Australia
+- Teenage births Australia by year
+- Registered births by age of mother ABS
+- Nuptial and ex-nuptial births by age of mother
+keywords:
+- births
+- age of mother
+- fertility
+- teenage mothers
+- nuptiality
+- ABS
+- Australia
+faq:
+- q: What is in each row?
+  a: The number of births registered in Australia in one calendar year to mothers of one age, for one
+    nuptiality group. Ages run from 15 and under to 49 and over, with the ABS's rows for all ages and
+    for age not stated.
+- q: What does nuptiality mean?
+  a: A nuptial birth is one where the parents were married to each other when the birth was registered.
+    Ex-nuptial births are split by whether paternity was acknowledged. The Total group is the sum of the
+    three as the ABS publishes it.
+- q: Is the year the year of birth?
+  a: It is the year the birth was registered. Most births are registered in the year they occur, and a
+    late registration is counted in the year it was made.
+summary: Births registered in Australia each year since 1975 by single year of the mother's age and by
+  whether the parents were married, from the ABS. Updated yearly.
+description: The ABS Data Explorer table BIRTHS_AGE_MOTHER, registered births, nuptiality by age of mother,
+  1975 onwards. Each row is one year, one age of mother and one nuptiality group, with the number of births
+  registered. The ABS codes are kept beside the names it gives them.
+source:
+  adapter: file
+  url: https://data.api.abs.gov.au/rest/data/ABS,BIRTHS_AGE_MOTHER,1.0.0/all?format=csvfilewithlabels
+  format: csv
+  cadence: yearly
+key:
+- year
+- nuptiality_code
+- age_code
+row_label: Year, age and nuptiality counts
+fields:
+- name: year
+  label: Year of registration
+  source: TIME_PERIOD
+  type: integer
+- name: nuptiality_code
+  label: Nuptiality code
+  source: NUPT
+  type: string
+- name: nuptiality
+  label: Nuptiality
+  source: Nuptiality
+  type: string
+- name: age_code
+  label: Age code
+  source: AGE
+  type: string
+- name: age_of_mother
+  label: Age of mother
+  source: Age
+  type: string
+- name: births
+  label: Births
+  source: OBS_VALUE
+  type: integer
+omit:
+  STRUCTURE: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the label or
+    code beside a kept column.
+  STRUCTURE_ID: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the label
+    or code beside a kept column.
+  STRUCTURE_NAME: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the label
+    or code beside a kept column.
+  ACTION: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the label or code
+    beside a kept column.
+  MEASURE: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the label or code
+    beside a kept column.
+  Measure: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the label or code
+    beside a kept column.
+  REGION: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the label or code
+    beside a kept column.
+  Region: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the label or code
+    beside a kept column.
+  FREQ: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the label or code
+    beside a kept column.
+  Frequency: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the label or
+    code beside a kept column.
+  Time Period: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the label
+    or code beside a kept column.
+  Observation Value: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the
+    label or code beside a kept column.
+  UNIT_MEASURE: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the label
+    or code beside a kept column.
+  Unit of Measure: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the label
+    or code beside a kept column.
+  OBS_STATUS: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the label or
+    code beside a kept column.
+  Observation Status: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the
+    label or code beside a kept column.
+  OBS_COMMENT: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the label
+    or code beside a kept column.
+  Observation Comment: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the
+    label or code beside a kept column.

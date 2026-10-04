@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-road-crash-driver-demographics",
+  "version": "2026-04-24",
+  "as_at": "2025-06-30",
+  "fetched_at": "2026-09-24T14:15:48+00:00",
+  "sha256": "6a9b5ffed517cebbd7f3d688a5a1c62ee8f124c4182712321cb860309677ca83",
+  "bytes": 20700,
+  "filename": "_b_driver_involvement.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/f3e0ca94-2d7b-44ee-abef-d6b06e9b0729/resource/dd13a889-2a48-4b91-8c64-59f824ed3d2c/download/_b_driver_involvement.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "crash-data-from-queensland-roads",
+    "package_id": "f3e0ca94-2d7b-44ee-abef-d6b06e9b0729",
+    "resource": "dd13a889-2a48-4b91-8c64-59f824ed3d2c",
+    "resource_name": "Driver demographics",
+    "resource_last_modified": "2026-04-24T02:58:54.275241",
+    "package_modified": "2026-04-24T03:16:39.760744",
+    "package_version": "rqC45037- June 2025",
+    "etag": "142a740e3e1659046a53442c1ea58691",
+    "http_last_modified": "Fri, 24 Apr 2026 02:58:55 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_at": "2026-09-24T14:15:47+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [
+    "fixture: first 300 rows of the release"
+  ]
+}

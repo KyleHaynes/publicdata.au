@@ -1,0 +1,41 @@
+{
+  "dataset": "wa-dpird-weather-stations",
+  "version": "2026-02-13",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:14:31+00:00",
+  "sha256": "a2f7fa3bf272825ba3d213954abd0ad4aba42910402c390ac040b102a8814142",
+  "bytes": 143796,
+  "filename": "wa-dpird-weather-stations.geojson",
+  "encoding": "utf-8",
+  "source": {
+    "url": "https://public-services.slip.wa.gov.au/public/rest/services/SLIP_Public_Services/Environment/MapServer/60",
+    "portal": "https://catalogue.data.wa.gov.au",
+    "package": "dpird-weather-stations",
+    "package_id": "ae388325-2e9f-444e-b383-34760b844faf",
+    "package_modified": "2026-10-02T22:27:41.841648",
+    "layer_name": "DPIRD Weather Stations and Radar (DPIRD-075)",
+    "object_id_field": "objectid",
+    "last_edit_date": null,
+    "newest_record": 1770940800000,
+    "features": 246,
+    "date_fields": [
+      "start_date"
+    ]
+  },
+  "licence": {
+    "id": "cc-by",
+    "stated": "cc-by",
+    "normalised": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://catalogue.data.wa.gov.au/api/3/action/package_show?id=dpird-weather-stations",
+    "read_at": "2026-10-03T03:14:30+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [
+    "The layer states no edit date, so this version is dated by the newest record it holds.",
+    "The publisher offers no file. These bytes are every feature of the layer as the service returned them in WGS84, ordered by its object id, so the same layer gives the same bytes."
+  ],
+  "rows_sha256": "d73b556fd95a7890c2f605ba9a4ed757b79fb2b6db68cfdba563ca4c77212720"
+}

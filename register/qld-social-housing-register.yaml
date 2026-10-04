@@ -1,0 +1,179 @@
+slug: qld-social-housing-register
+title: Social housing register, Queensland
+status: live
+topics:
+- housing
+order: 285
+collection: qld-social-housing
+collection_title: Social housing data from Queensland
+collection_search_title: Queensland social housing data
+collection_description: |
+  The Queensland Department of Housing and Public Works publishes data on the people waiting for social housing and on the homes the state owns.
+
+  Social housing register has one row per application on the register at the end of a quarter. Social housing maintenance and modification expenditure has the department's spending on its own homes in a financial year.
+search_title: Queensland social housing register and waiting list (Department of Housing)
+also_known_as:
+- Queensland public housing waiting list
+- Queensland housing register applications
+- Social Housing Register Queensland
+keywords:
+- social housing
+- public housing
+- housing register
+- waiting list
+- homelessness
+- Queensland
+faq:
+- q: What is in each row?
+  a: One application on the social housing register at the date of the release. It gives the level of assessed housing need, the housing service centre, the council area and state electorate of the first preferred location, the bedrooms needed, the housing programs applied for, when the application was approved, months on the register, the family type, the number of people and up to six preferred letting areas.
+- q: What does a suppressed value mean?
+  a: The publisher writes n.a. where a value is unavailable or withheld for confidentiality. Every n.a. in this file is in a text column, such as the interview language, the letting areas and the yes or no flags, and it is kept there as the text n.a.
+- q: Does each release replace the last?
+  a: Yes. The publisher adds a new file every quarter, and this entry follows the newest. Each quarter is kept here as its own version. The row_id numbers each release and does not follow an application from one release to the next.
+summary: Every application on the Queensland social housing register at the end of the latest quarter, with the household's assessed need, preferred locations and time waiting.
+description: One row per application on the Queensland social housing register at the end of a quarter, with the level of housing need (Very High or High), active or inactive status, the housing service centre, council area and state electorate of the first locational preference, bedrooms required, the programs applied for, the month the application was approved, the months on the register, family type, people on the application, up to six preferred letting areas, and flags for disability, homelessness risk and Aboriginal and Torres Strait Islander households. The department changed its systems in 2019-20, which changed some coding.
+publisher:
+  name: Department of Housing and Public Works
+  short: Housing and Public Works
+  jurisdiction: Qld
+  url: https://www.housing.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/social-housing-register
+  attribution: Department of Housing and Public Works, Queensland Government, Social Housing Register, sourced
+    {sourced}, https://www.data.qld.gov.au/dataset/social-housing-register, licensed under CC BY 4.0.
+example:
+  group: local_govt_authority
+  metric: count
+  label: Applications
+chart:
+  split: application_list_status_desc
+  metric: count
+  label: Applications on the register approved
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: social-housing-register
+  resource_match: Data File
+  url: https://www.data.qld.gov.au/dataset/social-housing-register
+  cadence: quarterly
+  encoding: utf-8-sig
+suppression:
+- n.a.
+key:
+- row_id
+partition_by:
+- local_govt_authority
+place_field: local_govt_authority
+row_label: Applications
+fields:
+- name: row_id
+  label: Row number
+  source: row_id
+  type: integer
+  description: Numbers the rows of one release.
+- name: application_list_category
+  label: Housing need
+  source: ApplicationListCategory
+  type: string
+  description: Level of assessed housing need, Very High or High.
+- name: housing_service_centre
+  label: Housing service centre
+  source: HousingServiceCentre
+  type: string
+  description: Where the application was lodged.
+- name: local_govt_authority
+  label: Council area
+  source: LocalGovtAuthority
+  type: string
+  description: Council area of the household's first locational preference.
+- name: state_electorate
+  label: State electorate
+  source: StateElectorate
+  type: string
+  description: State electorate of the household's first locational preference.
+- name: application_list_status_desc
+  label: Status
+  source: ApplicationListStatusDesc
+  type: string
+  description: ACTIVE when ready to be offered housing, INACTIVE when the applicant is not yet ready.
+- name: rehousing_list_desc
+  label: Application kind
+  source: RehousingListDesc
+  type: string
+  description: Whether the application is new or a transfer.
+- name: language_preference
+  label: Interview language
+  source: LanguagePreference
+  type: string
+- name: bedrooms_required
+  label: Bedrooms required
+  source: BedroomsRequired
+  type: integer
+- name: application_type
+  label: Programs applied for
+  source: ApplicationType
+  type: string
+  description: Public/CH is public or community housing, ATSIH is Aboriginal and Torres Strait Islander Housing, RIC is Remote Indigenous Community.
+- name: application_received_month
+  label: Approved
+  source: ApplicationReceivedMonth
+  type: date
+  date_format: '%b-%y'
+  description: First day of the month the application was approved.
+- name: months_on_housing_register
+  label: Months on register
+  source: MonthsonHousingRegister
+  type: integer
+- name: family_type
+  label: Family type
+  source: FamilyType
+  type: string
+- name: people_on_application
+  label: People on application
+  source: PeopleonApplication
+  type: integer
+- name: letting_area_1
+  label: Letting area preference 1
+  source: LettingArea1Desc
+  type: string
+- name: letting_area_2
+  label: Letting area preference 2
+  source: LettingArea2Desc
+  type: string
+- name: letting_area_3
+  label: Letting area preference 3
+  source: LettingArea3Desc
+  type: string
+- name: letting_area_4
+  label: Letting area preference 4
+  source: LettingArea4Desc
+  type: string
+- name: letting_area_5
+  label: Letting area preference 5
+  source: LettingArea5Desc
+  type: string
+- name: letting_area_6
+  label: Letting area preference 6
+  source: LettingArea6Desc
+  type: string
+- name: disability_mod_request
+  label: Disability modifications requested
+  source: DisabilityModRequestFlag
+  type: string
+- name: at_risk_of_or_experiencing_homelessness
+  label: Homeless or at risk
+  source: AtRiskOfOrExperiencingHomelessnessFlag
+  type: string
+  description: Yes, No or n.a., at the time of application.
+- name: disability_application
+  label: Household with disability
+  source: DisabilityApplicationFlag
+  type: string
+  description: Yes, No or n.a.
+- name: indigenous_application
+  label: Aboriginal or Torres Strait Islander household
+  source: IndigenousApplicationFlag
+  type: string
+  description: Yes, No or n.a.

@@ -1,0 +1,32 @@
+{
+  "dataset": "act-traffic-camera-offences-2010-2021",
+  "version": "2025-05-15",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:11:06+00:00",
+  "sha256": "051fbff135512437e031c1b903c39dc73357580a6a59ffb307072145009671e2",
+  "bytes": 13268037,
+  "filename": "2sx9-4wg7.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.act.gov.au/api/views/2sx9-4wg7/rows.csv?accessType=DOWNLOAD",
+    "portal": "https://www.data.act.gov.au",
+    "package": "2sx9-4wg7",
+    "resource_name": "Traffic camera offences and fines from 07/2010 to 06/2021",
+    "rows_updated_at": 1747266326,
+    "etag": "Zm94dHJvdC41Nzc3NF8yXzE1MXpGNDNGelJHbWV1eG1hSGdsc3ZRaFp5bmkyVQ---gziuyllO_lx7KOMRtK_gAjUo4zMV6I--gzip--gzip",
+    "http_last_modified": "Wed, 02 Jul 2025 19:14:20 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "stated": "CC_40_BY",
+    "normalised": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0 International",
+    "url": "http://creativecommons.org/licenses/by/4.0/legalcode",
+    "read_from": "https://www.data.act.gov.au/api/views/2sx9-4wg7.json",
+    "read_at": "2026-10-03T03:10:58+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "6ef01f2596d36ef51d9b3df18c0fcb934754711937dc8b7dab47f73eaabc0e87"
+}

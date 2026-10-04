@@ -1,0 +1,78 @@
+slug: nt-crocodile-capture-zones
+title: Crocodile capture zones, Northern Territory
+status: live
+topics:
+- nature
+- places
+order: 496
+collection: nt-crocodile-capture-zones
+collection_title: Crocodile capture zones and captures, Northern Territory
+search_title: NT crocodile capture zone boundaries (Parks and Wildlife Commission)
+also_known_as:
+- NT Crocodile Capture Zones
+- Darwin crocodile management zone map
+- Crocodile removal zones NT
+keywords:
+- crocodile
+- capture zones
+- crocodile management
+- Darwin Harbour
+- Northern Territory
+faq:
+- q: What is in each row?
+  a: One capture zone, with its name, its code and the date the boundary was created, and the zone's
+    shape. The zone code matches the zone code on each capture in the crocodile captures table.
+- q: How often does it change?
+  a: The boundaries in the October 2026 version were all created on 9 June 2021. This site checks the
+    file weekly and adds a dated version when it changes.
+summary: The boundaries of the nine zones where the Northern Territory removes crocodiles, one row per
+  zone, with name, code and shape.
+description: The nine crocodile capture zones of the Northern Territory, from Upper Harbour, Lower
+  Harbour and Shoal Bay around Darwin to Katherine, Borroloola, Litchfield and Nhulunbuy, with the
+  Management Zone and the area outside it. Each row carries the zone name, its code and the date the
+  boundary was created, with the zone's shape.
+publisher:
+  name: Department of Lands, Planning and Environment
+  short: Lands, Planning and Environment
+  jurisdiction: NT
+  url: https://nt.gov.au/environment/animals/wildlife-in-nt/crocodiles
+licence:
+  id: CC-BY-4.0
+  portal_id: cc-by
+  reviewed: '2026-10-01'
+  evidence: https://data.nt.gov.au/dataset/nt-crocodile-capture-zones-and-daily-count
+  attribution: Parks and Wildlife Commission of the Northern Territory, Northern Territory Government,
+    NT Crocodile Capture Zones and Daily Count, https://data.nt.gov.au/dataset/nt-crocodile-capture-zones-and-daily-count,
+    accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: ckan-resource
+  portal: https://data.nt.gov.au
+  package: nt-crocodile-capture-zones-and-daily-count
+  resource: 53bf0127-f208-44b2-8340-ec79ce6e0a15
+  url: https://data.nt.gov.au/dataset/nt-crocodile-capture-zones-and-daily-count
+  member: Wildlife_CrocCaptureZones/Data/NT_Croc_Capture_Zones.shp
+  cadence: when the zones change
+key:
+- zone_code
+geometry:
+  kind: polygon
+  crs: EPSG:4283
+  crs_note: The publisher's shapefile is in GDA94 (EPSG:4283), moved to GDA2020 here.
+  maxzoom: 10
+row_label: Zones
+fields:
+- name: zone_name
+  label: Capture zone
+  source: ZONENAME
+  type: string
+- name: zone_code
+  label: Zone code
+  source: ZONECODE
+  type: integer
+- name: created
+  label: Created
+  source: CREATED
+  type: date
+  description: The date the zone boundary was created.
+note: Cells were typed and headers were made snake_case. The publisher's header is kept beside every
+  field in schema.json. Rows were left alone.

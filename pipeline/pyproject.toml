@@ -1,0 +1,45 @@
+[project]
+name = "publicdata"
+version = "0.1.0"
+description = "Builds publicdata.au: versioned, schema-carrying serialisations of open government data."
+requires-python = ">=3.14"
+license = "AGPL-3.0-or-later"
+dependencies = [
+  "pyarrow>=25.0.1",
+  "pyyaml>=6.0.3",
+  "requests>=2.34.2",
+  "jinja2>=3.1.6",
+  "zstandard>=0.25.0",
+  "xlsxwriter>=3.2.9",
+  "openpyxl>=3.1.5",
+  "pillow>=12.3.0",
+  "duckdb>=1.5.0",
+  "pmtiles>=3.8.1",
+  "xlrd>=2.0.2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=9.1.1", "pytest-xdist>=3.8", "ruff>=0.16.9"]
+deploy = ["boto3>=1.43.104"]
+hubs = ["huggingface_hub>=2.0.0", "kaggle>=2.2.4"]
+
+[build-system]
+requires = ["setuptools>=84"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["publicdata*"]
+
+[tool.setuptools.package-data]
+publicdata = ["templates/*", "static/*", "static/fonts/*", "schemaorg.json", "api.json", "au_states.json"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py314"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "W"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,30 @@
+{
+  "dataset": "au-homelessness-services-monthly",
+  "version": "2026-08-19",
+  "as_at": "",
+  "fetched_at": "2026-09-30T19:39:51+00:00",
+  "sha256": "160454cc6cd341e5fb01da989c00fd54a75cb53e9dbdde1e77c0a093f837d845",
+  "bytes": 1596787,
+  "filename": "aihw-hou-321-SHS-data-tables_June-2026.xlsx",
+  "encoding": "xlsx",
+  "source": {
+    "url": "https://www.aihw.gov.au/getmedia/294121b6-b7d5-4f6b-9480-04d60bcc716d/aihw-hou-321-SHS-data-tables_June-2026.xlsx",
+    "page": "https://www.aihw.gov.au/reports/homelessness-services/specialist-homelessness-services-monthly-data/data",
+    "resource_name": "Data tables: Specialist Homelessness Services monthly data",
+    "catalogue_number": "HOU 321",
+    "listed_date": "2023-09-01",
+    "etag": "639227378218221541",
+    "http_last_modified": "Wed, 19 Aug 2026 02:03:41 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "stated": "has been released under a Creative Commons BY 4.0 (CC-BY 4.0) licence",
+    "normalised": "CC-BY-4.0",
+    "title": "CC BY 4.0",
+    "url": "https://www.aihw.gov.au/copyright",
+    "read_at": "2026-09-30T19:39:49+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": []
+}

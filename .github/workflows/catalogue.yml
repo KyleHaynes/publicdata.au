@@ -1,0 +1,105 @@
+name: Catalogue
+
+# Harvests every government portal's dataset list, stores a new snapshot when the bytes changed,
+# pushes it to R2 and opens a pull request with its manifest, which merges itself once data-pr.yml
+# has approved it as the fetch's own and the checks are green. It runs apart from the dataset fetch,
+# so a slow portal never holds up a dataset's new version.
+on:
+  schedule:
+    - cron: "47 20 * * 1" # Tuesday 06:47 Brisbane, after the dataset fetch
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: catalogue
+  cancel-in-progress: false
+
+jobs:
+  harvest:
+    # Side effects run only in the public repo, never in a fork or a private copy.
+    if: github.repository == 'National-Digital/publicdata.au'
+    # Some portals turn away cloud runners, so the harvest runs from the same Australian host as
+    # the dataset fetch.
+    runs-on: [self-hosted, publicdata-fetch]
+    environment: fetch
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Install gh
+        env:
+          GH_VERSION: 2.101.0
+          GH_SHA256: 9bca2d1c16825f109907a23307628a2f0698fbf99662b73a5cf0b020293072b8
+        run: |
+          f="$RUNNER_TEMP/gh.tar.gz"
+          curl -fsSL -o "$f" "https://github.com/cli/cli/releases/download/v${GH_VERSION}/gh_${GH_VERSION}_linux_amd64.tar.gz"
+          echo "$GH_SHA256  $f" | sha256sum -c -
+          tar xzf "$f" -C "$RUNNER_TEMP"
+          echo "$RUNNER_TEMP/gh_${GH_VERSION}_linux_amd64/bin" >> "$GITHUB_PATH"
+      - id: py
+        run: echo "version=$(cat .python-version)" >> "$GITHUB_OUTPUT"
+      - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
+        with:
+          python-version: ${{ steps.py.outputs.version }}
+          activate-environment: true
+      - run: uv pip install -e './pipeline[deploy]'
+      # A portal that cannot be read keeps its records from the latest snapshot, so that snapshot
+      # is pulled first.
+      - name: Harvest
+        id: run
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_API_TOKEN_ID: ${{ secrets.CLOUDFLARE_API_TOKEN_ID }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          set -o pipefail
+          python -m publicdata store pull --only catalogue 2>&1 | tee harvest.log
+          python -m publicdata catalogue fetch 2>&1 | { grep -v '^catalogue [a-z]*: [0-9]' || true; } | tee -a harvest.log
+      - name: Count new snapshots
+        id: harvest
+        run: |
+          echo "changed=$(grep -cE '^catalogue: new version [0-9]{4}-' harvest.log || true)" >> "$GITHUB_OUTPUT"
+      - name: Push the snapshot to R2
+        if: steps.harvest.outputs.changed != '0'
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_API_TOKEN_ID: ${{ secrets.CLOUDFLARE_API_TOKEN_ID }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+        run: python -m publicdata store push
+      # The fetch app's own identity opens the PR: only the app may push data/ branches, and data-pr.yml
+      # approves only PRs it opened. Minted here because a token lasts an hour and a run can last longer.
+      - name: Act as the fetch app
+        id: app
+        if: steps.harvest.outputs.changed != '0'
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        with:
+          client-id: ${{ vars.FETCH_APP_CLIENT_ID }}
+          private-key: ${{ secrets.FETCH_APP_PRIVATE_KEY }}
+          permission-contents: write
+          permission-pull-requests: write
+      - name: Open a pull request with the snapshot
+        if: steps.harvest.outputs.changed != '0'
+        env:
+          GH_TOKEN: ${{ steps.app.outputs.token }}
+        run: |
+          # Pushes go as the app too, in place of the checkout's own credential.
+          git config --local --replace-all http.https://github.com/.extraheader "AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)"
+          DATE=$(date -u +%Y-%m-%d)
+          git config user.name "publicdata fetch"
+          git config user.email "fetch@publicdata.au"
+          git checkout -b "data/catalogue-$DATE-${{ github.run_id }}"
+          git add store/catalogue/*/manifest.json
+          git commit -s -m "data(catalogue): portal dataset lists harvested $DATE" -m "$(grep -E '^catalogue: new version' harvest.log)"
+          git push -u origin HEAD
+          gh pr create --title "data(catalogue): portal dataset lists harvested $DATE" --body "$(printf 'The harvest found changed portal dataset lists.\n\n```\n%s\n```\n\nThe snapshot is in R2 under publicdata-raw. Merging publishes it.' "$(cat harvest.log)")"
+          gh pr merge --auto --squash || echo "::warning::auto-merge was not armed; merge the PR by hand."
+      - name: Fail when a portal could not be read
+        if: always()
+        env:
+          HARVEST: ${{ steps.run.outcome }}
+        run: |
+          if [ "$HARVEST" != "success" ] || grep -E 'could not be read|FAILED' harvest.log; then
+            echo "Some portals could not be read; see the lines above and the pull request body." >> "$GITHUB_STEP_SUMMARY"
+            exit 1
+          fi

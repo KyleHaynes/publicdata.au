@@ -1,0 +1,33 @@
+{
+  "dataset": "au-localities-wa",
+  "version": "2026-08-17",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:15:36+00:00",
+  "sha256": "f5200b312dcb03b5aa67756859f183d8d007844c54b802dabf5839c06ec045c6",
+  "bytes": 21059438,
+  "filename": "wa_loc_gda2020.zip",
+  "encoding": "zip",
+  "source": {
+    "url": "https://data.gov.au/data/dataset/6a0ec945-c880-4882-8a81-4dbcb85e74e5/resource/d88e0e12-a74c-4085-b7e8-31bb2aee080a/download/wa_loc_gda2020.zip",
+    "portal": "https://data.gov.au/data",
+    "package": "wa-suburb-locality-boundaries-geoscape-administrative-boundaries",
+    "package_id": "6a0ec945-c880-4882-8a81-4dbcb85e74e5",
+    "resource": "d88e0e12-a74c-4085-b7e8-31bb2aee080a",
+    "resource_name": "AUG26 - WA - Geoscape Localities - Esri Shapefiles - GDA2020",
+    "resource_last_modified": "2026-08-17T03:55:42.784528",
+    "package_modified": "2026-08-17T04:38:30.849981",
+    "package_version": null,
+    "etag": "1786938944.479-21059438-3553693690",
+    "http_last_modified": "Mon, 17 Aug 2026 03:55:44 GMT"
+  },
+  "licence": {
+    "id": "cc-by-4.0",
+    "title": "Creative Commons Attribution 4.0 International",
+    "url": "http://creativecommons.org/licenses/by/4.0",
+    "read_from": "https://data.gov.au/data/api/3/action/package_show?id=wa-suburb-locality-boundaries-geoscape-administrative-boundaries",
+    "read_at": "2026-10-03T03:15:35+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": []
+}

@@ -1,0 +1,33 @@
+{
+  "dataset": "vic-traffic-volume-aadt-2019",
+  "version": "2025-06-24",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:07:37+00:00",
+  "sha256": "aa310b3f648841f1c1cb5fb4def33ec64af722551136dac24a7ee2b0783ed932",
+  "bytes": 32003566,
+  "filename": "yearly_aadt_volume_2019.geojson",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://opendata.transport.vic.gov.au/dataset/26fafd1a-8d59-4da0-93cd-29f371147d8f/resource/425799c9-658c-41cf-b9b0-6c9a145856cf/download/yearly_aadt_volume_2019.geojson",
+    "portal": "https://discover.data.vic.gov.au",
+    "package": "historical-annual-average-daily-traffic-volume",
+    "package_id": "b61b65c6-ad72-4f66-801f-d2d1a19e8110",
+    "resource": "425799c9-658c-41cf-b9b0-6c9a145856cf",
+    "resource_name": "Annual Average Daily Traffic Volume - 2019",
+    "resource_last_modified": "2025-06-24T01:00:30.152451",
+    "package_modified": "2025-07-14T13:35:13.836165",
+    "package_version": null,
+    "etag": "1750726831.1764498-32003566-1872368240",
+    "http_last_modified": "Tue, 24 Jun 2025 01:00:31 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution 4.0 International",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://discover.data.vic.gov.au/api/3/action/package_show?id=historical-annual-average-daily-traffic-volume",
+    "read_at": "2026-10-03T03:07:36+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": []
+}

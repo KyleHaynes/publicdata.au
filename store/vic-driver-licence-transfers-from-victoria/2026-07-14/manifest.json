@@ -1,0 +1,34 @@
+{
+  "dataset": "vic-driver-licence-transfers-from-victoria",
+  "version": "2026-07-14",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:07:28+00:00",
+  "sha256": "7d18ce8c9eb9d0c188c970b373669ac07e4d2b9858ccba1002b88649dcfef7d5",
+  "bytes": 231,
+  "filename": "quarterly_driver_licence_transfers_from_victoria.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://opendata.transport.vic.gov.au/dataset/32421f45-d1f1-44a4-9a0b-dfa954e349e6/resource/0770c646-487b-467a-b5d7-1dc9ecc82a9a/download/quarterly_driver_licence_transfers_from_victoria.csv",
+    "portal": "https://discover.data.vic.gov.au",
+    "package": "quarterly-driver-licence-transfers-from-victoria",
+    "package_id": "d686c8ba-3b2e-46ed-85ff-4a9df5b38815",
+    "resource": "0770c646-487b-467a-b5d7-1dc9ecc82a9a",
+    "resource_name": "Quarterly Driver Licence Transfers from Victoria",
+    "resource_last_modified": "2026-07-14T01:37:04.076953",
+    "package_modified": "2026-07-14T04:35:14.703942",
+    "package_version": null,
+    "etag": "1783993024.23793-231-1865093825",
+    "http_last_modified": "Tue, 14 Jul 2026 01:37:04 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution 4.0 International",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://discover.data.vic.gov.au/api/3/action/package_show?id=quarterly-driver-licence-transfers-from-victoria",
+    "read_at": "2026-10-03T03:07:28+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "06fdef701a497b4924af263de443c995cad4d633270c13112c6b48bd5936e2e5"
+}

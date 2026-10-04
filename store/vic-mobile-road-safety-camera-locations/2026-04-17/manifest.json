@@ -1,0 +1,34 @@
+{
+  "dataset": "vic-mobile-road-safety-camera-locations",
+  "version": "2026-04-17",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:09:45+00:00",
+  "sha256": "8763f26fa28af2109a563f8b3a2b4b54c660681769c81f15ad3ea4cf84091bea",
+  "bytes": 114658,
+  "filename": "Mobile-Camera-Locations-April-2026.xlsx",
+  "encoding": "xlsx",
+  "source": {
+    "url": "https://www.vic.gov.au/sites/default/files/2026-03/Mobile-Camera-Locations-April-2026.xlsx",
+    "portal": "https://discover.data.vic.gov.au",
+    "package": "road-safety-camera-network-mobile-camera-locations",
+    "package_id": "0934b636-39de-4d00-b1f9-f58b6873e99f",
+    "resource": "03d31a16-ff5a-44ce-a1b1-0f500dcd8d26",
+    "resource_name": "Mobile Camera Locations - April 2026",
+    "resource_last_modified": null,
+    "package_modified": "2026-04-16T23:20:31.012747",
+    "package_version": null,
+    "etag": "69c08981-1bfe2",
+    "http_last_modified": "Mon, 23 Mar 2026 00:29:53 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution 4.0 International",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://discover.data.vic.gov.au/api/3/action/package_show?id=road-safety-camera-network-mobile-camera-locations",
+    "read_at": "2026-10-03T03:09:44+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "5197e51ac4d0b59794b57f48d2e0060cbf6032e6a053694a16c2be9a7c802d50"
+}

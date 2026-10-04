@@ -1,0 +1,34 @@
+{
+  "dataset": "sa-registered-vehicles-by-body-type",
+  "version": "2026-07-10",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:10:17+00:00",
+  "sha256": "86f39b4eabf5101bd3c161d1dc6baa8d8aaf21967afe53c037a520b17af280f6",
+  "bytes": 3821,
+  "filename": "registered-vehicles-by-body-type-q2-2026.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://data.sa.gov.au/data/dataset/c906fffd-6dc7-42d7-8618-e8b66d3c6fe0/resource/fe93dfd4-3de6-47bd-a61b-7182408811bc/download/registered-vehicles-by-body-type-q2-2026.csv",
+    "portal": "https://data.sa.gov.au/data",
+    "package": "registered-vehicles-by-body-type",
+    "package_id": "c906fffd-6dc7-42d7-8618-e8b66d3c6fe0",
+    "resource": "fe93dfd4-3de6-47bd-a61b-7182408811bc",
+    "resource_name": "Registered Vehicles by Body Type (Q2 2026)",
+    "resource_last_modified": "2026-07-09T23:45:15.410222",
+    "package_modified": "2026-07-09T23:47:05.354644",
+    "package_version": null,
+    "etag": "1783640716.184-3821-1479416215",
+    "http_last_modified": "Thu, 09 Jul 2026 23:45:16 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution",
+    "url": "http://creativecommons.org/licenses/by/4.0",
+    "read_from": "https://data.sa.gov.au/data/api/3/action/package_show?id=registered-vehicles-by-body-type",
+    "read_at": "2026-10-03T03:10:17+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "5909e6eeb79c1c83f9dd187cb4917c7efeb2ac6f0c6965cb6a513b434ea8716e"
+}

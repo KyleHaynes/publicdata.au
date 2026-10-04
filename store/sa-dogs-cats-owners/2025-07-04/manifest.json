@@ -1,0 +1,34 @@
+{
+  "dataset": "sa-dogs-cats-owners",
+  "version": "2025-07-04",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:10:22+00:00",
+  "sha256": "53c0579babf6149642af06e4d216c7fbc743849e930e16028ad1c238027385e5",
+  "bytes": 480810,
+  "filename": "data_sa_owners-2025-05-30.xlsx",
+  "encoding": "xlsx",
+  "source": {
+    "url": "https://data.sa.gov.au/data/dataset/11b13cf9-e361-4625-850c-f703e27a146b/resource/36a83a40-36e8-4dc2-9c25-16028702bb4d/download/data_sa_owners-2025-05-30.xlsx",
+    "portal": "https://data.sa.gov.au/data",
+    "package": "dogs-and-cats-online-data-2024-2025",
+    "package_id": "11b13cf9-e361-4625-850c-f703e27a146b",
+    "resource": "36a83a40-36e8-4dc2-9c25-16028702bb4d",
+    "resource_name": "DATA_SA_Owners - 2025-05-30",
+    "resource_last_modified": "2025-07-04T01:27:35.312316",
+    "package_modified": "2025-07-04T01:32:01.092920",
+    "package_version": null,
+    "etag": "1751592455.545-480810-1023940810",
+    "http_last_modified": "Fri, 04 Jul 2025 01:27:35 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution",
+    "url": "http://creativecommons.org/licenses/by/4.0",
+    "read_from": "https://data.sa.gov.au/data/api/3/action/package_show?id=dogs-and-cats-online-data-2024-2025",
+    "read_at": "2026-10-03T03:10:22+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "833fb4c379600b3dbc39a260b123efc87e080fcbf54d24f783d9d082b796f832"
+}

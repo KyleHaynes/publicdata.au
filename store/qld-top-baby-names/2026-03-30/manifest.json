@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-top-baby-names",
+  "version": "2026-03-30",
+  "as_at": "",
+  "fetched_at": "2026-10-03T02:59:27+00:00",
+  "sha256": "bfc016aba2ab1c3669acc197a3912816992152e823017a0a2a5a43fb51b7a1d8",
+  "bytes": 2171,
+  "filename": "top-100-baby-names-2025.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/2785b0e3-7926-4f23-bd13-7c81b232b744/resource/48619191-15bf-4028-9dbe-f12175810f2b/download/top-100-baby-names-2025.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "top-100-baby-names",
+    "package_id": "2785b0e3-7926-4f23-bd13-7c81b232b744",
+    "resource": "48619191-15bf-4028-9dbe-f12175810f2b",
+    "resource_name": "2025 Top 100 Baby Names",
+    "resource_last_modified": "2026-03-30T03:39:36.775996",
+    "package_modified": "2026-03-30T03:39:12.255973",
+    "package_version": "1.0",
+    "etag": "01a9e48bdd70869a3d92b7e1409225b8",
+    "http_last_modified": "Mon, 30 Mar 2026 03:39:02 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-3.0",
+    "title": "Creative Commons Attribution 3.0",
+    "url": "https://creativecommons.org/licenses/by/3.0/au/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=top-100-baby-names",
+    "read_at": "2026-10-03T02:59:26+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "9430a3cd3c6b475e7bf7342267f14520ec7d8b5dac8a450a2c7cb770539b416f"
+}

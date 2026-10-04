@@ -1,0 +1,69 @@
+slug: qld-births-by-month
+title: Births registered by month, Queensland, latest year
+status: live
+topics:
+- people
+example:
+  group: month
+  metric: sum.births_registered
+  label: Births registered
+order: 202
+collection: qld-bdm-statistics
+collection_title: Births, deaths and baby names registered in Queensland
+search_title: Queensland births by month (Registry of Births, Deaths and Marriages)
+also_known_as:
+- Queensland birth registrations by month
+- Number of births in Queensland each month
+- QLD births per month
+keywords:
+- births
+- birth registrations
+- birth statistics
+- monthly births
+- Queensland
+faq:
+- q: What is in each row?
+  a: One month of the newest year the registry has published, numbered 1 to 12, with the number of births
+    registered in Queensland in that month.
+- q: Is this the month the baby was born?
+  a: No. The registry counts registrations, and it notes that the month a birth was registered may differ
+    from the month the baby was born.
+summary: The number of births registered in Queensland in each month of the newest year the Registry of
+  Births, Deaths and Marriages has published.
+description: Births registered with the Queensland Registry of Births, Deaths and Marriages, one row per
+  month of the newest year the registry has published. The registry adds a file for each year, and this
+  table follows the newest one. Counts are by month of registration.
+publisher:
+  name: Department of Justice
+  short: Justice
+  jurisdiction: Qld
+  url: https://www.justice.qld.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/births-by-month
+  attribution: Department of Justice, Queensland Government, Births by month, sourced {sourced}, https://www.data.qld.gov.au/dataset/births-by-month,
+    licensed under CC BY 3.0 AU.
+  portal_id: CC-BY-3.0
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: births-by-month
+  url: https://www.data.qld.gov.au/dataset/births-by-month
+  encoding: utf-8-sig
+  resource_match: ^\d{4} Births by Month$
+  cadence: yearly
+key:
+- month
+row_label: Months
+fields:
+- name: month
+  label: Month of registration
+  source: Month
+  type: integer
+  description: Month number, 1 for January to 12 for December.
+- name: births_registered
+  label: Births registered
+  source: Transactions
+  type: integer
+note: Headers were made snake_case. Rows were left alone.

@@ -1,0 +1,112 @@
+slug: qld-coal-production-by-mine
+title: Coal production by mine, Queensland
+status: live
+topics:
+- economy
+example:
+  where:
+    financial_year: newest
+  group: mine
+  metric: sum.net_output
+  label: Saleable tonnes
+sample:
+  where:
+    financial_year: newest
+  order:
+  - net_output.desc
+  spread: none
+  label: The ten mine and coal type lines with the most saleable coal in the newest financial year, largest
+    first.
+order: 266
+collection: qld-coal-statistics
+collection_title: Queensland coal production and sales statistics
+collection_search_title: Queensland coal production and export statistics
+collection_description: |
+  The Queensland Government publishes coal production and sales statistics from the returns that coal mine operators lodge with the department responsible for resources. Two releases are kept here. The coal industry review tables are by financial year from FY2010 and name each mine. The annual coal statistics are by calendar year from 2010 and give state totals, with export tonnes and sales values by destination country.
+
+  The publisher notes that the figures may be revised as operators lodge new or corrected returns, so a later release can change earlier years.
+temporal_start: '2009-07-01'
+search_title: Queensland coal production by mine (Natural Resources and Mines)
+also_known_as:
+- Queensland coal industry review statistical tables
+- Queensland coal mine output by financial year
+- Saleable coal production by mine Queensland
+keywords:
+- coal production
+- coal mines
+- saleable coal
+- raw coal
+- mining statistics
+- Queensland
+faq:
+- q: What is in each row?
+  a: Each row is one mine, one financial year and one coal type or activity, with the tonnes of discards, gross raw feed, gross raw output and net output the operator reported.
+- q: What is net output?
+  a: Net output is the saleable coal a mine produced after washing, in tonnes. Gross raw output is the coal mined before processing. A row usually carries a figure in only some of the four columns, and the rest are zero as published.
+- q: Is the latest financial year complete?
+  a: The publisher updates the tables during the year, so the newest financial year can be part of a year. The title row of the workbook gives the month it was updated.
+summary: Tonnes of raw and saleable coal from each Queensland coal mine by financial year since FY2010, by coal type.
+description: One row per Queensland coal mine, financial year and coal type or activity from FY2010, with the mine type (open cut or underground) and the tonnes of discards, gross raw feed, gross raw output and net output reported to the department. This is the Coal production by mine sheet of the coal industry review statistical tables.
+publisher:
+  name: Department of Natural Resources and Mines, Manufacturing and Regional and Rural Development
+  short: Natural Resources and Mines
+  jurisdiction: Qld
+  url: https://www.nrmmrrd.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/coal-industry-review-statistical-tables
+  attribution: Department of Natural Resources and Mines, Manufacturing and Regional and Rural Development, Queensland Government, Coal industry review statistical tables, sourced {sourced}, https://www.data.qld.gov.au/dataset/coal-industry-review-statistical-tables, licensed under CC BY 4.0.
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: coal-industry-review-statistical-tables
+  resource_match: ^Coal production data by mine
+  url: https://www.data.qld.gov.au/dataset/coal-industry-review-statistical-tables
+  cadence: several times a year
+  sheet: Coal production by mine
+  header_row: 5
+key:
+- mine
+- financial_year
+- coal_type
+partition_by:
+- financial_year
+row_label: Mine, year and coal type lines
+fields:
+- name: mine
+  label: Mine
+  source: Mine
+  type: string
+- name: mine_type
+  label: Mine type
+  source: Mine Type
+  type: string
+  description: Open Cut or Underground.
+- name: financial_year
+  label: Financial year
+  source: Financial year
+  type: string
+  description: As published, for example FY2025 for July 2024 to June 2025.
+- name: coal_type
+  label: Coal type or activity
+  source: Coal type
+  type: string
+  description: For example Coal, PCI, Coking, Thermal or Wash Discard.
+- name: discards
+  label: Discards (t)
+  source: Discards
+  type: number
+- name: gross_raw_feed
+  label: Gross raw feed (t)
+  source: Gross Raw Feed
+  type: number
+- name: gross_raw_output
+  label: Gross raw output (t)
+  source: Gross Raw Output
+  type: number
+- name: net_output
+  label: Net output (t)
+  source: Net output
+  type: number
+  description: Saleable coal, in tonnes.

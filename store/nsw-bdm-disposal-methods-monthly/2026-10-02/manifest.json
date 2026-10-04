@@ -1,0 +1,34 @@
+{
+  "dataset": "nsw-bdm-disposal-methods-monthly",
+  "version": "2026-10-02",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:03:29+00:00",
+  "sha256": "91a3653af012f4fc62da7861971f941617c6491315da5c96b0aa371ec6acff54",
+  "bytes": 4571,
+  "filename": "disposalmethodsbymonthfrom2015.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://data.nsw.gov.au/data/dataset/942a99e0-d72d-4726-bf86-aa7b58323a36/resource/ca7ae52a-b1ef-40d2-b6d6-41281dbf89bf/download/disposalmethodsbymonthfrom2015.csv",
+    "portal": "https://data.nsw.gov.au/data",
+    "package": "bdm-data",
+    "package_id": "942a99e0-d72d-4726-bf86-aa7b58323a36",
+    "resource": "ca7ae52a-b1ef-40d2-b6d6-41281dbf89bf",
+    "resource_name": "REGISTERED Monthly Disposal Methods",
+    "resource_last_modified": "2026-10-02T01:31:49.383493",
+    "package_modified": "2026-10-02T01:32:03.974714",
+    "package_version": null,
+    "etag": "1790904709.562619-4571-1514740252",
+    "http_last_modified": "Fri, 02 Oct 2026 01:31:49 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution",
+    "url": "http://www.opendefinition.org/licenses/cc-by",
+    "read_from": "https://data.nsw.gov.au/data/api/3/action/package_show?id=bdm-data",
+    "read_at": "2026-10-03T03:03:25+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "f60c87ca0f2ee8a263fd548c2a64909ce05edc682c7f2303457047ba00a263e5"
+}

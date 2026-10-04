@@ -1,0 +1,32 @@
+{
+  "dataset": "vic-water-storages",
+  "version": "2025-10-31",
+  "as_at": "",
+  "fetched_at": "2026-10-01T04:24:27+00:00",
+  "sha256": "a460aa55e4f81221b3441e21cfd73e781c57c8b4ca8cfda7e03b127c18baaf1e",
+  "bytes": 274966,
+  "filename": "storage_levels_january_2010_to_september_2025.xlsx",
+  "encoding": "xlsx",
+  "source": {
+    "url": "https://www.water.vic.gov.au/__data/assets/excel_doc/0036/768717/storage_levels_january_2010_to_september_2025.xlsx",
+    "portal": "https://discover.data.vic.gov.au",
+    "package": "regional-melbourne-and-all-victoria-monthly-water-storage-levels",
+    "package_id": "6bfcd1b4-6042-4946-984d-a74fc5ec6b38",
+    "resource": "8a27be06-db1a-4b8b-a0aa-9d55ea935a03",
+    "resource_name": "Storage levels January 2010 to September 2025",
+    "resource_last_modified": null,
+    "package_modified": "2025-10-30T21:33:03.485988",
+    "package_version": null,
+    "etag": "",
+    "http_last_modified": ""
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution 4.0 International",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_at": "2026-10-01T04:24:26+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": []
+}

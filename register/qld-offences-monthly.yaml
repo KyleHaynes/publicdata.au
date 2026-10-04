@@ -1,0 +1,453 @@
+slug: qld-offences-monthly
+title: Reported offences by month, Queensland, from July 1997
+status: live
+topics:
+- crime
+order: 207
+temporal_start: '1997-07-01'
+search_title: Queensland crime statistics by month since 1997 (Queensland Police Service)
+also_known_as:
+- QPS reported offences monthly
+- Queensland offence numbers
+- QLD crime statistics
+- Queensland crime rates over time
+keywords:
+- crime statistics
+- reported offences
+- assault
+- theft
+- drug offences
+- domestic violence
+- QPS
+- Queensland
+faq:
+- q: What is in each row?
+  a: One month from July 1997, with the number of offences reported to the Queensland Police Service across
+    the state in that month, one column per offence category. Some columns, such as Assault and Offences
+    Against the Person, are groups that include other categories, so adding every column counts some offences
+    more than once.
+- q: Is this the number of crimes committed?
+  a: It is the number of offences the police recorded as reported. An offence nobody reported is not counted,
+    and police activity drives some categories, such as drug and good order offences.
+- q: Why are some newer categories zero in early years?
+  a: Categories such as Coercive Control, Voluntary Assisted Dying and E-mobility began when the law created
+    them, and the publisher writes 0 for the months before.
+summary: The number of offences reported to the Queensland Police Service each month since July 1997,
+  statewide, with one column for each of about 90 offence categories. Updated monthly.
+description: Monthly counts of offences reported to the Queensland Police Service for the whole state
+  from July 1997, one row per month. Each of about 90 columns is an offence category or a group of categories,
+  from homicide and assault to fraud, drug, traffic and good order offences. The publisher updates the
+  file each month.
+publisher:
+  name: Queensland Police Service
+  short: QPS
+  jurisdiction: Qld
+  url: https://www.police.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/offence-numbers-monthly-from-july-1997
+  attribution: Queensland Police Service, Queensland Government, Queensland Offence numbers, monthly from
+    July 1997, sourced {sourced}, https://www.data.qld.gov.au/dataset/offence-numbers-monthly-from-july-1997,
+    licensed under CC BY 4.0.
+example:
+  where: {month: newest}
+  group: month
+  metric: sum.offences_against_the_person
+  label: Offences against the person reported in the newest month
+chart:
+  where: {month: {gte: '1998-01-01'}}
+  split: none
+  metric: sum.offences_against_the_person
+  label: Offences against the person reported
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: offence-numbers-monthly-from-july-1997
+  resource: 609541e9-4ed2-4ea4-8cae-c9f94d428a27
+  url: https://www.data.qld.gov.au/dataset/offence-numbers-monthly-from-july-1997
+  encoding: utf-8-sig
+  cadence: monthly
+key:
+- month
+row_label: Months
+fields:
+- name: month
+  label: Month
+  source: Month Year
+  type: date
+  date_format: '%b%y'
+  description: The month the offences were reported, published as a month and two-digit year such as JUL97
+    and read as the first day of that month.
+- name: homicide_murder
+  label: Homicide (murder)
+  source: Homicide (Murder)
+  type: integer
+- name: other_homicide
+  label: Other homicide
+  source: Other Homicide
+  type: integer
+- name: attempted_murder
+  label: Attempted murder
+  source: Attempted Murder
+  type: integer
+- name: conspiracy_to_murder
+  label: Conspiracy to murder
+  source: Conspiracy to Murder
+  type: integer
+- name: manslaughter_excl_by_driving
+  label: Manslaughter (excluding by driving)
+  source: Manslaughter (excl. by driving)
+  type: integer
+- name: driving_causing_death
+  label: Driving causing death
+  source: Driving Causing Death
+  type: integer
+- name: manslaughter_unlawful_striking_causing_death
+  label: Manslaughter unlawful striking causing death
+  source: Manslaughter Unlawful Striking Causing Death
+  type: integer
+- name: assault
+  label: Assault
+  source: Assault
+  type: integer
+- name: grievous_assault
+  label: Grievous assault
+  source: Grievous Assault
+  type: integer
+- name: serious_assault
+  label: Serious assault
+  source: Serious Assault
+  type: integer
+- name: serious_assault_other
+  label: Serious assault (other)
+  source: Serious Assault (Other)
+  type: integer
+- name: common_assault
+  label: Common assault
+  source: Common Assault'
+  type: integer
+  description: The publisher's header ends in a stray apostrophe, Common Assault', kept as the source
+    name.
+- name: sexual_offences
+  label: Sexual offences
+  source: Sexual Offences
+  type: integer
+- name: rape_and_attempted_rape
+  label: Rape and attempted rape
+  source: Rape and Attempted Rape
+  type: integer
+- name: other_sexual_offences
+  label: Other sexual offences
+  source: Other Sexual Offences
+  type: integer
+- name: robbery
+  label: Robbery
+  source: Robbery
+  type: integer
+- name: armed_robbery
+  label: Armed robbery
+  source: Armed Robbery
+  type: integer
+- name: unarmed_robbery
+  label: Unarmed robbery
+  source: Unarmed Robbery
+  type: integer
+- name: other_offences_against_the_person
+  label: Other offences against the person
+  source: Other Offences Against the Person
+  type: integer
+- name: kidnapping_abduction_etc
+  label: Kidnapping and abduction
+  source: Kidnapping & Abduction etc.
+  type: integer
+- name: coercive_control
+  label: Coercive control
+  source: Coercive Control
+  type: integer
+- name: extortion
+  label: Extortion
+  source: Extortion
+  type: integer
+- name: stalking
+  label: Stalking
+  source: Stalking
+  type: integer
+- name: life_endangering_acts
+  label: Life endangering acts
+  source: Life Endangering Acts
+  type: integer
+- name: voluntary_assisted_dying
+  label: Voluntary assisted dying
+  source: Voluntary Assisted Dying
+  type: integer
+- name: other_miscellaneous
+  label: Other miscellaneous
+  source: Other Miscellaneous
+  type: integer
+- name: offences_against_the_person
+  label: Offences against the person
+  source: Offences Against the Person
+  type: integer
+- name: unlawful_entry
+  label: Unlawful entry
+  source: Unlawful Entry
+  type: integer
+- name: unlawful_entry_with_intent_dwelling
+  label: Unlawful entry with intent - dwelling
+  source: Unlawful Entry With Intent - Dwelling
+  type: integer
+- name: unlawful_entry_without_violence_dwelling
+  label: Unlawful entry without violence - dwelling
+  source: Unlawful Entry Without Violence - Dwelling
+  type: integer
+- name: unlawful_entry_with_violence_dwelling
+  label: Unlawful entry with violence - dwelling
+  source: Unlawful Entry With Violence - Dwelling
+  type: integer
+- name: unlawful_entry_with_intent_shop
+  label: Unlawful entry with intent - shop
+  source: Unlawful Entry With Intent - Shop
+  type: integer
+- name: unlawful_entry_with_intent_other
+  label: Unlawful entry with intent - other
+  source: Unlawful Entry With Intent - Other
+  type: integer
+- name: arson
+  label: Arson
+  source: Arson
+  type: integer
+- name: other_property_damage
+  label: Other property damage
+  source: Other Property Damage
+  type: integer
+- name: unlawful_use_of_motor_vehicle
+  label: Unlawful use of motor vehicle
+  source: Unlawful Use of Motor Vehicle
+  type: integer
+- name: other_theft_excl_unlawful_entry
+  label: Other theft (excluding unlawful entry)
+  source: Other Theft (excl. Unlawful Entry)
+  type: integer
+- name: stealing_from_dwellings
+  label: Stealing from dwellings
+  source: Stealing from Dwellings
+  type: integer
+- name: shop_stealing
+  label: Shop stealing
+  source: Shop Stealing
+  type: integer
+- name: vehicles_steal_from_enter_with_intent
+  label: Vehicles (steal from/enter with intent)
+  source: Vehicles (steal from/enter with intent)
+  type: integer
+- name: other_stealing
+  label: Other stealing
+  source: Other Stealing
+  type: integer
+- name: fraud
+  label: Fraud
+  source: Fraud
+  type: integer
+- name: fraud_by_computer
+  label: Fraud by computer
+  source: Fraud by Computer
+  type: integer
+- name: fraud_by_cheque
+  label: Fraud by cheque
+  source: Fraud by Cheque
+  type: integer
+- name: fraud_by_credit_card
+  label: Fraud by credit card
+  source: Fraud by Credit Card
+  type: integer
+- name: identity_fraud
+  label: Identity fraud
+  source: Identity Fraud
+  type: integer
+- name: other_fraud
+  label: Other fraud
+  source: Other Fraud
+  type: integer
+- name: handling_stolen_goods
+  label: Handling stolen goods
+  source: Handling Stolen Goods
+  type: integer
+- name: possess_property_suspected_stolen
+  label: Possess property suspected stolen
+  source: Possess Property Suspected Stolen
+  type: integer
+- name: receiving_stolen_property
+  label: Receiving stolen property
+  source: Receiving Stolen Property
+  type: integer
+- name: possess_etc_tainted_property
+  label: Possess tainted property
+  source: Possess etc. Tainted Property
+  type: integer
+- name: other_handling_stolen_goods
+  label: Other handling stolen goods
+  source: Other Handling Stolen Goods
+  type: integer
+- name: offences_against_property
+  label: Offences against property
+  source: Offences Against Property
+  type: integer
+- name: drug_offences
+  label: Drug offences
+  source: Drug Offences
+  type: integer
+- name: trafficking_drugs
+  label: Trafficking drugs
+  source: Trafficking Drugs
+  type: integer
+- name: possess_drugs
+  label: Possess drugs
+  source: Possess Drugs
+  type: integer
+- name: produce_drugs
+  label: Produce drugs
+  source: Produce Drugs
+  type: integer
+- name: sell_supply_drugs
+  label: Sell supply drugs
+  source: Sell Supply Drugs
+  type: integer
+- name: other_drug_offences
+  label: Other drug offences
+  source: Other Drug Offences
+  type: integer
+- name: prostitution_offences
+  label: Prostitution offences
+  source: Prostitution Offences
+  type: integer
+- name: found_in_places_used_for_purpose_of_prostitution_offences
+  label: Found in places used for purpose of prostitution offences
+  source: Found in Places Used for Purpose of Prostitution Offences
+  type: integer
+- name: have_interest_in_premises_used_for_prostitution_offences
+  label: Have interest in premises used for prostitution offences
+  source: Have Interest in Premises Used for Prostitution Offences
+  type: integer
+- name: knowingly_participate_in_provision_prostitution_offences
+  label: Knowingly participate in provision prostitution offences
+  source: Knowingly Participate in Provision Prostitution Offences
+  type: integer
+- name: public_soliciting
+  label: Public soliciting
+  source: Public Soliciting
+  type: integer
+- name: procuring_prostitution
+  label: Procuring prostitution
+  source: Procuring Prostitution
+  type: integer
+- name: permit_minor_to_be_at_a_place_used_for_prostitution_offences
+  label: Permit minor to be at a place used for prostitution offences
+  source: Permit Minor to be at a Place Used for Prostitution Offences
+  type: integer
+- name: advertising_prostitution
+  label: Advertising prostitution
+  source: Advertising Prostitution
+  type: integer
+- name: other_prostitution_offences
+  label: Other prostitution offences
+  source: Other Prostitution Offences
+  type: integer
+- name: liquor_excl_drunkenness
+  label: Liquor (excluding drunkenness)
+  source: Liquor (excl. Drunkenness)
+  type: integer
+- name: gaming_racing_betting_offences
+  label: Gaming racing and betting offences
+  source: Gaming Racing & Betting Offences
+  type: integer
+- name: breach_domestic_violence_protection_order
+  label: Breach domestic violence protection order
+  source: Breach Domestic Violence Protection Order
+  type: integer
+- name: trespassing_and_vagrancy
+  label: Trespassing and vagrancy
+  source: Trespassing and Vagrancy
+  type: integer
+- name: weapons_act_offences
+  label: Weapons act offences
+  source: Weapons Act Offences
+  type: integer
+- name: unlawful_possess_concealable_firearm
+  label: Unlawful possess concealable firearm
+  source: Unlawful Possess Concealable Firearm
+  type: integer
+- name: unlawful_possess_firearm_other
+  label: Unlawful possess firearm - other
+  source: Unlawful Possess Firearm - Other
+  type: integer
+- name: bomb_possess_and_or_use_of
+  label: Bomb possess and/or use of
+  source: Bomb Possess and/or use of
+  type: integer
+- name: possess_and_or_use_other_weapons_restricted_items
+  label: Possess and/or use other weapons; restricted items
+  source: Possess and/or use other weapons; restricted items
+  type: integer
+- name: weapons_act_offences_other
+  label: Weapons act offences - other
+  source: Weapons Act Offences - Other
+  type: integer
+- name: good_order_offences
+  label: Good order offences
+  source: Good Order Offences
+  type: integer
+- name: disobey_move_on_direction
+  label: Disobey move-on direction
+  source: Disobey Move-on Direction
+  type: integer
+- name: resist_incite_hinder_obstruct_police
+  label: Resist incite hinder obstruct police
+  source: Resist Incite Hinder Obstruct Police
+  type: integer
+- name: fare_evasion
+  label: Fare evasion
+  source: Fare Evasion
+  type: integer
+- name: public_nuisance
+  label: Public nuisance
+  source: Public Nuisance
+  type: integer
+- name: stock_related_offences
+  label: Stock related offences
+  source: Stock Related Offences
+  type: integer
+- name: traffic_and_related_offences
+  label: Traffic and related offences
+  source: Traffic and Related Offences
+  type: integer
+- name: dangerous_operation_of_a_vehicle
+  label: Dangerous operation of a vehicle
+  source: Dangerous Operation of a Vehicle
+  type: integer
+- name: drink_driving
+  label: Drink driving
+  source: Drink Driving
+  type: integer
+- name: disqualified_driving
+  label: Disqualified driving
+  source: Disqualified Driving
+  type: integer
+- name: interfere_with_mechanism_of_motor_vehicle
+  label: Interfere with mechanism of motor vehicle
+  source: Interfere with Mechanism of Motor Vehicle
+  type: integer
+- name: e_mobility
+  label: E-mobility
+  source: E-mobility
+  type: integer
+- name: miscellaneous_offences
+  label: Miscellaneous offences
+  source: Miscellaneous Offences
+  type: integer
+- name: other_offences
+  label: Other offences
+  source: Other Offences
+  type: integer
+note: Cells were typed and headers were made snake_case. The publisher's header is kept beside every field
+  in schema.json. Rows were left alone.

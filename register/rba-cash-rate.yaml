@@ -1,0 +1,126 @@
+slug: rba-cash-rate
+title: Cash rate target changes, Reserve Bank of Australia
+status: live
+topics:
+- economy
+example:
+  group: cash_rate_target_change
+order: 50
+publisher:
+  name: Reserve Bank of Australia
+  short: RBA
+  jurisdiction: Cth
+  url: https://www.rba.gov.au/
+licence:
+  id: RBA-COPYRIGHT-NOTICE
+  reviewed: '2026-10-01'
+  evidence: https://www.rba.gov.au/copyright/
+  statement: may be used, reproduced, published, communicated to the public or otherwise referenced for
+    personal or commercial use
+  attribution: 'Source: Reserve Bank of Australia, statistical table A2 Changes in Monetary Policy and
+    Administered Rates, sourced {sourced} from https://www.rba.gov.au/statistics/tables/, republished
+    under sections 4 and 5 of the RBA copyright notice, https://www.rba.gov.au/copyright/. The RBA does
+    not endorse this site or any use of this data. The RBA publishes this data free of charge at rba.gov.au.'
+temporal_start: '1990-01-23'
+search_title: 'RBA cash rate history: every cash rate target change since 1990 (table A2)'
+also_known_as:
+- RBA cash rate history
+- Official cash rate Australia
+- Interest rate decisions RBA
+- Table A2 Changes in Monetary Policy and Administered Rates
+- Monetary policy changes
+keywords:
+- rba cash rate
+- cash rate history
+- interest rates
+- monetary policy
+- Reserve Bank of Australia
+- official cash rate
+- Australia
+faq:
+- q: Which decisions are in the table?
+  a: Every change to the cash rate target since January 1990, one row per change, with the new target
+    and the size of the change. Meetings that left the rate unchanged are not rows, because the RBA table
+    records changes. The row for 1 October 1997 records a cut to the rate paid on exchange settlement
+    balances with the target unchanged. The rate paid on exchange settlement balances and the pricing rate on the overnight
+    standing facility are shown from December 1994, when the RBA began publishing them.
+- q: Why are some cells in 1990 null?
+  a: In January, February and April 1990 the RBA announced the target as a range rather than a single
+    figure. The publisher writes those cells as text, 17.00 to 17.50, 16.50 to 17.00 and 15.00 to 15.50
+    for the target and -0.50 to -1.00 and -1.00 to -1.50 for the change, and they are kept as null here
+    because a range is not a number. The source file beside each version has the text.
+- q: When does a change take effect?
+  a: The date is the day the new target took effect. For recent changes that is the business day after
+    the announcement, so the cut announced on 4 June 2019 is dated 5 June 2019. The daily money market
+    table shows each change on the same date.
+- q: Under what licence is RBA data republished here?
+  a: The RBA excludes its numerical data from the CC BY 4.0 licence that covers the rest of its site,
+    and instead permits it to be used, reproduced, published and communicated to the public for personal
+    or commercial use under sections 4 and 5 of its copyright notice, with attribution and no claim of
+    endorsement. The RBA does not endorse this site or any use of this data, and it publishes the same
+    figures free of charge at rba.gov.au. Every file here carries that attribution.
+summary: Every change to the RBA cash rate target since 1990, with the new target, the size of the change
+  and the exchange settlement and overnight repo rates that moved with it. Updated after each Monetary
+  Policy Board decision.
+description: Table A2, Changes in Monetary Policy and Administered Rates, from the Reserve Bank of Australia.
+  One row per announced change to the cash rate target from 23 January 1990, with the change in percentage
+  points, the new target, and from December 1994 the change and new level of the rate paid on exchange
+  settlement balances and of the pricing rate on the overnight standing facility. The RBA series IDs are
+  kept in each field description.
+source:
+  adapter: file
+  url: https://www.rba.gov.au/statistics/tables/csv/a2-data.csv
+  header_row: 11
+  cadence: monthly
+key:
+- date
+row_label: Rate changes
+fields:
+- name: date
+  label: Date
+  source: Series ID
+  type: date
+  date_format: '%d-%b-%Y'
+  description: The date the change took effect.
+- name: cash_rate_target_change
+  label: Change in cash rate target
+  source: ARBAMPCCCR
+  type: number
+  description: 'Change in Cash Rate Target (in percentage points). Units: Per cent. RBA series ARBAMPCCCR,
+    source RBA.'
+  null_values:
+  - -0.50 to -1.00
+  - -1.00 to -1.50
+- name: cash_rate_target
+  label: New cash rate target
+  source: ARBAMPCNCRT
+  type: number
+  description: 'The Cash Rate Target As Announced. Units: Per cent. RBA series ARBAMPCNCRT, source RBA.'
+  null_values:
+  - 17.00 to 17.50
+  - 16.50 to 17.00
+  - 15.00 to 15.50
+- name: es_rate_change
+  label: Change in ES rate
+  source: ARBAMPCRPESB
+  type: number
+  description: 'Change in Rate Paid on Exchange Settlement Balances (in percentage points). Units: Per
+    cent. RBA series ARBAMPCRPESB, source RBA.'
+- name: es_rate
+  label: New ES rate
+  source: ARBAMPNRPESB
+  type: number
+  description: 'The New Rate Paid on Exchange Settlement Balances. Units: Per cent. RBA series ARBAMPNRPESB,
+    source RBA.'
+- name: overnight_repo_rate_change
+  label: Change in overnight repo rate
+  source: ARBAMPCORR
+  type: number
+  description: 'Change in Pricing Rate on RBA Overnight Standing Facility Repos (in percentage points).
+    Units: Per cent. RBA series ARBAMPCORR, source RBA.'
+- name: overnight_repo_rate
+  label: New overnight repo rate
+  source: ARBAMPNORR
+  type: number
+  description: 'The New Pricing Rate on RBA Overnight Standing Facility Repos. Units: Per cent. RBA series
+    ARBAMPNORR, source RBA.'

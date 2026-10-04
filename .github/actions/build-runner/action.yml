@@ -1,0 +1,44 @@
+name: Build runner
+description: The pipeline, DuckDB's spatial extension and the explorer's libraries, on a runner disk cleared for a build.
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+      with:
+        python-version-file: .python-version
+    - run: pip install -e './pipeline[deploy]'
+      shell: bash
+    # The place spine's joins and tiles run in DuckDB's spatial extension, fetched before the build.
+    - run: python -m publicdata spine install
+      shell: bash
+    - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+      with:
+        node-version: 24
+    # The explorer's browser libraries, copied into the build from the lockfile.
+    - run: npm ci --ignore-scripts --no-audit --no-fund
+      shell: bash
+    # The runner has one 72 GB disk; /mnt is on it too. Every preinstalled toolchain a build does
+    # not use goes first. setup-python and setup-node live in the tool cache, so those two stay.
+    # The swap file stays: a database build holds up to 4 GB in memory.
+    - name: Free the runner's disk
+      shell: bash
+      run: |
+        df -h / | tail -1
+        sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /usr/local/.ghcup \
+          /usr/local/share/boost /usr/share/swift /usr/lib/jvm /usr/share/miniconda \
+          /usr/local/share/powershell /opt/az /opt/microsoft /opt/google /opt/mssql-tools \
+          /usr/lib/google-cloud-sdk /usr/local/julia* /usr/local/share/chromium \
+          /usr/local/aws-cli /usr/local/aws-sam-cli /usr/share/az_* /opt/pipx
+        sudo find /opt/hostedtoolcache -mindepth 1 -maxdepth 1 ! -name Python ! -name node -exec rm -rf {} +
+        sudo docker system prune --all --force >/dev/null 2>&1 || true
+        sudo apt-get clean
+        sudo mkdir -p /mnt/work/tmp && sudo chown -R "$(id -u):$(id -g)" /mnt/work
+        # One working tree outside the checkout: the raw store, the build cache and the output
+        # sit on one filesystem, so the cache and a database's archive are hard links.
+        cp -r store /mnt/work/store
+        echo "TMPDIR=/mnt/work/tmp" >> "$GITHUB_ENV"
+        echo "STORE=/mnt/work/store" >> "$GITHUB_ENV"
+        echo "BUILD_CACHE=/mnt/work/.build-cache" >> "$GITHUB_ENV"
+        echo "DIST=/mnt/work/dist" >> "$GITHUB_ENV"
+        echo "DIST_LARGE=/mnt/work/dist-large" >> "$GITHUB_ENV"
+        df -h / | tail -1

@@ -1,0 +1,106 @@
+slug: vic-melbourne-water-daily-storage
+title: Daily storage volume of Melbourne Water's dams, 1940 to 2020
+status: live
+topics:
+- nature
+example:
+  where:
+    record_date: newest
+  group: dam
+  metric: avg.volume_percent_full
+  label: '% full'
+chart:
+  where:
+    dam: Thomson
+    record_date:
+      gte: '1985-01-01'
+      lt: '2019-12-31T13:00:00'
+  split: none
+  metric: avg.volume_percent_full
+  label: Average % full of the Thomson
+order: 388
+publisher:
+  name: Melbourne Water Corporation
+  short: Melbourne Water
+  jurisdiction: Vic
+  url: https://www.melbournewater.com.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://discover.data.vic.gov.au/dataset/water-supply-daily-volume-observed-for-storage-dams-operated-by-melbourne-water
+  attribution: Melbourne Water Corporation, Water Supply, daily volume observed for storage dams operated
+    by Melbourne Water, sourced {sourced}, https://discover.data.vic.gov.au/dataset/water-supply-daily-volume-observed-for-storage-dams-operated-by-melbourne-water,
+    licensed under CC BY 4.0.
+temporal_start: '1940-01-01'
+search_title: Melbourne dam levels history, daily volume of each storage since 1940 (Melbourne Water)
+also_known_as:
+- Melbourne Water daily storage volumes
+- Melbourne dam levels daily
+- Thomson Dam storage history
+- Water supply daily volume observed for storage dams
+keywords:
+- dam levels
+- Melbourne water storage
+- Thomson Dam
+- Cardinia Reservoir
+- Sugarloaf Reservoir
+- Melbourne Water
+- water supply
+faq:
+- q: What does each row hold?
+  a: The volume held in one of Melbourne Water's ten storage dams on one day, in megalitres, and the
+    share of the dam's capacity that volume is. Maroondah, O'Shannassy, Silvan and Yan Yean go back to
+    1 January 1940. The others start when they came into the record.
+- q: Why is the time 1 pm or 2 pm?
+  a: The publisher's service stores each reading as a moment in UTC, so local midnight appears as 1 pm
+    or 2 pm on the previous day depending on daylight saving. The value is kept as published. The
+    volume itself is recorded at 8 am each day.
+- q: Why does it stop in February 2020?
+  a: The portal's file of the complete record ends on 29 February 2020 and has not been extended. Some
+    days have no volume, and those cells are null.
+summary: The volume of water in each of Melbourne Water's ten storage dams on every day from 1940 to
+  February 2020, in megalitres and as a percentage of capacity.
+description: Daily observed storage volumes from Melbourne Water for the Cardinia, Greenvale, Maroondah,
+  O'Shannassy, Silvan, Sugarloaf, Tarago, Thomson, Upper Yarra and Yan Yean storages, one row per dam and
+  day. Volumes are measured by telemetry at 8 am and checked against field observations. The record runs
+  from 1 January 1940 to 29 February 2020, in local days.
+source:
+  adapter: ckan-resource
+  portal: https://discover.data.vic.gov.au
+  package: water-supply-daily-volume-observed-for-storage-dams-operated-by-melbourne-water
+  resource: e6f1282b-761f-4cbe-8a84-c63b98755950
+  url: https://discover.data.vic.gov.au/dataset/water-supply-daily-volume-observed-for-storage-dams-operated-by-melbourne-water
+  cadence: no longer updated
+  encoding: utf-8-sig
+key:
+- object_id
+partition_by:
+- dam
+row_label: Dam days
+fields:
+- name: record_date
+  label: Recorded at (UTC)
+  source: recorddate
+  type: datetime
+  date_format: '%m/%d/%Y %I:%M:%S %p'
+  description: The day of the reading as the publisher's service stores it, local midnight in UTC.
+- name: dam
+  label: Dam
+  source: dam
+  type: string
+- name: volume_ml
+  label: Volume (ML)
+  source: volume_ML
+  type: number
+  description: The volume held, in megalitres. Null where no reading was recorded.
+- name: volume_percent_full
+  label: Percent full
+  source: volume_percentfull
+  type: number
+  description: The volume as a percentage of the dam's capacity, as published.
+- name: object_id
+  label: Record id
+  source: ObjectId
+  type: integer
+  description: The row's id in the publisher's service.

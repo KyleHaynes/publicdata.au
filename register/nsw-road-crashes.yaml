@@ -1,0 +1,287 @@
+slug: nsw-road-crashes
+title: Road crashes, New South Wales
+status: live
+topics:
+- roads
+example:
+  where:
+    degree_of_crash: Fatal
+  group: speed_limit
+sample:
+  spread: degree_of_crash
+order: 43
+publisher:
+  name: Transport for NSW
+  short: TfNSW
+  jurisdiction: NSW
+  url: https://www.transport.nsw.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-09-29'
+  portal_id: cc-by
+  evidence: https://data.nsw.gov.au/data/dataset/2-nsw-crash-data
+  attribution: Transport for NSW, NSW Government, NSW Crash Data, sourced {sourced}, https://data.nsw.gov.au/data/dataset/2-nsw-crash-data,
+    licensed under CC BY 3.0 AU.
+search_title: NSW road crash data (Transport for NSW)
+also_known_as:
+- NSW Crash Data
+- NSW road toll and crash statistics
+- Transport for NSW road crash data by crash
+- NSW car accident statistics
+keywords:
+- road crash statistics
+- road toll
+- NSW crash data
+- car accidents
+- road safety
+- Transport for NSW
+- New South Wales
+faq:
+- q: Which crashes are included?
+  a: The crashes reported to NSW Police on a public road in the five reporting years of the release, in
+    which a person was killed or injured or a vehicle was towed away. Each row is one crash, with its location,
+    road and conditions and the number of people killed or injured.
+- q: Why does each version cover only five years?
+  a: Transport for NSW publishes a rolling five years each October and adds the release as a new file. This
+    entry follows the newest file, so each version is one release. Earlier releases stay here as earlier
+    versions.
+- q: Can I count the road toll from this?
+  a: The killed column counts people who died within 30 days of the crash, as the publisher reports them.
+    Add it across the crashes of a year to get the deaths the publisher counted for that year.
+summary: Every road crash reported to NSW Police that killed or injured someone or needed a tow, one row
+  per crash, with date, location, road conditions and the number killed and injured.
+description: NSW Crash Data from Transport for NSW, one row per crash for the latest five reporting years.
+  Each crash has its degree, year, month, day of week and two-hour band, street, town, council area and
+  coordinates, the road and lighting conditions, the road user movement and definitions for crash type
+  codes, the vehicles involved and the number of people killed and injured by severity.
+chart:
+  year: reporting_year
+source:
+  adapter: ckan-resource
+  portal: https://data.nsw.gov.au/data
+  package: 2-nsw-crash-data
+  resource_match: '- CRASH(\.xlsx)?$'
+  url: https://data.nsw.gov.au/data/dataset/2-nsw-crash-data
+  cadence: yearly
+key:
+- crash_id
+partition_by:
+- year_of_crash
+enrich:
+- sa2
+- lga
+- suburb
+- postcode
+- state_electorate
+- federal_electorate
+geometry:
+  lon: longitude
+  lat: latitude
+  crs: EPSG:4283
+  crs_note: Latitude and longitude in decimal degrees as published. The publisher's data manual
+    does not state the datum; GDA94 is the NSW Government's standard and differs from GDA2020 and
+    WGS84 by under 2 metres.
+row_label: Crashes
+fields:
+- name: crash_id
+  label: Crash ID
+  source: Crash ID
+  type: integer
+- name: degree_of_crash
+  label: Degree of crash
+  source: Degree of crash
+  type: string
+- name: degree_of_crash_detailed
+  label: Degree of crash, detailed
+  source: Degree of crash - detailed
+  type: string
+- name: reporting_year
+  label: Reporting year
+  source: Reporting year
+  type: integer
+- name: year_of_crash
+  label: Year of crash
+  source: Year of crash
+  type: integer
+- name: month_of_crash
+  label: Month of crash
+  source: Month of crash
+  type: string
+- name: day_of_week_of_crash
+  label: Day of week of crash
+  source: Day of week of crash
+  type: string
+- name: two_hour_intervals
+  label: Time of day (two-hour band)
+  source: Two-hour intervals
+  type: string
+- name: street_of_crash
+  label: Street of crash
+  source: Street of crash
+  type: string
+- name: street_type
+  label: Street type
+  source: Street type
+  type: string
+- name: distance
+  label: Distance from feature (m)
+  source: Distance
+  type: integer
+- name: direction
+  label: Direction from feature
+  source: Direction
+  type: string
+- name: identifying_feature
+  label: Identifying feature
+  source: Identifying feature
+  type: string
+- name: identifying_feature_type
+  label: Identifying feature type
+  source: Identifying feature type
+  type: string
+- name: town
+  label: Town
+  source: Town
+  type: string
+- name: route_no
+  label: Route number
+  source: Route no.
+  type: integer
+- name: school_zone_location
+  label: School zone location
+  source: School zone location
+  type: string
+- name: school_zone_active
+  label: School zone active
+  source: School zone active
+  type: string
+- name: type_of_location
+  label: Type of location
+  source: Type of location
+  type: string
+- name: latitude
+  label: Latitude
+  source: Latitude
+  type: number
+  description: As published. The publisher's data manual does not state the datum.
+- name: longitude
+  label: Longitude
+  source: Longitude
+  type: number
+  description: As published. The publisher's data manual does not state the datum.
+- name: lga
+  label: LGA
+  source: LGA
+  type: string
+- name: urbanisation
+  label: Urbanisation
+  source: Urbanisation
+  type: string
+- name: conurbation_1
+  label: Conurbation 1
+  source: Conurbation 1
+  type: string
+- name: alignment
+  label: Alignment
+  source: Alignment
+  type: string
+- name: primary_permanent_feature
+  label: Primary permanent feature
+  source: Primary permanent feature
+  type: string
+- name: primary_temporary_feature
+  label: Primary temporary feature
+  source: Primary temporary feature
+  type: string
+- name: primary_hazardous_feature
+  label: Primary hazardous feature
+  source: Primary hazardous feature
+  type: string
+- name: street_lighting
+  label: Street lighting
+  source: Street lighting
+  type: string
+- name: road_surface
+  label: Road surface
+  source: Road surface
+  type: string
+- name: surface_condition
+  label: Surface condition
+  source: Surface condition
+  type: string
+- name: weather
+  label: Weather
+  source: Weather
+  type: string
+- name: natural_lighting
+  label: Natural lighting
+  source: Natural lighting
+  type: string
+- name: signals_operation
+  label: Signals operation
+  source: Signals operation
+  type: string
+- name: other_traffic_control
+  label: Other traffic control
+  source: Other traffic control
+  type: string
+- name: speed_limit
+  label: Speed limit
+  source: Speed limit
+  type: string
+- name: road_classification_admin
+  label: Road classification
+  source: Road classification (admin)
+  type: string
+- name: rum_code
+  label: RUM code
+  source: RUM - code
+  type: integer
+- name: rum_description
+  label: RUM description
+  source: RUM - description
+  type: string
+- name: dca_code
+  label: DCA code
+  source: DCA - code
+  type: integer
+- name: dca_description
+  label: DCA description
+  source: DCA - description
+  type: string
+- name: dca_supplement
+  label: DCA supplement
+  source: DCA supplement
+  type: string
+- name: first_impact_type
+  label: First impact type
+  source: First impact type
+  type: string
+- name: key_tu_type
+  label: Key traffic unit type
+  source: Key TU type
+  type: string
+- name: other_tu_type
+  label: Other traffic unit type
+  source: Other TU type
+  type: string
+- name: traffic_units
+  label: Traffic units involved
+  source: No. of traffic units involved
+  type: integer
+- name: killed
+  label: Killed
+  source: No. killed
+  type: integer
+- name: seriously_injured
+  label: Seriously injured
+  source: No. seriously injured
+  type: integer
+- name: moderately_injured
+  label: Moderately injured
+  source: No. moderately injured
+  type: integer
+- name: minor_other_injured
+  label: Minor or other injury
+  source: No. minor-other injured
+  type: integer

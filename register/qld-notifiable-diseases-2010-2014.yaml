@@ -1,0 +1,78 @@
+slug: qld-notifiable-diseases-2010-2014
+title: Notifiable diseases by quarter, Queensland, 2010 to 2014
+status: live
+topics:
+- health
+order: 284
+temporal_start: '2010-01-01'
+search_title: Queensland notifiable disease cases 2010 to 2014 (Queensland Health)
+also_known_as:
+- Queensland communicable disease notifications by quarter
+- Notifiable Diseases 2010 to 2014
+- Queensland infectious disease counts
+keywords:
+- notifiable diseases
+- communicable diseases
+- infectious disease
+- disease notifications
+- Queensland Health
+- Queensland
+faq:
+- q: What is in each row?
+  a: One notifiable condition in one quarter, with the number of cases notified to Queensland Health. Quarters
+    are counted by the date of onset, and quarter 1 is January to March.
+- q: Is this series kept up to date?
+  a: No. The publisher released this file for January 2010 to December 2014 and has not extended it. Queensland
+    Health reports later notifications elsewhere.
+- q: Why are some conditions missing in some quarters?
+  a: A condition with no notified cases in a quarter has no row for that quarter.
+summary: The number of cases of each notifiable communicable disease reported to Queensland Health in each
+  quarter from 2010 to 2014.
+description: One row per notifiable condition per quarter from January 2010 to December 2014, with the count
+  of cases notified to the Queensland Department of Health, by quarter of onset. Conditions include influenza,
+  pertussis, dengue, chlamydia and Ross River virus among 67 named in the file.
+publisher:
+  name: Queensland Health
+  short: Queensland Health
+  jurisdiction: Qld
+  url: https://www.health.qld.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/notifiable-diseases-2010-2014
+  attribution: Queensland Health, Queensland Government, Notifiable Diseases 2010 to 2014, sourced {sourced},
+    https://www.data.qld.gov.au/dataset/notifiable-diseases-2010-2014, licensed under CC BY 3.0 AU.
+  portal_id: CC-BY-3.0
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: notifiable-diseases-2010-2014
+  resource: 6d48590c-e3a8-494c-9e5f-b7df87a77fff
+  url: https://www.data.qld.gov.au/dataset/notifiable-diseases-2010-2014
+  cadence: not updated since 2015
+key:
+- year
+- quarter
+- condition
+partition_by:
+- year
+row_label: Condition quarters
+fields:
+- name: year
+  label: Year
+  source: YEAR
+  type: integer
+- name: quarter
+  label: Quarter
+  source: QTR
+  type: integer
+  description: Calendar quarter, 1 to 4, by date of onset.
+- name: condition
+  label: Condition
+  source: CONDITION
+  type: string
+- name: counts
+  label: Cases
+  source: COUNTS
+  type: integer
+  description: Cases notified in the quarter.

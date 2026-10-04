@@ -1,0 +1,271 @@
+slug: rba-indicator-lending-rates
+title: Indicator lending rates, Reserve Bank of Australia
+status: live
+topics:
+- economy
+chart:
+  metric: avg.housing_bank_variable_standard_owner_occupier
+  label: Average standard variable home loan rate (%)
+example:
+  where: {date: newest}
+  group: date
+  metric: avg.housing_bank_variable_standard_owner_occupier
+  label: Banks' standard variable home loan rate for owner-occupiers at the newest month end (%)
+order: 54
+publisher:
+  name: Reserve Bank of Australia
+  short: RBA
+  jurisdiction: Cth
+  url: https://www.rba.gov.au/
+licence:
+  id: RBA-COPYRIGHT-NOTICE
+  reviewed: '2026-10-01'
+  evidence: https://www.rba.gov.au/copyright/
+  statement: may be used, reproduced, published, communicated to the public or otherwise referenced for
+    personal or commercial use
+  attribution: 'Source: Reserve Bank of Australia, statistical table F5 Indicator Lending Rates, sourced
+    {sourced} from https://www.rba.gov.au/statistics/tables/, republished under sections 4 and 5 of the
+    RBA copyright notice, https://www.rba.gov.au/copyright/. The RBA does not endorse this site or any
+    use of this data. The RBA publishes this data free of charge at rba.gov.au. Three business lending
+    series are sourced by the RBA from the Australian Prudential Regulation Authority under CC BY 3.0
+    AU, and the securitised housing loan series from the RBA Securitisation System.'
+temporal_start: '1959-01-31'
+search_title: Home loan, personal loan and business lending interest rates, monthly since 1959 (RBA table
+  F5)
+also_known_as:
+- Table F5 Indicator Lending Rates
+- Standard variable home loan rate history
+- Mortgage interest rates history Australia
+- Credit card interest rates RBA
+- Small business lending rates
+keywords:
+- home loan rates
+- mortgage rates
+- variable rate history
+- lending rates
+- credit card interest
+- small business loans
+- Reserve Bank of Australia
+faq:
+- q: What is an indicator lending rate?
+  a: 'The advertised, or indicator, rate at the end of each month for a standard product from a sample
+    of lenders: standard and discounted variable and three year fixed housing loans for owner-occupiers
+    and investors, credit cards, unsecured personal loans, margin and home equity loans, and small and
+    large business loans. The RBA describes them as indicative and likely to be revised. The series began
+    at different dates, so early rows have many null cells.'
+- q: Which series come from other sources?
+  a: The weighted average rates on small and large business credit outstanding are compiled by APRA, and
+    the average outstanding rates on securitised housing loans come from the RBA Securitisation System.
+    Each field description names its source as the RBA states it.
+- q: Under what licence is RBA data republished here?
+  a: The RBA excludes its numerical data from the CC BY 4.0 licence that covers the rest of its site,
+    and instead permits it to be used, reproduced, published and communicated to the public for personal
+    or commercial use under sections 4 and 5 of its copyright notice, with attribution and no claim of
+    endorsement. The RBA does not endorse this site or any use of this data, and it publishes the same
+    figures free of charge at rba.gov.au. Every file here carries that attribution.
+summary: Advertised housing, personal and business lending rates at the end of each month since January
+  1959, including the standard variable home loan rate, credit card rates and small business rates. Updated
+  monthly.
+description: Statistical table F5, Indicator Lending Rates, from the Reserve Bank of Australia. One row
+  per month end from 31 January 1959 with the rate, per cent per annum, on standard, discounted, interest-only
+  and three year fixed housing loans from banks for owner-occupiers and investors, on mortgage manager
+  housing loans, on standard and low rate credit cards, on fixed and variable unsecured personal loans,
+  home equity and margin loans, on small business term, overdraft and fixed loans, on large business credit
+  outstanding, and the average outstanding variable rate on securitised housing loans.
+source:
+  adapter: file
+  url: https://www.rba.gov.au/statistics/tables/csv/f5-data.csv
+  header_row: 11
+  cadence: monthly
+key:
+- date
+row_label: Month ends
+fields:
+- name: date
+  label: Date
+  source: Series ID
+  type: date
+  date_format: '%d/%m/%Y'
+  description: The date of the observation.
+- name: small_business_variable_term
+  label: Small business, variable term loan
+  source: FILRSBVRT
+  type: number
+  description: 'Lending rates; Small business; Variable; Term. Units: Per cent per annum. RBA series FILRSBVRT,
+    source RBA.'
+- name: small_business_variable_overdraft
+  label: Small business, variable overdraft
+  source: FILRSBVOO
+  type: number
+  description: 'Lending rates; Small business; Variable; Overdraft. Units: Per cent per annum. RBA series
+    FILRSBVOO, source RBA.'
+- name: housing_bank_variable_standard_owner_occupier
+  label: Housing, bank standard variable, owner-occupier
+  source: FILRHLBVS
+  type: number
+  description: 'Lending rates; Housing loans; Banks; Variable; Standard; Owner-occupier. Units: Per cent
+    per annum. RBA series FILRHLBVS, source RBA.'
+- name: housing_bank_variable_discounted_owner_occupier
+  label: Housing, bank discounted variable, owner-occupier
+  source: FILRHLBVD
+  type: number
+  description: 'Lending rates; Housing loans; Banks; Variable; Discounted; Owner-occupier. Units: Per
+    cent per annum. RBA series FILRHLBVD, source RBA.'
+- name: housing_bank_variable_interest_only_owner_occupier
+  label: Housing, bank interest-only variable, owner-occupier
+  source: FILRHLBVO
+  type: number
+  description: 'Lending rates; Housing loans; Banks; Variable; Standard interest-only; Owner-occupier.
+    Units: Per cent per annum. RBA series FILRHLBVO, source RBA.'
+- name: housing_bank_3yr_fixed_owner_occupier
+  label: Housing, bank 3-year fixed, owner-occupier
+  source: FILRHL3YF
+  type: number
+  description: 'Lending rates; Housing loans; Banks; 3-year fixed; Owner-occupier. Units: Per cent per
+    annum. RBA series FILRHL3YF, source RBA.'
+- name: housing_bank_variable_standard_investor
+  label: Housing, bank standard variable, investor
+  source: FILRHLBVSI
+  type: number
+  description: 'Lending rates; Housing loans; Banks; Variable; Standard; Investor. Units: Per cent per
+    annum. RBA series FILRHLBVSI, source RBA.'
+- name: housing_bank_variable_discounted_investor
+  label: Housing, bank discounted variable, investor
+  source: FILRHLBVDI
+  type: number
+  description: 'Lending rates; Housing loans; Banks; Variable; Discounted; Investor. Units: Per cent per
+    annum. RBA series FILRHLBVDI, source RBA.'
+- name: housing_bank_variable_interest_only_investor
+  label: Housing, bank interest-only variable, investor
+  source: FILRHLBVDO
+  type: number
+  description: 'Lending rates; Housing loans; Banks; Variable; Standard interest-only; Investor. Units:
+    Per cent per annum. RBA series FILRHLBVDO, source RBA.'
+- name: housing_bank_3yr_fixed_investor
+  label: Housing, bank 3-year fixed, investor
+  source: FILRHL3YFI
+  type: number
+  description: 'Lending rates; Housing loans; Banks; 3-year fixed; Investor. Units: Per cent per annum.
+    RBA series FILRHL3YFI, source RBA.'
+- name: credit_card_standard
+  label: Credit cards, standard rate
+  source: FILRPLRCCS
+  type: number
+  description: 'Lending rates; Personal loans; Revolving credit; Credit cards; Standard rate. Units: Per
+    cent per annum. RBA series FILRPLRCCS, source RBA.'
+- name: credit_card_low_rate
+  label: Credit cards, low rate
+  source: FILRPLRCCL
+  type: number
+  description: 'Lending rates; Personal loans; Revolving credit; Credit cards; Low rate. Units: Per cent
+    per annum. RBA series FILRPLRCCL, source RBA.'
+- name: small_business_variable_other_term
+  label: Small business, other variable term loan
+  source: FILRSBVOT
+  type: number
+  description: 'Lending rates; Small business; Variable; Other; Term. Units: Per cent per annum. RBA series
+    FILRSBVOT, source RBA.'
+- name: small_business_variable_residential_secured_overdraft
+  label: Small business, residential-secured overdraft
+  source: FILRSBVRO
+  type: number
+  description: 'Lending rates; Small business; Variable; Residential-secured; Overdraft. Units: Per cent
+    per annum. RBA series FILRSBVRO, source RBA.'
+- name: small_business_variable_small_overdraft
+  label: Small business, small overdraft
+  source: FILRSBVSO
+  type: number
+  description: 'Lending rates; Small business; Variable; Small overdraft. Units: Per cent per annum. RBA
+    series FILRSBVSO, source RBA.'
+- name: small_business_weighted_average_outstanding
+  label: Small business, weighted average outstanding
+  source: FILRSBVWA
+  type: number
+  description: 'Lending rates; Small business; Variable; Weighted-average rate on credit outstanding.
+    Units: Per cent per annum. RBA series FILRSBVWA, source APRA.'
+- name: small_business_3yr_fixed
+  label: Small business, 3-year fixed
+  source: FILRSB3YF
+  type: number
+  description: 'Lending rates; Small business; 3-year fixed. Units: Per cent per annum. RBA series FILRSB3YF,
+    source RBA.'
+- name: large_business_weighted_average_variable
+  label: Large business, weighted average variable
+  source: FILRLBWAV
+  type: number
+  description: 'Lending rates; Large business; Weighted-average rate on credit outstanding; Variable.
+    Units: Per cent per annum. RBA series FILRLBWAV, source APRA.'
+- name: large_business_weighted_average_bills
+  label: Large business, weighted average bills
+  source: FILRLBWAB
+  type: number
+  description: 'Lending rates; Large business; Weighted-average rate on credit outstanding; Bills. Units:
+    Per cent per annum. RBA series FILRLBWAB, source APRA.'
+- name: personal_unsecured_fixed
+  label: Personal loans, unsecured fixed
+  source: FILRPLTUF
+  type: number
+  description: 'Lending rates; Personal loans; Term loans (unsecured); Fixed. Units: Per cent per annum.
+    RBA series FILRPLTUF, source RBA.'
+- name: personal_unsecured_variable
+  label: Personal loans, unsecured variable
+  source: FILRPLTUV
+  type: number
+  description: 'Lending rates; Personal loans; Term loans (unsecured); Variable. Units: Per cent per annum.
+    RBA series FILRPLTUV, source RBA.'
+- name: home_equity_loans
+  label: Home equity loans
+  source: FILRPLRCHE
+  type: number
+  description: 'Lending rates; Personal loans; Revolving credit; Home equity loans. Units: Per cent per
+    annum. RBA series FILRPLRCHE, source RBA.'
+- name: margin_loans
+  label: Margin loans
+  source: FILRPLRCML
+  type: number
+  description: 'Lending rates; Personal loans; Revolving credit; Margin loans. Units: Per cent per annum.
+    RBA series FILRPLRCML, source RBA.'
+- name: housing_mortgage_manager_variable_standard
+  label: Housing, mortgage manager standard variable
+  source: FILRHLMMS
+  type: number
+  description: 'Lending rates; Housing loans; Mortgage managers; Variable; Standard. Units: Per cent per
+    annum. RBA series FILRHLMMS, source RBA.'
+- name: housing_mortgage_manager_variable_basic
+  label: Housing, mortgage manager basic variable
+  source: FILRHLMMB
+  type: number
+  description: 'Lending rates; Housing loans; Mortgage managers; Variable; Basic. Units: Per cent per
+    annum. RBA series FILRHLMMB, source RBA.'
+- name: securitised_housing_average_variable
+  label: Securitised housing, average variable
+  source: FILRSAVR
+  type: number
+  description: 'Lending rates; Securitised housing loans; Average outstanding variable rate. Units: Per
+    cent per annum. RBA series FILRSAVR, source RBA; Securitisation System.'
+- name: securitised_housing_owner_occupier_principal_interest
+  label: Securitised housing, owner-occupier P&I
+  source: FILRSAVOPI
+  type: number
+  description: 'Lending rates; Securitised housing loans; Average outstanding variable rate; Owner-occupier;
+    Principal & Interest. Units: Per cent per annum. RBA series FILRSAVOPI, source RBA; Securitisation
+    System.'
+- name: securitised_housing_owner_occupier_interest_only
+  label: Securitised housing, owner-occupier interest-only
+  source: FILRSAVOI
+  type: number
+  description: 'Lending rates; Securitised housing loans; Average outstanding variable rate; Owner-occupier;
+    Interest Only. Units: Per cent per annum. RBA series FILRSAVOI, source RBA; Securitisation System.'
+- name: securitised_housing_investor_principal_interest
+  label: Securitised housing, investor P&I
+  source: FILRSAVIPI
+  type: number
+  description: 'Lending rates; Securitised housing loans; Average outstanding variable rate; Investor;
+    Principal & Interest. Units: Per cent per annum. RBA series FILRSAVIPI, source RBA; Securitisation
+    System.'
+- name: securitised_housing_investor_interest_only
+  label: Securitised housing, investor interest-only
+  source: FILRSAVIIO
+  type: number
+  description: 'Lending rates; Securitised housing loans; Average outstanding variable rate; Investor;
+    Interest Only. Units: Per cent per annum. RBA series FILRSAVIIO, source RBA; Securitisation System.'

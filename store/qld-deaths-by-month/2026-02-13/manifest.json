@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-deaths-by-month",
+  "version": "2026-02-13",
+  "as_at": "",
+  "fetched_at": "2026-10-03T02:59:30+00:00",
+  "sha256": "68d16e1b001ea98f7d255db8c6f1be6b32ffd20035c36dfbf39fa70a9a1d1b57",
+  "bytes": 119,
+  "filename": "2025-deaths-by-month.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/e85435cc-9748-4ec7-b7bc-08073a66316d/resource/73acdbf5-626b-4c73-be7e-4700400b5d8c/download/2025-deaths-by-month.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "deaths-by-month",
+    "package_id": "e85435cc-9748-4ec7-b7bc-08073a66316d",
+    "resource": "73acdbf5-626b-4c73-be7e-4700400b5d8c",
+    "resource_name": "2025 Deaths by Month",
+    "resource_last_modified": "2026-02-12T22:45:12.582943",
+    "package_modified": "2026-02-12T22:44:21.044444",
+    "package_version": "1.0",
+    "etag": "060b3337a5b1f6c9169c2ba1f1c2bf8b",
+    "http_last_modified": "Thu, 12 Feb 2026 22:44:13 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-3.0",
+    "title": "Creative Commons Attribution 3.0",
+    "url": "https://creativecommons.org/licenses/by/3.0/au/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=deaths-by-month",
+    "read_at": "2026-10-03T02:59:29+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "d8b8193ff85f1b4eec54adbc0d0ec4f970646124087c22bd2373c08a7628f9ea"
+}

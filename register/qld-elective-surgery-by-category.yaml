@@ -1,0 +1,151 @@
+slug: qld-elective-surgery-by-category
+title: Elective surgery by urgency category and hospital, Queensland, September quarter 2025
+status: live
+topics:
+- health
+order: 227
+collection: qld-elective-surgery
+collection_title: Elective surgery performance by hospital, Queensland
+search_title: Queensland elective surgery waiting list by hospital and urgency category (Queensland Health)
+collection_search_title: Queensland elective surgery waiting times by hospital (Queensland Health)
+also_known_as:
+- Elective surgery waiting times Queensland
+- QLD surgery waiting list by hospital
+- Queensland Health elective surgery data
+keywords:
+- elective surgery
+- waiting list
+- waiting times
+- hospital performance
+- urgency category
+- Queensland Health
+collection_description: |
+  Queensland Health publishes elective surgery performance for each public hospital that reports it, every quarter. One summary is by urgency category and the other by surgical specialty.
+
+  Each table holds one quarter. Urgency category 1 patients are clinically recommended to be treated within 30 days, category 2 within 90 days and category 3 within 365 days. Queensland Health writes a dash where a figure is not given, and those cells are null here with a suppressed flag.
+faq:
+- q: What is in each row?
+  a: One public hospital and one urgency category, 1, 2, 3 or ALL, for the quarter, with the patients
+    treated and the share treated within the recommended time, the change in patients treated on a year
+    before, the patients waiting, those waiting longer than recommended, and the share waiting within
+    the recommended time, split by whether the patient is ready for surgery.
+- q: What does a dash mean?
+  a: Queensland Health writes a dash where it gives no figure for a hospital, such as a percentage with
+    no patients behind it. Those cells are null here and flagged as suppressed. A few cells read NULL,
+    and those are null too.
+- q: Which quarter is it?
+  a: The quarter ending September 2025. Queensland Health adds a file each quarter. This table is fixed
+    to that file, and later quarters need the entry pointed at the new file.
+summary: Elective surgery at each Queensland public hospital in the September quarter 2025 by urgency
+  category, with patients treated, patients waiting and the share within the recommended time.
+description: Queensland Health elective surgery summary 1 for the quarter ending September 2025, one row
+  per public hospital and urgency category. Each row has the volumes treated and waiting, the long waits,
+  and the percentages treated and waiting within the clinically recommended time.
+publisher:
+  name: Queensland Health
+  short: Queensland Health
+  jurisdiction: Qld
+  url: https://www.health.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/elective-surgery
+  attribution: Queensland Health, Queensland Government, Elective surgery, sourced {sourced}, https://www.data.qld.gov.au/dataset/elective-surgery,
+    licensed under CC BY 4.0.
+example:
+  where: {category: ALL, facility_code: {neq: '99999'}}
+  group: facility
+  metric: sum.long_waits
+  label: Patients waiting longer than recommended at each hospital, all urgency categories
+chart:
+  where: {category: {neq: ALL}, facility_code: {neq: '99999'}}
+  split: category
+  metric: sum.treated
+  label: Patients treated
+sample:
+  where: {category: ALL, facility_code: {neq: '99999'}}
+  order: [treated.desc]
+  spread: none
+  label: The ten hospitals that treated the most elective surgery patients in the quarter, all urgency categories,
+    most first.
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: elective-surgery
+  resource: d5b2d273-6eca-428d-8145-10a07fcf81d0
+  url: https://www.data.qld.gov.au/dataset/elective-surgery
+  encoding: utf-8-sig
+  cadence: quarterly
+key:
+- facility_code
+- category
+partition_by:
+- category
+suppression:
+- '-'
+row_label: Hospital categories
+fields:
+- name: facility_code
+  label: Facility code
+  source: Facility_Code
+  type: string
+  description: Kept as text.
+- name: facility
+  label: Hospital
+  source: Facility_Name
+  type: string
+  description: A public hospital, or a group such as Queensland Reporting Hospitals for the state total.
+- name: report_month
+  label: Quarter ending
+  source: Report_Month
+  type: string
+  description: The last month of the quarter, as the publisher writes it, such as Sep-25.
+- name: category
+  label: Urgency category
+  source: Category
+  type: string
+  description: 1, 2, 3, or ALL for every category.
+- name: treated
+  label: Patients treated
+  source: Vol_Treated
+  type: integer
+- name: percent_treated_in_time
+  label: Treated in recommended time (%)
+  source: Percent_Treated_InTime
+  type: number
+- name: percent_change_treated_on_prior_year
+  label: Change in treated on a year before (%)
+  source: Percent_Variation_Treated_Prior_Year
+  type: number
+  null_values:
+  - 'NULL'
+- name: waiting
+  label: Patients waiting
+  source: Vol_Waiting
+  type: integer
+- name: long_waits
+  label: Waiting longer than recommended
+  source: Vol_LongWaits
+  type: integer
+- name: percent_waiting_in_time
+  label: Waiting in recommended time (%)
+  source: Percent_Waiting_InTime_Total
+  type: number
+- name: data_last_update
+  label: Data last updated
+  source: data_last_update
+  type: date
+  date_format: '%d/%m/%Y'
+- name: long_waits_ready_for_surgery
+  label: Long waits, ready for surgery
+  source: Vol_LongWaits_RFS
+  type: integer
+- name: long_waits_not_ready_for_surgery
+  label: Long waits, not ready for surgery
+  source: Vol_LongWaits_NRFS
+  type: integer
+- name: percent_waiting_in_time_ready_for_surgery
+  label: Ready for surgery, waiting in time (%)
+  source: Percent_Waiting_InTime_RFS
+  type: number
+note: Cells were typed and headers were made snake_case. Rows were left alone.

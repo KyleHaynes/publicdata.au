@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-traveltrain-patronage",
+  "version": "2025-04-29",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:02:55+00:00",
+  "sha256": "b52ae1eb1d9a76437b756c08a99198aa0d18ea4749f89df8d109fff661411413",
+  "bytes": 814,
+  "filename": "traveltrain-patronage-by-quarter.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/8ebeca94-d7a2-4541-bc65-5c387e571dd2/resource/95887069-69a7-457c-ae00-c1342d742201/download/traveltrain-patronage-by-quarter.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "traveltrain-patronage",
+    "package_id": "8ebeca94-d7a2-4541-bc65-5c387e571dd2",
+    "resource": "95887069-69a7-457c-ae00-c1342d742201",
+    "resource_name": "Traveltrain service patronage—quarterly",
+    "resource_last_modified": "2025-04-28T20:49:17.578842",
+    "package_modified": "2025-04-28T20:49:23.416983",
+    "package_version": "1.0",
+    "etag": "8003e52aeb281eefda0f114f184c48cd",
+    "http_last_modified": "Mon, 28 Apr 2025 20:49:19 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-3.0",
+    "title": "Creative Commons Attribution 3.0",
+    "url": "https://creativecommons.org/licenses/by/3.0/au/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=traveltrain-patronage",
+    "read_at": "2026-10-03T03:02:55+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "38f82058d6e49e4f092b79457b76c771772691ed2bc84ffbab60c07eed8c7bcb"
+}

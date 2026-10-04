@@ -1,0 +1,108 @@
+slug: qld-road-crash-restraint-helmet-use
+title: Seatbelt and helmet use in road crash casualties, Queensland
+status: live
+topics:
+- roads
+example:
+  where:
+    casualty_severity: Fatality
+    casualty_road_user_type: Vehicle Occupant
+  group: casualty_restraint_helmet_use
+  metric: sum.casualty_count
+order: 13
+publisher:
+  name: Department of Transport and Main Roads
+  short: Transport and Main Roads
+  jurisdiction: Qld
+  url: https://www.tmr.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-09-25'
+  evidence: https://www.data.qld.gov.au/dataset/crash-data-from-queensland-roads
+  attribution: Department of Transport and Main Roads, Queensland Government, Crash data from Queensland
+    roads, sourced {sourced}, https://www.data.qld.gov.au/dataset/crash-data-from-queensland-roads, licensed
+    under CC BY 4.0.
+collection: qld-road-crashes
+temporal_start: '2001-01-01'
+collection_title: Crash data from Queensland roads
+search_title: Queensland seatbelt and helmet crash statistics
+also_known_as:
+- seatbelt statistics Queensland
+- motorcycle helmet crash data Queensland
+- restraint use in crashes
+keywords:
+- seatbelts
+- helmets
+- restraint use
+- motorcycle safety
+- bicycle safety
+- crash statistics
+- Queensland
+faq:
+- q: What is in casualty_restraint_helmet_use?
+  a: The publisher's category for whether the person was wearing a seatbelt, a child restraint or a
+    helmet, or was not, or it was not applicable or unknown. The values are kept exactly as published.
+summary: Casualty counts by year, police region, severity, age group, gender, road user type and whether
+  a restraint or helmet was used.
+description: Aggregate counts of casualties from reported Queensland road crashes from 1 January 2001,
+  by restraint use for vehicle occupants and helmet use for motorcycle and bicycle riders and pillions.
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: crash-data-from-queensland-roads
+  resource: 177dc50c-0cf7-46ba-8a69-99695aeaa46a
+  url: https://www.data.qld.gov.au/dataset/crash-data-from-queensland-roads/resource/177dc50c-0cf7-46ba-8a69-99695aeaa46a
+  cadence: about twice a year
+  encoding: utf-8-sig
+  as_at_regex: to:?[\s•]*(\d{1,2} [A-Za-z]+ \d{4})
+key:
+- crash_year
+- crash_police_region
+- casualty_severity
+- casualty_age_group
+- casualty_gender
+- casualty_road_user_type
+- casualty_restraint_helmet_use
+partition_by:
+- crash_year
+fields:
+- name: crash_year
+  label: Year
+  source: Crash_Year
+  type: integer
+- name: crash_police_region
+  label: Police region
+  source: Crash_PoliceRegion
+  type: string
+  description: Queensland Police Service region, or Unknown.
+- name: casualty_severity
+  label: Severity
+  source: Casualty_Severity
+  type: string
+  description: Fatality, Hospitalised, Medically treated or Minor injury.
+- name: casualty_age_group
+  label: Age group
+  source: Casualty_AgeGroup
+  type: string
+  description: Age band such as 17 to 24.
+- name: casualty_gender
+  label: Gender
+  source: Casualty_Gender
+  type: string
+  description: Female, Male or Unknown.
+- name: casualty_road_user_type
+  label: Road user
+  source: Casualty_Road_User_Type
+  type: string
+  description: Vehicle Occupant, Motorcyclist or Bicyclist.
+- name: casualty_restraint_helmet_use
+  label: Restraint or helmet use
+  source: Casualty_Restraint_Helmet_Use
+  type: string
+  description: Restrained, Unrestrained, Helmet Worn, Helmet Not Worn, Not applicable, or the publisher's
+    not determined values.
+- name: casualty_count
+  label: Casualties
+  source: Casualty_Count
+  type: integer
+  description: Number of casualties in this group.

@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-youth-detention-daily-by-sex",
+  "version": "2024-08-22",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:01:52+00:00",
+  "sha256": "c5661c96ce4b37dc4d17db7c924f71c40e8fbfb3247cd9c8f758f7ba63d2040f",
+  "bytes": 59711,
+  "filename": "20170228-yj-daily-num-detention-sex-2011-12-2015-16.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.dcssds.qld.gov.au/__data/assets/file/0021/12738/20170228-yj-daily-num-detention-sex-2011-12-2015-16.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "youth-justice-young-offenders-in-youth-detention",
+    "package_id": "6b684d9e-727c-424f-ab6f-c056f1645375",
+    "resource": "52b67b8a-0071-4f49-9322-5cb51727487a",
+    "resource_name": "Daily number of young offenders in youth detention by sex, 2011-12 to 2015-16",
+    "resource_last_modified": "2024-08-22T05:09:04.600817",
+    "package_modified": "2025-09-29T01:25:13.628343",
+    "package_version": "1",
+    "etag": "",
+    "http_last_modified": ""
+  },
+  "licence": {
+    "id": "CC-BY-3.0",
+    "title": "Creative Commons Attribution 3.0",
+    "url": "https://creativecommons.org/licenses/by/3.0/au/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=youth-justice-young-offenders-in-youth-detention",
+    "read_at": "2026-10-03T03:01:50+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "b6d1e3e315aff5b5f09fdc28d1169654ce4731f8b6ea85c846b02e5de6b30d1a"
+}

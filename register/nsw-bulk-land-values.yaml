@@ -1,0 +1,23 @@
+slug: nsw-bulk-land-values
+title: Bulk land values, New South Wales
+status: backlog
+topics:
+- housing
+order: 51
+summary: The land value of every property in NSW, released by the Valuer General as bulk files.
+  The download site answers automated requests with a browser challenge, so the fetch cannot
+  reach the files.
+publisher:
+  name: Valuer General NSW
+  short: Valuer General
+  jurisdiction: NSW
+  url: https://www.valuergeneral.nsw.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-09-29'
+  evidence: https://data.nsw.gov.au/data/dataset/http-www-valuergeneral-nsw-gov-au-land-value-summaries-lv-php
+source:
+  adapter: none
+  url: https://www.valuergeneral.nsw.gov.au/land_value_summaries/lv.php
+planned: Build from the bulk files when they can be downloaded without a browser, and confirm the licence
+  on the publisher's own site.

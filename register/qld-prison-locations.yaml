@@ -1,0 +1,173 @@
+slug: qld-prison-locations
+title: Prison locations, Queensland
+status: live
+topics:
+- crime
+order: 265
+search_title: Queensland prison locations and visiting times (Queensland Corrective Services)
+also_known_as:
+- Queensland correctional centres list
+- QCS prison visiting hours
+- Queensland jail locations
+keywords:
+- prison
+- correctional centre
+- prison visits
+- Queensland Corrective Services
+- Queensland
+faq:
+- q: What is in each row?
+  a: Each row is one correctional centre run by Queensland Corrective Services. It gives the centre's security type, street and postal address, coordinates, phone numbers, the times visits can be booked and held, and transport to the centre.
+- q: Why do some text fields contain symbols such as asterisks and hashes?
+  a: The publisher writes the visiting, booking and transport text with Markdown or HTML formatting. The text is kept as published, formatting marks included.
+summary: The location, security type, contact details and visiting arrangements of each Queensland correctional centre.
+description: One row per correctional centre run by Queensland Corrective Services, with its security or centre type, street and postal addresses, latitude and longitude, phone and email contacts, the times visits can be booked and held, visitor arrival rules, transport to the centre and a link to its visitor factsheet. The Updated column is the date the publisher last changed the row.
+publisher:
+  name: Queensland Corrective Services
+  short: QCS
+  jurisdiction: Qld
+  url: https://www.corrections.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/prison-locations
+  attribution: Queensland Corrective Services, Queensland Government, Prison locations, sourced {sourced},
+    https://www.data.qld.gov.au/dataset/prison-locations, licensed under CC BY 4.0.
+example:
+  group: security_centre_type
+  metric: count
+  label: Correctional centres of each security type
+chart: none
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: prison-locations
+  resource: 27bdf47c-6bc8-4b1c-848b-4bcb88de6cb2
+  url: https://www.data.qld.gov.au/dataset/prison-locations
+  cadence: annually
+key:
+- name
+geometry:
+  lon: longitude
+  lat: latitude
+  crs: EPSG:4326
+  crs_note: The publisher names no datum. The coordinates are decimal degrees, read as WGS84 (EPSG:4326) and published as given.
+row_label: Correctional centres
+fields:
+- name: title
+  label: Title
+  source: Title
+  type: string
+- name: name
+  label: Centre
+  source: Name
+  type: string
+- name: security_centre_type
+  label: Security or centre type
+  source: Security / Centre type
+  type: string
+- name: location_description
+  label: Location description
+  source: Location Description
+  type: string
+- name: description
+  label: Description
+  source: Description
+  type: string
+- name: address
+  label: Address
+  source: Address
+  type: string
+- name: postal_address
+  label: Postal address
+  source: Postal address
+  type: string
+- name: latitude
+  label: Latitude
+  source: Latitude
+  type: number
+- name: longitude
+  label: Longitude
+  source: Longitude
+  type: number
+- name: general_phone
+  label: General phone
+  source: General phone
+  type: string
+- name: general_email
+  label: General email
+  source: General email
+  type: string
+- name: booking_phone
+  label: Booking phone
+  source: Booking phone
+  type: string
+- name: booking_email
+  label: Booking email
+  source: Booking email
+  type: string
+- name: booking_times
+  label: Booking times
+  source: Booking times
+  type: string
+- name: booking_instructions
+  label: Booking instructions
+  source: Booking instructions
+  type: string
+- name: booking_arrival_times
+  label: Arrival times
+  source: Booking arrival times
+  type: string
+- name: visiting
+  label: Visiting hours
+  source: Visiting
+  type: string
+- name: transport
+  label: Transport
+  source: Transport
+  type: string
+- name: additional_information
+  label: Additional information
+  source: Additional Information
+  type: string
+- name: updated
+  label: Updated
+  source: Updated
+  type: date
+  date_format: '%d-%b-%y'
+- name: address_1
+  label: Address line 1
+  source: Address 1
+  type: string
+- name: address_2
+  label: Address line 2
+  source: Address 2
+  type: string
+- name: suburb
+  label: Suburb
+  source: Suburb
+  type: string
+- name: postcode
+  label: Postcode
+  source: Postcode
+  type: string
+- name: postal_address_1
+  label: Postal address line 1
+  source: Postal address 1
+  type: string
+- name: postal_address_2
+  label: Postal address line 2
+  source: Postal address 2
+  type: string
+- name: postal_suburb
+  label: Postal suburb
+  source: Postal suburb
+  type: string
+- name: postal_postcode
+  label: Postal postcode
+  source: Postal postcode
+  type: string
+- name: factsheet
+  label: Factsheet
+  source: Factsheet
+  type: string

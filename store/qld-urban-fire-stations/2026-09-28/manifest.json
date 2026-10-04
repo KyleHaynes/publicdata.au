@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-urban-fire-stations",
+  "version": "2026-09-28",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:00:06+00:00",
+  "sha256": "3e244a61993cb541a82705f24fe36514dcb5e64f3260b055324909633cad3f93",
+  "bytes": 30765,
+  "filename": "UrbanFireStations.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.qfes.qld.gov.au/opendata/UrbanFireStations.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "queensland-urban-fire-stations",
+    "package_id": "436ddab3-6d10-4086-80ff-cc1a1127f232",
+    "resource": "a4663955-168b-4b12-8990-4b3f40323ac0",
+    "resource_name": "Urban Fire Stations",
+    "resource_last_modified": "2018-01-19T00:00:00",
+    "package_modified": "2024-08-15T05:54:58.585777",
+    "package_version": "Ongoing",
+    "etag": "b8a99c54b0e92073f46c17ac1655346e",
+    "http_last_modified": "Mon, 28 Sep 2026 02:30:47 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=queensland-urban-fire-stations",
+    "read_at": "2026-10-03T03:00:05+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "e20d8c72e3b653e962a777dff1f86ed9e9b65048f22bdb230b5f8520d5815142"
+}

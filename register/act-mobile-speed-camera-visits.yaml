@@ -1,0 +1,104 @@
+slug: act-mobile-speed-camera-visits
+title: Mobile speed camera visits, ACT
+status: live
+topics:
+- roads
+example:
+  group: posted_speed
+  metric: sum.vehicles_checked
+  label: Vehicles checked
+chart:
+  where: {date: {gte: '2017-01-01'}}
+  metric: sum.vehicles_checked
+  label: Vehicles checked
+order: 456
+collection: act-traffic-fines
+collection_title: Traffic and parking fines in the ACT
+temporal_start: '2016-07-01'
+search_title: ACT mobile speed camera visits and vehicles checked (Access Canberra)
+also_known_as:
+- Canberra mobile speed camera locations by day
+- ACT mobile speed camera stays
+- ACT speed camera vans data
+keywords:
+- mobile speed cameras
+- speed cameras
+- speeding
+- road safety
+- Canberra
+- ACT
+faq:
+- q: What is in each row?
+  a: One stay of a mobile speed camera at one site on one day, with the hours it was there, the site and
+    street, the number of vehicles it checked, the posted speed limit, and the highest and average speed
+    of the vehicles that were fined.
+- q: Why are the highest and average speeds 0 in many rows?
+  a: The publisher states that highest and average speeds from 18 May 2018 are not displayed, and many
+    rows from then on show 0 for both. The zeros are kept as published.
+- q: Where are the camera sites?
+  a: The camera location code matches the ACT traffic camera locations table in this collection, which
+    gives each site's latitude and longitude.
+summary: Every visit of an ACT mobile speed camera since July 2016, one row per stay, with the site, hours
+  on site, vehicles checked and posted speed limit.
+description: The visits Access Canberra's mobile speed cameras make to sites around the ACT, from 1 July
+  2016. Each row carries the date, the time at the site in hours, a description of the site, the camera
+  location code, the street, the number of vehicles checked, the highest and average speed of the vehicles
+  that were fined and the posted speed limit.
+publisher:
+  name: Access Canberra, City and Environment Directorate
+  short: Access Canberra
+  jurisdiction: ACT
+  url: https://www.accesscanberra.act.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.act.gov.au/d/d56a-2nhi
+  attribution: Access Canberra, ACT Government, Mobile Speed Camera Visits and Stays,
+    https://www.data.act.gov.au/d/d56a-2nhi, accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: socrata
+  portal: https://www.data.act.gov.au
+  package: d56a-2nhi
+  url: https://www.data.act.gov.au/d/d56a-2nhi
+  cadence: monthly
+row_label: Camera stays
+fields:
+- name: date
+  label: Date
+  source: Date
+  type: date
+  date_format: '%d/%m/%Y'
+- name: hours_at_site
+  label: Hours at site
+  source: TimeAtSiteInHours
+  type: number
+- name: site_description
+  label: Site
+  source: Description of Site
+  type: string
+- name: camera_location
+  label: Camera location code
+  source: Camera Location
+  type: string
+- name: street
+  label: Street
+  source: Street
+  type: string
+- name: vehicles_checked
+  label: Vehicles checked
+  source: Number Checked
+  type: integer
+- name: highest_speed
+  label: Highest speed (km/h)
+  source: Highest Speed
+  type: number
+- name: average_speed
+  label: Average speed (km/h)
+  source: Average Speed
+  type: number
+- name: posted_speed
+  label: Speed limit (km/h)
+  source: Posted Speed
+  type: integer
+note: Cells were typed and headers were made snake_case. The publisher's header is kept beside every field
+  in schema.json. Rows were left alone.

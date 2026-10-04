@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Ask for a dataset
+    url: https://publicdata.au/
+    about: Search for it and vote for it on the site. The most-voted requests are built first.
+  - name: Security vulnerability
+    url: https://github.com/National-Digital/publicdata.au/security/advisories/new
+    about: Report security issues privately, never in a public issue.
+  - name: Code of conduct
+    url: https://github.com/National-Digital/publicdata.au/blob/main/CODE_OF_CONDUCT.md
+    about: How we expect people to behave, and how to report a concern.

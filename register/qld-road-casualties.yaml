@@ -1,0 +1,102 @@
+slug: qld-road-casualties
+title: Road casualties, Queensland
+status: live
+topics:
+- roads
+example:
+  where:
+    casualty_severity: Hospitalised
+  group: casualty_road_user_type
+  metric: sum.casualty_count
+order: 11
+publisher:
+  name: Department of Transport and Main Roads
+  short: Transport and Main Roads
+  jurisdiction: Qld
+  url: https://www.tmr.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-09-25'
+  evidence: https://www.data.qld.gov.au/dataset/crash-data-from-queensland-roads
+  attribution: Department of Transport and Main Roads, Queensland Government, Crash data from Queensland
+    roads, sourced {sourced}, https://www.data.qld.gov.au/dataset/crash-data-from-queensland-roads, licensed
+    under CC BY 4.0.
+collection: qld-road-crashes
+temporal_start: '2001-01-01'
+collection_title: Crash data from Queensland roads
+search_title: Queensland road casualty statistics
+also_known_as:
+- Queensland road crash casualties
+- Queensland road injuries and deaths by year
+- TMR casualty data
+keywords:
+- road casualties
+- road fatalities
+- road injuries
+- crash statistics
+- road safety
+- Queensland
+- TMR
+faq:
+- q: What does one row count?
+  a: The number of people killed or injured in one combination of year, police region, severity, age
+    group, gender and road user type. Add rows to get a total. A crash with three injured people appears
+    as three casualties, not one.
+summary: Casualties from Queensland road crashes counted by year, police region, severity, age group,
+  gender and road user type.
+description: Aggregate counts of people killed or injured in reported Queensland road crashes from 1 January
+  2001. Each row is one combination of year, police region, casualty severity, age group, gender and road
+  user type, with the number of casualties.
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: crash-data-from-queensland-roads
+  resource: 3fc53539-d529-4c1d-85f8-6c92d9e06fc8
+  url: https://www.data.qld.gov.au/dataset/crash-data-from-queensland-roads/resource/3fc53539-d529-4c1d-85f8-6c92d9e06fc8
+  cadence: about twice a year
+  encoding: utf-8-sig
+  as_at_regex: to:?[\s•]*(\d{1,2} [A-Za-z]+ \d{4})
+key:
+- crash_year
+- crash_police_region
+- casualty_severity
+- casualty_age_group
+- casualty_gender
+- casualty_road_user_type
+partition_by:
+- crash_year
+fields:
+- name: crash_year
+  label: Year
+  source: Crash_Year
+  type: integer
+- name: crash_police_region
+  label: Police region
+  source: Crash_Police_Region
+  type: string
+  description: Queensland Police Service region, or Unknown.
+- name: casualty_severity
+  label: Severity
+  source: Casualty_Severity
+  type: string
+  description: Fatality, Hospitalised, Medically treated or Minor injury.
+- name: casualty_age_group
+  label: Age group
+  source: Casualty_AgeGroup
+  type: string
+  description: Age band such as 17 to 24.
+- name: casualty_gender
+  label: Gender
+  source: Casualty_Gender
+  type: string
+  description: Female, Male or Unknown.
+- name: casualty_road_user_type
+  label: Road user
+  source: Casualty_RoadUserType
+  type: string
+  description: Driver, Passenger, Motorcyclist, Bicyclist, Pedestrian or Other.
+- name: casualty_count
+  label: Casualties
+  source: Casualty_Count
+  type: integer
+  description: Number of casualties in this group.

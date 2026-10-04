@@ -1,0 +1,32 @@
+{
+  "dataset": "vic-ballarat-lightning-observations",
+  "version": "2025-04-07",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:10:00+00:00",
+  "sha256": "d128407c0affb6387f0f5c97d2e5633ef763307c364504b1701bbbf021cc0afd",
+  "bytes": 1996542,
+  "filename": "lightning-observations.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://data.ballarat.vic.gov.au/api/explore/v2.1/catalog/datasets/lightning-observations/exports/csv?delimiter=%2C&with_bom=false",
+    "portal": "https://data.ballarat.vic.gov.au",
+    "package": "lightning-observations",
+    "resource_name": "Lightning Observations",
+    "data_processed": "2025-04-07T01:13:53+00:00",
+    "etag": "",
+    "http_last_modified": ""
+  },
+  "licence": {
+    "id": "CC-BY-3.0-AU",
+    "stated": "CC BY 3",
+    "normalised": "CC-BY-3.0-AU",
+    "title": "CC BY 3",
+    "url": "https://creativecommons.org/licenses/by/3.0/au/",
+    "read_from": "https://data.ballarat.vic.gov.au/api/explore/v2.1/catalog/datasets/lightning-observations",
+    "read_at": "2026-10-03T03:09:53+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "7f7584de546a84c9fc608db88ee5ce0cfe5224d675e988f454a142c270b40979"
+}

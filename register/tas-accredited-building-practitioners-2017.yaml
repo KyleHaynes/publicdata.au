@@ -1,0 +1,101 @@
+slug: tas-accredited-building-practitioners-2017
+title: Accredited building practitioners, Tasmania, May 2017
+status: live
+topics:
+- economy
+order: 489
+temporal_start: '2017-05-10'
+search_title: Tasmania accredited building practitioners list May 2017 (Justice Tasmania)
+also_known_as:
+- Trade Licensing, accredited building practitioners
+- Tasmanian building practitioner accreditation register
+- Tasmania licensed builders list 2017
+keywords:
+- building practitioners
+- builder accreditation
+- trade licensing
+- Building and Occupational Services
+- Tasmania
+faq:
+- q: What is in each row?
+  a: One accreditation of a building practitioner held on 10 May 2017, with the accreditation number,
+    the practitioner's gender, suburb, state and postcode, the publisher's region code and the date
+    the accreditation expires. A practitioner with more than one address has a row for each, under
+    one accreditation number.
+- q: What do the region codes mean?
+  a: The publisher gives the code as a number from 1 to 4 and does not say which region each number
+    names. In the data, 4 is on every address outside Tasmania. Hobart addresses carry 1, Launceston
+    addresses 2, and Burnie and Devonport addresses 3.
+- q: Is it current?
+  a: No. It is a single extract from the Department of Justice occupational licensing database as at
+    10 May 2017, and the series is closed. The publisher's resource is named for electrical, plumbing
+    and gas fitting licences, and its description and contents are of accredited building
+    practitioners. Eleven rows hold only a postcode, as published.
+- q: Does the postcode match the suburb?
+  a: Often it does not, as published. None of the 45 Devonport rows carries Devonport's postcode 7310,
+    and 8 of the 54 Launceston rows carry 7250. The suburb and the region code agree with each other, so
+    the suburb is the better guide to where a practitioner is.
+summary: The building practitioners accredited in Tasmania on 10 May 2017, one row per accreditation and
+  address, with accreditation number, gender, suburb, postcode and expiry date.
+description: A point in time extract of accredited building practitioners from the Tasmanian Department
+  of Justice occupational licensing database, as at 10 May 2017. Each row carries the accreditation
+  number, gender, suburb, state and postcode, the publisher's region code and the accreditation expiry
+  date. Practitioners based in other states who hold a Tasmanian accreditation are included.
+publisher:
+  name: Department of Justice
+  short: Justice Tasmania
+  jurisdiction: Tas
+  url: https://www.justice.tas.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://data.gov.au/data/dataset/trade-licensing
+  attribution: Department of Justice, Tasmanian Government, Trade Licensing,
+    https://data.gov.au/data/dataset/trade-licensing, accessed {sourced}, licensed under CC BY 4.0.
+chart:
+  split: none
+  metric: count
+  label: Accreditations expiring
+sample:
+  spread: none
+source:
+  adapter: ckan-resource
+  portal: https://data.gov.au/data
+  package: trade-licensing
+  resource: fecbf8a1-f55e-4b4c-b174-52ece27ac41d
+  url: https://data.gov.au/data/dataset/trade-licensing
+  cadence: closed
+partition_by:
+- state
+row_label: Accreditations
+fields:
+- name: accreditation_no
+  label: Accreditation number
+  source: Accreditation_No
+  type: string
+- name: gender
+  label: Gender
+  source: Gender
+  type: string
+- name: suburb
+  label: Suburb
+  source: Suburb
+  type: string
+- name: state
+  label: State
+  source: State
+  type: string
+- name: postcode
+  label: Postcode
+  source: PostCode
+  type: string
+- name: region
+  label: Region code
+  source: Region
+  type: integer
+- name: expiry_date
+  label: Expiry date
+  source: ExpiryDate
+  type: date
+note: Cells were typed and headers were made snake_case. The publisher's header is kept beside every
+  field in schema.json. Rows were left alone.

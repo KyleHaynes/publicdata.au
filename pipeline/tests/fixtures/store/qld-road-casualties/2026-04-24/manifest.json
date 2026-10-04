@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-road-casualties",
+  "version": "2026-04-24",
+  "as_at": "2025-06-30",
+  "fetched_at": "2026-09-24T14:15:48+00:00",
+  "sha256": "30a99edb4d601dba55a1c167c9d0b0c55ab11afe9a6247eadfcc8a30dc2019fa",
+  "bytes": 17543,
+  "filename": "_a_road_casualties.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/f3e0ca94-2d7b-44ee-abef-d6b06e9b0729/resource/3fc53539-d529-4c1d-85f8-6c92d9e06fc8/download/_a_road_casualties.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "crash-data-from-queensland-roads",
+    "package_id": "f3e0ca94-2d7b-44ee-abef-d6b06e9b0729",
+    "resource": "3fc53539-d529-4c1d-85f8-6c92d9e06fc8",
+    "resource_name": "Road casualties",
+    "resource_last_modified": "2026-04-24T02:58:15.869355",
+    "package_modified": "2026-04-24T03:16:39.760744",
+    "package_version": "rqC45037- June 2025",
+    "etag": "96d21cb988f30f278fc4b12fc24b67ce",
+    "http_last_modified": "Fri, 24 Apr 2026 02:58:17 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_at": "2026-09-24T14:15:47+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [
+    "fixture: first 300 rows of the release"
+  ]
+}

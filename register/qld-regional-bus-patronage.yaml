@@ -1,0 +1,134 @@
+slug: qld-regional-bus-patronage
+title: Regional urban bus patronage by operator, Queensland
+status: live
+topics:
+- roads
+order: 291
+temporal_start: '2012-07-01'
+search_title: Queensland regional bus patronage by town and operator
+also_known_as:
+- Regional Urban Bus Patronage by region and operator
+- Queensland regional bus passenger numbers
+- Cairns, Toowoomba and Townsville bus patronage
+keywords:
+- bus patronage
+- regional bus
+- passenger trips
+- Translink
+- Queensland
+faq:
+- q: What is in each row?
+  a: Each row is one regional bus contract area outside South East Queensland and its operator, with a point
+    for the town and the number of passenger trips in each financial year from 2012/13 to 2022/23.
+- q: Is there a breakdown by route?
+  a: The publisher also gives one file per contract area with patronage by route. Those files are on the same
+    portal page and are not part of this table.
+- q: Why does a year look low for some areas?
+  a: The publisher's notes record part-year figures and operator changes for some areas, such as a contract
+    that ended or a ticketing problem. Read the Regional Bus Patronage Notes file on the portal page before
+    comparing years.
+summary: Passenger trips on each regional urban bus service in Queensland outside the south-east, by contract
+  area and operator, for each financial year from 2012/13 to 2022/23.
+description: 'One row per regional urban bus contract area and operator in Queensland outside South East Queensland,
+  with the latitude and longitude of the town and the number of passenger trips in each financial year from
+  2012/13 to 2022/23. Each financial year is its own column, as the publisher lays it out.
+
+
+  The publisher''s notes file on the same page records part-year figures and operator changes.
+
+  '
+publisher:
+  name: Department of Transport and Main Roads
+  short: Transport and Main Roads
+  jurisdiction: Qld
+  url: https://www.tmr.qld.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/qconnect-urban-bus-patronage
+  attribution: Department of Transport and Main Roads, Queensland Government, Regional Bus Patronage, sourced
+    {sourced}, https://www.data.qld.gov.au/dataset/qconnect-urban-bus-patronage, licensed under CC BY 3.0 AU.
+  portal_id: CC-BY-3.0
+example:
+  group: region
+  metric: sum.trips_2022_23
+  label: Passenger trips in each regional contract area in 2022/23
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: qconnect-urban-bus-patronage
+  resource: 08ee7c48-a6b3-4ac9-b5c2-da50c159c14f
+  url: https://www.data.qld.gov.au/dataset/qconnect-urban-bus-patronage
+  encoding: utf-8-sig
+  cadence: annually, last updated for 2022/23
+key:
+- region
+- operator
+geometry:
+  lon: longitude
+  lat: latitude
+  crs: EPSG:4326
+  crs_note: The publisher names no datum. The coordinates are decimal degrees for the town, read as WGS84 (EPSG:4326)
+    and published as given.
+row_label: Contract areas
+fields:
+- name: region
+  label: Region
+  source: Region
+  type: string
+- name: operator
+  label: Operator
+  source: Operator
+  type: string
+- name: latitude
+  label: Latitude
+  source: Latitude
+  type: number
+- name: longitude
+  label: Longitude
+  source: Longitude
+  type: number
+- name: trips_2012_13
+  label: Trips 2012/13
+  source: 2012/13
+  type: integer
+- name: trips_2013_14
+  label: Trips 2013/14
+  source: 2013/14
+  type: integer
+- name: trips_2014_15
+  label: Trips 2014/15
+  source: 2014/15
+  type: integer
+- name: trips_2015_16
+  label: Trips 2015/16
+  source: 2015/16
+  type: integer
+- name: trips_2016_17
+  label: Trips 2016/17
+  source: 2016/17
+  type: integer
+- name: trips_2017_18
+  label: Trips 2017/18
+  source: 2017/18
+  type: integer
+- name: trips_2018_19
+  label: Trips 2018/19
+  source: 2018/19
+  type: integer
+- name: trips_2019_20
+  label: Trips 2019/20
+  source: 2019/20
+  type: integer
+- name: trips_2020_21
+  label: Trips 2020/21
+  source: 2020/21
+  type: integer
+- name: trips_2021_22
+  label: Trips 2021/22
+  source: 2021/22
+  type: integer
+- name: trips_2022_23
+  label: Trips 2022/23
+  source: 2022/23
+  type: integer

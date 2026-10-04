@@ -1,0 +1,39 @@
+{
+  "dataset": "wa-wave-stations-historic",
+  "version": "2026-10-03",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:14:31+00:00",
+  "sha256": "8f10aaa61cca1c6e614afdf4f1aff65eb07f8d771938f2317ee28974dce59660",
+  "bytes": 33755,
+  "filename": "wa-wave-stations-historic.geojson",
+  "encoding": "utf-8",
+  "source": {
+    "url": "https://public-services.slip.wa.gov.au/public/rest/services/SLIP_Public_Services/Marine_and_Estuaries/MapServer/15",
+    "portal": "https://catalogue.data.wa.gov.au",
+    "package": "wave-stations",
+    "package_id": "01db29da-0428-4871-9b47-e1ffe7c8c646",
+    "package_modified": "2026-10-02T22:41:11.049203",
+    "layer_name": "Wave Stations Historic",
+    "object_id_field": "objectid",
+    "last_edit_date": null,
+    "newest_record": null,
+    "features": 43,
+    "date_fields": []
+  },
+  "licence": {
+    "id": "cc-by",
+    "stated": "cc-by",
+    "normalised": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://catalogue.data.wa.gov.au/api/3/action/package_show?id=wave-stations",
+    "read_at": "2026-10-03T03:14:31+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [
+    "The layer states no edit date or dated records, so this version is dated by the portal record.",
+    "The publisher offers no file. These bytes are every feature of the layer as the service returned them in WGS84, ordered by its object id, so the same layer gives the same bytes."
+  ],
+  "rows_sha256": "3408107ae4b79613087d09c6f5b19728496411ab0a8e011cc6672a81d3bb368d"
+}

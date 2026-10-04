@@ -1,0 +1,361 @@
+# Publishers placed in Victoria that no portal of its own lists, or that one portal lists twice.
+# Generated from 'publicdata catalogue publishers', then reviewed. Edit by hand.
+- slug: alpine-shire-council
+  name: Alpine Shire Council
+  jurisdiction: Vic
+  level: local
+  orgs:
+  - gov:alpine-shire-council
+  - vic:alpine-shire-council
+- slug: arts-victoria
+  name: Arts Victoria
+  jurisdiction: Vic
+  level: state
+  orgs:
+  - gov:artsvictoria
+- slug: cardinia
+  name: Cardinia
+  jurisdiction: Vic
+  level: local
+  orgs:
+  - gov:cardinia-shire-council-open-data
+- slug: cardinia-shire-council
+  name: Cardinia Shire Council
+  jurisdiction: Vic
+  level: local
+  orgs:
+  - gov:cardinia-shire-council
+- slug: central-goldfields-shire-council
+  name: Central Goldfields Shire Council
+  jurisdiction: Vic
+  level: local
+  orgs:
+  - gov:central-goldfields-shire-council
+- slug: city-of-ballarat
+  name: City of Ballarat
+  jurisdiction: Vic
+  level: local
+  orgs:
+  - gov:city-of-ballarat
+  - vic:city-of-ballarat
+- slug: city-of-casey
+  name: City of Casey
+  jurisdiction: Vic
+  level: local
+  orgs:
+  - gov:city-of-casey
+  - vic:city-of-casey
+- slug: city-of-greater-bendigo
+  name: City of Greater Bendigo
+  jurisdiction: Vic
+  level: local
+  orgs:
+  - gov:city-of-greater-bendigo
+- slug: city-of-greater-dandenong
+  name: City of Greater Dandenong
+  jurisdiction: Vic
+  level: local
+  orgs:
+  - gov:city-of-greater-dandenong
+- slug: city-of-greater-geelong
+  name: City of Greater Geelong
+  jurisdiction: Vic
+  level: local
+  orgs:
+  - gov:city-of-greater-geelong
+  - vic:city-of-greater-geelong
+- slug: city-of-melbourne
+  name: City of Melbourne
+  jurisdiction: Vic
+  level: local
+  orgs:
+  - gov:city-of-melbourne-open-data
+  - vic:city-of-melbourne
+  - gov:local-government-of-victoria-city-of-melbourne-australian-urban-research-infrastructure-network
+- slug: city-of-port-phillip
+  name: City of Port Phillip
+  jurisdiction: Vic
+  level: local
+  orgs:
+  - gov:city-of-port-phillip
+- slug: city-of-yarra
+  name: City of Yarra
+  jurisdiction: Vic
+  level: local
+  orgs:
+  - gov:city-of-yarra
+- slug: colac-otway-shire
+  name: Colac Otway Shire
+  jurisdiction: Vic
+  level: local
+  orgs:
+  - gov:colac-otway-shire
+- slug: corangamite-shire-council
+  name: Corangamite Shire Council
+  jurisdiction: Vic
+  level: local
+  orgs:
+  - gov:corangamite-shire-council
+- slug: crime-statistics-agency
+  name: Crime Statistics Agency
+  jurisdiction: Vic
+  level: state
+  orgs:
+  - gov:government-of-victoria-crime-statistics-agency-australian-urban-research-infrastructure-network
+  - vic:crime-statistics-agency
+- slug: department-of-education-and-training
+  name: Department of Education and Training
+  jurisdiction: Vic
+  level: state
+  orgs:
+  - gov:government-of-victoria-department-of-education-and-training-australian-urban-research-infrastructure
+- slug: department-of-environment-land-water-and-planning
+  name: Department of Environment Land Water and Planning
+  jurisdiction: Vic
+  level: state
+  orgs:
+  - gov:government-of-victoria-department-of-environment-land-water-and-planning-australian-urban-research-i
+- slug: department-of-environment-land-water-and-planning-delwp-victorian-government
+  name: Department of Environment, Land, Water and Planning (DELWP), Victorian Government
+  jurisdiction: Vic
+  level: state
+  orgs:
+  - gov:department-of-environment-land-water-and-planning-delwp-victorian-government
+- slug: department-of-environment-land-water-and-planning-dewlp-victorian-government
+  name: Department of Environment, Land, Water and Planning (DEWLP), Victorian Government
+  jurisdiction: Vic
+  level: state
+  orgs:
+  - gov:department-of-environment-land-water-and-planning-dewlp-victorian-government
+- slug: department-of-health-and-human-services
+  name: Department of Health and Human Services
+  jurisdiction: Vic
+  level: state
+  orgs:
+  - gov:government-of-victoria-department-of-health-and-human-services-australian-urban-research-infrastruct
+  - vic:department-of-health-and-human-services
+- slug: department-of-infrastructure-engineering-the-university-of-melbourne
+  name: Department of Infrastructure Engineering, The University of Melbourne
+  jurisdiction: Vic
+  level: other
+  orgs:
+  - gov:department-of-infrastructure-engineering-the-university-of-melbourne
+- slug: department-of-justice-victoria
+  name: Department of Justice (Victoria)
+  jurisdiction: Vic
+  level: state
+  orgs:
+  - gov:departmentofjustice
+- slug: department-of-pharmacology-and-therapeutics-the-university-of-melbourne
+  name: Department of Pharmacology and Therapeutics, The University of Melbourne
+  jurisdiction: Vic
+  level: other
+  orgs:
+  - gov:department-of-pharmacology-and-therapeutics-the-university-of-melbourne
+- slug: department-of-state-development-business-and-innovation
+  name: Department of State Development Business and Innovation
+  jurisdiction: Vic
+  level: state
+  orgs:
+  - gov:government-of-victoria-department-of-state-development-business-and-innovation-australian-urban-rese
+- slug: department-of-treasury-and-finance
+  name: Department of Treasury and Finance
+  jurisdiction: Vic
+  level: state
+  orgs:
+  - gov:victoria-state-government-department-of-treasury-and-finance-australian-urban-research-infrastructur
+- slug: environment-protection-authority-epa-victoria
+  name: Environment Protection Authority (EPA) Victoria
+  jurisdiction: Vic
+  level: state
+  orgs:
+  - gov:environment-protection-authority-epa-victoria
+- slug: environment-protection-authority-victoria-epa-victorian-government
+  name: Environment Protection Authority Victoria (EPA), Victorian Government
+  jurisdiction: Vic
+  level: state
+  orgs:
+  - gov:environment-protection-authority-victoria-epa-victorian-government
+- slug: frankston-city-council
+  name: Frankston City Council
+  jurisdiction: Vic
+  level: local
+  orgs:
+  - gov:frankston-city-council
+- slug: glen-eira-city-council
+  name: Glen Eira City Council
+  jurisdiction: Vic
+  level: local
+  orgs:
+  - gov:glen-eira-city-council
+- slug: glenelg-shire-council
+  name: Glenelg Shire Council
+  jurisdiction: Vic
+  level: local
+  orgs:
+  - gov:glenelg-shire-council
+- slug: golden-plains-shire-council
+  name: Golden Plains Shire Council
+  jurisdiction: Vic
+  level: local
+  orgs:
+  - gov:golden-plains-shire-council
+- slug: hindmarsh-shire-council
+  name: Hindmarsh Shire Council
+  jurisdiction: Vic
+  level: local
+  orgs:
+  - gov:hindmarsh-shire-council
+- slug: horsham-rural-city-council
+  name: Horsham Rural City Council
+  jurisdiction: Vic
+  level: local
+  orgs:
+  - gov:horsham-rural-city-council
+- slug: hume-city-council
+  name: Hume City Council
+  jurisdiction: Vic
+  level: local
+  orgs:
+  - gov:local-government-of-victoria-hume-city-council-australian-urban-research-infrastructure-network
+- slug: kingston-city-council
+  name: Kingston City Council
+  jurisdiction: Vic
+  level: local
+  orgs:
+  - gov:kingston-city-council
+- slug: loddon-shire-council
+  name: Loddon Shire Council
+  jurisdiction: Vic
+  level: local
+  orgs:
+  - gov:loddon-shire-council
+- slug: macedon-ranges-shire-council
+  name: Macedon Ranges Shire Council
+  jurisdiction: Vic
+  level: local
+  orgs:
+  - gov:macedon-ranges-shire-council
+- slug: manningham-city-council
+  name: Manningham City Council
+  jurisdiction: Vic
+  level: local
+  orgs:
+  - gov:manningham-city-council
+- slug: maribyrnong-city-council
+  name: Maribyrnong City Council
+  jurisdiction: Vic
+  level: local
+  orgs:
+  - gov:maribyrnong-city-council
+- slug: melbourne-water
+  name: Melbourne Water
+  jurisdiction: Vic
+  level: state
+  orgs:
+  - gov:melbourne-water-open-data
+- slug: mildura-rural-city-council
+  name: Mildura Rural City Council
+  jurisdiction: Vic
+  level: local
+  orgs:
+  - gov:mildura-rural-city-council
+- slug: mitchell-shire-council
+  name: Mitchell Shire Council
+  jurisdiction: Vic
+  level: local
+  orgs:
+  - gov:www-mitchellshirecouncil-vic-gov-au
+- slug: moonee-valley-city-council
+  name: Moonee Valley City Council
+  jurisdiction: Vic
+  level: local
+  orgs:
+  - gov:moonee-valley-city-council
+- slug: northern-grampians-shire-council
+  name: Northern Grampians Shire Council
+  jurisdiction: Vic
+  level: local
+  orgs:
+  - gov:northern-grampians-shire-council
+- slug: royal-melbourne-institute-of-technology-centre-for-urban-research
+  name: Royal Melbourne Institute of Technology - Centre for Urban Research
+  jurisdiction: Vic
+  level: other
+  orgs:
+  - gov:royal-melbourne-institute-of-technology-centre-for-urban-research-australian-urban-research-infrastr
+- slug: school-of-biosciences-the-university-of-melbourne
+  name: School of BioSciences, The University of Melbourne
+  jurisdiction: Vic
+  level: other
+  orgs:
+  - gov:school-of-biosciences-the-university-of-melbourne
+- slug: southern-grampians-shire-council
+  name: Southern Grampians Shire Council
+  jurisdiction: Vic
+  level: local
+  orgs:
+  - gov:southern-grampians-shire-council
+- slug: state-revenue-office
+  name: State Revenue Office
+  jurisdiction: Vic
+  level: state
+  orgs:
+  - gov:government-of-victoria-state-revenue-office-australian-urban-research-infrastructure-network
+  - vic:state-revenue-office
+- slug: strathbogie-shire-council
+  name: Strathbogie Shire Council
+  jurisdiction: Vic
+  level: local
+  orgs:
+  - gov:strathbogie-shire-council
+- slug: sustainability-victoria
+  name: Sustainability Victoria
+  jurisdiction: Vic
+  level: state
+  orgs:
+  - gov:government-of-victoria-sustainability-victoria-australian-urban-research-infrastructure-network
+  - vic:sustainability-victoria
+  - gov:sustainabilityvictoria
+- slug: swan-hill-rural-city-council
+  name: Swan Hill Rural City Council
+  jurisdiction: Vic
+  level: local
+  orgs:
+  - gov:swan-hill-rural-city-council
+- slug: victorian-commission-for-gambling-and-liquor-regulation
+  name: Victorian Commission for Gambling and Liquor Regulation
+  jurisdiction: Vic
+  level: state
+  orgs:
+  - gov:government-of-victoria-victorian-commission-for-gambling-and-liquor-regulation-australian-urban-rese
+- slug: wangaratta-rural-city-council
+  name: Wangaratta Rural City Council
+  jurisdiction: Vic
+  level: local
+  orgs:
+  - gov:wangaratta-rural-city-council
+- slug: warrnambool-city-council
+  name: Warrnambool City Council
+  jurisdiction: Vic
+  level: local
+  orgs:
+  - gov:warrnambool-city-council
+- slug: west-wimmera-shire-council
+  name: West Wimmera Shire Council
+  jurisdiction: Vic
+  level: local
+  orgs:
+  - gov:west-wimmera-shire-council
+- slug: wyndham-city-council
+  name: Wyndham City Council
+  jurisdiction: Vic
+  level: local
+  orgs:
+  - gov:wyndham-city-council
+- slug: yarriambiack-shire-council
+  name: Yarriambiack Shire Council
+  jurisdiction: Vic
+  level: local
+  orgs:
+  - gov:yarriambiack-shire-council

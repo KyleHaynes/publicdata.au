@@ -1,0 +1,131 @@
+slug: vic-gaming-expenditure-by-venue
+title: Poker machine expenditure by venue, Victoria, last three years
+status: live
+topics:
+- community
+- economy
+example:
+  where:
+    financial_year: newest
+    region:
+      neq: Total
+  group: lga_name
+  metric: sum.expenditure
+  label: Poker machine losses ($)
+sample:
+  where: {financial_year: newest, venue: {gt: ''}}
+  order: [expenditure.desc]
+  spread: none
+  label: The ten venues where players lost the most in the newest financial year, largest first.
+order: 382
+collection: vic-gaming-expenditure
+collection_title: Electronic gaming machine expenditure by venue, Victoria
+collection_search_title: Pokies losses by venue in Victoria, every year since 2008-09 (VGCCC)
+collection_description: |
+  The Victorian Gambling and Casino Control Commission (VGCCC) publishes the amount players lost on electronic gaming machines, or pokies, at each hotel and club venue in Victoria in each financial year. Expenditure is the amount wagered less the winnings paid out.
+
+  The commission publishes the latest three financial years in one workbook and the years from 2008-09 to 2021-22 in another. Each is its own dataset here, with one row per venue and year.
+publisher:
+  name: Victorian Gambling and Casino Control Commission
+  short: VGCCC
+  jurisdiction: Vic
+  url: https://www.vgccc.vic.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://discover.data.vic.gov.au/dataset/current-gaming-expenditure-by-venue
+  attribution: Victorian Gambling and Casino Control Commission, Victorian Government, Current Gaming
+    Expenditure by Venue, sourced {sourced}, https://discover.data.vic.gov.au/dataset/current-gaming-expenditure-by-venue,
+    licensed under CC BY 4.0.
+temporal_start: '2022-07-01'
+search_title: Pokies expenditure by venue in Victoria, latest three financial years (VGCCC)
+also_known_as:
+- Victorian pokies losses by venue
+- Current gaming expenditure by venue
+- EGM expenditure by venue Victoria
+- Poker machine losses by pub and club
+keywords:
+- pokies
+- poker machines
+- electronic gaming machines
+- gambling losses
+- gaming expenditure
+- VGCCC
+- Victoria
+place_field: lga_name
+faq:
+- q: What does each row hold?
+  a: One hotel or club venue with gaming machines and one financial year, with the venue's region, council
+    area and type and the amount players lost on its machines in that year, in dollars. Each sheet of the
+    publisher's workbook is one year, and its name is kept in the financial year column.
+- q: What is expenditure?
+  a: The commission defines gaming machine expenditure as the net amount players lost, which is the
+    amount wagered less the winnings paid out. It is the venue's gaming revenue before tax.
+- q: What is in the publisher's file that is not here?
+  a: The workbook also splits each year into two half years and gives each venue's average number of
+    machines. Those columns change name every year, so they are left out, and the half years add up to
+    the year's figure. The row with no venue name is the publisher's total for the state, kept as
+    published. The Melbourne casino is not in the data.
+summary: The amount players lost on poker machines at every Victorian hotel and club venue in each of
+  the last three financial years, with the venue's council area and type.
+description: Current gaming expenditure by venue from the Victorian Gambling and Casino Control
+  Commission. Each row is one gaming venue and one financial year, with the venue name, metro or country
+  region, local government area, venue type and electronic gaming machine expenditure in dollars. The
+  workbook covers three financial years and is replaced each year.
+source:
+  adapter: ckan-resource
+  portal: https://discover.data.vic.gov.au
+  package: current-gaming-expenditure-by-venue
+  resource_match: ^\d{4}-\d{2} to \d{4}-\d{2}$
+  url: https://discover.data.vic.gov.au/dataset/current-gaming-expenditure-by-venue
+  cadence: yearly
+wide:
+  sheet_match: ^Detail Data
+  header_row: 9
+  header_rows: 1
+  row_headers: 4
+  column_match: ^Expenditure\s+0?1 Jul \d{2} - 30 June? \d{2}$
+partition_by:
+- lga_name
+row_label: Venue years
+fields:
+- name: financial_year
+  label: Financial year (sheet)
+  source: (sheet)
+  type: string
+  description: The publisher's sheet name, for example Detail Data 2024 - 2025.
+- name: venue
+  label: Venue
+  source: (row header 1)
+  type: string
+  description: The venue's name in capitals. Blank on the publisher's state total row.
+- name: region
+  label: Region
+  source: (row header 2)
+  type: string
+  description: Metro or Country.
+- name: lga_name
+  label: Council area
+  source: (row header 3)
+  type: string
+- name: venue_type
+  label: Venue type
+  source: (row header 4)
+  type: string
+  description: Hotel or Club.
+- name: expenditure
+  label: Expenditure ($)
+  source: (cell)
+  type: number
+  description: The net amount lost by players on the venue's gaming machines in the financial year, in dollars.
+omit:
+  "Expenditure\n1 Jul 24 - 31 Dec 24": Half year expenditure, which the full year figure includes.
+  "Expenditure\n1 Jan 25 - 30 Jun 25": Half year expenditure, which the full year figure includes.
+  "Average EGM Numbers  \nin June 2025": Machine numbers, whose column name changes each year.
+  "Expenditure\n1 Jul 23 - 31 Dec 23": Half year expenditure, which the full year figure includes.
+  "Expenditure\n1 Jan 24 - 30 Jun 24": Half year expenditure, which the full year figure includes.
+  "Average EGM Numbers  \nin June 2024": Machine numbers, whose column name changes each year.
+  "Expenditure\n1 Jul 22 - 31 Dec 22": Half year expenditure, which the full year figure includes.
+  "Expenditure\n1 Jan 23 - 30 Jun 23": Half year expenditure, which the full year figure includes.
+  "Average EGM Numbers  \nin June 2023": Machine numbers, whose column name changes each year.

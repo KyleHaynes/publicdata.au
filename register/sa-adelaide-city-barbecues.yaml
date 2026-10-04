@@ -1,0 +1,77 @@
+slug: sa-adelaide-city-barbecues
+title: Public barbecues in the Adelaide Park Lands and city
+status: live
+topics:
+- places
+- community
+order: 443
+search_title: Adelaide Park Lands public barbecues map (City of Adelaide)
+also_known_as:
+- City of Adelaide BBQs
+- Adelaide public BBQ locations
+- Park Lands barbecue sites
+keywords:
+- barbecues
+- BBQ
+- Park Lands
+- parks
+- City of Adelaide
+- Adelaide
+faq:
+- q: What is in each row?
+  a: One public barbecue in the City of Adelaide council area, with the park or road it is in and its identifier,
+    the asset identifier, the barbecue type and its location.
+- q: Which coordinates are these?
+  a: The publisher gives easting and northing in GDA94 MGA zone 54 (EPSG:28354), which are kept as published. The
+    publisher's web mercator geometry column is left out. The site serves no map for this table, since it holds no longitude and latitude.
+summary: The location and type of each public barbecue the City of Adelaide manages in the Park Lands and city
+  streets.
+description: BBQs from the City of Adelaide. Each row is one public barbecue with the park or road name and its road
+  identifier as the publisher writes them together, the unique asset identifier, the barbecue type, such as a one
+  or two plate model, and its easting and northing.
+publisher:
+  name: City of Adelaide
+  short: City of Adelaide
+  jurisdiction: Local
+  url: https://www.cityofadelaide.com.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.sa.gov.au/data/dataset/bbq-s
+  attribution: City of Adelaide, BBQ's, https://data.sa.gov.au/data/dataset/bbq-s, accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: ckan-resource
+  portal: https://data.sa.gov.au/data
+  package: bbq-s
+  resource: ca4461df-bc8d-4d10-9882-5314d23aa36f
+  url: https://data.sa.gov.au/data/dataset/bbq-s
+  cadence: when the council updates the list
+key:
+- asset_id
+row_label: Barbecues
+fields:
+- name: location
+  label: Park or road
+  source: Roadname and Road ID
+  type: string
+- name: asset_id
+  label: Asset ID
+  source: Unique Asset ID
+  type: string
+- name: bbq_type
+  label: Barbecue type
+  source: BBQ Type
+  type: string
+- name: easting
+  label: Easting
+  source: Easting (Location/Map Coordinates)
+  type: number
+  description: Metres, GDA94 MGA zone 54.
+- name: northing
+  label: Northing
+  source: Northing (Location/Map Coordinates)
+  type: number
+  description: Metres, GDA94 MGA zone 54.
+omit:
+  Geometry: The same point in web mercator as text, which the easting and northing give.

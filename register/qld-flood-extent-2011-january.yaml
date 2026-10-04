@@ -1,0 +1,108 @@
+slug: qld-flood-extent-2011-january
+title: Queensland towns flood extent, January 2011
+status: live
+topics:
+- emergencies
+- places
+order: 244
+collection: qld-flood-extents
+collection_title: Historical flood extents, Queensland
+search_title: January 2011 flood extent Queensland map (Queensland Flood extent series)
+collection_search_title: Queensland historical flood maps (Flood extent series)
+also_known_as:
+- 2011 Queensland floods map
+- Queensland towns flood extent, January 2011 polygons
+- 2011 Floodline Queensland towns - January layer
+keywords:
+- flood map
+- flood extent
+- historical floods
+- inundation
+- flood lines
+- Brisbane
+- Ipswich
+collection_description: |
+  The Department of Natural Resources and Mines, Manufacturing and Regional and Rural Development publishes the mapped extent of major historical floods in Queensland as polygon layers of its Flood extent series, served from the state's map service.
+
+  Each table is one flood. A polygon marks the approximate area under water when the source imagery or survey was taken, which may not be the peak. The department recommends the layers for use at about 1:5,000 to 1:10,000 and warns they are not a prediction of future floods.
+faq:
+- q: What is in each row?
+  a: One polygon of mapped flood extent, with the feature type, the location name, the source the outline
+    was drawn from and the reliability dates the department records for the shape and its attributes.
+- q: Is this the peak of the flood?
+  a: Not always. The department describes the polygons as the approximate inundation when the source imagery
+    or survey was captured, and recommends them for use at about 1:5,000 to 1:10,000.
+- q: Can I use it to tell whether a property will flood?
+  a: No. It shows one past flood. Councils publish flood planning maps for present risk.
+summary: The mapped extent of the January 2011 floods in Queensland towns, drawn from aerial imagery and
+  council data, including Brisbane and Ipswich, as polygons from the Queensland Flood extent series.
+description: The 2011 Floodline Queensland towns - January layer of the Queensland Flood extent series,
+  one row per polygon of mapped inundation for the January 2011 floods in Queensland towns, drawn from
+  aerial imagery and council data, including Brisbane and Ipswich. Each row has the feature type, location,
+  source and the reliability dates for the feature and its attributes. The polygons are read from the
+  state's map service in WGS84 and published in GDA2020.
+publisher:
+  name: Department of Natural Resources and Mines, Manufacturing and Regional and Rural Development
+  short: Natural Resources and Mines
+  jurisdiction: Qld
+  url: https://www.nrmmrrd.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  evidence: https://www.data.qld.gov.au/dataset/flood-extent-series
+  reviewed: '2026-10-01'
+  attribution: Department of Natural Resources and Mines, Manufacturing and Regional and Rural Development,
+    Queensland Government, Flood extent series, 2011 Floodline Queensland towns - January, sourced {sourced},
+    https://www.data.qld.gov.au/dataset/flood-extent-series, licensed under CC BY 4.0.
+chart: none
+source:
+  adapter: arcgis-feature
+  portal: https://www.data.qld.gov.au
+  package: flood-extent-series
+  url: https://spatial-gis.information.qld.gov.au/arcgis/rest/services/InlandWaters/FloodLines/MapServer/14
+  cadence: closed
+key:
+- objectid
+geometry:
+  kind: polygon
+  crs: EPSG:4326
+  crs_note: The map service projects the polygons to WGS84 (EPSG:4326) on request. They are moved to GDA2020
+    for publication.
+  maxzoom: 10
+row_label: Flood polygons
+fields:
+- name: objectid
+  label: Object ID
+  source: objectid
+  type: integer
+- name: feature_type
+  label: Feature type
+  source: featuretype
+  type: string
+- name: location
+  label: Location
+  source: location
+  type: string
+- name: feature_reliability
+  label: Shape reliability date
+  source: featurereliability
+  type: date
+  date_format: epoch_ms
+  description: The date the department gives for the reliability of the outline, usually the capture date
+    of its source.
+- name: feature_source
+  label: Shape source
+  source: featuresource
+  type: string
+- name: attribute_reliability
+  label: Attribute reliability date
+  source: attributereliability
+  type: date
+  date_format: epoch_ms
+- name: attribute_source
+  label: Attribute source
+  source: attributesource
+  type: string
+omit:
+  se_anno_cad_data: An annotation field of the map service with no data values.
+note: Cells were typed and field names were made snake_case. Shapes were moved to GDA2020. Rows were left
+  alone.

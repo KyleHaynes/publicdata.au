@@ -1,0 +1,79 @@
+slug: qld-new-vehicle-registrations-daily
+title: New vehicle registrations by day and channel, Queensland
+status: live
+topics:
+- roads
+order: 214
+temporal_start: '2016-01-02'
+search_title: Queensland new vehicle registrations per day by service channel (Transport and Main Roads)
+also_known_as:
+- New car registrations Queensland daily
+- QLD new vehicle registration transactions
+- TMR new registrations by channel
+keywords:
+- vehicle registrations
+- new registrations
+- transactions
+- service channel
+- Queensland
+faq:
+- q: What is in each row?
+  a: One day, one type of new registration transaction, such as a light vehicle or a trailer, and one
+    service channel, with the number of new registrations processed. Channels include customer service
+    centres, motor dealers, online services and Queensland Government Agent and police offices.
+- q: Does it count every new vehicle sold?
+  a: It counts the new registration transactions the department processed, trailers included. A registration
+    is new to the Queensland register, and the file does not say whether the vehicle was new or used.
+summary: The daily number of new vehicle registrations processed by the Department of Transport and Main
+  Roads in Queensland since January 2016, by transaction type and service channel.
+description: New vehicle registration transactions processed by the Department of Transport and Main Roads,
+  one row per day, transaction type and service channel, from 2 January 2016. The department replaces
+  the file with a longer one from time to time.
+publisher:
+  name: Department of Transport and Main Roads
+  short: Transport and Main Roads
+  jurisdiction: Qld
+  url: https://www.tmr.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/new-vehicle-registrations
+  attribution: Department of Transport and Main Roads, Queensland Government, New vehicle registrations,
+    sourced {sourced}, https://www.data.qld.gov.au/dataset/new-vehicle-registrations, licensed under CC
+    BY 4.0.
+example:
+  group: channel
+  metric: sum.transactions
+  label: New registrations processed through each service channel
+chart:
+  split: channel
+  metric: sum.transactions
+  label: New registrations
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: new-vehicle-registrations
+  resource: 765fb5da-1cd3-4caa-b209-9886d6c45c88
+  url: https://www.data.qld.gov.au/dataset/new-vehicle-registrations
+  encoding: utf-8-sig
+  cadence: irregular
+row_label: Day and channel counts
+fields:
+- name: transaction
+  label: Transaction
+  source: TRANSACTION_DESCRIPTION
+  type: string
+- name: date
+  label: Date
+  source: Date
+  type: date
+  date_format: '%Y-%m-%d'
+- name: channel
+  label: Service channel
+  source: CHANNEL
+  type: string
+- name: transactions
+  label: New registrations
+  source: NUMBER_OF_TRANSACTIONS
+  type: integer
+note: Cells were typed and headers were made snake_case. Rows were left alone.

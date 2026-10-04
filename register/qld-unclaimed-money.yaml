@@ -1,0 +1,79 @@
+slug: qld-unclaimed-money
+title: Unclaimed money register, Queensland Public Trustee
+status: live
+topics:
+- government
+order: 277
+search_title: Queensland unclaimed money search (Public Trustee of Queensland)
+also_known_as:
+- Public Trustee unclaimed monies register
+- Queensland unclaimed money list
+- Unclaimed money from deceased estates Queensland
+keywords:
+- unclaimed money
+- unclaimed monies
+- deceased estates
+- Public Trustee
+- Queensland
+faq:
+- q: What is in each row?
+  a: Each row is one amount of unclaimed money held by the Public Trustee of Queensland, with the account number, the owner's name as recorded, the amount in dollars, who sent the money, the date it was received and the owner's postcode where known.
+- q: How do I claim money listed here?
+  a: Claims are made to the Public Trustee of Queensland, which checks the claimant's identity and entitlement. This copy of the register cannot be used to make a claim.
+- q: What does a postcode of 0 mean?
+  a: The publisher gives 0 or leaves the cell blank where it has no postcode for the owner. Both are kept as published.
+summary: Each amount of unclaimed money held by the Public Trustee of Queensland, with the owner's name, amount, sender and date received.
+description: The unclaimed money register of the Public Trustee of Queensland, which holds money from deceased estates it administers and unclaimed money received from other sources, such as superannuation funds, companies and government agencies. Each row gives the account number, the owner's name as the sender recorded it, the amount, the sender's name, the date the Public Trustee received it and the owner's last known postcode. Names are kept as published, in whichever order the sender gave them.
+publisher:
+  name: The Public Trustee of Queensland
+  short: Public Trustee
+  jurisdiction: Qld
+  url: https://www.pt.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/unclaimed-monies
+  attribution: The Public Trustee of Queensland, Queensland Government, Unclaimed monies, sourced {sourced}, https://www.data.qld.gov.au/dataset/unclaimed-monies, licensed under CC BY 4.0.
+example:
+  group: sender_name
+  metric: sum.amount
+  label: Unclaimed dollars by who sent the money, largest first
+chart:
+  split: none
+  metric: count
+  label: Amounts of unclaimed money received
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: unclaimed-monies
+  resource: 872065ae-ddfd-4b5f-ad15-e1935dadd883
+  url: https://www.data.qld.gov.au/dataset/unclaimed-monies
+  cadence: weekly
+row_label: Amounts
+fields:
+- name: client_id_act_no
+  label: Account number
+  source: ClientId_ActNo
+  type: string
+- name: owner
+  label: Owner
+  source: Owner
+  type: string
+- name: amount
+  label: Amount ($)
+  source: Amount
+  type: number
+- name: sender_name
+  label: Sent by
+  source: SenderName
+  type: string
+- name: date_received
+  label: Date received
+  source: DateRec
+  type: date
+  date_format: '%Y-%m-%d %H:%M:%S'
+- name: postcode
+  label: Postcode
+  source: PCode
+  type: string
+  description: The owner's last known postcode, kept as text. The publisher gives 0 or a blank where it has none.

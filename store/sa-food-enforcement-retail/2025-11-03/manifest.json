@@ -1,0 +1,34 @@
+{
+  "dataset": "sa-food-enforcement-retail",
+  "version": "2025-11-03",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:10:27+00:00",
+  "sha256": "f59634c8132b3dd0176b0cb1e54a572da8bd9935ce5494f50fda6371f0dd4548",
+  "bytes": 1072,
+  "filename": "2024-25-enforcement-actions-council-retail-sector-table-a2.7.csv",
+  "encoding": "cp1252",
+  "source": {
+    "url": "https://data.sa.gov.au/data/dataset/6090040f-e903-47ef-88fc-3c8156c3841b/resource/a8065d46-b901-4548-87f2-53055fade0eb/download/2024-25-enforcement-actions-council-retail-sector-table-a2.7.csv",
+    "portal": "https://data.sa.gov.au/data",
+    "package": "annual-food-act-report-2024-25",
+    "package_id": "6090040f-e903-47ef-88fc-3c8156c3841b",
+    "resource": "a8065d46-b901-4548-87f2-53055fade0eb",
+    "resource_name": "2024-25 Enforcement Actions - Council - Retail Sector- Table A2.7.csv",
+    "resource_last_modified": "2025-11-03T00:11:07.796965",
+    "package_modified": "2025-11-03T00:19:38.968764",
+    "package_version": null,
+    "etag": "1762128668.027-1072-973674759",
+    "http_last_modified": "Mon, 03 Nov 2025 00:11:08 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution",
+    "url": "http://creativecommons.org/licenses/by/4.0",
+    "read_from": "https://data.sa.gov.au/data/api/3/action/package_show?id=annual-food-act-report-2024-25",
+    "read_at": "2026-10-03T03:10:26+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "b50460b106d4b12179f3b8f5961147cdbf96fe4ca5e52e03c645ca68919587de"
+}

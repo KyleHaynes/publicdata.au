@@ -1,0 +1,99 @@
+slug: vic-water-storage-levels
+title: Monthly water storage levels, Victoria
+status: live
+topics:
+- nature
+example:
+  where:
+    month_end: newest
+  group: reservoir
+  metric: sum.storage_ml
+  label: Megalitres held
+chart:
+  where:
+    reservoir: Thomson
+  metric: avg.storage_ml
+  label: Average megalitres held in Thomson
+order: 53
+publisher:
+  name: Department of Energy, Environment and Climate Action
+  short: DEECA
+  jurisdiction: Vic
+  url: https://www.water.vic.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://discover.data.vic.gov.au/dataset/regional-melbourne-and-all-victoria-monthly-water-storage-levels
+  attribution: Department of Energy, Environment and Climate Action, Victorian Government, Regional, Melbourne
+    and all Victoria monthly water storage levels, sourced {sourced}, https://discover.data.vic.gov.au/dataset/regional-melbourne-and-all-victoria-monthly-water-storage-levels,
+    licensed under CC BY 4.0.
+temporal_start: '2010-01-31'
+search_title: Victorian dam and reservoir levels by month since 2010 (DEECA storage levels)
+also_known_as:
+- Victorian water storage levels
+- Melbourne dam levels history
+- Victoria reservoir levels monthly
+- Regional Melbourne and all Victoria monthly water storage levels
+keywords:
+- dam levels
+- water storage
+- reservoir levels
+- Melbourne water storage
+- Victoria
+- DEECA
+- water supply
+faq:
+- q: What does each row hold?
+  a: The volume of water, in megalitres, held in one reservoir at the end of one month, for every reservoir
+    the department reports across Melbourne, Geelong, Ballarat, Bendigo and the regional systems, from January
+    2010. The reservoir's total capacity and system are in the companion dataset of Victorian water storages,
+    so a percentage full can be worked out by joining the two.
+- q: Why are some cells null?
+  a: The publisher leaves a cell blank where a reservoir's volume was not available for that month, and a
+    reservoir that entered the report later has no earlier rows. The blanks are kept as null.
+- q: How often does it change?
+  a: The department adds a month to the spreadsheet about a month after it ends. Each release replaces the
+    file, so each version here is one release, and the portal record may lag the file by a few weeks.
+summary: The volume held in each of about 65 Victorian reservoirs at the end of every month since January
+  2010, in megalitres, one row per reservoir and month. Updated monthly.
+description: Monthly water storage levels from the Department of Energy, Environment and Climate Action,
+  one row per reservoir and month end from 31 January 2010, with the volume held in megalitres. The
+  reservoirs belong to 16 supply systems, from Melbourne, Geelong, Ballarat and Bendigo to regional
+  systems such as the Goulburn, Murray, Loddon, Glenelg-Wimmera and Latrobe. The spreadsheet's second
+  sheet, the list of storages with system and capacity, is served as its own dataset.
+source:
+  adapter: ckan-resource
+  portal: https://discover.data.vic.gov.au
+  package: regional-melbourne-and-all-victoria-monthly-water-storage-levels
+  resource_match: ^Storage levels
+  url: https://discover.data.vic.gov.au/dataset/regional-melbourne-and-all-victoria-monthly-water-storage-levels
+  cadence: monthly
+  manual: true
+wide:
+  sheet_match: ^Storage_levels
+  header_row: 1
+  header_rows: 1
+  row_headers: 1
+key:
+- reservoir
+- month_end
+row_label: Reservoir months
+fields:
+- name: reservoir
+  label: Reservoir
+  source: (column header 1)
+  type: string
+  description: The reservoir as the publisher names it, including a water corporation's share of a shared
+    storage.
+- name: month_end
+  label: Month end
+  source: (row header 1)
+  type: date
+  date_format: '%Y-%m-%d'
+  description: The last day of the month the level was recorded for.
+- name: storage_ml
+  label: Storage (ML)
+  source: (cell)
+  type: number
+  description: The volume held at the end of the month, in megalitres.

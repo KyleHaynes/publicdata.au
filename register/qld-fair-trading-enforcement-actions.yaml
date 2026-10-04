@@ -1,0 +1,144 @@
+slug: qld-fair-trading-enforcement-actions
+title: Office of Fair Trading legal and enforcement actions, Queensland, latest period
+status: live
+topics:
+- economy
+- crime
+order: 223
+collection: qld-fair-trading
+collection_title: Office of Fair Trading complaints, enforcement and registers, Queensland
+search_title: Queensland Fair Trading enforcement actions, fines and prosecutions (Office of Fair Trading)
+also_known_as:
+- Fair Trading prosecutions Queensland
+- OFT warnings and infringement notices QLD
+- Queensland consumer law enforcement actions
+keywords:
+- Fair Trading
+- enforcement
+- prosecutions
+- infringement notices
+- warnings
+- consumer law
+- Queensland
+faq:
+- q: What is in each row?
+  a: One legal or enforcement action by the Office of Fair Trading, such as a warning, an infringement
+    notice, an administrative disciplinary action or a court prosecution, with the industry, the type
+    of trader, the dates it began and ended, any fine, compensation, costs, penalty amount and conviction,
+    the region and the sections of the law breached.
+- q: What does a dot mean?
+  a: The office writes a full stop where an amount or count does not apply, such as the fine for a warning.
+    Those cells are null here.
+- q: Are traders named?
+  a: No. The office identifies each action by a reference number and the trader by type only.
+summary: Each legal and enforcement action taken by the Queensland Office of Fair Trading in the newest
+  published period, with industry, outcome, fines, penalties and sections breached.
+description: Legal and enforcement actions taken by the Queensland Office of Fair Trading, one row per
+  action, for the newest period the office has published. Each row has the action reference and type,
+  the industry group, trader type, the dates initiated and finalised, fines, compensation and costs awarded,
+  the conviction recorded, the office region, the penalty amount, the sections of the law breached and
+  the number of breaches.
+publisher:
+  name: Department of Justice
+  short: Justice
+  jurisdiction: Qld
+  url: https://www.justice.qld.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/legal-and-enforcement-actions-office-of-fair-trading
+  attribution: Department of Justice, Queensland Government, Legal and Enforcement Actions, Office of
+    Fair Trading, sourced {sourced}, https://www.data.qld.gov.au/dataset/legal-and-enforcement-actions-office-of-fair-trading,
+    licensed under CC BY 3.0 AU.
+  portal_id: CC-BY-3.0
+example:
+  group: legal_action_type
+  metric: count
+  label: Legal and enforcement actions in the period by type
+chart: none
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: legal-and-enforcement-actions-office-of-fair-trading
+  url: https://www.data.qld.gov.au/dataset/legal-and-enforcement-actions-office-of-fair-trading
+  encoding: utf-8-sig
+  resource_match: ^Legal and Enforcement [Aa]ctions
+  cadence: quarterly
+key:
+- legal_action
+partition_by:
+- legal_action_type
+row_label: Actions
+fields:
+- name: legal_action
+  label: Action reference
+  source: LEGAL ACTION
+  type: string
+- name: legal_action_type
+  label: Action type
+  source: LEGAL ACTION TYPE
+  type: string
+- name: industry_group
+  label: Industry
+  source: INDUSTRY GROUP
+  type: string
+- name: trader_type
+  label: Trader type
+  source: TRADER TYPE
+  type: string
+- name: date_initiated
+  label: Date initiated
+  source: DATE_INITIATED
+  type: date
+  date_format: '%d/%m/%Y'
+  null_values:
+  - .
+- name: outcome_date
+  label: Outcome date
+  source: OUTCOME_DATE
+  type: date
+  date_format: '%d/%m/%Y'
+- name: fines
+  label: Fines ($)
+  source: FINES
+  type: number
+  null_values:
+  - .
+- name: compensation
+  label: Compensation ($)
+  source: COMPENSATION
+  type: number
+  null_values:
+  - .
+- name: costs_awarded
+  label: Costs awarded ($)
+  source: COSTS AWARDED
+  type: number
+  null_values:
+  - .
+- name: conviction
+  label: Conviction
+  source: CONVICTION
+  type: string
+- name: oft_region
+  label: Office region of trader
+  source: OFT_REGION_NAME (TRADER)
+  type: string
+- name: penalty_amount
+  label: Penalty amount ($)
+  source: PENALTY AMOUNT
+  type: number
+  null_values:
+  - .
+- name: sections_breached
+  label: Sections breached
+  source: LEGAL_ACTION_SECTIONS
+  type: string
+  description: The Act and section for each breach, joined by semicolons as the office writes them.
+- name: breach_count
+  label: Breaches
+  source: LEGAL_ACTION_BREACH_COUNT
+  type: integer
+  null_values:
+  - .
+note: Cells were typed and headers were made snake_case. Rows were left alone.

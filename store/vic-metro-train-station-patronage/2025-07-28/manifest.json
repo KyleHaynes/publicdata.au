@@ -1,0 +1,34 @@
+{
+  "dataset": "vic-metro-train-station-patronage",
+  "version": "2025-07-28",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:09:50+00:00",
+  "sha256": "37c6cac2831252451db17187dfb2f7d7390a4f446cba1f89011583c24bb4eb61",
+  "bytes": 22122,
+  "filename": "annual_metropolitan_train_station_entries_fy_2024_2025.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://opendata.transport.vic.gov.au/dataset/2fa2cdfa-84f1-455e-b6c9-058b92774b34/resource/c9507eb5-aa48-4a43-aa09-c10a24d1f2fe/download/annual_metropolitan_train_station_entries_fy_2024_2025.csv",
+    "portal": "https://discover.data.vic.gov.au",
+    "package": "annual-metropolitan-train-station-patronage-station-entries",
+    "package_id": "e01eac1a-6c2e-49ad-b42b-56a37a82ad0a",
+    "resource": "c9507eb5-aa48-4a43-aa09-c10a24d1f2fe",
+    "resource_name": "Annual metropolitan train station patronage (station entries) - 2024-2025",
+    "resource_last_modified": "2025-07-28T06:19:29.560651",
+    "package_modified": "2026-05-12T00:51:42.059478",
+    "package_version": null,
+    "etag": "1753683569.8810816-22122-2109477634",
+    "http_last_modified": "Mon, 28 Jul 2025 06:19:29 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution 4.0 International",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://discover.data.vic.gov.au/api/3/action/package_show?id=annual-metropolitan-train-station-patronage-station-entries",
+    "read_at": "2026-10-03T03:09:50+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "ea79bb2227d3acd3a150dcaa91a5929a8dd5d6165bfe61dd64a334651c53bceb"
+}

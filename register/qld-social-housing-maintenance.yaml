@@ -1,0 +1,102 @@
+slug: qld-social-housing-maintenance
+title: Social housing maintenance and modification spending, Queensland
+status: live
+topics:
+- housing
+- government
+order: 286
+collection: qld-social-housing
+collection_title: Social housing data from Queensland
+search_title: Queensland social housing maintenance spending by suburb (Department of Housing)
+also_known_as:
+- Social housing property management, government owned residential assets
+- Queensland public housing maintenance expenditure
+- Queensland public housing modification costs by suburb
+keywords:
+- social housing
+- public housing
+- maintenance
+- housing modifications
+- government spending
+- Queensland
+faq:
+- q: What is in each row?
+  a: An amount the department spent on maintenance or modifications to its social housing in one suburb and
+    postcode, for one property type, in one financial year. Each row also names the council area and the state
+    and federal electorates.
+- q: Which year does a version cover?
+  a: The publisher adds one file for each financial year, and this entry follows the newest. The file holds
+    no year column, so the year is the one named in the file's title on the portal. Each year is kept here
+    as its own version.
+- q: Why do some suburbs have two rows for the same property type?
+  a: The file gives some suburb, property type and category combinations more than once with different amounts,
+    and does not say why. The rows are kept as published, so add them to get a total.
+summary: What the Queensland Government spent maintaining and modifying its social housing in each suburb,
+  by property type, in the latest financial year.
+description: Spending on maintenance and modifications of government owned social housing in Queensland for
+  one financial year, one row per suburb, postcode, property type and category, with the total invoice cost
+  in dollars and the council area, state electorate and federal electorate. The publisher's file opens with
+  a line giving the year's total, which is left out here.
+publisher:
+  name: Department of Housing and Public Works
+  short: Housing and Public Works
+  jurisdiction: Qld
+  url: https://www.housing.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/property-management-government-owned-assets
+  attribution: Department of Housing and Public Works, Queensland Government, Social housing property management,
+    government owned residential assets, sourced {sourced}, https://www.data.qld.gov.au/dataset/property-management-government-owned-assets,
+    licensed under CC BY 4.0.
+example:
+  group: local_government_authority
+  metric: sum.total_invoice_cost
+  label: Spending ($)
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: property-management-government-owned-assets
+  resource_match: maintenance and modification expenditure
+  url: https://www.data.qld.gov.au/dataset/property-management-government-owned-assets
+  cadence: annually
+  encoding: utf-8-sig
+  header_row: 2
+partition_by:
+- local_government_authority
+place_field: local_government_authority
+row_label: Spending lines
+fields:
+- name: suburb
+  label: Suburb
+  source: Suburb
+  type: string
+- name: postcode
+  label: Postcode
+  source: Postcode
+  type: string
+- name: total_invoice_cost
+  label: Total invoice cost ($)
+  source: Total Invoice Cost
+  type: number
+- name: property_type
+  label: Property type
+  source: Property Type
+  type: string
+- name: local_government_authority
+  label: Council area
+  source: Local Government Authority
+  type: string
+- name: state_electorate
+  label: State electorate
+  source: State Electorate
+  type: string
+- name: federal_electorate
+  label: Federal electorate
+  source: Federal Electorate
+  type: string
+- name: category
+  label: Category
+  source: Category
+  type: string
+  description: Maintenance or Modifications.

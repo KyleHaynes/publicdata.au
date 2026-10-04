@@ -1,0 +1,33 @@
+{
+  "dataset": "sa-traffic-volumes",
+  "version": "2026-09-24",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:10:19+00:00",
+  "sha256": "3accd7d787da33c13959c2de4e47c8f6c9555568db2ba83315489740551db2f8",
+  "bytes": 4558669,
+  "filename": "trafficvolumeestimates2026_shp.zip",
+  "encoding": "zip",
+  "source": {
+    "url": "https://data.sa.gov.au/data/dataset/e5d6588a-f163-4f6a-bc57-25e95c87b5bd/resource/0f8ace99-aa5e-4869-99eb-72d42992f86a/download/trafficvolumeestimates2026_shp.zip",
+    "portal": "https://data.sa.gov.au/data",
+    "package": "traffic-volumes",
+    "package_id": "e5d6588a-f163-4f6a-bc57-25e95c87b5bd",
+    "resource": "0f8ace99-aa5e-4869-99eb-72d42992f86a",
+    "resource_name": "Traffic Volume Estimates 2026 (shp)",
+    "resource_last_modified": "2026-09-24T03:05:05.118508",
+    "package_modified": "2026-09-24T03:07:48.581928",
+    "package_version": null,
+    "etag": "1790219106.026-4558669-1381243273",
+    "http_last_modified": "Thu, 24 Sep 2026 03:05:06 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution",
+    "url": "http://creativecommons.org/licenses/by/4.0",
+    "read_from": "https://data.sa.gov.au/data/api/3/action/package_show?id=traffic-volumes",
+    "read_at": "2026-10-03T03:10:19+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": []
+}

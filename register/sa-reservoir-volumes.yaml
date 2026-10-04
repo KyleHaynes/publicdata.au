@@ -1,0 +1,101 @@
+slug: sa-reservoir-volumes
+title: Reservoir volumes, metropolitan Adelaide
+status: live
+topics:
+- nature
+example:
+  group: reservoir
+  metric: sum.volume_ml
+  label: Volume held (ML)
+order: 442
+search_title: Adelaide reservoir levels, volume and capacity of each reservoir (SA Water)
+also_known_as:
+- SA Water Reservoir Volumes
+- Adelaide dam levels
+- Mount Bold reservoir level
+- Adelaide Hills reservoir storage
+keywords:
+- reservoir levels
+- dam levels
+- water storage
+- Mount Bold
+- SA Water
+- Adelaide
+faq:
+- q: What is in each row?
+  a: One reservoir on the last business day of the month, with its capacity, the volume held that day and on the
+    same day a year earlier, the average volume for the month, all in megalitres, and its location. The list
+    holds the reservoirs supplying metropolitan Adelaide and also Middle River Reservoir on Kangaroo Island.
+- q: Which month does the table cover?
+  a: The newest month the publisher has released, August 2026 at the first version. SA Water adds a file each month,
+    and each becomes a version here. The files from May 2018 stay on the portal.
+- q: Why might a new month fail to load?
+  a: The publisher has renamed the reservoir name column between files, so a month whose header differs is held
+    for review before it is published.
+summary: The capacity and volume of each reservoir supplying metropolitan Adelaide, and of Middle River Reservoir on
+  Kangaroo Island, on the last business day of the newest month, with the volume a year earlier and the month's average. Updated monthly.
+description: Reservoir Volumes from SA Water. The publisher captures the volume of each reservoir daily and releases
+  the reading from the last business day of each month. Each row is one reservoir with its capacity, the volume that
+  day, the volume on the same day a year earlier and the average volume for the month in megalitres, and its
+  latitude and longitude.
+publisher:
+  name: SA Water
+  short: SA Water
+  jurisdiction: SA
+  url: https://www.sawater.com.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.sa.gov.au/data/dataset/reservoir-volumes-2018
+  attribution: SA Water, Government of South Australia, Reservoir Volumes, https://data.sa.gov.au/data/dataset/reservoir-volumes-2018, accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: ckan-resource
+  portal: https://data.sa.gov.au/data
+  package: reservoir-volumes-2018
+  resource_match: ^Reservoir [Vv]olumes for [A-Z][a-z]+ \d{4}$
+  url: https://data.sa.gov.au/data/dataset/reservoir-volumes-2018
+  cadence: monthly
+geometry:
+  lon: longitude
+  lat: latitude
+  crs: EPSG:4326
+  crs_note: Coordinates to two decimal places as published. The publisher states no datum, so they are read as
+    WGS84 (EPSG:4326).
+key:
+- reservoir
+row_label: Reservoirs
+fields:
+- name: date
+  label: Date
+  source: Date
+  type: date
+  date_format: '%d-%b-%y'
+- name: reservoir
+  label: Reservoir
+  source: ROReportLabel
+  type: string
+- name: capacity_ml
+  label: Capacity (ML)
+  source: Capacity__ML_
+  type: number
+- name: volume_ml
+  label: Volume (ML)
+  source: Volume_today__ML_
+  type: number
+- name: volume_last_year_ml
+  label: Volume a year earlier (ML)
+  source: Volume_this_Day_last_year__ML_
+  type: number
+- name: average_volume_month_ml
+  label: Average volume this month (ML)
+  source: Average_Volume_this_Month
+  type: number
+- name: latitude
+  label: Latitude
+  source: Latitude
+  type: number
+- name: longitude
+  label: Longitude
+  source: Longitude
+  type: number

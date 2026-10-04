@@ -1,0 +1,32 @@
+{
+  "dataset": "vic-road-crashes",
+  "version": "2026-09-15",
+  "as_at": "",
+  "fetched_at": "2026-09-29T15:09:28+00:00",
+  "sha256": "5d1621deef51bb92a9bd6934736d0e5201928038f8a00b9a8722238079eea39c",
+  "bytes": 70460535,
+  "filename": "victorian_road_crash_data.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://opendata.transport.vic.gov.au/dataset/bb77800e-1857-4edc-bf9e-e188437a1c8e/resource/5df1f373-0c90-48f5-80e1-7b2a35507134/download/victorian_road_crash_data.csv",
+    "portal": "https://discover.data.vic.gov.au",
+    "package": "victoria-road-crash-data",
+    "package_id": "e0880296-585d-47bd-8e72-fc1b2045f53d",
+    "resource": "5df1f373-0c90-48f5-80e1-7b2a35507134",
+    "resource_name": "Victorian Road Crash Data",
+    "resource_last_modified": "2026-09-14T14:03:33.365180",
+    "package_modified": "2026-09-14T23:17:10.434243",
+    "package_version": null,
+    "etag": "1789394615.146495-70460535-1958875634",
+    "http_last_modified": "Mon, 14 Sep 2026 14:03:35 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution 4.0 International",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_at": "2026-09-29T15:09:27+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": []
+}

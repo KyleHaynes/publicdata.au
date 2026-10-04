@@ -1,0 +1,506 @@
+slug: acnc-register
+title: Register of Australian charities, ACNC
+status: live
+topics:
+- government
+example:
+  group: charity_size
+chart:
+  where: {registration_date: {gte: '2013-01-01'}}
+  metric: count
+  label: Registrations of charities still on the register
+order: 30
+publisher:
+  name: Australian Charities and Not-for-profits Commission
+  short: ACNC
+  jurisdiction: Cth
+  url: https://www.acnc.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.gov.au/data/dataset/acnc-register
+  attribution: Australian Charities and Not-for-profits Commission, Australian Government, ACNC Register
+    of Australian charities, sourced {sourced}, https://data.gov.au/data/dataset/acnc-register, licensed
+    under CC BY 3.0 AU.
+temporal_start: '2012-12-03'
+search_title: ACNC charity register download (Register of Australian charities)
+also_known_as:
+- ACNC Register
+- ACNC charity register
+- Australian charities register
+- Registered charities list Australia
+- Charity ABN lookup
+keywords:
+- acnc register
+- charity register
+- registered charities
+- charities australia
+- charity ABN
+- ACNC
+- not-for-profit
+faq:
+- q: Which charities are in the file?
+  a: Every charity registered with the ACNC on the day the file was made. Each row is one charity with its
+    ABN, legal name and other names, business address, website, registration date, size, the number of
+    responsible persons, the states and countries it operates in, its registered charitable purposes and
+    the groups of people it says it helps.
+- q: What do the blank cells in the purpose and beneficiary columns mean?
+  a: The publisher writes Y where a purpose, subtype, state or beneficiary group applies to a charity and
+    leaves the cell blank otherwise. The Y is kept here as true and the blank as null.
+- q: Why is the address blank for some charities?
+  a: A charity may ask the ACNC to withhold its address, for example a refuge, and the publisher then leaves
+    the address columns blank. The state column holds whatever the charity entered, so a few rows carry a
+    full state name or another value in place of the abbreviation.
+- q: Are revoked charities included?
+  a: No. The file is the charities registered on the day it was made. A charity whose registration the
+    ACNC revokes leaves the file, and earlier versions here keep the rows as they were.
+summary: Every charity registered with the ACNC, with ABN, names, address, size, registration date, where
+  it operates, its charitable purposes and who it helps. About 66,000 charities, updated weekly.
+description: The ACNC Register of Australian charities as the Commission publishes it each week, one row
+  per registered charity. Each row carries the ABN, legal and other names, business address and website,
+  registration and establishment dates, charity size, number of responsible persons, financial year end,
+  the states and countries it operates in, its registered charitable purposes and subtypes, and the
+  beneficiary groups it names.
+source:
+  adapter: ckan-resource
+  portal: https://data.gov.au/data
+  package: acnc-register
+  resource: 8fb32972-24e9-4c95-885e-7140be51be8a
+  url: https://data.gov.au/data/dataset/acnc-register
+  cadence: weekly
+partition_by:
+- charity_size
+row_label: Charities
+fields:
+- name: abn
+  label: ABN
+  source: ABN
+  type: string
+- name: charity_legal_name
+  label: Legal name
+  source: Charity_Legal_Name
+  type: string
+- name: other_organisation_names
+  label: Other names
+  source: Other_Organisation_Names
+  type: string
+- name: address_type
+  label: Address type
+  source: Address_Type
+  type: string
+- name: address_line_1
+  label: Address line 1
+  source: Address_Line_1
+  type: string
+- name: address_line_2
+  label: Address line 2
+  source: Address_Line_2
+  type: string
+- name: address_line_3
+  label: Address line 3
+  source: Address_Line_3
+  type: string
+- name: town_city
+  label: Town or city
+  source: Town_City
+  type: string
+- name: state
+  label: State
+  source: State
+  type: string
+- name: postcode
+  label: Postcode
+  source: Postcode
+  type: string
+- name: country
+  label: Country
+  source: Country
+  type: string
+- name: charity_website
+  label: Website
+  source: Charity_Website
+  type: string
+- name: registration_date
+  label: Registration date
+  source: Registration_Date
+  type: date
+  date_format: '%d/%m/%Y'
+- name: date_organisation_established
+  label: Date established
+  source: Date_Organisation_Established
+  type: date
+  date_format: '%d/%m/%Y'
+- name: charity_size
+  label: Size
+  source: Charity_Size
+  type: string
+- name: number_of_responsible_persons
+  label: Responsible persons
+  source: Number_of_Responsible_Persons
+  type: integer
+- name: financial_year_end
+  label: Financial year end
+  source: Financial_Year_End
+  type: string
+- name: operates_in_act
+  label: Operates in ACT
+  source: Operates_in_ACT
+  type: boolean
+  true_values:
+  - Y
+  description: Y when the charity operates in ACT. Blank otherwise.
+- name: operates_in_nsw
+  label: Operates in NSW
+  source: Operates_in_NSW
+  type: boolean
+  true_values:
+  - Y
+  description: Y when the charity operates in NSW. Blank otherwise.
+- name: operates_in_nt
+  label: Operates in NT
+  source: Operates_in_NT
+  type: boolean
+  true_values:
+  - Y
+  description: Y when the charity operates in NT. Blank otherwise.
+- name: operates_in_qld
+  label: Operates in Qld
+  source: Operates_in_QLD
+  type: boolean
+  true_values:
+  - Y
+  description: Y when the charity operates in QLD. Blank otherwise.
+- name: operates_in_sa
+  label: Operates in SA
+  source: Operates_in_SA
+  type: boolean
+  true_values:
+  - Y
+  description: Y when the charity operates in SA. Blank otherwise.
+- name: operates_in_tas
+  label: Operates in Tas
+  source: Operates_in_TAS
+  type: boolean
+  true_values:
+  - Y
+  description: Y when the charity operates in TAS. Blank otherwise.
+- name: operates_in_vic
+  label: Operates in Vic
+  source: Operates_in_VIC
+  type: boolean
+  true_values:
+  - Y
+  description: Y when the charity operates in VIC. Blank otherwise.
+- name: operates_in_wa
+  label: Operates in WA
+  source: Operates_in_WA
+  type: boolean
+  true_values:
+  - Y
+  description: Y when the charity operates in WA. Blank otherwise.
+- name: operating_countries
+  label: Operating countries
+  source: Operating_Countries
+  type: string
+- name: pbi
+  label: Public benevolent institution
+  source: PBI
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the charity's registered purposes or subtypes. Blank otherwise.
+- name: hpc
+  label: Health promotion charity
+  source: HPC
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the charity's registered purposes or subtypes. Blank otherwise.
+- name: preventing_or_relieving_suffering_of_animals
+  label: Preventing or relieving suffering of animals
+  source: Preventing_or_relieving_suffering_of_animals
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the charity's registered purposes or subtypes. Blank otherwise.
+- name: advancing_culture
+  label: Advancing culture
+  source: Advancing_Culture
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the charity's registered purposes or subtypes. Blank otherwise.
+- name: advancing_education
+  label: Advancing education
+  source: Advancing_Education
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the charity's registered purposes or subtypes. Blank otherwise.
+- name: advancing_health
+  label: Advancing health
+  source: Advancing_Health
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the charity's registered purposes or subtypes. Blank otherwise.
+- name: promote_or_oppose_a_change_to_law_government_poll_or_prac
+  label: Promoting or opposing a change to law or policy
+  source: Promote_or_oppose_a_change_to_law__government_poll_or_prac
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the charity's registered purposes or subtypes. Blank otherwise.
+- name: advancing_natual_environment
+  label: Advancing the natural environment
+  source: Advancing_natual_environment
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the charity's registered purposes or subtypes. Blank otherwise.
+- name: promoting_or_protecting_human_rights
+  label: Promoting or protecting human rights
+  source: Promoting_or_protecting_human_rights
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the charity's registered purposes or subtypes. Blank otherwise.
+- name: purposes_beneficial_to_ther_general_public_and_other_analogo
+  label: Other purposes beneficial to the public
+  source: Purposes_beneficial_to_ther_general_public_and_other_analogous
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the charity's registered purposes or subtypes. Blank otherwise.
+- name: promoting_reconciliation_mutual_respect_and_tolerance
+  label: Promoting reconciliation and tolerance
+  source: Promoting_reconciliation__mutual_respect_and_tolerance
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the charity's registered purposes or subtypes. Blank otherwise.
+- name: advancing_religion
+  label: Advancing religion
+  source: Advancing_Religion
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the charity's registered purposes or subtypes. Blank otherwise.
+- name: advancing_social_or_public_welfare
+  label: Advancing social or public welfare
+  source: Advancing_social_or_public_welfare
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the charity's registered purposes or subtypes. Blank otherwise.
+- name: advancing_security_or_safety_of_australia_or_australian_publ
+  label: Advancing security or safety of Australia
+  source: Advancing_security_or_safety_of_Australia_or_Australian_public
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the charity's registered purposes or subtypes. Blank otherwise.
+- name: aboriginal_or_tsi
+  label: Aboriginal or Torres Strait Islander people
+  source: Aboriginal_or_TSI
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the groups the charity says it helps. Blank otherwise.
+- name: adults
+  label: Adults
+  source: Adults
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the groups the charity says it helps. Blank otherwise.
+- name: aged_persons
+  label: Aged persons
+  source: Aged_Persons
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the groups the charity says it helps. Blank otherwise.
+- name: children
+  label: Children
+  source: Children
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the groups the charity says it helps. Blank otherwise.
+- name: communities_overseas
+  label: Communities overseas
+  source: Communities_Overseas
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the groups the charity says it helps. Blank otherwise.
+- name: early_childhood
+  label: Early childhood
+  source: Early_Childhood
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the groups the charity says it helps. Blank otherwise.
+- name: ethnic_groups
+  label: Ethnic groups
+  source: Ethnic_Groups
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the groups the charity says it helps. Blank otherwise.
+- name: families
+  label: Families
+  source: Families
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the groups the charity says it helps. Blank otherwise.
+- name: females
+  label: Females
+  source: Females
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the groups the charity says it helps. Blank otherwise.
+- name: financially_disadvantaged
+  label: Financially disadvantaged people
+  source: Financially_Disadvantaged
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the groups the charity says it helps. Blank otherwise.
+- name: lgbtiqa_people
+  label: LGBTIQA+ people
+  source: LGBTIQA+
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the groups the charity says it helps. Blank otherwise.
+- name: general_community_in_australia
+  label: General community in Australia
+  source: General_Community_in_Australia
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the groups the charity says it helps. Blank otherwise.
+- name: males
+  label: Males
+  source: Males
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the groups the charity says it helps. Blank otherwise.
+- name: migrants_refugees_or_asylum_seekers
+  label: Migrants, refugees or asylum seekers
+  source: Migrants_Refugees_or_Asylum_Seekers
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the groups the charity says it helps. Blank otherwise.
+- name: other_beneficiaries
+  label: Other beneficiaries
+  source: Other_Beneficiaries
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the groups the charity says it helps. Blank otherwise.
+- name: other_charities
+  label: Other charities
+  source: Other_Charities
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the groups the charity says it helps. Blank otherwise.
+- name: people_at_risk_of_homelessness
+  label: People at risk of homelessness
+  source: People_at_risk_of_homelessness
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the groups the charity says it helps. Blank otherwise.
+- name: people_with_chronic_illness
+  label: People with chronic illness
+  source: People_with_Chronic_Illness
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the groups the charity says it helps. Blank otherwise.
+- name: people_with_disabilities
+  label: People with disabilities
+  source: People_with_Disabilities
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the groups the charity says it helps. Blank otherwise.
+- name: pre_post_release_offenders
+  label: Pre or post release offenders
+  source: Pre_Post_Release_Offenders
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the groups the charity says it helps. Blank otherwise.
+- name: rural_regional_remote_communities
+  label: Rural, regional or remote communities
+  source: Rural_Regional_Remote_Communities
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the groups the charity says it helps. Blank otherwise.
+- name: unemployed_person
+  label: Unemployed people
+  source: Unemployed_Person
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the groups the charity says it helps. Blank otherwise.
+- name: veterans_or_their_families
+  label: Veterans or their families
+  source: Veterans_or_their_families
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the groups the charity says it helps. Blank otherwise.
+- name: victims_of_crime
+  label: Victims of crime
+  source: Victims_of_crime
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the groups the charity says it helps. Blank otherwise.
+- name: victims_of_disasters
+  label: Victims of disasters
+  source: Victims_of_Disasters
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the groups the charity says it helps. Blank otherwise.
+- name: youth
+  label: Youth
+  source: Youth
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the groups the charity says it helps. Blank otherwise.
+- name: animals_beneficiary
+  label: Animals (beneficiary)
+  source: animals
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the groups the charity says it helps. Blank otherwise.
+- name: environment_beneficiary
+  label: Environment (beneficiary)
+  source: environment
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the groups the charity says it helps. Blank otherwise.
+- name: other_gender_identities
+  label: People of other gender identities
+  source: other_gender_identities
+  type: boolean
+  true_values:
+  - Y
+  description: Y when this is one of the groups the charity says it helps. Blank otherwise.

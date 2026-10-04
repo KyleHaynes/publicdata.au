@@ -1,0 +1,93 @@
+slug: sa-dogs-cats-owners
+title: Dog and cat owners by council, sex and age, South Australia
+status: live
+topics:
+- community
+example:
+  group: council
+  metric: sum.owners
+  label: Dog and cat owners by council where they live, most first
+sample:
+  order: [owners.desc]
+  spread: council
+  label: The largest group of owners in each council, one council at a time, largest first.
+order: 437
+collection: sa-dogs-and-cats-online
+collection_title: Dogs and Cats Online, South Australia
+search_title: South Australia pet owners by council, age and number of dogs and cats (Dogs and Cats Online)
+also_known_as:
+- DACO owners data SA
+- Dog owners by council South Australia
+- How many dogs and cats SA owners keep
+keywords:
+- pet owners
+- dog owners
+- cat owners
+- pets by council
+- Dogs and Cats Online
+- South Australia
+faq:
+- q: What is in each row?
+  a: The number of owners on Dogs and Cats Online who live in one council area, share a sex and age group, and keep
+    the same number of dogs and of cats with the status At Home.
+- q: Why do the dog and cat counts read >5?
+  a: The publisher groups owners with more than five dogs or cats under >5. The value is kept as text.
+- q: Which council is it?
+  a: The council where the owner lives, which may differ from the council where an animal is housed.
+- q: Which year does the table cover?
+  a: The newest extract from Dogs and Cats Online, taken on 30 May 2025 at the first version. The publisher releases
+    a new portal dataset each year, and each extract becomes a version here.
+summary: The number of dog and cat owners on South Australia's Dogs and Cats Online register in each council, by
+  sex, age group and how many dogs and cats they keep. Updated yearly.
+description: Owner counts from Dogs and Cats Online (DACO), from the Department for Environment and Water. Each row is
+  one council, owner's sex, age group, number of dogs and number of cats, with the count of owners of animals
+  recorded with the status At Home.
+publisher:
+  name: Department for Environment and Water
+  short: Environment and Water
+  jurisdiction: SA
+  url: https://www.environment.sa.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.sa.gov.au/data/dataset/dogs-and-cats-online-data-2024-2025
+  attribution: Department for Environment and Water, Government of South Australia, Dogs and Cats Online Data,
+    https://data.sa.gov.au/data/dataset/dogs-and-cats-online-data-2024-2025, accessed {sourced}, licensed under CC BY
+    4.0.
+source:
+  adapter: ckan-resource
+  portal: https://data.sa.gov.au/data
+  package: dogs and cats online data
+  package_match: ^dogs-and-cats-online-data-\d{4}-\d{4}$
+  resource_match: ^DATA_SA_Owners
+  url: https://data.sa.gov.au/data/dataset/dogs-and-cats-online-data-2024-2025
+  cadence: yearly
+row_label: Owner counts
+fields:
+- name: council
+  label: Council
+  source: Council
+  type: string
+- name: sex
+  label: Sex
+  source: Gender
+  type: string
+- name: age_group
+  label: Age group
+  source: AgeCategory
+  type: string
+- name: dogs
+  label: Dogs kept
+  source: NumOfDogs
+  type: string
+  description: The number of dogs the owner keeps, or >5.
+- name: cats
+  label: Cats kept
+  source: NumOfCats
+  type: string
+  description: The number of cats the owner keeps, or >5.
+- name: owners
+  label: Owners
+  source: Count
+  type: integer

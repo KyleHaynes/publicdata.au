@@ -1,0 +1,79 @@
+slug: act-police-stations
+title: Police stations, ACT
+status: live
+topics:
+- crime
+- places
+order: 465
+search_title: ACT police station locations (ACT Policing)
+also_known_as:
+- ACT Police Station Locations
+- Canberra police stations map
+- ACT Policing station addresses
+keywords:
+- police stations
+- ACT Policing
+- Australian Federal Police
+- Canberra
+- ACT
+faq:
+- q: What is in each row?
+  a: One ACT Policing station, with its name, its street address and its coordinates.
+- q: Is it current?
+  a: The publisher has not changed the list for several years, so a station opened, moved or closed
+    since then is not shown. Check ACT Policing's own website before relying on an address.
+- q: Where is the publisher's file?
+  a: The portal serves the list as a table with each location as text. This site reads the portal's
+    GeoJSON export of the same rows and keeps that file as the source of every version.
+summary: The six ACT Policing stations the Australian Federal Police lists on the ACT portal, one row
+  per station with its address and coordinates.
+description: The locations of ACT Policing stations as the Australian Federal Police published them on
+  the ACT open data portal. Each row carries the station name, the street address and the point's
+  longitude and latitude.
+publisher:
+  name: ACT Policing, Australian Federal Police
+  short: ACT Policing
+  jurisdiction: ACT
+  url: https://www.police.act.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.act.gov.au/d/t6hf-u79n
+  statement: Creative Commons Attribution 4.0 International
+  title: Creative Commons Attribution 4.0 International
+  attribution: Australian Federal Police, ACT Police Station Locations, https://www.data.act.gov.au/d/t6hf-u79n,
+    accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: file
+  url: https://www.data.act.gov.au/resource/t6hf-u79n.geojson?$order=:id
+  cadence: no longer updated
+geometry:
+  lon: longitude
+  lat: latitude
+  crs: EPSG:4326
+  crs_note: Longitude and latitude in decimal degrees from the portal's GeoJSON export, which is WGS84.
+row_label: Stations
+fields:
+- name: name
+  label: Station
+  source: name
+  type: string
+- name: address
+  label: Address
+  source: location_1_address
+  type: string
+- name: longitude
+  label: Longitude
+  source: (longitude)
+  type: number
+- name: latitude
+  label: Latitude
+  source: (latitude)
+  type: number
+note: Cells were typed and headers were made snake_case. The point of each feature is given as longitude and
+  latitude columns. The empty city, state and postcode parts of the portal's location are left out. Rows were
+  left alone.
+omit:
+  location_1_city: Always empty in the portal's export.
+  location_1_state: Always empty in the portal's export.
+  location_1_zip: Always empty in the portal's export.

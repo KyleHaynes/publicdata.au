@@ -1,0 +1,182 @@
+# Publishers placed in Queensland that no portal of its own lists, or that one portal lists twice.
+# Generated from 'publicdata catalogue publishers', then reviewed. Edit by hand.
+- slug: biophysical-oceanography-group-school-of-geography-planning-and-environmental
+  name: Biophysical Oceanography Group, School of Geography, Planning and Environmental Management, University
+    of Queensland (UQ)
+  jurisdiction: Qld
+  level: other
+  orgs:
+  - gov:biophysical-oceanography-group-school-of-geography-planning-and-environmental-management-university
+- slug: brisbane-city-council
+  name: Brisbane City Council
+  jurisdiction: Qld
+  level: local
+  orgs:
+  - gov:local-government-of-queensland-brisbane-city-council-australian-urban-research-infrastructure-networ
+  - qld:brisbane-city-council
+- slug: bundaberg-regional-council
+  name: Bundaberg Regional Council
+  jurisdiction: Qld
+  level: local
+  orgs:
+  - gov:bundaberg-regional-council
+  - gov:bundaberg-regional-council-open-data
+- slug: cancer-council-queensland-viertel-cancer-research-centre
+  name: Cancer Council Queensland - Viertel Cancer Research Centre
+  jurisdiction: Qld
+  level: other
+  orgs:
+  - gov:cancer-council-queensland-viertel-cancer-research-centre-australian-urban-research-infrastructure-ne
+- slug: centre-for-microscopy-and-microanalysis-university-of-queensland-uq
+  name: Centre for Microscopy and Microanalysis, University of Queensland (UQ)
+  jurisdiction: Qld
+  level: other
+  orgs:
+  - gov:centre-for-microscopy-and-microanalysis-university-of-queensland-uq
+- slug: city-of-gold-coast
+  name: City of Gold Coast
+  jurisdiction: Qld
+  level: local
+  orgs:
+  - gov:city-of-gold-coast
+- slug: city-of-moreton-bay
+  name: City of Moreton Bay
+  jurisdiction: Qld
+  level: local
+  orgs:
+  - gov:city-moreton-bay-data-hub
+- slug: department-of-education
+  name: Department of Education
+  jurisdiction: Qld
+  level: state
+  orgs:
+  - gov:government-of-queensland-department-of-education-australian-urban-research-infrastructure-network
+- slug: department-of-education-and-training
+  name: Department of Education and Training
+  jurisdiction: Qld
+  level: state
+  orgs:
+  - gov:government-of-queensland-department-of-education-and-training-australian-urban-research-infrastructu
+- slug: department-of-environment-and-heritage-protection
+  name: Department of Environment and Heritage Protection
+  jurisdiction: Qld
+  level: state
+  orgs:
+  - gov:government-of-queensland-department-of-environment-and-heritage-protection-australian-urban-research
+- slug: department-of-health
+  name: Department of Health
+  jurisdiction: Qld
+  level: state
+  orgs:
+  - gov:government-of-queensland-department-of-health-australian-urban-research-infrastructure-network
+- slug: department-of-natural-resources-and-mines
+  name: Department of Natural Resources and Mines
+  jurisdiction: Qld
+  level: state
+  orgs:
+  - gov:government-of-queensland-department-of-natural-resources-and-mines-australian-urban-research-infrast
+- slug: transport-and-main-roads
+  name: Department of Transport and Main Roads
+  short: TMR
+  jurisdiction: Qld
+  level: state
+  url: https://www.tmr.qld.gov.au/
+  orgs:
+  - qld:transport-and-main-roads
+  - gov:government-of-queensland-department-of-transport-and-main-roads-australian-urban-research-infrastruc
+- slug: fraser-coast-regional-council
+  name: Fraser Coast Regional Council
+  jurisdiction: Qld
+  level: local
+  orgs:
+  - gov:fraser-coast-regional-council
+- slug: global-change-institute-university-of-queensland-uq
+  name: Global Change Institute, University of Queensland (UQ)
+  jurisdiction: Qld
+  level: other
+  orgs:
+  - gov:global-change-institute-university-of-queensland-uq
+- slug: ipswich-city-council
+  name: Ipswich City Council
+  jurisdiction: Qld
+  level: local
+  orgs:
+  - gov:city-of-ipswich
+- slug: logan-city-council
+  name: Logan City Council
+  jurisdiction: Qld
+  level: local
+  orgs:
+  - gov:logan-city-council
+- slug: noosa-shire-council
+  name: Noosa Shire Council
+  jurisdiction: Qld
+  level: local
+  orgs:
+  - gov:noosa-shire-council
+- slug: queensland-curriculum-and-assessment-authority
+  name: Queensland Curriculum and Assessment Authority
+  jurisdiction: Qld
+  level: state
+  orgs:
+  - gov:government-of-queensland-queensland-curriculum-and-assessment-authority-australian-urban-research-in
+- slug: queensland-department-of-science-information-technology-innovation-and-the-arts
+  name: Queensland Department of Science, Information Technology, Innovation and the Arts
+  jurisdiction: Qld
+  level: state
+  orgs:
+  - gov:queensland-department-of-science-information-technology-innovation-and-the-arts
+- slug: queensland-government
+  name: Queensland Government
+  jurisdiction: Qld
+  level: state
+  orgs:
+  - gov:queensland-government
+- slug: queensland-police-service
+  name: Queensland Police Service
+  jurisdiction: Qld
+  level: state
+  orgs:
+  - gov:queensland-police-service-australian-urban-research-infrastructure-network
+- slug: queensland-treasury-and-trade
+  name: Queensland Treasury and Trade
+  jurisdiction: Qld
+  level: state
+  orgs:
+  - gov:government-of-queensland-queensland-treasury-and-trade-australian-urban-research-infrastructure-netw
+- slug: redland-city-council
+  name: Redland City Council
+  jurisdiction: Qld
+  level: local
+  orgs:
+  - gov:redland-city-council-open-data
+- slug: school-of-biological-sciences-sbs-the-university-of-queensland-uq
+  name: School of Biological Sciences (SBS), The University of Queensland (UQ)
+  jurisdiction: Qld
+  level: other
+  orgs:
+  - gov:school-of-biological-sciences-sbs-the-university-of-queensland-uq
+- slug: the-university-of-queensland
+  name: The University of Queensland
+  jurisdiction: Qld
+  level: other
+  orgs:
+  - gov:the-university-of-queensland
+- slug: toowoomba-regional-council
+  name: Toowoomba Regional Council
+  jurisdiction: Qld
+  level: local
+  orgs:
+  - gov:toowoomba-regional-council
+- slug: townsville-city-council
+  name: Townsville City Council
+  jurisdiction: Qld
+  level: local
+  orgs:
+  - gov:townsville-city-council
+- slug: university-of-queensland-eresearch-group
+  name: University of Queensland - eResearch Group
+  jurisdiction: Qld
+  level: other
+  orgs:
+  - gov:university-of-queensland-eresearch-group-australian-urban-research-infrastructure-network

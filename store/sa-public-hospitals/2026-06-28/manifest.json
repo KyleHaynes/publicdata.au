@@ -1,0 +1,34 @@
+{
+  "dataset": "sa-public-hospitals",
+  "version": "2026-06-28",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:10:20+00:00",
+  "sha256": "6429a1ad75370c739dc1bea97fd3e7d4d6f4b5740dafa6a1fa905ee539c692d8",
+  "bytes": 8861,
+  "filename": "PublicHospitals_geojson.zip",
+  "encoding": "zip",
+  "source": {
+    "url": "https://www.dptiapps.com.au/dataportal/PublicHospitals_geojson.zip",
+    "portal": "https://data.sa.gov.au/data",
+    "package": "sa-public-hospitals",
+    "package_id": "5ced6ed2-45e1-4fa2-b27b-6d554bf239f4",
+    "resource": "12582d6a-ec8d-45ae-b6ee-34e4a40cdc66",
+    "resource_name": "Public Hospitals (GeoJSON)",
+    "resource_last_modified": "2023-07-15T01:57:30",
+    "package_modified": "2022-10-25T04:56:24.692217",
+    "package_version": null,
+    "etag": "",
+    "http_last_modified": "Sun, 28 Jun 2026 01:22:07 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution",
+    "url": "http://creativecommons.org/licenses/by/4.0",
+    "read_from": "https://data.sa.gov.au/data/api/3/action/package_show?id=sa-public-hospitals",
+    "read_at": "2026-10-03T03:10:20+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "b0c805d33bc5b9e348263860c6c2f9419985c7eba7dc88b2bde246359bbae7d9"
+}

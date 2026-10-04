@@ -1,0 +1,34 @@
+{
+  "dataset": "sa-boat-registrations",
+  "version": "2026-07-09",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:10:21+00:00",
+  "sha256": "b520addd7eb561ab7955e2e08ae32f092d1a2dd7c6336fb9b9c2716fb4971701",
+  "bytes": 170925,
+  "filename": "boat-registrations-2025-2026.xlsx",
+  "encoding": "xlsx",
+  "source": {
+    "url": "https://data.sa.gov.au/data/dataset/866fb3ab-0254-4dc6-8e78-30542eb02a58/resource/725f00a1-feb5-4f46-9240-403780d2f1bb/download/boat-registrations-2025-2026.xlsx",
+    "portal": "https://data.sa.gov.au/data",
+    "package": "boat-registrations",
+    "package_id": "866fb3ab-0254-4dc6-8e78-30542eb02a58",
+    "resource": "725f00a1-feb5-4f46-9240-403780d2f1bb",
+    "resource_name": "Boat Registrations 2025-2026",
+    "resource_last_modified": "2026-07-09T06:32:19.644902",
+    "package_modified": "2026-07-09T06:32:34.542225",
+    "package_version": null,
+    "etag": "1783578740.1-170925-1074338038",
+    "http_last_modified": "Thu, 09 Jul 2026 06:32:20 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution",
+    "url": "http://creativecommons.org/licenses/by/4.0",
+    "read_from": "https://data.sa.gov.au/data/api/3/action/package_show?id=boat-registrations",
+    "read_at": "2026-10-03T03:10:21+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "dd80adf0dad0153140c0051d3601fb2232fa9c734a91188251d5cadb6c7a62df"
+}

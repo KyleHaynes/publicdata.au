@@ -1,0 +1,34 @@
+{
+  "dataset": "vic-prison-locations",
+  "version": "2013-05-12",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:07:54+00:00",
+  "sha256": "6a56840d38ddbff372765dbfd39a2668677b37a2551299ba66aa591364c74980",
+  "bytes": 5662,
+  "filename": "tmptlM5VKprisons.csv",
+  "encoding": "cp1252",
+  "source": {
+    "url": "http://data.gov.au/storage/f/2013-05-12T194742/tmptlM5VKprisons.csv",
+    "portal": "https://data.gov.au/data",
+    "package": "prison-locations-victoria",
+    "package_id": "bcf9efc0-d146-4ad2-a62f-9b1ae4000cd2",
+    "resource": "0bceed87-e2f2-4d4c-98f9-bb7dfbeb3a63",
+    "resource_name": "prisons.csv",
+    "resource_last_modified": "2013-05-11T00:00:00",
+    "package_modified": "2023-08-11T11:36:34.668083",
+    "package_version": null,
+    "etag": "518f655a-161e",
+    "http_last_modified": "Sun, 12 May 2013 09:48:10 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution 3.0 Australia",
+    "url": "http://creativecommons.org/licenses/by/3.0/au/",
+    "read_from": "https://data.gov.au/data/api/3/action/package_show?id=prison-locations-victoria",
+    "read_at": "2026-10-03T03:07:54+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "ab037b5d4209728aa969ca0c41ea65f341a8ff6e0cd95a94c4655255587684db"
+}

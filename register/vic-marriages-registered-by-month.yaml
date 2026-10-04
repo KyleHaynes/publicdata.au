@@ -1,0 +1,75 @@
+slug: vic-marriages-registered-by-month
+title: Marriages registered per month, Victoria
+status: live
+topics:
+- people
+order: 375
+collection: vic-bdm-registrations
+collection_title: Births, deaths and marriages registered in Victoria
+publisher:
+  name: Registry of Births, Deaths and Marriages Victoria
+  short: BDM Victoria
+  jurisdiction: Vic
+  url: https://www.bdm.vic.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://discover.data.vic.gov.au/dataset/marriages-registered-per-month
+  attribution: Registry of Births, Deaths and Marriages Victoria, Victorian Government, Marriages registered
+    per month, sourced {sourced}, https://discover.data.vic.gov.au/dataset/marriages-registered-per-month,
+    licensed under CC BY 4.0.
+temporal_start: '2019-09-01'
+search_title: Marriages registered in Victoria each month (BDM Victoria)
+also_known_as:
+- Victorian marriage registrations by month
+- Monthly marriages Victoria
+- BDM Victoria marriages registered per month
+keywords:
+- marriages
+- marriage registrations
+- weddings
+- monthly marriages
+- Births Deaths and Marriages
+- Victoria
+faq:
+- q: What does each row hold?
+  a: The number of marriages the registry registered in one calendar month. Celebrants must notify the
+    registry within 14 days of the ceremony, and a marriage is counted in the month the registry
+    registers it, which may be later than the month of the wedding.
+- q: How far back does it go?
+  a: Each release covers about the last seven years of months, with the newest month first. Earlier
+    months drop off the publisher's file as new ones are added, and the versions kept here hold them.
+summary: The number of marriages the Victorian registry registered in each month, for about the last
+  seven years. Updated monthly.
+description: Marriages registered per month by the Registry of Births, Deaths and Marriages Victoria.
+  Each row is one calendar month and the number of marriages registered in it. A marriage is counted in
+  the month the registry registers it, which may differ from the month of the ceremony.
+example:
+  group: month
+  metric: sum.marriages_registered
+  label: Marriages registered
+chart:
+  split: none
+  metric: sum.marriages_registered
+  label: Marriages registered
+source:
+  adapter: ckan-resource
+  portal: https://discover.data.vic.gov.au
+  package: marriages-registered-per-month
+  resource: 94c65704-40b5-4872-809f-27a40488ce6a
+  url: https://discover.data.vic.gov.au/dataset/marriages-registered-per-month
+  cadence: monthly
+key:
+- month
+row_label: Months
+fields:
+- name: month
+  label: Month registered
+  source: Month-Year
+  type: date
+  description: The first day of the month the marriages were registered in.
+- name: marriages_registered
+  label: Marriages registered
+  source: Marriages Registered
+  type: integer

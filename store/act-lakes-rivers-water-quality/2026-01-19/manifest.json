@@ -1,0 +1,32 @@
+{
+  "dataset": "act-lakes-rivers-water-quality",
+  "version": "2026-01-19",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:14:03+00:00",
+  "sha256": "c1495deb43dcd71f3fa24fcc71456cd18087d85ab756f35a012b7b97629a4f08",
+  "bytes": 3357889,
+  "filename": "kcii-s5em.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.act.gov.au/api/views/kcii-s5em/rows.csv?accessType=DOWNLOAD",
+    "portal": "https://www.data.act.gov.au",
+    "package": "kcii-s5em",
+    "resource_name": "ACT Lakes and Rivers Water Quality",
+    "rows_updated_at": 1768782790,
+    "etag": "anVsaWV0dC4zMjc2MV8xXzE0M2NYRjllUW9pVUJ0V0pVNUlJUlA2bzdGeDU0---gzipI4lcCNuiw64yxheWOi4v_IHMb-g--gzip--gzip",
+    "http_last_modified": "Mon, 19 Jan 2026 00:33:08 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-3.0-AU",
+    "stated": "CC_30_BY_AUS",
+    "normalised": "CC-BY-3.0-AU",
+    "title": "Creative Commons Attribution 3.0 Australia",
+    "url": "http://creativecommons.org/licenses/by/3.0/au/deed.en",
+    "read_from": "https://www.data.act.gov.au/api/views/kcii-s5em.json",
+    "read_at": "2026-10-03T03:13:59+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "13bbd09cc6e05f8755ebbafa6945c675b11eafb889e271d469fd39984ad7e650"
+}

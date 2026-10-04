@@ -1,0 +1,71 @@
+slug: qld-births-by-mothers-postcode
+title: Births registered by mother's postcode, Queensland, latest year
+status: live
+topics:
+- people
+example:
+  group: postcode
+  metric: sum.births_registered
+  label: Births registered
+order: 203
+collection: qld-bdm-statistics
+collection_title: Births, deaths and baby names registered in Queensland
+search_title: Queensland births by postcode (Registry of Births, Deaths and Marriages)
+also_known_as:
+- Births by mother's postcode Queensland
+- Number of births by postcode QLD
+- Queensland birth registrations by suburb postcode
+keywords:
+- births
+- birth registrations
+- postcode
+- birth statistics
+- Queensland
+faq:
+- q: What is in each row?
+  a: One postcode of the mother's usual residence, with the number of births registered in the newest
+    year the registry has published. The registry lists postcodes from the most births to the fewest.
+- q: Why are some postcodes missing?
+  a: The registry publishes only counts of 5 or more, so a postcode with fewer than 5 births in the year is
+    left out of its file. A missing postcode does not mean no births.
+- q: Why are there New South Wales postcodes?
+  a: The postcode is the mother's usual residence. A birth in Queensland to a mother who lives in northern
+    New South Wales is counted under her own postcode, such as 2486 for Tweed Heads.
+summary: The number of births registered in Queensland in the newest published year for each postcode
+  of the mother's usual residence, where the count is 5 or more.
+description: Births registered with the Queensland Registry of Births, Deaths and Marriages in the newest
+  year it has published, one row per postcode of the mother's usual residence. The registry leaves out
+  postcodes with fewer than 5 births. It adds a file for each year, and this table follows the newest one.
+publisher:
+  name: Department of Justice
+  short: Justice
+  jurisdiction: Qld
+  url: https://www.justice.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/births-by-mothers-postcode
+  attribution: Department of Justice, Queensland Government, Births by mothers postcode, sourced {sourced},
+    https://www.data.qld.gov.au/dataset/births-by-mothers-postcode, licensed under CC BY 4.0.
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: births-by-mothers-postcode
+  url: https://www.data.qld.gov.au/dataset/births-by-mothers-postcode
+  encoding: utf-8-sig
+  resource_match: ^\d{4} Births by [Mm]others [Pp]ostcode$
+  cadence: yearly
+key:
+- postcode
+row_label: Postcodes
+fields:
+- name: postcode
+  label: Mother's postcode
+  source: Postcode
+  type: string
+  description: Postcode of the mother's usual residence. Kept as text.
+- name: births_registered
+  label: Births registered
+  source: Transactions
+  type: integer
+note: Headers were made snake_case. Rows were left alone.

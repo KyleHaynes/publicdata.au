@@ -1,0 +1,86 @@
+slug: sa-private-hospitals
+title: Private hospital locations, South Australia
+status: live
+topics:
+- health
+example:
+  group: type
+  metric: count
+order: 433
+collection: sa-hospitals
+collection_title: Hospital locations, South Australia
+search_title: South Australia private hospitals list and map (SA Health)
+also_known_as:
+- SA Private Hospitals
+- Private hospitals in Adelaide and regional South Australia
+- SA Health private hospital locations
+keywords:
+- hospitals
+- private hospitals
+- hospital locations
+- SA Health
+- South Australia
+faq:
+- q: What is in each row?
+  a: One private hospital with its name, street address, suburb, postcode and type, and its location.
+- q: Which coordinates are these?
+  a: Longitude and latitude in GDA2020 (EPSG:7844), from the GDA2020 file the publisher ships beside a GDA94 copy.
+summary: The name, address and location of each private hospital in South Australia, 50 at the first version.
+description: SA Private Hospitals from SA Health. Each row is one hospital, with its name, address, suburb and postcode
+  and its type, such as private hospital, and its point location.
+publisher:
+  name: SA Health
+  short: SA Health
+  jurisdiction: SA
+  url: https://www.sahealth.sa.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.sa.gov.au/data/dataset/sa-private-hospitals
+  attribution: SA Health, Government of South Australia, SA Private Hospitals, https://data.sa.gov.au/data/dataset/sa-private-hospitals, accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: ckan-resource
+  portal: https://data.sa.gov.au/data
+  package: sa-private-hospitals
+  resource: 3b88b0dd-b3d0-47c9-bfbd-ead88815f0ae
+  member: PrivateHospitals_GDA2020.geojson
+  url: https://data.sa.gov.au/data/dataset/sa-private-hospitals
+  cadence: when the publisher updates the list
+geometry:
+  lon: longitude
+  lat: latitude
+  crs: EPSG:7844
+  crs_note: Coordinates are longitude and latitude in GDA2020 (EPSG:7844), from the publisher's GDA2020 file.
+row_label: Hospitals
+fields:
+- name: name
+  label: Hospital
+  source: name
+  type: string
+- name: address
+  label: Address
+  source: address
+  type: string
+- name: suburb
+  label: Suburb
+  source: suburb
+  type: string
+- name: postcode
+  label: Postcode
+  source: postcode
+  type: string
+- name: type
+  label: Type
+  source: type
+  type: string
+- name: longitude
+  label: Longitude
+  source: (longitude)
+  type: number
+  description: Decimal degrees, GDA2020, from the point geometry.
+- name: latitude
+  label: Latitude
+  source: (latitude)
+  type: number
+  description: Decimal degrees, GDA2020, from the point geometry.

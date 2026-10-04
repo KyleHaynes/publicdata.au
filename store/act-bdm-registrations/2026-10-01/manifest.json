@@ -1,0 +1,32 @@
+{
+  "dataset": "act-bdm-registrations",
+  "version": "2026-10-01",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:10:28+00:00",
+  "sha256": "19d6667771d406f06c0f104839f969549ecb2294df87441f86d7db31f958050c",
+  "bytes": 18414,
+  "filename": "2n27-ed2y.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.act.gov.au/api/views/2n27-ed2y/rows.csv?accessType=DOWNLOAD",
+    "portal": "https://www.data.act.gov.au",
+    "package": "2n27-ed2y",
+    "resource_name": "Registration data from the ACT Registry of Births, Deaths and Marriages",
+    "rows_updated_at": 1790802562,
+    "etag": "aW5kaWEuMTAyODUyXzJfMTY0Z1NyQzRWSnFUU3k3ZFJXT0QyVzVjOTlqY3Zn---gzipB6xXZpD80rywdCVU976w7taAT64--gzip--gzip",
+    "http_last_modified": "Wed, 30 Sep 2026 21:09:21 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "stated": "CC_40_BY",
+    "normalised": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0 International",
+    "url": "http://creativecommons.org/licenses/by/4.0/legalcode",
+    "read_from": "https://www.data.act.gov.au/api/views/2n27-ed2y.json",
+    "read_at": "2026-10-03T03:10:28+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "b71ca6d646177b138e72d512e994e80b2057eb53715c3e878d8caa7e4292be4f"
+}

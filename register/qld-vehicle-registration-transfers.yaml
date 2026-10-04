@@ -1,0 +1,110 @@
+slug: qld-vehicle-registration-transfers
+title: Vehicle registration transfers by make, model and year, Queensland
+status: live
+topics:
+- roads
+order: 215
+temporal_start: '2007-01-01'
+search_title: Queensland vehicle registration transfers by make and model each year (Transport and Main
+  Roads)
+also_known_as:
+- Used car sales Queensland by make
+- QLD registration transfers by year
+- Vehicle ownership transfers Queensland
+keywords:
+- vehicle registrations
+- registration transfers
+- used cars
+- make and model
+- Queensland
+faq:
+- q: What is in each row?
+  a: One year from 2007, one transfer transaction type, the purpose of use before and after the transfer,
+    and one make, model and body shape, with the number of registration transfers.
+- q: What do the purposes mean?
+  a: The department uses Dealer for a vehicle registered to a dealer to sell it, Private for personal
+    use and Non-Private for commercial use. A transfer from Dealer to Private is usually a sale by a dealer
+    to a person.
+- q: Why are the 2023 counts lower?
+  a: The file was last changed in October 2023, so its 2023 counts cover only part of that year. The chart
+    stops at 2022 for that reason.
+- q: Why are there two transaction types?
+  a: The publisher wrote Registration Transfer for 2007 and part of 2008 and Transfer Registration from
+    then on. Both name the same transaction.
+summary: The number of vehicle registrations transferred in Queensland each year since 2007, by transfer
+  type, purpose of use before and after, and make, model and body shape.
+description: Yearly counts of vehicle registration transfers processed by the Department of Transport
+  and Main Roads, one row per year, transaction type, purpose of use before and after the transfer, make,
+  model and body shape. The file runs from 2007 to 2023.
+publisher:
+  name: Department of Transport and Main Roads
+  short: Transport and Main Roads
+  jurisdiction: Qld
+  url: https://www.tmr.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/vehicle-registration-transfers-by-year
+  attribution: Department of Transport and Main Roads, Queensland Government, Vehicle registration transfers,
+    by year, sourced {sourced}, https://www.data.qld.gov.au/dataset/vehicle-registration-transfers-by-year,
+    licensed under CC BY 4.0.
+example:
+  where: {year: newest}
+  group: make
+  metric: sum.transfers
+  label: Registration transfers by make in the newest year in the file
+chart:
+  where: {year: {lte: 2022}}
+  split: from_purpose
+  metric: sum.transfers
+  label: Registration transfers
+sample:
+  where: {year: newest}
+  order: [transfers.desc]
+  spread: from_purpose
+  label: The largest counts in the newest year, largest first, with each purpose before transfer in turn.
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: vehicle-registration-transfers-by-year
+  resource: 38ec1985-e8dd-485b-8d38-a08f93472e98
+  url: https://www.data.qld.gov.au/dataset/vehicle-registration-transfers-by-year
+  encoding: utf-8-sig
+  cadence: irregular
+partition_by:
+- year
+row_label: Transfer counts
+fields:
+- name: year
+  label: Year
+  source: Year
+  type: integer
+- name: transaction_type
+  label: Transaction type
+  source: Transaction Type
+  type: string
+- name: from_purpose
+  label: Purpose before transfer
+  source: From Purpose
+  type: string
+- name: to_purpose
+  label: Purpose after transfer
+  source: To Purpose
+  type: string
+- name: make
+  label: Make
+  source: Make Name
+  type: string
+- name: model
+  label: Model
+  source: Model Name
+  type: string
+- name: body_shape
+  label: Body shape
+  source: Body Shape Name
+  type: string
+- name: transfers
+  label: Transfers
+  source: Transactions
+  type: integer
+note: Cells were typed and headers were made snake_case. Rows were left alone.

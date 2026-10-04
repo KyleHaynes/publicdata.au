@@ -1,0 +1,116 @@
+slug: au-hospitals-myhospitals
+title: Hospitals, Local Hospital Networks and Primary Health Networks in MyHospitals, Australia
+status: live
+topics:
+- health
+order: 508
+collection: au-myhospitals
+collection_title: AIHW MyHospitals
+collection_search_title: MyHospitals hospital performance data, Australia (AIHW)
+collection_description: The hospitals and health networks the Australian Institute of Health and Welfare
+  reports on in MyHospitals, and the measures it publishes for them, as the MyHospitals Data API serves
+  them. Each table is one of the Institute's downloads, read whole.
+publisher:
+  name: Australian Institute of Health and Welfare
+  short: AIHW
+  jurisdiction: Cth
+  url: https://www.aihw.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.aihw.gov.au/copyright
+  statement: has been released under a Creative Commons BY 4.0 (CC-BY 4.0) licence
+  attribution: Based on Australian Institute of Health and Welfare material. Australian Institute of Health
+    and Welfare, Australian Government, MyHospitals Data API, mapping details extract, sourced {sourced},
+    https://myhospitalsapi.aihw.gov.au/, licensed under CC BY 4.0.
+search_title: List of hospitals in Australia with location, sector and health network (AIHW MyHospitals)
+also_known_as:
+- Australian hospitals list
+- Public and private hospitals Australia with coordinates
+- MyHospitals reporting units
+- Hospital to Local Hospital Network mapping
+keywords:
+- hospitals
+- public hospitals
+- private hospitals
+- Local Hospital Network
+- Primary Health Network
+- MyHospitals
+- AIHW
+faq:
+- q: What is in each row?
+  a: One reporting unit of MyHospitals, which is a hospital, a Local Hospital Network, a Primary Health
+    Network, a state or the nation. A hospital row has its coordinates, its sector, whether it is open or
+    closed, its state, and the Local Hospital Network and Primary Health Network area the Institute maps it
+    to. Most Local Hospital Network rows carry a point too. State, national and Primary Health Network rows
+    have no coordinates.
+- q: Is every hospital here?
+  a: The list holds the hospitals the Institute reports on in MyHospitals, public and private, including
+    some that have closed. A small private facility that reports nothing to the Institute may be missing.
+- q: How does this join to the measures?
+  a: The measure tables in this collection name each reporting unit by the same name, and the code here is
+    the Institute's own identifier for it. The Institute has not endorsed this site.
+summary: Every hospital and health network the AIHW reports on in MyHospitals, about 1,400 rows, with each
+  hospital's coordinates, sector, status, state and health networks.
+description: The MyHospitals mapping details extract from the AIHW MyHospitals Data API. Each row is one
+  reporting unit, with its code, name, type, latitude and longitude, public or private sector, open or
+  closed status, state, Local Hospital Network and Primary Health Network area.
+source:
+  adapter: file
+  url: https://myhospitalsapi.aihw.gov.au/api/v1/reporting-units-downloads/mappings
+  format: xlsx
+  sheet: Reporting units
+  header_row: 4
+  cadence: several times a year
+key:
+- code
+partition_by:
+- type
+geometry:
+  lon: longitude
+  lat: latitude
+  crs: EPSG:4326
+  crs_note: Latitude and longitude in decimal degrees as published. The Institute does not state the
+    datum; WGS84 and GDA2020 differ by under 2 metres.
+row_label: Reporting units
+fields:
+- name: code
+  label: Reporting unit code
+  source: Code
+  type: string
+- name: name
+  label: Name
+  source: Name
+  type: string
+- name: type
+  label: Type
+  source: Type
+  type: string
+- name: latitude
+  label: Latitude
+  source: Latitude
+  type: number
+- name: longitude
+  label: Longitude
+  source: Longitude
+  type: number
+- name: sector
+  label: Sector
+  source: Sector
+  type: string
+- name: open_closed
+  label: Open or closed
+  source: Open/Closed
+  type: string
+- name: state
+  label: State or territory
+  source: State
+  type: string
+- name: local_hospital_network
+  label: Local Hospital Network
+  source: Local Hospital Network (LHN)
+  type: string
+- name: primary_health_network
+  label: Primary Health Network area
+  source: Primary Health Network area (PHN)
+  type: string

@@ -1,0 +1,113 @@
+slug: vic-median-vacant-land-prices-by-suburb
+title: Median vacant land prices by suburb, Victoria
+status: live
+topics:
+- housing
+example:
+  where:
+    year: newest
+  group: locality
+  metric: avg.median_price
+  label: Median vacant land price ($)
+chart:
+  split: none
+  metric: avg.median_price
+  label: Average suburb median land price ($)
+sample:
+  where: {year: newest}
+  order: [median_price.desc]
+  label: The ten localities with the highest median vacant land price in the newest year, highest first.
+order: 390
+publisher:
+  name: Department of Transport and Planning
+  short: Transport and Planning
+  jurisdiction: Vic
+  url: https://www.land.vic.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://discover.data.vic.gov.au/dataset/victorian-property-sales-report-median-vacant-land-by-suburb-time-series
+  attribution: Department of Transport and Planning, Victorian Government, Victorian Property Sales Report,
+    Median Vacant Land by Suburb Time Series, sourced {sourced}, https://discover.data.vic.gov.au/dataset/victorian-property-sales-report-median-vacant-land-by-suburb-time-series,
+    licensed under CC BY 4.0.
+temporal_start: '2015-01-01'
+search_title: Median vacant land price by suburb, Victoria, each year for the last eleven years
+also_known_as:
+- Victorian Property Sales Report median vacant land prices
+- Melbourne land prices by suburb
+- Block of land prices by suburb Victoria
+- Valuer-General Victoria median vacant land prices
+keywords:
+- median land price
+- vacant land
+- land prices by suburb
+- house and land
+- property sales report
+- Victoria
+- Valuer-General
+- housing
+faq:
+- q: What is the median for?
+  a: The median sale price of vacant land lots sold in a suburb or town in a calendar year, from the Valuer-General's
+    record of sales, as published in the Victorian Property Sales Report. Each row is one locality and
+    year. Houses and units have their own reports and are not here. A locality is listed only where the publisher gives a vacant land median.
+- q: Why does the latest year change?
+  a: The publisher releases its time series each year, and each version covers the eleven calendar
+    years to the last full year. The report also shows a preliminary median for the current year and the
+    change over one and ten years; those columns are derived or not final and are not republished. Earlier
+    versions here keep the earlier windows.
+- q: What do the null medians mean?
+  a: The publisher writes NA or a dash where too few sales were recorded in a locality to give a median.
+    Both are kept as null.
+- q: What are the marks beside some medians?
+  a: The publisher's sheet has an unheaded column beside each year that holds a ^ or * against some
+    medians. The file does not say what the marks mean, so they are not republished.
+summary: The median sale price of vacant land lots in each Victorian suburb and town for each of the last eleven calendar
+  years, from the Valuer-General's sales record. About 220 localities, updated yearly.
+description: Median vacant land prices by suburb from the Victorian Property Sales Report time series, one row
+  per locality and calendar year for the eleven years the release covers. The medians are of vacant land lots sold
+  in the year as recorded by the Valuer-General Victoria and published by the Department of Transport
+  and Planning. The report's preliminary current year figure and its one and ten year change columns are
+  not republished.
+source:
+  adapter: ckan-resource
+  portal: https://discover.data.vic.gov.au
+  package: victorian-property-sales-report-median-vacant-land-by-suburb-time-series
+  resource_match: Land by suburb
+  url: https://discover.data.vic.gov.au/dataset/victorian-property-sales-report-median-vacant-land-by-suburb-time-series
+  cadence: yearly
+wide:
+  header_row: 2
+  header_rows: 1
+  row_headers: 1
+  column_match: ^\d{4}$
+key:
+- locality
+- year
+row_label: Locality years
+fields:
+- name: locality
+  label: Locality
+  source: (row header 1)
+  type: string
+  description: The suburb or town, in the publisher's capitals.
+- name: year
+  label: Year
+  source: (column header 1)
+  type: integer
+  description: The calendar year the vacant land lots were sold in.
+- name: median_price
+  label: Median vacant land price ($)
+  source: (cell)
+  type: integer
+  null_values:
+  - NA
+  - '-'
+  description: The median sale price of vacant land lots sold in the year, in dollars. Null where the publisher
+    recorded too few sales.
+omit:
+  Prelim: A preliminary median for the current year, not final until the next release.
+  24-25: A one year change the publisher derives from the medians.
+  15-25: A ten year change the publisher derives from the medians.
+  PA: A yearly growth rate the publisher derives from the medians.

@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-coal-saleable-production",
+  "version": "2026-06-10",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:00:56+00:00",
+  "sha256": "b8f1d8de6ef1149e451e5b069b478d7dfd7347ec1157249fe66a6d0050d8b5ba",
+  "bytes": 103931,
+  "filename": "2025-calendar-year-coal-production-statistics.xlsx",
+  "encoding": "xlsx",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/a83acd64-6083-4c42-b38d-d551df66d1d1/resource/d22a8d8b-7c00-42d2-884a-c438d51cefc3/download/2025-calendar-year-coal-production-statistics.xlsx",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "annual-coal-statistics",
+    "package_id": "a83acd64-6083-4c42-b38d-d551df66d1d1",
+    "resource": "d22a8d8b-7c00-42d2-884a-c438d51cefc3",
+    "resource_name": "2025 calendar year—Coal production statistics  ",
+    "resource_last_modified": "2026-06-09T22:07:02.321934",
+    "package_modified": "2026-06-09T22:07:56.659001",
+    "package_version": "1.0",
+    "etag": "06f9eb1607d25bee2898cc994a33126e",
+    "http_last_modified": "Tue, 09 Jun 2026 22:07:04 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=annual-coal-statistics",
+    "read_at": "2026-10-03T03:00:55+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "40977e4e394a0c33e6000b5fdc10b94ddbd2c0956d3badf4c0bbae35b6cdfcb7"
+}

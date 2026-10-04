@@ -1,0 +1,158 @@
+slug: vic-air-quality-hourly
+title: Air quality hourly averages at every EPA monitoring station, Victoria, latest year
+status: live
+topics:
+- nature
+- health
+example:
+  where:
+    parameter_name: PM2.5
+  group: location_name
+  metric: avg.value
+  label: Average PM2.5 (ug/m3)
+chart:
+  where: {parameter_name: PM2.5}
+  split: none
+  metric: avg.value
+  label: Average PM2.5 (ug/m3)
+sample:
+  where: {parameter_name: PM2.5}
+  order: [value.desc]
+  spread: none
+  label: The ten highest hourly PM2.5 readings at any station, highest first.
+order: 370
+publisher:
+  name: Environment Protection Authority Victoria
+  short: EPA Victoria
+  jurisdiction: Vic
+  url: https://www.epa.vic.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://discover.data.vic.gov.au/dataset/epa-air-watch-all-sites-air-quality-hourly-averages-yearly
+  attribution: Environment Protection Authority Victoria, Victorian Government, EPA Air Watch All Sites Air
+    Quality Hourly Averages - Yearly, sourced {sourced}, https://discover.data.vic.gov.au/dataset/epa-air-watch-all-sites-air-quality-hourly-averages-yearly,
+    licensed under CC BY 4.0.
+temporal_start: '2025-01-01'
+search_title: Victorian air quality data, hourly readings by station for a full year (EPA AirWatch)
+also_known_as:
+- EPA AirWatch hourly averages
+- Victoria air pollution data by station
+- Melbourne PM2.5 and ozone hourly readings
+- EPA Victoria validated air quality data
+keywords:
+- air quality
+- PM2.5
+- PM10
+- ozone
+- nitrogen dioxide
+- air pollution
+- EPA AirWatch
+- Victoria
+faq:
+- q: What does each row hold?
+  a: One hourly average of one measure at one EPA monitoring station, with the hour in AEST, local time
+    and UTC, the station and its coordinates, the value and its unit, a validation flag and the method used.
+    The measures include particles (PM2.5 and PM10), ozone, nitrogen oxides, sulfur dioxide, carbon monoxide,
+    visibility and weather readings such as temperature and wind.
+- q: Which year does it cover?
+  a: EPA releases one workbook per calendar year once the year's data is validated, and this entry follows
+    the newest. The first version holds 2025 and the first hours of 1 January 2026. Earlier years are on the publisher's portal as separate
+    workbooks, back to 1979, and each later year is kept here as a new version.
+- q: Why are some values negative?
+  a: Gas analysers can read slightly below zero at very low concentrations. EPA publishes these validated
+    values as measured, and they are kept as published.
+summary: Every validated hourly air quality and weather reading from EPA Victoria's monitoring stations for
+  the latest full year, about 880,000 rows, one row per station, measure and hour.
+description: EPA Victoria's AirWatch hourly averages for all monitoring stations, read from the AllData
+  sheet of the yearly workbook. Each row is one station, parameter and hour, with the value, its unit, the
+  validation flag and the analysis method. The workbook's per-station sheets repeat the same values in wide
+  form and are not read. The entry follows the newest yearly workbook, so each new year arrives as a new
+  version.
+source:
+  adapter: ckan-resource
+  portal: https://discover.data.vic.gov.au
+  package: epa-air-watch-all-sites-air-quality-hourly-averages-yearly
+  resource_match: ^Air Quality Readings - \d{4}$
+  url: https://discover.data.vic.gov.au/dataset/epa-air-watch-all-sites-air-quality-hourly-averages-yearly
+  cadence: yearly
+  sheet: AllData
+partition_by:
+- parameter_name
+row_label: Hourly readings
+fields:
+- name: datetime_aest
+  label: Hour starting (AEST)
+  source: datetime_AEST
+  type: datetime
+  date_format: '%Y-%m-%d %H:%M:%S|%Y-%m-%d'
+- name: datetime_local
+  label: Hour starting (local time)
+  source: datetime_local
+  type: datetime
+  date_format: '%Y-%m-%d %H:%M:%S|%Y-%m-%d'
+- name: date_hour_start_utc_id
+  label: UTC hour id
+  source: date_hour_start_utc_id
+  type: integer
+  description: The UTC hour as YYYYMMDDHH, the publisher's identifier for the hour.
+- name: sample_point_id
+  label: Sample point id
+  source: sample_point_id
+  type: integer
+- name: location_id
+  label: Station id
+  source: location_id
+  type: integer
+- name: location_name
+  label: Station
+  source: location_name
+  type: string
+- name: latitude
+  label: Latitude
+  source: latitude
+  type: number
+- name: longitude
+  label: Longitude
+  source: longitude
+  type: number
+- name: value
+  label: Value
+  source: value
+  type: number
+  description: The hourly average in the unit given in unit_of_measure.
+- name: validation_flag
+  label: Validated
+  source: validation_flag
+  type: string
+- name: parameter_name
+  label: Measure
+  source: parameter_name
+  type: string
+  description: A short code such as PM2.5, O3, NO2 or DBT.
+- name: parameter_method_name
+  label: Measure and method code
+  source: parameter_method_name
+  type: string
+- name: parameter_description
+  label: Measure description
+  source: parameter_description
+  type: string
+- name: analysis_method_name
+  label: Analysis method
+  source: analysis_method_name
+  type: string
+- name: unit_of_measure
+  label: Unit
+  source: unit_of_measure
+  type: string
+- name: method_quality
+  label: Method quality
+  source: method_quality
+  type: string
+- name: datetime_utc
+  label: Hour starting (UTC)
+  source: datetime_UTC
+  type: datetime
+  date_format: '%Y-%m-%d %H:%M:%S|%Y-%m-%d'

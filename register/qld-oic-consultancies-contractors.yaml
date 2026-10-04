@@ -1,0 +1,21 @@
+slug: qld-oic-consultancies-contractors
+title: Consultancies and contractors, Office of the Information Commissioner
+status: blocked
+topics:
+- government
+order: 90
+summary: Annual consultancy and contractor spend. Published as XLSX and CSV.
+publisher:
+  name: Office of the Information Commissioner Queensland
+  short: OIC Qld
+  jurisdiction: Qld
+  url: https://www.oic.qld.gov.au/
+licence:
+  id: CC-BY-ND-4.0
+  reviewed: '2026-09-25'
+  evidence: https://www.data.qld.gov.au/dataset/consultancies-and-contractors-office-of-the-information-commissioner
+source:
+  adapter: none
+  url: https://www.data.qld.gov.au/dataset/consultancies-and-contractors-office-of-the-information-commissioner
+blocked_reason: CC BY-ND 4.0 does not allow derivative works, and a re-serialisation is one. It can be
+  built if the publisher relicenses under CC BY 4.0, which is the Queensland Government default.

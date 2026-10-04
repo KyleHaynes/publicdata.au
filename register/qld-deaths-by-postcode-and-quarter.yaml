@@ -1,0 +1,82 @@
+slug: qld-deaths-by-postcode-and-quarter
+title: Deaths registered by residential postcode and quarter, Queensland, latest year
+status: live
+topics:
+- people
+order: 206
+collection: qld-bdm-statistics
+collection_title: Births, deaths and baby names registered in Queensland
+search_title: Queensland deaths by postcode and quarter (Registry of Births, Deaths and Marriages)
+also_known_as:
+- Deaths by residential postcode Queensland
+- Number of deaths by postcode QLD
+- Queensland quarterly death registrations by postcode
+keywords:
+- deaths
+- death registrations
+- postcode
+- quarterly
+- mortality
+- Queensland
+faq:
+- q: What is in each row?
+  a: One quarter of registration and one Queensland postcode of the person's residence, with the number
+    of deaths registered. The newest year's file grows by a quarter as the registry adds to it.
+- q: Why are some postcodes missing?
+  a: The registry publishes only counts of 5 or more and only Queensland postcodes, so a postcode with
+    fewer than 5 deaths in a quarter is left out, as are residents of other states.
+- q: Is this the date of death?
+  a: No. The registry counts deaths by the date they were registered.
+summary: Deaths registered in Queensland in the newest published year by quarter of registration and residential
+  postcode, where the count is 5 or more.
+description: Deaths registered with the Queensland Registry of Births, Deaths and Marriages, one row per
+  quarter of registration and Queensland residential postcode, for the newest year the registry has published.
+  The registry leaves out counts below 5 and postcodes outside Queensland. It adds a file for each
+  year and updates it during the year, and this table follows the newest one.
+publisher:
+  name: Department of Justice
+  short: Justice
+  jurisdiction: Qld
+  url: https://www.justice.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/deaths-by-residential-postcode-and-quarter
+  attribution: Department of Justice, Queensland Government, Deaths by Residential Postcode and Quarter,
+    sourced {sourced}, https://www.data.qld.gov.au/dataset/deaths-by-residential-postcode-and-quarter,
+    licensed under CC BY 4.0.
+example:
+  where: {quarter: newest}
+  group: postcode
+  metric: sum.deaths_registered
+  label: Deaths registered by residential postcode in the newest quarter of the year
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: deaths-by-residential-postcode-and-quarter
+  url: https://www.data.qld.gov.au/dataset/deaths-by-residential-postcode-and-quarter
+  encoding: utf-8-sig
+  resource_match: ^\d{4} Deaths by Residential Postcode and Quarter$
+  cadence: quarterly
+key:
+- quarter
+- postcode
+partition_by:
+- quarter
+row_label: Postcode quarters
+fields:
+- name: quarter
+  label: Quarter of registration
+  source: Quarter
+  type: string
+  description: Qtr 1 to Qtr 4 as the registry writes it.
+- name: postcode
+  label: Residential postcode
+  source: Postcode
+  type: string
+  description: Kept as text.
+- name: deaths_registered
+  label: Deaths registered
+  source: Transactions
+  type: integer
+note: Headers were made snake_case. Rows were left alone.

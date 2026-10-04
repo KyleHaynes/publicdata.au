@@ -1,0 +1,250 @@
+slug: sa-heritage-places
+title: State and local heritage places, South Australia
+status: live
+topics:
+- places
+- government
+example:
+  where:
+    heritage_class: State
+  group: council
+  metric: count
+chart:
+  split: none
+  metric: count
+  label: State heritage footprints by the year of their register status date
+order: 428
+search_title: South Australia heritage register map, state and local heritage places (Housing and Urban Development)
+also_known_as:
+- SA Heritage Places
+- South Australian Heritage Register places
+- Local heritage places in the Planning and Design Code
+- Heritage listed properties Adelaide
+keywords:
+- heritage register
+- heritage listed
+- state heritage place
+- local heritage place
+- heritage map
+- Department for Housing and Urban Development
+- South Australia
+faq:
+- q: What is in each row?
+  a: One footprint of a heritage place, with its heritage number and identifier, address, council, description,
+    heritage class (state, local or contributory), the listing criteria and dates, the land parcels, and for state
+    heritage places the register status, extent of listing and statement of significance where given. The shape
+    is in the GeoParquet, GeoJSON, GeoPackage and PMTiles files.
+- q: Why does one place have several rows?
+  a: The publisher splits a parcel that carries more than one heritage item, and some items have more than one
+    footprint, so one heritage number can appear on several rows. The polygon type column says how each footprint
+    was drawn.
+- q: How exact are the shapes?
+  a: The publisher gives an indicative footprint and rates the location of each as high or low confidence, or
+    unable to locate, in the accuracy columns. A low confidence footprint may not match the building on the ground.
+- q: Where are the places without a footprint?
+  a: The publisher's point layer of the same places has a few more rows than the footprints. This table holds the
+    footprint layer.
+summary: The footprints of State Heritage Places on the South Australian Heritage Register and Local Heritage
+  Places in the Planning and Design Code, along with contributory items, with address, class and listing details.
+description: 'SA Heritage Places from the Department for Housing and Urban Development, the polygon layer giving an
+  indicative footprint for each State Heritage Place on the South Australian Heritage Register and each Local
+  Heritage Place in the Planning and Design Code. Each row carries the heritage number and identifier, the address,
+  suburb and council, the description, the heritage class, the land use code, the criteria for listing, the interim
+  and authorisation dates and references, the plan, parcel and title references, the location accuracy, and for
+  state places the register status and date, the extent of listing and the statement of significance.'
+publisher:
+  name: Department for Housing and Urban Development
+  short: Housing and Urban Development
+  jurisdiction: SA
+  url: https://www.dhud.sa.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.sa.gov.au/data/dataset/sa-heritage-places
+  attribution: Department for Housing and Urban Development, Government of South Australia, SA Heritage Places, https://data.sa.gov.au/data/dataset/sa-heritage-places, accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: ckan-resource
+  portal: https://data.sa.gov.au/data
+  package: sa-heritage-places
+  resource: 8532f47a-87fb-4881-8f2e-d811eedb190c
+  member: SAHeritagePlacesPoly_GDA2020.shp
+  url: https://data.sa.gov.au/data/dataset/sa-heritage-places
+  cadence: when the publisher updates the layer
+geometry:
+  kind: polygon
+  crs: EPSG:7844
+  crs_note: Shapes in GDA2020 (EPSG:7844), from the GDA2020 layer the publisher ships beside a GDA94 copy.
+  maxzoom: 10
+row_label: Heritage footprints
+fields:
+- name: heritage_number
+  label: Heritage number
+  source: heritagenr
+  type: integer
+- name: heritage_id
+  label: Heritage ID
+  source: idcode
+  type: string
+- name: location
+  label: Location
+  source: parlocatio
+  type: string
+  description: The street address and suburb as the publisher writes them together.
+- name: street_number
+  label: Street number
+  source: streetnr
+  type: string
+- name: street_name
+  label: Street name
+  source: streetname
+  type: string
+- name: street_type
+  label: Street type
+  source: streettype
+  type: string
+- name: address_2
+  label: Address line 2
+  source: address2
+  type: string
+- name: unit_number
+  label: Unit number
+  source: unitnr
+  type: string
+- name: suburb
+  label: Suburb
+  source: suburb
+  type: string
+- name: locality
+  label: Locality
+  source: locality
+  type: string
+- name: council
+  label: Council
+  source: lgadesc
+  type: string
+- name: development_plan
+  label: Development plan
+  source: devplandes
+  type: string
+- name: details
+  label: Description
+  source: details
+  type: string
+- name: heritage_class_code
+  label: Heritage class code
+  source: heritagecl
+  type: string
+  description: S, L or C.
+- name: heritage_class
+  label: Heritage class
+  source: heritage_1
+  type: string
+  description: State, Local or Contributory.
+- name: second_class_code
+  label: Second heritage class code
+  source: heritage_2
+  type: string
+- name: second_class
+  label: Second heritage class
+  source: heritage_3
+  type: string
+- name: local_class_type
+  label: Local heritage class type
+  source: lhpclassty
+  type: string
+  description: The publisher's code for the kind of local listing, T or CS.
+- name: state_register_code
+  label: State Heritage Register number
+  source: shrcode
+  type: integer
+- name: state_register_status
+  label: State Heritage Register status
+  source: shrstatusc
+  type: string
+  description: PRO for provisional or REG for registered.
+- name: state_register_date
+  label: State Heritage Register status date
+  source: shrstatusd
+  type: date
+- name: council_reference
+  label: Council reference
+  source: councilref
+  type: string
+- name: code
+  label: Code
+  source: code
+  type: integer
+  description: The publisher's code for the listing, shared by places listed together.
+- name: land_use_code
+  label: Land use code
+  source: as2482
+  type: string
+  description: The use code or codes, separated by semicolons.
+- name: land_use
+  label: Land use
+  source: as2482desc
+  type: string
+- name: location_accuracy_code
+  label: Location accuracy code
+  source: locationac
+  type: string
+  description: H, L or U.
+- name: location_accuracy
+  label: Location accuracy
+  source: accuracyde
+  type: string
+- name: data_source
+  label: Data source
+  source: sourceofda
+  type: string
+- name: interim_date
+  label: Interim effect date
+  source: interimdat
+  type: date
+- name: interim_reference
+  label: Interim reference
+  source: interimpar
+  type: string
+- name: authorised_date
+  label: Authorised date
+  source: authorisat
+  type: date
+- name: authorisation_reference
+  label: Authorisation reference
+  source: authparref
+  type: string
+- name: polygon_type_code
+  label: Polygon type code
+  source: polygontyp
+  type: string
+- name: polygon_type
+  label: Polygon type
+  source: polygont_1
+  type: string
+- name: section_23_criteria
+  label: Section 23 criteria
+  source: section23s
+  type: string
+  description: The criteria letters under section 23 of the Heritage Places Act 1993 that the place meets.
+- name: section_16_criteria
+  label: Section 16 criteria
+  source: section16s
+  type: string
+  description: The criteria letters under section 16 of the Heritage Places Act 1993 that the place meets.
+- name: plan_parcel
+  label: Plan, parcel and title
+  source: planparcel
+  type: string
+- name: extent_of_listing
+  label: Extent of listing
+  source: extentofli
+  type: string
+- name: significance
+  label: Statement of significance
+  source: significan
+  type: string
+omit:
+  valuations: Blank in every row of the publisher's file.
+  shape_Leng: The perimeter in degrees from the publisher's GIS; the shape carries it.
+  shape_Area: The area in square degrees from the publisher's GIS; the shape carries it.

@@ -1,0 +1,97 @@
+slug: act-historic-death-index
+title: Historic death index, ACT
+status: live
+topics:
+- people
+example:
+  group: surname
+  metric: count
+  label: Deaths by surname
+order: 451
+temporal_start: '1930-01-01'
+search_title: ACT historic death index, deaths registered from 1930 (Access Canberra)
+also_known_as:
+- ACT death records index
+- Canberra historic deaths register
+- ACT BDM historic death index
+keywords:
+- death index
+- family history
+- genealogy
+- deaths
+- Canberra
+- ACT
+faq:
+- q: What is in each row?
+  a: One death registered in the ACT, with the registration number, the surname and given names of the
+    person who died, the date of death, and the surnames and given names of the father and mother where
+    the registry recorded them.
+- q: Why are recent deaths missing?
+  a: The publisher's index holds only deaths registered in the ACT more than 30 years ago. Later deaths
+    are added as they pass that age.
+- q: Is this a death certificate?
+  a: No. It is an index with limited details. A certificate is ordered from the ACT Registry of Births,
+    Deaths and Marriages.
+summary: An index of deaths registered in the ACT more than 30 years ago, from 1930, one row per death
+  with the names of the person and their parents and the date of death.
+description: The historic death index Access Canberra keeps for deaths registered in the ACT more than
+  30 years ago. Each row carries the registration number, the surname and given names of the person who
+  died, the date of death, and the father's and mother's surnames and given names where they were
+  recorded. Babies who died before being named are shown as UNNAMED.
+publisher:
+  name: Access Canberra, City and Environment Directorate
+  short: Access Canberra
+  jurisdiction: ACT
+  url: https://www.accesscanberra.act.gov.au/
+licence:
+  id: CC-BY-SA-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.act.gov.au/d/sepa-djsm
+  attribution: Access Canberra, ACT Government, Historic death index, https://www.data.act.gov.au/d/sepa-djsm,
+    accessed {sourced}, licensed under CC BY-SA 4.0.
+source:
+  adapter: socrata
+  portal: https://www.data.act.gov.au
+  package: sepa-djsm
+  url: https://www.data.act.gov.au/d/sepa-djsm
+  cadence: yearly
+key:
+- reg_no
+row_label: Deaths
+fields:
+- name: reg_no
+  label: Registration number
+  source: Reg No
+  type: string
+  description: The registry's number for the death registration.
+- name: surname
+  label: Surname
+  source: Surname
+  type: string
+- name: given_names
+  label: Given names
+  source: Given Names
+  type: string
+- name: date_of_death
+  label: Date of death
+  source: Date of Death
+  type: date
+  date_format: '%d/%m/%Y'
+- name: father_surname
+  label: Father's surname
+  source: Father Surname
+  type: string
+- name: father_given_names
+  label: Father's given names
+  source: Father Given Names
+  type: string
+- name: mother_surname
+  label: Mother's surname
+  source: Mother Surname
+  type: string
+- name: mother_given_names
+  label: Mother's given names
+  source: Mother Given Names
+  type: string
+note: Cells were typed and headers were made snake_case. The publisher's header is kept beside every field
+  in schema.json. Rows were left alone.

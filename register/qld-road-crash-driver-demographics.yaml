@@ -1,0 +1,176 @@
+slug: qld-road-crash-driver-demographics
+title: Driver demographics in road crashes, Queensland
+status: live
+topics:
+- roads
+example:
+  where:
+    involving_unlicensed_driver: true
+    crash_severity:
+      neq: Property damage only
+  group: crash_severity
+  metric: sum.count_crashes
+chart:
+  where:
+    crash_severity:
+      neq: Property damage only
+order: 12
+publisher:
+  name: Department of Transport and Main Roads
+  short: Transport and Main Roads
+  jurisdiction: Qld
+  url: https://www.tmr.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-09-25'
+  evidence: https://www.data.qld.gov.au/dataset/crash-data-from-queensland-roads
+  attribution: Department of Transport and Main Roads, Queensland Government, Crash data from Queensland
+    roads, sourced {sourced}, https://www.data.qld.gov.au/dataset/crash-data-from-queensland-roads, licensed
+    under CC BY 4.0.
+collection: qld-road-crashes
+temporal_start: '2001-01-01'
+collection_title: Crash data from Queensland roads
+search_title: Queensland crash statistics by driver age, gender and licence
+also_known_as:
+- young driver crash statistics Queensland
+- unlicensed driver crashes Queensland
+- provisional driver crash data
+keywords:
+- driver demographics
+- young drivers
+- senior drivers
+- provisional licence
+- unlicensed drivers
+- overseas licence
+- crash statistics
+- Queensland
+faq:
+- q: Can I add the rows to get the total number of crashes?
+  a: Within one year, police region and severity, yes. Across the driver flags, no. A crash with a young
+    male provisional driver is counted under each flag that is true, so summing across flags counts it
+    more than once.
+summary: Crash and casualty counts by year, police region and severity, split by whether a male, female,
+  young, senior, provisional, overseas licensed or unlicensed driver was involved.
+description: Aggregate counts of reported Queensland road crashes from 1 January 2001 by the kinds of
+  driver involved. Each row is one combination of year, police region, crash severity and seven yes or
+  no driver flags, with the number of crashes and casualties. The publisher's Yes and No are typed as
+  booleans. Property damage only crashes stop after 31 December 2010.
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: crash-data-from-queensland-roads
+  resource: dd13a889-2a48-4b91-8c64-59f824ed3d2c
+  url: https://www.data.qld.gov.au/dataset/crash-data-from-queensland-roads/resource/dd13a889-2a48-4b91-8c64-59f824ed3d2c
+  cadence: about twice a year
+  encoding: utf-8-sig
+  as_at_regex: to:?[\s•]*(\d{1,2} [A-Za-z]+ \d{4})
+key:
+- crash_year
+- crash_police_region
+- crash_severity
+- involving_male_driver
+- involving_female_driver
+- involving_young_driver_16_24
+- involving_senior_driver_60plus
+- involving_provisional_driver
+- involving_overseas_licensed_driver
+- involving_unlicensed_driver
+partition_by:
+- crash_year
+fields:
+- name: crash_year
+  label: Year
+  source: Crash_Year
+  type: integer
+- name: crash_police_region
+  label: Police region
+  source: Crash_Police_Region
+  type: string
+  description: Queensland Police Service region, or Unknown.
+- name: crash_severity
+  label: Severity
+  source: Crash_Severity
+  type: string
+  description: Fatal, Hospitalisation, Medical treatment, Minor injury or Property damage only.
+- name: involving_male_driver
+  label: Male driver involved
+  source: Involving_Male_Driver
+  type: boolean
+  true_values:
+  - 'Yes'
+  false_values:
+  - 'No'
+- name: involving_female_driver
+  label: Female driver involved
+  source: Involving_Female_Driver
+  type: boolean
+  true_values:
+  - 'Yes'
+  false_values:
+  - 'No'
+- name: involving_young_driver_16_24
+  label: Driver aged 16 to 24 involved
+  source: Involving_Young_Driver_16-24
+  type: boolean
+  description: Driver aged 16 to 24.
+  true_values:
+  - 'Yes'
+  false_values:
+  - 'No'
+- name: involving_senior_driver_60plus
+  label: Driver aged 60 or over involved
+  source: Involving_Senior_Driver_60plus
+  type: boolean
+  description: Driver aged 60 or more.
+  true_values:
+  - 'Yes'
+  false_values:
+  - 'No'
+- name: involving_provisional_driver
+  label: Provisional driver involved
+  source: Involving_Provisional_Driver
+  type: boolean
+  true_values:
+  - 'Yes'
+  false_values:
+  - 'No'
+- name: involving_overseas_licensed_driver
+  label: Overseas-licensed driver involved
+  source: Involving_Overseas_Licensed_Driver
+  type: boolean
+  true_values:
+  - 'Yes'
+  false_values:
+  - 'No'
+- name: involving_unlicensed_driver
+  label: Unlicensed driver involved
+  source: Involving_Unlicensed_Driver
+  type: boolean
+  true_values:
+  - 'Yes'
+  false_values:
+  - 'No'
+- name: count_crashes
+  label: Crashes
+  source: Count_Crashes
+  type: integer
+- name: count_casualty_fatality
+  label: Deaths
+  source: Count_Casualty_Fatality
+  type: integer
+- name: count_casualty_hospitalised
+  label: People hospitalised
+  source: Count_Casualty_Hospitalised
+  type: integer
+- name: count_casualty_medically_treated
+  label: People medically treated
+  source: Count_Casualty_MedicallyTreated
+  type: integer
+- name: count_casualty_minor_injury
+  label: People with minor injuries
+  source: Count_Casualty_MinorInjury
+  type: integer
+- name: count_casualty_all
+  label: All casualties
+  source: Count_Casualty_All
+  type: integer

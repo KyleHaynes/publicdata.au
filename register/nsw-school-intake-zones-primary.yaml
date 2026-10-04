@@ -1,0 +1,168 @@
+slug: nsw-school-intake-zones-primary
+title: Primary school intake zones, New South Wales
+status: live
+topics:
+- education
+example:
+  group: catch_type
+  metric: count
+chart:
+  metric: count
+  label: Zones by the year they were added or last changed
+order: 314
+publisher:
+  name: NSW Department of Education
+  short: Department of Education
+  jurisdiction: NSW
+  url: https://education.nsw.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.nsw.gov.au/data/dataset/nsw-education-school-intake-zones-catchment-areas-for-nsw-government-schools
+  attribution: NSW Department of Education, NSW Government, School intake zones (catchment areas) for NSW government
+    schools, sourced {sourced}, https://data.nsw.gov.au/data/dataset/nsw-education-school-intake-zones-catchment-areas-for-nsw-government-schools,
+    licensed under CC BY 4.0.
+collection: nsw-school-intake-zones
+collection_title: School intake zones (catchment areas) for NSW government schools
+collection_description: The local enrolment areas of NSW government schools from the NSW Department of Education,
+  as polygon layers. Every child is entitled to enrol at the school whose zone covers their home address. The
+  Department publishes one layer for primary schools, one for high schools and one for zones set to start in
+  a coming year.
+collection_search_title: NSW school catchment zones (NSW Department of Education)
+search_title: NSW public primary school catchment zones map (NSW Department of Education)
+also_known_as:
+- NSW primary school catchment areas
+- Local enrolment areas for NSW primary schools
+- NSW school zones by address, primary
+keywords:
+- school catchment
+- intake zones
+- local enrolment area
+- school zones
+- NSW Department of Education
+- New South Wales
+faq:
+- q: What is in each row?
+  a: One polygon, the local enrolment area of one NSW government primary, infants or central school for its
+    primary years, with the school code and name, the catchment type, the date the zone was added and a yes
+    or no flag for each school year from Kindergarten to Year 12.
+- q: Can I rely on a zone for buying or renting a home?
+  a: The Department states that zones change as schools open and close and as populations shift, and that it
+    takes no responsibility where the zones are relied on for real estate purchases or rentals. Check a home
+    address with the school or the Department's School Finder.
+- q: How often is it updated?
+  a: The Department updates its zones nightly and refreshes the file on the portal from time to time. Each
+    version here is one file the Department published.
+summary: The intake zone polygons for NSW government schools in the primary layer, with the school, catchment
+  type and the school years each zone covers.
+description: The catchments_primary layer of the NSW Department of Education's School intake zones (catchment
+  areas) for NSW government schools. Each row is one zone polygon, the local enrolment area of one NSW government
+  primary, infants or central school for its primary years, with its school code and name, catchment type,
+  date added and a flag for each school year from Kindergarten to Year 12. The shapes are published in GDA94
+  and served here in GDA2020.
+source:
+  adapter: ckan-resource
+  portal: https://data.nsw.gov.au/data
+  package: nsw-education-school-intake-zones-catchment-areas-for-nsw-government-schools
+  resource: 32d6f502-ddb1-45d9-b114-5e34ddfd33ac
+  url: https://data.nsw.gov.au/data/dataset/nsw-education-school-intake-zones-catchment-areas-for-nsw-government-schools
+  cadence: as required
+  member: catchments_primary.shp
+geometry:
+  kind: polygon
+  crs: EPSG:4283
+  crs_note: The shapefile's projection file names GDA94 (EPSG:4283). The shapes are moved to GDA2020 for serving.
+  maxzoom: 10
+row_label: Zones
+fields:
+- name: use_id
+  label: School code
+  source: USE_ID
+  type: string
+  description: The school the zone belongs to, by its Department school code.
+- name: catch_type
+  label: Catchment type
+  source: CATCH_TYPE
+  type: string
+- name: school_name
+  label: School
+  source: USE_DESC
+  type: string
+- name: add_date
+  label: Date added
+  source: ADD_DATE
+  type: date
+  date_format: '%Y%m%d'
+  description: The date the zone was added or last changed, as the Department records it. Blank for some older
+    zones.
+- name: kindergarten
+  label: Takes Kindergarten
+  source: KINDERGART
+  type: boolean
+  description: Whether the zone gives a right of enrolment in Kindergarten.
+- name: year_1
+  label: Takes Year 1
+  source: YEAR1
+  type: boolean
+  description: Whether the zone gives a right of enrolment in Year 1.
+- name: year_2
+  label: Takes Year 2
+  source: YEAR2
+  type: boolean
+  description: Whether the zone gives a right of enrolment in Year 2.
+- name: year_3
+  label: Takes Year 3
+  source: YEAR3
+  type: boolean
+  description: Whether the zone gives a right of enrolment in Year 3.
+- name: year_4
+  label: Takes Year 4
+  source: YEAR4
+  type: boolean
+  description: Whether the zone gives a right of enrolment in Year 4.
+- name: year_5
+  label: Takes Year 5
+  source: YEAR5
+  type: boolean
+  description: Whether the zone gives a right of enrolment in Year 5.
+- name: year_6
+  label: Takes Year 6
+  source: YEAR6
+  type: boolean
+  description: Whether the zone gives a right of enrolment in Year 6.
+- name: year_7
+  label: Takes Year 7
+  source: YEAR7
+  type: boolean
+  description: Whether the zone gives a right of enrolment in Year 7.
+- name: year_8
+  label: Takes Year 8
+  source: YEAR8
+  type: boolean
+  description: Whether the zone gives a right of enrolment in Year 8.
+- name: year_9
+  label: Takes Year 9
+  source: YEAR9
+  type: boolean
+  description: Whether the zone gives a right of enrolment in Year 9.
+- name: year_10
+  label: Takes Year 10
+  source: YEAR10
+  type: boolean
+  description: Whether the zone gives a right of enrolment in Year 10.
+- name: year_11
+  label: Takes Year 11
+  source: YEAR11
+  type: boolean
+  description: Whether the zone gives a right of enrolment in Year 11.
+- name: year_12
+  label: Takes Year 12
+  source: YEAR12
+  type: boolean
+  description: Whether the zone gives a right of enrolment in Year 12.
+- name: priority
+  label: Priority
+  source: PRIORITY
+  type: boolean
+  description: The Department's priority flag, blank for most zones.

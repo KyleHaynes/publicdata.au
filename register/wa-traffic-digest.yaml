@@ -1,0 +1,163 @@
+slug: wa-traffic-digest
+title: Traffic volumes at count sites, Main Roads Western Australia
+status: live
+topics:
+- roads
+example:
+  group: road_name
+  metric: max.mon_sun
+  label: Vehicles per day (busiest site)
+order: 479
+search_title: WA traffic counts by road, average daily traffic and heavy vehicles (Main Roads WA Traffic Digest)
+also_known_as:
+- Main Roads WA Traffic Digest
+- Traffic Digest
+- WA traffic volume data
+- Main Roads traffic counts
+keywords:
+- traffic counts
+- traffic volumes
+- average daily traffic
+- heavy vehicles
+- roads
+- Western Australia
+- Main Roads
+faq:
+- q: What is in each row?
+  a: One Main Roads traffic count site, with its site number, road, location description, the financial
+    year of its latest count, the average number of vehicles per day across the week, on weekdays and on
+    weekends, the percentage of heavy vehicles in each, whether it is a continuously monitored network
+    performance site, and its local government and region.
+- q: Is this every year of counts?
+  a: No. Each site carries only its latest year of traffic data, so the year differs between sites. A
+    new count replaces the old one in the publisher's layer, and this site keeps each changed layer as
+    a dated version.
+- q: How were the counts taken?
+  a: Main Roads monitors strategic locations continuously and samples the wider network with portable
+    equipment over short periods. The publisher focuses on roads it manages, with many local government
+    roads counted as well.
+- q: Where is the publisher's file?
+  a: This site downloads the CSV the Main Roads open data portal builds from its Traffic Digest layer.
+summary: The latest average daily traffic and share of heavy vehicles at about 2,400 Main Roads traffic
+  count sites across Western Australia, one row per site, with road, location, coordinates, local
+  government and region.
+description: Main Roads Western Australia's Traffic Digest, one row per traffic count site, each with
+  its latest year of data. Each row carries the site number, road name, location description,
+  financial year of the count, collection type, the average number of vehicles per day from Monday to
+  Sunday, Monday to Friday and Saturday to Sunday, the percentage of heavy vehicles in each of those
+  periods, whether it is a network performance site, the local government and the Main Roads region,
+  and its coordinates.
+publisher:
+  name: Main Roads Western Australia
+  short: Main Roads WA
+  jurisdiction: WA
+  url: https://www.mainroads.wa.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://catalogue.data.wa.gov.au/dataset/mrwa-traffic-digest
+  attribution: Main Roads Western Australia, Government of Western Australia, Traffic Digest,
+    https://catalogue.data.wa.gov.au/dataset/mrwa-traffic-digest, accessed {sourced}, licensed under
+    CC BY 4.0.
+source:
+  adapter: arcgis-hub
+  portal: https://portal-mainroads.opendata.arcgis.com
+  package: 6114ced8bff94d23be2739d6ea9f30f4
+  resource: '27'
+  url: https://portal-mainroads.opendata.arcgis.com/datasets/mainroads::traffic-digest
+  encoding: utf-8-sig
+  cadence: as counts are added
+key:
+- site_no
+partition_by:
+- ra_name
+geometry:
+  lon: x
+  lat: y
+  crs: EPSG:4326
+  crs_note: Longitude and latitude in decimal degrees as the portal's CSV download gives them. The
+    layer itself is held in GDA94, which differs from WGS84 by under 2 metres.
+row_label: Count sites
+fields:
+- name: x
+  label: Longitude
+  source: X
+  type: number
+- name: y
+  label: Latitude
+  source: Y
+  type: number
+- name: site_no
+  label: Site number
+  source: SITE_NO
+  type: string
+- name: road_name
+  label: Road
+  source: ROAD_NAME
+  type: string
+- name: location_desc
+  label: Location
+  source: LOCATION_DESC
+  type: string
+- name: traffic_year
+  label: Financial year of count
+  source: TRAFFIC_YEAR
+  type: string
+  description: The financial year of the site's latest count, for example 2024/25. It can be the
+    financial year in progress.
+- name: collection_type
+  label: Collection type
+  source: COLLECTION_TYPE
+  type: string
+- name: mon_sun
+  label: Vehicles per day, Monday to Sunday
+  source: MON_SUN
+  type: number
+- name: mon_fri
+  label: Vehicles per day, Monday to Friday
+  source: MON_FRI
+  type: number
+- name: sat_sun
+  label: Vehicles per day, Saturday and Sunday
+  source: SAT_SUN
+  type: number
+- name: pct_heavy_mon_sun
+  label: Heavy vehicles %, Monday to Sunday
+  source: PCT_HEAVY_MON_SUN
+  type: number
+- name: pct_heavy_mon_fri
+  label: Heavy vehicles %, Monday to Friday
+  source: PCT_HEAVY_MON_FRI
+  type: number
+- name: pct_heavy_sat_sun
+  label: Heavy vehicles %, Saturday and Sunday
+  source: PCT_HEAVY_SAT_SUN
+  type: number
+- name: network_performance_site
+  label: Network performance site
+  source: NETWORK_PERFORMANCE_SITE
+  type: string
+- name: lg_no
+  label: Local government number
+  source: LG_NO
+  type: string
+- name: lg_name
+  label: Local government
+  source: LG_NAME
+  type: string
+- name: ra_no
+  label: Region number
+  source: RA_NO
+  type: string
+- name: ra_name
+  label: Main Roads region
+  source: RA_NAME
+  type: string
+- name: objectid
+  label: Object ID
+  source: OBJECTID
+  type: integer
+- name: globalid
+  label: Global ID
+  source: GlobalID
+  type: string

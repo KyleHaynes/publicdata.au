@@ -1,0 +1,72 @@
+slug: sa-mobile-camera-location-codes
+title: Mobile safety camera location codes, South Australia
+status: live
+topics:
+- roads
+example:
+  group: suburb
+  metric: count
+  label: Camera locations
+order: 422
+collection: sa-expiation-notices
+collection_title: Expiation notices, South Australia Police
+search_title: South Australia mobile speed camera locations list by code (SAPOL)
+also_known_as:
+- SAPOL Mobile Camera Location Codes
+- SA mobile speed camera sites
+- South Australian mobile camera location list
+keywords:
+- mobile speed camera
+- camera locations
+- location codes
+- speed camera
+- South Australia Police
+- South Australia
+faq:
+- q: What is in each row?
+  a: One location code a mobile safety camera may report from, with the street and suburb it names. The code is
+    the one in the Location Code column of the camera offence and camera detection tables.
+- q: Does a code mean a camera was there?
+  a: No. The list names places a mobile camera can be set up. Where cameras were used is in the offence and
+    detection tables.
+summary: The location codes South Australia Police uses for mobile safety camera sites, each with its street and
+  suburb, for reading the camera offence tables.
+description: The Mobile Camera Location Codes list from South Australia Police's Expiation Notice System Data. Each
+  row is one location code with the street and suburb it names. One street and suburb can carry several codes, one
+  for each direction or position.
+publisher:
+  name: South Australia Police
+  short: SAPOL
+  jurisdiction: SA
+  url: https://www.police.sa.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.sa.gov.au/data/dataset/expiation-notice-system-data
+  attribution: South Australia Police, Government of South Australia, Expiation Notice System Data,
+    https://data.sa.gov.au/data/dataset/expiation-notice-system-data, accessed {sourced}, licensed under CC BY
+    4.0.
+source:
+  adapter: ckan-resource
+  portal: https://data.sa.gov.au/data
+  package: expiation-notice-system-data
+  resource: 892be609-41b7-4923-b0d8-da456da0357f
+  url: https://data.sa.gov.au/data/dataset/expiation-notice-system-data
+  cadence: when the publisher updates the list
+key:
+- location_code
+row_label: Locations
+fields:
+- name: location_code
+  label: Location code
+  source: Location Code
+  type: string
+- name: street
+  label: Street
+  source: Street
+  type: string
+- name: suburb
+  label: Suburb
+  source: Suburb
+  type: string

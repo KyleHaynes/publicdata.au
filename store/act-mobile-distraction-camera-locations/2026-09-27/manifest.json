@@ -1,0 +1,32 @@
+{
+  "dataset": "act-mobile-distraction-camera-locations",
+  "version": "2026-09-27",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:11:26+00:00",
+  "sha256": "d9a8b3bcd5996bfe2fe0c89f7d4558f9a2e8bff674389bd81fbb00731b33cf55",
+  "bytes": 10136,
+  "filename": "5ezj-yjxz.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.act.gov.au/api/views/5ezj-yjxz/rows.csv?accessType=DOWNLOAD",
+    "portal": "https://www.data.act.gov.au",
+    "package": "5ezj-yjxz",
+    "resource_name": "Mobile Distraction - Fixed and Transportable camera locations",
+    "rows_updated_at": 1790435000,
+    "etag": "aW5kaWEuMzA4ODNfN18zNzFDVHB3YnZjb0RaMjM0OWg3VlpOT1V2TmViN0E---gziqG7rKQFvLSy-xP8Y5ppZeft-oq-A--gzip--gzip",
+    "http_last_modified": "Sat, 26 Sep 2026 15:03:20 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "stated": "CC_40_BY",
+    "normalised": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0 International",
+    "url": "http://creativecommons.org/licenses/by/4.0/legalcode",
+    "read_from": "https://www.data.act.gov.au/api/views/5ezj-yjxz.json",
+    "read_at": "2026-10-03T03:11:26+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "c6253fdc66be0ef996491906ada6a4bf70aab77660306e2cc2eb8fa487ac30bc"
+}

@@ -1,0 +1,99 @@
+slug: sa-food-enforcement-food-transporter
+title: Council food safety enforcement in the food transporter sector, South Australia
+status: live
+topics:
+- health
+- government
+example:
+  where:
+    business_type:
+      neq: Total*
+  group: business_type
+  metric: sum.total_businesses
+  label: Businesses
+order: 447
+collection: sa-food-act-enforcement
+collection_title: Council food safety enforcement, South Australia
+search_title: South Australia council food safety inspections and enforcement, food transporter sector (SA Health)
+also_known_as:
+- Enforcement Actions Council Food Transporter Sector SA
+- SA Food Act Report enforcement food transporter
+- South Australian food business inspections food transporter
+keywords:
+- food safety
+- food inspections
+- improvement notices
+- prohibition orders
+- Food Act
+- SA Health
+- South Australia
+faq:
+- q: What is in each row?
+  a: One kind of business in the food transporter sector, with the number of such businesses, the number councils inspected in
+    the financial year, the number that needed enforcement action, and the improvement notices, prohibition orders,
+    expiations and prosecutions councils issued.
+- q: Which year does the table cover?
+  a: The financial year of the newest Annual Food Act Report, 2024-25 at the first version. The publisher releases a
+    new report each year, and each becomes a version here. The columns can change between reports, as when the
+    written warnings column was dropped after 2022-23.
+summary: The number of food transporters and distributors in South Australia, how many councils inspected and the enforcement actions that followed,
+  by kind of business, from the newest Annual Food Act Report.
+description: The council enforcement table for the food transporter sector from SA Health's Annual Food Act Report. Each row is one
+  kind of business, as the risk classification names it, with the total number of businesses, the number inspected
+  by councils in the financial year, the number requiring enforcement action, and the counts of improvement notices,
+  prohibition orders, expiations and prosecutions.
+publisher:
+  name: SA Health
+  short: SA Health
+  jurisdiction: SA
+  url: https://www.sahealth.sa.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.sa.gov.au/data/dataset/annual-food-act-report-2024-25
+  attribution: SA Health, Government of South Australia, Annual Food Act Report,
+    https://data.sa.gov.au/data/dataset/annual-food-act-report-2024-25, accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: ckan-resource
+  portal: https://data.sa.gov.au/data
+  package: annual food act report
+  package_match: annual-food-act-report
+  resource_match: ^20\d{2}-\d{2} Enforcement Actions - Council - Food Transporter Sector
+  url: https://data.sa.gov.au/data/dataset/annual-food-act-report-2024-25
+  cadence: yearly
+  header_row: 3
+row_label: Business types
+fields:
+- name: business_type
+  label: Business type
+  source: Food transporter
+  type: string
+- name: total_businesses
+  label: Total businesses
+  source: Total businesses
+  type: integer
+- name: businesses_inspected
+  label: Businesses inspected
+  source: Businesses inspected
+  type: integer
+- name: businesses_requiring_action
+  label: Businesses requiring enforcement action
+  source: Businesses requiring enforcement action
+  type: integer
+- name: improvement_notices
+  label: Improvement notices issued
+  source: Improvement notices issued
+  type: integer
+- name: prohibition_orders
+  label: Prohibition orders issued
+  source: Prohibition orders issued
+  type: integer
+- name: expiations
+  label: Expiations issued
+  source: Expiations issued
+  type: integer
+- name: prosecutions
+  label: Prosecutions
+  source: Prosecutions
+  type: integer

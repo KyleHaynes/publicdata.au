@@ -1,0 +1,159 @@
+slug: act-road-crashes
+title: Road crashes, ACT
+status: live
+topics:
+- roads
+example:
+  where:
+    crash_severity: Fatal
+  group: crash_type
+chart:
+  where:
+    crash_severity:
+      neq: Property damage only
+order: 15
+temporal_start: '2015-01-01'
+search_title: ACT road crash data
+also_known_as:
+- ACT Road Crash Data
+- Canberra car accident data
+- AFP Crash Report Form data
+- Roads ACT crash statistics
+keywords:
+- road crash
+- car accident
+- crash statistics
+- crash locations
+- road safety
+- Canberra
+- ACT
+faq:
+- q: Does it include every crash in the ACT?
+  a: No. The publisher includes crashes reported by police or the public through the AFP Crash Report
+    Form. A crash reported another way, or not reported, is not here. The publisher also notes a
+    backlog of entries, so recent months rise in later releases.
+- q: How accurate are the locations?
+  a: The publisher says a crash location is indicative and may not be the exact position of the people
+    involved.
+- q: How often is it updated?
+  a: The publisher adds rows to the portal through the year. This site checks it weekly and adds a
+    dated version when the rows change.
+summary: Every crash in the ACT since 2015 reported through the AFP Crash Report Form, one row per crash,
+  with its coordinates, suburb, severity, type, lighting, road and weather conditions.
+description: One row per crash on an ACT road since 1 January 2015, as reported by police or the public
+  through the Australian Federal Police Crash Report Form. Each row carries the date and time, suburb,
+  coordinates, whether it was at an intersection or midblock, the direction and type of crash, its
+  severity, and the lighting, road surface and weather at the time.
+publisher:
+  name: Roads ACT, City and Environment Directorate
+  short: Roads ACT
+  jurisdiction: ACT
+  url: https://www.cityservices.act.gov.au/roads-and-paths
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-09-30'
+  evidence: https://www.data.act.gov.au/d/6jn4-m8rx
+  attribution: Roads ACT, City and Environment Directorate, ACT Government, ACT Road Crash Data,
+    https://www.data.act.gov.au/d/6jn4-m8rx, accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: socrata
+  portal: https://www.data.act.gov.au
+  package: 6jn4-m8rx
+  url: https://www.data.act.gov.au/d/6jn4-m8rx
+  cadence: through the year
+key:
+- crash_id
+partition_by:
+- crash_severity
+enrich:
+- sa2
+- lga
+- suburb
+- postcode
+- state_electorate
+- federal_electorate
+geometry:
+  lon: longitude
+  lat: latitude
+  crs: EPSG:4283
+  crs_note: Longitude and latitude in decimal degrees as published. The publisher does not name the
+    datum; GDA94 differs from GDA2020 and WGS84 by under 2 metres.
+row_label: Crashes
+fields:
+- name: crash_id
+  label: Crash ID
+  source: CRASH_ID
+  type: integer
+  description: The publisher's identifier for the crash.
+- name: crash_date
+  label: Date
+  source: CRASH_DATE
+  type: date
+  date_format: '%d/%m/%Y'
+- name: crash_time
+  label: Time
+  source: CRASH_TIME
+  type: string
+  description: 12-hour time as the publisher types it, for example 5:44 PM.
+- name: suburb_location
+  label: Suburb
+  source: SUBURB_LOCATION
+  type: string
+- name: longitude
+  label: Longitude
+  source: LONGITUDE
+  type: number
+  description: Decimal degrees.
+- name: latitude
+  label: Latitude
+  source: LATITUDE
+  type: number
+  description: Decimal degrees.
+- name: intersection
+  label: At an intersection
+  source: INTERSECTION
+  type: boolean
+  true_values:
+  - 'YES'
+  false_values:
+  - 'NO'
+- name: midblock
+  label: Midblock
+  source: MIDBLOCK
+  type: boolean
+  true_values:
+  - 'YES'
+  false_values:
+  - 'NO'
+- name: crash_direction
+  label: Direction
+  source: CRASH_DIRECTION
+  type: string
+- name: crash_type
+  label: Crash type
+  source: CRASH_TYPE
+  type: string
+- name: crash_severity
+  label: Severity
+  source: CRASH_SEVERITY
+  type: string
+  description: Fatal, Injury or Property damage only.
+- name: lighting_condition
+  label: Lighting
+  source: LIGHTING_CONDITION
+  type: string
+- name: road_condition
+  label: Road surface
+  source: ROAD_CONDITION
+  type: string
+- name: weather_condition
+  label: Weather
+  source: WEATHER_CONDITION
+  type: string
+- name: location
+  label: Location as text
+  source: Location
+  type: string
+  description: The publisher's own text of the coordinates, as (latitude, longitude).
+note: Cells were typed and headers were made snake_case. The publisher's header is kept beside every field
+  in schema.json. Rows were left alone.

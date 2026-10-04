@@ -1,0 +1,18 @@
+from __future__ import annotations
+
+from pathlib import Path
+
+import pyarrow as pa
+
+from ...normalise import Table
+from .. import dumps
+
+
+def write_arrow(tbl: Table, header: dict, path: Path) -> None:
+    """Arrow IPC file (Feather v2), zstd compressed, provenance in the schema metadata."""
+    t = tbl.table.replace_schema_metadata({"publicdata": dumps(header)})
+    with pa.OSFile(str(path), "wb") as sink:
+        opts = pa.ipc.IpcWriteOptions(compression="zstd")
+        with pa.ipc.new_file(sink, t.schema, options=opts) as w:
+            for b in t.to_batches(65_536):
+                w.write_batch(b)

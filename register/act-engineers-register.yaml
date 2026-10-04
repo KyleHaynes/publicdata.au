@@ -1,0 +1,100 @@
+slug: act-engineers-register
+title: Professional engineers register, ACT
+status: live
+topics:
+- economy
+- government
+example:
+  group: licence_class
+  metric: count
+  label: Engineers by area of engineering, or by the combination of areas they hold
+order: 462
+collection: act-licence-registers
+collection_title: Occupational licence registers in the ACT
+collection_search_title: ACT occupational licence public registers
+collection_description: |
+  Access Canberra keeps public registers of the people it licenses or registers to work in the ACT.
+
+  The collection holds two tables. The engineers register lists every active professional engineer registration under the Professional Engineers Act 2023. The automatic mutual recognition register lists the people working in the ACT on a licence from another state.
+search_title: ACT registered professional engineers register (Access Canberra)
+also_known_as:
+- ACT Engineers Public Register
+- Canberra professional engineer registration search
+- ACT Professional Engineers Act 2023 register
+keywords:
+- engineers register
+- professional engineers
+- engineer registration
+- Canberra
+- ACT
+faq:
+- q: What is in each row?
+  a: One active registration of a professional engineer in the ACT, with the registration identifier, the
+    engineer's name, the start and end of the registration period, its status, the areas of engineering
+    it covers and any condition on it.
+- q: Who is not listed?
+  a: Engineers working in the ACT under the Automatic Mutual Recognition scheme are not in this register.
+    They are in the automatic mutual recognition register in this collection.
+summary: Every active professional engineer registration in the ACT under the Professional Engineers Act
+  2023, one row per registration with the engineer's name, period and areas of engineering.
+description: The public register of professional engineers Access Canberra keeps under the Professional
+  Engineers Act 2023. Each row carries the registration identifier, the name, the start and end dates of
+  the registration period, the status, the class of engineering (such as civil or structural, with several
+  separated by semicolons), any condition and the verification status.
+publisher:
+  name: Access Canberra, City and Environment Directorate
+  short: Access Canberra
+  jurisdiction: ACT
+  url: https://www.accesscanberra.act.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.act.gov.au/d/piuu-cqvu
+  attribution: Access Canberra, ACT Government, Engineers Public Register, https://www.data.act.gov.au/d/piuu-cqvu,
+    accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: socrata
+  portal: https://www.data.act.gov.au
+  package: piuu-cqvu
+  url: https://www.data.act.gov.au/d/piuu-cqvu
+  cadence: weekly
+key:
+- identifier
+row_label: Engineers
+fields:
+- name: identifier
+  label: Registration identifier
+  source: Identifier
+  type: string
+- name: name
+  label: Name
+  source: Name
+  type: string
+- name: period_start
+  label: Registered from
+  source: PeriodStart
+  type: date
+  date_format: '%d/%m/%Y'
+- name: period_end
+  label: Registered until
+  source: PeriodEnd
+  type: date
+  date_format: '%d/%m/%Y'
+- name: status
+  label: Status
+  source: Status
+  type: string
+- name: licence_class
+  label: Areas of engineering
+  source: License Class
+  type: string
+- name: licence_condition
+  label: Condition
+  source: License Condition
+  type: string
+- name: verification_status
+  label: Verification status
+  source: Verification Status
+  type: string
+note: Cells were typed and headers were made snake_case. The publisher's header is kept beside every field
+  in schema.json. Rows were left alone.

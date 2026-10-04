@@ -1,0 +1,185 @@
+slug: vic-school-locations
+title: School locations, Victoria
+status: live
+topics:
+- education
+- places
+order: 352
+collection: vic-schools
+collection_title: Victorian schools and school zones
+collection_search_title: Victorian school locations and school zone maps
+collection_description: |
+  The Department of Education publishes where every registered school in Victoria is and, for each government school with a neighbourhood zone, the area whose children have a right to enrol there.
+
+  School locations has one row per school with its sector, type, address and coordinates, for government, Catholic and independent schools. The school zone layers hold the zone boundaries for the next school year, one layer for primary schools and one for Year 7 entry to secondary schools.
+publisher:
+  name: Department of Education
+  short: Education
+  jurisdiction: Vic
+  url: https://www.education.vic.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://discover.data.vic.gov.au/dataset/school-locations-2025
+  attribution: Department of Education, Victorian Government, School Locations 2025, sourced {sourced},
+    https://discover.data.vic.gov.au/dataset/school-locations-2025, licensed under CC BY 4.0.
+search_title: List of all schools in Victoria with addresses and locations (Department of Education)
+also_known_as:
+- Victorian school locations
+- Victorian schools list
+- School Locations 2025
+- Victorian government and non-government schools
+keywords:
+- schools
+- school locations
+- school list
+- government schools
+- Catholic schools
+- independent schools
+- Victoria
+- Department of Education
+faq:
+- q: What does each row hold?
+  a: One school registered in Victoria, government, Catholic or independent, with its school number,
+    name, type, street and postal address, phone number, the department's region and area, the council
+    area and the coordinates of the school. The publisher collects it as part of the registration of
+    schools, as at the February census.
+- q: Which schools are included?
+  a: Primary, secondary, combined primary and secondary, specialist and English language schools of every
+    sector. A school with more than one campus is listed once, at its administration campus, and the
+    region and area follow that campus.
+- q: What do the status and entity type codes mean?
+  a: The status is O for an open school and C for a closed one, as published. The entity type is 1 for a
+    government school and 2 for a non-government school, and a school number is unique within its
+    entity type.
+summary: Every registered school in Victoria in 2025, about 2,300 government, Catholic and independent
+  schools, with type, address, phone number, region, council area and coordinates.
+description: The Department of Education's School Locations list for 2025, one row per school with
+  its sector, school number, type, status, street and postal addresses, phone number, departmental region
+  and area, council area and longitude and latitude. Government and non-government schools are both
+  included. The department publishes a new list each year.
+source:
+  adapter: ckan-resource
+  portal: https://discover.data.vic.gov.au
+  package: school-locations-2025
+  resource: d26bf015-a1e5-48dd-a1d6-8edd4b0a511b
+  url: https://discover.data.vic.gov.au/dataset/school-locations-2025
+  cadence: yearly
+  encoding: utf-8-sig
+temporal_start: '2025-02-01'
+key:
+- entity_type
+- school_no
+partition_by:
+- education_sector
+geometry:
+  lon: x
+  lat: y
+  crs: EPSG:4326
+  crs_note: The publisher names no datum. The coordinates are decimal degrees, read as WGS84 (EPSG:4326)
+    and published as given.
+row_label: Schools
+fields:
+- name: education_sector
+  label: Sector
+  source: Education_Sector
+  type: string
+  description: Government, Catholic or Independent.
+- name: entity_type
+  label: Entity type
+  source: Entity_Type
+  type: integer
+  description: 1 for a government school, 2 for a non-government school.
+- name: school_no
+  label: School number
+  source: School_No
+  type: integer
+- name: school_name
+  label: School name
+  source: School_Name
+  type: string
+- name: school_type
+  label: School type
+  source: School_Type
+  type: string
+  description: Primary, Secondary, Pri/Sec, Special or Language.
+- name: school_status
+  label: Status
+  source: School_Status
+  type: string
+  description: O for open, C for closed.
+- name: address_line_1
+  label: Street address
+  source: Address_Line_1
+  type: string
+- name: address_line_2
+  label: Street address line 2
+  source: Address_Line_2
+  type: string
+- name: address_town
+  label: Town or suburb
+  source: Address_Town
+  type: string
+- name: address_state
+  label: State
+  source: Address_State
+  type: string
+- name: address_postcode
+  label: Postcode
+  source: Address_Postcode
+  type: string
+- name: postal_address_line_1
+  label: Postal address
+  source: Postal_Address_Line_1
+  type: string
+- name: postal_address_line_2
+  label: Postal address line 2
+  source: Postal_Address_Line_2
+  type: string
+- name: postal_town
+  label: Postal town
+  source: Postal_Town
+  type: string
+- name: postal_state
+  label: Postal state
+  source: Postal_State
+  type: string
+- name: postal_postcode
+  label: Postal postcode
+  source: Postal_Postcode
+  type: string
+- name: full_phone_no
+  label: Phone
+  source: Full_Phone_No
+  type: string
+- name: region
+  label: Department region
+  source: Region
+  type: string
+- name: area
+  label: Department area
+  source: Area
+  type: string
+- name: lga_id
+  label: Council area id
+  source: LGA_ID
+  type: integer
+  description: The council area's code in the department's list.
+- name: lga_name
+  label: Council area
+  source: LGA_Name
+  type: string
+- name: lga_type
+  label: Metro or non metro
+  source: LGA_TYPE
+  type: string
+  description: Metro, Non Metro or Unknown.
+- name: x
+  label: Longitude
+  source: X
+  type: number
+- name: y
+  label: Latitude
+  source: Y
+  type: number

@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-shark-control-gbr-catches",
+  "version": "2026-05-26",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:03:10+00:00",
+  "sha256": "20679e9111333358fb2a9528df0a9bc7b06fe9a66e7c5bb9d49f6bb2bb9a5aa3",
+  "bytes": 228826,
+  "filename": "qld-catch-statistics-gbrmp-july-2025-april-2026.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/def48c7b-fe46-4566-8f64-fc831156f464/resource/f13151cb-9e22-4a47-9fee-eae2a3ca6ef5/download/qld-catch-statistics-gbrmp-july-2025-april-2026.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "qld-shark-control-program-catch-statistics-great-barrier-reef-marine-park",
+    "package_id": "def48c7b-fe46-4566-8f64-fc831156f464",
+    "resource": "f13151cb-9e22-4a47-9fee-eae2a3ca6ef5",
+    "resource_name": "July 2025 to April 2026— Queensland Shark Control Program catch statistics for Great Barrier Reef Marine Park",
+    "resource_last_modified": "2026-05-26T00:57:19.798899",
+    "package_modified": "2026-05-26T00:57:32.380989",
+    "package_version": "1.0",
+    "etag": "5f3eea9bd09d17e28eb9d02f350aa7cc",
+    "http_last_modified": "Tue, 26 May 2026 00:57:21 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=qld-shark-control-program-catch-statistics-great-barrier-reef-marine-park",
+    "read_at": "2026-10-03T03:03:09+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "75c5fe9d723f96c0e8e7051153efb77ccce65bc6b0a024e6c67957d1c3d5c205"
+}

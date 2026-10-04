@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-heritage-register",
+  "version": "2022-06-02",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:00:12+00:00",
+  "sha256": "009b110ae0145df930c4cda1b5d3cc0c83f0150794673dc8691ebe235bfc10ca",
+  "bytes": 28262977,
+  "filename": "heritage-register-2025.xml",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "the-queensland-heritage-register",
+    "package_id": "1c52c0d3-f7d0-49b4-87ff-d88f9241617e",
+    "resource": "43ff6bb2-8dfb-4d87-90ab-b89cb20c7ef7",
+    "resource_name": "The Queensland Heritage Register",
+    "resource_last_modified": "2022-06-02T01:36:44.851639",
+    "package_modified": "2026-06-11T01:54:28.296887",
+    "package_version": "3.0",
+    "etag": "",
+    "http_last_modified": ""
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=the-queensland-heritage-register",
+    "read_at": "2026-10-03T03:00:08+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "73449daed9260374658f5693396cea4de62b4c94cab3ac261737731c0470e3f0"
+}

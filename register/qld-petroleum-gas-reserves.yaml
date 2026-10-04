@@ -1,0 +1,164 @@
+slug: qld-petroleum-gas-reserves
+title: Petroleum and gas reserves by field, Queensland
+status: live
+topics:
+- economy
+order: 269
+collection: qld-petroleum-gas-statistics
+collection_title: Queensland petroleum and gas production and reserves
+temporal_start: '2025-01-01'
+search_title: Queensland gas reserves by field and permit (Natural Resources and Mines)
+also_known_as:
+- Queensland 2P gas reserves
+- Queensland coal seam gas reserves by field
+- Queensland petroleum reserves and resources
+keywords:
+- gas reserves
+- 2P reserves
+- coal seam gas
+- contingent resources
+- petroleum
+- Queensland
+faq:
+- q: What is in each row?
+  a: Each row is one reporting year, permit, field and product, with the holder, basin, reservoir type, sales
+    unit, the date the estimate took effect, the estimation method, and the proved (1P), proved and probable
+    (2P) and proved, probable and possible (3P) reserves split into developed and undeveloped, with the best
+    estimate of contingent (2C) resources.
+- q: What units are the reserves in?
+  a: The sales_unit column gives the unit for each row, so check it before adding rows up. Gas is in petajoules.
+    Most oil and condensate rows are in millions of barrels, and a few are in millions of barrels of oil
+    equivalent. LPG is in kilotonnes, apart from one row in megatonnes.
+- q: Why does this start in 2025?
+  a: The 2025 report is the first compilation the publisher standardised under its data quality program. Its
+    earlier compilation for 2020 to 2024 has different column names and is not included here.
+summary: Proved, probable and possible petroleum and gas reserves and contingent resources reported for each
+  Queensland field and permit.
+description: One row per reporting year, petroleum permit, field and product type, from the publisher's compilation
+  of reserves and resources reports. Each row gives the authorised holder, basin, reservoir unit type, product,
+  sales unit, effective date and estimation method, and the 1P, 2P and 3P reserves as developed, undeveloped
+  and total, with 2C contingent resources and a standardised field name.
+publisher:
+  name: Department of Natural Resources and Mines, Manufacturing and Regional and Rural Development
+  short: Natural Resources and Mines
+  jurisdiction: Qld
+  url: https://www.nrmmrrd.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/petroleum-gas-production-and-reserve-statistics
+  attribution: Department of Natural Resources and Mines, Manufacturing and Regional and Rural Development,
+    Queensland Government, Petroleum and gas production and reserve statistics, sourced {sourced}, https://www.data.qld.gov.au/dataset/petroleum-gas-production-and-reserve-statistics,
+    licensed under CC BY 4.0.
+example:
+  where: {reporting_year: newest, product_type: GAS}
+  group: basin
+  metric: sum.reserves_2p_total
+  label: Proved and probable (2P) gas reserves in each basin in the newest reporting year, in petajoules
+chart:
+  where: {product_type: GAS}
+  split: reservoir_unit_type
+  metric: sum.reserves_2p_total
+  label: Proved and probable (2P) gas reserves in petajoules
+sample:
+  where: {reporting_year: newest, product_type: GAS}
+  order: [reserves_2p_total.desc]
+  spread: none
+  label: The ten field and permit lines with the largest proved and probable (2P) gas reserves in the newest reporting year, largest first.
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: petroleum-gas-production-and-reserve-statistics
+  resource_match: reserves statistics - \d{4}$
+  url: https://www.data.qld.gov.au/dataset/petroleum-gas-production-and-reserve-statistics
+  cadence: annually
+  sheet: Data
+partition_by:
+- reporting_year
+row_label: Field and product lines
+fields:
+- name: reporting_year
+  label: Reporting year
+  source: reporting_year
+  type: integer
+- name: authorized_holder
+  label: Permit holder
+  source: authorized_holder
+  type: string
+- name: permit_number
+  label: Permit
+  source: permit_number
+  type: string
+- name: basin
+  label: Basin
+  source: basin
+  type: string
+- name: field_name
+  label: Field (as reported)
+  source: field_name
+  type: string
+- name: reservoir_unit_type
+  label: Reservoir type
+  source: reservoir_unit_type
+  type: string
+- name: product_type
+  label: Product
+  source: product_type
+  type: string
+- name: sales_unit
+  label: Sales unit
+  source: sales_unit
+  type: string
+- name: effective_date
+  label: Effective date
+  source: effective_date
+  type: date
+- name: reserve_entity_volume_method
+  label: Estimation method
+  source: reserve_entity_volume_method
+  type: string
+- name: reserves_1p_developed
+  label: 1P developed
+  source: 1p_developed
+  type: number
+- name: reserves_1p_undeveloped
+  label: 1P undeveloped
+  source: 1p_undeveloped
+  type: number
+- name: reserves_1p_total
+  label: 1P total
+  source: 1p_total
+  type: number
+- name: reserves_2p_developed
+  label: 2P developed
+  source: 2p_developed
+  type: number
+- name: reserves_2p_undeveloped
+  label: 2P undeveloped
+  source: 2p_undeveloped
+  type: number
+- name: reserves_2p_total
+  label: 2P total
+  source: 2p_total
+  type: number
+- name: reserves_3p_developed
+  label: 3P developed
+  source: 3p_developed
+  type: number
+- name: reserves_3p_undeveloped
+  label: 3P undeveloped
+  source: 3p_undeveloped
+  type: number
+- name: reserves_3p_total
+  label: 3P total
+  source: 3p_total
+  type: number
+- name: resources_2c_total
+  label: 2C contingent resources
+  source: 2c_total
+  type: number
+- name: field_name_rese_corr
+  label: Field
+  source: field_name_rese_corr
+  type: string
+  description: The field name as the publisher standardised it.

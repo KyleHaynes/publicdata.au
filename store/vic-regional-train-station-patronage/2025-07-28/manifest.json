@@ -1,0 +1,34 @@
+{
+  "dataset": "vic-regional-train-station-patronage",
+  "version": "2025-07-28",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:09:51+00:00",
+  "sha256": "4b9849aa4aa3ff338c51625716e8631d77164bdea7920fb80dac88610985de4a",
+  "bytes": 5014,
+  "filename": "annual_regional_train_station_entries_fy_2024_2025.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://opendata.transport.vic.gov.au/dataset/2d4f81dc-f56a-4bcf-8291-ee04fe9669e6/resource/a5d6eb97-0555-4c8d-9dc7-316c6062cc57/download/annual_regional_train_station_entries_fy_2024_2025.csv",
+    "portal": "https://discover.data.vic.gov.au",
+    "package": "annual-regional-train-station-patronage-station-entries",
+    "package_id": "efb1fd63-1e19-4b62-9f6e-1891fa3e5e74",
+    "resource": "a5d6eb97-0555-4c8d-9dc7-316c6062cc57",
+    "resource_name": "Annual regional train station patronage (station entries) - 2024-2025",
+    "resource_last_modified": "2025-07-28T06:05:37.944461",
+    "package_modified": "2026-05-12T00:50:08.030727",
+    "package_version": null,
+    "etag": "1753682738.1448996-5014-2095846035",
+    "http_last_modified": "Mon, 28 Jul 2025 06:05:38 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution 4.0 International",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://discover.data.vic.gov.au/api/3/action/package_show?id=annual-regional-train-station-patronage-station-entries",
+    "read_at": "2026-10-03T03:09:50+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "a098a8eff7a555250e0cdb101058e761e08b3a7e5edca0b7893dea1b545db5a2"
+}

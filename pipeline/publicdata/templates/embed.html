@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title }}</title>
+<meta name="description" content="{{ description }}">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="{{ canonical }}">
+<link rel="alternate" type="text/markdown" href="{{ md_url }}" title="The explorer as Markdown">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="{{ vendor }}@perspective-dev/viewer/dist/css/pro.css">
+<link rel="stylesheet" href="{{ vendor }}@perspective-dev/viewer/dist/css/pro-dark.css">
+<style>{{ css|safe }}
+{{ explorer_css|safe }}</style>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ beacon }}"}'></script>
+</head>
+<body class="embed">
+<p class="xstatus" id="x-status" role="status" data-state="busy">This dashboard needs JavaScript. <a href="{{ base }}" target="_blank" rel="noopener">Open {{ ds.title }} on {{ site_host }}</a>.</p>
+<div class="xhost" id="x-host"></div>
+<p class="xattr"><b>Data:</b> {{ attribution }} <a href="{{ ds.licence.url }}" rel="license" target="_blank">Licence terms</a>. {{ ds.publisher.name }} has not endorsed {{ site_host }}. <a href="{{ explore_url }}" target="_blank" rel="noopener" id="x-open">Open in the explorer</a></p>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script type="application/json" id="ex-data">{{ ex_data|safe }}</script>
+<script type="module" src="/static/explorer.js?v={{ ex_v }}"></script>
+</body>
+</html>

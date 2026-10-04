@@ -1,0 +1,34 @@
+{
+  "dataset": "au-modified-monash-model-by-suburb",
+  "version": "2025-11-06",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:15:25+00:00",
+  "sha256": "1d28d596c30f891c448674d2658dceab403b8cec58371beaa13529ede1d5d218",
+  "bytes": 1114142,
+  "filename": "mmm23_sal21_poa21.xlsx",
+  "encoding": "xlsx",
+  "source": {
+    "url": "https://data.gov.au/data/dataset/f50d81d1-59e0-417f-858b-808ca5550cdd/resource/2fcfd12a-2aef-49b1-a4b6-650ea5a85197/download/mmm23_sal21_poa21.xlsx",
+    "portal": "https://data.gov.au/data",
+    "package": "suburbs-and-localities-sal-2021-postal-areas-poa-2021-modified-monash-model2023",
+    "package_id": "f50d81d1-59e0-417f-858b-808ca5550cdd",
+    "resource": "2fcfd12a-2aef-49b1-a4b6-650ea5a85197",
+    "resource_name": "MMM23_SAL21_POA21",
+    "resource_last_modified": "2025-11-05T22:48:00.565871",
+    "package_modified": "2025-11-05T23:48:38.540457",
+    "package_version": null,
+    "etag": "1762382881.115-1114142-3826651182",
+    "http_last_modified": "Wed, 05 Nov 2025 22:48:01 GMT"
+  },
+  "licence": {
+    "id": "cc-by-2.5",
+    "title": "Creative Commons Attribution 2.5 Australia",
+    "url": "http://creativecommons.org/licenses/by/2.5/au/",
+    "read_from": "https://data.gov.au/data/api/3/action/package_show?id=suburbs-and-localities-sal-2021-postal-areas-poa-2021-modified-monash-model2023",
+    "read_at": "2026-10-03T03:15:25+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "6f9703e1d506b17601e6a2aeb9e6ec4860b2e1dc77d0139ae5c0eb81528add41"
+}

@@ -1,0 +1,98 @@
+slug: au-modified-monash-model-by-suburb
+title: Modified Monash Model 2023 remoteness by suburb and postcode, Australia
+status: live
+topics:
+- health
+order: 505
+publisher:
+  name: Department of Health, Disability and Ageing
+  short: Health
+  jurisdiction: Cth
+  url: https://www.health.gov.au/
+licence:
+  id: CC-BY-2.5-AU
+  reviewed: '2026-10-01'
+  portal_id: cc-by-2.5
+  evidence: https://data.gov.au/data/dataset/suburbs-and-localities-sal-2021-postal-areas-poa-2021-modified-monash-model2023
+  attribution: Department of Health, Disability and Ageing, Australian Government, Suburbs and Localities
+    (SAL) 2021 - Postal Areas (POA) 2021 - Modified Monash Model 2023, sourced {sourced}, https://data.gov.au/data/dataset/suburbs-and-localities-sal-2021-postal-areas-poa-2021-modified-monash-model2023,
+    licensed under CC BY 2.5 AU.
+search_title: Modified Monash Model (MMM) category of every suburb and postcode, Australia (Health)
+also_known_as:
+- MMM classification by postcode
+- Modified Monash Model 2023 lookup
+- Rural and remote classification by suburb
+- MM 1 to MM 7 by locality
+keywords:
+- Modified Monash Model
+- MMM
+- remoteness
+- rural health
+- postcode
+- suburb
+- health workforce
+faq:
+- q: What is in each row?
+  a: One ABS suburb or locality of 2021, the postal area it falls in, and one Modified Monash Model 2023
+    category found within it, with the area of the suburb in that category. A suburb that spans two
+    categories has a row for each.
+- q: What do the MMM categories mean?
+  a: The Modified Monash Model ranks places from MM 1, metropolitan areas, to MM 7, very remote
+    communities, by remoteness and town size. The department uses it for health workforce programs and
+    rural incentives. A practice's own classification is set by its street address in the department's
+    locator, so a suburb split across categories needs that check.
+- q: Why do some postcodes have three digits?
+  a: The department's workbook stores postcodes as numbers, so Northern Territory postcodes such as 0800
+    appear as 800. They are kept as published.
+summary: The Modified Monash Model 2023 remoteness category of every Australian suburb and locality, with
+  its postal area and the area in each category, from the Department of Health, Disability and Ageing.
+description: The department's lookup of ABS Suburbs and Localities (SAL) 2021 and Postal Areas (POA) 2021
+  against the Modified Monash Model 2023. Each row is one suburb, its postal area and one MMM category within
+  it, with the suburb's area, the area of the suburb in that category and the state.
+sample:
+  spread: state
+source:
+  adapter: ckan-resource
+  portal: https://data.gov.au/data
+  package: suburbs-and-localities-sal-2021-postal-areas-poa-2021-modified-monash-model2023
+  resource: 2fcfd12a-2aef-49b1-a4b6-650ea5a85197
+  url: https://data.gov.au/data/dataset/suburbs-and-localities-sal-2021-postal-areas-poa-2021-modified-monash-model2023
+  sheet: SAL_POA_21 & MMM_23
+  header_row: 8
+  cadence: after each Census
+key:
+- sal_2021_code
+- mmm_2023
+row_label: Suburb and category rows
+fields:
+- name: sal_2021_code
+  label: Suburb code (SAL 2021)
+  source: SAL 2021 Code
+  type: string
+- name: sal_2021_name
+  label: Suburb or locality (SAL 2021)
+  source: SAL 2021 Name
+  type: string
+- name: sal_area_sqkm
+  label: Suburb area (km²)
+  source: SAL 2021 Area (km2)
+  type: number
+- name: poa_2021_code
+  label: Postal area (POA 2021)
+  source: POA 2021 Code
+  type: integer
+- name: mmm_2023
+  label: MMM 2023 category
+  source: MMM 2023
+  type: integer
+- name: mmm_area_sqkm
+  label: Area in this category (km²)
+  source: MMM 2023 Area in SAL 2021 (km2)
+  type: number
+- name: state
+  label: State or territory
+  source: State
+  type: string
+omit:
+  ? ''
+  : A column with no header in the publisher's file, which has no name to publish it under.

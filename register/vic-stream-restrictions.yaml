@@ -1,0 +1,98 @@
+slug: vic-stream-restrictions
+title: Monthly restrictions on diversions from unregulated streams, Victoria
+status: live
+topics:
+- nature
+example:
+  where:
+    month_end: newest
+  group: status
+  metric: count
+  label: Streams
+chart:
+  where: {status: Ban}
+  split: none
+  metric: count
+  label: Stream-months recorded as Ban
+order: 398
+publisher:
+  name: Department of Energy, Environment and Climate Action
+  short: DEECA
+  jurisdiction: Vic
+  url: https://www.water.vic.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://discover.data.vic.gov.au/dataset/stream-restrictions
+  attribution: Department of Energy, Environment and Climate Action, Victorian Government, Stream restrictions,
+    sourced {sourced}, https://discover.data.vic.gov.au/dataset/stream-restrictions, licensed under CC BY
+    4.0.
+temporal_start: '2010-01-31'
+search_title: Victorian stream diversion bans and restrictions by month since 2010 (DEECA)
+also_known_as:
+- Victorian stream restrictions
+- Unregulated stream diversion bans Victoria
+- Stream pumping restrictions and rosters Victoria
+keywords:
+- stream restrictions
+- diversion bans
+- unregulated catchments
+- irrigation
+- water licences
+- DEECA
+- Victoria
+faq:
+- q: What does each row hold?
+  a: The restriction status on taking water from one unregulated stream at the end of one month, from
+    January 2010, such as No restriction, a numbered stage, Restricted or Ban. Water corporations set the
+    stages in each catchment's local management plan, so a stage number means different things on
+    different streams.
+- q: Does the status cover the whole month?
+  a: No. It is the status on the last day of the month the department recorded, so a change during the
+    month is not shown. The department marks n/a where no status was available, and those cells are
+    null. The status words are kept in the publisher's own spelling and case.
+- q: Which water corporation manages each stream?
+  a: The workbook's Lookups sheet names the corporation and basin of each stream. It is not part of this
+    table.
+summary: The restriction status on diversions from about 250 unregulated Victorian streams at the end of
+  each month since January 2010, from no restriction through rostered stages to a ban.
+description: Stream restrictions from the Department of Energy, Environment and Climate Action, one row
+  per stream and month end from January 2010. The status is the one Goulburn-Murray Water, GWMWater,
+  Melbourne Water and Southern Rural Water applied to licence holders' diversions on the last day of the
+  month under each catchment's local management rules.
+source:
+  adapter: ckan-resource
+  portal: https://discover.data.vic.gov.au
+  package: stream-restrictions
+  resource_match: ^Stream restrictions
+  url: https://discover.data.vic.gov.au/dataset/stream-restrictions
+  cadence: monthly
+  manual: true
+wide:
+  sheet_match: ^Jan2010
+  header_row: 1
+  header_rows: 1
+  row_headers: 1
+key:
+- stream
+- month_end
+row_label: Stream months
+fields:
+- name: stream
+  label: Stream
+  source: (column header 1)
+  type: string
+- name: month_end
+  label: Month end
+  source: (row header 1)
+  type: date
+  date_format: '%Y-%m-%d'
+  description: The date the status was recorded, the last day of the month or close to it.
+- name: status
+  label: Restriction status
+  source: (cell)
+  type: string
+  null_values:
+  - n/a
+  - N/A

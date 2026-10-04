@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-traffic-census",
+  "version": "2026-08-06",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:02:37+00:00",
+  "sha256": "cf179095da22fda496ab3cd412f5612817a7d307fff52b6f0b547556ceb07719",
+  "bytes": 29436850,
+  "filename": "aadt_2015_2025.xlsx",
+  "encoding": "xlsx",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/5d74e022-a302-4f40-a594-f1840c92f671/resource/b856deab-ab20-48f1-85c6-2715e3a1d42c/download/aadt_2015_2025.xlsx",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "traffic-census-for-the-queensland-state-declared-road-network",
+    "package_id": "5d74e022-a302-4f40-a594-f1840c92f671",
+    "resource": "b856deab-ab20-48f1-85c6-2715e3a1d42c",
+    "resource_name": "2015-2025 traffic census data",
+    "resource_last_modified": "2026-08-06T02:26:19.902689",
+    "package_modified": "2026-08-06T02:24:34.627456",
+    "package_version": "2024",
+    "etag": "6dfedaa26378d475a309db48cfcaacbe",
+    "http_last_modified": "Tue, 02 Jun 2026 06:23:12 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=traffic-census-for-the-queensland-state-declared-road-network",
+    "read_at": "2026-10-03T03:02:36+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "0809c07d6e8274a75c53a96d63f1df1738451997abf87b567d942569443b6859"
+}

@@ -1,0 +1,176 @@
+slug: nt-fuel-prices-history
+title: Daily fuel prices by service station, Northern Territory, 2017 to 2024
+status: live
+topics:
+- economy
+example:
+  where:
+    unleaded_91:
+      gte: 100
+      lte: 300
+  group: region_name
+  metric: avg.unleaded_91
+  label: Average unleaded 91 price (cents a litre)
+chart:
+  where:
+    unleaded_91:
+      gte: 100
+      lte: 300
+order: 70
+publisher:
+  name: Department of Treasury and Finance
+  short: Treasury and Finance
+  jurisdiction: NT
+  url: https://treasury.nt.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.nt.gov.au/dataset/myfuel-nt-november-2024
+  attribution: Department of Treasury and Finance, Northern Territory, MyFuel NT data, sourced {sourced},
+    https://data.nt.gov.au/dataset?q=myfuel, licensed under CC BY 3.0 AU.
+temporal_start: '2017-11-01'
+search_title: NT fuel prices history, daily petrol and diesel prices at every service station 2017 to 2024 (MyFuel NT)
+also_known_as:
+- MyFuel NT data
+- Darwin fuel prices history
+- Northern Territory petrol prices by day
+- NT fuel price monitoring
+keywords:
+- fuel prices
+- petrol prices
+- diesel prices
+- MyFuel NT
+- Darwin
+- Alice Springs
+- Northern Territory
+faq:
+- q: What is in each row?
+  a: One service station on one day, with the station's brand, region, suburb, postcode and coordinates
+    and the price in cents per litre of each fuel it sold, as reported to the MyFuel NT scheme. The
+    publisher writes 0 where a station does not sell a fuel or did not report a price, and the word null in
+    one row; those cells are null here.
+- q: Why does the series stop in 2024?
+  a: The Northern Territory Government published a workbook for each month from November 2017 to
+    November 2024 and has released none since. The 84 workbooks are read as one table. A day at the
+    boundary of two months appears in both workbooks and is kept once, and one workbook the publisher
+    uploaded twice under two months' names is counted once. The publisher gives no station identifier,
+    so two stations at one coordinate on one day can be told apart only by their prices.
+- q: Are any days missing?
+  a: The series has no rows for 17 days, which are 5 to 8 May 2020, 2 to 4 July 2020 and 11 to 20 May 2022.
+    On 9 May 2020 and 21 May 2022 it has a row for one station only.
+summary: The daily price of every fuel at every Northern Territory service station from November 2017
+  to November 2024, one row per station and day, from the MyFuel NT workbooks. About 580,000 rows,
+  closed series.
+description: Daily fuel prices reported under the Northern Territory's MyFuel NT scheme, one row per
+  service station and day from 1 November 2017 to 1 December 2024, with brand, region, suburb, postcode,
+  latitude and longitude and the price in cents per litre of diesel, premium 98 and 95, unleaded 91,
+  premium diesel, LPG, low aromatic fuel, E85, E10 and B20. The Department of Treasury and Finance
+  published the series as 84 monthly workbooks across 29 portal datasets, read here as one table.
+source:
+  adapter: ckan-stack
+  portal: https://data.nt.gov.au
+  package: myfuel
+  package_match: ^myfuel-nt-
+  header_match: FullDate
+  url: https://data.nt.gov.au/dataset?q=myfuel
+  cadence: closed
+partition_by:
+- region_name
+enrich:
+- sa2
+- lga
+- suburb
+- postcode
+- state_electorate
+- federal_electorate
+geometry:
+  lon: long
+  lat: lat
+  crs: EPSG:4326
+  crs_note: Coordinates in decimal degrees as published.
+row_label: Station days
+fields:
+- name: date
+  label: Date
+  source: FullDate
+  type: date
+  date_format: '%Y-%m-%d|%d/%m/%Y %I:%M:%S %p'
+  description: The day the prices were reported. Some workbooks hold the date as text with a midnight
+    time, read as the same day.
+- name: brand_name
+  label: Brand
+  source: Brand Name
+  type: string
+- name: region_name
+  label: Region
+  source: Region Name
+  type: string
+- name: suburb
+  label: Suburb
+  source: Suburb
+  type: string
+- name: postcode
+  label: Postcode
+  source: Postcode
+  type: string
+  description: As published. Most workbooks hold the postcode as a number, which drops the leading zero (800
+    for 0800). Some rows from July to November 2023 keep it, so a filter on one postcode needs both forms.
+- name: lat
+  label: Latitude
+  source: Lat
+  type: number
+- name: long
+  label: Longitude
+  source: Long
+  type: number
+- name: diesel
+  label: Diesel (c/L)
+  source: Diesel
+  type: number
+  null_values: ['0', 'null']
+- name: premium_98
+  label: Premium 98 (c/L)
+  source: Premium 98
+  type: number
+  null_values: ['0', 'null']
+- name: premium_95
+  label: Premium 95 (c/L)
+  source: Premium 95
+  type: number
+  null_values: ['0', 'null']
+- name: unleaded_91
+  label: Unleaded 91 (c/L)
+  source: Unleaded 91
+  type: number
+  null_values: ['0', 'null']
+- name: premium_diesel
+  label: Premium diesel (c/L)
+  source: Premium Diesel
+  type: number
+  null_values: ['0', 'null']
+- name: lpg
+  label: LPG (c/L)
+  source: LPG
+  type: number
+  null_values: ['0', 'null']
+- name: low_aromatic_fuel
+  label: Low aromatic fuel (c/L)
+  source: Low Aromatic Fuel
+  type: number
+  null_values: ['0', 'null']
+- name: e85
+  label: Ethanol 105 E85 (c/L)
+  source: Ethanol 105 (E85)
+  type: number
+  null_values: ['0', 'null']
+- name: e10
+  label: Ethanol 94 E10 (c/L)
+  source: Ethanol 94 (E10)
+  type: number
+  null_values: ['0', 'null']
+- name: b20
+  label: Bio diesel 20 (c/L)
+  source: Bio Diesel 20
+  type: number
+  null_values: ['0', 'null']

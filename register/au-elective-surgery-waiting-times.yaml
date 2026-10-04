@@ -1,0 +1,149 @@
+slug: au-elective-surgery-waiting-times
+title: Elective surgery waiting times by hospital and urgency category, Australia
+status: live
+topics:
+- health
+example:
+  where:
+    year: newest
+    reporting_unit_type: Hospital
+    urgency_category: Non-urgent elective surgery
+  group: reporting_unit
+  metric: max.median_wait_days
+  label: Median days waited for non-urgent surgery at each hospital in the newest year
+sample:
+  where:
+    year: newest
+    reporting_unit_type: Hospital
+    urgency_category: Urgent elective surgery
+  order:
+  - surgeries.desc
+  spread: state
+  label: Urgent elective surgery at the busiest hospitals in the newest year, the busiest hospital in each
+    state first, then the next busiest.
+order: 510
+collection: au-myhospitals
+collection_title: AIHW MyHospitals
+publisher:
+  name: Australian Institute of Health and Welfare
+  short: AIHW
+  jurisdiction: Cth
+  url: https://www.aihw.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.aihw.gov.au/copyright
+  statement: has been released under a Creative Commons BY 4.0 (CC-BY 4.0) licence
+  attribution: Based on Australian Institute of Health and Welfare material. Australian Institute of Health
+    and Welfare, Australian Government, MyHospitals Data API, elective surgery waiting times data extract,
+    sourced {sourced}, https://myhospitalsapi.aihw.gov.au/, licensed under CC BY 4.0.
+temporal_start: '2011-07-01'
+search_title: Elective surgery waiting times by hospital and urgency each year, Australia (AIHW MyHospitals)
+also_known_as:
+- Surgery waiting list times by hospital
+- Elective surgery median wait days
+- Public hospital surgery wait times Australia
+- Percentage of elective surgery within recommended time
+keywords:
+- elective surgery
+- waiting times
+- surgery waiting list
+- public hospitals
+- MyHospitals
+- AIHW
+faq:
+- q: What is in each row?
+  a: One public hospital or Local Hospital Network, one financial year from 2011-12 and one urgency
+    category. It gives the number of elective surgeries, the median days waited, the share of patients
+    treated within the recommended time, and the peer group's median and average beside them.
+- q: What are the urgency categories?
+  a: The treating doctor assigns each patient to urgent (surgery recommended within 30 days), semi-urgent
+    (within 90 days) or non-urgent (within 365 days). The Institute notes that states and hospitals assign
+    the categories differently, which affects comparisons.
+- q: What do the blanks mean?
+  a: The Institute writes <5 for a count under five and NP where the data did not meet its criteria. Those
+    cells are null here with a suppressed flag. A dash, meaning no patients were reported, and Not peered
+    are null. The share within recommended time is a fraction, so 0.95 means 95 per cent.
+summary: Median waiting times for elective surgery and the share treated within the recommended time,
+  for each public hospital and network by urgency category each year since 2011-12, from AIHW MyHospitals.
+description: The Urgency category sheet of the MyHospitals elective surgery waiting times data extract from
+  the AIHW MyHospitals Data API. Each row is one reporting unit, financial year and urgency category, with
+  the number of surgeries, the median waiting time in days, the percentage of surgeries within the
+  recommended time and the peer group's median and average.
+source:
+  adapter: file
+  url: https://myhospitalsapi.aihw.gov.au/api/v1/measure-downloads/myh-es
+  format: xlsx
+  sheet: Urgency category
+  header_row: 14
+  cadence: several times a year
+suppression:
+- <5
+- NP
+key:
+- reporting_unit
+- reporting_unit_type
+- year
+- urgency_category
+partition_by:
+- state
+row_label: Hospital, year and urgency rows
+fields:
+- name: reporting_unit
+  label: Hospital or network
+  source: Reporting unit
+  type: string
+- name: reporting_unit_type
+  label: Reporting unit type
+  source: Reporting unit type
+  type: string
+- name: state
+  label: State
+  source: State
+  type: string
+- name: peer_group
+  label: Peer group
+  source: Peer group
+  type: string
+- name: year
+  label: Financial year
+  source: Year
+  type: string
+- name: urgency_category
+  label: Urgency category
+  source: Urgency category
+  type: string
+- name: surgeries
+  label: Surgeries
+  source: Number of surgeries
+  type: integer
+  null_values:
+  - '-'
+- name: median_wait_days
+  label: Median wait (days)
+  source: Median waiting time (days)
+  type: integer
+  null_values:
+  - '-'
+- name: peer_group_median_days
+  label: Peer group median (days)
+  source: Peer group median (days)
+  type: integer
+  null_values:
+  - Not peered
+- name: share_within_recommended_time
+  label: Share within recommended time
+  source: Percentage of surgeries within recommended time
+  type: number
+  null_values:
+  - '-'
+  description: The fraction of surgeries done within the recommended time, 0.95 for 95 per cent.
+- name: peer_group_average
+  label: Peer group average
+  source: Peer group average
+  type: number
+  null_values:
+  - Not peered
+omit:
+  ? ''
+  : A column with no header in the publisher's file, which has no name to publish it under.

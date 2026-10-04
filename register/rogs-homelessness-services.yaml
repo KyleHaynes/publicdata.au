@@ -1,0 +1,238 @@
+slug: rogs-homelessness-services
+title: Homelessness services, Report on Government Services
+status: live
+topics:
+- government
+example:
+  where:
+    description1: People who are homeless by operational group
+    description3: Number
+    year: '2021'
+    sex: All people
+    description4:
+      neq: Total
+  group: description4
+  metric: sum.australia
+  label: People homeless in Australia on Census night 2021, by operational group
+order: 60
+publisher:
+  name: Productivity Commission
+  short: PC
+  jurisdiction: Cth
+  url: https://www.pc.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.pc.gov.au/copyright
+  statement: licensed under a Creative Commons Attribution 4.0 International licence
+  attribution: Productivity Commission, Australian Government, Report on Government Services 2026, Part
+    G section 19 Homelessness services dataset (section 19), sourced {sourced}, https://www.pc.gov.au/ongoing/report-on-government-services/2026/data-downloads,
+    licensed under CC BY 4.0.
+temporal_start: '2011-01-01'
+search_title: Homelessness services funding, clients and outcomes by state, Report on Government Services
+  section 19
+also_known_as:
+- RoGS homelessness services
+- Report on Government Services Part G section 19
+- Specialist homelessness services performance indicators
+- Homelessness statistics by state Australia
+keywords:
+- homelessness
+- specialist homelessness services
+- Report on Government Services
+- RoGS
+- Productivity Commission
+- homelessness funding
+- Australia
+faq:
+- q: What is in the homelessness services dataset?
+  a: 'Every figure in the section 19 attachment tables: government expenditure on homelessness services,
+    clients and support periods by age, sex, Indigenous status and remoteness, the reasons people seek
+    help, unmet demand, and outcomes such as clients achieving independent housing, each for every state
+    and territory and for Australia. The service figures cover the financial years 2020-21 to 2024-25,
+    and the Census estimates of people who are homeless are for 2011, 2016 and 2021.'
+- q: What is the Report on Government Services?
+  a: The Productivity Commission's yearly report on the equity, effectiveness and efficiency of government
+    services, compiled for the Council of Australian Governments and its successors since 1995. Each section's
+    dataset holds every figure in the section's attachment tables in one long table, with a column for
+    each state and territory and for Australia.
+- q: What do np, na and .. mean?
+  a: The Commission writes np where a figure is not published, na where it is not available and .. where
+    it is not applicable. Not published is kept here as a null with a suppressed flag on the row; the
+    other two are kept as plain nulls.
+- q: Where do the figures come from?
+  a: Each row names its data source, usually a state or territory government, the ABS or the Australian
+    Institute of Health and Welfare, as the Commission states it. The Commission publishes the dataset
+    under CC BY 4.0 with third party content excepted, and the source column is how that content is identified.
+summary: 'Every figure in the Report on Government Services section on homelessness services, by state
+  and territory: expenditure, clients, support periods, unmet demand and outcomes from 2020-21 to 2024-25,
+  and Census estimates of homelessness for 2011, 2016 and 2021. Updated yearly.'
+description: The Productivity Commission's Report on Government Services 2026 dataset for Part G section
+  19, Homelessness services, one row per table line with the table number, year, measure, disaggregations
+  by age, sex, Indigenous status, remoteness, disability status, service type and client type, the description
+  columns, data source and unit, and a value for each state and territory and for Australia.
+source:
+  adapter: file
+  url: https://assets.pc.gov.au/2026-01/rogs-2026-partg-section19-homelessness-services-dataset.csv
+  cadence: yearly
+suppression:
+- np
+row_label: Table lines
+fields:
+- name: table_number
+  label: Table number
+  source: Table_Number
+  type: string
+- name: year
+  label: Year
+  source: Year
+  type: string
+- name: measure
+  label: Measure
+  source: Measure
+  type: string
+- name: age
+  label: Age
+  source: Age
+  type: string
+- name: sex
+  label: Sex
+  source: Sex
+  type: string
+- name: indigenous_status
+  label: Indigenous status
+  source: Indigenous_Status
+  type: string
+- name: remoteness
+  label: Remoteness
+  source: Remoteness
+  type: string
+- name: disability_status
+  label: Disability status
+  source: Disability_Status
+  type: string
+- name: service_type
+  label: Service type
+  source: Service_Type
+  type: string
+- name: client_type
+  label: Client type
+  source: Client_Type
+  type: string
+- name: year_dollars
+  label: Year dollars
+  source: Year_Dollars
+  type: string
+- name: description1
+  label: Description 1
+  source: Description1
+  type: string
+- name: description2
+  label: Description 2
+  source: Description2
+  type: string
+- name: description3
+  label: Description 3
+  source: Description3
+  type: string
+- name: description4
+  label: Description 4
+  source: Description4
+  type: string
+- name: description5
+  label: Description 5
+  source: Description5
+  type: string
+- name: description6
+  label: Description 6
+  source: Description6
+  type: string
+- name: data_source
+  label: Data source
+  source: Data_Source
+  type: string
+- name: unit
+  label: Unit
+  source: Unit
+  type: string
+- name: nsw
+  label: NSW
+  source: NSW
+  type: number
+  null_values:
+  - na
+  - ..
+  - –
+  - '-'
+- name: vic
+  label: Vic
+  source: Vic
+  type: number
+  null_values:
+  - na
+  - ..
+  - –
+  - '-'
+- name: qld
+  label: Qld
+  source: Qld
+  type: number
+  null_values:
+  - na
+  - ..
+  - –
+  - '-'
+- name: wa
+  label: WA
+  source: WA
+  type: number
+  null_values:
+  - na
+  - ..
+  - –
+  - '-'
+- name: sa
+  label: SA
+  source: SA
+  type: number
+  null_values:
+  - na
+  - ..
+  - –
+  - '-'
+- name: tas
+  label: Tas
+  source: Tas
+  type: number
+  null_values:
+  - na
+  - ..
+  - –
+  - '-'
+- name: act
+  label: ACT
+  source: ACT
+  type: number
+  null_values:
+  - na
+  - ..
+  - –
+  - '-'
+- name: nt
+  label: NT
+  source: NT
+  type: number
+  null_values:
+  - na
+  - ..
+  - –
+  - '-'
+- name: australia
+  label: Australia
+  source: Aust
+  type: number
+  null_values:
+  - na
+  - ..
+  - –
+  - '-'

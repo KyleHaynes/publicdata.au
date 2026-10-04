@@ -1,0 +1,101 @@
+slug: sa-dog-cat-incidents
+title: Dog and cat attack and harassment incidents, South Australia
+status: live
+topics:
+- community
+- emergencies
+example:
+  where:
+    financial_year: 2024/25
+  group: location_type
+  metric: sum.incidents
+  label: Incidents by location type in 2024-25, up to the extract date of 30 May 2025
+sample:
+  order: [incidents.desc]
+  spread: financial_year
+  label: The largest counts, largest first, with each financial year in turn.
+order: 438
+collection: sa-dogs-and-cats-online
+collection_title: Dogs and Cats Online, South Australia
+search_title: South Australia dog attack statistics by place, time and season (Dogs and Cats Online)
+also_known_as:
+- DACO incidents data SA
+- SA dog attacks and harassment reports
+- Dog bite incidents South Australia
+keywords:
+- dog attacks
+- dog bites
+- harassment
+- animal incidents
+- Dogs and Cats Online
+- South Australia
+faq:
+- q: What is in each row?
+  a: The number of incidents recorded on Dogs and Cats Online in one financial year that share a type of location,
+    time of day, season, leash status of the offending animal, incident type and victim type.
+- q: Which years does the table cover?
+  a: Every financial year in the newest extract, from 2018-19 to 2024-25 at the first version, taken on 30 May 2025,
+    so 2024-25 stops short of 30 June. Incidents recorded before 30 June 2018 are grouped under one value,
+    bef 30 Jun 2018. Each new extract becomes a version here.
+summary: The number of dog and cat attacks and harassment incidents recorded on South Australia's Dogs and Cats
+  Online register, by location type, time of day, season, leash, incident and victim. Updated yearly.
+description: Incident counts from Dogs and Cats Online (DACO), from the Department for Environment and Water. Each row
+  is one financial year, location type, time of day, season, leash status of the offending animal, incident type,
+  such as attack or harassment, and victim type, such as human or animal, with the number of incidents recorded.
+publisher:
+  name: Department for Environment and Water
+  short: Environment and Water
+  jurisdiction: SA
+  url: https://www.environment.sa.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.sa.gov.au/data/dataset/dogs-and-cats-online-data-2024-2025
+  attribution: Department for Environment and Water, Government of South Australia, Dogs and Cats Online Data,
+    https://data.sa.gov.au/data/dataset/dogs-and-cats-online-data-2024-2025, accessed {sourced}, licensed under CC BY
+    4.0.
+source:
+  adapter: ckan-resource
+  portal: https://data.sa.gov.au/data
+  package: dogs and cats online data
+  package_match: ^dogs-and-cats-online-data-\d{4}-\d{4}$
+  resource_match: ^DATA_SA_Incidents
+  url: https://data.sa.gov.au/data/dataset/dogs-and-cats-online-data-2024-2025
+  cadence: yearly
+partition_by:
+- financial_year
+row_label: Incident counts
+fields:
+- name: location_type
+  label: Location type
+  source: LocationType
+  type: string
+- name: time
+  label: Time of day
+  source: Time
+  type: string
+- name: season
+  label: Season
+  source: Season
+  type: string
+- name: leash_status
+  label: Leash status
+  source: OffendingAnimalLeashStatus
+  type: string
+- name: incident_type
+  label: Incident type
+  source: IncidentType
+  type: string
+- name: victim_type
+  label: Victim
+  source: VictimType
+  type: string
+- name: financial_year
+  label: Financial year
+  source: FinancialYear
+  type: string
+- name: incidents
+  label: Incidents
+  source: IncidentCount
+  type: integer

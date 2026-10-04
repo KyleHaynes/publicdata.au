@@ -1,0 +1,1788 @@
+{
+  "accounts": {
+    "huggingface": "https://huggingface.co/National-Digital",
+    "kaggle": "https://www.kaggle.com/NationalDigitalAU"
+  },
+  "datasets": {
+    "abs-federal-electoral-divisions-2025": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/abs-federal-electoral-divisions-2025",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/abs-federal-electoral-divisions-2025",
+      "zenodo": "10.5281/zenodo.23089085"
+    },
+    "abs-lga-2025": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/abs-lga-2025",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/abs-lga-2025",
+      "zenodo": "10.5281/zenodo.23089036"
+    },
+    "abs-postal-areas-2021": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/abs-postal-areas-2021",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/abs-postal-areas-2021",
+      "zenodo": "10.5281/zenodo.23089071"
+    },
+    "abs-sa2-2021": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/abs-sa2-2021",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/abs-sa2-2021",
+      "zenodo": "10.5281/zenodo.23089025"
+    },
+    "abs-state-electoral-divisions-2025": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/abs-state-electoral-divisions-2025",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/abs-state-electoral-divisions-2025",
+      "zenodo": "10.5281/zenodo.23089079"
+    },
+    "abs-suburbs-localities-2021": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/abs-suburbs-localities-2021",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/abs-suburbs-localities-2021",
+      "zenodo": "10.5281/zenodo.23089040"
+    },
+    "acnc-register": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/acnc-register",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/acnc-register",
+      "zenodo": "10.5281/zenodo.23076899"
+    },
+    "act-2003-bushfire": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/act-2003-bushfire",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/act-2003-bushfire",
+      "zenodo": "10.5281/zenodo.23123639"
+    },
+    "act-air-quality": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/act-air-quality",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/act-air-quality",
+      "zenodo": "10.5281/zenodo.23123543"
+    },
+    "act-barbecues": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/act-barbecues",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/act-barbecues",
+      "zenodo": "10.5281/zenodo.23123598"
+    },
+    "act-bdm-registrations": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/act-bdm-registrations",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/act-bdm-registrations",
+      "zenodo": "10.5281/zenodo.23123436"
+    },
+    "act-contracts-register-2016-2017": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/act-contracts-register-2016-2017",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/act-contracts-register-2016-2017",
+      "zenodo": "10.5281/zenodo.23123573"
+    },
+    "act-engineers-register": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/act-engineers-register",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/act-engineers-register",
+      "zenodo": "10.5281/zenodo.23123534"
+    },
+    "act-historic-death-index": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/act-historic-death-index",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/act-historic-death-index",
+      "zenodo": "10.5281/zenodo.23123442"
+    },
+    "act-historic-marriage-index": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/act-historic-marriage-index",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/act-historic-marriage-index",
+      "zenodo": "10.5281/zenodo.23123450"
+    },
+    "act-lakes-rivers-water-quality": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/act-lakes-rivers-water-quality",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/act-lakes-rivers-water-quality",
+      "zenodo": "10.5281/zenodo.23123568"
+    },
+    "act-licences-transferred-interstate": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/act-licences-transferred-interstate",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/act-licences-transferred-interstate",
+      "zenodo": "10.5281/zenodo.23123528"
+    },
+    "act-licences-transferred-to-act": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/act-licences-transferred-to-act",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/act-licences-transferred-to-act",
+      "zenodo": "10.5281/zenodo.23123530"
+    },
+    "act-mobile-distraction-camera-locations": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/act-mobile-distraction-camera-locations",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/act-mobile-distraction-camera-locations",
+      "zenodo": "10.5281/zenodo.23123520"
+    },
+    "act-mobile-speed-camera-visits": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/act-mobile-speed-camera-visits",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/act-mobile-speed-camera-visits",
+      "zenodo": "10.5281/zenodo.23123509"
+    },
+    "act-mutual-recognition-register": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/act-mutual-recognition-register",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/act-mutual-recognition-register",
+      "zenodo": "10.5281/zenodo.23123536"
+    },
+    "act-notifiable-invoices": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/act-notifiable-invoices",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/act-notifiable-invoices",
+      "zenodo": "10.5281/zenodo.23123577"
+    },
+    "act-parking-offences": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/act-parking-offences",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/act-parking-offences",
+      "zenodo": "10.5281/zenodo.23123499"
+    },
+    "act-police-stations": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/act-police-stations",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/act-police-stations",
+      "zenodo": "10.5281/zenodo.23123541"
+    },
+    "act-recreational-water-quality-2018-19": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/act-recreational-water-quality-2018-19",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/act-recreational-water-quality-2018-19",
+      "zenodo": "10.5281/zenodo.23123645"
+    },
+    "act-recreational-water-quality-2019-20": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/act-recreational-water-quality-2019-20",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/act-recreational-water-quality-2019-20",
+      "zenodo": "10.5281/zenodo.23123575"
+    },
+    "act-road-crashes": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/act-road-crashes",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/act-road-crashes",
+      "zenodo": "10.5281/zenodo.23076667"
+    },
+    "act-traffic-camera-locations": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/act-traffic-camera-locations",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/act-traffic-camera-locations",
+      "zenodo": "10.5281/zenodo.23123518"
+    },
+    "act-traffic-camera-offences": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/act-traffic-camera-offences",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/act-traffic-camera-offences",
+      "zenodo": "10.5281/zenodo.23123453"
+    },
+    "act-traffic-camera-offences-2010-2021": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/act-traffic-camera-offences-2010-2021",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/act-traffic-camera-offences-2010-2021",
+      "zenodo": "10.5281/zenodo.23123488"
+    },
+    "act-vehicles-registered": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/act-vehicles-registered",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/act-vehicles-registered",
+      "zenodo": "10.5281/zenodo.23123524"
+    },
+    "asic-business-names": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/asic-business-names",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/asic-business-names",
+      "zenodo": "10.5281/zenodo.23078762"
+    },
+    "asic-companies": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/asic-companies",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/asic-companies",
+      "zenodo": "10.5281/zenodo.23079273"
+    },
+    "au-births-by-age-of-father": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/au-births-by-age-of-father",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/au-births-by-age-of-father",
+      "zenodo": "10.5281/zenodo.23123695"
+    },
+    "au-births-by-age-of-mother": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/au-births-by-age-of-mother",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/au-births-by-age-of-mother",
+      "zenodo": "10.5281/zenodo.23123691"
+    },
+    "au-births-by-state": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/au-births-by-state",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/au-births-by-state",
+      "zenodo": "10.5281/zenodo.23123701"
+    },
+    "au-building-approvals-by-lga-2025-26": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/au-building-approvals-by-lga-2025-26",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/au-building-approvals-by-lga-2025-26",
+      "zenodo": "10.5281/zenodo.23123713"
+    },
+    "au-child-care-services-by-sa3-2012-2016": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/au-child-care-services-by-sa3-2012-2016",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/au-child-care-services-by-sa3-2012-2016",
+      "zenodo": "10.5281/zenodo.23123796"
+    },
+    "au-commonwealth-heritage-list-places": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/au-commonwealth-heritage-list-places",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/au-commonwealth-heritage-list-places",
+      "zenodo": "10.5281/zenodo.23123912"
+    },
+    "au-domestic-homicide-victims": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/au-domestic-homicide-victims",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/au-domestic-homicide-victims",
+      "zenodo": "10.5281/zenodo.23077605"
+    },
+    "au-ed-patients-seen-on-time": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/au-ed-patients-seen-on-time",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/au-ed-patients-seen-on-time",
+      "zenodo": "10.5281/zenodo.23123805"
+    },
+    "au-elective-surgery-waiting-times": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/au-elective-surgery-waiting-times",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/au-elective-surgery-waiting-times",
+      "zenodo": "10.5281/zenodo.23123810"
+    },
+    "au-emergency-services-facilities": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/au-emergency-services-facilities",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/au-emergency-services-facilities",
+      "zenodo": "10.5281/zenodo.23123814"
+    },
+    "au-eucalypt-records": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/au-eucalypt-records",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/au-eucalypt-records",
+      "zenodo": "10.5281/zenodo.23076321"
+    },
+    "au-fdv-hospitalisations": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/au-fdv-hospitalisations",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/au-fdv-hospitalisations",
+      "zenodo": "10.5281/zenodo.23077600"
+    },
+    "au-fdv-victims-recorded-crime": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/au-fdv-victims-recorded-crime",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/au-fdv-victims-recorded-crime",
+      "zenodo": "10.5281/zenodo.23077595"
+    },
+    "au-government-procurement-totals-2008-2012": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/au-government-procurement-totals-2008-2012",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/au-government-procurement-totals-2008-2012",
+      "zenodo": "10.5281/zenodo.23123898"
+    },
+    "au-homelessness-services-monthly": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/au-homelessness-services-monthly",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/au-homelessness-services-monthly",
+      "zenodo": "10.5281/zenodo.23077589"
+    },
+    "au-hospitals-myhospitals": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/au-hospitals-myhospitals",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/au-hospitals-myhospitals",
+      "zenodo": "10.5281/zenodo.23123799"
+    },
+    "au-humanitarian-program-grants": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/au-humanitarian-program-grants",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/au-humanitarian-program-grants",
+      "zenodo": "10.5281/zenodo.23073947"
+    },
+    "au-localities-act": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/au-localities-act",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/au-localities-act",
+      "zenodo": "10.5281/zenodo.23123865"
+    },
+    "au-localities-nsw": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/au-localities-nsw",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/au-localities-nsw",
+      "zenodo": "10.5281/zenodo.23123816"
+    },
+    "au-localities-nt": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/au-localities-nt",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/au-localities-nt",
+      "zenodo": "10.5281/zenodo.23123856"
+    },
+    "au-localities-ot": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/au-localities-ot",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/au-localities-ot",
+      "zenodo": "10.5281/zenodo.23123868"
+    },
+    "au-localities-sa": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/au-localities-sa",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/au-localities-sa",
+      "zenodo": "10.5281/zenodo.23123842"
+    },
+    "au-localities-tas": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/au-localities-tas",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/au-localities-tas",
+      "zenodo": "10.5281/zenodo.23123848"
+    },
+    "au-localities-vic": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/au-localities-vic",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/au-localities-vic",
+      "zenodo": "10.5281/zenodo.23123835"
+    },
+    "au-localities-wa": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/au-localities-wa",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/au-localities-wa",
+      "zenodo": "10.5281/zenodo.23123839"
+    },
+    "au-migration-program-by-citizenship": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/au-migration-program-by-citizenship",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/au-migration-program-by-citizenship",
+      "zenodo": "10.5281/zenodo.23077311"
+    },
+    "au-migration-program-outcome": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/au-migration-program-outcome",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/au-migration-program-outcome",
+      "zenodo": "10.5281/zenodo.23077307"
+    },
+    "au-modified-monash-model-by-suburb": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/au-modified-monash-model-by-suburb",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/au-modified-monash-model-by-suburb",
+      "zenodo": "10.5281/zenodo.23123787"
+    },
+    "au-national-heritage-list-places": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/au-national-heritage-list-places",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/au-national-heritage-list-places",
+      "zenodo": "10.5281/zenodo.23123905"
+    },
+    "au-permanent-additions-by-country": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/au-permanent-additions-by-country",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/au-permanent-additions-by-country",
+      "zenodo": "10.5281/zenodo.23077321"
+    },
+    "au-public-holidays-2021-2025": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/au-public-holidays-2021-2025",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/au-public-holidays-2021-2025",
+      "zenodo": "10.5281/zenodo.23123784"
+    },
+    "au-road-deaths": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/au-road-deaths",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/au-road-deaths",
+      "zenodo": "10.5281/zenodo.23076794"
+    },
+    "au-settler-arrivals-by-country": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/au-settler-arrivals-by-country",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/au-settler-arrivals-by-country",
+      "zenodo": "10.5281/zenodo.23077317"
+    },
+    "au-shark-incidents": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/au-shark-incidents",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/au-shark-incidents",
+      "zenodo": "10.5281/zenodo.23077621"
+    },
+    "au-suicide-deaths-by-age": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/au-suicide-deaths-by-age",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/au-suicide-deaths-by-age",
+      "zenodo": "10.5281/zenodo.23077619"
+    },
+    "au-suicide-deaths-by-state": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/au-suicide-deaths-by-state",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/au-suicide-deaths-by-state",
+      "zenodo": "10.5281/zenodo.23077609"
+    },
+    "au-taxable-income-by-postcode-2023-24": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/au-taxable-income-by-postcode-2023-24",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/au-taxable-income-by-postcode-2023-24",
+      "zenodo": "10.5281/zenodo.23123812"
+    },
+    "au-water-storage-levels": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/au-water-storage-levels",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/au-water-storage-levels",
+      "zenodo": "10.5281/zenodo.23077393"
+    },
+    "au-water-storages": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/au-water-storages",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/au-water-storages",
+      "zenodo": "10.5281/zenodo.23077574"
+    },
+    "au-youth-detention-population-quarterly": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/au-youth-detention-population-quarterly",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/au-youth-detention-population-quarterly",
+      "zenodo": "10.5281/zenodo.23123791"
+    },
+    "nsw-bdm-disposal-methods-monthly": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/nsw-bdm-disposal-methods-monthly",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/nsw-bdm-disposal-methods-monthly",
+      "zenodo": "10.5281/zenodo.23123044"
+    },
+    "nsw-bdm-registrations-monthly": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/nsw-bdm-registrations-monthly",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/nsw-bdm-registrations-monthly",
+      "zenodo": "10.5281/zenodo.23123042"
+    },
+    "nsw-beachwatch-sites": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/nsw-beachwatch-sites",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/nsw-beachwatch-sites",
+      "zenodo": "10.5281/zenodo.23113632"
+    },
+    "nsw-liquor-licence-premises": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/nsw-liquor-licence-premises",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/nsw-liquor-licence-premises",
+      "zenodo": "10.5281/zenodo.23123088"
+    },
+    "nsw-popular-baby-names": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/nsw-popular-baby-names",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/nsw-popular-baby-names",
+      "zenodo": "10.5281/zenodo.23123029"
+    },
+    "nsw-primary-class-sizes": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/nsw-primary-class-sizes",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/nsw-primary-class-sizes",
+      "zenodo": "10.5281/zenodo.23123100"
+    },
+    "nsw-public-holidays": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/nsw-public-holidays",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/nsw-public-holidays",
+      "zenodo": "10.5281/zenodo.23123051"
+    },
+    "nsw-public-schools": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/nsw-public-schools",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/nsw-public-schools",
+      "zenodo": "10.5281/zenodo.23123061"
+    },
+    "nsw-recorded-crime-by-lga": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/nsw-recorded-crime-by-lga",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/nsw-recorded-crime-by-lga",
+      "zenodo": "10.5281/zenodo.23076818"
+    },
+    "nsw-rental-bond-lodgements-2021": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/nsw-rental-bond-lodgements-2021",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/nsw-rental-bond-lodgements-2021",
+      "zenodo": "10.5281/zenodo.23123151"
+    },
+    "nsw-rental-bond-lodgements-2022": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/nsw-rental-bond-lodgements-2022",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/nsw-rental-bond-lodgements-2022",
+      "zenodo": "10.5281/zenodo.23123165"
+    },
+    "nsw-rental-bond-lodgements-2023": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/nsw-rental-bond-lodgements-2023",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/nsw-rental-bond-lodgements-2023",
+      "zenodo": "10.5281/zenodo.23123191"
+    },
+    "nsw-rental-bond-lodgements-2024": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/nsw-rental-bond-lodgements-2024",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/nsw-rental-bond-lodgements-2024",
+      "zenodo": "10.5281/zenodo.23123217"
+    },
+    "nsw-rental-bond-lodgements-2025": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/nsw-rental-bond-lodgements-2025",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/nsw-rental-bond-lodgements-2025",
+      "zenodo": "10.5281/zenodo.23123235"
+    },
+    "nsw-rental-bond-refunds-2021": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/nsw-rental-bond-refunds-2021",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/nsw-rental-bond-refunds-2021",
+      "zenodo": "10.5281/zenodo.23123250"
+    },
+    "nsw-rental-bond-refunds-2022": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/nsw-rental-bond-refunds-2022",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/nsw-rental-bond-refunds-2022",
+      "zenodo": "10.5281/zenodo.23123286"
+    },
+    "nsw-rental-bond-refunds-2023": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/nsw-rental-bond-refunds-2023",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/nsw-rental-bond-refunds-2023",
+      "zenodo": "10.5281/zenodo.23123321"
+    },
+    "nsw-rental-bond-refunds-2024": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/nsw-rental-bond-refunds-2024",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/nsw-rental-bond-refunds-2024",
+      "zenodo": "10.5281/zenodo.23123347"
+    },
+    "nsw-rental-bond-refunds-2025": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/nsw-rental-bond-refunds-2025",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/nsw-rental-bond-refunds-2025",
+      "zenodo": "10.5281/zenodo.23123379"
+    },
+    "nsw-road-crashes": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/nsw-road-crashes",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/nsw-road-crashes",
+      "zenodo": "10.5281/zenodo.23077195"
+    },
+    "nsw-school-intake-zones-future": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/nsw-school-intake-zones-future",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/nsw-school-intake-zones-future",
+      "zenodo": "10.5281/zenodo.23123082"
+    },
+    "nsw-school-intake-zones-primary": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/nsw-school-intake-zones-primary",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/nsw-school-intake-zones-primary",
+      "zenodo": "10.5281/zenodo.23123064"
+    },
+    "nsw-school-intake-zones-secondary": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/nsw-school-intake-zones-secondary",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/nsw-school-intake-zones-secondary",
+      "zenodo": "10.5281/zenodo.23123074"
+    },
+    "nsw-school-term-dates": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/nsw-school-term-dates",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/nsw-school-term-dates",
+      "zenodo": "10.5281/zenodo.23123055"
+    },
+    "nsw-top-baby-names-by-lga-female": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/nsw-top-baby-names-by-lga-female",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/nsw-top-baby-names-by-lga-female",
+      "zenodo": "10.5281/zenodo.23123040"
+    },
+    "nsw-top-baby-names-by-lga-male": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/nsw-top-baby-names-by-lga-male",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/nsw-top-baby-names-by-lga-male",
+      "zenodo": "10.5281/zenodo.23123036"
+    },
+    "nsw-traffic-count-stations": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/nsw-traffic-count-stations",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/nsw-traffic-count-stations",
+      "zenodo": "10.5281/zenodo.23123102"
+    },
+    "nsw-traffic-volume-yearly": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/nsw-traffic-volume-yearly",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/nsw-traffic-volume-yearly",
+      "zenodo": "10.5281/zenodo.23123109"
+    },
+    "nt-crime-statistics": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/nt-crime-statistics",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/nt-crime-statistics",
+      "zenodo": "10.5281/zenodo.23077193"
+    },
+    "nt-fuel-prices-history": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/nt-fuel-prices-history",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/nt-fuel-prices-history",
+      "zenodo": "10.5281/zenodo.23077631"
+    },
+    "qld-all-abilities-playgrounds": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-all-abilities-playgrounds",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-all-abilities-playgrounds",
+      "zenodo": "10.5281/zenodo.23122945"
+    },
+    "qld-births-by-month": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-births-by-month",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-births-by-month",
+      "zenodo": "10.5281/zenodo.23122182"
+    },
+    "qld-births-by-mothers-postcode": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-births-by-mothers-postcode",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-births-by-mothers-postcode",
+      "zenodo": "10.5281/zenodo.23122186"
+    },
+    "qld-brisbane-dog-off-leash-areas": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-brisbane-dog-off-leash-areas",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-brisbane-dog-off-leash-areas",
+      "zenodo": "10.5281/zenodo.23122954"
+    },
+    "qld-brisbane-park-barbecues": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-brisbane-park-barbecues",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-brisbane-park-barbecues",
+      "zenodo": "10.5281/zenodo.23122962"
+    },
+    "qld-bushfire-incidents-current": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-bushfire-incidents-current",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-bushfire-incidents-current",
+      "zenodo": "10.5281/zenodo.23103354"
+    },
+    "qld-coal-exports-by-country": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-coal-exports-by-country",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-coal-exports-by-country",
+      "zenodo": "10.5281/zenodo.23122551"
+    },
+    "qld-coal-exports-by-mine-and-country": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-coal-exports-by-mine-and-country",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-coal-exports-by-mine-and-country",
+      "zenodo": "10.5281/zenodo.23122539"
+    },
+    "qld-coal-production-by-mine": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-coal-production-by-mine",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-coal-production-by-mine",
+      "zenodo": "10.5281/zenodo.23122547"
+    },
+    "qld-coal-saleable-production": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-coal-saleable-production",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-coal-saleable-production",
+      "zenodo": "10.5281/zenodo.23122554"
+    },
+    "qld-coastal-waves-brisbane": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-coastal-waves-brisbane",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-coastal-waves-brisbane",
+      "zenodo": "10.5281/zenodo.23122518"
+    },
+    "qld-coastal-waves-cairns": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-coastal-waves-cairns",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-coastal-waves-cairns",
+      "zenodo": "10.5281/zenodo.23122533"
+    },
+    "qld-coastal-waves-gold-coast": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-coastal-waves-gold-coast",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-coastal-waves-gold-coast",
+      "zenodo": "10.5281/zenodo.23122514"
+    },
+    "qld-coastal-waves-mackay": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-coastal-waves-mackay",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-coastal-waves-mackay",
+      "zenodo": "10.5281/zenodo.23122525"
+    },
+    "qld-coastal-waves-mooloolaba": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-coastal-waves-mooloolaba",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-coastal-waves-mooloolaba",
+      "zenodo": "10.5281/zenodo.23122520"
+    },
+    "qld-coastal-waves-townsville": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-coastal-waves-townsville",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-coastal-waves-townsville",
+      "zenodo": "10.5281/zenodo.23122529"
+    },
+    "qld-coastal-waves-tweed-heads": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-coastal-waves-tweed-heads",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-coastal-waves-tweed-heads",
+      "zenodo": "10.5281/zenodo.23122516"
+    },
+    "qld-consumer-complaints": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-consumer-complaints",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-consumer-complaints",
+      "zenodo": "10.5281/zenodo.23122379"
+    },
+    "qld-crocodile-distribution-surveys": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-crocodile-distribution-surveys",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-crocodile-distribution-surveys",
+      "zenodo": "10.5281/zenodo.23122983"
+    },
+    "qld-crocwatch-sightings-2010-2015": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-crocwatch-sightings-2010-2015",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-crocwatch-sightings-2010-2015",
+      "zenodo": "10.5281/zenodo.23128565"
+    },
+    "qld-crocwatch-sightings-2016": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-crocwatch-sightings-2016",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-crocwatch-sightings-2016",
+      "zenodo": "10.5281/zenodo.23122998"
+    },
+    "qld-crocwatch-sightings-2017": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-crocwatch-sightings-2017",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-crocwatch-sightings-2017",
+      "zenodo": "10.5281/zenodo.23123006"
+    },
+    "qld-deaths-by-month": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-deaths-by-month",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-deaths-by-month",
+      "zenodo": "10.5281/zenodo.23122192"
+    },
+    "qld-deaths-by-postcode-and-quarter": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-deaths-by-postcode-and-quarter",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-deaths-by-postcode-and-quarter",
+      "zenodo": "10.5281/zenodo.23122196"
+    },
+    "qld-deaths-by-suburb": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-deaths-by-suburb",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-deaths-by-suburb",
+      "zenodo": "10.5281/zenodo.23122194"
+    },
+    "qld-dpi-contract-disclosure": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-dpi-contract-disclosure",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-dpi-contract-disclosure",
+      "zenodo": "10.5281/zenodo.23122428"
+    },
+    "qld-driver-licence-renewals-early": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-driver-licence-renewals-early",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-driver-licence-renewals-early",
+      "zenodo": "10.5281/zenodo.23122314"
+    },
+    "qld-ehealth-contract-disclosure": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-ehealth-contract-disclosure",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-ehealth-contract-disclosure",
+      "zenodo": "10.5281/zenodo.23122426"
+    },
+    "qld-elective-surgery-by-category": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-elective-surgery-by-category",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-elective-surgery-by-category",
+      "zenodo": "10.5281/zenodo.23122415"
+    },
+    "qld-elective-surgery-by-specialty": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-elective-surgery-by-specialty",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-elective-surgery-by-specialty",
+      "zenodo": "10.5281/zenodo.23122417"
+    },
+    "qld-emergency-department-busyness": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-emergency-department-busyness",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-emergency-department-busyness",
+      "zenodo": "10.5281/zenodo.23103351"
+    },
+    "qld-emergency-department-facilities": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-emergency-department-facilities",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-emergency-department-facilities",
+      "zenodo": "10.5281/zenodo.23103343"
+    },
+    "qld-emergency-department-waits-now": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-emergency-department-waits-now",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-emergency-department-waits-now",
+      "zenodo": "10.5281/zenodo.23103349"
+    },
+    "qld-fair-trading-enforcement-actions": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-fair-trading-enforcement-actions",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-fair-trading-enforcement-actions",
+      "zenodo": "10.5281/zenodo.23122385"
+    },
+    "qld-fair-trading-licences-by-region": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-fair-trading-licences-by-region",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-fair-trading-licences-by-region",
+      "zenodo": "10.5281/zenodo.23122389"
+    },
+    "qld-flood-extent-2010-bundaberg": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-flood-extent-2010-bundaberg",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-flood-extent-2010-bundaberg",
+      "zenodo": "10.5281/zenodo.23122461"
+    },
+    "qld-flood-extent-2011-april": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-flood-extent-2011-april",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-flood-extent-2011-april",
+      "zenodo": "10.5281/zenodo.23122479"
+    },
+    "qld-flood-extent-2011-january": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-flood-extent-2011-january",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-flood-extent-2011-january",
+      "zenodo": "10.5281/zenodo.23122463"
+    },
+    "qld-flood-extent-2012-south-west": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-flood-extent-2012-south-west",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-flood-extent-2012-south-west",
+      "zenodo": "10.5281/zenodo.23122483"
+    },
+    "qld-flood-extent-2013-bundaberg": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-flood-extent-2013-bundaberg",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-flood-extent-2013-bundaberg",
+      "zenodo": "10.5281/zenodo.23122491"
+    },
+    "qld-flood-extent-2017-fitzroy": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-flood-extent-2017-fitzroy",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-flood-extent-2017-fitzroy",
+      "zenodo": "10.5281/zenodo.23122495"
+    },
+    "qld-flood-extent-2017-logan-albert": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-flood-extent-2017-logan-albert",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-flood-extent-2017-logan-albert",
+      "zenodo": "10.5281/zenodo.23122499"
+    },
+    "qld-flood-extent-2019-western": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-flood-extent-2019-western",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-flood-extent-2019-western",
+      "zenodo": "10.5281/zenodo.23122501"
+    },
+    "qld-fuel-prices": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-fuel-prices",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-fuel-prices",
+      "zenodo": "10.5281/zenodo.23122400"
+    },
+    "qld-gambling-expenditure": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-gambling-expenditure",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-gambling-expenditure",
+      "zenodo": "10.5281/zenodo.23122747"
+    },
+    "qld-gaming-machine-ranges": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-gaming-machine-ranges",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-gaming-machine-ranges",
+      "zenodo": "10.5281/zenodo.23122750"
+    },
+    "qld-gaming-machines-by-sa2": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-gaming-machines-by-sa2",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-gaming-machines-by-sa2",
+      "zenodo": "10.5281/zenodo.23122731"
+    },
+    "qld-gaming-machines-by-sa4": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-gaming-machines-by-sa4",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-gaming-machines-by-sa4",
+      "zenodo": "10.5281/zenodo.23122737"
+    },
+    "qld-gaming-machines-clubs": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-gaming-machines-clubs",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-gaming-machines-clubs",
+      "zenodo": "10.5281/zenodo.23122739"
+    },
+    "qld-gaming-machines-hotels": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-gaming-machines-hotels",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-gaming-machines-hotels",
+      "zenodo": "10.5281/zenodo.23122743"
+    },
+    "qld-gaming-machines-total": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-gaming-machines-total",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-gaming-machines-total",
+      "zenodo": "10.5281/zenodo.23122745"
+    },
+    "qld-heritage-register": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-heritage-register",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-heritage-register",
+      "zenodo": "10.5281/zenodo.23122442"
+    },
+    "qld-jp-signing-locations": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-jp-signing-locations",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-jp-signing-locations",
+      "zenodo": "10.5281/zenodo.23122363"
+    },
+    "qld-land-valuation-trends": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-land-valuation-trends",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-land-valuation-trends",
+      "zenodo": "10.5281/zenodo.23122503"
+    },
+    "qld-land-valuation-trends-2002-2009": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-land-valuation-trends-2002-2009",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-land-valuation-trends-2002-2009",
+      "zenodo": "10.5281/zenodo.23122505"
+    },
+    "qld-locality-boundaries": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-locality-boundaries",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-locality-boundaries",
+      "zenodo": "10.5281/zenodo.23122567"
+    },
+    "qld-median-rents-by-postcode": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-median-rents-by-postcode",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-median-rents-by-postcode",
+      "zenodo": "10.5281/zenodo.23123884"
+    },
+    "qld-median-rents-by-suburb": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-median-rents-by-suburb",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-median-rents-by-suburb",
+      "zenodo": "10.5281/zenodo.23123878"
+    },
+    "qld-mobile-speed-camera-sites": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-mobile-speed-camera-sites",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-mobile-speed-camera-sites",
+      "zenodo": "10.5281/zenodo.23122226"
+    },
+    "qld-motorcycle-registrations": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-motorcycle-registrations",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-motorcycle-registrations",
+      "zenodo": "10.5281/zenodo.23122243"
+    },
+    "qld-new-recreational-vessel-registrations": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-new-recreational-vessel-registrations",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-new-recreational-vessel-registrations",
+      "zenodo": "10.5281/zenodo.23122355"
+    },
+    "qld-new-vehicle-registrations-daily": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-new-vehicle-registrations-daily",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-new-vehicle-registrations-daily",
+      "zenodo": "10.5281/zenodo.23122271"
+    },
+    "qld-notifiable-diseases-2010-2014": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-notifiable-diseases-2010-2014",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-notifiable-diseases-2010-2014",
+      "zenodo": "10.5281/zenodo.23122755"
+    },
+    "qld-offences-monthly": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-offences-monthly",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-offences-monthly",
+      "zenodo": "10.5281/zenodo.23122202"
+    },
+    "qld-petroleum-gas-production": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-petroleum-gas-production",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-petroleum-gas-production",
+      "zenodo": "10.5281/zenodo.23122559"
+    },
+    "qld-petroleum-gas-reserves": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-petroleum-gas-reserves",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-petroleum-gas-reserves",
+      "zenodo": "10.5281/zenodo.23122562"
+    },
+    "qld-police-stations": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-police-stations",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-police-stations",
+      "zenodo": "10.5281/zenodo.23122440"
+    },
+    "qld-pool-safety-certificates": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-pool-safety-certificates",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-pool-safety-certificates",
+      "zenodo": "10.5281/zenodo.23122672"
+    },
+    "qld-pool-safety-inspectors": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-pool-safety-inspectors",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-pool-safety-inspectors",
+      "zenodo": "10.5281/zenodo.23122678"
+    },
+    "qld-pool-safety-register-pools": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-pool-safety-register-pools",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-pool-safety-register-pools",
+      "zenodo": "10.5281/zenodo.23122595"
+    },
+    "qld-prison-locations": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-prison-locations",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-prison-locations",
+      "zenodo": "10.5281/zenodo.23122537"
+    },
+    "qld-public-dental-waiting-lists": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-public-dental-waiting-lists",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-public-dental-waiting-lists",
+      "zenodo": "10.5281/zenodo.23122422"
+    },
+    "qld-public-housing-dwellings": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-public-housing-dwellings",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-public-housing-dwellings",
+      "zenodo": "10.5281/zenodo.23122768"
+    },
+    "qld-public-libraries-directory": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-public-libraries-directory",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-public-libraries-directory",
+      "zenodo": "10.5281/zenodo.23123010"
+    },
+    "qld-public-library-branch-statistics": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-public-library-branch-statistics",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-public-library-branch-statistics",
+      "zenodo": "10.5281/zenodo.23123017"
+    },
+    "qld-public-library-council-statistics": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-public-library-council-statistics",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-public-library-council-statistics",
+      "zenodo": "10.5281/zenodo.23123024"
+    },
+    "qld-qbcc-licensed-contractors": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-qbcc-licensed-contractors",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-qbcc-licensed-contractors",
+      "zenodo": "10.5281/zenodo.23122367"
+    },
+    "qld-qleave-contract-disclosure": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-qleave-contract-disclosure",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-qleave-contract-disclosure",
+      "zenodo": "10.5281/zenodo.23122432"
+    },
+    "qld-regional-bus-patronage": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-regional-bus-patronage",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-regional-bus-patronage",
+      "zenodo": "10.5281/zenodo.23122874"
+    },
+    "qld-registered-organisations-by-region": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-registered-organisations-by-region",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-registered-organisations-by-region",
+      "zenodo": "10.5281/zenodo.23122393"
+    },
+    "qld-registration-renewals-daily": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-registration-renewals-daily",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-registration-renewals-daily",
+      "zenodo": "10.5281/zenodo.23122321"
+    },
+    "qld-road-casualties": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-road-casualties",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-road-casualties",
+      "zenodo": "10.5281/zenodo.23076539"
+    },
+    "qld-road-crash-driver-demographics": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-road-crash-driver-demographics",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-road-crash-driver-demographics",
+      "zenodo": "10.5281/zenodo.23076545"
+    },
+    "qld-road-crash-factors": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-road-crash-factors",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-road-crash-factors",
+      "zenodo": "10.5281/zenodo.23076689"
+    },
+    "qld-road-crash-locations": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-road-crash-locations",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-road-crash-locations",
+      "zenodo": "10.5281/zenodo.23076480"
+    },
+    "qld-road-crash-restraint-helmet-use": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-road-crash-restraint-helmet-use",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-road-crash-restraint-helmet-use",
+      "zenodo": "10.5281/zenodo.23076552"
+    },
+    "qld-road-crash-vehicle-types": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-road-crash-vehicle-types",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-road-crash-vehicle-types",
+      "zenodo": "10.5281/zenodo.23076653"
+    },
+    "qld-rural-fire-stations": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-rural-fire-stations",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-rural-fire-stations",
+      "zenodo": "10.5281/zenodo.23122438"
+    },
+    "qld-school-catchments-junior-secondary": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-school-catchments-junior-secondary",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-school-catchments-junior-secondary",
+      "zenodo": "10.5281/zenodo.23122715"
+    },
+    "qld-school-catchments-primary": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-school-catchments-primary",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-school-catchments-primary",
+      "zenodo": "10.5281/zenodo.23122717"
+    },
+    "qld-school-catchments-senior-secondary": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-school-catchments-senior-secondary",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-school-catchments-senior-secondary",
+      "zenodo": "10.5281/zenodo.23122726"
+    },
+    "qld-school-details": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-school-details",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-school-details",
+      "zenodo": "10.5281/zenodo.23122703"
+    },
+    "qld-shark-control-catch-lengths": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-shark-control-catch-lengths",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-shark-control-catch-lengths",
+      "zenodo": "10.5281/zenodo.23122966"
+    },
+    "qld-shark-control-catch-numbers": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-shark-control-catch-numbers",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-shark-control-catch-numbers",
+      "zenodo": "10.5281/zenodo.23122971"
+    },
+    "qld-shark-control-gbr-catches": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-shark-control-gbr-catches",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-shark-control-gbr-catches",
+      "zenodo": "10.5281/zenodo.23122981"
+    },
+    "qld-social-housing-maintenance": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-social-housing-maintenance",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-social-housing-maintenance",
+      "zenodo": "10.5281/zenodo.23122761"
+    },
+    "qld-social-housing-register": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-social-housing-register",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-social-housing-register",
+      "zenodo": "10.5281/zenodo.23122757"
+    },
+    "qld-speed-camera-trailer-sites": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-speed-camera-trailer-sites",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-speed-camera-trailer-sites",
+      "zenodo": "10.5281/zenodo.23122232"
+    },
+    "qld-state-school-enrolments-february": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-state-school-enrolments-february",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-state-school-enrolments-february",
+      "zenodo": "10.5281/zenodo.23122706"
+    },
+    "qld-surface-water-gauging-stations": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-surface-water-gauging-stations",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-surface-water-gauging-stations",
+      "zenodo": "10.5281/zenodo.23122775"
+    },
+    "qld-tmr-contract-disclosure": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-tmr-contract-disclosure",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-tmr-contract-disclosure",
+      "zenodo": "10.5281/zenodo.23122424"
+    },
+    "qld-top-baby-names": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-top-baby-names",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-top-baby-names",
+      "zenodo": "10.5281/zenodo.23122174"
+    },
+    "qld-top-baby-names-1960-2005": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-top-baby-names-1960-2005",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-top-baby-names-1960-2005",
+      "zenodo": "10.5281/zenodo.23122180"
+    },
+    "qld-traffic-by-hour-and-day": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-traffic-by-hour-and-day",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-traffic-by-hour-and-day",
+      "zenodo": "10.5281/zenodo.23122779"
+    },
+    "qld-traffic-census": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-traffic-census",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-traffic-census",
+      "zenodo": "10.5281/zenodo.23122798"
+    },
+    "qld-traffic-infringement-payments": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-traffic-infringement-payments",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-traffic-infringement-payments",
+      "zenodo": "10.5281/zenodo.23122222"
+    },
+    "qld-traffic-infringements-issued": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-traffic-infringements-issued",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-traffic-infringements-issued",
+      "zenodo": "10.5281/zenodo.23122210"
+    },
+    "qld-translink-citytrain-punctuality": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-translink-citytrain-punctuality",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-translink-citytrain-punctuality",
+      "zenodo": "10.5281/zenodo.23122845"
+    },
+    "qld-translink-complaints": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-translink-complaints",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-translink-complaints",
+      "zenodo": "10.5281/zenodo.23122847"
+    },
+    "qld-translink-fines-warnings": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-translink-fines-warnings",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-translink-fines-warnings",
+      "zenodo": "10.5281/zenodo.23122850"
+    },
+    "qld-translink-origin-destination-stops": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-translink-origin-destination-stops",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-translink-origin-destination-stops",
+      "zenodo": "10.5281/zenodo.23122882"
+    },
+    "qld-translink-origin-destination-trips": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-translink-origin-destination-trips",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-translink-origin-destination-trips",
+      "zenodo": "10.5281/zenodo.23122887"
+    },
+    "qld-translink-passenger-injuries": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-translink-passenger-injuries",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-translink-passenger-injuries",
+      "zenodo": "10.5281/zenodo.23122852"
+    },
+    "qld-translink-patronage-regional": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-translink-patronage-regional",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-translink-patronage-regional",
+      "zenodo": "10.5281/zenodo.23122854"
+    },
+    "qld-translink-patronage-seq": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-translink-patronage-seq",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-translink-patronage-seq",
+      "zenodo": "10.5281/zenodo.23122859"
+    },
+    "qld-translink-seq-bus-punctuality": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-translink-seq-bus-punctuality",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-translink-seq-bus-punctuality",
+      "zenodo": "10.5281/zenodo.23122863"
+    },
+    "qld-translink-taxi-subsidy": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-translink-taxi-subsidy",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-translink-taxi-subsidy",
+      "zenodo": "10.5281/zenodo.23122865"
+    },
+    "qld-translink-tram-punctuality": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-translink-tram-punctuality",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-translink-tram-punctuality",
+      "zenodo": "10.5281/zenodo.23122867"
+    },
+    "qld-traveltrain-patronage": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-traveltrain-patronage",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-traveltrain-patronage",
+      "zenodo": "10.5281/zenodo.23122878"
+    },
+    "qld-unclaimed-money": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-unclaimed-money",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-unclaimed-money",
+      "zenodo": "10.5281/zenodo.23122681"
+    },
+    "qld-urban-fire-stations": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-urban-fire-stations",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-urban-fire-stations",
+      "zenodo": "10.5281/zenodo.23122434"
+    },
+    "qld-valuation-objection-rates": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-valuation-objection-rates",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-valuation-objection-rates",
+      "zenodo": "10.5281/zenodo.23122512"
+    },
+    "qld-vehicle-registration-transfers": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-vehicle-registration-transfers",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-vehicle-registration-transfers",
+      "zenodo": "10.5281/zenodo.23122283"
+    },
+    "qld-vehicle-registrations-by-suburb": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-vehicle-registrations-by-suburb",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-vehicle-registrations-by-suburb",
+      "zenodo": "10.5281/zenodo.23122237"
+    },
+    "qld-vessel-registrations": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-vessel-registrations",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-vessel-registrations",
+      "zenodo": "10.5281/zenodo.23122329"
+    },
+    "qld-youth-detention-daily-by-age": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-youth-detention-daily-by-age",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-youth-detention-daily-by-age",
+      "zenodo": "10.5281/zenodo.23122576"
+    },
+    "qld-youth-detention-daily-by-centre": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-youth-detention-daily-by-centre",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-youth-detention-daily-by-centre",
+      "zenodo": "10.5281/zenodo.23122582"
+    },
+    "qld-youth-detention-daily-by-indigenous-status": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-youth-detention-daily-by-indigenous-status",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-youth-detention-daily-by-indigenous-status",
+      "zenodo": "10.5281/zenodo.23122587"
+    },
+    "qld-youth-detention-daily-by-legal-status": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-youth-detention-daily-by-legal-status",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-youth-detention-daily-by-legal-status",
+      "zenodo": "10.5281/zenodo.23122589"
+    },
+    "qld-youth-detention-daily-by-sex": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-youth-detention-daily-by-sex",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-youth-detention-daily-by-sex",
+      "zenodo": "10.5281/zenodo.23122591"
+    },
+    "rba-cash-rate": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/rba-cash-rate",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/rba-cash-rate",
+      "zenodo": "10.5281/zenodo.23077327"
+    },
+    "rba-indicator-lending-rates": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/rba-indicator-lending-rates",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/rba-indicator-lending-rates",
+      "zenodo": "10.5281/zenodo.23077374"
+    },
+    "rba-money-market-daily": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/rba-money-market-daily",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/rba-money-market-daily",
+      "zenodo": "10.5281/zenodo.23077335"
+    },
+    "rba-paid-deposit-rates": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/rba-paid-deposit-rates",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/rba-paid-deposit-rates",
+      "zenodo": "10.5281/zenodo.23077361"
+    },
+    "rba-retail-deposit-rates": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/rba-retail-deposit-rates",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/rba-retail-deposit-rates",
+      "zenodo": "10.5281/zenodo.23077340"
+    },
+    "rogs-corrective-services": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/rogs-corrective-services",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/rogs-corrective-services",
+      "zenodo": "10.5281/zenodo.23077583"
+    },
+    "rogs-homelessness-services": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/rogs-homelessness-services",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/rogs-homelessness-services",
+      "zenodo": "10.5281/zenodo.23077578"
+    },
+    "rogs-youth-justice": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/rogs-youth-justice",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/rogs-youth-justice",
+      "zenodo": "10.5281/zenodo.23077587"
+    },
+    "sa-adelaide-city-barbecues": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-adelaide-city-barbecues",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-adelaide-city-barbecues",
+      "zenodo": "10.5281/zenodo.23123432"
+    },
+    "sa-air-quality-monitoring-sites": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-air-quality-monitoring-sites",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-air-quality-monitoring-sites",
+      "zenodo": "10.5281/zenodo.23116547"
+    },
+    "sa-baby-names-boys": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-baby-names-boys",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-baby-names-boys",
+      "zenodo": "10.5281/zenodo.23116419"
+    },
+    "sa-baby-names-girls": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-baby-names-girls",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-baby-names-girls",
+      "zenodo": "10.5281/zenodo.23116421"
+    },
+    "sa-boat-registrations": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-boat-registrations",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-boat-registrations",
+      "zenodo": "10.5281/zenodo.23116535"
+    },
+    "sa-camera-detections-not-accepted": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-camera-detections-not-accepted",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-camera-detections-not-accepted",
+      "zenodo": "10.5281/zenodo.23116465"
+    },
+    "sa-camera-expiation-offences": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-camera-expiation-offences",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-camera-expiation-offences",
+      "zenodo": "10.5281/zenodo.23116451"
+    },
+    "sa-crime-statistics": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-crime-statistics",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-crime-statistics",
+      "zenodo": "10.5281/zenodo.23116427"
+    },
+    "sa-dog-cat-incidents": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-dog-cat-incidents",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-dog-cat-incidents",
+      "zenodo": "10.5281/zenodo.23116542"
+    },
+    "sa-dogs-cats-owners": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-dogs-cats-owners",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-dogs-cats-owners",
+      "zenodo": "10.5281/zenodo.23116539"
+    },
+    "sa-dogs-cats-registered-animals": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-dogs-cats-registered-animals",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-dogs-cats-registered-animals",
+      "zenodo": "10.5281/zenodo.23116537"
+    },
+    "sa-drivers-licences-by-postcode": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-drivers-licences-by-postcode",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-drivers-licences-by-postcode",
+      "zenodo": "10.5281/zenodo.23116499"
+    },
+    "sa-family-domestic-abuse-offences": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-family-domestic-abuse-offences",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-family-domestic-abuse-offences",
+      "zenodo": "10.5281/zenodo.23116437"
+    },
+    "sa-fire-history": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-fire-history",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-fire-history",
+      "zenodo": "10.5281/zenodo.23116356"
+    },
+    "sa-food-enforcement-food-service": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-food-enforcement-food-service",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-food-enforcement-food-service",
+      "zenodo": "10.5281/zenodo.23116571"
+    },
+    "sa-food-enforcement-food-transporter": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-food-enforcement-food-transporter",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-food-enforcement-food-transporter",
+      "zenodo": "10.5281/zenodo.23116573"
+    },
+    "sa-food-enforcement-processor-manufacturer": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-food-enforcement-processor-manufacturer",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-food-enforcement-processor-manufacturer",
+      "zenodo": "10.5281/zenodo.23116575"
+    },
+    "sa-food-enforcement-retail": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-food-enforcement-retail",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-food-enforcement-retail",
+      "zenodo": "10.5281/zenodo.23116577"
+    },
+    "sa-heritage-places": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-heritage-places",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-heritage-places",
+      "zenodo": "10.5281/zenodo.23116507"
+    },
+    "sa-high-school-zones": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-high-school-zones",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-high-school-zones",
+      "zenodo": "10.5281/zenodo.23116515"
+    },
+    "sa-liquor-gaming-licences-2018": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-liquor-gaming-licences-2018",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-liquor-gaming-licences-2018",
+      "zenodo": "10.5281/zenodo.23116531"
+    },
+    "sa-metro-median-house-prices": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-metro-median-house-prices",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-metro-median-house-prices",
+      "zenodo": "10.5281/zenodo.23116441"
+    },
+    "sa-mobile-camera-location-codes": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-mobile-camera-location-codes",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-mobile-camera-location-codes",
+      "zenodo": "10.5281/zenodo.23116467"
+    },
+    "sa-police-expiation-offences": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-police-expiation-offences",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-police-expiation-offences",
+      "zenodo": "10.5281/zenodo.23116463"
+    },
+    "sa-primary-school-zones": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-primary-school-zones",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-primary-school-zones",
+      "zenodo": "10.5281/zenodo.23116519"
+    },
+    "sa-private-hospitals": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-private-hospitals",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-private-hospitals",
+      "zenodo": "10.5281/zenodo.23116524"
+    },
+    "sa-private-rents-by-postcode": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-private-rents-by-postcode",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-private-rents-by-postcode",
+      "zenodo": "10.5281/zenodo.23116447"
+    },
+    "sa-private-rents-by-suburb": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-private-rents-by-suburb",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-private-rents-by-suburb",
+      "zenodo": "10.5281/zenodo.23116445"
+    },
+    "sa-public-hospitals": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-public-hospitals",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-public-hospitals",
+      "zenodo": "10.5281/zenodo.23116522"
+    },
+    "sa-public-housing-dwellings": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-public-housing-dwellings",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-public-housing-dwellings",
+      "zenodo": "10.5281/zenodo.23116561"
+    },
+    "sa-public-housing-households": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-public-housing-households",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-public-housing-households",
+      "zenodo": "10.5281/zenodo.23116565"
+    },
+    "sa-public-housing-new-households": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-public-housing-new-households",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-public-housing-new-households",
+      "zenodo": "10.5281/zenodo.23116567"
+    },
+    "sa-registered-vehicles-by-body-type": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-registered-vehicles-by-body-type",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-registered-vehicles-by-body-type",
+      "zenodo": "10.5281/zenodo.23116493"
+    },
+    "sa-registered-vehicles-by-colour": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-registered-vehicles-by-colour",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-registered-vehicles-by-colour",
+      "zenodo": "10.5281/zenodo.23116485"
+    },
+    "sa-registered-vehicles-by-postcode": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-registered-vehicles-by-postcode",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-registered-vehicles-by-postcode",
+      "zenodo": "10.5281/zenodo.23116474"
+    },
+    "sa-reservoir-volumes": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-reservoir-volumes",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-reservoir-volumes",
+      "zenodo": "10.5281/zenodo.23116553"
+    },
+    "sa-river-murray-flood-100gl": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-river-murray-flood-100gl",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-river-murray-flood-100gl",
+      "zenodo": "10.5281/zenodo.23116364"
+    },
+    "sa-river-murray-flood-120gl": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-river-murray-flood-120gl",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-river-murray-flood-120gl",
+      "zenodo": "10.5281/zenodo.23116368"
+    },
+    "sa-river-murray-flood-130gl": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-river-murray-flood-130gl",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-river-murray-flood-130gl",
+      "zenodo": "10.5281/zenodo.23116372"
+    },
+    "sa-river-murray-flood-140gl": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-river-murray-flood-140gl",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-river-murray-flood-140gl",
+      "zenodo": "10.5281/zenodo.23116378"
+    },
+    "sa-river-murray-flood-160gl": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-river-murray-flood-160gl",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-river-murray-flood-160gl",
+      "zenodo": "10.5281/zenodo.23116386"
+    },
+    "sa-river-murray-flood-180gl": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-river-murray-flood-180gl",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-river-murray-flood-180gl",
+      "zenodo": "10.5281/zenodo.23116389"
+    },
+    "sa-river-murray-flood-200gl": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-river-murray-flood-200gl",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-river-murray-flood-200gl",
+      "zenodo": "10.5281/zenodo.23116391"
+    },
+    "sa-river-murray-flood-2022": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-river-murray-flood-2022",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-river-murray-flood-2022",
+      "zenodo": "10.5281/zenodo.23116417"
+    },
+    "sa-river-murray-flood-250gl": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-river-murray-flood-250gl",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-river-murray-flood-250gl",
+      "zenodo": "10.5281/zenodo.23116393"
+    },
+    "sa-river-murray-flood-300gl": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-river-murray-flood-300gl",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-river-murray-flood-300gl",
+      "zenodo": "10.5281/zenodo.23116402"
+    },
+    "sa-river-murray-flood-341gl": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-river-murray-flood-341gl",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-river-murray-flood-341gl",
+      "zenodo": "10.5281/zenodo.23116406"
+    },
+    "sa-road-crash-locations": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-road-crash-locations",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-road-crash-locations",
+      "zenodo": "10.5281/zenodo.23076655"
+    },
+    "sa-school-enrolments-by-type": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-school-enrolments-by-type",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-school-enrolments-by-type",
+      "zenodo": "10.5281/zenodo.23116551"
+    },
+    "sa-suburb-boundaries": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-suburb-boundaries",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-suburb-boundaries",
+      "zenodo": "10.5281/zenodo.23116503"
+    },
+    "sa-traffic-volumes": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/sa-traffic-volumes",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/sa-traffic-volumes",
+      "zenodo": "10.5281/zenodo.23116511"
+    },
+    "tas-accredited-building-practitioners-2017": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/tas-accredited-building-practitioners-2017",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/tas-accredited-building-practitioners-2017",
+      "zenodo": "10.5281/zenodo.23123687"
+    },
+    "tas-deaths-1803-1939": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/tas-deaths-1803-1939",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/tas-deaths-1803-1939",
+      "zenodo": "10.5281/zenodo.23123647"
+    },
+    "tas-rental-bonds-closed-2016-11": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/tas-rental-bonds-closed-2016-11",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/tas-rental-bonds-closed-2016-11",
+      "zenodo": "10.5281/zenodo.23123681"
+    },
+    "tas-rental-bonds-lodged-2016-11": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/tas-rental-bonds-lodged-2016-11",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/tas-rental-bonds-lodged-2016-11",
+      "zenodo": "10.5281/zenodo.23123675"
+    },
+    "tas-road-crashes": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/tas-road-crashes",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/tas-road-crashes",
+      "zenodo": "10.5281/zenodo.23076693"
+    },
+    "vic-air-quality-hourly": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-air-quality-hourly",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-air-quality-hourly",
+      "zenodo": "10.5281/zenodo.23116219"
+    },
+    "vic-ambulance-response-times-by-lga": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-ambulance-response-times-by-lga",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-ambulance-response-times-by-lga",
+      "zenodo": "10.5281/zenodo.23116198"
+    },
+    "vic-ambulance-response-times-by-town": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-ambulance-response-times-by-town",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-ambulance-response-times-by-town",
+      "zenodo": "10.5281/zenodo.23116204"
+    },
+    "vic-ballarat-lightning-observations": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-ballarat-lightning-observations",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-ballarat-lightning-observations",
+      "zenodo": "10.5281/zenodo.23123426"
+    },
+    "vic-beach-report-enterococci": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-beach-report-enterococci",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-beach-report-enterococci",
+      "zenodo": "10.5281/zenodo.23116213"
+    },
+    "vic-beach-report-sites": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-beach-report-sites",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-beach-report-sites",
+      "zenodo": "10.5281/zenodo.23116217"
+    },
+    "vic-cfa-incident-responses": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-cfa-incident-responses",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-cfa-incident-responses",
+      "zenodo": "10.5281/zenodo.23116183"
+    },
+    "vic-consumer-enforcement-outcomes": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-consumer-enforcement-outcomes",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-consumer-enforcement-outcomes",
+      "zenodo": "10.5281/zenodo.23116290"
+    },
+    "vic-deaths-registered-by-month": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-deaths-registered-by-month",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-deaths-registered-by-month",
+      "zenodo": "10.5281/zenodo.23116253"
+    },
+    "vic-driver-licence-transfers-from-victoria": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-driver-licence-transfers-from-victoria",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-driver-licence-transfers-from-victoria",
+      "zenodo": "10.5281/zenodo.23116163"
+    },
+    "vic-driver-licence-transfers-to-victoria": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-driver-licence-transfers-to-victoria",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-driver-licence-transfers-to-victoria",
+      "zenodo": "10.5281/zenodo.23116339"
+    },
+    "vic-gaming-expenditure-by-venue": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-gaming-expenditure-by-venue",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-gaming-expenditure-by-venue",
+      "zenodo": "10.5281/zenodo.23116298"
+    },
+    "vic-gaming-expenditure-by-venue-history": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-gaming-expenditure-by-venue-history",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-gaming-expenditure-by-venue-history",
+      "zenodo": "10.5281/zenodo.23116301"
+    },
+    "vic-golden-plains-animal-registrations": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-golden-plains-animal-registrations",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-golden-plains-animal-registrations",
+      "zenodo": "10.5281/zenodo.23123416"
+    },
+    "vic-greater-dandenong-registered-dogs": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-greater-dandenong-registered-dogs",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-greater-dandenong-registered-dogs",
+      "zenodo": "10.5281/zenodo.23123413"
+    },
+    "vic-heritage-register": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-heritage-register",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-heritage-register",
+      "zenodo": "10.5281/zenodo.23116161"
+    },
+    "vic-important-dates": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-important-dates",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-important-dates",
+      "zenodo": "10.5281/zenodo.23116269"
+    },
+    "vic-land-tax-by-municipality": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-land-tax-by-municipality",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-land-tax-by-municipality",
+      "zenodo": "10.5281/zenodo.23116271"
+    },
+    "vic-land-transfer-duty-by-postcode": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-land-transfer-duty-by-postcode",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-land-transfer-duty-by-postcode",
+      "zenodo": "10.5281/zenodo.23116286"
+    },
+    "vic-liquor-licences": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-liquor-licences",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-liquor-licences",
+      "zenodo": "10.5281/zenodo.23116294"
+    },
+    "vic-marriages-registered-by-month": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-marriages-registered-by-month",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-marriages-registered-by-month",
+      "zenodo": "10.5281/zenodo.23116259"
+    },
+    "vic-measles-exposure-sites": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-measles-exposure-sites",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-measles-exposure-sites",
+      "zenodo": "10.5281/zenodo.23113635"
+    },
+    "vic-median-house-prices-by-suburb": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-median-house-prices-by-suburb",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-median-house-prices-by-suburb",
+      "zenodo": "10.5281/zenodo.23077353"
+    },
+    "vic-median-unit-prices-by-suburb": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-median-unit-prices-by-suburb",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-median-unit-prices-by-suburb",
+      "zenodo": "10.5281/zenodo.23116308"
+    },
+    "vic-median-vacant-land-prices-by-suburb": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-median-vacant-land-prices-by-suburb",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-median-vacant-land-prices-by-suburb",
+      "zenodo": "10.5281/zenodo.23116312"
+    },
+    "vic-melbourne-water-daily-storage": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-melbourne-water-daily-storage",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-melbourne-water-daily-storage",
+      "zenodo": "10.5281/zenodo.23116306"
+    },
+    "vic-metro-train-station-patronage": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-metro-train-station-patronage",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-metro-train-station-patronage",
+      "zenodo": "10.5281/zenodo.23116341"
+    },
+    "vic-mfb-fire-station-locations": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-mfb-fire-station-locations",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-mfb-fire-station-locations",
+      "zenodo": "10.5281/zenodo.23116207"
+    },
+    "vic-mobile-road-safety-camera-locations": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-mobile-road-safety-camera-locations",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-mobile-road-safety-camera-locations",
+      "zenodo": "10.5281/zenodo.23116314"
+    },
+    "vic-new-vehicle-registrations-monthly": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-new-vehicle-registrations-monthly",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-new-vehicle-registrations-monthly",
+      "zenodo": "10.5281/zenodo.23116335"
+    },
+    "vic-prison-locations": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-prison-locations",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-prison-locations",
+      "zenodo": "10.5281/zenodo.23116209"
+    },
+    "vic-recorded-offences-by-lga": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-recorded-offences-by-lga",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-recorded-offences-by-lga",
+      "zenodo": "10.5281/zenodo.23077130"
+    },
+    "vic-recorded-offences-by-suburb": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-recorded-offences-by-suburb",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-recorded-offences-by-suburb",
+      "zenodo": "10.5281/zenodo.23077147"
+    },
+    "vic-regional-train-station-patronage": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-regional-train-station-patronage",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-regional-train-station-patronage",
+      "zenodo": "10.5281/zenodo.23116347"
+    },
+    "vic-registered-events-by-calendar-year": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-registered-events-by-calendar-year",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-registered-events-by-calendar-year",
+      "zenodo": "10.5281/zenodo.23116261"
+    },
+    "vic-registered-events-by-financial-year": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-registered-events-by-financial-year",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-registered-events-by-financial-year",
+      "zenodo": "10.5281/zenodo.23116265"
+    },
+    "vic-rents-by-suburb": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-rents-by-suburb",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-rents-by-suburb",
+      "zenodo": "10.5281/zenodo.23077293"
+    },
+    "vic-road-crashes": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-road-crashes",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-road-crashes",
+      "zenodo": "10.5281/zenodo.23076564"
+    },
+    "vic-road-safety-camera-fines-by-site": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-road-safety-camera-fines-by-site",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-road-safety-camera-fines-by-site",
+      "zenodo": "10.5281/zenodo.23116245"
+    },
+    "vic-school-locations": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-school-locations",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-school-locations",
+      "zenodo": "10.5281/zenodo.23116165"
+    },
+    "vic-school-zones-primary-2027": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-school-zones-primary-2027",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-school-zones-primary-2027",
+      "zenodo": "10.5281/zenodo.23116169"
+    },
+    "vic-school-zones-year7-2027": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-school-zones-year7-2027",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-school-zones-year7-2027",
+      "zenodo": "10.5281/zenodo.23116173"
+    },
+    "vic-southern-grampians-animal-registrations": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-southern-grampians-animal-registrations",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-southern-grampians-animal-registrations",
+      "zenodo": "10.5281/zenodo.23123424"
+    },
+    "vic-stream-restrictions": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-stream-restrictions",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-stream-restrictions",
+      "zenodo": "10.5281/zenodo.23116350"
+    },
+    "vic-traffic-infringements-vs-official-warnings": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-traffic-infringements-vs-official-warnings",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-traffic-infringements-vs-official-warnings",
+      "zenodo": "10.5281/zenodo.23116249"
+    },
+    "vic-traffic-volume-aadt-2019": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-traffic-volume-aadt-2019",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-traffic-volume-aadt-2019",
+      "zenodo": "10.5281/zenodo.23116175"
+    },
+    "vic-unclaimed-money-claims": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-unclaimed-money-claims",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-unclaimed-money-claims",
+      "zenodo": "10.5281/zenodo.23116273"
+    },
+    "vic-unclaimed-money-payments": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-unclaimed-money-payments",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-unclaimed-money-payments",
+      "zenodo": "10.5281/zenodo.23116281"
+    },
+    "vic-vehicle-registrations-by-model": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-vehicle-registrations-by-model",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-vehicle-registrations-by-model",
+      "zenodo": "10.5281/zenodo.23116327"
+    },
+    "vic-vehicle-registrations-by-postcode": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-vehicle-registrations-by-postcode",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-vehicle-registrations-by-postcode",
+      "zenodo": "10.5281/zenodo.23116316"
+    },
+    "vic-water-storage-levels": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-water-storage-levels",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-water-storage-levels",
+      "zenodo": "10.5281/zenodo.23077367"
+    },
+    "vic-water-storages": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/vic-water-storages",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/vic-water-storages",
+      "zenodo": "10.5281/zenodo.23077383"
+    },
+    "wa-dpird-weather-stations": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/wa-dpird-weather-stations",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/wa-dpird-weather-stations",
+      "zenodo": "10.5281/zenodo.23123619"
+    },
+    "wa-public-housing-dwelling-age-by-suburb": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/wa-public-housing-dwelling-age-by-suburb",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/wa-public-housing-dwelling-age-by-suburb",
+      "zenodo": "10.5281/zenodo.23123613"
+    },
+    "wa-public-libraries": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/wa-public-libraries",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/wa-public-libraries",
+      "zenodo": "10.5281/zenodo.23123610"
+    },
+    "wa-slwa-obituaries-index": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/wa-slwa-obituaries-index",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/wa-slwa-obituaries-index",
+      "zenodo": "10.5281/zenodo.23123602"
+    },
+    "wa-traffic-digest": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/wa-traffic-digest",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/wa-traffic-digest",
+      "zenodo": "10.5281/zenodo.23123635"
+    },
+    "wa-wave-stations-current": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/wa-wave-stations-current",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/wa-wave-stations-current",
+      "zenodo": "10.5281/zenodo.23123621"
+    },
+    "wa-wave-stations-historic": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/wa-wave-stations-historic",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/wa-wave-stations-historic",
+      "zenodo": "10.5281/zenodo.23123629"
+    }
+  }
+}

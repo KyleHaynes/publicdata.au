@@ -1,0 +1,28 @@
+{
+  "dataset": "nsw-rental-bond-refunds-2023",
+  "version": "2024-05-09",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:06:59+00:00",
+  "sha256": "e06bc2da414d2c1c0fea6f192d0bb618c7c2e699195bdf013d85cc1f60ad7e54",
+  "bytes": 12322336,
+  "filename": "RentalBond_Refunds_Year_2023.xlsx",
+  "encoding": "xlsx",
+  "source": {
+    "url": "https://www.nsw.gov.au/sites/default/files/noindex/2024-05/RentalBond_Refunds_Year_2023.xlsx",
+    "etag": "663c5e11-bc0620",
+    "http_last_modified": "Thu, 09 May 2024 05:24:33 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "stated": "All material on this website is licensed under the Creative Commons Attribution 4.0 licence",
+    "normalised": "CC-BY-4.0",
+    "title": "CC BY 4.0",
+    "url": "https://www.nsw.gov.au/nsw-government/copyright",
+    "read_from": "https://www.nsw.gov.au/nsw-government/copyright",
+    "read_at": "2026-10-03T03:06:59+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "d9d4b91b4f49c42dd8943ef20cbf86ced51dfddc9763a16d624d6be0409e8a02"
+}

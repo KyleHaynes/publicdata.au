@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-coal-exports-by-country",
+  "version": "2026-06-10",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:00:55+00:00",
+  "sha256": "304e60eb7a291cfeb6fd341a080f21b9101e88f9cedf549bf9f95a51243c9a7c",
+  "bytes": 152866,
+  "filename": "2025-calendar-year-coal-sales-statistics.xlsx",
+  "encoding": "xlsx",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/a83acd64-6083-4c42-b38d-d551df66d1d1/resource/c522fcaa-89d7-4c76-bd6e-064d39617d38/download/2025-calendar-year-coal-sales-statistics.xlsx",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "annual-coal-statistics",
+    "package_id": "a83acd64-6083-4c42-b38d-d551df66d1d1",
+    "resource": "c522fcaa-89d7-4c76-bd6e-064d39617d38",
+    "resource_name": "2025 calendar year—Coal sales statistics",
+    "resource_last_modified": "2026-06-09T22:07:56.631016",
+    "package_modified": "2026-06-09T22:07:56.659001",
+    "package_version": "1.0",
+    "etag": "baa91550ee1c26a11ae418a9491f47df",
+    "http_last_modified": "Tue, 09 Jun 2026 22:07:58 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=annual-coal-statistics",
+    "read_at": "2026-10-03T03:00:55+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "43073a5ec037389732e31e856cf97b1687a3bc5b1c853b4977b4172993541825"
+}

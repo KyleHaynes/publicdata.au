@@ -1,0 +1,28 @@
+{
+  "dataset": "rba-money-market-daily",
+  "version": "2026-10-02",
+  "as_at": "",
+  "fetched_at": "2026-10-03T02:40:18+00:00",
+  "sha256": "c2f7be7a37497f1d8b02714a020b4812209f1893eede849fccfebd608d396fc7",
+  "bytes": 307401,
+  "filename": "f1-data.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.rba.gov.au/statistics/tables/csv/f1-data.csv",
+    "etag": "",
+    "http_last_modified": "Thu, 01 Oct 2026 23:02:08 GMT"
+  },
+  "licence": {
+    "id": "RBA-COPYRIGHT-NOTICE",
+    "stated": "may be used, reproduced, published, communicated to the public or otherwise referenced for personal or commercial use",
+    "normalised": "RBA-COPYRIGHT-NOTICE",
+    "title": "RBA copyright notice",
+    "url": "https://www.rba.gov.au/copyright/",
+    "read_from": "https://www.rba.gov.au/copyright/",
+    "read_at": "2026-10-03T02:40:18+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "e853430add7cb0d3cbd8744bec2b0ac6372842e92d73d53066a9050f754d129a"
+}

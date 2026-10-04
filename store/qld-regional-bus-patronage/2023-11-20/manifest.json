@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-regional-bus-patronage",
+  "version": "2023-11-20",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:02:54+00:00",
+  "sha256": "c424cc4a6527c0b5fccf08bde6cf66d53e93de777755a9ef45ebada611f647de",
+  "bytes": 2434,
+  "filename": "summary-regionalbuspatronage.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/a315b220-1ced-4a2d-814d-de847d5df4c6/resource/08ee7c48-a6b3-4ac9-b5c2-da50c159c14f/download/summary-regionalbuspatronage.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "qconnect-urban-bus-patronage",
+    "package_id": "a315b220-1ced-4a2d-814d-de847d5df4c6",
+    "resource": "08ee7c48-a6b3-4ac9-b5c2-da50c159c14f",
+    "resource_name": "Regional Urban Bus Patronage By Region/Operator",
+    "resource_last_modified": "2023-11-20T01:29:49.264149",
+    "package_modified": "2023-11-20T01:56:16.955447",
+    "package_version": "1.0",
+    "etag": "W/\"9a4a4ea470babc31df6b5c75a8656010",
+    "http_last_modified": "Mon, 20 Nov 2023 01:29:51 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-3.0",
+    "title": "Creative Commons Attribution 3.0",
+    "url": "https://creativecommons.org/licenses/by/3.0/au/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=qconnect-urban-bus-patronage",
+    "read_at": "2026-10-03T03:02:54+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "c1eee7f8f370509b40eaad5cc4ffcf026d3c27b8d61649e350fc08371373a031"
+}

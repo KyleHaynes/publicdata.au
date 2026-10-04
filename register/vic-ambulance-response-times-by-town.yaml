@@ -1,0 +1,97 @@
+slug: vic-ambulance-response-times-by-town
+title: Ambulance Victoria response times by town and city, 2017-18
+status: live
+topics:
+- health
+- emergencies
+example:
+  where:
+    final_dispatch_code: Code 1
+  group: ucl_name
+  metric: avg.avg_response_seconds
+  label: Average Code 1 response (seconds)
+order: 364
+collection: vic-ambulance-response-times
+collection_title: Ambulance Victoria response time performance
+search_title: Ambulance response times by town and city, Victoria (Ambulance Victoria)
+also_known_as:
+- Ambulance Victoria UCL response time performance
+- Code 1 ambulance response times by town
+- Victorian ambulance response times in urban centres
+keywords:
+- ambulance
+- response times
+- Code 1
+- Ambulance Victoria
+- urban centres
+- towns
+- Victoria
+faq:
+- q: What does each row hold?
+  a: One urban centre and locality of more than 7,500 people and dispatch code, Code 1 or Code 2, for the
+    2017-18 financial year, with the share of incidents reached within 15 minutes, the average response
+    time in seconds and the number of incidents. The publisher reports the 15 minute share for Code 1 only,
+    so it is blank on Code 2 rows.
+- q: What is the Total UCLs row?
+  a: The publisher's own total across all urban centres of more than 7,500 people, kept as published.
+- q: Why is there a row that repeats the column names?
+  a: The publisher's file holds the Code 1 table and then the Code 2 table, and repeats the header row
+    between them. That row is kept as published, with its number columns null.
+- q: Why is the share within 15 minutes text?
+  a: The publisher writes it with a percent sign, such as 91.35%, and it is kept as written.
+summary: The share of Code 1 ambulance incidents reached within 15 minutes, the average response time and
+  the number of incidents in each Victorian town and city of more than 7,500 people in 2017-18.
+description: Ambulance Victoria's response time performance by Urban Centre and Locality (UCL) for 2017-18,
+  covering the centres of more than 7,500 people for which the publisher sets its 90% target. Each row is
+  one centre and dispatch code, with the share of Code 1 incidents reached within 15 minutes, the average
+  response time in seconds and the number of incidents. The portal's 2018-19 file is no longer served by
+  the publisher, so 2017-18 is the newest year here.
+publisher:
+  name: Ambulance Victoria
+  short: Ambulance Victoria
+  jurisdiction: Vic
+  url: https://www.ambulance.vic.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://discover.data.vic.gov.au/dataset/ambulance-victoria-ucl-response-time-performance
+  attribution: Ambulance Victoria, Victorian Government, Ambulance Victoria UCL Response Time Performance 2017-18,
+    sourced {sourced}, https://discover.data.vic.gov.au/dataset/ambulance-victoria-ucl-response-time-performance,
+    licensed under CC BY 4.0.
+temporal_start: '2017-07-01'
+source:
+  adapter: ckan-resource
+  portal: https://discover.data.vic.gov.au
+  package: ambulance-victoria-ucl-response-time-performance
+  resource: 3264077a-5269-4090-91a3-8dfa05639bfe
+  url: https://discover.data.vic.gov.au/dataset/ambulance-victoria-ucl-response-time-performance
+  cadence: no longer updated
+row_label: Town and code rows
+fields:
+- name: ucl_name
+  label: Urban centre or locality
+  source: UCL Name
+  type: string
+- name: final_dispatch_code
+  label: Dispatch code
+  source: Final Dispatch Code
+  type: string
+  description: Code 1 is a lights and sirens response, Code 2 an urgent response without them.
+- name: pct_within_15_mins
+  label: Share within 15 minutes
+  source: '%<=15mins'
+  type: string
+  description: The share of incidents reached within 15 minutes, with its percent sign. Code 1 only.
+- name: avg_response_seconds
+  label: Average response time (seconds)
+  source: AVG RT - Seconds
+  type: integer
+  null_values:
+  - AVG RT - Seconds
+- name: total_incidents
+  label: Incidents
+  source: Total Number
+  type: integer
+  null_values:
+  - Total Number

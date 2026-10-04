@@ -1,0 +1,34 @@
+{
+  "dataset": "nsw-school-term-dates",
+  "version": "2025-02-05",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:03:32+00:00",
+  "sha256": "dbf714874c6fb6c405374e71b33caea080f019e5f24859e5812b86b937fb7035",
+  "bytes": 652,
+  "filename": "school_day-2019-2025.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://opendata.transport.nsw.gov.au/data/dataset/963e4946-46c0-4c9c-b4dc-5033c9e61f5c/resource/66953545-0a91-4a85-92c3-edf46b0f67e3/download/school_day-2019-2025.csv",
+    "portal": "https://data.nsw.gov.au/data",
+    "package": "2-school-and-public-holidays",
+    "package_id": "67e715b4-b116-45b6-ac5a-f2ffa92b2d92",
+    "resource": "2d434242-adb8-4576-9b2a-5592e5eaf0b6",
+    "resource_name": "NSW Public School Days - Not updated anymore",
+    "resource_last_modified": null,
+    "package_modified": "2025-02-04T22:24:50.410339",
+    "package_version": null,
+    "etag": "1692608729.089-652-1732252213",
+    "http_last_modified": "Mon, 21 Aug 2023 09:05:29 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution",
+    "url": "http://www.opendefinition.org/licenses/cc-by",
+    "read_from": "https://data.nsw.gov.au/data/api/3/action/package_show?id=2-school-and-public-holidays",
+    "read_at": "2026-10-03T03:03:32+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "90a78cd1bdf304c329b3a391e49c814f169a177d0adca9d5e939e89020ea5fba"
+}

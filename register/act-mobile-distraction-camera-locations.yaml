@@ -1,0 +1,94 @@
+slug: act-mobile-distraction-camera-locations
+title: Mobile phone detection camera sites, ACT
+status: live
+topics:
+- roads
+- places
+example:
+  group: suburb
+  metric: count
+sample:
+  spread: site_type
+order: 458
+collection: act-traffic-fines
+collection_title: Traffic and parking fines in the ACT
+search_title: ACT mobile phone detection camera locations (Access Canberra)
+also_known_as:
+- ACT mobile distraction camera locations
+- Canberra mobile phone camera sites
+- ACT seatbelt camera locations
+keywords:
+- mobile phone detection cameras
+- distracted driving
+- camera locations
+- Canberra
+- ACT
+faq:
+- q: What is in each row?
+  a: One fixed or transportable site for the cameras that detect drivers using a mobile phone, with the
+    site name, suburb, coordinates, the direction of travel monitored, the site type and the location code.
+- q: How do I link it to the fines?
+  a: The location code matches the camera location in the ACT traffic and camera fines table in this
+    collection, where these cameras' infringements carry the type TRF_MDDC.
+summary: The fixed and transportable sites the ACT uses for mobile phone detection cameras, one row per
+  site with its coordinates and the direction of travel monitored.
+description: The sites of the ACT's mobile distraction cameras, which detect drivers using a mobile phone,
+  as Access Canberra lists them. Each row carries the site name, suburb, latitude and longitude, the
+  direction of travel monitored, whether it is a fixed or transportable site, and the location code.
+publisher:
+  name: Access Canberra, City and Environment Directorate
+  short: Access Canberra
+  jurisdiction: ACT
+  url: https://www.accesscanberra.act.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.act.gov.au/d/5ezj-yjxz
+  attribution: Access Canberra, ACT Government, Mobile Distraction - Fixed and Transportable camera locations,
+    https://www.data.act.gov.au/d/5ezj-yjxz, accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: socrata
+  portal: https://www.data.act.gov.au
+  package: 5ezj-yjxz
+  url: https://www.data.act.gov.au/d/5ezj-yjxz
+  cadence: monthly
+key:
+- location_code
+geometry:
+  lon: longitude
+  lat: latitude
+  crs: EPSG:4283
+  crs_note: Longitude and latitude in decimal degrees as published. The publisher does not name the
+    datum; GDA94 differs from GDA2020 and WGS84 by under 2 metres.
+row_label: Camera sites
+fields:
+- name: site_name
+  label: Site
+  source: Site Name
+  type: string
+- name: suburb
+  label: Suburb
+  source: Suburb
+  type: string
+- name: latitude
+  label: Latitude
+  source: Latitude
+  type: number
+- name: longitude
+  label: Longitude
+  source: Longitude
+  type: number
+- name: direction_of_travel
+  label: Direction monitored
+  source: Direction of travel to be monitored
+  type: string
+- name: site_type
+  label: Site type
+  source: Site Type
+  type: string
+- name: location_code
+  label: Location code
+  source: Location Code
+  type: string
+note: Cells were typed and headers were made snake_case. The publisher's header is kept beside every field
+  in schema.json. Rows were left alone.

@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-pool-safety-inspectors",
+  "version": "2024-09-02",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:01:57+00:00",
+  "sha256": "ddc1d9ab4c47d478d7b371abf9316beada35aa409795b942a1729e6daf062156",
+  "bytes": 107050,
+  "filename": "psi-qbcc-licensee-register2024-08-01-06.41.14.365.csv",
+  "encoding": "utf-16",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/1b4c7d46-7e52-4c77-ab79-6e935dd5c691/resource/a345195c-5175-4a7e-8696-e277deb21cc0/download/psi-qbcc-licensee-register2024-08-01-06.41.14.365.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "poolsafetyregister",
+    "package_id": "1b4c7d46-7e52-4c77-ab79-6e935dd5c691",
+    "resource": "a345195c-5175-4a7e-8696-e277deb21cc0",
+    "resource_name": "Pool safety inspectors register",
+    "resource_last_modified": "2024-09-02T05:36:55.012869",
+    "package_modified": "2024-09-02T05:45:34.235091",
+    "package_version": "22016",
+    "etag": "138ab391204369d60ee671ec592a1b73",
+    "http_last_modified": "Mon, 02 Sep 2024 05:36:59 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=poolsafetyregister",
+    "read_at": "2026-10-03T03:01:57+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "096abb1d0717cfdf8571c8c35003e385489198e18b9078054a7fca5656d7a9cb"
+}

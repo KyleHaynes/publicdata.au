@@ -1,0 +1,79 @@
+slug: vic-mfb-fire-station-locations
+title: Metropolitan Fire Brigade station locations, Melbourne, 2013
+status: live
+topics:
+- emergencies
+example:
+  where: {station_no: {gte: 1}}
+  group: zone
+  metric: count
+  label: Stations
+sample:
+  spread: zone
+order: 365
+publisher:
+  name: Metropolitan Fire and Emergency Services Board
+  short: MFB
+  jurisdiction: Vic
+  url: https://www.frv.vic.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.gov.au/data/dataset/mfb-locations-vic
+  attribution: Metropolitan Fire and Emergency Services Board, Victorian Government, MFB Locations, sourced
+    {sourced}, https://data.gov.au/data/dataset/mfb-locations-vic, licensed under CC BY 3.0 AU.
+search_title: Melbourne fire station addresses and appliances, 2013 (Metropolitan Fire Brigade)
+also_known_as:
+- MFB fire station locations
+- Metropolitan Fire Brigade stations list
+- Melbourne fire stations by zone
+keywords:
+- fire stations
+- MFB
+- Metropolitan Fire Brigade
+- fire appliances
+- Melbourne
+- Fire Rescue Victoria
+faq:
+- q: What does each row hold?
+  a: One Metropolitan Fire Brigade station as listed in May 2013, with its zone, station number, street
+    address and postcode, and the fire appliances based there.
+- q: Is this the current list of Melbourne fire stations?
+  a: No. The file was published in 2013 and has not changed since. Fire Rescue Victoria replaced the
+    Metropolitan Fire Brigade on 1 July 2020, so stations, numbers and appliances may differ today.
+- q: Why does one row have no station number?
+  a: The publisher split the address of station 49 over two rows, so the second row holds only the end of
+    that address. It is kept as published.
+summary: The 47 Metropolitan Fire Brigade stations across Melbourne as listed in May 2013, with their zone,
+  station number, address and fire appliances.
+description: A list of Metropolitan Fire Brigade (MFB) fire stations published in May 2013, one row per
+  station, grouped into Central, Northern, Southern and Western zones. Each row gives the station
+  number, its street address with suburb and postcode, and the appliances based there. The MFB became part
+  of Fire Rescue Victoria on 1 July 2020, and this file is kept as a record of the 2013 list.
+source:
+  adapter: ckan-resource
+  portal: https://data.gov.au/data
+  package: mfb-locations-vic
+  resource: 088ed83a-abde-406a-b609-e5a830ec844d
+  url: https://data.gov.au/data/dataset/mfb-locations-vic
+  cadence: no longer updated
+row_label: Stations
+fields:
+- name: zone
+  label: Zone
+  source: Zone
+  type: string
+- name: station_no
+  label: Station number
+  source: Station No.
+  type: integer
+- name: address
+  label: Address
+  source: Address
+  type: string
+  description: Street, suburb and postcode as the publisher wrote them.
+- name: fire_appliances
+  label: Fire appliances
+  source: Fire Appliances
+  type: string

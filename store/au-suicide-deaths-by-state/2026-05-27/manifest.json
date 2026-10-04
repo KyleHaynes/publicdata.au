@@ -1,0 +1,26 @@
+{
+  "dataset": "au-suicide-deaths-by-state",
+  "version": "2026-05-27",
+  "as_at": "",
+  "fetched_at": "2026-09-30T19:39:53+00:00",
+  "sha256": "d349e47795520d6369ca2566ab91998c911c88cec7b7d0429a91a3986954f27b",
+  "bytes": 902701,
+  "filename": "AIHW_suicide-and-self-harm-monitoring_NMD_suicide.xlsx",
+  "encoding": "xlsx",
+  "source": {
+    "url": "https://www.aihw.gov.au/getmedia/3b28804a-27e5-41a9-9914-473a26b09750/AIHW_suicide-and-self-harm-monitoring_NMD_suicide.xlsx",
+    "etag": "639154713936964940",
+    "http_last_modified": "Tue, 26 May 2026 23:36:33 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "stated": "has been released under a Creative Commons BY 4.0 (CC-BY 4.0) licence",
+    "normalised": "CC-BY-4.0",
+    "title": "CC BY 4.0",
+    "url": "https://www.aihw.gov.au/copyright",
+    "read_at": "2026-09-30T19:39:53+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": []
+}

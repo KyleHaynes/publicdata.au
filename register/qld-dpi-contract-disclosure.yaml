@@ -1,0 +1,167 @@
+slug: qld-dpi-contract-disclosure
+title: Contracts awarded by the Department of Primary Industries, Queensland, from July 2025
+status: live
+topics:
+- government
+- economy
+order: 235
+collection: qld-contract-disclosure
+collection_title: Contract disclosure reports, Queensland Government agencies
+search_title: Department of Primary Industries contracts awarded, contract disclosure report (Queensland)
+also_known_as:
+- DPI contract disclosure Queensland
+- Queensland primary industries contracts awarded
+- DPI suppliers and contract values
+keywords:
+- contract disclosure
+- government contracts
+- procurement
+- Primary Industries
+- agriculture
+- Queensland
+faq:
+- q: What is in each row?
+  a: One contract the Department of Primary Industries awarded or varied from July 2025, with the agency,
+    description, award date, value, supplier name, address and ABN, whether it was varied, the procurement
+    method, the commence and finish dates and the extra fields for large contracts.
+- q: What is a contract disclosure report?
+  a: Queensland Government agencies must publish details of each contract they award worth $10,000 or
+    more, including GST. Contracts over $500,000 are meant to carry extra fields such as the evaluation
+    criteria and deliverables. In the versions held so far the department leaves those columns
+    blank in every row, the large contracts included, and gives no commence dates.
+- q: Which period does it cover?
+  a: The department's running report from July 2025, which it adds to each quarter. Its earlier quarterly
+    reports are separate files in the same portal dataset.
+summary: Every contract worth $10,000 or more awarded by the Queensland Department of Primary Industries
+  since July 2025, with supplier, value, date and procurement method.
+description: The running contract disclosure report of the Department of Primary Industries from July
+  2025, one row per contract, with the agency, description, award date, value, supplier, variation, confidentiality,
+  procurement method, the fields required for contracts over $500,000, the contract reference, category,
+  parent arrangement, commence and finish dates and supplier ABN. The department adds to the workbook
+  each quarter.
+publisher:
+  name: Department of Primary Industries
+  short: Primary Industries
+  jurisdiction: Qld
+  url: https://www.dpi.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/contract-disclosures-dpi
+  attribution: Department of Primary Industries, Queensland Government, Contract disclosures reports,
+    Department of Primary Industries, sourced {sourced}, https://www.data.qld.gov.au/dataset/contract-disclosures-dpi,
+    licensed under CC BY 4.0.
+example:
+  group: contract_category
+  metric: sum.contract_value
+  label: Value of the contracts disclosed in each category ($)
+sample:
+  order: [contract_value.desc]
+  label: The ten contracts of highest value, highest first.
+chart: none
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: contract-disclosures-dpi
+  resource: d3ba5b0d-0cb0-438f-8cf5-3e396f3bc7a4
+  url: https://www.data.qld.gov.au/dataset/contract-disclosures-dpi
+  cadence: quarterly
+row_label: Contracts
+fields:
+- name: agency
+  label: Agency
+  source: Agency (Dept or Stat Body)
+  type: string
+- name: agency_address
+  label: Agency address
+  source: Agency address
+  type: string
+- name: contract_description
+  label: Contract description
+  source: Contract description/name
+  type: string
+- name: award_date
+  label: Award date
+  source: Award contract date
+  type: string
+- name: contract_value
+  label: Contract value ($)
+  source: Contract value
+  type: number
+- name: supplier_name
+  label: Supplier
+  source: Supplier name
+  type: string
+- name: supplier_address
+  label: Supplier address
+  source: Supplier address
+  type: string
+- name: variation
+  label: Varied
+  source: Variation to contract (Yes/No)
+  type: string
+- name: confidentiality_provision
+  label: Confidentiality provision used
+  source: Specific confidentiality provision used
+  type: string
+- name: procurement_method
+  label: Procurement method
+  source: Procurement method
+  type: string
+- name: limited_tender_reason
+  label: Reason for limited tender
+  source: Reason for use of limited tendering
+  type: string
+- name: form_of_contract
+  label: Form of contract
+  source: Form of contract
+  type: string
+- name: offers_sought
+  label: Offers sought
+  source: Number of offers sought
+  type: string
+- name: evaluation_criteria
+  label: Evaluation criteria
+  source: Evaluation criteria and weightings
+  type: string
+- name: deliverables
+  label: Deliverables
+  source: Deliverables
+  type: string
+- name: milestones
+  label: Milestones
+  source: Contract milestones
+  type: string
+- name: performance_management
+  label: Performance management
+  source: Contract performance management
+  type: string
+- name: contract_reference
+  label: Contract reference
+  source: Contract reference number
+  type: string
+- name: contract_category
+  label: Contract category
+  source: Contract category group
+  type: string
+- name: parent_contract
+  label: Parent contract or supply arrangement
+  source: Parent contract number/SOA
+  type: string
+- name: variation_comments
+  label: Variation comments
+  source: Variation comments
+  type: string
+- name: commence_date
+  label: Commence date
+  source: Commence date
+  type: string
+- name: supplier_abn
+  label: Supplier ABN
+  source: Supplier ABN
+  type: string
+- name: finish_date
+  label: Finish date
+  source: Finish date
+  type: string
+note: Cells were typed and headers were made snake_case. Rows were left alone.

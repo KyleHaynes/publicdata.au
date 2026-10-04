@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-state-school-enrolments-february",
+  "version": "2022-09-19",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:02:14+00:00",
+  "sha256": "2d69c90e5d49daf4a889d7c8b54f1900606a63f5d8c667ea91c5f24031542cb1",
+  "bytes": 2478492,
+  "filename": "february-enrolments-by-school-and-year-level.xlsx",
+  "encoding": "xlsx",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/6b63d5c3-25bd-4853-b4cf-0cba4bdd2d49/resource/4d8a3dcc-30c7-40dd-be11-f13e97e26414/download/february-enrolments-by-school-and-year-level.xlsx",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "state-school-enrolments-by-school-and-year-level-february-census",
+    "package_id": "6b63d5c3-25bd-4853-b4cf-0cba4bdd2d49",
+    "resource": "4d8a3dcc-30c7-40dd-be11-f13e97e26414",
+    "resource_name": "February census of state school enrolments ",
+    "resource_last_modified": "2022-09-19T05:47:56.954511",
+    "package_modified": "2024-08-01T03:39:30.000682",
+    "package_version": "2.0",
+    "etag": "a72c79f6081561012aa16245cc552c42",
+    "http_last_modified": "Mon, 19 Sep 2022 05:48:03 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=state-school-enrolments-by-school-and-year-level-february-census",
+    "read_at": "2026-10-03T03:02:13+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "7e9ed515aea8873e1421fade13b83edc068013b8bf369506061df25c41849f20"
+}

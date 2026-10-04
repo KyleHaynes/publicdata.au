@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-public-dental-waiting-lists",
+  "version": "2026-03-30",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:00:01+00:00",
+  "sha256": "31eac1759f6bf8e3f8b30ec8c4379d95b562f1f3da1ef723fe2e6d60253bb596",
+  "bytes": 53441,
+  "filename": "2025-december-quarter-oral-health.xlsx",
+  "encoding": "xlsx",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/864912d4-078b-4384-8f8e-491a32efe053/resource/7e97f5e8-bc55-41b2-95ea-235cbfc284f9/download/2025-december-quarter-oral-health.xlsx",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "public-dental-waiting-lists-2025-2026",
+    "package_id": "864912d4-078b-4384-8f8e-491a32efe053",
+    "resource": "7e97f5e8-bc55-41b2-95ea-235cbfc284f9",
+    "resource_name": "October to December 2025 Public dental waiting list.xlsx",
+    "resource_last_modified": "2026-03-30T05:00:33.945651",
+    "package_modified": "2026-03-30T04:59:56.772383",
+    "package_version": "1.0",
+    "etag": "9727f1be86d33d899fea0d460201097d",
+    "http_last_modified": "Mon, 30 Mar 2026 04:59:58 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=public-dental-waiting-lists-2025-2026",
+    "read_at": "2026-10-03T03:00:00+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "e270540ef71a5d7aa522cd57a97a2a1bc8328c0f881bfc5ca6eec185bef1cbc5"
+}

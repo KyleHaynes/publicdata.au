@@ -1,0 +1,106 @@
+slug: sa-camera-detections-not-accepted
+title: Safety camera detections not issued as offences, South Australia
+status: live
+topics:
+- roads
+example:
+  group: not_accept_description
+  metric: count
+order: 421
+collection: sa-expiation-notices
+collection_title: Expiation notices, South Australia Police
+search_title: South Australia speed camera detections rejected, with reasons (SAPOL)
+also_known_as:
+- SAPOL Camera Not Accept Report
+- SA camera detections not accepted
+- Rejected speed camera images South Australia
+keywords:
+- speed camera
+- camera detections
+- rejected detections
+- emergency vehicles
+- expiation notices
+- South Australia Police
+- South Australia
+faq:
+- q: What is in each row?
+  a: One camera detection that did not result in an offence being issued, with the date and time, the publisher's
+    code and reason, the camera's location code and description, the vehicle, its speed and the limit, and the
+    camera category.
+- q: What are the reasons?
+  a: The publisher's own codes, such as an emergency vehicle within its tolerance or a plate that is not on file.
+    Each code comes with its description.
+- q: Which period does the table cover?
+  a: The financial year of the newest report, 2026-27 at the first version, which the publisher replaces as the
+    year goes on. Each new file becomes a version here.
+summary: Every detection by a South Australian safety camera in the newest financial year that did not become an
+  offence, with the reason the publisher gives.
+description: The Camera Not Accept Report from South Australia Police's Expiation Notice Branch. Each row is one
+  detection by a fixed or mobile camera that was not accepted as an offence, with the incident date and time, the
+  not-accept code and description, the date the record was created, the camera location, the vehicle, the speed
+  and limit, and the camera category.
+publisher:
+  name: South Australia Police
+  short: SAPOL
+  jurisdiction: SA
+  url: https://www.police.sa.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.sa.gov.au/data/dataset/expiation-notice-system-data
+  attribution: South Australia Police, Government of South Australia, Expiation Notice System Data,
+    https://data.sa.gov.au/data/dataset/expiation-notice-system-data, accessed {sourced}, licensed under CC BY
+    4.0.
+source:
+  adapter: ckan-resource
+  portal: https://data.sa.gov.au/data
+  package: expiation-notice-system-data
+  resource_match: ^Expiation Notices \d{4}-\d{4} Camera Not Accept(ed)? Report\s+[Zz]ipped$
+  url: https://data.sa.gov.au/data/dataset/expiation-notice-system-data
+  cadence: monthly
+row_label: Detections
+fields:
+- name: incident_datetime
+  label: Incident date and time
+  source: Incident Date and Time
+  type: datetime
+  date_format: '%d/%m/%y, %H:%M'
+- name: not_accept_code
+  label: Not accepted code
+  source: Not Accept Code
+  type: string
+- name: not_accept_description
+  label: Reason not accepted
+  source: Not Accept Description
+  type: string
+- name: created_date
+  label: Created date
+  source: Created Date
+  type: date
+  date_format: '%d/%m/%Y'
+- name: location_code
+  label: Location code
+  source: Location Code
+  type: string
+  description: Kept as text to preserve leading zeros.
+- name: location_description
+  label: Location
+  source: Location Description
+  type: string
+- name: vehicle_description
+  label: Vehicle
+  source: Vehicle Description
+  type: string
+- name: vehicle_speed
+  label: Vehicle speed (km/h)
+  source: Vehicle Speed
+  type: integer
+- name: speed_limit
+  label: Speed limit (km/h)
+  source: Expiation Zone Speed Limit
+  type: integer
+- name: camera_category
+  label: Camera category
+  source: Speed Camera Category
+  type: string

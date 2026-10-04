@@ -1,0 +1,164 @@
+slug: sa-liquor-gaming-licences-2018
+title: Liquor and gaming licences, South Australia, September 2018
+status: live
+topics:
+- economy
+- community
+example:
+  group: town
+  metric: sum.gaming_machines
+  label: Gaming machines
+sample:
+  spread: none
+order: 434
+temporal_start: '2018-09-01'
+search_title: South Australia liquor licences and gaming machine venues list, 2018 (Attorney-General's Department)
+also_known_as:
+- SA Liquor and Gaming Licences
+- South Australian liquor licence register 2018
+- SA hotels with gaming machines
+keywords:
+- liquor licences
+- gaming machines
+- pokies
+- hotels
+- licensed venues
+- Consumer and Business Services
+- South Australia
+faq:
+- q: What is in each row?
+  a: One liquor licence current or suspended in September 2018, with its licence number, the premises' name and
+    address, the liquor licence status and issue date, four yes or no flags the publisher sets on the licence, and
+    where the premises also holds a gaming machine licence, its status, issue date and number of machines.
+- q: Is this the current list?
+  a: No. It is the September 2018 snapshot. The portal also holds earlier snapshots from 2013 to 2017 and a
+    later one from August 2019. Venues may have opened, closed or changed since.
+- q: What does NULL mean?
+  a: The publisher writes NULL where a field is empty, such as the gaming columns for premises without gaming
+    machines. Those cells are null here.
+summary: Every liquor licence in South Australia in September 2018 with its premises, status and issue date, and
+  the gaming machine licence and number of machines where the premises held one. Closed snapshot.
+description: The Liquor and Gaming Licences list from Consumer and Business Services, published by the
+  Attorney-General's Department, as at September 2018. Each row is one licence with its identifier and number, the
+  premises' name, address, town and postcode, the liquor licence status and date issued, the publisher's EN, ET, EX
+  and C flags, and the gaming licence status, date issued and number of gaming machines. The premises' phone and fax
+  numbers are left out.
+publisher:
+  name: Attorney-General's Department
+  short: Attorney-General's
+  jurisdiction: SA
+  url: https://www.agd.sa.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.sa.gov.au/data/dataset/liquor-gaming-licences
+  attribution: Attorney-General's Department, Government of South Australia, Liquor & Gaming Licences, https://data.sa.gov.au/data/dataset/liquor-gaming-licences, accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: ckan-resource
+  portal: https://data.sa.gov.au/data
+  package: liquor-gaming-licences
+  resource: 3ea20b6b-b018-48bc-8d6c-0a43c00369f4
+  url: https://data.sa.gov.au/data/dataset/liquor-gaming-licences
+  cadence: closed
+key:
+- licence_id
+partition_by:
+- liquor_status
+row_label: Licences
+fields:
+- name: licence_id
+  label: Licence ID
+  source: LIC_ID
+  type: integer
+- name: licence_number
+  label: Licence number
+  source: LN_LicenceNumber
+  type: string
+- name: premises_name
+  label: Premises
+  source: PN_Name
+  type: string
+- name: address_1
+  label: Address line 1
+  source: LIC_PremisesAddress1
+  type: string
+  null_values:
+  - 'NULL'
+- name: address_2
+  label: Address line 2
+  source: LIC_PremisesAddress2
+  type: string
+  null_values:
+  - 'NULL'
+- name: town
+  label: Town or suburb
+  source: LIC_PremisesTown
+  type: string
+  null_values:
+  - 'NULL'
+- name: postcode
+  label: Postcode
+  source: LIC_PremisesPostCode
+  type: string
+  null_values:
+  - 'NULL'
+- name: state
+  label: State
+  source: LIC_PremisesState
+  type: string
+  null_values:
+  - 'NULL'
+- name: liquor_status
+  label: Liquor licence status
+  source: Liquor_Status
+  type: string
+- name: liquor_date_issued
+  label: Liquor licence issued
+  source: Liquor_DateIssued
+  type: string
+  description: As published. Most are a date, such as 1954-12-18, and some carry a time with fractions of a second, which the build cannot type as a date.
+  null_values:
+  - 'NULL'
+- name: liquor_en
+  label: EN flag
+  source: Liq_EN
+  type: boolean
+  description: A yes or no flag the publisher sets on the liquor licence, named EN.
+- name: liquor_et
+  label: ET flag
+  source: Liq_ET
+  type: boolean
+  description: A yes or no flag the publisher sets on the liquor licence, named ET.
+- name: liquor_ex
+  label: EX flag
+  source: Liq_EX
+  type: boolean
+  description: A yes or no flag the publisher sets on the liquor licence, named EX.
+- name: liquor_c
+  label: C flag
+  source: Liq_C
+  type: boolean
+  description: A yes or no flag the publisher sets on the liquor licence, named C.
+- name: gaming_status
+  label: Gaming licence status
+  source: Gaming_Status
+  type: string
+  null_values:
+  - 'NULL'
+- name: gaming_date_issued
+  label: Gaming licence issued
+  source: Gaming_DateIssued
+  type: string
+  description: As published. Most are a date, such as 1954-12-18, and some carry a time with fractions of a second, which the build cannot type as a date.
+  null_values:
+  - 'NULL'
+- name: gaming_machines
+  label: Gaming machines
+  source: Gaming_Machines
+  type: integer
+  null_values:
+  - 'NULL'
+omit:
+  LIC_PremisesPhone: The premises' phone number, a contact detail rather than licence data.
+  LIC_PremisesFax: The premises' fax number, a contact detail rather than licence data.

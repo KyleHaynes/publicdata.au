@@ -1,0 +1,128 @@
+slug: qld-fuel-prices
+title: Fuel price changes at every service station, Queensland, latest month
+status: live
+topics:
+- economy
+order: 226
+search_title: Queensland fuel prices by service station, monthly price data (Queensland Treasury)
+also_known_as:
+- QLD fuel price reporting data
+- Queensland petrol prices history
+- Fuel Prices Qld data
+- Brisbane petrol prices by station
+keywords:
+- fuel prices
+- petrol prices
+- diesel prices
+- service stations
+- fuel price reporting
+- Queensland
+faq:
+- q: What is in each row?
+  a: One price a Queensland service station reported for one fuel, with the station's id, name, brand,
+    address, suburb, postcode and coordinates, the fuel type, the price in tenths of a cent per litre,
+    and the time the price was reported in UTC. A station reports a new row each time it changes a price.
+- q: How do I read the price?
+  a: The price is in tenths of a cent, so 1699 is 169.9 cents a litre. The publisher writes 9999 when
+    a fuel is temporarily unavailable, such as an empty tank, and those cells are null here.
+- q: Which month does it cover?
+  a: The newest month Queensland Treasury has published, August 2026 in the first version here. Treasury
+    adds a file for each month, and this table follows the newest one, so each version is one month.
+summary: Every fuel price change reported by Queensland service stations in the newest month Queensland
+  Treasury has published, with station, brand, location, fuel type and time.
+description: Fuel prices reported by Queensland service stations under the state's fuel price reporting
+  scheme, one row per price change, for the newest month Queensland Treasury has published. Each row has
+  the station id, name, brand, address, suburb, state, postcode, latitude and longitude, the fuel type,
+  the price in tenths of a cent per litre and the reporting time in UTC. The scheme also has a live API,
+  which needs a key and is not used here.
+publisher:
+  name: Queensland Treasury
+  short: Treasury
+  jurisdiction: Qld
+  url: https://www.treasury.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/fuel-price-reporting-2026
+  attribution: Queensland Treasury, Queensland Government, Fuel price reporting, sourced {sourced}, https://www.data.qld.gov.au/dataset/fuel-price-reporting-2026,
+    licensed under CC BY 4.0.
+example:
+  group: fuel_type
+  metric: avg.price
+  label: Average of the prices reported for each fuel type, in tenths of a cent a litre
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: fuel price reporting
+  url: https://www.data.qld.gov.au/dataset/fuel-price-reporting-2026
+  encoding: utf-8-sig
+  package_match: ^fuel-price-reporting-\d{4}$
+  resource_match: '^Queensland Fuel Prices '
+  cadence: monthly
+partition_by:
+- fuel_type
+geometry:
+  lon: site_longitude
+  lat: site_latitude
+  crs: EPSG:4326
+  crs_note: Latitude and longitude in decimal degrees as published. The publisher does not name the datum;
+    GDA2020 and WGS84 differ by under 2 metres.
+row_label: Price changes
+fields:
+- name: site_id
+  label: Site ID
+  source: SiteId
+  type: integer
+- name: site_name
+  label: Station
+  source: Site_Name
+  type: string
+- name: site_brand
+  label: Brand
+  source: Site_Brand
+  type: string
+- name: site_address
+  label: Address
+  source: Sites_Address_Line_1
+  type: string
+- name: site_suburb
+  label: Suburb
+  source: Site_Suburb
+  type: string
+- name: site_state
+  label: State
+  source: Site_State
+  type: string
+- name: site_postcode
+  label: Postcode
+  source: Site_Post_Code
+  type: string
+  description: Kept as text.
+- name: site_latitude
+  label: Latitude
+  source: Site_Latitude
+  type: number
+- name: site_longitude
+  label: Longitude
+  source: Site_Longitude
+  type: number
+- name: fuel_type
+  label: Fuel type
+  source: Fuel_Type
+  type: string
+- name: price
+  label: Price (tenths of a cent per litre)
+  source: Price
+  type: integer
+  null_values:
+  - '9999'
+  description: In tenths of a cent, so 1699 is 169.9 cents a litre. The publisher's 9999, a fuel temporarily
+    unavailable, is null.
+- name: reported_at_utc
+  label: Reported (UTC)
+  source: TransactionDateutc
+  type: datetime
+  date_format: '%d/%m/%Y %H:%M'
+  description: The time the price was reported in Coordinated Universal Time, 10 hours behind Queensland
+    time.
+note: Cells were typed and headers were made snake_case. Rows were left alone.

@@ -1,0 +1,93 @@
+slug: sa-air-quality-monitoring-sites
+title: Air quality monitoring sites, South Australia
+status: live
+topics:
+- nature
+- health
+example:
+  group: status
+  metric: count
+order: 440
+search_title: South Australia air quality monitoring stations map (EPA)
+also_known_as:
+- SA EPA Air Quality Monitoring Sites
+- Adelaide air quality stations
+- South Australian air monitoring network
+keywords:
+- air quality
+- air monitoring stations
+- particulates
+- PM2.5
+- Environment Protection Authority
+- South Australia
+faq:
+- q: What is in each row?
+  a: One air quality monitoring site of the Environment Protection Authority, with its name, the parameters it
+    measures, whether it is active, the link to its readings where it has one, and its location.
+- q: Where are the readings?
+  a: The EPA publishes each station's hourly readings as separate portal datasets, one zip of monthly files per
+    year. This table lists the sites.
+summary: The Environment Protection Authority's air quality monitoring sites in South Australia, active and inactive,
+  with the parameters each measures and its location.
+description: Air Quality Monitoring Sites from the Environment Protection Authority. Each row is one site with its
+  name, the parameters it measures, such as PM10, PM2.5, NO2, O3 and meteorology, its status, a link to its data
+  page and its point location.
+publisher:
+  name: Environment Protection Authority
+  short: EPA
+  jurisdiction: SA
+  url: https://www.epa.sa.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.sa.gov.au/data/dataset/air-quality-monitoring-sites
+  attribution: Environment Protection Authority, Government of South Australia, Air Quality Monitoring Sites, https://data.sa.gov.au/data/dataset/air-quality-monitoring-sites, accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: ckan-resource
+  portal: https://data.sa.gov.au/data
+  package: air-quality-monitoring-sites
+  resource: 206bce6a-d345-4147-bebd-b16959e47718
+  url: https://data.sa.gov.au/data/dataset/air-quality-monitoring-sites
+  cadence: when the publisher updates the list
+geometry:
+  lon: longitude
+  lat: latitude
+  crs: EPSG:4326
+  crs_note: Coordinates are longitude and latitude in WGS84 (EPSG:4326), from the publisher's WGS84 GeoJSON file.
+key:
+- object_id
+row_label: Sites
+fields:
+- name: object_id
+  label: Site ID
+  source: OBJECTID
+  type: integer
+- name: site
+  label: Site
+  source: MONITORING
+  type: string
+- name: parameters
+  label: Parameters
+  source: PARAMETERS
+  type: string
+- name: status
+  label: Status
+  source: STATUS
+  type: string
+- name: data_page
+  label: Data page
+  source: AIR_QUALITY
+  type: string
+  null_values:
+  - NA
+- name: longitude
+  label: Longitude
+  source: (longitude)
+  type: number
+  description: Decimal degrees, WGS84, from the point geometry.
+- name: latitude
+  label: Latitude
+  source: (latitude)
+  type: number
+  description: Decimal degrees, WGS84, from the point geometry.

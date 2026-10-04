@@ -1,0 +1,89 @@
+slug: act-parking-offences
+title: Parking offences and fines, ACT
+status: live
+topics:
+- roads
+- crime
+example:
+  group: offence_description
+  metric: sum.infringements
+  label: Infringements
+chart:
+  where: {offence_date: {gte: '2022-01-01'}}
+  split: infringement_type
+  metric: sum.infringements
+  label: Infringements
+order: 455
+collection: act-traffic-fines
+collection_title: Traffic and parking fines in the ACT
+temporal_start: '2021-07-01'
+search_title: ACT parking fines by suburb and day (Access Canberra)
+also_known_as:
+- Canberra parking fines data
+- ACT parking infringement notices
+- ACT parking offences by suburb
+keywords:
+- parking fines
+- parking infringements
+- parking offences
+- Canberra
+- ACT
+faq:
+- q: What is in each row?
+  a: One parking offence on one day in one suburb or place, with the infringement type, the number of
+    infringements and the sum of their penalties in dollars.
+- q: What do the infringement types mean?
+  a: They are the publisher's codes for the way the notice was issued. PIN is a parking infringement
+    notice, PIN_LPR one detected by a licence plate recognition vehicle and PIN_MAO one issued for a
+    mobility parking or other permit offence.
+summary: Parking infringements issued in the ACT since July 2021, one row per offence, day and place,
+  with the number of infringements and the penalty total.
+description: Daily counts of the parking offences Access Canberra records in the ACT from 1 July 2021.
+  Each row carries the offence date, the infringement type, the offence description, the suburb or place
+  of the offence, the sum of the penalty amounts and the number of infringements.
+publisher:
+  name: Access Canberra, City and Environment Directorate
+  short: Access Canberra
+  jurisdiction: ACT
+  url: https://www.accesscanberra.act.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.act.gov.au/d/dnuu-bn2s
+  attribution: Access Canberra, ACT Government, Parking Offences and Fines, https://www.data.act.gov.au/d/dnuu-bn2s,
+    accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: socrata
+  portal: https://www.data.act.gov.au
+  package: dnuu-bn2s
+  url: https://www.data.act.gov.au/d/dnuu-bn2s
+  cadence: weekly
+row_label: Offence days
+fields:
+- name: offence_date
+  label: Date
+  source: Offence Date
+  type: date
+  date_format: '%d/%m/%Y'
+- name: infringement_type
+  label: Infringement type
+  source: Infringement Type
+  type: string
+- name: offence_description
+  label: Offence
+  source: Offence Description
+  type: string
+- name: offence_location
+  label: Location
+  source: Offence Location
+  type: string
+- name: penalty_amount
+  label: Penalty total ($)
+  source: Sum of Penalty Amount
+  type: number
+- name: infringements
+  label: Infringements
+  source: Infringement Count
+  type: integer
+note: Cells were typed and headers were made snake_case. The publisher's header is kept beside every field
+  in schema.json. Rows were left alone.

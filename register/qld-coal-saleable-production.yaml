@@ -1,0 +1,82 @@
+slug: qld-coal-saleable-production
+title: Saleable coal production by year and coal type, Queensland
+status: live
+topics:
+- economy
+example:
+  where:
+    year: newest
+  group: coal_type
+  metric: sum.total_net_output_tonnes
+  label: Saleable tonnes
+chart:
+  split: coal_type
+  metric: sum.total_net_output_tonnes
+  label: Saleable tonnes
+order: 267
+collection: qld-coal-statistics
+collection_title: Queensland coal production and sales statistics
+temporal_start: '2010-01-01'
+search_title: Queensland saleable coal production by year (Natural Resources and Mines)
+also_known_as:
+- Queensland annual coal production totals
+- Queensland coking and thermal coal output by year
+keywords:
+- coal production
+- saleable coal
+- coking coal
+- thermal coal
+- Queensland
+faq:
+- q: What is in each row?
+  a: Each row is one calendar year and one coal type, with the state's total net output of saleable coal in
+    tonnes.
+- q: How does this differ from the production by mine table?
+  a: This table is by calendar year and gives state totals. The production by mine table is by financial year
+    and names each mine.
+- q: Why does PCI start in 2022?
+  a: The publisher reports PCI coal as its own type from 2022. The years before have rows for coking and
+    thermal coal only.
+summary: Queensland's total saleable coal production in tonnes by calendar year since 2010, for coking, PCI
+  and thermal coal.
+description: One row per calendar year and coal type from 2010, with the total net output of saleable coal
+  from Queensland mines in tonnes. This is the Saleable Coal Production sheet of the annual coal statistics
+  production workbook.
+publisher:
+  name: Department of Natural Resources and Mines, Manufacturing and Regional and Rural Development
+  short: Natural Resources and Mines
+  jurisdiction: Qld
+  url: https://www.nrmmrrd.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/annual-coal-statistics
+  attribution: Department of Natural Resources and Mines, Manufacturing and Regional and Rural Development,
+    Queensland Government, Annual coal statistics, sourced {sourced}, https://www.data.qld.gov.au/dataset/annual-coal-statistics,
+    licensed under CC BY 4.0.
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: annual-coal-statistics
+  resource_match: Coal production statistics
+  url: https://www.data.qld.gov.au/dataset/annual-coal-statistics
+  cadence: annually
+  sheet: Saleable Coal Production
+  header_row: 6
+key:
+- year
+- coal_type
+row_label: Year and coal type lines
+fields:
+- name: year
+  label: Year
+  source: Year
+  type: integer
+- name: coal_type
+  label: Coal type
+  source: Coal type
+  type: string
+- name: total_net_output_tonnes
+  label: Net output (t)
+  source: Total Net Output (tonnes)
+  type: number

@@ -1,0 +1,28 @@
+{
+  "dataset": "nsw-rental-bond-lodgements-2024",
+  "version": "2025-01-08",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:06:28+00:00",
+  "sha256": "c4ecb13093e78b9f93a91ec5f5c073fe312ce7301c5848884dbb84c5259ae0b4",
+  "bytes": 8537985,
+  "filename": "rental-bond-lodgements-year-2024_1.xlsx",
+  "encoding": "xlsx",
+  "source": {
+    "url": "https://www.nsw.gov.au/sites/default/files/noindex/2025-01/rental-bond-lodgements-year-2024_1.xlsx",
+    "etag": "677e143d-824781",
+    "http_last_modified": "Wed, 08 Jan 2025 05:59:25 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "stated": "All material on this website is licensed under the Creative Commons Attribution 4.0 licence",
+    "normalised": "CC-BY-4.0",
+    "title": "CC BY 4.0",
+    "url": "https://www.nsw.gov.au/nsw-government/copyright",
+    "read_from": "https://www.nsw.gov.au/nsw-government/copyright",
+    "read_at": "2026-10-03T03:06:27+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "31578e4a1455bb9eaafb42c47feec2e113c195bcb058e5100fe69e7cfd4a006e"
+}

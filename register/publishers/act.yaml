@@ -1,0 +1,46 @@
+# Publishers placed in Australian Capital Territory that no portal of its own lists, or that one portal lists twice.
+# Generated from 'publicdata catalogue publishers', then reviewed. Edit by hand.
+- slug: act-government
+  name: ACT Government
+  jurisdiction: ACT
+  level: state
+  orgs:
+  - gov:data-act
+  - act:act-government
+- slug: act-government-geospatial-data-catalogue-actmapi
+  name: ACT Government Geospatial Data Catalogue (ACTmapi)
+  jurisdiction: ACT
+  level: state
+  orgs:
+  - gov:act-government-geospatial-data-catalogue
+- slug: chief-minister-treasury-and-economic-development-directorate
+  name: Chief Minister, Treasury and Economic Development Directorate
+  jurisdiction: ACT
+  level: state
+  orgs:
+  - gov:government-of-the-act-chief-minister-treasury-and-economic-development-directorate-australian-urban-
+  - act:chief-minister-treasury-and-economic-development-directorate
+- slug: department-of-education-and-training
+  name: Department of Education and Training
+  jurisdiction: ACT
+  level: state
+  orgs:
+  - gov:government-of-the-australian-capital-territory-department-of-education-and-training-australian-urban
+- slug: environment-planning-and-sustainable-development-directorate
+  name: Environment, Planning and Sustainable Development Directorate
+  jurisdiction: ACT
+  level: state
+  orgs:
+  - gov:government-of-the-australian-capital-territory-environment-planning-and-sustainable-development-dire
+- slug: transport-canberra-and-city-services-directorate
+  name: Transport Canberra and City Services Directorate
+  jurisdiction: ACT
+  level: state
+  orgs:
+  - gov:transport-canberra-and-city-services-directorate-australian-urban-research-infrastructure-network
+- slug: university-of-canberra-national-centre-for-social-and-economic-modelling
+  name: University of Canberra - National Centre for Social and Economic Modelling
+  jurisdiction: ACT
+  level: other
+  orgs:
+  - gov:university-of-canberra-national-centre-for-social-and-economic-modelling-australian-urban-research-i

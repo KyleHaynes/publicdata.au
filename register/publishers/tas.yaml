@@ -1,0 +1,127 @@
+# Tasmania has no portal. Its agencies and councils publish on data.gov.au, which would otherwise
+# place them under the Australian Government.
+# Generated from 'publicdata catalogue publishers', then reviewed. Edit by hand.
+- slug: city-of-hobart
+  name: City of Hobart
+  jurisdiction: Tas
+  level: local
+  url: https://www.hobartcity.com.au/
+  orgs:
+  - gov:city-of-hobart-open-data
+- slug: city-of-launceston
+  name: City of Launceston
+  jurisdiction: Tas
+  level: local
+  orgs:
+  - gov:city-of-launceston
+  - gov:city-of-launceston-open-data
+- slug: department-of-education-tasmania
+  name: Department of Education (Tasmania)
+  jurisdiction: Tas
+  level: state
+  orgs:
+  - gov:department-of-education-tasmania
+- slug: department-of-health-and-human-services-tasmania
+  name: Department of Health and Human Services (Tasmania)
+  jurisdiction: Tas
+  level: state
+  orgs:
+  - gov:department-of-health-and-human-services-tasmania
+- slug: department-of-justice-tasmania
+  name: Department of Justice (Tasmania)
+  jurisdiction: Tas
+  level: state
+  orgs:
+  - gov:department-of-justice-tasmania
+- slug: department-of-premier-and-cabinet-tasmania
+  name: Department of Premier and Cabinet (Tasmania)
+  jurisdiction: Tas
+  level: state
+  orgs:
+  - gov:department-of-premier-and-cabinet-tasmania
+- slug: department-of-primary-industries-parks-water-and-environment
+  name: Department Of Primary Industries, Parks, Water And Environment
+  jurisdiction: Tas
+  level: state
+  orgs:
+  - gov:government-of-tasmania-department-of-primary-industries-parks-water-and-environment-australian-urban
+- slug: department-of-primary-industries-parks-water-and-environment-land-tasmania
+  name: Department Of Primary Industries, Parks, Water And Environment - Land Tasmania
+  jurisdiction: Tas
+  level: state
+  orgs:
+  - gov:government-of-tasmania-department-of-primary-industries-parks-water-and-environment-land-tasmania-au
+- slug: department-of-state-growth
+  name: Department of State Growth
+  jurisdiction: Tas
+  level: state
+  orgs:
+  - gov:government-of-tasmania-department-of-state-growth-australian-urban-research-infrastructure-network
+- slug: department-of-state-growth-tasmania
+  name: Department of State Growth (Tasmania)
+  jurisdiction: Tas
+  level: state
+  orgs:
+  - gov:tasmanian-department-of-state-growth
+- slug: environment-protection-authority-tasmania
+  name: Environment Protection Authority Tasmania
+  jurisdiction: Tas
+  level: state
+  orgs:
+  - gov:environment-protection-authority-tasmania
+- slug: glenorchy-city-council
+  name: Glenorchy City Council
+  jurisdiction: Tas
+  level: local
+  orgs:
+  - gov:gcc
+- slug: institute-for-marine-and-antarctic-studies-imas-university-of-tasmania-utas
+  name: Institute for Marine and Antarctic Studies (IMAS), University of Tasmania (UTAS)
+  jurisdiction: Tas
+  level: other
+  orgs:
+  - gov:institute-for-marine-and-antarctic-studies-imas-university-of-tasmania-utas
+- slug: the-list
+  name: Land Information System Tasmania (the LIST)
+  short: the LIST
+  jurisdiction: Tas
+  level: state
+  url: https://www.thelist.tas.gov.au/
+  orgs:
+  - gov:tas-government-the-list
+- slug: land-tasmania
+  name: Land Tasmania
+  jurisdiction: Tas
+  level: state
+  orgs:
+  - gov:land-tasmania
+- slug: libraries-tasmania
+  name: Libraries Tasmania
+  jurisdiction: Tas
+  level: state
+  orgs:
+  - gov:libraries-tasmania
+- slug: school-of-biological-sciences-sbs-university-of-tasmania-utas
+  name: School of Biological Sciences (SBS), University of Tasmania (UTAS)
+  jurisdiction: Tas
+  level: other
+  orgs:
+  - gov:school-of-biological-sciences-sbs-university-of-tasmania-utas
+- slug: tasmania-fire-service
+  name: Tasmania Fire Service
+  jurisdiction: Tas
+  level: state
+  orgs:
+  - gov:tasmania-fire-service
+- slug: tasmanian-museum-and-art-gallery
+  name: Tasmanian Museum and Art Gallery
+  jurisdiction: Tas
+  level: state
+  orgs:
+  - gov:tasmanianmuseumandartgallery
+- slug: university-of-tasmania-insurance-research-program
+  name: University of Tasmania - Insurance Research Program
+  jurisdiction: Tas
+  level: other
+  orgs:
+  - gov:university-of-tasmania-insurance-research-program-australian-urban-research-infrastructure-network

@@ -1,0 +1,147 @@
+slug: qld-road-crash-factors
+title: Factors in road crashes, Queensland
+status: live
+topics:
+- roads
+example:
+  where:
+    involving_drink_driving: true
+    crash_severity:
+      neq: Property damage only
+  group: crash_severity
+  metric: sum.count_crashes
+chart:
+  where:
+    crash_severity:
+      neq: Property damage only
+order: 15
+publisher:
+  name: Department of Transport and Main Roads
+  short: Transport and Main Roads
+  jurisdiction: Qld
+  url: https://www.tmr.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-09-25'
+  evidence: https://www.data.qld.gov.au/dataset/crash-data-from-queensland-roads
+  attribution: Department of Transport and Main Roads, Queensland Government, Crash data from Queensland
+    roads, sourced {sourced}, https://www.data.qld.gov.au/dataset/crash-data-from-queensland-roads, licensed
+    under CC BY 4.0.
+collection: qld-road-crashes
+temporal_start: '2001-01-01'
+collection_title: Crash data from Queensland roads
+search_title: Queensland drink driving, speeding and fatigue crash statistics
+also_known_as:
+- drink driving statistics Queensland
+- speeding crash statistics Queensland
+- driver fatigue crash data
+keywords:
+- drink driving
+- speeding
+- driver fatigue
+- defective vehicles
+- contributing factors
+- crash statistics
+- Queensland
+faq:
+- q: Are the factor flags complete for recent crashes?
+  a: No. The publisher can only assign contributing factors to a crash once the investigation is finalised,
+    so recent crashes can be missing a factor and the counts with a factor flag rise in later releases.
+    The number of crashes in each year matches the crash locations table.
+summary: Crash and casualty counts by year, police region and severity, split by whether drink driving,
+  speed, driver fatigue or a defective vehicle was involved.
+description: Aggregate counts of reported Queensland road crashes from 1 January 2001 by contributing
+  factor. Each row is one combination of year, police region, crash severity and four yes or no factor
+  flags. The publisher can only supply full contributing factors for finalised crashes, so the factor
+  flags for the most recent months are less complete than they will be. Property damage only crashes stop
+  after 31 December 2010.
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: crash-data-from-queensland-roads
+  resource: 18ee2911-992f-40ed-b6ae-e756859786e6
+  url: https://www.data.qld.gov.au/dataset/crash-data-from-queensland-roads/resource/18ee2911-992f-40ed-b6ae-e756859786e6
+  cadence: about twice a year
+  encoding: utf-8-sig
+  as_at_regex: to:?[\s•]*(\d{1,2} [A-Za-z]+ \d{4})
+key:
+- crash_year
+- crash_police_region
+- crash_severity
+- involving_drink_driving
+- involving_driver_speed
+- involving_fatigued_driver
+- involving_defective_vehicle
+partition_by:
+- crash_year
+fields:
+- name: crash_year
+  label: Year
+  source: Crash_Year
+  type: integer
+- name: crash_police_region
+  label: Police region
+  source: Crash_Police_Region
+  type: string
+  description: Queensland Police Service region, or Unknown.
+- name: crash_severity
+  label: Severity
+  source: Crash_Severity
+  type: string
+  description: Fatal, Hospitalisation, Medical treatment, Minor injury or Property damage only.
+- name: involving_drink_driving
+  label: Drink driving involved
+  source: Involving_Drink_Driving
+  type: boolean
+  true_values:
+  - 'Yes'
+  false_values:
+  - 'No'
+- name: involving_driver_speed
+  label: Speeding involved
+  source: Involving_Driver_Speed
+  type: boolean
+  true_values:
+  - 'Yes'
+  false_values:
+  - 'No'
+- name: involving_fatigued_driver
+  label: Fatigued driver involved
+  source: Involving_Fatigued_Driver
+  type: boolean
+  true_values:
+  - 'Yes'
+  false_values:
+  - 'No'
+- name: involving_defective_vehicle
+  label: Defective vehicle involved
+  source: Involving_Defective_Vehicle
+  type: boolean
+  true_values:
+  - 'Yes'
+  false_values:
+  - 'No'
+- name: count_crashes
+  label: Crashes
+  source: Count_Crashes
+  type: integer
+- name: count_fatality
+  label: Deaths
+  source: Count_Fatality
+  type: integer
+- name: count_hospitalised
+  label: People hospitalised
+  source: Count_Hospitalised
+  type: integer
+- name: count_medically_treated
+  label: People medically treated
+  source: Count_Medically_Treated
+  type: integer
+- name: count_minor_injury
+  label: People with minor injuries
+  source: Count_Minor_Injury
+  type: integer
+- name: count_all_casualties
+  label: All casualties
+  source: Count_All_Casualties
+  type: integer

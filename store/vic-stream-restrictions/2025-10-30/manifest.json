@@ -1,0 +1,34 @@
+{
+  "dataset": "vic-stream-restrictions",
+  "version": "2025-10-30",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:09:52+00:00",
+  "sha256": "b983e543dd097296684a86a23d85dd0899649e9e1162b9a58368e3bd59aab053",
+  "bytes": 201533,
+  "filename": "stream_restrictions_january_2010_to_september_2025.xlsx",
+  "encoding": "xlsx",
+  "source": {
+    "url": "https://www.water.vic.gov.au/__data/assets/excel_doc/0037/766756/stream_restrictions_january_2010_to_september_2025.xlsx",
+    "portal": "https://discover.data.vic.gov.au",
+    "package": "stream-restrictions",
+    "package_id": "90c6f172-6bf6-429c-9186-862b1254dc91",
+    "resource": "7c59afe7-e707-4fa4-9e15-6d0ecdc42492",
+    "resource_name": "Stream restrictions January 2010 to September 2025",
+    "resource_last_modified": null,
+    "package_modified": "2025-10-30T05:17:24.647112",
+    "package_version": null,
+    "etag": "",
+    "http_last_modified": ""
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution 4.0 International",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://discover.data.vic.gov.au/api/3/action/package_show?id=stream-restrictions",
+    "read_at": "2026-10-03T03:09:51+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "62514020942bfe5424f8cefa940a52af0a1f3f4177ea70453b345e2cf86b391d"
+}

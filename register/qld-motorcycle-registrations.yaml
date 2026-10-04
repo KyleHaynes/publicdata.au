@@ -1,0 +1,137 @@
+slug: qld-motorcycle-registrations
+title: Registered motorcycles, Queensland, October 2022
+status: live
+topics:
+- roads
+order: 213
+collection: qld-vehicle-register-2022
+collection_title: Queensland vehicle register extract, October 2022
+search_title: Queensland registered motorcycles by make, model and year (Transport and Main Roads)
+also_known_as:
+- Motorcycle registrations Queensland
+- QLD motorbike register data
+- Registered mopeds and motorcycles Queensland
+keywords:
+- motorcycle registrations
+- motorcycles
+- mopeds
+- vehicle register
+- make and model
+- Queensland
+faq:
+- q: What is in each row?
+  a: One motorcycle, moped, motor tricycle or sidecar on the Queensland register on 10 October 2022, with
+    its registration category, term and purpose of use, body shape, year of manufacture, make, model,
+    colour, fuel, cylinders, seats, the weights the register holds and the first five characters of its
+    VIN. No plate, owner or address is included.
+- q: Why are the weights mostly empty?
+  a: The register holds weights for few motorcycles, so most of those cells are blank in the department's
+    file and null here.
+summary: Every motorcycle, moped and motor tricycle registered in Queensland on 10 October 2022, one row
+  per vehicle, with make, model, year, body shape, fuel and purpose of use.
+description: The motorcycle part of the Department of Transport and Main Roads extract of the Queensland
+  vehicle register as at 10 October 2022, one row per registered motorcycle, moped, motor tricycle or
+  sidecar. Each row has the registration category, term and purpose of use, the body shape, year of manufacture,
+  make, model and colour, the fuel type, cylinders and seats, the recorded weights and the VIN prefix.
+  Seasonal registrations are left out.
+publisher:
+  name: Department of Transport and Main Roads
+  short: Transport and Main Roads
+  jurisdiction: Qld
+  url: https://www.tmr.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/vehicle-registrations
+  attribution: Department of Transport and Main Roads, Queensland Government, Vehicle registrations, sourced
+    {sourced}, https://www.data.qld.gov.au/dataset/vehicle-registrations, licensed under CC BY 4.0.
+example:
+  group: make
+  metric: count
+  label: Registered motorcycles of each make
+chart:
+  split: body_shape
+  metric: count
+  label: Registered motorcycles made
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: vehicle-registrations
+  resource: 9f818bd5-4efa-4781-87e7-db600b62bfd8
+  url: https://www.data.qld.gov.au/dataset/vehicle-registrations
+  encoding: utf-8-sig
+  cadence: closed
+partition_by:
+- body_shape
+row_label: Motorcycles
+fields:
+- name: registration_category
+  label: Registration category
+  source: Registration Category
+  type: string
+- name: registration_term
+  label: Registration term (months)
+  source: Registration Term
+  type: integer
+- name: purpose_of_use
+  label: Purpose of use
+  source: Purpose of Use
+  type: string
+- name: body_shape
+  label: Body shape
+  source: Body Shape
+  type: string
+- name: year_of_manufacture
+  label: Year of manufacture
+  source: Year of Manufacture
+  type: integer
+- name: make
+  label: Make
+  source: Make
+  type: string
+- name: model
+  label: Model
+  source: Model
+  type: string
+- name: colour
+  label: Colour
+  source: Colour
+  type: string
+- name: fuel_type
+  label: Fuel type
+  source: Fuel Type
+  type: string
+- name: cylinders
+  label: Cylinders
+  source: Number of Cylinders
+  type: integer
+- name: seats
+  label: Seats
+  source: Number of Seats
+  type: integer
+- name: atm_weight
+  label: Aggregate trailer mass (kg)
+  source: ATM Weight
+  type: integer
+- name: gcm_weight
+  label: Gross combination mass (kg)
+  source: GCM Weight
+  type: integer
+- name: gtm_weight
+  label: Gross trailer mass (kg)
+  source: GTM Weight
+  type: integer
+- name: gvm_weight
+  label: Gross vehicle mass (kg)
+  source: GVM Weight
+  type: integer
+- name: tare_weight
+  label: Tare mass (kg)
+  source: TARE Weight
+  type: integer
+- name: vin_prefix
+  label: VIN prefix
+  source: VIN Prefix
+  type: string
+  description: The first five characters of the vehicle identification number.
+note: Cells were typed and headers were made snake_case. Rows were left alone.

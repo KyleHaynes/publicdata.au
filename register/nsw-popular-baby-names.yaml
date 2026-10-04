@@ -1,0 +1,108 @@
+slug: nsw-popular-baby-names
+title: Popular baby names by year and sex, New South Wales
+status: live
+topics:
+- people
+example:
+  where:
+    year: newest
+  group: name
+  metric: sum.number
+  label: Babies
+chart:
+  split: gender
+  metric: sum.number
+  label: Babies given a top-100 name
+sample:
+  order:
+  - year.desc
+  - rank
+  spread: gender
+  label: The top five names for girls and for boys in the newest year, in rank order.
+order: 300
+publisher:
+  name: NSW Registry of Births Deaths and Marriages
+  short: NSW BDM
+  jurisdiction: NSW
+  url: https://www.nsw.gov.au/family-and-relationships/births-deaths-marriages
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.nsw.gov.au/data/dataset/popular-baby-names-from-1952
+  attribution: NSW Registry of Births Deaths and Marriages, NSW Government, BDM Data - Popular Baby Names
+    1952 to 2025, sourced {sourced}, https://data.nsw.gov.au/data/dataset/popular-baby-names-from-1952,
+    licensed under CC BY 4.0.
+collection: nsw-baby-names
+collection_title: Baby names registered in New South Wales
+collection_description: Baby names from the NSW Registry of Births Deaths and Marriages. One table holds
+  the 100 names given most often to boys and to girls in each year since 1952. Two others hold the three
+  names registered most often for girls and for boys in each council area, for the newest year the Registry
+  has published.
+collection_search_title: NSW baby names data (NSW Registry of Births Deaths and Marriages)
+temporal_start: '1952-01-01'
+search_title: Popular baby names in NSW since 1952 (NSW Registry of Births Deaths and Marriages)
+also_known_as:
+- NSW top 100 baby names
+- Most popular baby names NSW by year
+- NSW BDM popular names list
+- Baby name rankings New South Wales
+keywords:
+- baby names
+- popular names
+- top 100 names
+- name rankings
+- births
+- NSW Registry of Births Deaths and Marriages
+- New South Wales
+faq:
+- q: What is in each row?
+  a: One name in one year's list for boys or for girls, with its rank in that list and the number of babies
+    registered with it. Each year's list has the 100 names given most often to each sex.
+- q: Which year does a list belong to?
+  a: The Registry builds each year's list from the births registered in that calendar year. A baby born
+    late in one year and registered early in the next is counted in the later year.
+- q: Why can a list have more than 100 names?
+  a: Names with the same count share a rank, so a tie at the bottom of a list can carry it past 100 names.
+    The rows are kept as the Registry publishes them.
+summary: The 100 names given most often to boys and to girls in New South Wales in each year since 1952,
+  with each name's rank and the number of babies registered with it. Updated yearly.
+description: The Popular Baby Names list from the NSW Registry of Births Deaths and Marriages, which combines
+  each year's list since 1952 into one file. Each row is one name, sex and year, with the name's rank
+  in that year's list and the number of births registered with it. Names are in capitals as published.
+source:
+  adapter: ckan-resource
+  portal: https://data.nsw.gov.au/data
+  package: popular-baby-names-from-1952
+  resource: 2adcb228-9101-4c95-a786-b3216539b4a2
+  url: https://data.nsw.gov.au/data/dataset/popular-baby-names-from-1952
+  cadence: yearly
+  encoding: utf-8-sig
+key:
+- year
+- gender
+- name
+partition_by:
+- gender
+row_label: Names
+fields:
+- name: rank
+  label: Rank
+  source: Rank
+  type: integer
+- name: name
+  label: Name
+  source: Name
+  type: string
+- name: number
+  label: Babies registered
+  source: Number
+  type: integer
+- name: gender
+  label: Sex
+  source: Gender
+  type: string
+- name: year
+  label: Year registered
+  source: Year
+  type: integer

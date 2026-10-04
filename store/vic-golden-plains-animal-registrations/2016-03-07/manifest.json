@@ -1,0 +1,34 @@
+{
+  "dataset": "vic-golden-plains-animal-registrations",
+  "version": "2016-03-07",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:07:38+00:00",
+  "sha256": "8bad9445c951912627e07d6e378b94705614233e7025916fbb6284068244cacf",
+  "bytes": 512489,
+  "filename": "golden-plains-animal-registrations.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://data.gov.au/data/dataset/ac0ba319-04f4-4901-8496-c708568dc549/resource/e90f7fb2-fdeb-4f11-817e-4a70d2090ed3/download/golden-plains-animal-registrations.csv",
+    "portal": "https://data.gov.au/data",
+    "package": "animal-registrations",
+    "package_id": "ac0ba319-04f4-4901-8496-c708568dc549",
+    "resource": "e90f7fb2-fdeb-4f11-817e-4a70d2090ed3",
+    "resource_name": "Golden Plains animal registrations",
+    "resource_last_modified": "2016-03-07T00:00:00",
+    "package_modified": "2023-08-09T05:32:53.870704",
+    "package_version": null,
+    "etag": "W/\"1457316374.0-512489-3782676531",
+    "http_last_modified": "Mon, 07 Mar 2016 02:06:14 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution 3.0 Australia",
+    "url": "http://creativecommons.org/licenses/by/3.0/au/",
+    "read_from": "https://data.gov.au/data/api/3/action/package_show?id=animal-registrations",
+    "read_at": "2026-10-03T03:07:38+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "eee9e870f32129fed02b43a8cd17a7d9d5d3e32e6b8f9ec11812548fbc5ed3f2"
+}

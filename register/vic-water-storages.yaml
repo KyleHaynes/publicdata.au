@@ -1,0 +1,82 @@
+slug: vic-water-storages
+title: Water storages and their capacity, Victoria
+status: live
+topics:
+- nature
+example:
+  group: system
+  metric: sum.total_capacity_ml
+order: 54
+publisher:
+  name: Department of Energy, Environment and Climate Action
+  short: DEECA
+  jurisdiction: Vic
+  url: https://www.water.vic.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://discover.data.vic.gov.au/dataset/regional-melbourne-and-all-victoria-monthly-water-storage-levels
+  attribution: Department of Energy, Environment and Climate Action, Victorian Government, Regional, Melbourne
+    and all Victoria monthly water storage levels, sourced {sourced}, https://discover.data.vic.gov.au/dataset/regional-melbourne-and-all-victoria-monthly-water-storage-levels,
+    licensed under CC BY 4.0.
+search_title: Victorian reservoirs with system and total capacity (DEECA storage information)
+also_known_as:
+- Victorian dams list
+- Melbourne water storages capacity
+- Victoria reservoir capacity
+keywords:
+- reservoirs
+- dam capacity
+- water storages
+- Victoria
+- DEECA
+- water supply
+faq:
+- q: What is this list?
+  a: The reservoirs whose monthly levels the department reports, with the supply system each belongs to,
+    its total capacity in megalitres, the water corporation's page about it and any note on a change to the
+    capacity figure. It is the second sheet of the monthly storage levels spreadsheet.
+- q: How do I get a percentage full?
+  a: Join the monthly storage levels dataset to this one on the reservoir name and divide the month's
+    volume by the total capacity. Both are as the publisher states them, and a capacity can change when a
+    storage is resurveyed, which the note column records.
+summary: The reservoirs in Victoria's monthly storage report with their supply system, total capacity in
+  megalitres and the water corporation's page. About 65 storages, updated with the monthly report.
+description: The storage information sheet of the Department of Energy, Environment and Climate Action's
+  monthly water storage levels spreadsheet, one row per reservoir, with its supply system, total capacity in
+  megalitres, the website of the water corporation that operates it and any note on changes to the capacity
+  figure.
+source:
+  adapter: ckan-resource
+  portal: https://discover.data.vic.gov.au
+  package: regional-melbourne-and-all-victoria-monthly-water-storage-levels
+  resource_match: ^Storage levels
+  url: https://discover.data.vic.gov.au/dataset/regional-melbourne-and-all-victoria-monthly-water-storage-levels
+  cadence: monthly
+  manual: true
+  sheet: Storage_information
+key:
+- reservoir
+row_label: Reservoirs
+fields:
+- name: reservoir
+  label: Reservoir
+  source: Reservoir
+  type: string
+- name: system
+  label: Supply system
+  source: System
+  type: string
+- name: total_capacity_ml
+  label: Total capacity (ML)
+  source: Total_Capacity
+  type: number
+- name: website
+  label: Operator website
+  source: Website
+  type: string
+- name: notes
+  label: Notes
+  source: Notes
+  type: string

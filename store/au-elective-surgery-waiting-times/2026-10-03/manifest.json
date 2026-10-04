@@ -1,0 +1,30 @@
+{
+  "dataset": "au-elective-surgery-waiting-times",
+  "version": "2026-10-03",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:15:31+00:00",
+  "sha256": "696cfb20ab6fbcb1444b1d9791899d49bd89223b68f936bb657f32263642db7d",
+  "bytes": 17781837,
+  "filename": "au-elective-surgery-waiting-times.xlsx",
+  "encoding": "xlsx",
+  "source": {
+    "url": "https://myhospitalsapi.aihw.gov.au/api/v1/measure-downloads/myh-es",
+    "etag": "",
+    "http_last_modified": ""
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "stated": "has been released under a Creative Commons BY 4.0 (CC-BY 4.0) licence",
+    "normalised": "CC-BY-4.0",
+    "title": "CC BY 4.0",
+    "url": "https://www.aihw.gov.au/copyright",
+    "read_from": "https://www.aihw.gov.au/copyright",
+    "read_at": "2026-10-03T03:15:30+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [
+    "The publisher's server states no change date, so this version is dated by the fetch."
+  ],
+  "rows_sha256": "ff171fd17b799e2846666f8c2bffca5b0d25f4dbfcddf5b1458bb9787a7506d3"
+}

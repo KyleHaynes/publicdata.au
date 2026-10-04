@@ -1,0 +1,220 @@
+slug: qld-public-libraries-directory
+title: Public libraries directory, Queensland
+status: live
+topics:
+- community
+order: 298
+collection: qld-public-libraries
+collection_title: Queensland public libraries
+collection_search_title: Queensland public library data (State Library of Queensland)
+collection_description: 'The State Library of Queensland publishes two sets of data on the state''s public
+  libraries. The directory lists every branch, mobile library and library service point with its address, opening
+  hours, contacts and coordinates.
+
+
+  The annual statistics are reported by each council for each financial year. One table holds a row per council
+  with its spending, collection, loans, members, staff and programs. The other holds a row per branch with
+  its opening hours and floor space.
+
+  '
+search_title: Queensland public libraries directory with opening hours (State Library of Queensland)
+also_known_as:
+- Queensland library locations
+- Public Libraries Connect directory
+- Queensland library opening hours
+keywords:
+- public library
+- library branch
+- opening hours
+- State Library of Queensland
+- Queensland
+faq:
+- q: What is in each row?
+  a: Each row is one library branch, mobile library or other service point in Queensland. It gives the branch
+    name, the council or service that runs it, the street address, postal and interlibrary loan addresses,
+    phone, email, opening hours for each day of the week, whether Wi-Fi is available, and the coordinates.
+- q: Why does the directory link look wrong?
+  a: In this release the publisher's Directory URL column repeats the start of the web address three times
+    before the branch path. It is kept as published.
+- q: Is there an older version of the directory?
+  a: The publisher keeps earlier directories from 2011 to May 2024 as separate files on the same portal page.
+    This entry follows the 2026 file.
+summary: Every public library branch and mobile library in Queensland, with its address, opening hours, contacts
+  and coordinates.
+description: 'One row per public library service point in Queensland as listed in the State Library of Queensland''s
+  Public Libraries Connect directory. Each row names the branch and its type (branch, mobile, administration,
+  community or local studies), the council or library service that runs it, its street, postal and interlibrary
+  loan addresses, phone and email, opening hours for each day, and Wi-Fi availability, with latitude and longitude.
+
+
+  A dash in an address column means the branch has no separate address of that kind. The Date Created column
+  is blank in almost every row of this release.
+
+  '
+publisher:
+  name: State Library of Queensland
+  short: SLQ
+  jurisdiction: Qld
+  url: https://www.slq.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/public-libraries
+  attribution: State Library of Queensland, Queensland Government, State Library of Queensland - Queensland
+    public libraries directory, sourced {sourced}, https://www.data.qld.gov.au/dataset/public-libraries, licensed
+    under CC BY 4.0.
+example:
+  group: name_of_library_service
+  metric: count
+  label: Library service points run by each council or library service
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: public-libraries
+  resource: 0cfcb57e-4cfc-41ca-a337-39ce1cb99344
+  url: https://www.data.qld.gov.au/dataset/public-libraries
+  encoding: utf-8-sig
+  cadence: irregular, about every one or two years
+key:
+- directory_url
+geometry:
+  lon: longitude_decimal
+  lat: latitude_decimal
+  crs: EPSG:4326
+  crs_note: The publisher names no datum. The coordinates are decimal degrees, read as WGS84 (EPSG:4326) and
+    published as given.
+row_label: Library service points
+fields:
+- name: directory_url
+  label: Directory link
+  source: Directory URL
+  type: string
+- name: branch_name
+  label: Branch name
+  source: Branch Name
+  type: string
+- name: branch_type
+  label: Branch type
+  source: Branch Type
+  type: string
+- name: name_of_library_service
+  label: Name of library service
+  source: Name of Library Service
+  type: string
+- name: library_service_type
+  label: Library service type
+  source: Library Service Type
+  type: string
+- name: wifi_availability
+  label: Wifi availability
+  source: WiFi Availability
+  type: boolean
+- name: address_line_1
+  label: Address line 1
+  source: Address Line 1
+  type: string
+- name: address_locality
+  label: Address locality
+  source: Address Locality
+  type: string
+- name: address_postcode
+  label: Postcode
+  source: Address Postcode
+  type: string
+- name: postal_address_line_1
+  label: Postal address line 1
+  source: Postal Address Line 1
+  type: string
+  null_values:
+  - '-'
+- name: postal_address_line_2
+  label: Postal address line 2
+  source: Postal Address Line 2
+  type: string
+  null_values:
+  - '-'
+- name: postal_address_locality
+  label: Postal address locality
+  source: Postal Address Locality
+  type: string
+  null_values:
+  - '-'
+- name: postal_address_postcode
+  label: Postal address postcode
+  source: Postal Address Postcode
+  type: string
+  null_values:
+  - '-'
+- name: ill_address_line_1
+  label: Interlibrary loan address line 1
+  source: ILL Address Line 1
+  type: string
+  null_values:
+  - '-'
+- name: ill_address_line_3
+  label: Interlibrary loan address line 3
+  source: ILL Address Line 3
+  type: string
+  null_values:
+  - '-'
+- name: ill_address_locality
+  label: Interlibrary loan locality
+  source: ILL Address Locality
+  type: string
+  null_values:
+  - '-'
+- name: ill_address_postcode
+  label: Interlibrary loan postcode
+  source: ILL Address Postcode
+  type: string
+  null_values:
+  - '-'
+- name: phone
+  label: Phone
+  source: Phone
+  type: string
+- name: email
+  label: Email
+  source: Email
+  type: string
+- name: monday
+  label: Monday
+  source: Monday
+  type: string
+- name: tuesday
+  label: Tuesday
+  source: Tuesday
+  type: string
+- name: wednesday
+  label: Wednesday
+  source: Wednesday
+  type: string
+- name: thursday
+  label: Thursday
+  source: Thursday
+  type: string
+- name: friday
+  label: Friday
+  source: Friday
+  type: string
+- name: saturday
+  label: Saturday
+  source: Saturday
+  type: string
+- name: sunday
+  label: Sunday
+  source: Sunday
+  type: string
+- name: latitude_decimal
+  label: Latitude
+  source: Latitude (Decimal)
+  type: number
+- name: longitude_decimal
+  label: Longitude
+  source: Longitude (Decimal)
+  type: number
+- name: date_created
+  label: Date created
+  source: Date Created
+  type: string
+  description: Blank in almost every row of the 2026 release.

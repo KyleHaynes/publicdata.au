@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block disclaimer %}Published by {{ ds.publisher.name }} under {{ ds.licence.title }} and republished here {% if ds.source_withheld %}with a column left out for its terms{% else %}without change to the content{% endif %}. {{ ds.publisher.name }} has not endorsed this site.{% endblock %}
+{% block wrap %}
+<div class="site">
+<div class="crumbs"><a href="/">Datasets</a> / <a href="/d/{{ ds.slug }}/">{{ ds.title }}</a> / {{ v.version }}</div>
+<div class="ds-head"><h1>{{ ds.title }}, version {{ v.version }}</h1>{% if is_latest %}<span class="chip live">latest</span>{% endif %}</div>
+<div class="meta-row">{% if v.as_at %}<span>As at <b>{{ v.as_at_long }}</b></span>{% endif %}<span>Rows <b>{{ v.rows_fmt }}</b></span><span>Fields <b>{{ v.fields }}</b></span><span>Fetched <b>{{ v.fetched_long }}</b></span><span>Source SHA-256 <b class="mono">{{ v.sha256[:16] }}…</b></span>{% if v.backfilled %}<span><span class="chip backlog">backfilled</span></span>{% endif %}</div>
+<p style="margin-top:14px">This version is immutable. Every file below will return the same bytes for as long as this site exists, so the URL can be cited. {% if ds.source_withheld %}{{ ds.source_withheld }}{% else %}The publisher's file is here as <span class="mono">source.{{ v.ext }}</span>, byte for byte.{% endif %}</p>
+{% if ds.licence.condition %}<div class="caveats"><span class="k">The licence has a condition</span><p style="margin:6px 0 0">{{ ds.licence.condition }}</p></div>{% endif %}
+</div>
+{% if fig.chart or change or others %}<div class="band figband slim"><div class="site"><div class="figgrid two{% if not fig.chart %} one{% endif %}">
+  {% if fig.chart %}<figure class="fchart">{{ fig.chart|safe }}<figcaption>{{ fig.chart_caption }} {{ fig.basis[0]|upper }}{{ fig.basis[1:] }} in this version, worked out in the build.</figcaption></figure>{% endif %}
+  <div class="card dark"><div class="k">Change from the version before</div>
+  {% if change and change.added is defined %}<p class="big-delta"><span class="add">+{{ change.added }} added</span> · <span class="rem">−{{ change.removed }} removed</span> · {{ change.changed }} changed</p><p class="small">Against {{ change.from }}, by the key <span class="mono">{{ ds.key|join(', ') }}</span>. The full list is in <a href="{{ change.url }}" class="mono">diff/{{ change.from }}..{{ change.to }}.json</a>.</p>
+  {% elif change %}<p class="big-delta">{{ '{:,}'.format(change.rows_from) }} rows before, {{ '{:,}'.format(change.rows_to) }} now</p><p class="small">Against {{ change.from }}. {{ change.note }} The comparison is in <a href="{{ change.url }}" class="mono">diff/{{ change.from }}..{{ change.to }}.json</a>.</p>
+  {% else %}<p class="big-delta">First version followed here.</p><p class="small">When the publisher releases again, this panel shows rows added, removed and changed{% if ds.key %} by <span class="mono">{{ ds.key|join(', ') }}</span>{% endif %}, with a link to the diff file.</p>{% endif %}
+  {% if others %}<p class="small">Other versions: {% for o in others %}<a href="{{ base }}v/{{ o }}/">{{ o }}</a>{% if not loop.last %}, {% endif %}{% endfor %}.</p>{% endif %}
+  </div>
+</div></div></div>{% endif %}
+<div class="site">
+<div class="ds">
+<div>
+  <h2>Files</h2>
+  <ul class="files">
+  {% for f in files %}<li><a href="{{ f.url }}" class="mono">{{ f.name }}</a><span>{{ f.size }}</span></li>{% endfor %}
+  </ul>
+  {% if v.tables %}<p class="muted" style="font-size:14.5px">One Parquet file per table under <span class="mono">tables/</span>: {% for t, n in v.tables.items() %}<a href="{{ base }}v/{{ v.version }}/tables/{{ t }}.parquet" class="mono">{{ t }}</a> ({{ '{:,}'.format(n) }}){% if not loop.last %}, {% endif %}{% endfor %}.</p>{% endif %}
+  {% if partition_dirs %}<p class="muted" style="font-size:14.5px">Smaller files by field: {% for p in partition_dirs %}<a href="{{ base }}v/{{ v.version }}/by/{{ p }}/index.json" class="mono">by/{{ p }}/</a>{% if not loop.last %}, {% endif %}{% endfor %}.</p>{% endif %}
+  {% if change %}
+  <h2>Change from {{ change.from }}</h2>
+  {% if change.added is defined %}<p>{{ change.added }} rows added, {{ change.removed }} removed and {{ change.changed }} changed by the key <span class="mono">{{ ds.key|join(', ') }}</span>. The full list is in <a href="{{ change.url }}" class="mono">diff/{{ change.from }}..{{ change.to }}.json</a>.</p>
+  {% else %}<p>{{ '{:,}'.format(change.rows_from) }} rows in {{ change.from }} and {{ '{:,}'.format(change.rows_to) }} in this version. {{ change.note }} The comparison is in <a href="{{ change.url }}" class="mono">diff/{{ change.from }}..{{ change.to }}.json</a>.</p>{% endif %}
+  {% endif %}
+</div>
+<aside class="side">
+  <div class="card"><div class="k">Attribution the licence asks for</div><div class="attr">{{ attribution }}<button class="copy abs" type="button" data-copy-target="attr-src">Copy</button></div><textarea id="attr-src" hidden>{{ attribution }}</textarea></div>
+  <div class="card"><div class="k">Provenance</div><p class="small" style="color:var(--ink)">Fetched from <a href="{{ v.source_url }}">{{ portal_host }}</a> on {{ v.fetched_long }}. The portal listed the licence as {{ v.portal_licence }} at that moment. <a href="{{ base }}v/{{ v.version }}/manifest.json" class="mono">manifest.json</a> has every detail.</p></div>
+</aside>
+</div>
+</div>
+{% endblock %}

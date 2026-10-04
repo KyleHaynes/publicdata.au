@@ -1,0 +1,33 @@
+{
+  "dataset": "wa-traffic-digest",
+  "version": "2025-06-05",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:14:38+00:00",
+  "sha256": "2e415eb3efa2dd50f6d9125f9f4c44ea38785f405eef4641f80b0925b1189984",
+  "bytes": 454726,
+  "filename": "6114ced8bff94d23be2739d6ea9f30f4_27.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://portal-mainroads.opendata.arcgis.com/api/download/v1/items/6114ced8bff94d23be2739d6ea9f30f4/csv?layers=27",
+    "portal": "https://portal-mainroads.opendata.arcgis.com",
+    "package": "6114ced8bff94d23be2739d6ea9f30f4",
+    "resource": "27",
+    "resource_name": "Traffic Digest",
+    "service": "https://gisservices.mainroads.wa.gov.au/arcgis/rest/services/OpenData/RoadAssets_DataPortal/MapServer/27",
+    "etag": "b43f81d18f0455cbecc0cea215c1d506",
+    "http_last_modified": "Sat, 03 Oct 2026 01:25:37 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "stated": "CC-BY-4.0",
+    "normalised": "CC-BY-4.0",
+    "title": "This work is licensed under a Creative Commons Attribution 4.0 International License .",
+    "url": "",
+    "read_from": "https://portal-mainroads.opendata.arcgis.com/api/search/v1/collections/dataset/items/6114ced8bff94d23be2739d6ea9f30f4",
+    "read_at": "2026-10-03T03:14:32+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "a289a5e383578e0e5c659b982dd3cef240a4072cc62364e4a9959c8dff7f7ff5"
+}

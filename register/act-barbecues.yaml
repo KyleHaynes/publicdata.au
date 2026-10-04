@@ -1,0 +1,154 @@
+slug: act-barbecues
+title: Public barbecues, ACT
+status: live
+topics:
+- places
+- community
+example:
+  group: asset_sub_type
+  metric: count
+  label: Barbecues by type
+order: 471
+search_title: Canberra public barbecue locations, free electric BBQs (Transport Canberra and City Services)
+also_known_as:
+- ACTGOV Barbecue Assets
+- Canberra free BBQ locations
+- ACT park barbecues map
+keywords:
+- barbecues
+- BBQ
+- parks
+- picnic areas
+- public facilities
+- Canberra
+- ACT
+faq:
+- q: What is in each row?
+  a: One public barbecue owned or managed by the ACT Government, with its asset identifier and name, the
+    park or place it is in, whether it is electric, gas or wood, its hotplates, bench and door type,
+    whether there is a tap, the suburb and address, the owner and maintainer, and its coordinates.
+- q: Does it list every barbecue in Canberra?
+  a: No. The publisher lists the barbecues that City Services or another part of Transport Canberra and City
+    Services owns or manages. Barbecues run privately, by other directorates or by the Federal Government
+    may not be included.
+- q: Where is the publisher's file?
+  a: The portal serves the layer as a table with each point as text. This site reads the portal's GeoJSON
+    export of the same rows, ordered by the portal's row identifier, and keeps that file as the source of
+    every version.
+summary: Every public barbecue the ACT Government owns or manages, one row per barbecue with its park,
+  type, hotplates, suburb and coordinates.
+description: The public barbecues in the ACT that Transport Canberra and City Services owns or manages,
+  about half of them electric and most of the rest wood-fired. Each row carries the asset type
+  and subtype, the asset identifier and name, the location, make, hotplate combination and material, unit
+  numbers, whether there is a tap, the bench and door types, the suburb, address, owner and maintainer, the
+  publisher's global identifier and the point's longitude and latitude.
+publisher:
+  name: Transport Canberra and City Services Directorate
+  short: TCCS
+  jurisdiction: ACT
+  url: https://www.cityservices.act.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.act.gov.au/d/qxhv-bxbv
+  statement: Creative Commons Attribution 4.0 International
+  title: Creative Commons Attribution 4.0 International
+  attribution: Transport Canberra and City Services, ACT Government, ACTGOV Barbecue Assets,
+    https://www.data.act.gov.au/d/qxhv-bxbv, accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: file
+  url: https://www.data.act.gov.au/resource/qxhv-bxbv.geojson?$limit=50000&$order=:id
+  cadence: monthly
+key:
+- asset_id
+geometry:
+  lon: longitude
+  lat: latitude
+  crs: EPSG:4326
+  crs_note: Longitude and latitude in decimal degrees from the portal's GeoJSON export, which is WGS84.
+row_label: Barbecues
+fields:
+- name: objectid
+  label: Object ID
+  source: objectid
+  type: integer
+- name: asset_type
+  label: Asset type
+  source: asset_type
+  type: string
+- name: asset_sub_type
+  label: Type
+  source: asset_sub_type
+  type: string
+  description: Electric, gas or wood, as the publisher records it.
+- name: asset_id
+  label: Asset ID
+  source: asset_id
+  type: string
+- name: asset_name
+  label: Name
+  source: asset_name
+  type: string
+- name: location
+  label: Park or place
+  source: location
+  type: string
+- name: make
+  label: Make
+  source: make
+  type: string
+- name: hotplate_combination
+  label: Hotplates
+  source: hotplate_combination
+  type: string
+- name: hotplate_material
+  label: Hotplate material
+  source: hotplate_material
+  type: string
+- name: unit_numbers
+  label: Units
+  source: unit_numbers
+  type: string
+- name: tap_at_bbq
+  label: Tap at barbecue
+  source: tap_at_bbq
+  type: integer
+  description: 1 where the publisher records a tap at the barbecue.
+- name: bench_type
+  label: Bench type
+  source: bench_type
+  type: string
+- name: door_type
+  label: Door type
+  source: door_type
+  type: string
+- name: suburb
+  label: Suburb
+  source: suburb
+  type: string
+- name: address
+  label: Address
+  source: address
+  type: string
+- name: ownership
+  label: Owner
+  source: ownership
+  type: string
+- name: maintained_by
+  label: Maintained by
+  source: maintained_by
+  type: string
+- name: globalid
+  label: Global ID
+  source: globalid
+  type: string
+- name: longitude
+  label: Longitude
+  source: (longitude)
+  type: number
+- name: latitude
+  label: Latitude
+  source: (latitude)
+  type: number
+note: Cells were typed and headers were made snake_case. The point of each feature is given as longitude and
+  latitude columns. Rows were left alone.

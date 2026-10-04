@@ -1,0 +1,19 @@
+name = "publicdata-au"
+compatibility_date = "2026-09-01"
+pages_build_output_dir = "dist"
+
+# Files over the Pages per-file limit live in R2 and are served by functions/d/[[path]].js.
+[[r2_buckets]]
+binding = "DIST"
+bucket_name = "publicdata-dist"
+
+# Votes: one object per browser per day per dataset, and a rollup of the counts.
+[[r2_buckets]]
+binding = "VOTES"
+bucket_name = "publicdata-votes"
+
+# The query API. Tables are loaded by the deploy when the repository variable D1_ENABLED is true.
+[[d1_databases]]
+binding = "DB"
+database_name = "publicdata"
+database_id = "4bd7c604-e0fc-43e3-865d-50181046e0d4"

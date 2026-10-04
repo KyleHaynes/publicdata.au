@@ -1,0 +1,102 @@
+slug: nsw-primary-class-sizes
+title: Average class sizes in government primary schools by year, New South Wales
+status: live
+topics:
+- education
+example:
+  group: year
+  metric: avg.k_to_6
+  label: Average K-6 class size
+chart:
+  split: none
+  metric: avg.k_to_6
+  label: Average K-6 class size
+order: 318
+publisher:
+  name: NSW Department of Education
+  short: Department of Education
+  jurisdiction: NSW
+  url: https://education.nsw.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.nsw.gov.au/data/dataset/nsw-education-average-government-primary-school-class-sizes-by-year
+  attribution: NSW Department of Education, NSW Government, Average government primary school class sizes by
+    year, sourced {sourced}, https://data.nsw.gov.au/data/dataset/nsw-education-average-government-primary-school-class-sizes-by-year,
+    licensed under CC BY 4.0.
+temporal_start: '1997-01-01'
+search_title: Average class size in NSW public primary schools by year (NSW Department of Education)
+also_known_as:
+- NSW primary school class sizes
+- Average students per class NSW public schools
+- Kindergarten class sizes NSW
+keywords:
+- class sizes
+- primary schools
+- kindergarten
+- public schools
+- NSW Department of Education
+- New South Wales
+faq:
+- q: What is in each row?
+  a: One school year, with the average number of students per class in NSW government primary schools for Kindergarten,
+    each of Years 1 to 6, and Kindergarten to Year 6 together.
+- q: Why do some years not appear?
+  a: The Department's file has the years it published averages for, from 1997. Years it did not report are
+    not rows.
+summary: The average class size in NSW government primary schools for each grade from Kindergarten to Year
+  6, for each year the Department has reported since 1997.
+description: The Average class size by year table from the NSW Department of Education. Each row is one year,
+  with the average number of students per class in government primary schools for Kindergarten, Years 1 to
+  6 and Kindergarten to Year 6. The Department also publishes a fact sheet each year as a PDF, which is not
+  read here.
+source:
+  adapter: ckan-resource
+  portal: https://data.nsw.gov.au/data
+  package: nsw-education-average-government-primary-school-class-sizes-by-year
+  resource_match: ^Average class size by year
+  url: https://data.nsw.gov.au/data/dataset/nsw-education-average-government-primary-school-class-sizes-by-year
+  cadence: yearly
+  encoding: utf-8-sig
+  header_row: 3
+key:
+- year
+row_label: Years
+fields:
+- name: year
+  label: Year
+  source: Year
+  type: integer
+- name: kindergarten
+  label: Kindergarten average class size
+  source: K
+  type: number
+- name: year_1
+  label: Year 1 average class size
+  source: Year 1
+  type: number
+- name: year_2
+  label: Year 2 average class size
+  source: Year 2
+  type: number
+- name: year_3
+  label: Year 3 average class size
+  source: Year 3
+  type: number
+- name: year_4
+  label: Year 4 average class size
+  source: Year 4
+  type: number
+- name: year_5
+  label: Year 5 average class size
+  source: Year 5
+  type: number
+- name: year_6
+  label: Year 6 average class size
+  source: Year 6
+  type: number
+- name: k_to_6
+  label: Kindergarten to Year 6 average class size
+  source: K-6
+  type: number

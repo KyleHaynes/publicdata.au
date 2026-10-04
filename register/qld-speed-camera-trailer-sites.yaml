@@ -1,0 +1,68 @@
+slug: qld-speed-camera-trailer-sites
+title: Road safety camera trailer sites, Queensland
+status: live
+topics:
+- roads
+order: 211
+collection: qld-speed-camera-sites
+collection_title: Speed camera sites in Queensland
+search_title: Queensland speed camera trailer sites (Queensland Police Service)
+also_known_as:
+- Road Safety Camera Trailer sites QLD
+- Speed camera trailer locations Queensland
+- QPS camera trailer sites
+keywords:
+- speed cameras
+- camera trailers
+- camera sites
+- road safety
+- QPS
+- Queensland
+faq:
+- q: What is in each row?
+  a: One site where a road safety camera trailer may be placed, with the site code, the road and locality,
+    and whether the site is active or parked. A direction such as [NB] after the locality is the direction
+    of travel the camera faces.
+- q: Does it show where trailers are today?
+  a: No. It lists the approved sites only.
+summary: Every approved site for road safety camera trailers in Queensland, with its site code, road and
+  locality and status, from the Queensland Police Service.
+description: The list of sites where the Queensland Police Service may place road safety camera trailers,
+  one row per site, with the site code, the road and locality and whether the site is active or parked.
+publisher:
+  name: Queensland Police Service
+  short: QPS
+  jurisdiction: Qld
+  url: https://www.police.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/active-mobile-speed-camera-sites
+  attribution: Queensland Police Service, Queensland Government, Active mobile speed camera sites, Road
+    Safety Camera Trailer Sites, sourced {sourced}, https://www.data.qld.gov.au/dataset/active-mobile-speed-camera-sites,
+    licensed under CC BY 4.0.
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: active-mobile-speed-camera-sites
+  resource: d059503f-3685-4669-8c43-df5b74da8ba8
+  url: https://www.data.qld.gov.au/dataset/active-mobile-speed-camera-sites
+  encoding: utf-8-sig
+  cadence: quarterly
+key:
+- site_code
+row_label: Sites
+fields:
+- name: site_code
+  label: Site code
+  source: Site Code
+  type: string
+- name: location
+  label: Road and locality
+  source: Location Name
+  type: string
+- name: status
+  label: Status
+  source: Status Description
+  type: string
+note: Headers were made snake_case. Rows were left alone.

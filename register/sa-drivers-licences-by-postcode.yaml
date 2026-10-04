@@ -1,0 +1,88 @@
+slug: sa-drivers-licences-by-postcode
+title: Driver's licences by postcode, age and sex, South Australia
+status: live
+topics:
+- roads
+- people
+example:
+  where:
+    postcode:
+      neq: Total
+  group: sex
+  metric: sum.licences
+  label: Current driver's licences by the holder's sex
+sample:
+  where: {postcode: {neq: Total}}
+  order: [licences.desc]
+  spread: postcode
+  label: The largest age and sex group in each postcode, one postcode at a time, largest first.
+order: 426
+collection: sa-vehicles-and-licences
+collection_title: Registered vehicles and driver's licences, South Australia
+search_title: South Australia driver's licence holders by postcode, age and sex (DIT)
+also_known_as:
+- Drivers' Licences by postcode age and sex SA
+- TRLB05 drivers licences
+- Number of licensed drivers by postcode South Australia
+keywords:
+- driver's licences
+- licensed drivers
+- licence holders by postcode
+- learner and provisional drivers
+- Department for Infrastructure and Transport
+- South Australia
+faq:
+- q: What is in each row?
+  a: The number of current driver's licences of all kinds, full and provisional, for cars, motorcycles and other
+    vehicles, held by people of one age and sex in one postcode at the end of the quarter.
+- q: What are the Total and TRLB05 rows?
+  a: The publisher ends the table with a Total row and a footer row naming the report and page. Both are kept as
+    published. The footer's count reads DPTI and is a null here.
+- q: Which date does the table cover?
+  a: The newest quarter, the end of June 2026 at the first version. The publisher adds a file each quarter, and
+    each becomes a version here.
+summary: The number of current driver's licences in South Australia at the end of the newest quarter, by holder's
+  postcode, age and sex. Updated quarterly.
+description: Drivers' Licences by postcode, age and sex from the Department for Infrastructure and Transport, which
+  refers to the report as TRLB05. Each row is one postcode, age and sex, with the number of current licences of all
+  types held, including full and provisional car, motorcycle and other licences.
+publisher:
+  name: Department for Infrastructure and Transport
+  short: Infrastructure and Transport
+  jurisdiction: SA
+  url: https://www.dit.sa.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.sa.gov.au/data/dataset/drivers-licences-by-postcode-age-and-sex
+  attribution: Department for Infrastructure and Transport, Government of South Australia, Drivers' Licences by postcode, age and sex,
+    https://data.sa.gov.au/data/dataset/drivers-licences-by-postcode-age-and-sex, accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: ckan-resource
+  portal: https://data.sa.gov.au/data
+  package: drivers-licences-by-postcode-age-and-sex
+  resource_match: ^Drivers' Licences by postcode age and sex -? ?Q\d \d{4}$
+  url: https://data.sa.gov.au/data/dataset/drivers-licences-by-postcode-age-and-sex
+  cadence: quarterly
+  header_row: 7
+row_label: Licence counts
+fields:
+- name: postcode
+  label: Postcode
+  source: PostCode
+  type: string
+- name: age
+  label: Age
+  source: Age
+  type: integer
+- name: sex
+  label: Sex
+  source: Sex
+  type: string
+- name: licences
+  label: Licences
+  source: Total
+  type: integer
+  null_values:
+  - DPTI

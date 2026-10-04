@@ -1,0 +1,124 @@
+slug: vic-rents-by-suburb
+title: Median weekly rents by suburb and property type, Victoria
+status: live
+topics:
+- housing
+example:
+  where:
+    property_type: 2 bedroom flat
+    year_ending: newest
+  group: suburb
+  metric: max.median_rent
+  label: Median weekly rent
+chart:
+  where:
+    property_type: All properties
+    suburb:
+      neq: Group Total
+  metric: avg.median_rent
+  label: Average of the suburb median weekly rents
+order: 44
+publisher:
+  name: Homes Victoria
+  short: Homes Victoria
+  jurisdiction: Vic
+  url: https://www.homes.vic.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-09-29'
+  portal_id: cc-by
+  evidence: https://discover.data.vic.gov.au/dataset/rental-report-quarterly-moving-annual-rents-by-suburb
+  attribution: Homes Victoria, Victorian Government, Rental Report - Quarterly - Moving Annual Rents by
+    Suburb, sourced {sourced}, https://discover.data.vic.gov.au/dataset/rental-report-quarterly-moving-annual-rents-by-suburb,
+    licensed under CC BY 4.0.
+temporal_start: '1999-04-01'
+search_title: Median rent by suburb, Melbourne and Victoria (Rental Report)
+also_known_as:
+- Victorian Rental Report moving annual rents by suburb
+- Average rent in Melbourne by suburb
+- Melbourne median rent by suburb and property type
+- Homes Victoria rental data
+keywords:
+- median rent
+- rent by suburb
+- Melbourne rent
+- rental report
+- rental market
+- Homes Victoria
+- Victoria
+faq:
+- q: What is a moving annual median?
+  a: Each figure is the median weekly rent of the new leases that began in the twelve months ending in the
+    quarter named, beside the count of those leases. A row dated March 2025 covers leases that began from
+    April 2024 to March 2025.
+- q: What does a blank median mean?
+  a: The publisher shows a dash where it gives no figure for a suburb and property type. The dash is kept
+    here as a null value in both the count and the median.
+- q: What are the Group Total rows?
+  a: Each region ends with the publisher's own total row, named Group Total in the suburb column. It is kept
+    as published.
+summary: The median weekly rent of new leases in each Victorian suburb and town, by property type, for
+  each quarter since March 2000, with the number of leases.
+description: Moving annual median weekly rents for new leases in each Victorian suburb group and regional
+  town, for one, two and three bedroom flats, two, three and four bedroom houses and all properties. Each
+  row is one property type, suburb and quarter, with the count of new leases and their median rent, from
+  the Homes Victoria Rental Report.
+source:
+  adapter: ckan-resource
+  portal: https://discover.data.vic.gov.au
+  package: rental-report-quarterly-moving-annual-rents-by-suburb
+  resource_match: Moving Annual Rents
+  url: https://discover.data.vic.gov.au/dataset/rental-report-quarterly-moving-annual-rents-by-suburb
+  cadence: quarterly
+wide:
+  sheets:
+  - 1 bedroom flat
+  - 2 bedroom flat
+  - 3 bedroom flat
+  - 2 bedroom house
+  - 3 bedroom house
+  - 4 bedroom house
+  - All properties
+  header_row: 2
+  header_rows: 2
+  row_headers: 2
+  fill_down:
+  - 1
+key:
+- property_type
+- region
+- suburb
+- year_ending
+partition_by:
+- property_type
+fields:
+- name: property_type
+  label: Property type
+  source: (sheet)
+  type: string
+- name: region
+  label: Region
+  source: (row header 1)
+  type: string
+- name: suburb
+  label: Suburb or town
+  source: (row header 2)
+  type: string
+- name: year_ending
+  label: Year ending
+  source: (column header 1)
+  type: date
+  date_format: '%b %Y'
+  description: First day of the month the twelve months end in.
+- name: new_lettings
+  label: New leases
+  source: '(cell: Count)'
+  type: integer
+  null_values:
+  - '-'
+- name: median_rent
+  label: Median weekly rent ($)
+  source: '(cell: Median)'
+  type: integer
+  null_values:
+  - '-'

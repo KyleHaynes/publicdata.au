@@ -1,0 +1,17 @@
+# The Secret scan workflow runs gitleaks over every ref's history. This extends the default rules
+# with values that are public by design.
+title = "publicdata.au gitleaks config"
+
+[extend]
+useDefault = true
+
+# The MCP Registry key here is the public half, served at /.well-known/mcp-registry-auth; the
+# private half is an Actions secret. The Cloudflare Web Analytics token is carried by the beacon to
+# every visitor and identifies the site rather than authorising anything.
+[allowlist]
+description = "Public by design: MCP Registry public key, Web Analytics site token"
+regexTarget = "line"
+regexes = [
+  '''D\+bNodSgVutRDCBCLQTUim6e900TD\+4Fy1tPz9LSokk=''',
+  '''b3b3d9ce88104e7e965284919b4d556e''',
+]

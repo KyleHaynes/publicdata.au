@@ -1,0 +1,95 @@
+slug: nsw-boat-licences-registrations-by-postcode
+title: Boat licences and vessel registrations by postcode, New South Wales
+status: live
+topics:
+- community
+order: 312
+publisher:
+  name: Transport for NSW
+  short: TfNSW
+  jurisdiction: NSW
+  url: https://www.transport.nsw.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.nsw.gov.au/data/dataset/2-nsw-boat-registrations-and-licences
+  attribution: Transport for NSW, NSW Government, NSW Boat Registrations and Licences, sourced {sourced},
+    https://data.nsw.gov.au/data/dataset/2-nsw-boat-registrations-and-licences, licensed under CC BY 4.0.
+search_title: NSW boat licences and boat registrations by postcode (Transport for NSW)
+also_known_as:
+- NSW boat licence numbers by postcode
+- Registered recreational vessels NSW by postcode
+- Maritime NSW licences and registrations
+- NSW jet ski registrations by postcode
+keywords:
+- boat licences
+- boat registrations
+- recreational vessels
+- personal watercraft
+- Maritime NSW
+- postcode
+- Transport for NSW
+- New South Wales
+faq:
+- q: What is in each row?
+  a: One postcode and one kind of current licence or registration, with the number held by people or
+    vessels recorded at that postcode on the day the report was run. The kinds are the general boat
+    licence and the personal watercraft (PWC) boat licence, and the registrations of recreational vessels
+    (RV) and recreational personal watercraft (PWCR).
+- q: Why are some postcodes not Australian?
+  a: The postcode column is the address on the customer record as Transport for NSW holds it. It includes
+    overseas postcodes and placeholder text such as return to sender, and these rows are kept as published.
+- q: What does a blank count mean?
+  a: The report leaves a cell blank where a postcode has no current licence or registration of that kind.
+    It is a null value here.
+- q: How often is it updated?
+  a: Transport for NSW runs the report at the start of each month and replaces the file, so each version
+    is one month's report.
+summary: The number of current NSW boat driver licences and recreational vessel registrations at each
+  postcode, by licence and registration type, from Transport for NSW's monthly report.
+description: The TRP-RM-15 GLS Licences and Registration Report by display names and postcode from Transport
+  for NSW. The report has a column for each licence and registration type; each cell is one row here,
+  with the postcode, whether the record is current, the product group (boat driver licence or vessel registration),
+  the type and the count. Counts cover recreational boating, the area Maritime NSW deals with.
+source:
+  adapter: ckan-resource
+  portal: https://data.nsw.gov.au/data
+  package: 2-nsw-boat-registrations-and-licences
+  resource: 9218bde0-4d3d-4a50-a54a-f335fda8756d
+  url: https://data.nsw.gov.au/data/dataset/2-nsw-boat-registrations-and-licences
+  cadence: monthly
+wide:
+  sheets:
+  - Sheet1
+  header_row: 6
+  header_rows: 3
+  row_headers: 1
+key:
+- postcode
+- status
+- product
+- display_name
+row_label: Postcodes by type
+fields:
+- name: postcode
+  label: Postcode
+  source: (row header 1)
+  type: string
+  description: The postcode on the customer record, as held. Some are overseas or placeholder text.
+- name: status
+  label: Status
+  source: (column header 1)
+  type: string
+- name: product
+  label: Licence or registration
+  source: (column header 2)
+  type: string
+- name: display_name
+  label: Type
+  source: (column header 3)
+  type: string
+- name: count
+  label: Number held
+  source: (cell)
+  type: integer

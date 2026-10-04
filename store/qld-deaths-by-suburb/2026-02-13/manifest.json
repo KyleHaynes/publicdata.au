@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-deaths-by-suburb",
+  "version": "2026-02-13",
+  "as_at": "",
+  "fetched_at": "2026-10-03T02:59:30+00:00",
+  "sha256": "28e95428001d59cfa0c3aaef285eb7ef23888b8d7f9f9214d3f0bced18921782",
+  "bytes": 8835,
+  "filename": "2025-deaths-by-suburb.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/e5dfb86b-ed0a-48ba-b1d3-18f235e61518/resource/b4fe19ec-4553-4d76-b3df-a46db010a6b9/download/2025-deaths-by-suburb.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "deaths-by-suburb",
+    "package_id": "e5dfb86b-ed0a-48ba-b1d3-18f235e61518",
+    "resource": "b4fe19ec-4553-4d76-b3df-a46db010a6b9",
+    "resource_name": "2025 Deaths by Suburb",
+    "resource_last_modified": "2026-02-12T22:53:32.886747",
+    "package_modified": "2026-02-12T22:51:32.656845",
+    "package_version": "1.0",
+    "etag": "773fc1d36f3ba6b4949894ccae8bbaed",
+    "http_last_modified": "Thu, 12 Feb 2026 22:51:25 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-3.0",
+    "title": "Creative Commons Attribution 3.0",
+    "url": "https://creativecommons.org/licenses/by/3.0/au/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=deaths-by-suburb",
+    "read_at": "2026-10-03T02:59:30+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "f6d355afde3d2b9469064f20f4da4b1fd680546d2606e3b76a1e781f1a633c24"
+}

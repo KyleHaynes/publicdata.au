@@ -1,0 +1,143 @@
+slug: nt-crocodile-captures
+title: Crocodile captures, Northern Territory
+status: live
+topics:
+- nature
+order: 495
+temporal_start: '2002-04-06'
+collection: nt-crocodile-capture-zones
+collection_title: Crocodile capture zones and captures, Northern Territory
+collection_search_title: NT crocodile capture data
+collection_description: |
+  The Parks and Wildlife Commission of the Northern Territory removes crocodiles from waters near
+  towns inside defined capture zones. This collection holds the record of every crocodile captured,
+  from the Croc Capture Database, and the boundaries of the nine capture zones. The publisher does not
+  release the location of its traps, so a capture is placed only by its zone, group and location name.
+search_title: NT crocodile captures by day and zone (Parks and Wildlife Commission)
+also_known_as:
+- NT Crocodile Capture Zones and Daily Count
+- Darwin Harbour crocodile captures
+- Crocodile removal records Northern Territory
+- Croc Capture Database
+keywords:
+- crocodile
+- saltwater crocodile
+- crocodile captures
+- Darwin Harbour
+- crocodile management
+- Northern Territory
+faq:
+- q: What is in each row?
+  a: One crocodile captured, with the date, species, capture method, total length, head length and
+    snout to vent length in centimetres, sex, whether the tail was complete, and the region, capture
+    zone, location group and location where it was caught.
+- q: Where exactly was each crocodile caught?
+  a: The publisher does not release trap coordinates. Each capture is placed by its zone, a location
+    group such as a river or creek, and a location name.
+- q: How often is it updated?
+  a: The publisher adds captures to the file through the year. The September 2026 file runs to 30
+    September 2026. This site checks it weekly and adds a dated version when the file changes.
+summary: Every crocodile captured in the Northern Territory's crocodile capture zones since 2002, one
+  row per animal, with date, species, size, sex, capture method and zone.
+description: The daily capture records of the Parks and Wildlife Commission of the Northern Territory,
+  from the Croc Capture Database, one row per crocodile captured since April 2002. Each row carries
+  the date of capture, scientific and common name, capture method, total length, head length and snout
+  to vent length in centimetres, sex, whether the tail was complete, the region, the capture zone name
+  and code, the location group and the location. The publisher ships the table as a workbook inside
+  the capture zones download.
+publisher:
+  name: Department of Lands, Planning and Environment
+  short: Lands, Planning and Environment
+  jurisdiction: NT
+  url: https://nt.gov.au/environment/animals/wildlife-in-nt/crocodiles
+licence:
+  id: CC-BY-4.0
+  portal_id: cc-by
+  reviewed: '2026-10-01'
+  evidence: https://data.nt.gov.au/dataset/nt-crocodile-capture-zones-and-daily-count
+  attribution: Parks and Wildlife Commission of the Northern Territory, Northern Territory Government,
+    NT Crocodile Capture Zones and Daily Count, https://data.nt.gov.au/dataset/nt-crocodile-capture-zones-and-daily-count,
+    accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: ckan-resource
+  portal: https://data.nt.gov.au
+  package: nt-crocodile-capture-zones-and-daily-count
+  resource: 53bf0127-f208-44b2-8340-ec79ce6e0a15
+  url: https://data.nt.gov.au/dataset/nt-crocodile-capture-zones-and-daily-count
+  member: Wildlife_CrocCaptureZones/Information/NT Crocodile Capture.xlsx
+  sheet: Daily capture
+  cadence: through the year
+key:
+- object_id
+partition_by:
+- zone_name
+row_label: Captures
+fields:
+- name: object_id
+  label: Record ID
+  source: OBJECTID
+  type: integer
+  description: The publisher's identifier for the capture.
+- name: date_captured
+  label: Date captured
+  source: DATE_CAPTURED
+  type: date
+- name: scientific_name
+  label: Scientific name
+  source: SCIENTIFIC_NAME
+  type: string
+- name: common_name
+  label: Common name
+  source: COMMON_NAME
+  type: string
+  description: Saltwater Crocodile or Freshwater Crocodile.
+- name: capture_method
+  label: Capture method
+  source: CAPTURE_METHOD
+  type: string
+- name: total_length_cm
+  label: Total length (cm)
+  source: TOTAL_LENGTH
+  type: number
+  description: From the tip of the snout to the tip of the tail.
+- name: head_length_cm
+  label: Head length (cm)
+  source: HEAD_LENGTH
+  type: number
+  description: From the tip of the snout to the end of the dorsal cranial platform.
+- name: sex
+  label: Sex
+  source: SEX
+  type: string
+  description: F, M, or U where unknown.
+- name: snout_vent_length_cm
+  label: Snout to vent length (cm)
+  source: SNOUT_VENT_LENGTH
+  type: number
+- name: tail_complete
+  label: Tail complete
+  source: TAIL_COMPLETE
+  type: string
+  description: Y, N, or U where unknown.
+- name: region
+  label: Region
+  source: REGION
+  type: string
+- name: zone_name
+  label: Capture zone
+  source: ZONE_NAME
+  type: string
+- name: zone_code
+  label: Zone code
+  source: ZONE_CODE
+  type: integer
+- name: group_name
+  label: Location group
+  source: GROUP_NAME
+  type: string
+- name: location
+  label: Location
+  source: LOCATION
+  type: string
+note: Cells were typed and headers were made snake_case. The publisher's header is kept beside every
+  field in schema.json. Rows were left alone.

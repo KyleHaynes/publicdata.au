@@ -1,0 +1,34 @@
+{
+  "dataset": "au-youth-detention-population-quarterly",
+  "version": "2017-07-25",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:15:26+00:00",
+  "sha256": "a8d9fdfbbf158e4ad87e4c3fa31d3b4107b1838753036412b9c621633d6d565b",
+  "bytes": 2641639,
+  "filename": "youth-justice-detention-data-2017.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://data.gov.au/data/dataset/469ea5ba-2ab3-4972-a045-52bfc87fc512/resource/c7edfa08-7bc9-404d-8f2b-22bcd0425021/download/youth-justice-detention-data-2017.csv",
+    "portal": "https://data.gov.au/data",
+    "package": "youth-justice-detention-data",
+    "package_id": "469ea5ba-2ab3-4972-a045-52bfc87fc512",
+    "resource": "c7edfa08-7bc9-404d-8f2b-22bcd0425021",
+    "resource_name": "Youth Justice Detention Data",
+    "resource_last_modified": "2017-07-25T00:00:00",
+    "package_modified": "2023-08-10T14:11:38.523236",
+    "package_version": null,
+    "etag": "W/1500962182.0-2641639-3789754357",
+    "http_last_modified": "Tue, 25 Jul 2017 05:56:22 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution 3.0 Australia",
+    "url": "http://creativecommons.org/licenses/by/3.0/au/",
+    "read_from": "https://data.gov.au/data/api/3/action/package_show?id=youth-justice-detention-data",
+    "read_at": "2026-10-03T03:15:26+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "e13bc8f87dd7a2de8bc42d14b3d4a489f8c0da80733ef66e4026fffeb812afff"
+}

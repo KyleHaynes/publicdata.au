@@ -1,0 +1,32 @@
+{
+  "dataset": "act-contracts-register-2016-2017",
+  "version": "2017-07-25",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:14:06+00:00",
+  "sha256": "d58c3fde59162b3accd6fad224570c6c79fbeddb3cadacba7a90408fce525fda",
+  "bytes": 942206,
+  "filename": "pfs5-8d64.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.act.gov.au/api/views/pfs5-8d64/rows.csv?accessType=DOWNLOAD",
+    "portal": "https://www.data.act.gov.au",
+    "package": "pfs5-8d64",
+    "resource_name": "Contracts Register",
+    "rows_updated_at": 1500945612,
+    "etag": "Z29sZi4zMTMxXzNfMTg2TlpDSGh6VTNYcFVXbFVoSS1RYmh0VlhUdUVF---gzipyabyfYOOI8Sh1YmTkbal8co0lwQ--gzip--gzip",
+    "http_last_modified": "Fri, 09 Nov 2018 23:56:26 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "stated": "CC_40_BY",
+    "normalised": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0 International",
+    "url": "http://creativecommons.org/licenses/by/4.0/legalcode",
+    "read_from": "https://www.data.act.gov.au/api/views/pfs5-8d64.json",
+    "read_at": "2026-10-03T03:14:05+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "e40b2612e0cc462a308eb9bf4104b62fb9607f68d4e0d348b4e08faafd90e2df"
+}

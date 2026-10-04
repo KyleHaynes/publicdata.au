@@ -1,0 +1,83 @@
+slug: qld-top-baby-names
+title: Top 100 baby names, Queensland, latest year
+status: live
+topics:
+- people
+order: 200
+collection: qld-bdm-statistics
+collection_title: Births, deaths and baby names registered in Queensland
+search_title: Queensland top 100 baby names (Registry of Births, Deaths and Marriages)
+collection_search_title: Queensland births and deaths statistics (Registry of Births, Deaths and Marriages)
+also_known_as:
+- Popular baby names Queensland
+- QLD baby names list
+- Most popular baby names in Queensland
+keywords:
+- baby names
+- popular names
+- girl names
+- boy names
+- births
+- Queensland
+collection_description: |
+  The Queensland Registry of Births, Deaths and Marriages, part of the Department of Justice, publishes yearly counts of the births and deaths registered in Queensland and the names given to babies. The registry publishes a separate file for each year.
+
+  These tables follow the registry's newest file for each series. Each version here is one release, so the archive keeps each year as the registry replaces it. The counts are of registrations, and a birth or death can be registered in a later month or year than it happened.
+faq:
+- q: What is in each row?
+  a: One rank from 1 to 100, with the girl name at that rank and the number of girls registered with it,
+    and the boy name at that rank and its count. The registry lists names in descending order of count.
+    Names that tie at the last place are all listed, so the 2025 file has 101 boy names and its last row
+    has no girl name.
+- q: Which year does it cover?
+  a: The newest year the registry has published, which is 2025 in the first version. The registry adds
+    a file each year, and this table follows the newest one. The 1960 to 2005 table holds the earlier
+    years.
+summary: The 100 most registered girl and boy names in Queensland in the newest year the registry has
+  published, with the number of babies given each name.
+description: The Queensland Registry of Births, Deaths and Marriages counts the first names given to babies
+  whose births are registered in Queensland each year. This table is the newest year's top 100, one row
+  per rank, with the girl name and boy name at that rank and the count of each.
+publisher:
+  name: Department of Justice
+  short: Justice
+  jurisdiction: Qld
+  url: https://www.justice.qld.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/top-100-baby-names
+  attribution: Department of Justice, Queensland Government, Top 100 Baby Names, sourced {sourced}, https://www.data.qld.gov.au/dataset/top-100-baby-names,
+    licensed under CC BY 3.0 AU.
+  portal_id: CC-BY-3.0
+example:
+  group: girl_name
+  metric: sum.girl_count
+  label: Girls given the name
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: top-100-baby-names
+  url: https://www.data.qld.gov.au/dataset/top-100-baby-names
+  encoding: utf-8-sig
+  resource_match: ^\d{4} Top 100 Baby Names$
+  cadence: yearly
+row_label: Ranks
+fields:
+- name: girl_name
+  label: Girl name
+  source: Girl Names
+  type: string
+- name: girl_count
+  label: Girls given the name
+  source: Count of Girl Names
+  type: integer
+- name: boy_name
+  label: Boy name
+  source: Boy Names
+  type: string
+- name: boy_count
+  label: Boys given the name
+  source: Count of Boy Names
+  type: integer
+note: Headers were made snake_case. Rows were left alone.

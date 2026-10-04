@@ -1,0 +1,117 @@
+slug: qld-gaming-machines-by-sa2
+title: Gaming machine data by SA2, Queensland
+status: live
+topics:
+- economy
+- community
+order: 280
+collection: qld-gaming-gambling
+collection_title: Gaming machine and gambling data from Queensland
+collection_search_title: Queensland gaming machine and gambling statistics
+collection_description: |
+  The Office of Liquor and Gaming Regulation (OLGR) publishes monthly figures on electronic gaming machines in Queensland hotels and clubs and on what players spend across every form of gambling.
+
+  The release is seven tables. Two count venues, machines and metered win by ABS area, at SA2 and SA4 level. Three give the same counts for hotels, for clubs and for the whole state. One gives player expenditure by gambling stream, and one counts venues by how many machines they operate.
+temporal_start: '2016-10-01'
+search_title: Pokies by suburb area in Queensland, gaming machines by SA2 (OLGR)
+also_known_as:
+- Queensland pokies data by area
+- Queensland gaming machine metered win by SA2
+- OLGR gaming machine data by statistical area 2
+keywords:
+- gaming machines
+- pokies
+- poker machines
+- metered win
+- gambling losses
+- SA2
+- Queensland
+faq:
+- q: What is in each row?
+  a: One ABS Statistical Area 2 in one month, with the number of venues approved and operating, the number of gaming machines approved and operating, and the metered win, which is the amount players lost on the machines.
+- q: Why is the metered win blank for many areas?
+  a: The publisher marks the metered win Not Released for an area in a month when it does not publish the figure. It is kept as a null with a suppressed flag. The venue and machine counts are still given.
+- q: Which SA2 boundaries are used?
+  a: The publisher says it uses the areas of the Australian Statistical Geography Standard 2011. The areas are named, with no code.
+summary: Monthly counts of gaming venues and machines in each Queensland SA2 area since October 2016, with the amount players lost where the publisher releases it.
+description: One row per ABS Statistical Area 2 per month from October 2016, with the venues approved and operating electronic gaming machines, the machines approved and operating on the last day of the month, and the metered win in dollars. The metered win is withheld for many areas and is kept as suppressed. Areas are ASGS 2011 SA2 names.
+publisher:
+  name: Office of Liquor and Gaming Regulation
+  short: OLGR
+  jurisdiction: Qld
+  url: https://www.olgr.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/gaming-machine-data-by-statistical-area-2
+  attribution: Office of Liquor and Gaming Regulation, Queensland Government, Gaming Machine Data by Statistical
+    Area 2, sourced {sourced}, https://www.data.qld.gov.au/dataset/gaming-machine-data-by-statistical-area-2,
+    licensed under CC BY 4.0.
+example:
+  where: {month: newest}
+  group: sa2_region
+  metric: sum.operational_egms
+  label: Operating gaming machines in each area in the newest month
+chart:
+  split: none
+  metric: avg.operational_egms
+  label: Average operating machines in an area in a month
+sample:
+  where: {month: newest, metered_win: {gt: 0}}
+  order: [metered_win.desc]
+  spread: none
+  label: The ten areas where players lost the most on gaming machines in the newest month, largest first. Areas whose amount the publisher withholds are left out.
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: gaming-machine-data-by-statistical-area-2
+  resource: 27606d56-157b-4bfe-8882-78113de9cf9b
+  url: https://www.data.qld.gov.au/dataset/gaming-machine-data-by-statistical-area-2
+  cadence: monthly
+  encoding: utf-8-sig
+suppression:
+- Not Released
+key:
+- month
+- sa2_region
+partition_by:
+- sa2_region
+place_field: sa2_region
+row_label: Area months
+fields:
+- name: month
+  label: Month
+  source: Month Year
+  type: date
+  date_format: '%B %Y'
+  description: First day of the month the figures are for.
+- name: sa2_region
+  label: SA2 area
+  source: SA2 Region
+  type: string
+  description: ABS Statistical Area 2 name (ASGS 2011), in capitals as published.
+- name: approved_sites
+  label: Approved sites
+  source: Approved Sites
+  type: integer
+  description: Venues approved to operate electronic gaming machines.
+- name: operational_sites
+  label: Operating sites
+  source: Operational Sites
+  type: integer
+  description: Venues operating gaming machines on the last day of the month.
+- name: approved_egms
+  label: Approved machines
+  source: Approved EGMs
+  type: integer
+  description: The most electronic gaming machines the venues are approved to operate.
+- name: operational_egms
+  label: Operating machines
+  source: Operational EGMs
+  type: integer
+  description: Electronic gaming machines operating on the last day of the month.
+- name: metered_win
+  label: Metered win ($)
+  source: Metered Win $
+  type: number
+  description: The amount players lost on the machines in the month, in dollars. Suppressed where the publisher shows Not Released.

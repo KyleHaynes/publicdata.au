@@ -1,0 +1,172 @@
+slug: act-air-quality
+title: Air quality monitoring by hour, ACT
+status: live
+topics:
+- health
+- nature
+example:
+  group: name
+  metric: avg.pm2_5
+  label: Average PM2.5 (µg/m³)
+chart:
+  split: none
+  metric: avg.pm2_5
+  label: Average PM2.5 (µg/m³)
+order: 466
+temporal_start: '2011-01-01'
+search_title: Canberra air quality data by hour, PM2.5, ozone and AQI (ACT Health)
+also_known_as:
+- ACT Air Quality Monitoring Data
+- Canberra air quality index history
+- ACT PM2.5 and PM10 readings
+- Civic Florey Monash air quality stations
+keywords:
+- air quality
+- PM2.5
+- PM10
+- ozone
+- nitrogen dioxide
+- air quality index
+- smoke
+- Canberra
+- ACT
+faq:
+- q: What is in each row?
+  a: One hour at one of the ACT's air quality monitoring stations (Civic, Florey and Monash), with the
+    pollutant concentrations measured there and the Air Quality Index the publisher works out for each
+    pollutant and for the site.
+- q: Has the data been checked?
+  a: The publisher says the readings are unverified. They may have had no or only preliminary quality
+    assurance, and may change after calibration changes, power failures or instrument failures.
+- q: Why are some pollutants blank at some stations?
+  a: Not every station measures every pollutant. A blank cell is a reading the station did not make or
+    report for that hour.
+summary: Hourly readings from the ACT's air quality monitoring stations at Civic, Florey and Monash since
+  2011, with particles, ozone, nitrogen dioxide, carbon monoxide and the Air Quality Index.
+description: Hourly ambient air quality readings from the ACT Government's monitoring stations at Civic
+  and Monash from January 2011 and Florey from February 2014. Each row carries the station name, its
+  position as text, the date and time, the concentrations of nitrogen dioxide, ozone over one, four and
+  eight hours, carbon monoxide, PM10 and PM2.5 over one hour and their rolling averages, the Air Quality
+  Index for each pollutant and the site's overall index.
+publisher:
+  name: Health Protection Service, ACT Health Directorate
+  short: ACT Health
+  jurisdiction: ACT
+  url: https://www.act.gov.au/health
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.act.gov.au/d/94a5-zqnn
+  attribution: ACT Health Directorate, ACT Government, Air Quality Monitoring Data, https://www.data.act.gov.au/d/94a5-zqnn,
+    accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: socrata
+  portal: https://www.data.act.gov.au
+  package: 94a5-zqnn
+  url: https://www.data.act.gov.au/d/94a5-zqnn
+  cadence: hourly, checked weekly
+partition_by:
+- name
+row_label: Station hours
+fields:
+- name: name
+  label: Station
+  source: Name
+  type: string
+- name: gps
+  label: Station position as text
+  source: GPS
+  type: string
+  description: The publisher's own text of the station's coordinates, as (latitude, longitude).
+- name: datetime
+  label: Date and time
+  source: DateTime
+  type: datetime
+  date_format: '%d/%m/%Y %I:%M:%S %p'
+  description: Local time in Canberra, as the publisher gives it.
+- name: no2
+  label: NO2 1-hour (ppm)
+  source: NO2
+  type: number
+  description: Nitrogen dioxide, 1-hour average in parts per million.
+- name: o3_1hr
+  label: Ozone 1-hour (ppm)
+  source: O3_1hr
+  type: number
+- name: o3_4hr
+  label: Ozone 4-hour (ppm)
+  source: O3_4hr
+  type: number
+  description: 4-hour rolling average in parts per million.
+- name: o3_8hr
+  label: Ozone 8-hour (ppm)
+  source: O3_8hr
+  type: number
+  description: 8-hour rolling average.
+- name: co
+  label: CO 8-hour (ppm)
+  source: CO
+  type: number
+  description: Carbon monoxide, 8-hour rolling average in parts per million.
+- name: pm10_1hr
+  label: PM10 1-hour (µg/m³)
+  source: PM10 1 hr
+  type: number
+- name: pm2_5_1hr
+  label: PM2.5 1-hour (µg/m³)
+  source: PM2.5 1 hr
+  type: number
+- name: pm10
+  label: PM10 (µg/m³)
+  source: PM10
+  type: number
+- name: pm2_5
+  label: PM2.5 (µg/m³)
+  source: PM2.5
+  type: number
+- name: aqi_co
+  label: AQI carbon monoxide
+  source: AQI_CO
+  type: number
+- name: aqi_no2
+  label: AQI nitrogen dioxide
+  source: AQI_NO2
+  type: number
+- name: aqi_o3_1hr
+  label: AQI ozone 1-hour
+  source: AQI_O3_1hr
+  type: number
+- name: aqi_o3_4hr
+  label: AQI ozone 4-hour
+  source: AQI_O3_4hr
+  type: number
+- name: aqi_o3_8hr
+  label: AQI ozone 8-hour
+  source: AQI_O3_8hr
+  type: number
+- name: aqi_pm10
+  label: AQI PM10
+  source: AQI_PM10
+  type: number
+  description: 24-hour rolling PM10 index.
+- name: aqi_pm2_5
+  label: AQI PM2.5
+  source: AQI_PM2.5
+  type: number
+  description: 24-hour rolling PM2.5 index.
+- name: aqi_site
+  label: AQI site
+  source: AQI_Site
+  type: number
+- name: date
+  label: Date
+  source: Date
+  type: date
+  date_format: '%d %B %Y'
+- name: time
+  label: Time
+  source: Time
+  type: string
+  description: 24-hour time as the publisher types it.
+note: Cells were typed and headers were made snake_case. The publisher's header is kept beside every field
+  in schema.json. Rows were left alone.

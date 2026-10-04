@@ -1,0 +1,105 @@
+slug: act-traffic-camera-offences-2010-2021
+title: Traffic camera offences and fines, ACT, 2010 to 2021
+status: live
+topics:
+- roads
+- crime
+example:
+  group: camera_type
+  metric: sum.infringements
+  label: Infringements
+chart:
+  where: {offence_month: {gte: '2011-01-01', lt: '2021-01-01'}}
+  split: camera_type
+  metric: sum.infringements
+  label: Infringements
+order: 454
+collection: act-traffic-fines
+collection_title: Traffic and parking fines in the ACT
+temporal_start: '2010-07-01'
+search_title: ACT traffic camera fines by month, July 2010 to June 2021 (Access Canberra)
+also_known_as:
+- ACT speed camera fines history
+- Canberra red light camera fines 2010 to 2021
+- ACT camera infringements by month
+keywords:
+- speeding fines
+- speed cameras
+- red light cameras
+- point to point cameras
+- Canberra
+- ACT
+faq:
+- q: What is in each row?
+  a: One offence in one month at one camera location, for one registration state and client category,
+    with the number of infringements and the sum of their penalties in dollars.
+- q: Why does it stop in June 2021?
+  a: The publisher moved to a daily series from July 2021, which is the ACT traffic and camera fines
+    table in this collection. This table is closed.
+summary: Camera-detected traffic infringements in the ACT by month from July 2010 to June 2021, one row
+  per offence, camera location, registration state and client category, with the count and penalty total.
+description: Monthly counts of the offences detected by ACT road safety cameras from July 2010 to June
+  2021. Each row carries the month, the registration state, the client category, the camera type, the
+  location code and its description, the offence description, the number of infringements and the sum of
+  their penalty amounts.
+publisher:
+  name: Access Canberra, City and Environment Directorate
+  short: Access Canberra
+  jurisdiction: ACT
+  url: https://www.accesscanberra.act.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.act.gov.au/d/2sx9-4wg7
+  attribution: Access Canberra, ACT Government, Traffic camera offences and fines from 07/2010 to 06/2021,
+    https://www.data.act.gov.au/d/2sx9-4wg7, accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: socrata
+  portal: https://www.data.act.gov.au
+  package: 2sx9-4wg7
+  url: https://www.data.act.gov.au/d/2sx9-4wg7
+  cadence: closed
+partition_by:
+- camera_type
+row_label: Offence months
+fields:
+- name: offence_month
+  label: Month
+  source: Offence_Month
+  type: date
+  date_format: '%B %Y'
+  description: The month of the offences, as its first day.
+- name: rego_state
+  label: Registration state
+  source: Rego_State
+  type: string
+- name: client_category
+  label: Client category
+  source: Clt_Catg
+  type: string
+- name: camera_type
+  label: Camera type
+  source: Camera_Type
+  type: string
+- name: location_code
+  label: Location code
+  source: Location_Code
+  type: string
+- name: location_desc
+  label: Location
+  source: Location_Desc
+  type: string
+- name: offence_desc
+  label: Offence
+  source: Offence_Desc
+  type: string
+- name: penalty_amount
+  label: Penalty total ($)
+  source: Sum_Pen_Amt
+  type: number
+- name: infringements
+  label: Infringements
+  source: Sum_Inf_Count
+  type: integer
+note: Cells were typed and headers were made snake_case. The publisher's header is kept beside every field
+  in schema.json. Rows were left alone.

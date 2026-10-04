@@ -1,0 +1,219 @@
+slug: qld-public-dental-waiting-lists
+title: Public dental waiting lists by clinic, Queensland, latest quarter
+status: live
+topics:
+- health
+order: 232
+search_title: Queensland public dental waiting list by clinic (Queensland Health)
+also_known_as:
+- Public dental waiting times Queensland
+- QLD oral health waiting list
+- How long is the public dental wait in Queensland
+keywords:
+- public dental
+- dental waiting list
+- oral health
+- dental clinics
+- waiting times
+- Queensland Health
+faq:
+- q: What is in each row?
+  a: One public dental clinic and one waiting list, such as General care or Priority 2, with the number
+    of adults waiting at the end of the quarter in each of six waiting-time bands, the number treated
+    from the list in the quarter in the same bands, and the percentage within the recommended waiting
+    time for each.
+- q: What are the bands?
+  a: They are months waiting and differ by list. For General care they are under 12, 12 to 24, 24 to 36,
+    36 to 48, 48 to 60 and over 60 months. For Priority 3 they are under 6, 7 to 12, 13 to 18, 19 to 24,
+    25 to 30 and over 30. For Priority 2 they are under 3, 4 to 6, 7 to 9, 10 to 12, 13 to 15 and over
+    15. For Clinical Assessment, Priority 1 and General Anaesthetic Category 1 they are under 1, 1 to
+    2, 2 to 3, 3 to 4, 4 to 5 and over 5. General Anaesthetic Categories 2 and 3 follow Priority 2 and
+    Priority 3.
+- q: Which quarter is it?
+  a: The newest quarter Queensland Health has published, October to December 2025 in the first version
+    here. The publisher adds a workbook each quarter in a package for each financial year, and this table
+    follows the newest. It notes all figures are preliminary.
+summary: Adults waiting for public dental care and treated from the lists at each Queensland Health dental
+  clinic in the newest quarter, by waiting list and months waited.
+description: The Data sheet of Queensland Health's quarterly public dental waiting list workbook, one
+  row per dental clinic and waiting list. Each row has the clinic, its Hospital and Health Service, the
+  number of clients waiting at the quarter's end in six waiting-time bands, the number treated from the
+  list during the quarter in the same bands, and the percentage within the recommended time for each.
+  The workbook's Notes sheet, which defines the lists and bands, is described in the FAQ.
+publisher:
+  name: Queensland Health
+  short: Queensland Health
+  jurisdiction: Qld
+  url: https://www.health.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  evidence: https://www.data.qld.gov.au/dataset/public-dental-waiting-lists-2025-2026
+  reviewed: '2026-10-01'
+  attribution: Queensland Health, Queensland Government, Public dental waiting lists, sourced {sourced},
+    https://www.data.qld.gov.au/dataset/public-dental-waiting-lists-2025-2026, licensed under CC BY 4.0.
+example:
+  where: {wait_list: General}
+  group: hospital_and_health_service
+  metric: sum.waiting_d1
+  label: Adults waiting under 12 months for general dental care at the quarter's end, by Hospital and Health Service
+chart:
+  where: {wait_list: General}
+  split: none
+  metric: sum.waiting_d1
+  label: Adults waiting under 12 months for general dental care
+sample:
+  where: {wait_list: General}
+  label: The general care list at clinics in each Hospital and Health Service, with the services taking turns.
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: public dental waiting lists
+  package_match: ^public-dental-waiting-lists-\d{4}-\d{4}$
+  resource_match: Public dental waiting list
+  url: https://www.data.qld.gov.au/dataset/public-dental-waiting-lists-2025-2026
+  cadence: quarterly
+  sheet: Data
+key:
+- clinic_id
+- wait_list
+partition_by:
+- hospital_and_health_service
+row_label: Clinic waiting lists
+fields:
+- name: date
+  label: Waiting as at
+  source: date
+  type: date
+  date_format: '%Y-%m-%d'
+  description: The date the waiting counts were taken, the last day of the quarter.
+- name: clinic_id
+  label: Clinic ID
+  source: clinicID
+  type: integer
+- name: clinic_name
+  label: Clinic
+  source: clinicName
+  type: string
+- name: hospital_and_health_service
+  label: Hospital and Health Service
+  source: Hospital and Health Service
+  type: string
+- name: wait_list
+  label: Waiting list
+  source: Area
+  type: string
+  description: The waiting list, such as General, Priority 1 or General Anaesthetic Category 2. The publisher
+    heads this column Area.
+- name: waiting_d1
+  source: Waiting D1
+  type: integer
+  null_values:
+  - '-'
+  label: Waiting, band 1
+  description: Clients waiting whose wait falls in the first band for the list. The bands differ by list;
+    see the FAQ.
+- name: waiting_d2
+  source: Waiting D2
+  type: integer
+  null_values:
+  - '-'
+  label: Waiting, band 2
+  description: Clients waiting whose wait falls in the second band for the list. The bands differ by list;
+    see the FAQ.
+- name: waiting_d3
+  source: Waiting D3
+  type: integer
+  null_values:
+  - '-'
+  label: Waiting, band 3
+  description: Clients waiting whose wait falls in the third band for the list. The bands differ by list;
+    see the FAQ.
+- name: waiting_d4
+  source: Waiting D4
+  type: integer
+  null_values:
+  - '-'
+  label: Waiting, band 4
+  description: Clients waiting whose wait falls in the fourth band for the list. The bands differ by list;
+    see the FAQ.
+- name: waiting_d5
+  source: Waiting D5
+  type: integer
+  null_values:
+  - '-'
+  label: Waiting, band 5
+  description: Clients waiting whose wait falls in the fifth band for the list. The bands differ by list;
+    see the FAQ.
+- name: waiting_d6
+  source: Waiting D6
+  type: integer
+  null_values:
+  - '-'
+  label: Waiting, band 6
+  description: Clients waiting whose wait falls in the sixth band for the list. The bands differ by list;
+    see the FAQ.
+- name: waiting_d7
+  source: Waiting D7
+  type: number
+  null_values:
+  - '-'
+  label: Waiting within recommended time (%)
+  description: The publisher's D7, the percentage within the recommended waiting time. The publisher writes
+    a dash where the figure is unavailable or does not apply, and those cells are null.
+- name: treated_d1
+  source: Treated D1
+  type: integer
+  null_values:
+  - '-'
+  label: Treated, band 1
+  description: Clients treated whose wait falls in the first band for the list. The bands differ by list;
+    see the FAQ.
+- name: treated_d2
+  source: Treated D2
+  type: integer
+  null_values:
+  - '-'
+  label: Treated, band 2
+  description: Clients treated whose wait falls in the second band for the list. The bands differ by list;
+    see the FAQ.
+- name: treated_d3
+  source: Treated D3
+  type: integer
+  null_values:
+  - '-'
+  label: Treated, band 3
+  description: Clients treated whose wait falls in the third band for the list. The bands differ by list;
+    see the FAQ.
+- name: treated_d4
+  source: Treated D4
+  type: integer
+  null_values:
+  - '-'
+  label: Treated, band 4
+  description: Clients treated whose wait falls in the fourth band for the list. The bands differ by list;
+    see the FAQ.
+- name: treated_d5
+  source: Treated D5
+  type: integer
+  null_values:
+  - '-'
+  label: Treated, band 5
+  description: Clients treated whose wait falls in the fifth band for the list. The bands differ by list;
+    see the FAQ.
+- name: treated_d6
+  source: Treated D6
+  type: integer
+  null_values:
+  - '-'
+  label: Treated, band 6
+  description: Clients treated whose wait falls in the sixth band for the list. The bands differ by list;
+    see the FAQ.
+- name: treated_d7
+  source: Treated D7
+  type: number
+  null_values:
+  - '-'
+  label: Treated within recommended time (%)
+  description: The publisher's D7, the percentage within the recommended waiting time. The publisher writes
+    a dash where the figure is unavailable or does not apply, and those cells are null.
+note: Cells were typed and headers were made snake_case. Rows were left alone.

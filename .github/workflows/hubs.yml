@@ -1,0 +1,110 @@
+name: Hubs
+
+# Copies each served dataset's newest version to Hugging Face, Zenodo and Kaggle, reading the live
+# catalogue, so a new dataset or version reaches the hubs with no change here. It runs after each
+# production deploy and weekly, and each hub is compared first, so a run with nothing new uploads
+# nothing. A hub whose credentials are not set is skipped and named in the summary.
+on:
+  workflow_run:
+    workflows: [Deploy]
+    types: [completed]
+    branches: [main]
+  schedule:
+    - cron: "41 20 * * 3" # Thursday 06:41 Brisbane
+  workflow_dispatch:
+    inputs:
+      hub:
+        description: Hubs to publish to, space separated
+        type: string
+        default: huggingface zenodo kaggle
+      only:
+        description: Dataset slugs to publish, space separated; every dataset when blank
+        type: string
+        default: ""
+      refresh:
+        description: Re-apply cards, page settings and notebooks to versions a hub already holds
+        type: boolean
+        default: false
+
+# Writes only to open the pull request that records where the copies are.
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: hubs
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    # Side effects run only in the public repo, never in a fork or a private copy.
+    if: github.repository == 'National-Digital/publicdata.au' && (github.event_name != 'workflow_run' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'push'))
+    runs-on: ubuntu-latest
+    environment: production
+    # A first publish of every dataset runs for hours; the publish step stops first, so the
+    # record of what was done still goes up and the next run carries on from there.
+    timeout-minutes: 355
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version-file: .python-version
+      - run: pip install -e './pipeline[hubs]'
+      - name: Publish
+        timeout-minutes: 330
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          HF_NAMESPACE: ${{ vars.HF_NAMESPACE }}
+          ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+          ZENODO_URL: ${{ vars.ZENODO_URL }}
+          ZENODO_COMMUNITY: ${{ vars.ZENODO_COMMUNITY }}
+          KAGGLE_API_TOKEN: ${{ secrets.KAGGLE_API_TOKEN }}
+          KAGGLE_USERNAME: ${{ vars.KAGGLE_USERNAME }}
+          HUB: ${{ github.event.inputs.hub || 'huggingface zenodo kaggle' }}
+          ONLY: ${{ github.event.inputs.only }}
+          REFRESH: ${{ github.event.inputs.refresh == 'true' && '--refresh' || '' }}
+        run: |
+          set -o pipefail
+          # Word splitting is wanted: each input is a space-separated list.
+          # shellcheck disable=SC2086
+          python -m publicdata hubs --hub $HUB ${ONLY:+--only $ONLY} $REFRESH --record store/hubs.json | tee hubs.log
+      # The record is committed through a pull request like the fetch's manifests, so the site's
+      # build reads it from the repository and never asks a hub. A run that failed for some
+      # datasets still records the rest.
+      # The fetch app's own identity opens the PR: only the app may push data/ branches, and data-pr.yml
+      # approves only PRs it opened. Minted here because a token lasts an hour and a run can last longer.
+      - name: Act as the fetch app
+        id: app
+        if: always() && github.ref == 'refs/heads/main' && hashFiles('hubs.log') != ''
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        with:
+          client-id: ${{ vars.FETCH_APP_CLIENT_ID }}
+          private-key: ${{ secrets.FETCH_APP_PRIVATE_KEY }}
+          permission-contents: write
+          permission-pull-requests: write
+      - name: Open a pull request with the record
+        if: always() && github.ref == 'refs/heads/main' && hashFiles('hubs.log') != ''
+        env:
+          GH_TOKEN: ${{ steps.app.outputs.token }}
+        run: |
+          # Pushes go as the app too, in place of the checkout's own credential.
+          git config --local --replace-all http.https://github.com/.extraheader "AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)"
+          if git diff --quiet -- store/hubs.json && ! git status --porcelain store/hubs.json | grep -q .; then
+            echo "The hub record is unchanged." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          DATE=$(date -u +%Y-%m-%d)
+          BRANCH="data/hubs-$DATE-${{ github.run_id }}"
+          git config user.name "publicdata fetch"
+          git config user.email "fetch@publicdata.au"
+          git checkout -q -b "$BRANCH"
+          git add store/hubs.json
+          git commit -q -s -m "data(hubs): where the copies are, $DATE"
+          git push -q -u origin HEAD
+          gh pr create --title "data(hubs): where the copies are, $DATE" --body "The Hubs run recorded where each dataset's copies are. Merging lists them on the dataset pages and in their structured data."
+          gh pr merge --auto --squash || echo "::warning::auto-merge was not armed; merge the hubs PR by hand."
+      - name: Summarise
+        if: always()
+        run: |
+          [ -f hubs.log ] || exit 0
+          { echo '```'; grep -vE ': holds ' hubs.log || true; echo '```'; } >> "$GITHUB_STEP_SUMMARY"

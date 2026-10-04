@@ -1,0 +1,32 @@
+{
+  "dataset": "vic-recorded-offences-by-suburb",
+  "version": "2026-09-24",
+  "as_at": "",
+  "fetched_at": "2026-09-29T13:50:11+00:00",
+  "sha256": "54b62bc2dd0f92169dbb8cabfe24d1aadea737713ae0d758048ffb1bcfbc374d",
+  "bytes": 21983501,
+  "filename": "Data_Tables_LGA_Recorded_Offences_Year_Ending_June_2026.xlsx",
+  "encoding": "xlsx",
+  "source": {
+    "url": "https://files.crimestatistics.vic.gov.au/2026-09/Data_Tables_LGA_Recorded_Offences_Year_Ending_June_2026.xlsx",
+    "portal": "https://discover.data.vic.gov.au",
+    "package": "data-tables-recorded-offences",
+    "package_id": "523681f0-0e36-44bb-a5df-3c9f43af5816",
+    "resource": "06bb24c8-8f62-4144-a746-99ef5492e4f9",
+    "resource_name": "Recorded offences by LGA - Year ending Jun 2026",
+    "resource_last_modified": null,
+    "package_modified": "2026-09-24T06:38:17.278387",
+    "package_version": null,
+    "etag": "f869038c48f1a4e4d77a6ca8769070ab",
+    "http_last_modified": "Thu, 10 Sep 2026 09:05:22 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution 4.0 International",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_at": "2026-09-29T13:50:10+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": []
+}

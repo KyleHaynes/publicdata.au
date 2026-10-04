@@ -1,0 +1,92 @@
+slug: qld-rural-fire-stations
+title: Rural fire stations, Queensland
+status: live
+topics:
+- emergencies
+order: 238
+collection: qld-emergency-stations
+collection_title: Fire and police station locations, Queensland
+search_title: Queensland rural fire station locations (Queensland Fire Department)
+also_known_as:
+- Rural Fire Service Queensland stations
+- RFSQ fire stations
+- Rural fire brigade stations Queensland
+keywords:
+- rural fire stations
+- Rural Fire Service
+- fire brigades
+- emergency services
+- QFD
+- Queensland
+faq:
+- q: What is in each row?
+  a: One rural fire station of the Rural Fire Service Queensland, with its name, address, locality, an
+    alternative address where given and its coordinates in GDA94 and GDA2020.
+- q: Does every rural brigade have a station?
+  a: No. The publisher notes that not all rural brigades have fire stations, so a brigade may be missing
+    from this list.
+summary: Every rural fire station of the Rural Fire Service Queensland, with address and coordinates in
+  GDA94 and GDA2020. Updated monthly.
+description: The rural fire stations of the Rural Fire Service Queensland, part of the Queensland Fire
+  Department, one row per station, with its address, locality, alternative address and longitude and latitude
+  in both GDA94 and GDA2020. The department uploads the file automatically each month.
+publisher:
+  name: Queensland Fire Department
+  short: QFD
+  jurisdiction: Qld
+  url: https://www.fire.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  evidence: https://www.data.qld.gov.au/dataset/rural-fire-stations
+  reviewed: '2026-10-01'
+  attribution: Queensland Fire Department, Queensland Government, Rural Fire Service Queensland, Rural
+    Fire Stations, sourced {sourced}, https://www.data.qld.gov.au/dataset/rural-fire-stations, licensed
+    under CC BY 4.0.
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: rural-fire-stations
+  resource: e09d0d06-b13e-4e52-b82d-1ce0cf05927c
+  url: https://www.data.qld.gov.au/dataset/rural-fire-stations
+  cadence: monthly
+geometry:
+  lon: long_gda20
+  lat: lat_gda20
+  crs: EPSG:7844
+  crs_note: The publisher gives each station in GDA94 and GDA2020. The map uses the GDA2020 pair (EPSG:7844);
+    both pairs are published as given.
+row_label: Stations
+fields:
+- name: station
+  label: Station
+  source: STATION
+  type: string
+- name: address
+  label: Address
+  source: ADDRESS
+  type: string
+- name: locality
+  label: Locality
+  source: LOCALITY
+  type: string
+- name: alt_address
+  label: Alternative address
+  source: ALTADDRESS
+  type: string
+- name: long_gda94
+  label: Longitude (GDA94)
+  source: LONG_GDA94
+  type: number
+- name: lat_gda94
+  label: Latitude (GDA94)
+  source: LAT_GDA94
+  type: number
+- name: long_gda20
+  label: Longitude (GDA2020)
+  source: LONG_GDA20
+  type: number
+- name: lat_gda20
+  label: Latitude (GDA2020)
+  source: LAT_GDA20
+  type: number
+note: Cells were typed and headers were made snake_case. Rows were left alone.

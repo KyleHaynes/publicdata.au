@@ -1,0 +1,34 @@
+{
+  "dataset": "tas-accredited-building-practitioners-2017",
+  "version": "2017-05-11",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:15:02+00:00",
+  "sha256": "dcb2a598aa67216497b01ad5a947fd04beb62bfcf44a4da1133429e0cfa61683",
+  "bytes": 102198,
+  "filename": "accredited-building-practitioners-10-may-2017.xlsx",
+  "encoding": "xlsx",
+  "source": {
+    "url": "https://data.gov.au/data/dataset/88d75323-d524-4ac5-acf5-72e5e0dd7505/resource/fecbf8a1-f55e-4b4c-b174-52ece27ac41d/download/accredited-building-practitioners-10-may-2017.xlsx",
+    "portal": "https://data.gov.au/data",
+    "package": "trade-licensing",
+    "package_id": "88d75323-d524-4ac5-acf5-72e5e0dd7505",
+    "resource": "fecbf8a1-f55e-4b4c-b174-52ece27ac41d",
+    "resource_name": "trade-licensing-electrical-plumbing-and-gas-fitting-as-at-10-may-2017",
+    "resource_last_modified": "2017-05-11T00:00:00",
+    "package_modified": "2023-08-09T11:42:17.492570",
+    "package_version": null,
+    "etag": "1494463098.0-102198-3956871359",
+    "http_last_modified": "Thu, 11 May 2017 00:38:18 GMT"
+  },
+  "licence": {
+    "id": "cc-by-4.0",
+    "title": "Creative Commons Attribution 4.0 International",
+    "url": "http://creativecommons.org/licenses/by/4.0",
+    "read_from": "https://data.gov.au/data/api/3/action/package_show?id=trade-licensing",
+    "read_at": "2026-10-03T03:15:02+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "3965db5637c56f17b420579518ff41953ba5387ca6d557fa3fe7638d00130432"
+}

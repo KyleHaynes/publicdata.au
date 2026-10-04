@@ -1,0 +1,69 @@
+slug: nsw-public-holidays
+title: Public holidays, New South Wales, 2019 to 2023
+status: live
+topics:
+- government
+order: 305
+publisher:
+  name: Transport for NSW
+  short: TfNSW
+  jurisdiction: NSW
+  url: https://www.transport.nsw.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.nsw.gov.au/data/dataset/2-school-and-public-holidays
+  attribution: Transport for NSW, NSW Government, School and public holidays, sourced {sourced}, https://data.nsw.gov.au/data/dataset/2-school-and-public-holidays,
+    licensed under CC BY 4.0.
+collection: nsw-school-and-public-holidays
+collection_title: School and public holidays, New South Wales
+collection_description: Transport for NSW publishes the dates of NSW public holidays and the start and end
+  of each public school term as two tables. The public holiday table
+  covers 2019 to 2023 and the school term table covers 2019 to 2025. Transport for NSW has said it no longer
+  updates the school term table.
+collection_search_title: NSW school and public holiday dates (Transport for NSW)
+temporal_start: '2019-01-01'
+search_title: NSW public holiday dates 2019 to 2023 (Transport for NSW)
+also_known_as:
+- NSW public holidays list
+- Public holidays in New South Wales by date
+- TfNSW public holiday calendar
+keywords:
+- public holidays
+- holidays
+- calendar
+- Transport for NSW
+- New South Wales
+faq:
+- q: What is in each row?
+  a: One public holiday in New South Wales, with its date and the name of the day.
+- q: Which years are covered?
+  a: The file runs from New Year's Day 2019 to the end of 2023. Transport for NSW publishes later years
+    only in a PDF guide, which is not read here.
+summary: The date and name of every New South Wales public holiday from 2019 to 2023, as Transport for
+  NSW lists them.
+description: The NSW Public Holidays table from Transport for NSW's School and public holidays dataset.
+  Each row is one public holiday from 2019 to 2023, with its date and the holiday's name as the publisher
+  writes it.
+source:
+  adapter: ckan-resource
+  portal: https://data.nsw.gov.au/data
+  package: 2-school-and-public-holidays
+  resource: fab9f1c5-b24f-4e06-a8ac-42f6642dd097
+  url: https://data.nsw.gov.au/data/dataset/2-school-and-public-holidays
+  cadence: no longer updated
+key:
+- day
+- significance
+row_label: Public holidays
+fields:
+- name: day
+  label: Date
+  source: DAY
+  type: date
+  date_format: '%d/%m/%Y'
+- name: significance
+  label: Holiday
+  source: SIGNIFICANCE
+  type: string

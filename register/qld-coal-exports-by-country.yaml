@@ -1,0 +1,107 @@
+slug: qld-coal-exports-by-country
+title: Coal exports and sales value by country, Queensland
+status: live
+topics:
+- economy
+example:
+  where:
+    year: newest
+  group: country
+  metric: sum.total_tonnes
+  label: Tonnes exported
+chart:
+  split: coal_type
+  metric: sum.total_tonnes
+  label: Tonnes exported
+sample:
+  where:
+    year: newest
+  order:
+  - total_tonnes.desc
+  spread: none
+  label: The ten largest country and coal type lines in the newest year, by tonnes exported.
+order: 267
+collection: qld-coal-statistics
+collection_title: Queensland coal production and sales statistics
+temporal_start: '2010-01-01'
+search_title: Queensland coal export value by country and calendar year (Natural Resources and Mines)
+also_known_as:
+- Queensland annual coal statistics export by destination
+- Value of Queensland coal exports by country
+- Queensland coal sales by country
+keywords:
+- coal exports
+- export value
+- coal sales
+- coking coal
+- thermal coal
+- Queensland
+faq:
+- q: What is in each row?
+  a: Each row is one destination country, one calendar year and one coal type, with the tonnes exported from
+    Queensland and their sales value in Australian dollars, and the world region the publisher places the country
+    in.
+- q: Why do some rows say Unknown?
+  a: The publisher uses Unknown for exports whose destination was not reported. Those rows are kept as published.
+- q: Why does PCI start in 2022?
+  a: The publisher reports PCI coal as its own type from 2022. The years before have rows for hard coking,
+    semi-soft coking and thermal coal only.
+summary: Tonnes and sales value of Queensland coal exports to each country by calendar year since 2010, by
+  coal type.
+description: One row per destination country, calendar year and coal type from 2010, with the world region,
+  the export tonnes and the total sales value in Australian dollars. This is the Export by country and coal
+  type sheet of the annual coal statistics sales workbook.
+publisher:
+  name: Department of Natural Resources and Mines, Manufacturing and Regional and Rural Development
+  short: Natural Resources and Mines
+  jurisdiction: Qld
+  url: https://www.nrmmrrd.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/annual-coal-statistics
+  attribution: Department of Natural Resources and Mines, Manufacturing and Regional and Rural Development,
+    Queensland Government, Annual coal statistics, sourced {sourced}, https://www.data.qld.gov.au/dataset/annual-coal-statistics,
+    licensed under CC BY 4.0.
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: annual-coal-statistics
+  resource_match: Coal sales statistics
+  url: https://www.data.qld.gov.au/dataset/annual-coal-statistics
+  cadence: annually
+  sheet: Export by country and coal type
+  header_row: 6
+key:
+- country
+- year
+- coal_type
+partition_by:
+- year
+row_label: Country, year and coal type lines
+fields:
+- name: region
+  label: World region
+  source: Region
+  type: string
+- name: country
+  label: Destination country
+  source: Country
+  type: string
+- name: year
+  label: Year
+  source: Year
+  type: integer
+- name: coal_type
+  label: Coal type
+  source: Coal type
+  type: string
+- name: total_tonnes
+  label: Tonnes exported
+  source: Total Tonnes
+  type: number
+- name: total_sales_value_aud
+  label: Sales value ($)
+  source: Total Sales Value (AUD)
+  type: number
+  description: Australian dollars, as reported.

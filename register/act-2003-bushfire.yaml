@@ -1,0 +1,75 @@
+slug: act-2003-bushfire
+title: 2003 Canberra bushfire burn area and property damage
+status: live
+topics:
+- emergencies
+- places
+example:
+  group: poly_desc
+  metric: count
+  label: Areas by status
+sample:
+  spread: poly_desc
+order: 480
+temporal_start: '2003-01-18'
+search_title: 2003 Canberra bushfire map, burn area and damaged properties (ACT Government)
+also_known_as:
+- 2003 Bushfire Data ACT
+- Canberra fires January 2003 damage map
+- 2003 Canberra firestorm property damage
+keywords:
+- bushfire
+- 2003 Canberra bushfires
+- burn area
+- property damage
+- fire history
+- Canberra
+- ACT
+faq:
+- q: What is in each row?
+  a: One shape with the publisher's description of it. One shape is the total burn area of the January
+    2003 fires in the ACT, and the others are land parcels marked as uninhabitable, for property
+    redevelopment, or with damage to a primary dwelling or a habitable outbuilding.
+- q: Will it change?
+  a: The publisher marks the data as never updated. It is the record of one event.
+- q: Where is the publisher's file?
+  a: The portal serves the layer as a table with each shape as text. This site reads the portal's GeoJSON
+    export of the same rows, ordered by the portal's row identifier, and keeps that file as the source of
+    every version.
+summary: The burn area of the January 2003 Canberra bushfires and the land parcels whose homes or
+  outbuildings were destroyed or damaged, one shape per area.
+description: The ACT Government's spatial record of the January 2003 bushfires, from the Office of the
+  Surveyor-General. It holds the total burn area and the parcels affected, each with a description of its
+  status (uninhabitable, property redevelopment, habitable primary dwelling damage or habitable outbuilding
+  damage). The shapes are served as GeoParquet, GeoJSON, a GeoPackage and map tiles.
+publisher:
+  name: Office of the Surveyor-General, ACT Government
+  short: ACT Surveyor-General
+  jurisdiction: ACT
+  url: https://www.planning.act.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.act.gov.au/d/sksx-b49e
+  statement: Creative Commons Attribution 4.0 International
+  title: Creative Commons Attribution 4.0 International
+  attribution: ACT Environment and Sustainable Development Directorate, ACT Government, 2003 Bushfire Data,
+    https://www.data.act.gov.au/d/sksx-b49e, accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: file
+  url: https://www.data.act.gov.au/resource/sksx-b49e.geojson?$limit=50000&$order=:id
+  cadence: closed
+geometry:
+  kind: polygon
+  crs: EPSG:4326
+  crs_note: The portal's GeoJSON export is in WGS84 longitude and latitude; the shapes are moved to GDA2020,
+    which differs by under 2 metres.
+  maxzoom: 10
+row_label: Areas
+fields:
+- name: poly_desc
+  label: Status
+  source: poly_desc
+  type: string
+  description: The total burn area, or the status of an affected parcel as the publisher describes it.
+note: Shapes were moved to GDA2020 and the one attribute was kept as published. Rows were left alone.

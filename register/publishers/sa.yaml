@@ -1,0 +1,40 @@
+# Publishers placed in South Australia that no portal of its own lists, or that one portal lists twice.
+# Generated from 'publicdata catalogue publishers', then reviewed. Edit by hand.
+- slug: attorney-generals-department
+  name: Attorney-Generals Department
+  jurisdiction: SA
+  level: state
+  orgs:
+  - gov:government-of-south-australia-attorney-generals-department-australian-urban-research-infrastructure-
+  - sa:attorney-general-s-dept
+- slug: department-of-environment-water-and-natural-resources
+  name: Department of Environment Water and Natural Resources
+  jurisdiction: SA
+  level: state
+  orgs:
+  - gov:government-of-south-australia-department-of-environment-water-and-natural-resources-australian-urban
+- slug: department-of-planning-transport-and-infrastructure
+  name: Department of Planning Transport and Infrastructure
+  jurisdiction: SA
+  level: state
+  orgs:
+  - gov:government-of-south-australia-department-of-planning-transport-and-infrastructure-australian-urban-r
+- slug: government-of-south-australia
+  name: Government of South Australia
+  jurisdiction: SA
+  level: state
+  orgs:
+  - gov:south-australian-governments
+- slug: south-australian-research-and-development-institute
+  name: South Australian Research and Development Institute
+  jurisdiction: SA
+  level: state
+  orgs:
+  - gov:south-australian-research-and-development-institute
+- slug: state-library-of-south-australia
+  name: State Library of South Australia
+  jurisdiction: SA
+  level: state
+  orgs:
+  - gov:statelibraryofsouthaustralia
+  - sa:state-library-of-south-australia

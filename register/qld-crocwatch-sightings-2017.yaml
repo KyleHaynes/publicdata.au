@@ -1,0 +1,316 @@
+slug: qld-crocwatch-sightings-2017
+title: CrocWatch crocodile sightings, Queensland, January to March 2017
+status: live
+topics:
+- nature
+order: 297
+collection: qld-crocodiles
+collection_title: Crocodiles in Queensland
+temporal_start: '2017-01-01'
+search_title: Queensland crocodile sightings January to March 2017 (CrocWatch)
+also_known_as:
+- CrocWatch crocodile sightings January to March 2017
+- Queensland crocodile reports January to March 2017
+keywords:
+- crocodile
+- crocodile sightings
+- CrocWatch
+- estuarine crocodile
+- crocodile of concern
+- Queensland
+faq:
+- q: What is in each row?
+  a: Each row is one crocodile sighting reported to the department in January to March 2017. It gives the date,
+    the place and coordinates, the species, the number and estimated size of the crocodiles, what the animal
+    was doing, nearby public use and food sources, whether the department declared it a crocodile of concern,
+    and the outcome.
+- q: Why are so many cells n/a or no data?
+  a: The publisher writes n/a where a question did not apply and no data where nothing was recorded. Several
+    questions were added or dropped part way through, as the publisher's legend explains, so they are blank
+    for some years. These words are kept as published, except in the coordinate columns where no data is null.
+- q: Is every sighting a confirmed crocodile?
+  a: No. Most rows are reports from the public. The confirmed by a departmental officer column says whether
+    an officer or delegate confirmed the animal or its presence.
+- q: Why does n/a appear in the middle of sentences?
+  a: The publisher's file has n/a wherever the free text once read off, so 100m offshore reads 100m
+    n/ashore. The text is kept as published.
+summary: Each crocodile sighting reported to the Queensland Government through CrocWatch in January to March
+  2017, with location, size, behaviour and outcome.
+description: 'One row per crocodile sighting reported to the Queensland environment department in January to
+  March 2017. Each row gives the year, the department''s reference number, the date sighted and the date the
+  department was contacted, whether the animal was declared a crocodile of concern and whether that was resolved,
+  the management plan zone and council area, the species, the number of crocodiles and the estimated size of
+  the largest, the place and its latitude and longitude, the habitat, nearby public use, the animal''s behaviour,
+  nearby food sources and the outcome.
+
+
+  The publisher''s column names were shortened to snake_case names. The original header of every column is
+  kept in schema.json.
+
+  The publisher released this period as its own file, with the same questions as the 2010 to 2015 file, and
+  has not added a later one.
+
+  '
+publisher:
+  name: Department of the Environment, Tourism, Science and Innovation
+  short: DETSI
+  jurisdiction: Qld
+  url: https://www.detsi.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/crocodile-sightings-in-queensland
+  attribution: Department of the Environment, Tourism, Science and Innovation, Queensland Government, Crocodiles
+    in Queensland, sourced {sourced}, https://www.data.qld.gov.au/dataset/crocodile-sightings-in-queensland,
+    licensed under CC BY 4.0.
+chart:
+  where: {year: 2017}
+  label: Sightings
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: crocodile-sightings-in-queensland
+  resource: d46b873b-cf76-41ec-a5ed-fe33f7a41fcd
+  url: https://www.data.qld.gov.au/dataset/crocodile-sightings-in-queensland
+  cadence: no longer updated
+  encoding: utf-8-sig
+geometry:
+  lon: longitude
+  lat: latitude
+  crs: EPSG:4326
+  crs_note: The publisher names no datum. The coordinates are decimal degrees, read as WGS84 (EPSG:4326) and
+    published as given.
+row_label: Sightings
+fields:
+- name: year
+  label: Year
+  source: Year
+  type: integer
+- name: crocodile_reference_number
+  label: Reference number
+  source: Crocodile Reference Number
+  type: integer
+  description: The department's reference for the report. A few numbers appear twice.
+- name: date_sighted
+  label: Date sighted
+  source: Date Sighted
+  type: string
+  description: Kept as text because the file mixes day/month/year with at least one month/day/year date, 12/15/2016.
+- name: crocodile_of_concern
+  label: Crocodile of concern
+  source: Crocodile of Concern
+  type: string
+- name: resolved_crocodile_of_concern
+  label: Resolved crocodile of concern
+  source: Resolved crocodile of concern
+  type: string
+- name: confirmed_by_officer
+  label: Confirmed by a departmental officer
+  source: Crocodile confirmed by EHP Officer
+  type: string
+- name: zones_1_or_2
+  label: Zones 1 or 2
+  source: Zones 1 or 2
+  type: string
+- name: crocodile_management_plan
+  label: Crocodile management plan
+  source: Crocodile Management Plan
+  type: string
+- name: local_government_authority
+  label: Local government authority
+  source: Local Government Authority
+  type: string
+- name: management_plan_zone
+  label: Management plan zone
+  source: Crocodile Management Plan Zone Objectives
+  type: string
+- name: south_of_boyne_river
+  label: South of the Boyne River
+  source: South of the Boyne River
+  type: string
+- name: attack_or_aggressive
+  label: Attack or aggressive
+  source: Crocodile attack or behaving aggressively
+  type: string
+- name: location_or_behaviour_a_threat
+  label: Location or behaviour a threat
+  source: Location or crocodile behaviour is a threat
+  type: string
+- name: prevention_barrier_and_stock
+  label: Prevention barrier and stock
+  source: crocodile prevention barrier and stock
+  type: string
+- name: urban_management_area
+  label: Urban management area
+  source: crocodile urban management area (CUMA)
+  type: string
+- name: coc_assessment
+  label: Crocodile of concern assessment
+  source: Describe COC assessment
+  type: string
+- name: outcome
+  label: Outcome
+  source: Outcome
+  type: string
+- name: date_removed
+  label: Date removed
+  source: Date crocodile removed
+  type: string
+- name: imminent_threat_to_safety
+  label: Imminent threat to safety
+  source: Is there an imminent threat to human safety
+  type: string
+- name: date_of_contact
+  label: Date the department was contacted
+  source: date of contact with EHP
+  type: string
+  description: Kept as text because the file mixes day/month/year with at least one month/day/year date, 12/15/2016.
+- name: species
+  label: Species
+  source: Species
+  type: string
+- name: number_of_crocodiles
+  label: Number of crocodiles
+  source: number of crocodiles
+  type: integer
+- name: size_of_largest_m
+  label: Size of largest (m)
+  source: size of largest crocodile (m) (estimate)
+  type: string
+  description: The reporter's estimate in metres. Kept as text because some reports give a range or words.
+- name: tracks_left
+  label: Tracks left
+  source: were tracks left
+  type: string
+- name: nest_or_slide_present
+  label: Nest or slide present
+  source: nest or slide present
+  type: string
+- name: location
+  label: Location
+  source: location of Crocodile
+  type: string
+- name: latitude
+  label: Latitude
+  source: latitude
+  type: number
+- name: longitude
+  label: Longitude
+  source: longitude
+  type: number
+- name: waterway_or_beach
+  label: River, creek, beach or waterhole
+  source: name of river creek beach or waterhole
+  type: string
+- name: habitat
+  label: Habitat
+  source: type of habitat
+  type: string
+- name: nearest_public_area
+  label: Nearest public area
+  source: nearest public area
+  type: string
+- name: public_use_type
+  label: Public use type
+  source: public use type
+  type: string
+- name: intensity_of_use
+  label: Intensity of use
+  source: intensity of use at time of sighting
+  type: string
+- name: intensity_of_use_comments
+  label: Intensity of use comments
+  source: additional comments intensity of use
+  type: string
+- name: all_parts_exposed
+  label: All parts exposed
+  source: all parts of crocodile exposed
+  type: string
+- name: eye_exposed
+  label: Eye exposed
+  source: eye part of crocodile exposed
+  type: string
+- name: head_exposed
+  label: Head exposed
+  source: head part of crocodile exposed
+  type: string
+- name: tail_exposed
+  label: Tail exposed
+  source: tail part of crocodile exposed
+  type: string
+- name: head_and_back_exposed
+  label: Head and back exposed
+  source: head and back part of crocodile exposed
+  type: string
+- name: gait_high
+  label: Gait high
+  source: gait high
+  type: string
+- name: gait_sliding
+  label: Gait sliding
+  source: gait sliding
+  type: string
+- name: gait_running
+  label: Gait running
+  source: gait running
+  type: string
+- name: gait_walking
+  label: Gait walking
+  source: gait walking
+  type: string
+- name: gait_swimming
+  label: Gait swimming
+  source: gait swimming
+  type: string
+- name: moving_quickly_or_slowly
+  label: Moving quickly or slowly
+  source: moving quickly or slowly
+  type: string
+- name: direction_of_travel
+  label: Direction of travel
+  source: direction of travel of crocodile
+  type: string
+- name: two_metres_or_greater
+  label: Two metres or greater
+  source: Is the crocodile 2 m or greater
+  type: string
+- name: in_known_habitat
+  label: In known habitat
+  source: Is the croc in a well known habitat
+  type: string
+- name: moving_through
+  label: Moving through
+  source: Is the crocodile moving through
+  type: string
+- name: food_source_fish_frame
+  label: Food source fish frame
+  source: food source fish frame
+  type: string
+- name: food_source_abattoir
+  label: Food source abattoir
+  source: food source abbattoir
+  type: string
+- name: food_source_crab_pots
+  label: Food source crab pots
+  source: food source crab pots
+  type: string
+- name: food_source_smelly_bins
+  label: Food source smelly bins
+  source: food source smelly bins
+  type: string
+- name: food_source_boat_ramp
+  label: Food source boat ramp
+  source: food source boat ramp
+  type: string
+- name: food_source_dugong
+  label: Food source dugong
+  source: food source dugong
+  type: string
+- name: food_source_turtle
+  label: Food source turtle
+  source: food source turtle
+  type: string
+- name: food_source_animal_carcass
+  label: Food source animal carcass
+  source: Food Animal carcass
+  type: string

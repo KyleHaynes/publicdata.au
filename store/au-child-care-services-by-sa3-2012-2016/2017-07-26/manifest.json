@@ -1,0 +1,34 @@
+{
+  "dataset": "au-child-care-services-by-sa3-2012-2016",
+  "version": "2017-07-26",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:15:27+00:00",
+  "sha256": "498a0589b31ef99cdd47ba9d45f588680a45a8e87865a84b6d85a33a8d30c735",
+  "bytes": 253909,
+  "filename": "child-care-administrative-data.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://data.gov.au/data/dataset/9923c11b-aa7e-4bb6-afd9-b17674347fdd/resource/5b6f578d-1d1e-4f97-a285-706dafdb9cbc/download/child-care-administrative-data.csv",
+    "portal": "https://data.gov.au/data",
+    "package": "child-care-administrative-data",
+    "package_id": "9923c11b-aa7e-4bb6-afd9-b17674347fdd",
+    "resource": "5b6f578d-1d1e-4f97-a285-706dafdb9cbc",
+    "resource_name": "Child Care Administrative Data",
+    "resource_last_modified": "2017-07-26T00:00:00",
+    "package_modified": "2023-08-09T09:53:26.857901",
+    "package_version": null,
+    "etag": "W/1501050059.0-253909-3591704692",
+    "http_last_modified": "Wed, 26 Jul 2017 06:20:59 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution 3.0 Australia",
+    "url": "http://creativecommons.org/licenses/by/3.0/au/",
+    "read_from": "https://data.gov.au/data/api/3/action/package_show?id=child-care-administrative-data",
+    "read_at": "2026-10-03T03:15:26+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "84e27420d67321d270eaa4add75a18dd2e4a92760296d949bb0660253774cf35"
+}

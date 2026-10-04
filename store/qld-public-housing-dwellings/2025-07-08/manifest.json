@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-public-housing-dwellings",
+  "version": "2025-07-08",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:02:29+00:00",
+  "sha256": "43e68d0091722a97583a492b843dcf62ecf32a81141a0d976d3e3b1bf1da250e",
+  "bytes": 1692616,
+  "filename": "phsomihdwellingdata.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/20957280-0fce-420e-8da9-9d8dcf82406d/resource/b3bf910b-05da-4dc2-a868-e0d9499e4420/download/phsomihdwellingdata.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "housing-data-rogs-2025",
+    "package_id": "20957280-0fce-420e-8da9-9d8dcf82406d",
+    "resource": "b3bf910b-05da-4dc2-a868-e0d9499e4420",
+    "resource_name": "Public housing and State owned and managed Indigenous housing—dwelling data",
+    "resource_last_modified": "2025-07-08T04:32:44.012245",
+    "package_modified": "2026-04-23T00:42:39.944235",
+    "package_version": "1.0",
+    "etag": "eabef3e827d1b7c09c7924cfe7cc505c",
+    "http_last_modified": "Tue, 08 Jul 2025 04:24:19 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=housing-data-rogs-2025",
+    "read_at": "2026-10-03T03:02:28+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "f72013ec085e9fc588cd90486b0a53095693e5d664f0f0c95757029132b173a6"
+}

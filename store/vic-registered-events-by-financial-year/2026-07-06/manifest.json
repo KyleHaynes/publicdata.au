@@ -1,0 +1,34 @@
+{
+  "dataset": "vic-registered-events-by-financial-year",
+  "version": "2026-07-06",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:09:26+00:00",
+  "sha256": "bfa5e29c12da580236bf4c6874c4dfa1e88f1a505ad09278f08a35eeca68d9bb",
+  "bytes": 11363,
+  "filename": "Registrable-Events-Financial-Year.xlsx",
+  "encoding": "xlsx",
+  "source": {
+    "url": "https://www.bdm.vic.gov.au/sites/default/files/2025-07/Registrable-Events-Financial-Year.xlsx",
+    "portal": "https://discover.data.vic.gov.au",
+    "package": "births-deaths-and-marriages-registered-events-registered-events-by-financial-year",
+    "package_id": "d4856e86-c6e5-4c08-9c5f-6f2752d77890",
+    "resource": "af06fcdf-c07c-4598-a55c-0f4aa04bbf37",
+    "resource_name": "Registrable events by financial year",
+    "resource_last_modified": null,
+    "package_modified": "2026-07-06T02:09:56.008709",
+    "package_version": null,
+    "etag": "68675173-2c63",
+    "http_last_modified": "Fri, 04 Jul 2025 03:58:43 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution 4.0 International",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://discover.data.vic.gov.au/api/3/action/package_show?id=births-deaths-and-marriages-registered-events-registered-events-by-financial-year",
+    "read_at": "2026-10-03T03:09:26+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "7103867882218f0dc4764190a58c39a30b7368e9c1e74cab8cc7dae2fc9d994e"
+}

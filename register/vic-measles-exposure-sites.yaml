@@ -1,0 +1,77 @@
+slug: vic-measles-exposure-sites
+title: Measles public exposure sites, Victoria
+status: live
+topics:
+- health
+order: 367
+publisher:
+  name: Department of Health (Victoria)
+  short: Department of Health
+  jurisdiction: Vic
+  url: https://www.health.vic.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://discover.data.vic.gov.au/dataset/measles-public-exposure-sites-in-victoria
+  attribution: Department of Health, Victorian Government, Measles public exposure sites in Victoria, sourced
+    {sourced}, https://discover.data.vic.gov.au/dataset/measles-public-exposure-sites-in-victoria, licensed
+    under CC BY 4.0.
+temporal_start: '2026-03-19'
+search_title: Measles exposure sites in Victoria, current list kept daily (Department of Health)
+also_known_as:
+- Victorian measles exposure sites
+- Measles exposure locations Victoria
+- Measles alert sites Melbourne
+keywords:
+- measles
+- exposure sites
+- public health alert
+- infectious disease
+- Department of Health
+- Victoria
+faq:
+- q: What does each row hold?
+  a: One public place where a person with measles was during their infectious period, with the exposure
+    date and time, the location and the date to monitor for symptoms up to, as the Department of Health
+    lists it.
+- q: Why is the list sometimes empty?
+  a: The department removes a site once its symptom monitoring period has passed, so the list holds only
+    current sites. When there are none it holds a single row whose location says there are currently no
+    measles exposure sites in Victoria.
+- q: How is the history kept?
+  a: The list is read each day, and each day it changes is kept as a version, so earlier versions hold the
+    sites listed on those days. The department's own page is the place to check for current health advice.
+summary: The public places in Victoria where people may have been exposed to measles, as currently listed
+  by the Department of Health, kept as a version each day the list changes.
+description: The Department of Health's list of current public measles exposure sites, identified through
+  public health investigations of confirmed cases. Each row is one site with the exposure date and time,
+  the location and the date until which people who were there should watch for symptoms. Private addresses
+  are not listed, and sites are removed once the monitoring period has passed.
+source:
+  adapter: ckan-resource
+  portal: https://discover.data.vic.gov.au
+  package: measles-public-exposure-sites-in-victoria
+  resource: 1714643a-2ddf-42fc-84de-b04fed98d3b5
+  url: https://discover.data.vic.gov.au/dataset/measles-public-exposure-sites-in-victoria
+  cadence: continual
+  feed: true
+row_label: Exposure sites
+fields:
+- name: exposure_date
+  label: Exposure date
+  source: Exposure date
+  type: string
+  description: The date or dates of possible exposure, as the department writes them.
+- name: exposure_time
+  label: Exposure time
+  source: Exposure time
+  type: string
+- name: location
+  label: Location
+  source: Location
+  type: string
+- name: monitor_symptoms_until
+  label: Monitor for symptoms up to
+  source: Monitor for onset of symptoms up to
+  type: string

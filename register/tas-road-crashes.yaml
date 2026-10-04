@@ -1,0 +1,144 @@
+slug: tas-road-crashes
+title: Road crashes, Tasmania
+status: live
+topics:
+- roads
+example:
+  where:
+    severity: Fatal
+  group: light_condition
+order: 16
+temporal_start: '1998-01-01'
+search_title: Tasmania road crash data
+also_known_as:
+- Tasmanian Vehicle Crash Data
+- Tasmanian Crash Data (CDM)
+- Tasmania car accident data
+- State Growth crash statistics
+keywords:
+- road crash
+- car accident
+- crash statistics
+- crash locations
+- road safety
+- Tasmania
+- Department of State Growth
+faq:
+- q: Where is the publisher's file?
+  a: There is none. The publisher serves the crashes as an ArcGIS feature layer with no download. This
+    site reads every feature of the layer in pages, in the order of the layer's own identifier, and
+    keeps them as one GeoJSON file, which is the source file beside every version.
+- q: Does it include every crash?
+  a: The publisher includes crashes reported by Tasmania Police, and property damage only crashes
+    reported by the public. A crash nobody reported is not here.
+- q: How often is it updated?
+  a: The layer changes as the police crash database changes. This site checks it weekly and adds a
+    dated version when the features change.
+- q: Why are there crashes before 2009?
+  a: The publisher names the layer for crashes since 1 January 2009, and it also holds 56,136 crashes
+    dated from January 1998 to December 2008 in the September 2026 version. They are kept as published.
+summary: Every crash on a Tasmanian road since 1998 reported by Tasmania Police or the public, one row
+  per crash, with its coordinates, date and time, severity, crash movement, speed zone and road surface.
+description: One row per crash on a Tasmanian road, from the Crash Data Management database Tasmania
+  Police uses. The publisher names the layer for crashes since 1 January 2009 and it also holds crashes
+  back to January 1998. Each row carries the crash number, date and time, the crash movement
+  description, severity, whether police attended, the road surface, light condition, centre line
+  marking, speed zone, a location description and the point coordinates.
+publisher:
+  name: Department of State Growth
+  short: State Growth
+  jurisdiction: Tas
+  url: https://www.stategrowth.tas.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-09-30'
+  evidence: https://data.gov.au/data/dataset/tasmanian
+  attribution: Department of State Growth, Tasmanian Government, Tasmanian Vehicle Crash Data,
+    https://data.gov.au/data/dataset/tasmanian, accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: arcgis-feature
+  portal: https://data.gov.au/data
+  package: tasmanian
+  url: https://data.stategrowth.tas.gov.au/ags/rest/services/PUBLIC/CDM_CRASH/FeatureServer/0
+  cadence: as the police database changes
+key:
+- id
+partition_by:
+- severity
+enrich:
+- sa2
+- lga
+- suburb
+- postcode
+- state_electorate
+- federal_electorate
+geometry:
+  lon: longitude
+  lat: latitude
+  crs: EPSG:4326
+  crs_note: Longitude and latitude in WGS84 (EPSG:4326), as the feature service projects them on request.
+    The layer's own coordinates are Web Mercator.
+row_label: Crashes
+fields:
+- name: id
+  label: Feature ID
+  source: ID
+  type: integer
+  description: The feature layer's object id.
+- name: vcrn
+  label: Crash number
+  source: VCRN
+  type: string
+  description: The police crash report number. Kept as text.
+- name: description
+  label: Crash movement
+  source: DESCRIPTION
+  type: string
+  description: The DCA (Definitions for Coding Accidents) code and its description.
+- name: crash_date_time
+  label: Date and time
+  source: CRASH_DATE_TIME
+  type: datetime
+  date_format: epoch_ms
+  description: UTC, from the layer's date field.
+- name: severity
+  label: Severity
+  source: SEVERITY
+  type: string
+- name: visited
+  label: Police attended
+  source: VISITED
+  type: string
+- name: surface_type
+  label: Road surface
+  source: SURFACE_TYPE
+  type: string
+- name: light_condition
+  label: Light condition
+  source: LIGHT_CONDITION
+  type: string
+- name: centre_line
+  label: Centre line
+  source: CENTRE_LINE
+  type: string
+- name: speed_zone
+  label: Speed zone
+  source: SPEED_ZONE
+  type: string
+  description: Kept as text to preserve leading zeros, for example 060.
+- name: location_description
+  label: Location
+  source: LOCATION_DESCRIPTION
+  type: string
+- name: longitude
+  label: Longitude
+  source: (longitude)
+  type: number
+  description: Decimal degrees, WGS84, from the point geometry.
+- name: latitude
+  label: Latitude
+  source: (latitude)
+  type: number
+  description: Decimal degrees, WGS84, from the point geometry.
+note: Cells were typed and headers were made snake_case. The point geometry became longitude and
+  latitude fields. Rows were left alone.

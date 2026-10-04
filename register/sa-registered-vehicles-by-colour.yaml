@@ -1,0 +1,97 @@
+slug: sa-registered-vehicles-by-colour
+title: Registered vehicles by colour, make and body type, South Australia
+status: live
+topics:
+- roads
+example:
+  group: colour
+  metric: sum.vehicles
+  label: Registered vehicles
+chart:
+  where:
+    year_of_manufacture:
+      gt: 1900
+  split: none
+  metric: sum.vehicles
+  label: Registered vehicles by year of manufacture
+sample:
+  where:
+    year_of_manufacture:
+      gt: 1900
+  order: [vehicles.desc]
+  spread: colour
+  label: The largest count for each colour in turn, largest first, leaving out the year 1900, which appears to
+    stand for an unknown year.
+order: 424
+collection: sa-vehicles-and-licences
+collection_title: Registered vehicles and driver's licences, South Australia
+search_title: South Australia registered vehicles by colour and make (DIT)
+also_known_as:
+- Registered Vehicles by Colour SA
+- TRLB07 vehicles by colour
+- Most common car colours South Australia
+keywords:
+- registered vehicles
+- car colours
+- vehicle make
+- body type
+- Department for Infrastructure and Transport
+- South Australia
+faq:
+- q: What is in each row?
+  a: The number of vehicles registered in South Australia at 30 June that share one make, body type, year of
+    manufacture and colour.
+- q: Why do so many vehicles date from 1900?
+  a: The publisher appears to use 1900 where the year of manufacture is not known. That year holds far more
+    vehicles than any year before the 1920s, most of them trailers with no make listed or a homemade make. The
+    chart and the sample leave it out.
+- q: Which date does the table cover?
+  a: The newest file, vehicles registered at 30 June 2026 at the first version. The publisher adds a file each
+    July, and each becomes a version here.
+summary: The number of vehicles registered in South Australia at 30 June, counted by make, body type, year of
+  manufacture and colour. Updated yearly.
+description: Registered vehicles by colour from the Department for Infrastructure and Transport, which refers to the
+  report as TRLB07. Each row is one vehicle make, body type, year of manufacture and colour, with the count of
+  registered vehicles that share them.
+publisher:
+  name: Department for Infrastructure and Transport
+  short: Infrastructure and Transport
+  jurisdiction: SA
+  url: https://www.dit.sa.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.sa.gov.au/data/dataset/registered-vehicles-by-colour
+  attribution: Department for Infrastructure and Transport, Government of South Australia, Registered Vehicles by Colour,
+    https://data.sa.gov.au/data/dataset/registered-vehicles-by-colour, accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: ckan-resource
+  portal: https://data.sa.gov.au/data
+  package: registered-vehicles-by-colour
+  resource_match: ^Registered Vehicles by [Cc]olour at 30 June \d{4}$
+  url: https://data.sa.gov.au/data/dataset/registered-vehicles-by-colour
+  cadence: yearly
+  header_row: 2
+row_label: Vehicle counts
+fields:
+- name: make
+  label: Make
+  source: MAKE_DESC
+  type: string
+- name: body_type
+  label: Body type
+  source: BODY_TYPE_DESC
+  type: string
+- name: year_of_manufacture
+  label: Year of manufacture
+  source: YEAR_OF_MANUFACTURE
+  type: integer
+- name: colour
+  label: Colour
+  source: COLOUR_DESC
+  type: string
+- name: vehicles
+  label: Vehicles
+  source: TOTAL
+  type: integer

@@ -1,0 +1,83 @@
+slug: vic-mobile-road-safety-camera-locations
+title: Approved mobile road safety camera locations, Victoria
+status: live
+topics:
+- roads
+example:
+  group: suburb
+  metric: count
+  label: Camera locations
+order: 391
+publisher:
+  name: Cameras Save Lives
+  short: Cameras Save Lives
+  jurisdiction: Vic
+  url: https://www.vic.gov.au/cameras-save-lives
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://discover.data.vic.gov.au/dataset/road-safety-camera-network-mobile-camera-locations
+  attribution: Cameras Save Lives, Victorian Government, Road Safety Camera Network - mobile camera locations,
+    sourced {sourced}, https://discover.data.vic.gov.au/dataset/road-safety-camera-network-mobile-camera-locations,
+    licensed under CC BY 4.0.
+search_title: Mobile speed camera locations list, Victoria (approved sites)
+also_known_as:
+- Victorian mobile speed camera locations
+- Mobile road safety camera sites Victoria
+- Where are mobile speed cameras in Victoria
+- Road Safety Camera Network mobile camera locations
+keywords:
+- mobile speed cameras
+- speed camera locations
+- road safety cameras
+- Cameras Save Lives
+- speeding
+- Victoria
+faq:
+- q: What does each row hold?
+  a: One road on which a mobile road safety camera is approved to operate, with the suburb, the
+    publisher's reason code for the location and the month the location was last audited. Mobile cameras
+    run from unmarked vehicles, and from 2026 trailers, at more than 2,000 approved locations.
+- q: Does a row mean a camera is there today?
+  a: No. The list is of approved locations. A camera may be set up at any of them at any time, and the
+    publisher does not say when.
+- q: What are the reason codes?
+  a: Each location carries one or more of the letters A to D, which the publisher uses for the grounds the
+    location was approved on. The file does not give a key to the letters, so they are kept as published.
+- q: How often is it updated?
+  a: The publisher releases the list about monthly, and each release becomes a version here.
+summary: Every road and suburb where a mobile road safety camera is approved to operate in Victoria, with
+  the reason code and audit month for each, about 2,250 locations.
+description: The mobile camera location description report from the Victorian road safety camera
+  program, one row per approved location with the road, suburb, reason code and the month of its last
+  audit. The list is of approved locations and does not show when a camera is present.
+source:
+  adapter: ckan-resource
+  portal: https://discover.data.vic.gov.au
+  package: road-safety-camera-network-mobile-camera-locations
+  resource_match: ^Mobile Camera Locations
+  url: https://discover.data.vic.gov.au/dataset/road-safety-camera-network-mobile-camera-locations
+  cadence: monthly
+  header_row: 2
+row_label: Locations
+fields:
+- name: location
+  label: Road
+  source: LOCATION
+  type: string
+- name: suburb
+  label: Suburb
+  source: SUBURB
+  type: string
+- name: reason_code
+  label: Reason code
+  source: Reason Code
+  type: string
+  description: The publisher's letters, A to D, for the grounds the location was approved on.
+- name: audit_date
+  label: Last audited
+  source: Audit Date
+  type: string
+  description: The month of the last audit as the publisher writes it, for example Feb-2026. Kept as text
+    because about a quarter of the cells hold the letter T, which the publisher does not explain.

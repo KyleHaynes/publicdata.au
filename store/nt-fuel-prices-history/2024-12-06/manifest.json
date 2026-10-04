@@ -1,0 +1,622 @@
+{
+  "dataset": "nt-fuel-prices-history",
+  "version": "2024-12-06",
+  "as_at": "",
+  "fetched_at": "2026-09-30T19:40:59+00:00",
+  "sha256": "99eb65bc283213d670fc24947179c2c3123a39e9f201a5250cd53003f3b0fd5f",
+  "bytes": 57850619,
+  "filename": "nt-fuel-prices-history.csv",
+  "encoding": "utf-8",
+  "source": {
+    "url": "https://data.nt.gov.au/dataset?q=myfuel",
+    "portal": "https://data.nt.gov.au",
+    "search": "myfuel",
+    "packages": 29,
+    "workbooks": [
+      {
+        "package": "myfuel-nt-data-1-november-2017-to-31-may-2019",
+        "resource": "3b713b98-b30e-4050-9396-b2e3b726eb06",
+        "name": "MyFuel NT data November 2017",
+        "sha256": "96e7f9dc5f11d6e273ce3efc0c6b8ce4e9f60515d9291399ee0a221ba3eeda2a",
+        "rows": 6480
+      },
+      {
+        "package": "myfuel-nt-data-1-november-2017-to-31-may-2019",
+        "resource": "4babb135-d87f-4b21-b2e7-16a1be338d58",
+        "name": "MyFuel NT data December 2017",
+        "sha256": "b230eb72bf757818e0b807d1dde5afc5bef72208d02472b1c4d4f7a0d7db3945",
+        "rows": 6696
+      },
+      {
+        "package": "myfuel-nt-data-january-2018-to-december-2018",
+        "resource": "dee1d9f4-ec78-4e11-b58a-8867f468c632",
+        "name": "MyFuel NT data January 2018",
+        "sha256": "2dab46281279bedb0cf5763b0ae019f7d30ef143543eeace478c8d88ed23d0af",
+        "rows": 6696
+      },
+      {
+        "package": "myfuel-nt-data-january-2018-to-december-2018",
+        "resource": "d3de851b-3965-4284-b2a9-dddf868a3a5d",
+        "name": "MyFuel NT data February 2018",
+        "sha256": "7c8afc7e17b7a16a766ee4ebf111a9e17cdc292c4f2a9b1bee94beb60678845d",
+        "rows": 6048
+      },
+      {
+        "package": "myfuel-nt-data-january-2018-to-december-2018",
+        "resource": "9286eee3-dc0b-4d96-9c52-c7bde4415d68",
+        "name": "MyFuel NT data March 2018",
+        "sha256": "117090f7051afd9224f56da5b8dcc0b269f31f64b6a77f82e9eb78a815fdd18d",
+        "rows": 6696
+      },
+      {
+        "package": "myfuel-nt-data-january-2018-to-december-2018",
+        "resource": "5cc4ecb9-5af4-4e00-8326-414a33d812fe",
+        "name": "MyFuel NT data April 2018",
+        "sha256": "aa07c9bd31f14b5a2b4d55eb8c26b054bce7f9b48c4c7df6694e9680b4870071",
+        "rows": 6480
+      },
+      {
+        "package": "myfuel-nt-data-january-2018-to-december-2018",
+        "resource": "c9629f1f-c376-4fba-a373-2d87644d507b",
+        "name": "MyFuel NT data May 2018",
+        "sha256": "e353dd6ab69b8608c7dd9f0d2f09561e9084d4f36eb4f69ef82db8d7ab513ae2",
+        "rows": 6696
+      },
+      {
+        "package": "myfuel-nt-data-january-2018-to-december-2018",
+        "resource": "77b876d6-4f55-4b67-8506-16922f6cf448",
+        "name": "MyFuel NT data June 2018",
+        "sha256": "60d524def62f5fed7154fe762ecd2f464e4f85edf74fc8a43d1dfad9ca306790",
+        "rows": 6480
+      },
+      {
+        "package": "myfuel-nt-data-january-2018-to-december-2018",
+        "resource": "d2440368-cddf-489d-87e5-3a7a4a2bb312",
+        "name": "MyFuel NT data July 2018",
+        "sha256": "8b68d9e743588ad3a54ee26779e677e58d2649978909bdf1ec5a4424bf2a1f94",
+        "rows": 6696
+      },
+      {
+        "package": "myfuel-nt-data-january-2018-to-december-2018",
+        "resource": "6c9a870a-f4ea-41a9-8788-0cc5a0c3cdde",
+        "name": "MyFuel NT data August 2018",
+        "sha256": "8e35d4a47c954f217db1baef1ceeddbbf8359aeb56e0cca5d4d042cb846280d0",
+        "rows": 6696
+      },
+      {
+        "package": "myfuel-nt-data-january-2018-to-december-2018",
+        "resource": "7eca15dd-a244-4df3-bf44-cf4f4816b120",
+        "name": "MyFuel NT data September 2018",
+        "sha256": "6b68072eff928bb3635998388ddc0c99afadeab1d5db4d507b26af6fa9fbdd81",
+        "rows": 6480
+      },
+      {
+        "package": "myfuel-nt-data-january-2018-to-december-2018",
+        "resource": "295ad1ef-b528-453b-b498-2f1059d21184",
+        "name": "MyFuel NT data October 2018",
+        "sha256": "10f058384de28148d60abda8364745bb03d989c4d7072b38122ebee92e81a430",
+        "rows": 6696
+      },
+      {
+        "package": "myfuel-nt-data-january-2018-to-december-2018",
+        "resource": "ab6c7be3-7116-44a9-9f75-4df6bb23d5c4",
+        "name": "MyFuel NT data November 2018",
+        "sha256": "d2e1fb2124083b9324da8f3a645ef140efc95e3397a972264d4adbfc793a6e88",
+        "rows": 6480
+      },
+      {
+        "package": "myfuel-nt-data-january-2018-to-december-2018",
+        "resource": "11da5ba0-6598-460b-930f-e6e8a2f58c0a",
+        "name": "MyFuel NT data December 2018",
+        "sha256": "e314e987b830fac083debce85a358aadb9f05a4110bd6884a294cb001cf7784a",
+        "rows": 6696
+      },
+      {
+        "package": "myfuel-nt-data-january-2019-to-december-2019",
+        "resource": "f8308101-7985-46dc-8ba9-c30392646cc2",
+        "name": "MyFuel NT data January 2019",
+        "sha256": "0989fa7ad869a12b69fe6743d1fe23fec4799f16e5ff449666d208f071109518",
+        "rows": 6696
+      },
+      {
+        "package": "myfuel-nt-data-january-2019-to-december-2019",
+        "resource": "b2b5f9dd-0ba7-465a-a9a7-7a8b5aa17471",
+        "name": "MyFuel NT data February 2019",
+        "sha256": "8eb353eb2f0d6ab2f21a2e3a170ba425ee5d0107f819b69624df89a86abd7d35",
+        "rows": 6048
+      },
+      {
+        "package": "myfuel-nt-data-january-2019-to-december-2019",
+        "resource": "f90d0f3c-6f9d-4eda-abcf-bbfbc2d127b2",
+        "name": "MyFuel NT data March 2019",
+        "sha256": "e6328abae102f62333b6038ce162903a11247802150434b55dbb8389b5f94163",
+        "rows": 6696
+      },
+      {
+        "package": "myfuel-nt-data-january-2019-to-december-2019",
+        "resource": "e8b3bcd9-e14d-46a3-a552-563e9b152e91",
+        "name": "MyFuel NT data April 2019",
+        "sha256": "509969436608ca0202aa47c5b7f7062c31788397c36abdc046b5f797edd9c0e2",
+        "rows": 6480
+      },
+      {
+        "package": "myfuel-nt-data-january-2019-to-december-2019",
+        "resource": "98a4cf30-1917-4096-94fd-156a4f1a3f43",
+        "name": "MyFuel NT data May 2019",
+        "sha256": "d20d204a9750c001a9d00064305fc6b1d4c3e55c966acad98a72696a1eb9456a",
+        "rows": 6696
+      },
+      {
+        "package": "myfuel-nt-data-january-2019-to-december-2019",
+        "resource": "6fef4ea9-10ce-41f8-bcbc-4486255dc983",
+        "name": "MyFuel NT data June 2019",
+        "sha256": "6c0dca95fb1c026fa40cf863148198123dfd5da43e86452eb721acd1795ef172",
+        "rows": 6480
+      },
+      {
+        "package": "myfuel-nt-data-january-2019-to-december-2019",
+        "resource": "c5b40669-d503-4c1a-861f-a2df45f0c4cb",
+        "name": "MyFuel NT data July 2019",
+        "sha256": "02e7e7bacd2de91912eee1d697db65397e7391fa530354ce09c730568cd99df6",
+        "rows": 6696
+      },
+      {
+        "package": "myfuel-nt-data-january-2019-to-december-2019",
+        "resource": "1befec12-fc66-467e-9ce4-f9cedb973272",
+        "name": "MyFuel NT data August 2019",
+        "sha256": "ed9bebc567732715df5804e67184fe412f8fc3b9b443d1416f67931489921a89",
+        "rows": 6727
+      },
+      {
+        "package": "myfuel-nt-data-january-2019-to-december-2019",
+        "resource": "494c003e-abae-400f-bedc-64ae88b1e517",
+        "name": "MyFuel NT data September 2019",
+        "sha256": "b5b47a690d9e0ba737767f53201330729bdab63093436bce864793df380c2a44",
+        "rows": 6535
+      },
+      {
+        "package": "myfuel-nt-data-january-2019-to-december-2019",
+        "resource": "8493a344-be16-47da-8e94-b2caeaf35a0a",
+        "name": "MyFuel NT data October 2019",
+        "sha256": "c9201510484302506d27c501f303fbdae8dcea445fcad14afd2822e609447db0",
+        "rows": 6787
+      },
+      {
+        "package": "myfuel-nt-data-january-2019-to-december-2019",
+        "resource": "7afdeca4-5772-4acf-9062-94ec1f572f76",
+        "name": "MyFuel NT data November 2019",
+        "sha256": "5d1fc4bd94b0b3567358a18f610b601fa32354b9fa5cb1462b9137327220737a",
+        "rows": 6570
+      },
+      {
+        "package": "myfuel-nt-data-january-2019-to-december-2019",
+        "resource": "9f238d6d-1ddc-472c-81ee-a10a7d2176cf",
+        "name": "MyFuel NT data December 2019",
+        "sha256": "bf747e27d3f36bbc2bfd3b4523aadffa576a6f951fc02220f7434fe532529ac6",
+        "rows": 6789
+      },
+      {
+        "package": "myfuel-nt-data-january-2020-to-december-2020",
+        "resource": "71164ee7-2974-4611-b14b-8cd4a9b7ed60",
+        "name": "MyFuel NT data January 2020",
+        "sha256": "ecc58d69e544d7d4a2d5513bdc5d2c494a90371c0b0a7ccab983a0c62804e39c",
+        "rows": 6800
+      },
+      {
+        "package": "myfuel-nt-data-january-2020-to-december-2020",
+        "resource": "85c7c059-83b8-415f-a9eb-25282f552a86",
+        "name": "MyFuel NT data February 2020",
+        "sha256": "d1f051d88e4bf46f732354f2bf4e5efded3fdefd17b7a6a90afdc4b2723f1204",
+        "rows": 6825
+      },
+      {
+        "package": "myfuel-nt-data-january-2020-to-december-2020",
+        "resource": "51b847fb-590a-4e26-8119-e8dcc0f21503",
+        "name": "MyFuel NT data March 2020",
+        "sha256": "84852ee5a433b98dadb97a1b142827b799f19f65ac981de50691b1b6b736cf58",
+        "rows": 7086
+      },
+      {
+        "package": "myfuel-nt-data-january-2020-to-december-2020",
+        "resource": "75b07930-9fce-43e6-bbb7-f8875e661a3e",
+        "name": "MyFuel NT data April 2020",
+        "sha256": "6b4592f05e0f3135e577a1cc798fb3cde56634dd72a68e41eeef6adc7297b611",
+        "rows": 7104
+      },
+      {
+        "package": "myfuel-nt-data-january-2020-to-december-2020",
+        "resource": "095c62ca-0870-4596-b0b1-09240f80eb4e",
+        "name": "MyFuel NT data May 2020",
+        "sha256": "9478f0b3bd0e09a3d91e985152429fbaac46e5b2303be19003a3fb1c22358b27",
+        "rows": 6217
+      },
+      {
+        "package": "myfuel-nt-data-january-2020-to-december-2020",
+        "resource": "0e3fdf8c-fb96-4a5c-aab9-8a78791e5111",
+        "name": "MyFuel NT data June 2020",
+        "sha256": "7cd4b95d705b4516ce4289ad1ca42f4f224e0aa579e8ae8c1e26483ab00ca6c5",
+        "rows": 7106
+      },
+      {
+        "package": "myfuel-nt-data-january-2020-to-december-2020",
+        "resource": "92f87d58-4f20-4c28-bc4f-bef723f6953d",
+        "name": "MyFuel NT data July 2020",
+        "sha256": "3a34cbcb0f850eff6338c94e1065a42a83946c8e9000bd9769595dc8eaa53754",
+        "rows": 6511
+      },
+      {
+        "package": "myfuel-nt-data-january-2020-to-december-2020",
+        "resource": "899d3bea-d061-4b89-8753-84aba665e9a9",
+        "name": "MyFuel NT data August 2020",
+        "sha256": "e1f185a8f6199125c515a0e31a47a45cbad398247b70497a74fc9be68a8968a8",
+        "rows": 7382
+      },
+      {
+        "package": "myfuel-nt-data-january-2020-to-december-2020",
+        "resource": "127db48e-44d4-423b-aa03-d299bf48ad80",
+        "name": "MyFuel NT data September 2020",
+        "sha256": "c87b0b3ec3bc014c04b331d991043ea454fcceb7b55c230daa6da5ca610a504f",
+        "rows": 7168
+      },
+      {
+        "package": "myfuel-nt-data-january-2020-to-december-2020",
+        "resource": "fb91c667-8216-43ee-8426-ce65ac2d5cd9",
+        "name": "MyFuel NT data October 2020",
+        "sha256": "b69960da73ef4e26c82a367bdd5cf335e604755a00e19a959ffcdc3f206ac5cb",
+        "rows": 7392
+      },
+      {
+        "package": "myfuel-nt-data-january-2020-to-december-2020",
+        "resource": "d5c97714-a98d-4661-a1ff-4494613fae38",
+        "name": "MyFuel NT data November 2020",
+        "sha256": "ec06165f97f8f27c6c88ebe2aa8fe6193d34228b488d3a48ad61c70ede8b90da",
+        "rows": 7188
+      },
+      {
+        "package": "myfuel-nt-data-january-2020-to-december-2020",
+        "resource": "f08698c4-95e4-477d-827b-86196322da97",
+        "name": "MyFuel NT data December 2020",
+        "sha256": "47ef19e4016d93a2b99fba8c900c4df6d5f3254f8fd108c4892bdad7c09bca50",
+        "rows": 7425
+      },
+      {
+        "package": "myfuel-nt-data-january-2021-to-december-2021",
+        "resource": "e63e8e1d-c78e-4162-a1d1-bb9c51b9220f",
+        "name": "MyFuel NT data January 2021",
+        "sha256": "57b241829e19669d24ae0444bcab940a655f3df46e52384185d3269ff2eb035d",
+        "rows": 7425
+      },
+      {
+        "package": "myfuel-nt-data-january-2021-to-december-2021",
+        "resource": "49cd9352-d330-4f40-9164-9d86f6db4bd3",
+        "name": "MyFuel NT data February 2021",
+        "sha256": "40a153887fc9b6b1485b78f53d2c981fce0d3c8b21de28369bb8fe27fa296649",
+        "rows": 6769
+      },
+      {
+        "package": "myfuel-nt-data-january-2021-to-december-2021",
+        "resource": "9205c92b-0bc0-4a8e-9889-c97ffd39f88d",
+        "name": "MyFuel NT data March 2021",
+        "sha256": "dda0aa5588800b84523bf4e23b680ce342972118294b92314b34ec977c2adf1f",
+        "rows": 7458
+      },
+      {
+        "package": "myfuel-nt-data-january-2021-to-december-2021",
+        "resource": "084659ce-e137-473d-9c79-0b713ec11740",
+        "name": "MyFuel NT data April 2021",
+        "sha256": "9db61c642e34462d3804ff597c523ae87a8a50a867e07eefc3ca3b4c882fd356",
+        "rows": 7232
+      },
+      {
+        "package": "myfuel-nt-data-january-2021-to-december-2021",
+        "resource": "23b1df23-8536-4406-9fc6-2c59a942f2d9",
+        "name": "MyFuel NT data May 2021",
+        "sha256": "4d8d3452a2222f56944e0036123a7eb09702fb07556555aee3ff3297d6fd6b1d",
+        "rows": 7286
+      },
+      {
+        "package": "myfuel-nt-data-january-2021-to-december-2021",
+        "resource": "c90c437a-6c3a-4dd7-b27e-6816b59e001e",
+        "name": "MyFuel NT data June 2021",
+        "sha256": "fd469265251b4d66d8464ec49e49aada5a0e849ff03f9bb7cb9ac257a2555358",
+        "rows": 7246
+      },
+      {
+        "package": "myfuel-nt-data-january-2021-to-december-2021",
+        "resource": "ee080f17-e323-4ea6-8a26-86a712cd94dc",
+        "name": "MyFuel NT data July 2021",
+        "sha256": "2a241e20197c56489d9e742aa3f9aca376d1caba0f0eb87ae89fe63be556d67f",
+        "rows": 7489
+      },
+      {
+        "package": "myfuel-nt-data-january-2021-to-december-2021",
+        "resource": "4089e62d-20dd-4cb0-b681-1ad305878d44",
+        "name": "MyFuel NT data August 2021",
+        "sha256": "9cf94fdfb586ea1621546e42e8a37e70d4fdac5c8986b369a196a49a666bb560",
+        "rows": 7491
+      },
+      {
+        "package": "myfuel-nt-data-january-2021-to-december-2021",
+        "resource": "fdeee196-9cde-44d7-a023-ab536045e340",
+        "name": "MyFuel NT data September 2021",
+        "sha256": "78f7bacfb8ed664fd08af6df4436edb73f1166af4f95ffaf7a6f1734ee9fb6aa",
+        "rows": 7264
+      },
+      {
+        "package": "myfuel-nt-data-january-2021-to-december-2021",
+        "resource": "3786afe8-6e64-49ce-aefd-581c89e0eda8",
+        "name": "MyFuel NT data October 2021",
+        "sha256": "6e89a21e1dcdde6f79bfece010615961653f4605b8ddc6051fbbea35464e4382",
+        "rows": 7491
+      },
+      {
+        "package": "myfuel-nt-data-january-2021-to-december-2021",
+        "resource": "4003a72e-390b-4921-b079-28021307f693",
+        "name": "MyFuel NT data November 2021",
+        "sha256": "07702733f96edb380988040af1f7ec163419de1fd518da7560a7d76c273cd37e",
+        "rows": 7264
+      },
+      {
+        "package": "myfuel-nt-data-january-2021-to-december-2021",
+        "resource": "6f71ce1f-8187-48f4-952e-7ca1d140d80b",
+        "name": "MyFuel NT data December 2021",
+        "sha256": "9e67cf318a0aee9f5ef2c1f07647ea1408664305a9fc48b8eec6391055e75ba7",
+        "rows": 7491
+      },
+      {
+        "package": "myfuel-nt-data-january-2022-to-december-2022",
+        "resource": "873d3910-0d67-498f-854b-ddb85f9dfe18",
+        "name": "MyFuel NT data January 2022",
+        "sha256": "391cba95eeaa78c99047452271a638a112e94165ec67548997b83920cdec808a",
+        "rows": 7491
+      },
+      {
+        "package": "myfuel-nt-data-january-2022-to-december-2022",
+        "resource": "03cf9c50-6a5b-4385-a045-6e8cef085661",
+        "name": "MyFuel NT data February 2022",
+        "sha256": "d1f051d88e4bf46f732354f2bf4e5efded3fdefd17b7a6a90afdc4b2723f1204",
+        "rows": 6825
+      },
+      {
+        "package": "myfuel-nt-data-january-2022-to-december-2022",
+        "resource": "018cecf5-c201-4bd0-b853-0d9b2058553e",
+        "name": "MyFuel NT data March-April 2022",
+        "sha256": "09d571790c48b8407aef070ee27849a5ce88bafd0fc8cc0578871c448b52a21d",
+        "rows": 20657
+      },
+      {
+        "package": "myfuel-nt-data-january-2022-to-december-2022",
+        "resource": "43a7c966-8360-4956-9009-4953032229fa",
+        "name": "MyFuel NT data May 2022",
+        "sha256": "2012a4357034e056f6eea8132261263f118df67b1ee47a4484b39e5899d62f04",
+        "rows": 4995
+      },
+      {
+        "package": "myfuel-nt-data-january-2022-to-december-2022",
+        "resource": "612cb95b-97f1-4058-b675-b0147e581d23",
+        "name": "MyFuel NT data June 2022",
+        "sha256": "b001257cb73178efdd99d81dd8646ab83a2b202507c1d5cf004a149eda387cbd",
+        "rows": 7264
+      },
+      {
+        "package": "myfuel-nt-data-january-2022-to-december-2022",
+        "resource": "ef9e76b1-e3d0-4b4e-ae83-a4697521bd00",
+        "name": "MyFuel NT data July 2022",
+        "sha256": "e6453a3d80033dab5fcbc8667c2636c221400a2a7695f35eb40eef89ca908084",
+        "rows": 7491
+      },
+      {
+        "package": "myfuel-nt-data-january-2022-to-december-2022",
+        "resource": "2648b8dc-9b3d-4eca-8f34-5e57c349ba5b",
+        "name": "MyFuel NT data August 2022",
+        "sha256": "4805afb78cb39463b3f82ead9e095629da4cb76622c47667c1524aac01fb92ea",
+        "rows": 7491
+      },
+      {
+        "package": "myfuel-nt-data-january-2022-to-december-2022",
+        "resource": "fc69570c-b10c-41db-971f-75484fc60d39",
+        "name": "MyFuel NT data September 2022",
+        "sha256": "356560f85c3a8539f8249acd9ac67ff41491b3ae976ba4ffb69e78040672622f",
+        "rows": 7279
+      },
+      {
+        "package": "myfuel-nt-data-january-2022-to-december-2022",
+        "resource": "914d7c44-d576-451c-bb4d-722196d33239",
+        "name": "MyFuel NT data October 2022",
+        "sha256": "68c8e659abd2b129ec88109a03640bf022c64c5308c8114e6a0f25a5914025fc",
+        "rows": 7524
+      },
+      {
+        "package": "myfuel-nt-data-january-2022-to-december-2022",
+        "resource": "2c936f8e-0398-4817-a85b-caac1e6be38d",
+        "name": "MyFuel NT data November 2022",
+        "sha256": "5af00b7a7178822e2f58f5928218f9381bc7076ba9e3d3fbbfd623d8b10aa6f9",
+        "rows": 7296
+      },
+      {
+        "package": "myfuel-nt-data-january-2022-to-december-2022",
+        "resource": "68dd998f-7cec-4597-bd0a-5f9ae52e1fc0",
+        "name": "MyFuel NT data December 2022",
+        "sha256": "779ed47fe8acf7a1be1bcbd471be491c5f4154c4f8f8f3e6f27c9805daf46650",
+        "rows": 7524
+      },
+      {
+        "package": "myfuel-nt-data-january-2023",
+        "resource": "d9bd366b-2ea3-4d1f-b7ab-6692878e10e9",
+        "name": "MyFuel NT data January 2023",
+        "sha256": "a78004be15813fe728637061376240236584c2322a4b6a00ab0f797286029c49",
+        "rows": 7524
+      },
+      {
+        "package": "myfuel-nt-data-february-2023",
+        "resource": "b5bedf1c-ee6d-4d25-afbb-3621f3f124f2",
+        "name": "MyFuel NT data February 2023",
+        "sha256": "d06fd2c260c2bbaeef06a6fcfa9abd7286d6d1efc1d703b2aae51dfa46c38622",
+        "rows": 6840
+      },
+      {
+        "package": "myfuel-nt-data-march-2023",
+        "resource": "adb49cfa-c49b-48d4-a6cd-41211857ebd8",
+        "name": "MyFuel NT data March 2023",
+        "sha256": "681d4a5c3368f682cb54f609c9f9d4a5e55c02f3782fd425c814bdf9bec15a1d",
+        "rows": 7524
+      },
+      {
+        "package": "myfuel-nt-data-april-2023",
+        "resource": "a4a8c1f4-0132-4820-a36b-b521e05a3b21",
+        "name": "MyFuel NT data April 2023",
+        "sha256": "8495846e349e7da9d399ff89ef711044ab86cad6f6154769b4282617741a387f",
+        "rows": 7322
+      },
+      {
+        "package": "myfuel-nt-may-2023",
+        "resource": "a0be3021-971b-4ebf-8525-d5e78035eb8d",
+        "name": "MyFuel NT data May 2023",
+        "sha256": "a37eb035d18f28ae8efe0d70eac6614ddd998142e68b7b8e64211df5ed33bf09",
+        "rows": 7557
+      },
+      {
+        "package": "myfuel-nt-june-2023",
+        "resource": "544f4a66-162e-4b49-b5d0-eb627fea7a87",
+        "name": "MyFuel NT data June 2023",
+        "sha256": "1c7cb4dafb0152314f3ab73b1e90e896bc0dc3bdedf57774a96df59fcfb7c838",
+        "rows": 7328
+      },
+      {
+        "package": "myfuel-nt-july-2023",
+        "resource": "97227b83-a2b5-4226-9afc-f33c897efdc4",
+        "name": "MyFuel NT data July 2023",
+        "sha256": "ccaaeeed1f56fdc006664e60482b3116cf83ba5d9766412926dce2a9f47aa46e",
+        "rows": 7099
+      },
+      {
+        "package": "myfuel-nt-august-2023",
+        "resource": "8a17633a-4eb6-46c6-9b7b-a6dc3bb7e7d3",
+        "name": "MyFuel NT data August 2023",
+        "sha256": "4f64e9d8620cafa0da24b2b249e54fe249cf5effcd850dabf3efac2461d1b89d",
+        "rows": 7123
+      },
+      {
+        "package": "myfuel-nt-september-2023",
+        "resource": "d0cddc5c-36e5-416d-8340-ee8fe601e01c",
+        "name": "MyFuel NT data September 2023",
+        "sha256": "b52de06fc8b8a25cab1f9ecb2367466a26515384df116b6a3a0f70bed40e7b29",
+        "rows": 7384
+      },
+      {
+        "package": "myfuel-nt-october-2023",
+        "resource": "f1813128-d4dc-4bf1-bd47-fd78d33d5f49",
+        "name": "MyFuel NT data October 2023",
+        "sha256": "6c4cc1bc5759a6f6ce187b024df8f89a71c3349b95dddd0f7ca1ddb44657f3da",
+        "rows": 7161
+      },
+      {
+        "package": "myfuel-nt-november-2023",
+        "resource": "4c249642-39f1-4274-a72c-cd9a502e3125",
+        "name": "MyFuel NT data November 2023",
+        "sha256": "b5a11375df96b4885dace98bd1a3cce5548a9cd878d9bf76ca1a3ddf32172e60",
+        "rows": 6930
+      },
+      {
+        "package": "myfuel-nt-december-2023",
+        "resource": "678a3a12-2a6c-4fc7-ae10-ecb1e515be47",
+        "name": "MyFuel NT data December 2023",
+        "sha256": "8794dd231e9360211900509cc50e5572ce123d2455beecff136520fd1e31203d",
+        "rows": 7623
+      },
+      {
+        "package": "myfuel-nt-january-2024",
+        "resource": "1ed5347f-b923-4519-ae3c-44d8ab2992f1",
+        "name": "MyFuel NT data January 2024",
+        "sha256": "3eab9e196ce69816d4b0df003a1897fa32870de948164c979f5878158aedc613",
+        "rows": 7623
+      },
+      {
+        "package": "myfuel-nt-february-2024",
+        "resource": "7761ee4e-a30f-43ba-b678-fd197c2ea8ba",
+        "name": "MyFuel NT data February 2024",
+        "sha256": "6a893ab03efa345c3c2a9eb542dd111d19d1ea2f13d595c761fdac5620526918",
+        "rows": 7161
+      },
+      {
+        "package": "myfuel-nt-march-2024",
+        "resource": "b50d9d6e-efe6-4825-b398-c70ef78f9e6b",
+        "name": "MyFuel NT data March 2024",
+        "sha256": "91aee656cc7756c25126ebabd90f0733731a693c96c12ce52944bcfa4f34f433",
+        "rows": 7623
+      },
+      {
+        "package": "myfuel-nt-april-2024",
+        "resource": "f11670c8-eacd-482c-b8a2-a6240c47d04c",
+        "name": "MyFuel NT data April 2024",
+        "sha256": "766707e062a4e085bab7b4527621c8bb606519da8e43c4b8642e9bd93be17f13",
+        "rows": 7193
+      },
+      {
+        "package": "myfuel-nt-may-2024",
+        "resource": "e1c69392-3b0b-41be-b940-f1adec8e2b31",
+        "name": "MyFuel NT data May 2024",
+        "sha256": "fb4bbf0a16cdae077687e1377ac5ad0e06f9a64a8f063d9059b6c2412f3bfc6d",
+        "rows": 7392
+      },
+      {
+        "package": "myfuel-nt-june-2024",
+        "resource": "72856975-b750-43bf-b66d-668e29f15de3",
+        "name": "MyFuel NT data June 2024",
+        "sha256": "a6226d19eb3241f01dfdd0d62b13e597c195cddb97360f4ef60061fcde2a9e5d",
+        "rows": 7403
+      },
+      {
+        "package": "myfuel-nt-july-2024",
+        "resource": "5b26e5d8-b8ad-4a81-9c80-d1b6ef7f5343",
+        "name": "MyFuel NT data July 2024",
+        "sha256": "a2f137541e0302d29e0fe04579c1b45eb4e8befc0e36873946ef9613bfc65693",
+        "rows": 7656
+      },
+      {
+        "package": "myfuel-nt-august-2024",
+        "resource": "624cdd3e-11bf-4082-96f0-65f738e8547a",
+        "name": "MyFuel NT data August 2024",
+        "sha256": "6d806eb9ec2e458e284ebf64a7b974172ca14cb9695fd1a1a5f2560ab17a4bd8",
+        "rows": 7656
+      },
+      {
+        "package": "myfuel-nt-september-2024",
+        "resource": "6850309e-e2bb-496f-82a4-2d97bda0006d",
+        "name": "MyFuel NT data September 2024",
+        "sha256": "c08d7a888b59c2a48c8883c9ec8efafd2d6fe3efada9db04046511317b07ded5",
+        "rows": 7424
+      },
+      {
+        "package": "myfuel-nt-october-2024",
+        "resource": "fe7e863e-845c-48ad-a4b8-492549c8a9f0",
+        "name": "MyFuel NT data October 2024",
+        "sha256": "5ac5f54884c8516943d034c8539424cdca3889acbb8f09a8cfc29ac1b14b6a6c",
+        "rows": 7659
+      },
+      {
+        "package": "myfuel-nt-november-2024",
+        "resource": "2cead0c3-78e6-4802-ab2d-7aeb091ce1f7",
+        "name": "MyFuel NT data November 2024",
+        "sha256": "6c53552aff43dfbd010c2b8163d37374aa1e4b92f33df9a26bd38874cd45b421",
+        "rows": 7456
+      }
+    ],
+    "rows_read": 604824,
+    "rows_repeated": 26320,
+    "newest_resource": "2024-12-06T00:09:18.977332+00:00"
+  },
+  "licence": {
+    "id": "cc-by",
+    "stated": "cc-by",
+    "normalised": "CC-BY-3.0-AU",
+    "title": "Creative Commons Attribution",
+    "url": "http://www.opendefinition.org/licenses/cc-by",
+    "read_at": "2026-09-30T19:39:59+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [
+    "The publisher offers the series as one workbook per month. These bytes are every row of every workbook as one table, ordered by every column, with a row that appears in two workbooks kept once; the manifest counts the workbooks and the repeated rows."
+  ]
+}

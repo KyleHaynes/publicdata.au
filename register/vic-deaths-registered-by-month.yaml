@@ -1,0 +1,81 @@
+slug: vic-deaths-registered-by-month
+title: Deaths registered per month, Victoria
+status: live
+topics:
+- people
+- health
+example:
+  group: month
+  metric: sum.deaths_registered
+  label: Deaths registered
+chart:
+  split: none
+  metric: sum.deaths_registered
+  label: Deaths registered
+order: 375
+collection: vic-bdm-registrations
+collection_title: Births, deaths and marriages registered in Victoria
+collection_search_title: Victorian births, deaths and marriages statistics (BDM registrations)
+collection_description: |
+  The Registry of Births, Deaths and Marriages Victoria publishes counts of the life events it registers. Each count is by the month or year the registry registered the event, which can differ from the month or year it happened.
+
+  This collection holds the monthly counts of deaths and of marriages, and the yearly totals of every registrable event by calendar year and by financial year.
+publisher:
+  name: Registry of Births, Deaths and Marriages Victoria
+  short: BDM Victoria
+  jurisdiction: Vic
+  url: https://www.bdm.vic.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://discover.data.vic.gov.au/dataset/deaths-registered-per-month
+  attribution: Registry of Births, Deaths and Marriages Victoria, Victorian Government, Deaths registered
+    per month, sourced {sourced}, https://discover.data.vic.gov.au/dataset/deaths-registered-per-month,
+    licensed under CC BY 4.0.
+temporal_start: '2019-09-01'
+search_title: Deaths registered in Victoria each month (BDM Victoria)
+also_known_as:
+- Victorian death registrations by month
+- Monthly deaths Victoria
+- BDM Victoria deaths registered per month
+keywords:
+- deaths
+- death registrations
+- mortality
+- monthly deaths
+- Births Deaths and Marriages
+- Victoria
+faq:
+- q: What does each row hold?
+  a: The number of deaths the registry registered in one calendar month. Doctors, funeral directors and
+    the Coroner notify the registry of a death, and the death is counted in the month the registry
+    registers it, which may be later than the month it occurred.
+- q: How far back does it go?
+  a: Each release covers about the last seven years of months, with the newest month first. Earlier
+    months drop off the publisher's file as new ones are added, and the versions kept here hold them.
+summary: The number of deaths the Victorian registry registered in each month, for about the last seven
+  years. Updated monthly.
+description: Deaths registered per month by the Registry of Births, Deaths and Marriages Victoria. Each
+  row is one calendar month and the number of deaths registered in it. A death is counted in the month
+  the registry registers it, which may differ from the month of death.
+source:
+  adapter: ckan-resource
+  portal: https://discover.data.vic.gov.au
+  package: deaths-registered-per-month
+  resource: ce04339c-3ee0-4eed-9f86-ac9df84973d2
+  url: https://discover.data.vic.gov.au/dataset/deaths-registered-per-month
+  cadence: monthly
+key:
+- month
+row_label: Months
+fields:
+- name: month
+  label: Month registered
+  source: Month-Year
+  type: date
+  description: The first day of the month the deaths were registered in.
+- name: deaths_registered
+  label: Deaths registered
+  source: Deaths Registered
+  type: integer

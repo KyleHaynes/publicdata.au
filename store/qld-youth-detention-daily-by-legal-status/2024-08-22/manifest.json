@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-youth-detention-daily-by-legal-status",
+  "version": "2024-08-22",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:01:50+00:00",
+  "sha256": "e24de815e5187e0336796d5a2f36b8e3577042927bd85f952d9ff3b4f232e408",
+  "bytes": 59622,
+  "filename": "20170228-yj-daily-num-detention-legalstatus-2011-12-2015-16.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.dcssds.qld.gov.au/__data/assets/file/0020/12737/20170228-yj-daily-num-detention-legalstatus-2011-12-2015-16.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "youth-justice-young-offenders-in-youth-detention",
+    "package_id": "6b684d9e-727c-424f-ab6f-c056f1645375",
+    "resource": "ddec25c5-e46d-486b-a58c-2379e7b9dd0b",
+    "resource_name": "Daily number of young offenders in youth detention by legal status, 2011-12 to 2015-16",
+    "resource_last_modified": "2024-08-22T05:09:04.606687",
+    "package_modified": "2025-09-29T01:25:13.628343",
+    "package_version": "1",
+    "etag": "",
+    "http_last_modified": ""
+  },
+  "licence": {
+    "id": "CC-BY-3.0",
+    "title": "Creative Commons Attribution 3.0",
+    "url": "https://creativecommons.org/licenses/by/3.0/au/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=youth-justice-young-offenders-in-youth-detention",
+    "read_at": "2026-10-03T03:01:48+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "796860d41b2509ee1312ef309b55efa986f7f01c93f18c04a554e415c3d43132"
+}

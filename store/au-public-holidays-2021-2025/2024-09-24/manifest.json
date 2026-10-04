@@ -1,0 +1,34 @@
+{
+  "dataset": "au-public-holidays-2021-2025",
+  "version": "2024-09-24",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:15:25+00:00",
+  "sha256": "4126fe21c5c96994ea9c2d01227df0df62a62665094e1cded3d677d42bb62356",
+  "bytes": 88999,
+  "filename": "australian-public-holidays-combined-2021-2025.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://data.gov.au/data/dataset/b1bc6077-dadd-4f61-9f8c-002ab2cdff10/resource/33673aca-0857-42e5-b8f0-9981b4755686/download/australian-public-holidays-combined-2021-2025.csv",
+    "portal": "https://data.gov.au/data",
+    "package": "australian-holidays-machine-readable-dataset",
+    "package_id": "b1bc6077-dadd-4f61-9f8c-002ab2cdff10",
+    "resource": "33673aca-0857-42e5-b8f0-9981b4755686",
+    "resource_name": "Australian public holidays combined (2021-2025)",
+    "resource_last_modified": "2024-09-24T00:00:00",
+    "package_modified": "2026-01-16T04:44:57.285547",
+    "package_version": null,
+    "etag": "W/1727159057.842-88999-3325824762",
+    "http_last_modified": "Tue, 24 Sep 2024 06:24:17 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution 3.0 Australia",
+    "url": "http://creativecommons.org/licenses/by/3.0/au/",
+    "read_from": "https://data.gov.au/data/api/3/action/package_show?id=australian-holidays-machine-readable-dataset",
+    "read_at": "2026-10-03T03:15:25+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "a39b4cc378fb123b09068954bd8e369198a50276de84e4c64318d9b4c7b28511"
+}

@@ -1,0 +1,47 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "15c4713a688a48fcb604fc343118af05",
+    "title": "Trees",
+    "type": "Feature Service",
+    "license": "CC-BY-4.0",
+    "licenseInfo": "<a href='https://creativecommons.org/licenses/by/4.0/' rel='nofollow ugc'><img alt='Creative Commons License' src='https://i.creativecommons.org/l/by/4.0/80x15.png' /></a> <img alt='[Open Data]' src='https://cityofsydney.maps.arcgis.com/sharing/rest/content/items/bea5342b1f1d44d2966af23d9ee27b86/data' />",
+    "description": "<p>This dataset contains the location of trees in the City of Sydney including tree type, species, common name, height, canopy, status, age and DHB.</p>",
+    "snippet": "Tree locations in our local area.",
+    "created": 1614230631000,
+    "modified": 1790096841000,
+    "url": "https://services1.arcgis.com/cNVyNtjGVZybOQWZ/arcgis/rest/services/Trees/FeatureServer"
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "eba5997c01314bed8ee73c69eaa242dc",
+    "title": "Sydney Development Control Plan 2012",
+    "type": "Feature Service",
+    "license": "custom",
+    "licenseInfo": "<a href='http://creativecommons.org/licenses/by/4.0/' rel='nofollow ugc'><img alt='Creative Commons License' src='https://i.creativecommons.org/l/by/4.0/80x15.png' /></a> <img alt='[Open Data]' src='http://cityofsydney.maps.arcgis.com/sharing/rest/content/items/bea5342b1f1d44d2966af23d9ee27b86/data' />",
+    "description": "<div style='text-align:Left;'><div><div><p><span>Sydney Development Control Plan 2012 GIS data.</span></p></div></div></div>",
+    "snippet": "Sydney Development Control Plan 2012",
+    "created": 1588137208000,
+    "modified": 1789833807000,
+    "url": "https://services1.arcgis.com/cNVyNtjGVZybOQWZ/arcgis/rest/services/Sydney_Development_Control_Plan_2012/FeatureServer"
+   }
+  }
+ ],
+ "numberMatched": 4,
+ "numberReturned": 2,
+ "links": [
+  {
+   "rel": "self",
+   "href": "https://data.cityofsydney.nsw.gov.au/api/search/v1/collections/dataset/items"
+  },
+  {
+   "rel": "next",
+   "href": "https://data.cityofsydney.nsw.gov.au/api/search/v1/collections/dataset/items?limit=2&startindex=3"
+  }
+ ]
+}

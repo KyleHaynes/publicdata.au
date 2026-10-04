@@ -1,0 +1,97 @@
+slug: au-migration-program-outcome
+title: Migration Program outcome by stream, Australia, 1984-85 onwards
+status: live
+topics:
+- migration
+example:
+  where:
+    year: newest
+    stream:
+      neq: Total
+  group: stream
+  metric: sum.places
+  label: Permanent visas granted in the newest year by stream
+sample:
+  order:
+  - year.desc
+  label: The newest years first, with every stream and the publisher's total.
+order: 45
+publisher:
+  name: Department of Home Affairs
+  short: Home Affairs
+  jurisdiction: Cth
+  url: https://www.homeaffairs.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-09-29'
+  portal_id: cc-by
+  evidence: https://data.gov.au/data/dataset/historical-migration-statistics
+  attribution: Department of Home Affairs, Australian Government, Historical Migration Statistics, sourced
+    {sourced}, https://data.gov.au/data/dataset/historical-migration-statistics, licensed under CC BY 3.0
+    AU.
+collection: au-historical-migration
+collection_title: Historical Migration Statistics
+collection_description: |
+  Historical Migration Statistics is the Department of Home Affairs' workbook of migration to Australia since 1945. It brings together the tables the department and its predecessors published over that time, under the classifications each used.
+
+  Five of its tables are here. The Migration Program outcome by stream covers every year since 1984-85, and the Humanitarian Program grants every year since 1977-78. The program outcome by citizenship covers 1996-97 onwards. Settler arrivals by country of birth run from 1959 to 1996, and permanent additions by country of birth from 1996-97 to 2016-17.
+temporal_start: '1984-07-01'
+search_title: Australia's permanent migration intake by year (Migration Program outcome)
+also_known_as:
+- Australian immigration statistics by year
+- Migration Program planning levels and outcomes
+- Permanent migration to Australia by stream
+- Home Affairs historical migration statistics
+keywords:
+- immigration statistics
+- migration statistics
+- Migration Program
+- skilled migration
+- family migration
+- permanent visas
+- Australia
+faq:
+- q: Is this the same as net overseas migration?
+  a: No. The Migration Program outcome counts permanent visas granted each financial year under the planned
+    program. Net overseas migration is the ABS measure of people arriving minus people leaving, and it includes
+    temporary residents such as students.
+- q: Why do some stream names end in a number?
+  a: The numbers are the publisher's footnote markers, kept as published. The footnotes are in the workbook,
+    and they explain changes in how each stream was counted.
+- q: Are the early years exact?
+  a: The publisher notes that figures from 1983-84 to 1994-95 are rounded and reflect changes in reporting.
+summary: Permanent visas granted under Australia's Migration Program each financial year since 1984-85,
+  by stream.
+description: The Migration Program outcome for each financial year since 1984-85, by stream, from table
+  3.1 of Historical Migration Statistics. Each row is one year and one stream, including the publisher's
+  total.
+source:
+  adapter: ckan-resource
+  portal: https://data.gov.au/data
+  package: historical-migration-statistics
+  resource: b59a15df-86ea-4c4c-95be-4dd9fc9f8ac4
+  url: https://data.gov.au/data/dataset/historical-migration-statistics
+  cadence: yearly
+wide:
+  sheets:
+  - '3.1'
+  header_row: 2
+  header_rows: 1
+  first_column: 2
+  row_headers: 1
+key:
+- year
+- stream
+fields:
+- name: year
+  label: Financial year
+  source: (row header 1)
+  type: string
+- name: stream
+  label: Stream
+  source: (column header 1)
+  type: string
+- name: places
+  label: Visas granted
+  source: (cell)
+  type: integer

@@ -1,0 +1,92 @@
+slug: nsw-rental-bond-lodgements-2025
+title: Rental bond lodgements, New South Wales, 2025
+status: live
+topics:
+- housing
+example:
+  where:
+    bedrooms:
+      lte: 5
+  group: bedrooms
+  metric: avg.weekly_rent
+  label: Average weekly rent ($)
+order: 325
+publisher:
+  name: NSW Fair Trading
+  short: Fair Trading
+  jurisdiction: NSW
+  url: https://www.fairtrading.nsw.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.nsw.gov.au/nsw-government/copyright
+  statement: All material on this website is licensed under the Creative Commons Attribution 4.0 licence
+  attribution: NSW Fair Trading, NSW Government, Rental bond data, Residential Rental Bond Lodgements Year
+    2025, sourced {sourced}, https://www.nsw.gov.au/housing-and-construction/rental-forms-surveys-and-data/rental-bond-data,
+    licensed under CC BY 4.0.
+collection: nsw-rental-bonds
+collection_title: Rental bond data, NSW Fair Trading
+temporal_start: '2025-01-01'
+search_title: NSW rental bond lodgements 2025, every bond by postcode (NSW Fair Trading)
+also_known_as:
+- NSW rental bond lodgement data 2025
+- Weekly rents of new leases by postcode NSW 2025
+- Fair Trading rental bond lodgements year 2025
+keywords:
+- rental bonds
+- rent
+- postcode
+- rental market
+- tenancy
+- NSW Fair Trading
+- New South Wales
+faq:
+- q: What is in each row?
+  a: One residential rental bond lodged with NSW Fair Trading in 2025, with the lodgement date, the postcode
+    of the rented premises, the dwelling type, the number of bedrooms and the weekly rent.
+- q: What do the dwelling type codes mean?
+  a: Fair Trading defines F as a flat or unit, H as a house, T as a terrace, townhouse or semi-detached, O
+    as other and U as unknown. Other can include rented rooms, garages and car spaces. Thirty-six rows
+    carry other codes, such as 1, G and P, which the definitions sheet in the source file does not define.
+- q: What does a null bedroom count or rent mean?
+  a: Fair Trading writes U where the agent or landlord did not give the figure. It is a null value here. A
+    bedroom count of 0 can be a studio or bedsitter, or premises such as a garage.
+summary: Every residential rental bond lodged with NSW Fair Trading in 2025, one row per bond, with the postcode,
+  dwelling type, bedrooms and weekly rent.
+description: The Residential Rental Bond Lodgements workbook for 2025 from NSW Fair Trading. Each row is one
+  bond lodged in the year, with the date it was lodged, the postcode of the rented premises, the dwelling type
+  and number of bedrooms as the agent or landlord gave them, and the weekly rent. Two bonds with the same details
+  are two rows, as published.
+source:
+  adapter: file
+  url: https://www.nsw.gov.au/sites/default/files/noindex/2026-01/rentalbond_lodgements_year_2025.xlsx
+  cadence: closed year
+  sheet: Year 2025 Rental Bond Lodgments
+  header_row: 3
+row_label: Bonds
+fields:
+- name: lodgement_date
+  label: Lodgement date
+  source: Lodgement Date
+  type: date
+  date_format: '%Y-%m-%d'
+- name: postcode
+  label: Postcode
+  source: Postcode
+  type: string
+- name: dwelling_type
+  label: Dwelling type
+  source: Dwelling Type
+  type: string
+- name: bedrooms
+  label: Bedrooms
+  source: Bedrooms
+  type: integer
+  null_values:
+  - U
+- name: weekly_rent
+  label: Weekly rent ($)
+  source: Weekly Rent
+  type: number
+  null_values:
+  - U

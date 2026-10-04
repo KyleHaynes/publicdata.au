@@ -1,0 +1,79 @@
+slug: nsw-dwelling-completions
+title: Dwelling completions per 1,000 people, New South Wales
+status: live
+topics:
+- housing
+order: 307
+publisher:
+  name: NSW Department of Planning, Housing and Infrastructure
+  short: DPHI
+  jurisdiction: NSW
+  url: https://www.planning.nsw.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.nsw.gov.au/data/dataset/dwelling-completions
+  attribution: NSW Department of Planning, Housing and Infrastructure, NSW Government, Dwelling completions,
+    sourced {sourced}, https://data.nsw.gov.au/data/dataset/dwelling-completions, licensed under CC BY
+    4.0.
+temporal_start: '1985-06-01'
+search_title: NSW dwelling completions per 1,000 people since 1985 (Department of Planning, Housing and Infrastructure)
+also_known_as:
+- NSW housing completions rate
+- New homes built in NSW per capita
+- NSW residential dwelling completions per 1,000 residents
+keywords:
+- dwelling completions
+- housing supply
+- new homes
+- residential construction
+- Department of Planning, Housing and Infrastructure
+- New South Wales
+faq:
+- q: What is in each row?
+  a: One quarter since June 1985, with the publisher's figure for the number of residential dwellings
+    completed in New South Wales in a year per 1,000 people.
+- q: Is this a count of dwellings?
+  a: No. The publisher gives a rate per 1,000 people and does not give the count or the population it
+    used in the file. The value is published as the department calculated it.
+summary: The number of residential dwellings completed in New South Wales each year per 1,000 people,
+  at each quarter since June 1985, as the Department of Planning, Housing and Infrastructure reports it.
+  Updated quarterly.
+description: The Dwelling completions indicator from the NSW Department of Planning, Housing and Infrastructure,
+  the number of NSW residential dwellings completed per 1,000 people annually. Each row is one quarter,
+  dated by the first day of the quarter's last month as the publisher dates it, with the annual completions
+  per 1,000 people at that quarter.
+source:
+  adapter: ckan-resource
+  portal: https://data.nsw.gov.au/data
+  package: dwelling-completions
+  resource: 6a9cbfa1-f57c-475d-a5e3-f02cf555077d
+  url: https://data.nsw.gov.au/data/dataset/dwelling-completions
+  cadence: quarterly
+wide:
+  sheets:
+  - Sheet1
+  header_row: 1
+  header_rows: 1
+  row_headers: 1
+key:
+- quarter
+- measure
+row_label: Quarters
+fields:
+- name: quarter
+  label: Quarter
+  source: (row header 1)
+  type: date
+  date_format: '%Y-%m-%d'
+  description: The publisher dates each quarter by the first day of its last month.
+- name: measure
+  label: Measure
+  source: (column header 1)
+  type: string
+- name: value
+  label: Value
+  source: (cell)
+  type: number
+  description: Annual dwelling completions per 1,000 people, as the measure names.

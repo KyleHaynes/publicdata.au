@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-all-abilities-playgrounds",
+  "version": "2024-08-13",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:03:04+00:00",
+  "sha256": "ffddcb571aa6bbc3caafd373aa5f31e4eef468684ee8a624b5194b88d4d0e7d6",
+  "bytes": 17088,
+  "filename": "all-abilities-playgrounds.csv",
+  "encoding": "cp1252",
+  "source": {
+    "url": "https://www.dcssds.qld.gov.au/__data/assets/file/0019/12745/all-abilities-playgrounds.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "all-abilities-playgrounds",
+    "package_id": "e327b55d-d0b7-43b8-be89-4b9d2a0cdec5",
+    "resource": "a0afeaf1-e150-45df-91ff-9768799c3156",
+    "resource_name": "All abilities playgrounds",
+    "resource_last_modified": "2024-08-13T05:09:39.988897",
+    "package_modified": "2024-10-30T01:16:18.805983",
+    "package_version": "1.0",
+    "etag": "",
+    "http_last_modified": ""
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=all-abilities-playgrounds",
+    "read_at": "2026-10-03T03:03:02+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "5d2693923a4f9cfc7c0c77d3310a7395b770ceb881ec337fa9ede22aca6d07a4"
+}

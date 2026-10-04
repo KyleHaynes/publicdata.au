@@ -1,0 +1,136 @@
+slug: au-births-by-state
+title: Registered births, birth rate and sex ratio by state, Australia, 1975 onwards
+status: live
+topics:
+- people
+example:
+  where: {year: newest, measure: Births, state_code: {neq: AUS}}
+  group: state
+  metric: sum.value
+  label: Births registered in the newest year
+chart:
+  where: {measure: Births, state_code: {neq: AUS}}
+  split: state
+  metric: sum.value
+  label: Births registered
+sample:
+  where: {year: newest, measure: Births}
+  order: [value.desc]
+  spread: none
+  label: Births registered in each state and territory and in Australia in the newest year, most first.
+order: 502
+collection: au-abs-births
+collection_title: ABS registered births
+publisher:
+  name: Australian Bureau of Statistics
+  short: ABS
+  jurisdiction: Cth
+  url: https://www.abs.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.abs.gov.au/website-privacy-copyright-and-disclaimer
+  statement: All material presented on this website is provided under a Creative Commons Attribution 4.0
+    International licence
+  attribution: Australian Bureau of Statistics, Registered births, summary by state or territory of usual residence, 1975
+    onwards (BIRTHS_SUMMARY), ABS Data Explorer, sourced {sourced}, https://explore.data.abs.gov.au/vis?df[ds]=ABS_ABS_TOPICS&df[id]=BIRTHS_SUMMARY&df[ag]=ABS&df[vs]=1.0.0,
+    licensed under CC BY 4.0.
+temporal_start: '1975-01-01'
+search_title: Number of births and birth rate by state each year since 1975, Australia (ABS)
+also_known_as:
+- Births per year Australia
+- Crude birth rate by state
+- Births in NSW, Victoria and Queensland by year
+- Registered births summary ABS
+keywords:
+- births
+- birth rate
+- births per year
+- sex ratio
+- ABS
+- Australia
+faq:
+- q: What is in each row?
+  a: One measure for one state or territory of usual residence, or Australia, in one year of registration
+    since 1975. The measures are the number of births, male and female births, nuptial and ex-nuptial
+    births, the estimated population, the crude birth rate per 1,000 people and the sex ratio of male
+    births per 100 female births.
+- q: Can I add the measures together?
+  a: Each row is a different quantity, and the measure column says what it is. Sum only the
+    rows of one count measure, such as Births across the states, and never add a rate or the sex ratio.
+- q: Is the year the year of birth?
+  a: It is the year the birth was registered. The state is the mother's state or territory of usual
+    residence.
+summary: Births registered each year since 1975 in each state and territory, with male and female births,
+  nuptial and ex-nuptial births, the crude birth rate and the sex ratio, from the ABS. Updated yearly.
+description: The ABS Data Explorer table BIRTHS_SUMMARY, registered births by state or territory of usual
+  residence, 1975 onwards. Each row is one year, one state and one measure, with its value and unit. The
+  ABS codes are kept beside the names it gives them.
+source:
+  adapter: file
+  url: https://data.api.abs.gov.au/rest/data/ABS,BIRTHS_SUMMARY,1.0.0/all?format=csvfilewithlabels
+  format: csv
+  cadence: yearly
+key:
+- year
+- state_code
+- measure_code
+partition_by:
+- measure
+row_label: Year, state and measure values
+fields:
+- name: year
+  label: Year of registration
+  source: TIME_PERIOD
+  type: integer
+- name: state_code
+  label: State code
+  source: REGION
+  type: string
+- name: state
+  label: State or territory
+  source: Region
+  type: string
+- name: measure_code
+  label: Measure code
+  source: MEASURE
+  type: string
+- name: measure
+  label: Measure
+  source: Measure
+  type: string
+- name: value
+  label: Value
+  source: OBS_VALUE
+  type: number
+- name: unit
+  label: Unit
+  source: Unit of Measure
+  type: string
+omit:
+  STRUCTURE: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the label or
+    code beside a kept column.
+  STRUCTURE_ID: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the label
+    or code beside a kept column.
+  STRUCTURE_NAME: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the label
+    or code beside a kept column.
+  ACTION: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the label or code
+    beside a kept column.
+  FREQ: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the label or code
+    beside a kept column.
+  Frequency: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the label or
+    code beside a kept column.
+  Time Period: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the label
+    or code beside a kept column.
+  Observation Value: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the
+    label or code beside a kept column.
+  UNIT_MEASURE: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the label
+    or code beside a kept column.
+  OBS_STATUS: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the label or
+    code beside a kept column.
+  Observation Status: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the
+    label or code beside a kept column.
+  OBS_COMMENT: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the label
+    or code beside a kept column.
+  Observation Comment: An SDMX column the ABS adds to every export, which is the same on every row, blank, or the
+    label or code beside a kept column.

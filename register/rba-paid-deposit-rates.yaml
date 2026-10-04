@@ -1,0 +1,155 @@
+slug: rba-paid-deposit-rates
+title: Interest rates paid on deposits, Reserve Bank of Australia and APRA
+status: live
+topics:
+- economy
+chart:
+  metric: avg.new_term_households
+  label: Average rate on new household term deposits (%)
+example:
+  where: {date: newest}
+  group: date
+  metric: avg.new_term_households
+  label: Average rate paid on new household term deposits in the newest month (%)
+order: 53
+publisher:
+  name: Reserve Bank of Australia
+  short: RBA
+  jurisdiction: Cth
+  url: https://www.rba.gov.au/
+licence:
+  id: RBA-COPYRIGHT-NOTICE
+  reviewed: '2026-10-01'
+  evidence: https://www.rba.gov.au/copyright/
+  statement: may be used, reproduced, published, communicated to the public or otherwise referenced for
+    personal or commercial use
+  attribution: 'Source: Reserve Bank of Australia, statistical table F4.1 Paid Deposit Rates, sourced
+    {sourced} from https://www.rba.gov.au/statistics/tables/, republished under sections 4 and 5 of the
+    RBA copyright notice, https://www.rba.gov.au/copyright/. The RBA does not endorse this site or any
+    use of this data. The RBA publishes this data free of charge at rba.gov.au. Source: APRA; RBA. The
+    series are compiled by the RBA from the Australian Prudential Regulation Authority''s Economic and
+    Financial Statistics collection, published under CC BY 3.0 AU.'
+temporal_start: '2019-07-31'
+search_title: Average interest rate paid on deposits in Australia, monthly (RBA table F4.1)
+also_known_as:
+- Table F4.1 Paid Deposit Rates
+- Weighted average deposit rate
+- Average term deposit rate paid
+- Household deposit rates APRA
+keywords:
+- deposit rates
+- average deposit rate
+- term deposit
+- at-call deposits
+- household deposits
+- Reserve Bank of Australia
+- APRA
+faq:
+- q: How do these differ from advertised rates?
+  a: These are the weighted average rates banks actually paid on deposits outstanding at the end of each
+    month, and on new term deposits taken in the month, split between households and institutions and
+    between at-call and term deposits. The advertised rates are in the retail deposit and investment rates
+    table.
+- q: Where does the data come from?
+  a: Banks report to APRA under the Economic and Financial Statistics collection and the RBA compiles
+    the averages. The RBA marks the source as APRA and RBA jointly and both are named in the attribution.
+- q: Under what licence is RBA data republished here?
+  a: The RBA excludes its numerical data from the CC BY 4.0 licence that covers the rest of its site,
+    and instead permits it to be used, reproduced, published and communicated to the public for personal
+    or commercial use under sections 4 and 5 of its copyright notice, with attribution and no claim of
+    endorsement. The RBA does not endorse this site or any use of this data, and it publishes the same
+    figures free of charge at rba.gov.au. Every file here carries that attribution.
+summary: Weighted average interest rates banks paid on outstanding deposits and on new term deposits each
+  month since July 2019, for households and institutions, at-call and term. Updated monthly.
+description: Statistical table F4.1, Paid Deposit Rates, from the Reserve Bank of Australia, compiled
+  from APRA's Economic and Financial Statistics collection. One row per month end from 31 July 2019 with
+  the weighted average rate, per cent per annum, paid on all outstanding deposits, on at-call deposits
+  and on term deposits, each in total and for households and institutions, and on new term deposits taken
+  in the month.
+source:
+  adapter: file
+  url: https://www.rba.gov.au/statistics/tables/csv/f4.1-data.csv
+  header_row: 11
+  cadence: monthly
+key:
+- date
+row_label: Month ends
+fields:
+- name: date
+  label: Date
+  source: Series ID
+  type: date
+  date_format: '%d-%b-%Y'
+  description: The date of the observation.
+- name: outstanding_total
+  label: Outstanding deposits, total
+  source: PDROT
+  type: number
+  description: 'Weighted average interest rate paid on all outstanding deposits. Units: Per cent per annum.
+    RBA series PDROT, source APRA; RBA.'
+- name: outstanding_households
+  label: Outstanding deposits, households
+  source: PDROH
+  type: number
+  description: 'Weighted average interest rate paid to households on all outstanding deposits. Units:
+    Per cent per annum. RBA series PDROH, source APRA; RBA.'
+- name: outstanding_institutions
+  label: Outstanding deposits, institutions
+  source: PDROI
+  type: number
+  description: 'Weighted average interest rate paid to institutions on all outstanding deposits. Units:
+    Per cent per annum. RBA series PDROI, source APRA; RBA.'
+- name: outstanding_at_call_total
+  label: Outstanding at-call, total
+  source: PDROAT
+  type: number
+  description: 'Weighted average interest rate paid on deposits in outstanding at-call accounts. Units:
+    Per cent per annum. RBA series PDROAT, source APRA; RBA.'
+- name: outstanding_at_call_households
+  label: Outstanding at-call, households
+  source: PDROAH
+  type: number
+  description: 'Weighted average interest rate paid to households on deposits in outstanding at-call accounts.
+    Units: Per cent per annum. RBA series PDROAH, source APRA; RBA.'
+- name: outstanding_at_call_institutions
+  label: Outstanding at-call, institutions
+  source: PDROAI
+  type: number
+  description: 'Weighted average interest rate paid to institutions on deposits in outstanding at-call
+    accounts. Units: Per cent per annum. RBA series PDROAI, source APRA; RBA.'
+- name: outstanding_term_total
+  label: Outstanding term deposits, total
+  source: PDROTT
+  type: number
+  description: 'Weighted average interest rate paid on deposits in outstanding term deposit accounts.
+    Units: Per cent per annum. RBA series PDROTT, source APRA; RBA.'
+- name: outstanding_term_households
+  label: Outstanding term deposits, households
+  source: PDROTH
+  type: number
+  description: 'Weighted average interest rate paid to households on deposits in outstanding term deposit
+    accounts. Units: Per cent per annum. RBA series PDROTH, source APRA; RBA.'
+- name: outstanding_term_institutions
+  label: Outstanding term deposits, institutions
+  source: PDROTI
+  type: number
+  description: 'Weighted average interest rate paid to institutions on deposits in outstanding term deposit
+    accounts. Units: Per cent per annum. RBA series PDROTI, source APRA; RBA.'
+- name: new_term_total
+  label: New term deposits, total
+  source: PDRNTT
+  type: number
+  description: 'Weighted average interest rate paid on all new term deposits. Units: Per cent per annum.
+    RBA series PDRNTT, source APRA; RBA.'
+- name: new_term_households
+  label: New term deposits, households
+  source: PDRNTH
+  type: number
+  description: 'Weighted average interest rate paid to households on all new term deposits. Units: Per
+    cent per annum. RBA series PDRNTH, source APRA; RBA.'
+- name: new_term_institutions
+  label: New term deposits, institutions
+  source: PDRNTI
+  type: number
+  description: 'Weighted average interest rate paid to institutions on all new term deposits. Units: Per
+    cent per annum. RBA series PDRNTI, source APRA; RBA.'

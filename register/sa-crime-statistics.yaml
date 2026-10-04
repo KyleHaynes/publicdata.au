@@ -1,0 +1,113 @@
+slug: sa-crime-statistics
+title: Offences reported to police by suburb and day, South Australia
+status: live
+topics:
+- crime
+order: 414
+collection: sa-crime-statistics
+collection_title: Crime statistics, South Australia Police
+collection_description: Offences against the person and against property reported to South Australia Police, from
+  the files SAPOL publishes for each financial year. One table counts every such offence by suburb, postcode and
+  day. The other counts the subset flagged as family and domestic abuse by postcode and quarter, and the two
+  must not be added together.
+collection_search_title: SA crime statistics by suburb (South Australia Police)
+search_title: South Australia crime statistics by suburb and offence, daily (SAPOL)
+also_known_as:
+- SAPOL crime statistics
+- Adelaide crime by suburb
+- South Australian reported offences
+- SA suburb crime data
+keywords:
+- crime statistics
+- crime by suburb
+- reported offences
+- assault
+- theft
+- South Australia Police
+- Adelaide
+- South Australia
+faq:
+- q: What is in each row?
+  a: The number of offences of one type reported to police on one day in one suburb and postcode, with the
+    offence named at three levels, from the broad group (offences against the person or against property) to
+    the specific offence.
+- q: Which period does the table cover?
+  a: The financial year of the newest file South Australia Police has released, 2025-26 at the first version.
+    SAPOL replaces the year's file as each quarter is added and starts a new file each July, and each file
+    becomes a version here. The earlier years back to 2010-11 stay on the portal.
+- q: What does NOT DISCLOSED mean in the postcode column?
+  a: The publisher writes NOT DISCLOSED where it does not give the postcode of an incident, and leaves some
+    suburbs and postcodes blank. Both are kept as published.
+- q: Can I add these to the family and domestic abuse figures?
+  a: No. The family and domestic abuse-related offences are a subset of these offences, so the publisher warns
+    that the two files for one year must not be added together.
+summary: Every offence against the person or against property reported to South Australia Police in the newest
+  financial year, counted by day, suburb, postcode and offence type. Updated quarterly.
+description: 'Suburb-based crime statistics from South Australia Police. Each row is one day, suburb, postcode and
+  offence, with the number of offences of that type reported to police. Offences are named at three levels: the
+  group (offences against the person or against property), the division, such as assault or theft, and the
+  specific offence.
+
+
+  The publisher notes that the data is point in time.'
+publisher:
+  name: South Australia Police
+  short: SAPOL
+  jurisdiction: SA
+  url: https://www.police.sa.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.sa.gov.au/data/dataset/crime-statistics
+  attribution: South Australia Police, Government of South Australia, Crime statistics,
+    https://data.sa.gov.au/data/dataset/crime-statistics, accessed {sourced}, licensed under CC BY 4.0.
+example:
+  group: offence_level_2
+  metric: sum.offence_count
+  label: Offences reported to police in the financial year, by division
+chart:
+  split: offence_level_1
+  metric: sum.offence_count
+  label: Offences reported to police
+source:
+  adapter: ckan-resource
+  portal: https://data.sa.gov.au/data
+  package: crime-statistics
+  resource_match: ^Crime [Ss]tatistics \d{4}-\d{2}$
+  url: https://data.sa.gov.au/data/dataset/crime-statistics
+  cadence: quarterly
+partition_by:
+- offence_level_1
+row_label: Offence counts
+fields:
+- name: reported_date
+  label: Date reported
+  source: Reported Date
+  type: date
+  date_format: '%d/%m/%Y'
+- name: suburb
+  label: Suburb
+  source: Suburb - Incident
+  type: string
+- name: postcode
+  label: Postcode
+  source: Postcode - Incident
+  type: string
+  description: Kept as text, since the publisher writes NOT DISCLOSED for some incidents.
+- name: offence_level_1
+  label: Offence group
+  source: Offence Level 1 Description
+  type: string
+- name: offence_level_2
+  label: Offence division
+  source: Offence Level 2 Description
+  type: string
+- name: offence_level_3
+  label: Offence
+  source: Offence Level 3 Description
+  type: string
+- name: offence_count
+  label: Offences
+  source: Offence count
+  type: integer

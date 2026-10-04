@@ -1,0 +1,108 @@
+slug: sa-dogs-cats-registered-animals
+title: Dogs and cats by council, registration, microchip and desexing, South Australia
+status: live
+topics:
+- community
+- nature
+example:
+  where:
+    species: Dog
+  group: council
+  metric: sum.animals
+  label: Dogs on the register by council where they are housed, most first
+sample:
+  order: [animals.desc]
+  spread: species
+  label: The largest counts, largest first, with cats and dogs in turn.
+order: 436
+collection: sa-dogs-and-cats-online
+collection_title: Dogs and Cats Online, South Australia
+collection_description: Counts from Dogs and Cats Online, South Australia's register of dogs and cats, released each
+  year by the Department for Environment and Water. One table counts the animals by council, species, sex,
+  registration, microchip and desexing. Another counts their owners by council, sex, age and how many animals they
+  keep, and a third counts reported dog and cat incidents.
+collection_search_title: SA dog and cat registration data (Dogs and Cats Online)
+search_title: South Australia dog and cat registrations by council (Dogs and Cats Online)
+also_known_as:
+- DACO animal data SA
+- Registered dogs by council South Australia
+- SA cats microchipped and desexed by council
+keywords:
+- dog registration
+- cat registration
+- microchipping
+- desexing
+- pets by council
+- Dogs and Cats Online
+- South Australia
+faq:
+- q: What is in each row?
+  a: The number of dogs or cats recorded as at home on Dogs and Cats Online in one council area that share a sex,
+    registration status, microchip status and desexing status.
+- q: What does registered mean here?
+  a: The publisher counts an animal as registered if its owner paid the registration fee for the financial year, or
+    where the council charges no fee, confirmed or updated the animal's details. All others are unregistered.
+- q: Which council is it?
+  a: The council where the animal is housed, which may differ from the council where its owner lives.
+- q: Which year does the table cover?
+  a: The newest extract from Dogs and Cats Online, taken on 30 May 2025 at the first version. The publisher releases
+    a new portal dataset each year, and each extract becomes a version here.
+summary: The number of dogs and cats on South Australia's Dogs and Cats Online register in each council, by
+  species, sex, registration, microchip and desexing status. Updated yearly.
+description: Animal counts from Dogs and Cats Online (DACO), from the Department for Environment and Water. Each row
+  is one council, species, sex, registration status, microchip status and desexing status, with the number of
+  animals recorded with the status At Home. The publisher notes that an animal's status stays At Home unless it is
+  updated as deceased, lost, surrendered or impounded.
+publisher:
+  name: Department for Environment and Water
+  short: Environment and Water
+  jurisdiction: SA
+  url: https://www.environment.sa.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.sa.gov.au/data/dataset/dogs-and-cats-online-data-2024-2025
+  attribution: Department for Environment and Water, Government of South Australia, Dogs and Cats Online Data,
+    https://data.sa.gov.au/data/dataset/dogs-and-cats-online-data-2024-2025, accessed {sourced}, licensed under CC BY
+    4.0.
+source:
+  adapter: ckan-resource
+  portal: https://data.sa.gov.au/data
+  package: dogs and cats online data
+  package_match: ^dogs-and-cats-online-data-\d{4}-\d{4}$
+  resource_match: ^DATA_SA_Animals
+  url: https://data.sa.gov.au/data/dataset/dogs-and-cats-online-data-2024-2025
+  cadence: yearly
+partition_by:
+- species
+row_label: Animal counts
+fields:
+- name: council
+  label: Council
+  source: Council
+  type: string
+- name: species
+  label: Species
+  source: AnimalSpecies
+  type: string
+- name: sex
+  label: Sex
+  source: Gender
+  type: string
+- name: registration_status
+  label: Registration status
+  source: RegistrationStatus
+  type: string
+- name: microchipped
+  label: Microchipped
+  source: Microchipped
+  type: boolean
+- name: desexed
+  label: Desexed
+  source: Desexed
+  type: boolean
+- name: animals
+  label: Animals
+  source: Count
+  type: integer

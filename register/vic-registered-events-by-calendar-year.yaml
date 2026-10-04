@@ -1,0 +1,83 @@
+slug: vic-registered-events-by-calendar-year
+title: Births, deaths and marriages registered by calendar year, Victoria
+status: live
+topics:
+- people
+example:
+  where:
+    year: newest
+  group: event
+  metric: sum.registrations
+  label: Registrations
+order: 375
+collection: vic-bdm-registrations
+collection_title: Births, deaths and marriages registered in Victoria
+publisher:
+  name: Registry of Births, Deaths and Marriages Victoria
+  short: BDM Victoria
+  jurisdiction: Vic
+  url: https://www.bdm.vic.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://discover.data.vic.gov.au/dataset/births-deaths-and-marriages-registered-events-by-calendar-year
+  attribution: Registry of Births, Deaths and Marriages Victoria, Victorian Government, Births, Deaths
+    and Marriages - registered events by calendar year, sourced {sourced}, https://discover.data.vic.gov.au/dataset/births-deaths-and-marriages-registered-events-by-calendar-year,
+    licensed under CC BY 4.0.
+temporal_start: '2010-01-01'
+search_title: Number of births, deaths and marriages in Victoria each year (BDM Victoria)
+also_known_as:
+- Victorian births deaths and marriages by year
+- Births registered in Victoria per year
+- Deaths registered in Victoria per year
+keywords:
+- births
+- deaths
+- marriages
+- registrations
+- annual
+- Births Deaths and Marriages
+- Victoria
+faq:
+- q: What does each row hold?
+  a: The number of births, of marriages or of deaths the registry registered in one calendar year. An
+    event is counted in the year the registry registers it, which may differ from the year it happened.
+- q: Why does a year's count differ from other published figures?
+  a: Counts by registration date can run ahead of or behind counts by the date of the event, for example
+    when registrations are delayed. Other agencies, such as the ABS, may count by the date of the event.
+summary: The number of births, marriages and deaths registered in Victoria in each calendar year from
+  2010. Updated yearly.
+description: Registered events by calendar year from the Registry of Births, Deaths and Marriages
+  Victoria. Each row is one kind of event, births, marriages or deaths, and one calendar year, with the
+  number the registry registered in that year.
+source:
+  adapter: ckan-resource
+  portal: https://discover.data.vic.gov.au
+  package: births-deaths-and-marriages-registered-events-by-calendar-year
+  resource: bd1134db-43c3-46eb-9853-959f65096b10
+  url: https://discover.data.vic.gov.au/dataset/births-deaths-and-marriages-registered-events-by-calendar-year
+  cadence: yearly
+wide:
+  header_row: 3
+  header_rows: 1
+  row_headers: 1
+  column_match: ^\d{4}$
+key:
+- event
+- year
+row_label: Event years
+fields:
+- name: event
+  label: Event
+  source: (row header 1)
+  type: string
+  description: Births, Marriages or Deaths.
+- name: year
+  label: Year registered
+  source: (column header 1)
+  type: integer
+- name: registrations
+  label: Events registered
+  source: (cell)
+  type: integer

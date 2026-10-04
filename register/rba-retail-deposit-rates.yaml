@@ -1,0 +1,173 @@
+slug: rba-retail-deposit-rates
+title: Retail deposit and investment rates, Reserve Bank of Australia
+status: live
+topics:
+- economy
+chart:
+  metric: avg.term_deposit_banks_10k_1_year
+  label: Average one-year bank term deposit rate (%)
+example:
+  where: {date: newest}
+  group: date
+  metric: avg.term_deposit_banks_10k_1_year
+  label: Advertised one-year bank term deposit rate at the newest month end (%)
+order: 52
+publisher:
+  name: Reserve Bank of Australia
+  short: RBA
+  jurisdiction: Cth
+  url: https://www.rba.gov.au/
+licence:
+  id: RBA-COPYRIGHT-NOTICE
+  reviewed: '2026-10-01'
+  evidence: https://www.rba.gov.au/copyright/
+  statement: may be used, reproduced, published, communicated to the public or otherwise referenced for
+    personal or commercial use
+  attribution: 'Source: Reserve Bank of Australia, statistical table F4 Retail Deposit and Investment
+    Rates, sourced {sourced} from https://www.rba.gov.au/statistics/tables/, republished under sections
+    4 and 5 of the RBA copyright notice, https://www.rba.gov.au/copyright/. The RBA does not endorse this
+    site or any use of this data. The RBA publishes this data free of charge at rba.gov.au. The cash management
+    trusts series is sourced by the RBA from the Australian Bureau of Statistics under CC BY 4.0.'
+temporal_start: '1981-12-31'
+search_title: Term deposit and savings account interest rates, monthly since 1981 (RBA table F4)
+also_known_as:
+- Table F4 Retail Deposit and Investment Rates
+- Term deposit rates history Australia
+- Savings account interest rates history
+- Bank deposit rates RBA
+keywords:
+- term deposit rates
+- savings account rates
+- deposit rates
+- interest rates
+- retail deposit
+- Reserve Bank of Australia
+- Australia
+faq:
+- q: What are these rates?
+  a: Advertised rates at the end of each month for transaction accounts of $5,000, savings accounts of
+    $10,000 and $50,000, and bank term deposits of $10,000 for one month to three years, as the RBA collects
+    them from a sample of institutions. The RBA describes them as indicative and likely to be revised.
+    The series began at different dates, so early rows have many null cells.
+- q: Why do some series stop?
+  a: The RBA stopped collecting building society and credit union rates separately when the sector consolidated,
+    and the cash management trusts series, sourced from the ABS, ended in March 2009. The RBA publishes
+    a Series Breaks table on the same page that explains each break.
+- q: Under what licence is RBA data republished here?
+  a: The RBA excludes its numerical data from the CC BY 4.0 licence that covers the rest of its site,
+    and instead permits it to be used, reproduced, published and communicated to the public for personal
+    or commercial use under sections 4 and 5 of its copyright notice, with attribution and no claim of
+    endorsement. The RBA does not endorse this site or any use of this data, and it publishes the same
+    figures free of charge at rba.gov.au. Every file here carries that attribution.
+summary: 'Advertised retail deposit and investment rates at the end of each month since December 1981:
+  transaction and savings accounts and bank term deposits from one month to three years. Updated monthly.'
+description: Statistical table F4, Retail Deposit and Investment Rates, from the Reserve Bank of Australia.
+  One row per month end from 31 December 1981 with the advertised rate, per cent per annum, on transaction
+  accounts of $5,000 at banks, building societies and credit unions, on bonus, online and cash management
+  savings accounts of $10,000 and $50,000, on cash management trusts, and on bank term deposits of $10,000
+  for one, three and six months and one and three years and the average across terms.
+source:
+  adapter: file
+  url: https://www.rba.gov.au/statistics/tables/csv/f4-data.csv
+  header_row: 11
+  cadence: monthly
+key:
+- date
+row_label: Month ends
+fields:
+- name: date
+  label: Date
+  source: Series ID
+  type: date
+  date_format: '%d/%m/%Y'
+  description: The date of the observation.
+- name: transaction_banks_5k
+  label: Transaction accounts, banks, $5,000
+  source: FRDIRTAB5K
+  type: number
+  description: 'Retail deposit and investment rates; Transaction accounts; Banks; $5000. Units: Per cent
+    per annum. RBA series FRDIRTAB5K, source RBA.'
+- name: transaction_building_societies_5k
+  label: Transaction accounts, building societies, $5,000
+  source: FRDIRTABS5K
+  type: number
+  description: 'Retail deposit and investment rates; Transaction accounts; Building societies; $5000.
+    Units: Per cent per annum. RBA series FRDIRTABS5K, source RBA.'
+- name: transaction_credit_unions_5k
+  label: Transaction accounts, credit unions, $5,000
+  source: FRDIRTACU5K
+  type: number
+  description: 'Retail deposit and investment rates; Transaction accounts; Credit unions; $5000. Units:
+    Per cent per annum. RBA series FRDIRTACU5K, source RBA.'
+- name: transaction_mutuals_5k
+  label: Transaction accounts, mutuals, $5,000
+  source: FRDIRTAMA5K
+  type: number
+  description: 'Retail deposit and investment rates; Transaction accounts; Building societies, credit
+    unions and mutual banks; $5000. Units: Per cent per annum. RBA series FRDIRTAMA5K, source RBA.'
+- name: savings_bonus_banks_10k
+  label: Bonus savings accounts, banks, $10,000
+  source: FRDIRSAB10K
+  type: number
+  description: 'Retail deposit and investment rates; Savings accounts; Banks'' bonus savings accounts;
+    $10000. Units: Per cent per annum. RBA series FRDIRSAB10K, source RBA.'
+- name: savings_online_10k
+  label: Online savings accounts, $10,000
+  source: FRDIRSAO10K
+  type: number
+  description: 'Retail deposit and investment rates; Savings accounts; Online savings accounts; $10000.
+    Units: Per cent per annum. RBA series FRDIRSAO10K, source RBA.'
+- name: savings_cash_management_banks_10k
+  label: Cash management accounts, banks, $10,000
+  source: FRDIRSAC10K
+  type: number
+  description: 'Retail deposit and investment rates; Savings accounts; Cash management accounts at banks;
+    $10000. Units: Per cent per annum. RBA series FRDIRSAC10K, source RBA.'
+- name: savings_cash_management_banks_50k
+  label: Cash management accounts, banks, $50,000
+  source: FRDIRSAC50K
+  type: number
+  description: 'Retail deposit and investment rates; Savings accounts; Cash management accounts at banks;
+    $50000. Units: Per cent per annum. RBA series FRDIRSAC50K, source RBA.'
+- name: cash_management_trusts
+  label: Cash management trusts
+  source: FRDIRCMT
+  type: number
+  description: 'Retail deposit and investment rates; Cash management trusts. Units: Per cent per annum.
+    RBA series FRDIRCMT, source ABS.'
+- name: term_deposit_banks_10k_1_month
+  label: Term deposits, banks, $10,000, 1 month
+  source: FRDIRBTD10K1M
+  type: number
+  description: 'Retail deposit and investment rates; Banks'' term deposits ($10000); 1 month. Units: Per
+    cent per annum. RBA series FRDIRBTD10K1M, source RBA.'
+- name: term_deposit_banks_10k_3_months
+  label: Term deposits, banks, $10,000, 3 months
+  source: FRDIRBTD10K3M
+  type: number
+  description: 'Retail deposit and investment rates; Banks'' term deposits ($10000); 3 months. Units:
+    Per cent per annum. RBA series FRDIRBTD10K3M, source RBA.'
+- name: term_deposit_banks_10k_6_months
+  label: Term deposits, banks, $10,000, 6 months
+  source: FRDIRBTD10K6M
+  type: number
+  description: 'Retail deposit and investment rates; Banks'' term deposits ($10000); 6 months. Units:
+    Per cent per annum. RBA series FRDIRBTD10K6M, source RBA.'
+- name: term_deposit_banks_10k_1_year
+  label: Term deposits, banks, $10,000, 1 year
+  source: FRDIRBTD10K1Y
+  type: number
+  description: 'Retail deposit and investment rates; Banks'' term deposits ($10000); 1 year. Units: Per
+    cent per annum. RBA series FRDIRBTD10K1Y, source RBA.'
+- name: term_deposit_banks_10k_3_years
+  label: Term deposits, banks, $10,000, 3 years
+  source: FRDIRBTD10K3Y
+  type: number
+  description: 'Retail deposit and investment rates; Banks'' term deposits ($10000); 3 years. Units: Per
+    cent per annum. RBA series FRDIRBTD10K3Y, source RBA.'
+- name: term_deposit_banks_10k_average
+  label: Term deposits, banks, $10,000, average
+  source: FRDIRBTD10KAR
+  type: number
+  description: 'Retail deposit and investment rates; Banks'' term deposits ($10000); Average rate (all
+    terms). Units: Per cent per annum. RBA series FRDIRBTD10KAR, source RBA.'

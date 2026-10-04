@@ -1,0 +1,168 @@
+slug: sa-public-housing-new-households
+title: New households housed in public housing by council area, South Australia
+status: live
+topics:
+- housing
+example:
+  where:
+    lga:
+      neq: Total - new household housed
+  group: lga
+  metric: sum.new_households_housed
+  label: New households housed
+sample:
+  where:
+    lga:
+      neq: Total - new household housed
+  order: [new_households_housed.desc]
+  label: The ten council areas with the most new households housed in the year, most first.
+order: 446
+collection: sa-public-housing
+collection_title: Public housing by council area, South Australia
+search_title: South Australia new public housing allocations by council area (SA Housing Trust)
+also_known_as:
+- Social Housing new households housed SA
+- SA public housing allocations by LGA
+- Housing Trust new tenancies by council
+keywords:
+- public housing
+- social housing
+- housing allocations
+- greatest need
+- SA Housing Trust
+- South Australia
+faq:
+- q: What is in each row?
+  a: One council area, with the publisher's counts of new households housed and their characteristics in the columns named.
+- q: What does n.p. mean?
+  a: The publisher replaces every count for a council area with n.p. where the area has one to three new households housed. Those
+    cells are nulls here, flagged as suppressed.
+- q: Are the counts exact?
+  a: No. The publisher rounds counts to the nearest multiple of 5, so rows and columns may not add to the totals.
+    The publisher's Total and percentage of total rows are kept as published at the end of the table, and
+    because the percentage row holds fractions, every count column is typed as a number.
+- q: Which date does the table cover?
+  a: The newest file the publisher has released, 2020-21 at the first version. The files for 2019-20 stay on the portal,
+    and each new file becomes a version here.
+summary: The number of households newly housed in public housing in each South Australian council area in the financial year, with greatest need, composition and main source of income.
+description: New households housed in public housing by Local Government Area from the South Australian Housing Trust, from South Australia's contribution to the national Public Housing data collection. Each row is one council area with the number of households housed in the year and their members, the households in greatest need and those housed within six months, Aboriginal households and households with a person with disability, those paying less than market rent, and counts by household composition, children and older members and main source of income.
+publisher:
+  name: South Australian Housing Trust
+  short: SA Housing Trust
+  jurisdiction: SA
+  url: https://www.housing.sa.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.sa.gov.au/data/dataset/social-housing-new-households-housed
+  attribution: South Australian Housing Trust, Government of South Australia, Social Housing – new households housed,
+    https://data.sa.gov.au/data/dataset/social-housing-new-households-housed, accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: ckan-resource
+  portal: https://data.sa.gov.au/data
+  package: social-housing-new-households-housed
+  resource_match: ^New households housed Public Housing \d{4}-\d{2}$
+  url: https://data.sa.gov.au/data/dataset/social-housing-new-households-housed
+  cadence: yearly
+  header_row: 13
+suppression:
+- n.p.
+row_label: Council areas
+fields:
+- name: lga
+  label: Local Government Area
+  source: Local Government Area
+  type: string
+- name: new_households_housed
+  label: New households housed
+  source: New households housed
+  type: number
+- name: number_of_household_members
+  label: Number of household members
+  source: Number of household members
+  type: number
+- name: households_in_greatest_need
+  label: Households in greatest need
+  source: Households in greatest need
+  type: number
+- name: aboriginal_households
+  label: Aboriginal households
+  source: Aboriginal households
+  type: number
+- name: households_with_person_with_disability
+  label: Households with person with disability
+  source: Households with person with disability
+  type: number
+- name: paying_less_than_market_rent
+  label: Paying less than market rent
+  source: Paying less than market rent
+  type: number
+- name: greatest_need_households_and_time_waited_was_under_6_months
+  label: Greatest need households and time waited was under 6 months
+  source: Greatest need households and time waited was under 6 months
+  type: number
+- name: single_person
+  label: Single person
+  source: Single person
+  type: number
+- name: single_parent_with_dependent_children
+  label: Single parent with dependent children
+  source: Single parent with dependent children
+  type: number
+- name: couple_only
+  label: Couple only
+  source: Couple only
+  type: number
+- name: couple_with_dependent_children
+  label: Couple with dependent children
+  source: Couple with dependent children
+  type: number
+- name: group_or_mixed_composition
+  label: Group or mixed composition
+  source: Group or mixed composition
+  type: number
+- name: has_child_under_15_years
+  label: Has child under 15 years
+  source: Has child under 15 years
+  type: number
+- name: has_child_under_5_years
+  label: Has child under 5 years
+  source: Has child under 5 years
+  type: number
+- name: has_adult_65_years_or_more
+  label: Has adult 65 years or more
+  source: Has adult 65 years or more
+  type: number
+- name: younger_person_main_tenant_under_25_years
+  label: Younger person (main tenant under 25 years)
+  source: Younger person (main tenant under 25 years)
+  type: number
+- name: aged_pension
+  label: Aged Pension
+  source: Aged Pension
+  type: number
+- name: disability_support_pension
+  label: Disability Support Pension
+  source: Disability Support Pension
+  type: number
+- name: job_seeker
+  label: Job Seeker
+  source: Job Seeker
+  type: number
+- name: other_government_payment
+  label: Other Government payment
+  source: Other Government payment
+  type: number
+- name: employee_cash_income
+  label: Employee cash income
+  source: Employee cash income
+  type: number
+- name: other_cash_income
+  label: Other cash income
+  source: Other cash income
+  type: number
+- name: income_not_stated
+  label: Income not stated
+  source: Income not stated
+  type: number

@@ -1,0 +1,114 @@
+slug: nsw-beachwatch-sites
+title: Beachwatch swim sites with pollution forecasts and latest water quality, New South Wales
+status: live
+topics:
+- nature
+example:
+  group: latest_result
+  label: Swim sites by their latest water quality result
+sample:
+  order:
+  - latest_result_rating
+  - latest_result_observation_date.desc
+  label: The sites with the worst latest water quality result first, the most recently sampled first within
+    each result.
+order: 331
+publisher:
+  name: NSW Department of Climate Change, Energy, the Environment and Water
+  short: DCCEEW
+  jurisdiction: NSW
+  url: https://www.environment.nsw.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.environment.nsw.gov.au/about-us/copyright-and-disclaimer
+  statement: all department material available on this website is licensed under the Creative Commons
+    Attribution 4.0 International (CC BY 4.0)
+  attribution: NSW Department of Climate Change, Energy, the Environment and Water, NSW Government, Beachwatch,
+    sourced {sourced}, https://data.nsw.gov.au/data/dataset/beachwatch, licensed under CC BY 4.0.
+search_title: NSW beach water quality and pollution forecast by swim site (Beachwatch)
+also_known_as:
+- Beachwatch NSW water quality
+- Is it safe to swim at my beach NSW
+- Sydney beach pollution forecast
+- NSW swim site water quality results
+keywords:
+- beach water quality
+- pollution forecast
+- swimming
+- Beachwatch
+- swim sites
+- DCCEEW
+- New South Wales
+faq:
+- q: What is in each row?
+  a: One swim site that Beachwatch monitors, with its name, the current pollution forecast and when it
+    was issued, the latest water quality result and its rating, the date of that sample, and the site's
+    longitude and latitude.
+- q: How often does it change?
+  a: Beachwatch issues pollution forecasts daily and samples sites on a schedule. This entry is read as
+    a live feed, and each day the feed changes is one version, so earlier days stay here as earlier versions.
+- q: What does forecast not available mean?
+  a: Beachwatch issues a daily forecast only for some sites and seasons. Other sites show forecast not
+    available as published.
+summary: Every NSW swim site that Beachwatch monitors, with today's pollution forecast, the latest water
+  quality result and the site's location. Read daily as a live feed.
+description: The Beachwatch public sites feed from the NSW Department of Climate Change, Energy, the Environment
+  and Water, one row per monitored swim site. Each site has its
+  Beachwatch ID and name, the pollution forecast with its timestamp, and the latest water quality result
+  with its rating and observation date. Timestamps are kept as the ISO 8601 text the feed gives.
+source:
+  adapter: file
+  url: https://api.beachwatch.nsw.gov.au/public/sites/geojson
+  format: geojson
+  feed: true
+  cadence: live
+key:
+- id
+geometry:
+  lon: longitude
+  lat: latitude
+  crs: EPSG:4326
+  crs_note: Point coordinates from a GeoJSON feed, which by the GeoJSON standard are WGS84 longitude and
+    latitude. They are published as given.
+row_label: Swim sites
+fields:
+- name: id
+  label: Site ID
+  source: id
+  type: string
+- name: site_name
+  label: Swim site
+  source: siteName
+  type: string
+- name: pollution_forecast
+  label: Pollution forecast
+  source: pollutionForecast
+  type: string
+- name: pollution_forecast_timestamp
+  label: Forecast issued
+  source: pollutionForecastTimeStamp
+  type: string
+  description: ISO 8601 timestamp with its UTC offset, as the feed gives it.
+- name: latest_result
+  label: Latest water quality result
+  source: latestResult
+  type: string
+- name: latest_result_rating
+  label: Latest result rating
+  source: latestResultRating
+  type: integer
+  description: Beachwatch's numeric rating for the latest result, as published.
+- name: latest_result_observation_date
+  label: Latest sample taken
+  source: latestResultObservationDate
+  type: string
+  description: ISO 8601 timestamp with its UTC offset, as the feed gives it.
+- name: longitude
+  label: Longitude
+  source: (longitude)
+  type: number
+- name: latitude
+  label: Latitude
+  source: (latitude)
+  type: number

@@ -1,0 +1,83 @@
+slug: act-bdm-registrations
+title: Birth, death and marriage registrations by month, ACT
+status: live
+topics:
+- people
+example:
+  group: registration_type
+  metric: sum.registrations
+  label: Registrations of each type since July 2017
+chart:
+  where: {month: {gte: '2018-01-01'}}
+  split: registration_type
+  metric: sum.registrations
+  label: Registrations
+order: 450
+temporal_start: '2017-07-01'
+search_title: ACT births deaths and marriages registrations by month (Access Canberra)
+also_known_as:
+- ACT Registry of Births, Deaths and Marriages registration data
+- Canberra birth registrations by month
+- ACT death and marriage registration counts
+keywords:
+- births
+- deaths
+- marriages
+- registrations
+- BDM
+- Canberra
+- ACT
+faq:
+- q: What is in each row?
+  a: One type of registration in one month, with the number of registrations the ACT Registry of
+    Births, Deaths and Marriages processed in that month. The types are births, deaths, marriages, civil
+    partnerships, changes of name and changes of sex.
+- q: Why are some months or types missing?
+  a: The publisher leaves out any registration type with a count of 5 or less in a month, so a missing
+    row means a small count, never zero.
+- q: Is this the number of births in the ACT?
+  a: It counts registrations by the month they were processed. A birth can be registered weeks or months
+    after it happens, so the counts follow the registry's workload rather than the date of each event.
+summary: The number of births, deaths, marriages and other life events the ACT registry registered each
+  month since July 2017, one row per registration type and month.
+description: Monthly counts of registrations processed by the ACT Registry of Births, Deaths and
+  Marriages, part of Access Canberra, from July 2017. Each row carries the month, the registration type
+  (birth, death, marriage, civil partnership, change of name or change of sex) and the number of
+  registrations. The publisher omits any count of 5 or less.
+publisher:
+  name: Access Canberra, City and Environment Directorate
+  short: Access Canberra
+  jurisdiction: ACT
+  url: https://www.accesscanberra.act.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.act.gov.au/d/2n27-ed2y
+  attribution: Access Canberra, ACT Government, Registration data from the ACT Registry of Births, Deaths
+    and Marriages, https://www.data.act.gov.au/d/2n27-ed2y, accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: socrata
+  portal: https://www.data.act.gov.au
+  package: 2n27-ed2y
+  url: https://www.data.act.gov.au/d/2n27-ed2y
+  cadence: monthly
+partition_by:
+- registration_type
+row_label: Months
+fields:
+- name: month
+  label: Month
+  source: Date
+  type: date
+  date_format: '%b %Y'
+  description: The month the registrations were processed, as its first day.
+- name: registration_type
+  label: Registration type
+  source: Registration Type
+  type: string
+- name: registrations
+  label: Registrations
+  source: 'No'
+  type: integer
+note: Cells were typed and headers were made snake_case. The publisher's header is kept beside every field
+  in schema.json. Rows were left alone.

@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-jp-signing-locations",
+  "version": "2026-09-30",
+  "as_at": "",
+  "fetched_at": "2026-10-03T02:59:50+00:00",
+  "sha256": "7d2a70376c7ff969a440c8d5b33531f1a3136d2adc685e93e2a4a74733e997c4",
+  "bytes": 131120,
+  "filename": "jps-in-the-community.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.justice.qld.gov.au/media/data/jps-in-the-community.csv?timestamp=2026-09-30AEST11-25-13",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "jp-or-cdec-location",
+    "package_id": "c4c13032-c1b5-49e7-9e33-9584e657c57e",
+    "resource": "652252e9-e21a-43fd-b761-3592b365fb28",
+    "resource_name": "Justice of the Peace and Commissioner of Declarations signing locations",
+    "resource_last_modified": "2026-09-30T01:25:19.081909",
+    "package_modified": "2026-09-30T01:25:19.087305",
+    "package_version": "1",
+    "etag": "",
+    "http_last_modified": ""
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=jp-or-cdec-location",
+    "read_at": "2026-10-03T02:59:47+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "cbad910acfd09538ca2986f78cd5ae87637220e584008454ec217e3f51241a87"
+}

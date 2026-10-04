@@ -1,0 +1,34 @@
+{
+  "dataset": "vic-mfb-fire-station-locations",
+  "version": "2013-05-12",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:07:54+00:00",
+  "sha256": "61b8939879dedeb150659cd03463e241604324db1d6d4a85931413368d7a3d9f",
+  "bytes": 3785,
+  "filename": "tmpGqbqzCMFB-locations.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "http://data.gov.au/storage/f/2013-05-12T201152/tmpGqbqzCMFB-locations.csv",
+    "portal": "https://data.gov.au/data",
+    "package": "mfb-locations-vic",
+    "package_id": "4bd4cca2-4f52-4ffa-a639-8b31c3dfd206",
+    "resource": "088ed83a-abde-406a-b609-e5a830ec844d",
+    "resource_name": "MFB locations.csv",
+    "resource_last_modified": "2013-05-12T00:00:00",
+    "package_modified": "2023-08-11T10:13:03.566097",
+    "package_version": null,
+    "etag": "518f6b05-ec9",
+    "http_last_modified": "Sun, 12 May 2013 10:12:21 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution 3.0 Australia",
+    "url": "http://creativecommons.org/licenses/by/3.0/au/",
+    "read_from": "https://data.gov.au/data/api/3/action/package_show?id=mfb-locations-vic",
+    "read_at": "2026-10-03T03:07:54+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "cf1feec4acdc50be15e0d89a9b625343a41798dc43f593cf98f72eb03bd88086"
+}

@@ -1,0 +1,113 @@
+slug: vic-cfa-incident-responses
+title: CFA incident responses, Victoria, 2009-10 to 2021-22
+status: live
+topics:
+- emergencies
+example:
+  where:
+    financial_year: newest
+  group: incident_type
+  metric: count
+  label: Incidents
+chart:
+  where:
+    incident_datetime:
+      gte: '2010-01-01'
+      lt: '2022-01-01'
+  split: none
+  metric: count
+  label: Incidents in the full calendar years
+order: 362
+publisher:
+  name: Country Fire Authority
+  short: CFA
+  jurisdiction: Vic
+  url: https://www.cfa.vic.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://discover.data.vic.gov.au/dataset/cfa-incident-responses
+  statement: License Creative Commons Attribution 4.0 International
+  attribution: Country Fire Authority, Victorian Government, CFA Incident Responses, sourced {sourced},
+    https://discover.data.vic.gov.au/dataset/cfa-incident-responses, licensed under CC BY 4.0.
+temporal_start: '2009-07-01'
+search_title: CFA incidents attended in Victoria, every call since 2009 (Country Fire Authority)
+also_known_as:
+- CFA incident data
+- Country Fire Authority incident responses
+- CFA callouts by incident type
+- Victorian fire brigade incidents
+keywords:
+- CFA
+- Country Fire Authority
+- fire incidents
+- callouts
+- brigade responses
+- grass fires
+- false alarms
+- Victoria
+faq:
+- q: What does each row hold?
+  a: One incident CFA brigades responded to, with the date and time it was reported, CFA's incident number,
+    the CFA district number and the incident type as a code and as words. The workbook holds one sheet per
+    financial year from 2009-10 to 2021-22, and the financial year is kept from the sheet name.
+- q: Why do some rows have no district or incident type?
+  a: The publisher leaves the district blank or writes NULL where none was recorded, and some incidents
+    have no type recorded. Both are kept as null.
+- q: What do the incident type codes mean?
+  a: They are the codes of the Australasian Incident Reporting System. Each row also carries the type in
+    words as CFA wrote it, so the codes can be read without a separate list.
+summary: Every incident Country Fire Authority brigades responded to from July 2009 to June 2022, about
+  530,000 rows, with the time, district and incident type.
+description: CFA incident responses, one row per incident from 1 July 2009 to 30 June 2022, read from the
+  workbook's sheet for each financial year. Each row has the date and time the incident was reported, CFA's
+  incident number, the CFA district and the incident type code and description. The incidents cover fires,
+  rescues, hazardous material calls, alarms and assistance to other agencies across the CFA area.
+source:
+  adapter: file
+  url: https://www.cfa.vic.gov.au/ArticleDocuments/195/CFA_Incident_Response.xlsx.aspx
+  format: xlsx
+  cadence: no longer updated
+wide:
+  sheet_match: ^\d{4}-\d{2}$
+  header_row: 1
+  header_rows: 1
+  row_headers: 1
+key:
+- incident_no
+- financial_year
+partition_by:
+- financial_year
+row_label: Incidents
+fields:
+- name: financial_year
+  label: Financial year
+  source: (sheet)
+  type: string
+  description: The financial year of the workbook sheet the row is on, such as 2021-22.
+- name: incident_datetime
+  label: Reported at
+  source: (row header 1)
+  type: datetime
+  date_format: '%Y-%m-%d %H:%M:%S|%Y-%m-%d'
+  description: The date and time of the incident, local time, as recorded by CFA.
+- name: incident_no
+  label: Incident number
+  source: '(cell: incident_no)'
+  type: integer
+- name: district_no
+  label: CFA district
+  source: '(cell: District_no)'
+  type: integer
+  null_values:
+  - 'NULL'
+  description: The CFA district number. Null where none was recorded.
+- name: incident_type_code
+  label: Incident type code
+  source: '(cell: incident_type_code)'
+  type: string
+  description: The incident type code, kept as text because codes such as 352.1 carry a decimal part.
+- name: incident_type
+  label: Incident type
+  source: '(cell: incident_type)'
+  type: string

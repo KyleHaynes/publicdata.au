@@ -1,0 +1,116 @@
+slug: au-suicide-deaths-by-age
+title: Deaths by suicide by state and age group, five-year periods, Australia
+status: live
+topics:
+- health
+example:
+  where:
+    measure: Age-specific rate (per 100,000)
+    state: Australia
+    period: newest
+  group: age_group
+  metric: avg.value
+  label: Deaths by suicide per 100,000 people in each age group in the newest five-year period, Australia
+sample:
+  where:
+    period: newest
+    measure: Number
+    age_group: Total
+  label: Deaths by suicide at all ages over the newest five-year period, for each state and territory and
+    Australia.
+order: 68
+publisher:
+  name: Australian Institute of Health and Welfare
+  short: AIHW
+  jurisdiction: Cth
+  url: https://www.aihw.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.aihw.gov.au/copyright
+  statement: has been released under a Creative Commons BY 4.0 (CC-BY 4.0) licence
+  attribution: Based on Australian Institute of Health and Welfare material. Australian Institute of Health
+    and Welfare, Australian Government, Suicide and self-harm monitoring, National Mortality Database
+    table NMD 4a, sourced {sourced}, https://www.aihw.gov.au/suicide-self-harm-monitoring/resources/download-data-tables,
+    licensed under CC BY 4.0.
+temporal_start: '2001-01-01'
+search_title: Suicide rates by age group and state over rolling five-year periods, Australia (AIHW)
+also_known_as:
+- Suicide rate by age group Australia
+- Youth suicide rate by state
+- Deaths by suicide by age National Mortality Database
+- AIHW suicide monitoring NMD 4a
+keywords:
+- suicide
+- suicide rate by age
+- youth suicide
+- age-specific rate
+- mental health
+- AIHW
+- Australia
+faq:
+- q: Why five-year periods?
+  a: Counts by age group and state are small, so the Institute publishes them over rolling five-year periods,
+    2001–2005 through to the latest, as age-specific rates per 100,000 and numbers of deaths. Each row
+    is one state or territory, age group, measure and period.
+- q: Where do the figures come from?
+  a: The Institute's Suicide and self-harm monitoring data tables, built from the National Mortality Database,
+    which holds the causes of death the ABS codes from registrations. The Institute writes n.p. where
+    a figure is not published because the count is small, and those cells are null here with a suppressed
+    flag. Year of death is the year the death was registered.
+- q: Why does the attribution say "based on" AIHW material?
+  a: The Institute publishes its data tables under CC BY 4.0 and asks that material adapted from them,
+    which republishing in other formats is, carry the words "Based on Australian Institute of Health and
+    Welfare material". Every file here carries them. The Institute has not endorsed this site.
+summary: Deaths by suicide and age-specific rates for each state and territory by age group over rolling
+  five-year periods since 2001–2005, from the AIHW National Mortality Database tables. Updated yearly.
+description: Table NMD 4a of the Australian Institute of Health and Welfare's Suicide and self-harm monitoring
+  data tables, deaths by suicide by state or territory and age group over five-year periods, one row per
+  state, age group, measure and period, with the number of deaths or the age-specific rate per 100,000
+  population. The Institute publishes the table with a column per period; it is one row per period here.
+source:
+  adapter: file
+  url: https://www.aihw.gov.au/getmedia/3b28804a-27e5-41a9-9914-473a26b09750/AIHW_suicide-and-self-harm-monitoring_NMD_suicide.xlsx
+  cadence: yearly
+wide:
+  sheets:
+  - Table NMD 4a
+  header_row: 2
+  header_rows: 1
+  row_headers: 3
+key:
+- state
+- age_group
+- measure
+- period
+partition_by:
+- measure
+suppression:
+- n.p.
+row_label: Table lines
+fields:
+- name: state
+  label: State
+  source: (row header 1)
+  type: string
+- name: age_group
+  label: Age group
+  source: (row header 2)
+  type: string
+- name: measure
+  label: Measure
+  source: (row header 3)
+  type: string
+- name: period
+  label: Period
+  source: (column header 1)
+  type: string
+  description: The five calendar years, such as 2020–2024.
+- name: value
+  label: Value
+  source: (cell)
+  type: number
+  null_values:
+  - —
+  description: The number of deaths or the rate, as the measure names. The Institute writes an em dash
+    where a figure is not applicable; it is null here.

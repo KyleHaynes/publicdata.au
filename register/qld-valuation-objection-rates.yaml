@@ -1,0 +1,82 @@
+slug: qld-valuation-objection-rates
+title: Land valuation objection rates by council area, Queensland, 2019
+status: live
+topics:
+- housing
+order: 252
+temporal_start: '2019-01-01'
+search_title: Queensland land valuation objection rate by council, 2019
+also_known_as:
+- Queensland annual valuation objections
+- QLD land valuation objections by LGA
+- Valuer-General objection rates
+keywords:
+- land valuation
+- objections
+- statutory valuation
+- Valuer-General
+- local government area
+- Queensland
+faq:
+- q: What is the objection rate?
+  a: It is the share of the valuations issued in a local government area at the 2019 annual valuation
+    that drew an objection, given by the publisher as a fraction. A figure of 0.006 means 0.6 per cent.
+- q: Why only 2019?
+  a: The publisher has a file for each year from 2012 to 2019, in CSV and Excel with column names that
+    change between years. This entry holds the 2019 file, the newest. The earlier files stay on the publisher's
+    page.
+summary: The share of 2019 statutory land valuations in each Queensland local government area that drew
+  an objection.
+description: 'One row per Queensland local government area, with its code and the rate of objections to
+  the 2019 annual land valuation, as a fraction of the valuations issued there. The file lists all 62 areas
+  the Valuer-General values and does not say which were valued in 2019. The land valuation trends table
+  shows the 18 areas valued that year, and they are the 18 with a rate above 0.
+
+
+  The publisher releases one file for each year, and the newest is for 2019. This entry is that file,
+  read by its fixed address.'
+publisher:
+  name: Department of Natural Resources and Mines, Manufacturing and Regional and Rural Development
+  short: Natural Resources and Mines
+  jurisdiction: Qld
+  url: https://www.nrmmrrd.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/annual-property-valuation-objections
+  attribution: Department of Natural Resources and Mines, Manufacturing and Regional and Rural Development,
+    Queensland Government, Annual property valuation objections, sourced {sourced}, https://www.data.qld.gov.au/dataset/annual-property-valuation-objections,
+    licensed under CC BY 4.0.
+example:
+  where: {objection_rate: {gt: 0}}
+  group: lga_name
+  metric: max.objection_rate
+  label: Objection rate in each council area valued in 2019, highest first
+sample:
+  order: [objection_rate.desc]
+  spread: none
+  label: The ten council areas with the highest objection rates, highest first.
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: annual-property-valuation-objections
+  resource: 41a77511-e4d4-4d96-89f4-ba4552376947
+  url: https://www.data.qld.gov.au/dataset/annual-property-valuation-objections
+  cadence: historical, not updated since 2019
+key:
+- lga_code
+row_label: Council areas
+fields:
+- name: lga_name
+  label: Council area
+  source: LGA_Name
+  type: string
+- name: lga_code
+  label: LGA code
+  source: LGA_code
+  type: integer
+- name: objection_rate
+  label: Objection rate
+  source: Objection rate
+  type: number
+  description: Objections as a fraction of valuations issued, so 0.01 is 1 per cent.

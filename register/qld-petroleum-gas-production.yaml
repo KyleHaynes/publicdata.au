@@ -1,0 +1,173 @@
+slug: qld-petroleum-gas-production
+title: Petroleum and gas production by field, Queensland
+status: live
+topics:
+- economy
+order: 268
+collection: qld-petroleum-gas-statistics
+collection_title: Queensland petroleum and gas production and reserves
+collection_search_title: Queensland petroleum and gas statistics
+collection_description: |
+  The Queensland Government publishes the production returns and reserves reports that holders of petroleum and gas permits lodge with the department responsible for resources. Production is reported each half year for every field and reservoir unit within a permit. Reserves and contingent resources are reported each year for every field.
+
+  Both tables here are the publisher's cleaned compilations, in which field names and product types have been standardised and duplicate reports removed. The publisher notes the data may be revised as further returns are lodged.
+temporal_start: '2025-01-01'
+search_title: Queensland petroleum and gas production by field (Natural Resources and Mines)
+also_known_as:
+- Queensland coal seam gas production by field
+- Queensland CSG and conventional gas production statistics
+- Queensland oil and gas production returns
+keywords:
+- gas production
+- coal seam gas
+- CSG
+- oil production
+- petroleum
+- Queensland
+faq:
+- q: What is in each row?
+  a: Each row is one half-year reporting period, one permit and one field and reservoir unit, with the permit holder and basin, the volumes of gas, oil, LPG, condensate and water produced and used, and the number of wells producing.
+- q: What period does it cover?
+  a: The publisher's cleaned table, which is the one kept here, covers 2025. Its as-submitted table for 2020 to 2024 is under review by the publisher and is not included.
+- q: What units are the volumes in?
+  a: Gas is in million cubic metres, oil and condensate in millions of barrels, LPG in kilotonnes and water in megalitres, as the column names say.
+summary: Gas, oil, LPG, condensate and water produced from each Queensland petroleum and gas field and permit, by half year.
+description: One row per half-year reporting period, petroleum permit and field and reservoir unit, from the publisher's cleaned compilation of production returns. Each row gives the production type (coal seam gas or conventional), the authorised holder, the basin and stratigraphic unit, the volumes of raw gas, gas flared and vented, gas used, oil, LPG, condensate and water, and the number of wells on production. This is the pg_prod_cleaned sheet of the petroleum and gas production statistics workbook.
+publisher:
+  name: Department of Natural Resources and Mines, Manufacturing and Regional and Rural Development
+  short: Natural Resources and Mines
+  jurisdiction: Qld
+  url: https://www.nrmmrrd.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/petroleum-gas-production-and-reserve-statistics
+  attribution: Department of Natural Resources and Mines, Manufacturing and Regional and Rural Development, Queensland Government, Petroleum and gas production and reserve statistics, sourced {sourced}, https://www.data.qld.gov.au/dataset/petroleum-gas-production-and-reserve-statistics, licensed under CC BY 4.0.
+example:
+  where: {reporting_period: newest}
+  group: basin
+  metric: sum.gas_cum_volume_mm3
+  label: Raw gas produced in each basin in the newest half year, in million cubic metres
+chart:
+  split: basin
+  metric: sum.gas_cum_volume_mm3
+  label: Raw gas produced in million cubic metres
+sample:
+  where: {reporting_period: newest}
+  order: [gas_cum_volume_mm3.desc]
+  spread: none
+  label: The ten field lines that produced the most raw gas in the newest half year, most first.
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: petroleum-gas-production-and-reserve-statistics
+  resource_match: ^Petroleum and gas production statistics
+  url: https://www.data.qld.gov.au/dataset/petroleum-gas-production-and-reserve-statistics
+  cadence: half-yearly
+  sheet: pg_prod_cleaned
+partition_by:
+- production_type
+row_label: Field and period lines
+fields:
+- name: reporting_period
+  label: Period ending
+  source: reporting_period
+  type: date
+  description: The last day of the half-year reporting period.
+- name: production_type
+  label: Production type
+  source: production_type
+  type: string
+- name: authorized_holder
+  label: Permit holder
+  source: authorized_holder
+  type: string
+- name: permit_number
+  label: Permit
+  source: permit_number
+  type: string
+- name: basin
+  label: Basin
+  source: basin
+  type: string
+- name: reservoir_unit_name
+  label: Reservoir unit
+  source: reservoir_unit_name
+  type: string
+- name: strat_unit_name
+  label: Stratigraphic unit
+  source: strat_unit_name
+  type: string
+- name: secondary_strat_unit_name
+  label: Secondary stratigraphic unit
+  source: secondary_strat_unit_name
+  type: string
+- name: field_name
+  label: Field (as reported)
+  source: field_name
+  type: string
+- name: gas_cum_volume_mm3
+  label: Raw gas (Mm3)
+  source: gas_cum_volume_mm3
+  type: number
+- name: gas_flared_vented_cum_volume_mm3
+  label: Gas flared or vented (Mm3)
+  source: gas_flared/vented_cum_volume (mm3)
+  type: number
+- name: gas_vented_cum_volume_mm3
+  label: Gas vented (Mm3)
+  source: gas_vented_cum_volume_mm3
+  type: number
+- name: gas_flared_cum_volume_mm3
+  label: Gas flared (Mm3)
+  source: gas_flared_cum_volume_mm3
+  type: number
+- name: gas_used_cum_volume_mm3
+  label: Gas used as fuel (Mm3)
+  source: gas_used_cum_volume_mm3
+  type: number
+- name: oil_cum_volume_mmbbl
+  label: Oil (MMbbl)
+  source: oil_cum_volume_mmbbl
+  type: number
+- name: oil_used_cum_volume_mmbbl
+  label: Oil used as fuel (MMbbl)
+  source: oil_used_cum_volume_mmbbl
+  type: number
+- name: lpg_cum_volume_kt
+  label: LPG (kt)
+  source: lpg_cum_volume_kt
+  type: number
+- name: lpg_used_cum_volume_kt
+  label: LPG used as fuel (kt)
+  source: lpg_used_cum_volume_kt
+  type: number
+- name: condensate_cum_volume_mmbbl
+  label: Condensate (MMbbl)
+  source: condensate_cum_volume_mmbbl
+  type: number
+- name: condensate_used_cum_volume_mmbbl
+  label: Condensate used as fuel (MMbbl)
+  source: condensate_used_cum_volume_mmbbl
+  type: number
+- name: water_cum_volume_ml
+  label: Water in period (ML)
+  source: water_cum_volume_ml
+  type: number
+- name: water_total_volume_ml
+  label: Water since production began (ML)
+  source: water_total_volume_ml
+  type: number
+- name: wells_on_prod
+  label: Wells producing
+  source: wells_on_prod
+  type: integer
+- name: remark
+  label: Remark
+  source: remark
+  type: string
+- name: field_name_prod_corr
+  label: Field
+  source: field_name_prod_corr
+  type: string
+  description: The field name as the publisher standardised it.

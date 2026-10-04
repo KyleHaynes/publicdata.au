@@ -1,0 +1,68 @@
+name: Data PR
+
+# A fetch, catalogue or hubs PR arms auto-merge when it is opened; one approval is the only thing
+# the ruleset still needs from it, and the required checks decide the rest. This approves only a PR
+# the fetch app opened (no person can act as it, and only it may push data/ branches), holding one
+# signed-off fetch commit of store files, on a branch a run on main cut. The ruleset dismisses the
+# approval on any later push, and a rerun that finds the PR no longer qualifies dismisses it too.
+# Every other PR needs a maintainer.
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: data-pr-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  approve:
+    name: Approve the fetch's own data PR
+    # Side effects run only in the public repo, never in a fork or a private copy.
+    if: github.repository == 'National-Digital/publicdata.au' && (startsWith(github.head_ref, 'data/fetch-') || startsWith(github.head_ref, 'data/catalogue-') || startsWith(github.head_ref, 'data/hubs-'))
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+      actions: read
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REPO: ${{ github.repository }}
+      PR: ${{ github.event.pull_request.number }}
+      BRANCH: ${{ github.head_ref }}
+      OPENER: ${{ github.event.pull_request.user.login }}
+      HEAD_REPO: ${{ github.event.pull_request.head.repo.full_name }}
+      FETCHER: ${{ vars.FETCH_APP_LOGIN }}
+      OPENER_TYPE: ${{ github.event.pull_request.user.type }}
+    steps:
+      - name: Approve when every condition holds
+        run: |
+          hold() {
+            echo "Not approved; $1"
+            for id in $(gh api "repos/$REPO/pulls/$PR/reviews" --jq '.[] | select(.user.login=="github-actions[bot]" and .state=="APPROVED") | .id'); do
+              gh api -X PUT "repos/$REPO/pulls/$PR/reviews/$id/dismissals" -f message="No longer a single fetch commit: $1" -f event=DISMISS >/dev/null
+            done
+            exit 0
+          }
+          [ "$HEAD_REPO" = "$REPO" ] || hold "the branch is on a fork"
+          [ "$OPENER_TYPE" = "Bot" ] && [ -n "$FETCHER" ] && [ "$OPENER" = "$FETCHER" ] || hold "opened by $OPENER ($OPENER_TYPE), not the fetch app"
+          run=$(gh api "repos/$REPO/actions/runs/${BRANCH##*-}" --jq '"\(.path) \(.head_branch) \(.event)"' 2>/dev/null || true)
+          case "$run" in
+            ".github/workflows/fetch.yml main schedule"|".github/workflows/fetch.yml main workflow_dispatch"|\
+            ".github/workflows/catalogue.yml main schedule"|".github/workflows/catalogue.yml main workflow_dispatch"|\
+            ".github/workflows/hubs.yml main workflow_run"|".github/workflows/hubs.yml main schedule"|".github/workflows/hubs.yml main workflow_dispatch") ;;
+            *) hold "the branch was not cut by a fetch, catalogue or hubs run on main ($run)" ;;
+          esac
+          [ "$(gh api "repos/$REPO/pulls/$PR" --jq .commits)" = 1 ] || hold "more than one commit"
+          commit=$(gh api "repos/$REPO/pulls/$PR/commits" --jq '.[0] | "\(.commit.author.email) \(.commit.committer.email)"')
+          [ "$commit" = "fetch@publicdata.au fetch@publicdata.au" ] || hold "not a fetch commit: $commit"
+          # A hubs branch may change only the hub record; any other data branch only manifests.
+          case "$BRANCH" in
+            data/hubs-*) allowed='^store/hubs\.json$' ;;
+            *) allowed='^store/[^/]+/[^/]+/manifest\.json$' ;;
+          esac
+          other=$(gh api "repos/$REPO/pulls/$PR/files" --paginate --jq '.[].filename' | grep -vE "$allowed" || true)
+          [ -z "$other" ] || hold "files this kind of data PR may not change: $other"
+          gh pr review "$PR" --repo "$REPO" --approve --body "A fetched-data PR from a scheduled run on main; it merges when the required checks are green."

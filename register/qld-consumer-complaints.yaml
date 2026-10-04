@@ -1,0 +1,113 @@
+slug: qld-consumer-complaints
+title: Consumer complaints received by the Office of Fair Trading, Queensland, latest period
+status: live
+topics:
+- economy
+- community
+order: 222
+collection: qld-fair-trading
+collection_title: Office of Fair Trading complaints, enforcement and registers, Queensland
+search_title: Queensland consumer complaints to Fair Trading (Office of Fair Trading)
+collection_search_title: Queensland Office of Fair Trading statistics (Department of Justice)
+also_known_as:
+- Office of Fair Trading complaints data Queensland
+- QLD consumer complaints by industry
+- Fair Trading Queensland complaints received
+keywords:
+- consumer complaints
+- Fair Trading
+- consumer protection
+- traders
+- complaints by industry
+- Queensland
+collection_description: |
+  The Queensland Office of Fair Trading, part of the Department of Justice, publishes the consumer complaints it receives, the legal and enforcement actions it takes against traders, and counts of the licences and registered organisations it administers. Each series is a file per period on the Queensland open data portal.
+
+  These tables follow the newest file of each series, so each version is one release and the archive keeps each period as the office replaces it.
+faq:
+- q: What is in each row?
+  a: One complaint the Office of Fair Trading received, with its case number, the date it was opened,
+    how it arrived, the industry and product it was about, the office region and whether the complainant
+    gave a vulnerable group.
+- q: Which period does it cover?
+  a: The newest file the office has published, which is 1 January to 31 March 2026 in the first version
+    here. The office publishes a file for each calendar year and a partial file for the current year.
+- q: Does a complaint mean the trader did something wrong?
+  a: No. Each row records a complaint received. The file does not record the outcome.
+- q: Why is the date text?
+  a: The office changed the order of day and month between files, and a date such as 2/05/2026 cannot
+    be read safely without knowing which. The date is kept exactly as published.
+summary: Each consumer complaint received by the Queensland Office of Fair Trading in the newest published
+  period, with date, channel, industry, product and region.
+description: Complaints received by the Queensland Office of Fair Trading, one row per complaint, for
+  the newest period the office has published. Each row has the case number, the date and time the complaint
+  was initiated, the channel it came through, the industry and product, the office region and whether
+  a vulnerable group was given. The office names no trader in this file.
+publisher:
+  name: Department of Justice
+  short: Justice
+  jurisdiction: Qld
+  url: https://www.justice.qld.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/consumer-complaints-office-of-fair-trading
+  attribution: Department of Justice, Queensland Government, Consumer complaints, Office of Fair Trading,
+    sourced {sourced}, https://www.data.qld.gov.au/dataset/consumer-complaints-office-of-fair-trading,
+    licensed under CC BY 3.0 AU.
+  portal_id: CC-BY-3.0
+example:
+  group: industry
+  metric: count
+  label: Complaints received in the period by industry
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: consumer-complaints-office-of-fair-trading
+  url: https://www.data.qld.gov.au/dataset/consumer-complaints-office-of-fair-trading
+  encoding: utf-8-sig
+  resource_match: ^Complaints received by OFT
+  cadence: quarterly
+key:
+- case_number
+partition_by:
+- industry
+row_label: Complaints
+fields:
+- name: case_number
+  label: Case number
+  source: Case Number
+  type: string
+- name: initiated
+  label: Date initiated
+  source: Initiated Date
+  type: string
+  description: The date the complaint was opened, kept as text as published. The office writes it month
+    first in the January to March 2026 file, such as 1/13/2026 0:00, and day first in earlier files, so
+    it is not read as a date.
+- name: channel
+  label: Channel
+  source: Channel
+  type: string
+- name: industry
+  label: Industry
+  source: Industry
+  type: string
+- name: product
+  label: Product
+  source: Product
+  type: string
+- name: oft_region
+  label: Office region
+  source: OFT Region
+  type: string
+  description: The office region handling the complaint. Some rows name another state and some are blank.
+- name: vulnerable_group
+  label: Vulnerable group given
+  source: Vulnerable Group Provided
+  type: boolean
+  true_values:
+  - 'Yes'
+  false_values:
+  - 'No'
+note: Cells were typed and headers were made snake_case. Rows were left alone.

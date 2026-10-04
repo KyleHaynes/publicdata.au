@@ -1,0 +1,117 @@
+slug: wa-public-libraries
+title: Public libraries in Western Australia
+status: live
+topics:
+- community
+example:
+  group: name
+  metric: max.elevation_from_sea_level_in_m
+  label: Elevation above sea level (m)
+order: 474
+search_title: WA public libraries list with addresses and locations (State Library of Western Australia)
+also_known_as:
+- WA Public Libraries
+- Western Australian public library addresses
+- Public library locations WA
+keywords:
+- public libraries
+- library locations
+- library addresses
+- Western Australia
+- State Library of Western Australia
+faq:
+- q: What is in each row?
+  a: One public library in Western Australia, with its name, street and postal address, phone number,
+    latitude and longitude in decimal degrees, and its elevation above sea level in metres.
+- q: How current is it?
+  a: The file is the State Library's list dated February 2021, which is the newest the portal holds.
+    Libraries that opened, moved or closed since then are not reflected. This site checks the portal
+    for a new file and adds a dated version when it changes.
+summary: The 235 public libraries in Western Australia in the State Library's February 2021 list, one
+  row per library, with street and postal address, phone number, coordinates and elevation.
+description: The State Library of Western Australia's list of public libraries in the state, dated
+  February 2021. Each row carries the library's name, street address, suburb, state and postcode, postal
+  address, phone number, latitude and longitude in decimal degrees and its elevation above sea level in
+  metres.
+publisher:
+  name: State Library of Western Australia
+  short: State Library of WA
+  jurisdiction: WA
+  url: https://slwa.wa.gov.au/
+licence:
+  id: CC-BY-4.0
+  portal_id: cc-by
+  reviewed: '2026-10-01'
+  evidence: https://catalogue.data.wa.gov.au/dataset/wa-public-libraries
+  attribution: State Library of Western Australia, Government of Western Australia, WA Public Libraries,
+    https://catalogue.data.wa.gov.au/dataset/wa-public-libraries, accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: ckan-resource
+  portal: https://catalogue.data.wa.gov.au
+  package: wa-public-libraries
+  resource: 31eabe52-d241-4f21-b9c7-3e3fef6c0bcb
+  url: https://catalogue.data.wa.gov.au/dataset/wa-public-libraries
+  encoding: utf-8-sig
+  cadence: no longer updated
+key:
+- name
+geometry:
+  lon: longitude_decimal
+  lat: latitude_decimal
+  crs: EPSG:4283
+  crs_note: Longitude and latitude in decimal degrees as published. The publisher does not name the
+    datum; GDA94 differs from GDA2020 and WGS84 by under 2 metres.
+row_label: Libraries
+fields:
+- name: name
+  label: Library
+  source: Name
+  type: string
+- name: street_address
+  label: Address
+  source: Street Address
+  type: string
+- name: street_suburb
+  label: Suburb
+  source: Street Suburb
+  type: string
+- name: street_state
+  label: State
+  source: Street State
+  type: string
+- name: street_postcode
+  label: Postcode
+  source: Street Postcode
+  type: string
+- name: postal_address
+  label: Postal address
+  source: Postal Address
+  type: string
+- name: postal_suburb
+  label: Postal suburb
+  source: Postal Suburb
+  type: string
+- name: postal_state
+  label: Postal state
+  source: Postal State
+  type: string
+- name: postal_postcode
+  label: Postal postcode
+  source: Postal Postcode
+  type: string
+- name: phone
+  label: Phone
+  source: Phone
+  type: string
+- name: latitude_decimal
+  label: Latitude
+  source: Latitude (Decimal)
+  type: number
+- name: longitude_decimal
+  label: Longitude
+  source: Longitude (Decimal)
+  type: number
+- name: elevation_from_sea_level_in_m
+  label: Elevation (m)
+  source: Elevation from Sea Level (in m)
+  type: integer

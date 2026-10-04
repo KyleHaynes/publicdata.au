@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-mobile-speed-camera-sites",
+  "version": "2026-07-06",
+  "as_at": "",
+  "fetched_at": "2026-10-03T02:59:34+00:00",
+  "sha256": "b849601be90b3dff6e24e6622fe61ef799d7776eb8fa964c245077bc0b5dc4fb",
+  "bytes": 196514,
+  "filename": "QPSActive_parkedMSCamera.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://open-crime-data.s3-ap-southeast-2.amazonaws.com/Crime%20Statistics/QPSActive_parkedMSCamera.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "active-mobile-speed-camera-sites",
+    "package_id": "0fffea7f-6988-4b73-afee-5aa8af56afd2",
+    "resource": "f6b5c37e-de9d-4041-8c18-f4d4b6c593a8",
+    "resource_name": "Active mobile speed camera sites",
+    "resource_last_modified": "2019-08-22T02:10:45.164312",
+    "package_modified": "2023-09-04T03:24:42.975838",
+    "package_version": "1.1",
+    "etag": "d12c96ebfe0bd9da28dab70222bf6cc7",
+    "http_last_modified": "Sun, 05 Jul 2026 23:41:57 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=active-mobile-speed-camera-sites",
+    "read_at": "2026-10-03T02:59:33+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "0be3a6e99771d20daa94e97185edb3f08e8874c6171820614c7be4da89aa4910"
+}

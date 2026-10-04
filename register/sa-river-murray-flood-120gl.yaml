@@ -1,0 +1,75 @@
+slug: sa-river-murray-flood-120gl
+title: River Murray predicted flood extent at 120 GL a day, South Australia
+status: live
+topics:
+- emergencies
+- nature
+order: 402
+collection: sa-river-murray-flood-mapping
+collection_title: River Murray flood mapping, South Australia
+search_title: River Murray flood map at 120 GL per day, South Australia (DEW)
+also_known_as:
+- Flood Mapping of the River Murray 120GL
+- River Murray 120 gigalitre flood extent
+- Murray River flood inundation 120GL SA
+keywords:
+- flood map
+- River Murray
+- flood extent
+- inundation
+- 120 GL
+- Department for Environment and Water
+- South Australia
+faq:
+- q: What is in each row?
+  a: One polygon of land the model predicts is under water when the River Murray flows at 120 gigalitres
+    (120,000 megalitres) a day at the South Australian border. Every row carries the same flood name, and the
+    shapes are in the GeoParquet, GeoJSON, GeoPackage and PMTiles files.
+- q: Is this a record of a real flood?
+  a: No. It is a modelled scenario from a study the Department ran for flood preparedness and risk management.
+    The extent of the 2022 to 2023 flood, which was mapped from imagery, is a separate dataset in this
+    collection.
+summary: The area of the River Murray floodplain in South Australia predicted to be under water at a flow of
+  120 gigalitres a day at the border, from the Department for Environment and Water's flood study.
+description: The predicted flood extent of the River Murray in South Australia for a flow of 120,000 megalitres a
+  day measured at the border, one of ten scenarios from 100 to 341 gigalitres a day that the Department for
+  Environment and Water modelled to help with flood preparedness and risk management. Each row is one polygon of
+  the extent.
+publisher:
+  name: Department for Environment and Water
+  short: Environment and Water
+  jurisdiction: SA
+  url: https://www.environment.sa.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.sa.gov.au/data/dataset/flood-mapping-of-the-river-murray-120gl
+  attribution: Department for Environment and Water, Government of South Australia, Flood Mapping of the River
+    Murray 120GL, https://data.sa.gov.au/data/dataset/flood-mapping-of-the-river-murray-120gl, accessed {sourced}, licensed under CC BY 4.0.
+example:
+  group: flood_name
+  metric: count
+  label: Flood polygons
+source:
+  adapter: ckan-resource
+  portal: https://data.sa.gov.au/data
+  package: flood-mapping-of-the-river-murray-120gl
+  resource: 6eebebee-be50-47a6-93fb-41d5f6a45740
+  member: FLOODAWARENESS_RiverMurrayFloodMit120GL_GDA2020.shp
+  url: https://data.sa.gov.au/data/dataset/flood-mapping-of-the-river-murray-120gl
+  cadence: closed
+geometry:
+  kind: polygon
+  crs: EPSG:7844
+  crs_note: Shapes in GDA2020 (EPSG:7844), from the GDA2020 layer the publisher ships beside a GDA94 copy.
+  maxzoom: 10
+row_label: Flood polygons
+fields:
+- name: flood_name
+  label: Flood scenario
+  source: FLOOD_NAME
+  type: string
+omit:
+  SHAPE_Leng: The perimeter in degrees from the publisher's GIS; the shape carries it.
+  SHAPE_Area: The area in square degrees from the publisher's GIS; the shape carries it.

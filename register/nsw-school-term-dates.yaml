@@ -1,0 +1,69 @@
+slug: nsw-school-term-dates
+title: Public school term dates, New South Wales, 2019 to 2025
+status: live
+topics:
+- education
+order: 306
+publisher:
+  name: Transport for NSW
+  short: TfNSW
+  jurisdiction: NSW
+  url: https://www.transport.nsw.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.nsw.gov.au/data/dataset/2-school-and-public-holidays
+  attribution: Transport for NSW, NSW Government, School and public holidays, sourced {sourced}, https://data.nsw.gov.au/data/dataset/2-school-and-public-holidays,
+    licensed under CC BY 4.0.
+collection: nsw-school-and-public-holidays
+collection_title: School and public holidays, New South Wales
+temporal_start: '2019-01-29'
+search_title: NSW school term dates 2019 to 2025 (Transport for NSW)
+also_known_as:
+- NSW public school terms
+- NSW school holidays dates
+- NSW school days calendar
+keywords:
+- school terms
+- school holidays
+- term dates
+- calendar
+- Transport for NSW
+- New South Wales
+faq:
+- q: What is in each row?
+  a: One NSW public school term, with the first and last day students attend. The school holidays are
+    the gaps between one term's end and the next term's start.
+- q: Is this table still updated?
+  a: Transport for NSW marks the file as no longer updated, and it ends with Term 4 of 2025. The Department
+    of Education sets the term dates for NSW public schools and publishes later years on its own site.
+- q: Do the dates include school development days?
+  a: The publisher notes that school development days fall at the start of Terms 1, 2 and 3 and on the
+    last two days of the school year, and that schools may vary some dates.
+summary: The first and last day of each NSW public school term from 2019 to 2025, as Transport for NSW
+  lists them.
+description: The NSW Public School Days table from Transport for NSW's School and public holidays dataset.
+  Each row is one public school term from Term 1 of 2019 to Term 4 of 2025, with its start and end date.
+  The Department of Education sets the dates.
+source:
+  adapter: ckan-resource
+  portal: https://data.nsw.gov.au/data
+  package: 2-school-and-public-holidays
+  resource: 2d434242-adb8-4576-9b2a-5592e5eaf0b6
+  url: https://data.nsw.gov.au/data/dataset/2-school-and-public-holidays
+  cadence: no longer updated
+key:
+- start_day
+row_label: Terms
+fields:
+- name: start_day
+  label: Term starts
+  source: START_DAY
+  type: date
+  date_format: '%d/%m/%Y'
+- name: end_day
+  label: Term ends
+  source: END_DAY
+  type: date
+  date_format: '%d/%m/%Y'

@@ -1,0 +1,243 @@
+{
+  "_comment": "Every sentence the site says about the query API and the agent tools. The tools under webmcp serve both the pages and the MCP server at /mcp. The build writes them into openapi.json, the agents page, llms.txt, each dataset page and its Markdown twin, site.js and functions/_tools.json. {name} is filled from limits; `code` becomes code in HTML. The gate checks limits, operators, metrics and parameters against functions/_query.js and functions/_api.js.",
+  "site": {
+    "summary": "Australian government open data republished as CSV, Excel, JSON, Parquet, SQLite, DuckDB, Arrow, GeoJSON and GeoPackage at URLs that never change. Every release is a dated, immutable version with schema, provenance and a diff. Run by National Digital. No government agency has endorsed it."
+  },
+  "limits": {
+    "requests": 60,
+    "window_seconds": 10,
+    "block_seconds": 10,
+    "limit_default": 100,
+    "limit_max": 10000
+  },
+  "api": {
+    "summary": "The query API returns only the rows you ask for, as JSON, NDJSON or CSV, from the same typed rows as the files. It needs no key.",
+    "rows": "`/api/v1/datasets/<slug>/rows` filters, selects, orders and pages any dataset.",
+    "aggregate": "`/api/v1/datasets/<slug>/aggregate` counts, sums, averages, minimums and maximums by group.",
+    "versions": "Without a version the API answers from the newest loaded version, and that answer changes when the publisher releases again. Put `versions/<date>/` before `rows` or `aggregate` for an answer that never changes. `/api/v1/datasets/<slug>/versions` lists the loaded versions.",
+    "filters": "Each filter is `field=operator.value` in the query string, and every filter must match. A number or date field compares as a number or date, and a text field compares as text. Values are case-sensitive except with `ilike`. Prefix `not.` to negate a filter, as `not.eq.value`.",
+    "provenance": "Every JSON answer carries the version, licence and attribution. CSV and NDJSON answers carry them in response headers.",
+    "terms_limits": "The query API allows {requests} requests in {window_seconds} seconds from one address. The MCP server counts each row tool call as two requests, against its own limit of {requests} requests in {window_seconds} seconds from one address. Files have no rate limit.",
+    "rate_limit": "The API allows {requests} requests in {window_seconds} seconds from one address. Above that it answers 429 for {block_seconds} seconds with a `Retry-After` header, a `RateLimit-Policy` header and a JSON body that gives the limit. Every API answer carries the same `RateLimit-Policy`. A client should wait the `Retry-After` seconds, or read the files, which have no limit."
+  },
+  "operators": {
+    "eq": { "label": "equals", "syntax": "eq.value", "description": "Equal to the value." },
+    "neq": { "label": "is not", "syntax": "neq.value", "description": "Not equal to the value. A blank cell does not match." },
+    "gt": { "label": "more than", "syntax": "gt.value", "description": "Greater than the value." },
+    "gte": { "label": "at least", "syntax": "gte.value", "description": "Greater than or equal to the value." },
+    "lt": { "label": "less than", "syntax": "lt.value", "description": "Less than the value." },
+    "lte": { "label": "at most", "syntax": "lte.value", "description": "Less than or equal to the value." },
+    "like": { "label": "matches", "syntax": "like.*text*", "description": "Matches a pattern where `*` stands for any run of characters. Case-sensitive." },
+    "ilike": { "label": "contains", "syntax": "ilike.*text*", "description": "The same as `like`, ignoring case." },
+    "in": { "label": "is one of", "syntax": "in.(a,b,c)", "description": "Equal to any value in the list. A value cannot contain a comma." },
+    "is.null": { "label": "is blank", "not_label": "is not blank", "syntax": "is.null", "description": "Blank in the source, or suppressed by the publisher." }
+  },
+  "metrics": ["count", "sum", "avg", "min", "max"],
+  "parameters": {
+    "select": { "description": "Fields to return, comma-separated. Every field when absent." },
+    "order": { "description": "`field.asc` or `field.desc`, comma-separated. The publisher's row order when absent." },
+    "limit": { "description": "Rows per page, 1 to {limit_max}. {limit_default} when absent." },
+    "offset": { "description": "Rows to skip. The `next` URL in each answer sets it for you." },
+    "group": { "on": "aggregate", "description": "Fields to group by, comma-separated." },
+    "metric": { "on": "aggregate", "description": "`count`, `sum.field`, `avg.field`, `min.field` or `max.field`, comma-separated. `count` when absent." },
+    "format": { "description": "`json`, `ndjson` or `csv`. JSON carries the provenance header, and the others carry it in response headers." },
+    "slug": { "in": "path", "description": "The dataset's slug, as in its page URL `/d/<slug>/`." },
+    "version": { "in": "path", "description": "A dated version loaded for queries, from the versions path. Answers for a dated version never change." }
+  },
+  "paths": {
+    "rows": { "summary": "Query {title}", "description": "Rows of {title} in {when}, filtered and paged." },
+    "aggregate": { "summary": "Counts, sums, averages, minimums and maximums by group", "description": "Groups and totals of any dataset in {when}. Filters work as they do on rows." },
+    "versions": { "summary": "The versions loaded for queries, newest first, with the URLs to query each" }
+  },
+  "responses": {
+    "200": "Rows with the version, licence and attribution. `next` is the URL of the following page, or null.",
+    "200_versions": "Loaded versions with row counts and URLs.",
+    "400": "The query names a field the dataset does not have, or a value of the wrong type.",
+    "404": "The dataset or version is not loaded for queries.",
+    "429": "More than {requests} requests in {window_seconds} seconds from one address. Blocked for {block_seconds} seconds. Wait `Retry-After` seconds.",
+    "retry_after": "Seconds until the block lifts.",
+    "ratelimit_policy": "The limit, as \"fair-use\";q={requests};w={window_seconds}."
+  },
+  "webmcp": {
+    "intro": "Pages register WebMCP tools through `navigator.modelContext` when the browser exposes it. The row tools call the query API, so their filters, counts and sums cover the whole table and an agent can answer a question about the data without leaving the page. On a dataset page they default to that dataset and describe each of its fields with the publisher's own wording and the values it holds. The search form and the backlog form carry declarative WebMCP annotations as well. Without any of it, the URLs above do the same work.",
+    "page_note": "On this page slug defaults to {slug} ({title}), and where lists its fields.",
+    "tools": {
+      "search_datasets": {
+        "title": "Search datasets",
+        "description": "Find the slug of a served dataset. Start here for any question about Australian government data, since the other tools read only the datasets this finds.\nEvery word in query must match the title, summary, publisher, keywords or a field name. A word matches its plural and other endings but never as a prefix, so bus does not find business.\nUp to 50 matches come back in one answer, with no paging. If nothing matches, try fewer or broader words, then search_catalogue.\nEach call costs one of the {requests} queries each address may make in {window_seconds} seconds.",
+        "annotations": { "readOnlyHint": true, "destructiveHint": false, "idempotentHint": true, "openWorldHint": false },
+        "input": {
+          "query": { "type": "string", "description": "Words from a title, publisher or field name" }
+        },
+        "required": ["query"],
+        "output": {"type": "object", "properties": {"results": {"type": "array", "items": {"type": "object", "properties": {"slug": {"type": "string", "description": "The id every other tool takes"}, "title": {"type": "string"}, "publisher": {"type": ["string", "null"]}, "licence": {"type": ["string", "null"], "description": "Licence id, such as CC-BY-4.0"}, "page": {"type": ["string", "null"], "description": "The dataset page on publicdata.au"}, "latest": {"type": ["string", "null"], "description": "URL of the newest version's whole file"}}, "required": ["slug", "title"]}, "description": "Matches, best first when the search index is loaded"}}, "required": ["results"]}
+      },
+      "get_dataset": {
+        "title": "Read a dataset",
+        "description": "Read a served dataset's data package and full version history. Use it to download the whole table, check the licence, or find version dates for diff_versions and the version parameter.\nFor field names use list_fields. To answer a question from the rows use query_rows or count_rows, which need no download.\nslug is lowercase letters, digits and hyphens, the part after /d/ in a dataset page URL, such as au-road-deaths.\nThe whole history comes back in one answer, with no paging. It needs no key or sign-in, and costs nothing against the rate limit. A slug that is not served returns a 404 error.",
+        "annotations": { "readOnlyHint": true, "destructiveHint": false, "idempotentHint": true, "openWorldHint": false },
+        "input": {
+          "slug": { "type": "string", "description": "Dataset slug from search_datasets" }
+        },
+        "required": ["slug"],
+        "output": {"type": "object", "properties": {"datapackage": {"type": "object", "description": "The Frictionless data package: description, licence, attribution string, source, and resources with the URL, format and size of the whole file in each format"}, "versions": {"description": "Every version with its date, the date its data is as at, row count, source hash and fetch time"}}, "required": ["datapackage", "versions"]}
+      },
+      "list_fields": {
+        "title": "List a dataset's fields",
+        "description": "List a served dataset's fields, with their types, descriptions, ranges and values, before querying it. Call it before query_rows or count_rows unless you already know the exact names and values, because where matches values exactly and an unknown field is an error. It also names the key fields diff_versions compares on and the partition fields list_partitions accepts.\nslug is lowercase letters, digits and hyphens, the part after /d/ in a dataset page URL, such as au-road-deaths.\nThe answer describes the newest version, in one page. The call costs nothing against the rate limit. A slug that is not served or not loaded for queries returns an error.",
+        "annotations": { "readOnlyHint": true, "destructiveHint": false, "idempotentHint": true, "openWorldHint": false },
+        "input": {
+          "slug": { "type": "string", "description": "Dataset slug from search_datasets" }
+        },
+        "required": ["slug"],
+        "output": {"type": "object", "properties": {"slug": {"type": "string"}, "title": {"type": "string"}, "publisher": {"type": ["string", "null"]}, "licence": {"type": ["string", "null"]}, "attribution": {"type": ["string", "null"], "description": "The publisher's attribution string, to show with any answer"}, "version": {"type": "string", "description": "The version the fields describe"}, "rows": {"type": "integer", "description": "Rows in that version"}, "fields": {"type": "array", "items": {"type": "object", "properties": {"name": {"type": "string"}, "type": {"type": "string"}, "description": {"type": "string"}, "min": {}, "max": {}, "values": {"type": "array"}}, "required": ["name", "type"]}, "description": "Each field's name, type and publisher's description, with min and max for numbers and dates and values when it holds few"}, "key": {"type": "array", "items": {"type": "string"}, "description": "Fields that identify a row, compared on by diff_versions. Empty when none is declared"}, "partition_by": {"type": "array", "items": {"type": "string"}, "description": "Fields list_partitions accepts"}}, "required": ["slug", "version", "fields", "key", "partition_by"]}
+      },
+      "list_partitions": {
+        "title": "List partition files",
+        "description": "List the download files that split a served dataset's newest version by one field, such as one file per year. Use it to hand someone a slice of the data as a file. To answer a question use query_rows or count_rows instead, and for the whole table use get_dataset. field must be one of the partition_by fields that list_fields names, and any other field returns a 404 error. Every value comes back in one answer, with no paging. The call costs nothing against the rate limit.",
+        "annotations": { "readOnlyHint": true, "destructiveHint": false, "idempotentHint": true, "openWorldHint": false },
+        "input": {
+          "slug": { "type": "string", "description": "Dataset slug from search_datasets" },
+          "field": { "type": "string", "description": "A partition field named in the data package, for example crash_year or loc_local_government_area" }
+        },
+        "required": ["slug", "field"],
+        "output": {"type": "object", "properties": {"field": {"type": "string"}, "version_base": {"type": "string", "description": "The version these files belong to"}, "partitions": {"type": "array", "items": {"type": "object", "properties": {"value": {}, "rows": {"type": "integer"}, "url": {"type": "string"}}, "required": ["value", "rows", "url"]}, "description": "One entry per value: the value, its row count and the URL of a JSON file with every row holding it"}}, "required": ["field", "version_base", "partitions"]}
+      },
+      "query_rows": {
+        "title": "Query rows",
+        "description": "Read individual rows of a served dataset, filtered across the whole table. For totals and breakdowns use count_rows.\nField names and values for where, select and order come from list_fields.\nFilters hold at most 90 values per call, and a list value cannot contain a comma.\nversion must be one of the two newest versions.\nPage with offset until next_offset is null. An unknown field or version returns an error naming it.\nEach call costs two of the {requests} queries each address may make in {window_seconds} seconds.",
+        "annotations": { "readOnlyHint": true, "destructiveHint": false, "idempotentHint": true, "openWorldHint": false },
+        "api": "rows",
+        "input": {
+          "slug": { "type": "string", "description": "Dataset slug from search_datasets" },
+          "where": { "api": "filters" },
+          "select": { "api": "select", "type": "array", "items": { "type": "string" }, "description": "Fields to return. Every field when absent." },
+          "order": { "api": "order", "type": "string" },
+          "limit": { "api": "limit", "type": "integer", "minimum": 1, "maximum": 500, "default": 50, "description": "Rows to return, 1 to 500. 50 when absent." },
+          "offset": { "api": "offset", "type": "integer", "minimum": 0, "default": 0, "description": "Rows to skip. next_offset in each answer gives the next page." },
+          "version": { "api": "version", "type": "string" }
+        },
+        "required": ["slug"],
+        "output": {"type": "object", "properties": {"version": {"type": ["string", "null"], "description": "The version answered"}, "rows": {"type": "array", "items": {"type": "object"}, "description": "The rows, with the fields in select or every field"}, "matched": {"type": "integer", "description": "Rows in the whole table that match where"}, "next_offset": {"type": ["integer", "null"], "description": "offset for the next page, or null on the last"}, "query": {"type": "string", "description": "The query API URL that gives the same answer"}, "attribution": {"type": ["string", "null"], "description": "The publisher's attribution string, to show with any answer"}}, "required": ["version", "rows", "matched", "next_offset", "query"]}
+      },
+      "count_rows": {
+        "title": "Count and sum rows",
+        "description": "Count, sum, average, minimum or maximum rows of a served dataset across the whole table, grouped by up to three fields. For the rows themselves use query_rows.\nField names and values for group_by and where come from list_fields.\nsum and avg need a numeric or true-or-false field. min and max take any field.\nversion must be one of the two newest versions.\nGroups come back largest first, and truncated means raise limit or narrow where. An unknown field or version returns an error naming it.\nEach call costs two of the {requests} queries each address may make in {window_seconds} seconds.",
+        "annotations": { "readOnlyHint": true, "destructiveHint": false, "idempotentHint": true, "openWorldHint": false },
+        "api": "aggregate",
+        "input": {
+          "slug": { "type": "string", "description": "Dataset slug from search_datasets" },
+          "group_by": { "api": "group", "type": "array", "items": { "type": "string" }, "maxItems": 3, "description": "Fields to group by, for example [\"crash_severity\"]. One total when absent." },
+          "metric": { "api": "metric", "type": "string", "default": "count", "description": "`count`, or `sum`, `avg`, `min` or `max` of a field written as `sum.field_name`. `count` when absent." },
+          "where": { "api": "filters" },
+          "limit": { "api": "limit", "type": "integer", "minimum": 1, "maximum": 1000, "default": 100, "description": "Groups to return, 1 to 1000. 100 when absent." },
+          "version": { "api": "version", "type": "string" }
+        },
+        "required": ["slug"],
+        "output": {"type": "object", "properties": {"version": {"type": ["string", "null"], "description": "The version answered"}, "group_by": {"type": "array", "items": {"type": "string"}}, "metric": {"type": "string"}, "groups": {"type": "array", "items": {"type": "object"}, "description": "One object per group, holding the group_by fields and the metric value, largest first"}, "truncated": {"type": "boolean", "description": "True when more groups exist than limit"}, "matched": {"type": "integer", "description": "Rows in the whole table that match where"}, "query": {"type": "string", "description": "The query API URL that gives the same answer"}, "attribution": {"type": ["string", "null"], "description": "The publisher's attribution string, to show with any answer"}}, "required": ["version", "group_by", "metric", "groups", "truncated", "matched", "query"]}
+      },
+      "diff_versions": {
+        "title": "Compare versions",
+        "description": "Compare two consecutive versions of a served dataset row by row on its key fields, to see what a publisher changed between releases. from and to must be adjacent dates in the version history from get_dataset, older first. Any other pair returns a 404 error, so step through a longer span one pair at a time. A dataset with no key, which list_fields shows as an empty key, gets row counts only, and a dataset with one version has nothing to compare. The call costs nothing against the rate limit.",
+        "annotations": { "readOnlyHint": true, "destructiveHint": false, "idempotentHint": true, "openWorldHint": false },
+        "input": {
+          "slug": { "type": "string", "description": "Dataset slug from search_datasets" },
+          "from": { "type": "string", "description": "Older version date, YYYY-MM-DD" },
+          "to": { "type": "string", "description": "Newer version date, YYYY-MM-DD" }
+        },
+        "required": ["slug", "from", "to"],
+        "output": {"type": "object", "properties": {"dataset": {"type": "string"}, "from": {"type": "string", "description": "Older version date"}, "to": {"type": "string", "description": "Newer version date"}, "rows_from": {"type": "integer"}, "rows_to": {"type": "integer"}, "key": {"type": "array", "items": {"type": "string"}, "description": "Key fields compared on. Empty when none is declared"}, "schema": {"type": "object", "description": "Fields added, removed and retyped between the versions"}, "note": {"type": "string", "description": "Present when no key is declared and only row counts are compared"}, "added": {"type": "integer"}, "removed": {"type": "integer"}, "changed": {"type": "integer"}, "unchanged": {"type": "integer"}, "added_keys": {"type": "array"}, "removed_keys": {"type": "array"}, "changed_keys": {"type": "array"}, "truncated": {"type": "boolean", "description": "True when a key list stops at its cap"}, "examples": {"type": "array", "description": "Up to ten changed rows, each with its key and the fields that changed from and to"}}, "required": ["dataset", "from", "to", "rows_from", "rows_to", "key", "schema"]}
+      },
+      "search_catalogue": {
+        "title": "Search government portals",
+        "description": "Search every dataset listed on Australia's government portals, including the many publicdata.au does not serve yet. Its records describe data held elsewhere, which cannot be queried here.\nUse it when search_datasets finds nothing, to find where a dataset is published, or to pick one for upvote_dataset.\nquery matches every word against the title, summary and publisher, as search_datasets does.\nA page holds 20 records, those that can take a vote first. Pass next_offset as offset for the next page, up to 5000.\nEach call costs three of the {requests} queries each address may make in {window_seconds} seconds.",
+        "annotations": { "readOnlyHint": true, "destructiveHint": false, "idempotentHint": true, "openWorldHint": false },
+        "input": {
+          "query": { "type": "string", "description": "Words from a title, description or publisher" },
+          "jurisdiction": { "type": "string", "enum": ["cth", "nsw", "vic", "qld", "wa", "sa", "tas", "act", "nt"], "description": "One government. All when absent." },
+          "votable_only": { "type": "boolean", "default": false, "description": "Leave out records that cannot take a vote" },
+          "offset": { "type": "integer", "minimum": 0, "maximum": 5000, "default": 0, "description": "Rows to skip. next_offset in each answer gives the next page." }
+        },
+        "required": ["query"],
+        "output": {"type": "object", "properties": {"catalogue_read": {"type": "string", "description": "Date the portal lists were read"}, "records": {"type": "integer"}, "total": {"type": "integer", "description": "Records that match"}, "next_offset": {"type": ["integer", "null"], "description": "offset for the next page, or null on the last"}, "rows": {"type": "array", "items": {"type": "object", "properties": {"id": {"type": "string"}, "title": {"type": "string"}, "summary": {"type": "string"}, "publisher": {"type": "string"}, "publisher_page": {"type": "string"}, "jur": {"type": "string"}, "url": {"type": "string", "description": "The record on the publisher's portal"}, "licence": {"type": "string"}, "formats": {"type": "string"}, "modified": {"type": "string"}, "state": {"type": "string", "enum": ["votable", "chosen", "served", "closed"], "description": "votable or chosen takes a vote, served is already readable, closed cannot be built"}, "vote": {"type": "string", "description": "The key upvote_dataset takes"}, "page": {"type": "string"}, "reason": {"type": ["string", "null"], "description": "Why a closed record cannot be built"}}, "required": ["id", "title", "state", "vote"]}}}, "required": ["catalogue_read", "rows"]}
+      },
+      "list_backlog": {
+        "title": "List the build backlog",
+        "description": "List the datasets people have asked publicdata.au to build, most votes first. Use it to see what is wanted or under way, or to check that a vote counted.\nTo add a vote use upvote_dataset. To read a dataset that is already served use search_datasets.\nVotes on catalogue records that no entry has claimed yet come back apart, under the vote key search_catalogue uses.\nThe whole backlog comes back in one answer, with no paging, and the call costs nothing against the rate limit.",
+        "annotations": { "readOnlyHint": true, "destructiveHint": false, "idempotentHint": true, "openWorldHint": false },
+        "input": {},
+        "required": [],
+        "output": {"type": "object", "properties": {"entries": {"type": "array", "description": "Register entries that are not live yet, most votes first", "items": {"type": "object", "properties": {"slug": {"type": "string", "description": "The key upvote_dataset takes"}, "title": {"type": "string"}, "publisher": {"type": ["string", "null"]}, "status": {"type": "string", "enum": ["backlog", "assessing", "building", "blocked"], "description": "backlog and assessing wait for votes, building is under way, blocked cannot be built yet"}, "votes": {"type": "integer"}, "summary": {"type": ["string", "null"]}, "source": {"type": ["string", "null"], "description": "The publisher's own page for the data"}, "blocked_reason": {"type": ["string", "null"], "description": "Why a blocked entry cannot be built yet"}}, "required": ["slug", "title", "status", "votes"]}}, "catalogue_votes": {"type": "array", "description": "Votes on catalogue records no register entry has claimed yet, most first", "items": {"type": "object", "properties": {"vote": {"type": "string", "description": "The record's vote key, which search_catalogue finds"}, "votes": {"type": "integer"}}, "required": ["vote", "votes"]}}}, "required": ["entries", "catalogue_votes"]}
+      },
+      "upvote_dataset": {
+        "title": "Vote for a dataset",
+        "description": "Add one anonymous vote for a government dataset that publicdata.au does not serve yet, so it is built sooner. To read a served dataset use search_datasets, and to see the votes so far use list_backlog.\nslug is a vote key from search_catalogue, such as act-3u5a-ve4j, or a list_backlog slug.\nA dataset that is served, being built or closed returns an error saying it is not open for votes.\nNo identity is recorded, and a second vote from the same caller on the same day adds nothing. The call costs nothing against the rate limit.",
+        "annotations": { "readOnlyHint": false, "destructiveHint": false, "idempotentHint": true, "openWorldHint": false },
+        "input": {
+          "slug": { "type": "string", "description": "The vote key of a search_catalogue row, or a slug from /backlog.json" }
+        },
+        "required": ["slug"],
+        "output": {"type": "object", "properties": {"slug": {"type": "string"}, "votes": {"type": "integer", "description": "The dataset's vote total after this call"}}, "required": ["slug", "votes"]}
+      }
+    },
+    "where": "Filters by field name, applied to the whole table. A value may be a scalar for an exact, case-sensitive match, a list of scalars to match any of them, null to match blank or suppressed cells, {\"min\": n, \"max\": n} for an inclusive range, or {\"like\": \"*text*\"} for a case-insensitive match where * is the wildcard. A blank cell never matches a scalar, a list or a range.",
+    "version": "A version date, YYYY-MM-DD, from get_dataset. The newest version loaded for queries when absent."
+  },
+  "mcp": {
+    "name": "publicdata-au",
+    "registry_name": "au.publicdata/mcp",
+    "title": "publicdata.au",
+    "protocol_versions": ["2025-11-25", "2025-06-18", "2025-03-26"],
+    "registry_description": "Search, filter, count and sum Australian government open data, with every version kept.",
+    "add_command": "claude mcp add --transport http publicdata https://publicdata.au/mcp",
+    "connect": [
+      {"label": "Claude Code", "kind": "command", "value": "claude mcp add --transport http publicdata https://publicdata.au/mcp", "note": "One command. No key, no account, no sign-up."},
+      {"label": "Claude", "kind": "text", "value": "Settings, then Connectors, then Add custom connector, and paste https://publicdata.au/mcp.", "note": "On the web and in the desktop app."},
+      {"label": "Any MCP client", "kind": "command", "value": "https://publicdata.au/mcp", "note": "Streamable HTTP. Cursor, VS Code or any client that connects to a remote MCP server."},
+      {"label": "Paste a prompt", "kind": "prompt", "value": "Using https://publicdata.au/llms.txt, how many people died on Queensland roads in 2025, by month?", "note": "For an assistant that reads the web and has no connector."}
+    ],
+    "intro": "`https://publicdata.au/mcp` is a remote MCP server over Streamable HTTP with the same tools, defined in the same place, so a tool added to the pages is added here too. It needs no key and no account. The row tools are held to the query API's limit of {requests} queries in {window_seconds} seconds from one address, and each call is two queries because it also counts the matching rows. Add it to Claude Code with `claude mcp add --transport http publicdata https://publicdata.au/mcp`, add the URL in Claude as a custom connector, or give it to any client that connects to remote MCP servers. Each queryable dataset is also a resource at `https://publicdata.au/d/<slug>/fields.json`, which lists its fields with their types, the publisher's descriptions, their ranges and the values they hold, so an agent can read a dataset's shape before it writes a query.",
+    "resource": "The fields of {title}, from {publisher}: each field's type and the publisher's description, the range of numbers and dates, and the values a field holds when it has few. Use them to write where filters for query_rows and count_rows.",
+    "resource_template": "The fields of one dataset by slug: types, the publisher's descriptions, ranges and the values each field holds. Find slugs with search_datasets or resources/list.",
+    "listing": {
+      "categories": ["Data & Analytics"],
+      "listed_at": [
+        { "name": "Claude's connector directory", "url": "https://claude.ai/directory/publicdata-au" },
+        { "name": "Glama", "url": "https://glama.ai/mcp/connectors/au.publicdata/mcp" },
+        { "name": "Smithery", "url": "https://smithery.ai/servers/national-digital/publicdata-au" }
+      ],
+      "listed_note": "It is listed in {listings}.",
+      "use_cases": [
+        { "use_case": "Answer a question from a whole dataset", "prompt": "How many people died on Queensland roads in 2025, by month?" },
+        { "use_case": "Find data on a topic", "prompt": "What Australian government data is there on road crashes, and who publishes it?" },
+        { "use_case": "Ask for a dataset to be built", "prompt": "Vote for acnc-register, the ACNC Register of Australian charities, to be added to publicdata.au." }
+      ],
+      "prerequisites": "None. The server is public, with no account, key or login. It reads Australian government open data that publicdata.au republishes, and the one write is an anonymous vote for a dataset to be built.",
+      "tools_intro": "Tools:",
+      "support": "https://nationaldigital.com.au/contact/"
+    },
+    "prompts_note": "It also offers the prompts {prompts}, and suggests dataset slugs as a client types one.",
+    "prompts": {
+      "ask_dataset": {
+        "title": "Ask a dataset",
+        "description": "Answer a question from one dataset, with its fields attached and the answer cited to the version it came from.",
+        "arguments": {
+          "slug": { "description": "Dataset slug from search_datasets", "required": true },
+          "question": { "description": "What to find out from the data", "required": false }
+        },
+        "text": "Answer from the publicdata.au dataset {slug}. Its fields are attached. Use count_rows for totals and breakdowns and query_rows for individual rows, and filter with where using the field names and values listed. Say which version the answer came from and give the attribution string and the query URL.",
+        "question": "Question: {question}"
+      },
+      "find_data": {
+        "title": "Find data on a topic",
+        "description": "Search publicdata.au for datasets on a topic and say what each holds.",
+        "arguments": {
+          "topic": { "description": "A subject, place or publisher", "required": true }
+        },
+        "text": "Find datasets on publicdata.au about {topic} with search_datasets. For each match, read its fields with list_fields, then say in a sentence what it holds, who publishes it, its licence and the years it covers."
+      }
+    },
+    "privacy": "The MCP server records nothing about who calls it or what they ask. To keep the rate limit, it counts row tool calls per address in Cloudflare's cache for {window_seconds} seconds.",
+    "instructions": "Australian government open data, republished at URLs that never change. Find a dataset with search_datasets, read its fields with list_fields, then answer from the whole table with query_rows or count_rows. A dataset that is not served yet can be found with search_catalogue and voted for with upvote_dataset. Every answer names the version it came from and the publisher's attribution string. When you show the data to a person, use the attribution string, say it came from publicdata.au and link to the version the answer came from, https://publicdata.au/d/<slug>/v/<version>/. Use of this server is under https://publicdata.au/terms/."
+  }
+}

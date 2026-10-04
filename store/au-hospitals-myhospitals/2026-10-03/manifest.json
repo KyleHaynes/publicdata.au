@@ -1,0 +1,30 @@
+{
+  "dataset": "au-hospitals-myhospitals",
+  "version": "2026-10-03",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:15:28+00:00",
+  "sha256": "dcbe87cb208464e7b5fb82ebae3357117da9d0af2818f05b6b8b15beb0d914a2",
+  "bytes": 140302,
+  "filename": "au-hospitals-myhospitals.xlsx",
+  "encoding": "xlsx",
+  "source": {
+    "url": "https://myhospitalsapi.aihw.gov.au/api/v1/reporting-units-downloads/mappings",
+    "etag": "",
+    "http_last_modified": ""
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "stated": "has been released under a Creative Commons BY 4.0 (CC-BY 4.0) licence",
+    "normalised": "CC-BY-4.0",
+    "title": "CC BY 4.0",
+    "url": "https://www.aihw.gov.au/copyright",
+    "read_from": "https://www.aihw.gov.au/copyright",
+    "read_at": "2026-10-03T03:15:27+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [
+    "The publisher's server states no change date, so this version is dated by the fetch."
+  ],
+  "rows_sha256": "fd340a9c8d2d762b28e548efe6b86e51e96f7acf1164a84062c1f89145e8609a"
+}

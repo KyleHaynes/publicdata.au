@@ -1,0 +1,117 @@
+slug: tas-rental-bonds-closed-2016-11
+title: Rental bonds closed, Tasmania, November 2016
+status: live
+topics:
+- housing
+example:
+  where:
+    bedrooms:
+      gte: 1
+      lte: 5
+  group: bedrooms
+  metric: avg.weekly_rent
+  label: Average weekly rent ($)
+chart:
+  split: none
+  metric: count
+  label: Closed bonds lodged
+order: 488
+temporal_start: '2016-11-01'
+collection: tas-rental-bonds-2016-11
+collection_title: Rental bonds, Tasmania, November 2016
+search_title: Tasmania rental bonds closed November 2016 (Justice Tasmania)
+also_known_as:
+- Rental Bond and Rental Data November 2016, closed bonds
+- Tasmanian rental bond refunds
+- Tasmania ended tenancies 2016
+keywords:
+- rental bonds
+- weekly rent
+- tenancy length
+- Rental Deposit Authority
+- Tasmania
+faq:
+- q: What is in each row?
+  a: One bond closed in November 2016, with the suburb and postcode of the rented home, the bond amount
+    and weekly rent in dollars, the dates the bond was lodged, made active and closed, the number of
+    bedrooms, the dwelling type and the length of the tenancy in months as recorded at lodgement.
+- q: Why do some bonds date from years earlier?
+  a: A bond is closed when its tenancy ends, so a bond closed in November 2016 may have been lodged in
+    any earlier year.
+- q: Is there a later month?
+  a: No. The department published November 2016 only. The series is closed.
+summary: Every Tasmanian rental bond closed in November 2016, one row per bond, with suburb, bond amount,
+  weekly rent, lodgement and closing dates, bedrooms and dwelling type.
+description: The rental bonds held by the Rental Deposit Authority that were closed in November 2016,
+  one row per bond. Each row carries the suburb, state and postcode of the rented home, the bond amount
+  and weekly rent in dollars, the bond lodgement, activation and closing dates, the number of bedrooms,
+  the dwelling or premises type, and the length of the tenancy in months.
+publisher:
+  name: Department of Justice
+  short: Justice Tasmania
+  jurisdiction: Tas
+  url: https://www.justice.tas.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://data.gov.au/data/dataset/rental-bond-and-rental-data
+  attribution: Department of Justice, Tasmanian Government, Rental Bond and Rental Data November 2016,
+    https://data.gov.au/data/dataset/rental-bond-and-rental-data, accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: ckan-resource
+  portal: https://data.gov.au/data
+  package: rental-bond-and-rental-data
+  resource: 82cfa8a7-e5b6-42f2-8e69-52f74c5fb5d2
+  url: https://data.gov.au/data/dataset/rental-bond-and-rental-data
+  sheet: Closed_Nov2016
+  cadence: closed
+partition_by:
+- dwelling_type
+row_label: Bonds
+fields:
+- name: suburb
+  label: Suburb
+  source: Suburb
+  type: string
+- name: state
+  label: State
+  source: State
+  type: string
+- name: postcode
+  label: Postcode
+  source: Postcode
+  type: string
+- name: bond_amount
+  label: Bond amount ($)
+  source: Bond Amount
+  type: number
+- name: weekly_rent
+  label: Weekly rent ($)
+  source: Weekly Rent
+  type: number
+- name: lodgement_date
+  label: Lodgement date
+  source: Bond Lodgement date (DD/MM/YYYY)
+  type: date
+- name: activation_date
+  label: Activation date
+  source: Bond Activation date (DD/MM/YYYY)
+  type: date
+- name: closed_date
+  label: Closed date
+  source: Bond Closed date (DD/MM/YYYY)
+  type: date
+- name: bedrooms
+  label: Bedrooms
+  source: No of Bedrooms
+  type: integer
+- name: dwelling_type
+  label: Dwelling type
+  source: Dwelling/Premises Type
+  type: string
+- name: tenancy_months
+  label: Tenancy length (months)
+  source: Length of Tenancy (In Months)
+  type: integer
+note: Cells were typed and headers were made snake_case. The publisher's header is kept beside every
+  field in schema.json. Rows were left alone.

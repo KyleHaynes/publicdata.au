@@ -1,0 +1,115 @@
+slug: act-lakes-rivers-water-quality
+title: Lakes and rivers water quality samples, ACT
+status: live
+topics:
+- nature
+example:
+  group: sitename
+  metric: count
+chart:
+  where: {date: {gte: '2016-01-01'}}
+  label: Measurements
+order: 467
+temporal_start: '2015-05-01'
+search_title: ACT lakes and rivers water quality monitoring results (Office of Water)
+also_known_as:
+- ACT Lakes and Rivers Water Quality
+- Lake Ginninderra and Lake Tuggeranong water quality data
+- Murrumbidgee and Molonglo water quality samples
+keywords:
+- water quality
+- lakes
+- rivers
+- nutrients
+- algae
+- pH
+- dissolved oxygen
+- Canberra
+- ACT
+faq:
+- q: What is in each row?
+  a: One measurement of one analyte in one sample, with the date, the site code and name, the site's
+    coordinates, the depth or sample type, the analyte, the value and its unit.
+- q: What do the less than and greater than values mean?
+  a: The publisher writes a value outside the laboratory's limit of detection with a less than or greater
+    than sign. The value is kept as text so those signs survive.
+- q: How often are sites sampled?
+  a: The publisher samples 20 sites in the ACT and one in Burrinjuck Reservoir six to eight times a year,
+    in rivers, creeks, urban lakes and ponds. In lakes a probe takes a depth profile from the surface to
+    the bottom.
+summary: Water quality samples from the ACT Government's lakes and rivers monitoring program since 2015,
+  one row per measurement with the site, depth, analyte, value and unit.
+description: Results of the ACT Lakes and Rivers water quality monitoring program, which a NATA accredited
+  laboratory runs for the ACT Government at 20 sites in the ACT and one in Burrinjuck Reservoir. Each row
+  carries the sampling date and time, the site code and name, latitude and longitude, the depth in metres
+  or the sample type (surface, bottom or depth-integrated tube), the analyte (24 physical, chemical and
+  biological measures and the gauge height and flow), the value and the unit.
+publisher:
+  name: Office of Water, City and Environment Directorate
+  short: Office of Water
+  jurisdiction: ACT
+  url: https://www.climatechoices.act.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-10-01'
+  evidence: https://www.data.act.gov.au/d/kcii-s5em
+  attribution: Office of Water, ACT Government, ACT Lakes and Rivers Water Quality, https://www.data.act.gov.au/d/kcii-s5em,
+    accessed {sourced}, licensed under CC BY 3.0 AU.
+source:
+  adapter: socrata
+  portal: https://www.data.act.gov.au
+  package: kcii-s5em
+  url: https://www.data.act.gov.au/d/kcii-s5em
+  cadence: yearly
+partition_by:
+- siteid
+geometry:
+  lon: longitude
+  lat: latitude
+  crs: EPSG:4283
+  crs_note: Longitude and latitude in decimal degrees as published. The publisher does not name the
+    datum; GDA94 differs from GDA2020 and WGS84 by under 2 metres.
+row_label: Measurements
+fields:
+- name: date
+  label: Date and time
+  source: Date
+  type: datetime
+  date_format: '%m/%d/%Y %I:%M:%S %p'
+  description: The publisher says the time of day is not accurate.
+- name: siteid
+  label: Site code
+  source: SiteID
+  type: string
+- name: sitename
+  label: Site
+  source: SiteName
+  type: string
+- name: latitude
+  label: Latitude
+  source: Latitude
+  type: number
+- name: longitude
+  label: Longitude
+  source: Longitude
+  type: number
+- name: depth
+  label: Depth or sample type
+  source: Depth
+  type: string
+  description: Metres below the surface, or S, B or T for a surface, bottom or depth-integrated tube sample.
+- name: variable
+  label: Analyte
+  source: Variable
+  type: string
+- name: value
+  label: Value
+  source: Value
+  type: string
+  description: Text, so a value the publisher marks as below or above the limit of detection keeps its sign.
+- name: unit
+  label: Unit
+  source: Unit
+  type: string
+note: Cells were typed and headers were made snake_case. The publisher's header is kept beside every field
+  in schema.json. Rows were left alone.

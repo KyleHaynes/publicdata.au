@@ -1,0 +1,88 @@
+slug: qld-mobile-speed-camera-sites
+title: Mobile speed camera sites, Queensland
+status: live
+topics:
+- roads
+order: 210
+collection: qld-speed-camera-sites
+collection_title: Speed camera sites in Queensland
+search_title: Queensland mobile speed camera sites (Queensland Police Service)
+collection_search_title: Queensland speed camera locations (Queensland Police Service)
+also_known_as:
+- QLD speed camera locations
+- Mobile speed camera sites Queensland
+- Where are speed cameras in Queensland
+keywords:
+- speed cameras
+- mobile speed cameras
+- camera sites
+- road safety
+- QPS
+- Queensland
+collection_description: |
+  The Queensland Police Service Road Safety Camera Office lists the sites where its portable, marked and covert mobile speed cameras and its road safety camera trailers may operate. The two lists are published together and updated quarterly.
+
+  A site is a stretch of road described by a road name and locality. A camera is not at every site at once.
+faq:
+- q: What is in each row?
+  a: One approved mobile speed camera site, with its site number, whether it is a primary or secondary
+    site, whether it is active or parked, and a description of the road and locality.
+- q: Does it show where cameras are today?
+  a: No. It lists the sites where a mobile camera may be set up. The police do not publish which sites
+    are in use on a given day.
+- q: Are there coordinates?
+  a: No. The publisher describes each site by road and locality only, and several sites can share one
+    road and locality.
+summary: Every approved site for mobile speed cameras in Queensland, with its site number, type, status
+  and road and locality, from the Queensland Police Service.
+description: The list of sites where the Queensland Police Service may operate portable, marked and covert
+  mobile speed cameras, one row per site. Each row has the site number, the site type, whether it is active
+  or parked, and the road and locality. The police update the list quarterly.
+publisher:
+  name: Queensland Police Service
+  short: QPS
+  jurisdiction: Qld
+  url: https://www.police.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/active-mobile-speed-camera-sites
+  attribution: Queensland Police Service, Queensland Government, Active mobile speed camera sites, sourced
+    {sourced}, https://www.data.qld.gov.au/dataset/active-mobile-speed-camera-sites, licensed under CC
+    BY 4.0.
+example:
+  where: {site_status: Active}
+  group: site_type
+  metric: count
+  label: Active mobile speed camera sites of each type
+sample:
+  spread: site_type
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: active-mobile-speed-camera-sites
+  resource: f6b5c37e-de9d-4041-8c18-f4d4b6c593a8
+  url: https://www.data.qld.gov.au/dataset/active-mobile-speed-camera-sites
+  encoding: utf-8-sig
+  cadence: quarterly
+key:
+- site_number
+row_label: Sites
+fields:
+- name: site_number
+  label: Site number
+  source: Site Number
+  type: integer
+- name: site_type
+  label: Site type
+  source: Site Type
+  type: string
+- name: site_status
+  label: Status
+  source: Site Status
+  type: string
+- name: location
+  label: Road and locality
+  source: Primary Descriptor
+  type: string
+note: Headers were made snake_case. Rows were left alone.

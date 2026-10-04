@@ -1,0 +1,97 @@
+slug: vic-prison-locations
+title: Prison locations and capacity, Victoria, 2009
+status: live
+topics:
+- crime
+example:
+  group: security
+  metric: sum.operational_capacity
+  label: Operational capacity
+order: 366
+publisher:
+  name: Department of Justice (Victoria)
+  short: Department of Justice
+  jurisdiction: Vic
+  url: https://www.justice.vic.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.gov.au/data/dataset/prison-locations-victoria
+  attribution: Department of Justice (Victoria), Victorian Government, Prison Locations (Victoria), sourced
+    {sourced}, https://data.gov.au/data/dataset/prison-locations-victoria, licensed under CC BY 3.0 AU.
+search_title: Victorian prisons list with address, security level and capacity (Department of Justice)
+also_known_as:
+- Prison locations Victoria
+- List of prisons in Victoria
+- Victorian prison operational capacity
+keywords:
+- prisons
+- correctional centres
+- prison capacity
+- security level
+- corrections
+- Victoria
+faq:
+- q: What does each row hold?
+  a: One Victorian prison or correctional centre, with its address, town, phone number, operational
+    capacity, security level, a street directory map reference, a short profile and, for some, a link to
+    the department's page about it.
+- q: When is the capacity from?
+  a: The publisher states the operational capacity as at 30 June 2009. The file was published in 2013 and
+    has not changed since, so prisons opened or closed after then are not reflected.
+- q: Why is there a row that is not a prison?
+  a: The publisher ends the file with its footnote on the capacity date, which is kept as published.
+summary: The 14 prisons and correctional centres in Victoria with their address, security level and
+  operational capacity as at 30 June 2009.
+description: Locations of Victoria's public and private prisons and correctional centres, one row per
+  facility, from the Department of Justice. Each row gives the address, town, phone number, security level
+  and operational capacity as at 30 June 2009, with a short profile of the prisoners it holds. The links in
+  the file point to department pages that have since moved.
+source:
+  adapter: ckan-resource
+  portal: https://data.gov.au/data
+  package: prison-locations-victoria
+  resource: 0bceed87-e2f2-4d4c-98f9-bb7dfbeb3a63
+  url: https://data.gov.au/data/dataset/prison-locations-victoria
+  cadence: no longer updated
+row_label: Prisons
+fields:
+- name: prison_name
+  label: Prison
+  source: Prison Name
+  type: string
+- name: address
+  label: Address
+  source: Address
+  type: string
+- name: town
+  label: Town
+  source: Town
+  type: string
+- name: phone
+  label: Phone
+  source: Phone
+  type: string
+- name: operational_capacity
+  label: Operational capacity
+  source: Operational capacity*
+  type: integer
+  description: The number of prisoners the facility could hold as at 30 June 2009.
+- name: security
+  label: Security level
+  source: Security
+  type: string
+- name: map_ref
+  label: Map reference
+  source: Map Ref
+  type: string
+  description: A street directory map reference.
+- name: profile
+  label: Profile
+  source: Profile
+  type: string
+- name: link
+  label: Link for further information
+  source: Link for further info
+  type: string

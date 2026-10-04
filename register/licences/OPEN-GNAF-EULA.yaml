@@ -1,0 +1,17 @@
+# Geoscape's G-NAF on data.gov.au: the CC BY 4.0 terms plus one condition on use.
+id: OPEN-GNAF-EULA
+title: Open G-NAF EULA
+url: https://data.gov.au/data/dataset/geocoded-national-address-file-g-naf/resource/09f74802-08b1-4214-a6ea-3591b2753d30
+kind: eula
+read: '2026-10-01'
+hub: other
+grants:
+  reproduce: reproduce and Share the Licenced Material, in whole or in part
+  adapt: produce, reproduce, and Share Adapted Material
+  commercial: silent
+  attribution: Incorporates or developed using G-NAF © Geoscape Australia licensed by the Commonwealth of
+    Australia under the Open Geo-coded National Address File (G-NAF) End User Licence Agreement
+condition: 'You must not use the data to generate an address, or a compilation of addresses, for the
+  sending of mail unless you have verified that each address is capable of receiving mail by reference
+  to a secondary source (clause 2(a)(2) of the EULA). The licence is otherwise CC BY 4.0: use, share
+  and build on it with the attribution kept.'

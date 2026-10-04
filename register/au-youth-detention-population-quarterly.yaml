@@ -1,0 +1,140 @@
+slug: au-youth-detention-population-quarterly
+title: Young people in detention on an average night, by quarter, Australia, 2008 to 2016
+status: live
+topics:
+- crime
+example:
+  where:
+    quarter: newest
+    age_group: Total
+    indigenous_status: Total
+    legal_status: Total
+    sex: Total
+    state:
+      neq: Aust
+  group: state
+  metric: sum.avg_nightly_population
+  label: Young people in detention on an average night in the newest quarter, by state
+chart:
+  where:
+    state: Aust
+    age_group: Total
+    legal_status: Total
+    sex: Total
+    indigenous_status:
+      neq: Total
+  split: indigenous_status
+  metric: avg.avg_nightly_population
+  label: Young people in detention on an average night, Australia
+sample:
+  where:
+    quarter: newest
+    age_group: Total
+    indigenous_status: Total
+    legal_status: Total
+    sex: Total
+  label: The average nightly population in the newest quarter in each state and Australia, with every age,
+    Indigenous status, legal status and sex at its total.
+order: 506
+publisher:
+  name: Australian Institute of Health and Welfare
+  short: AIHW
+  jurisdiction: Cth
+  url: https://www.aihw.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.gov.au/data/dataset/youth-justice-detention-data
+  attribution: Australian Institute of Health and Welfare, Australian Government, Youth Justice Detention
+    Data, sourced {sourced}, https://data.gov.au/data/dataset/youth-justice-detention-data, licensed under
+    CC BY 3.0 AU.
+temporal_start: '2008-04-01'
+search_title: Youth detention numbers by state each quarter, 2008 to 2016, Australia (AIHW)
+also_known_as:
+- Youth Justice Detention Data
+- Juvenile detention population Australia
+- Young people in detention by Indigenous status
+- Average nightly youth detention population
+keywords:
+- youth detention
+- youth justice
+- juvenile detention
+- Indigenous
+- unsentenced
+- AIHW
+- Australia
+faq:
+- q: What is in each row?
+  a: The average number of young people in detention on a night in one quarter from June 2008 to June 2016,
+    for one state or territory or Australia, one age group, Indigenous status, legal status and sex.
+    Each of those carries a Total group, so the rows overlap and should not be summed across a group that
+    has a Total.
+- q: Why does the series stop in 2016?
+  a: The Institute published this file with its report Youth detention population in Australia 2016 and
+    has not added to it on data.gov.au. Later figures are in the Institute's yearly Youth detention
+    population reports. Some figures here may differ from the 2016 report because of later revisions.
+- q: Why are adults counted?
+  a: Some people aged 18 and over are held in youth detention, mostly because they offended as young
+    people. The Institute counts them in the 18+ age group.
+summary: The average number of young people in detention each night, each quarter from 2008 to 2016, by
+  state, age group, Indigenous status, legal status and sex, from the AIHW.
+description: The AIHW Youth Justice Detention Data file, the average nightly population in youth detention
+  for each quarter from June 2008 to June 2016. Each row is one quarter, state or territory, age group,
+  Indigenous status, legal status and sex. The sex column keeps the Institute's spelling Unknow for
+  unknown.
+source:
+  adapter: ckan-resource
+  portal: https://data.gov.au/data
+  package: youth-justice-detention-data
+  resource: c7edfa08-7bc9-404d-8f2b-22bcd0425021
+  url: https://data.gov.au/data/dataset/youth-justice-detention-data
+  encoding: utf-8-sig
+  cadence: no longer updated
+key:
+- state
+- quarter
+- age_group
+- indigenous_status
+- legal_status
+- sex
+partition_by:
+- state
+row_label: Quarterly counts
+fields:
+- name: state
+  label: State or territory
+  source: state
+  type: string
+- name: quarter
+  label: Quarter
+  source: quarter
+  type: date
+  date_format: '%b qtr %Y'
+  description: First day of the last month of the quarter, so June 2008 is the June quarter 2008.
+- name: year
+  label: Year
+  source: year
+  type: integer
+- name: age_group
+  label: Age group
+  source: agegrp
+  type: string
+- name: indigenous_status
+  label: Indigenous status
+  source: indig_status
+  type: string
+- name: legal_status
+  label: Legal status
+  source: legal_status
+  type: string
+- name: sex
+  label: Sex
+  source: sex
+  type: string
+- name: avg_nightly_population
+  label: Average nightly population
+  source: avg_nightly_pop
+  type: integer
+omit:
+  quart: The quarter's month, already in the quarter column.

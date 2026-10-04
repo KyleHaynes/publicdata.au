@@ -1,0 +1,73 @@
+slug: qld-locality-boundaries
+title: Locality boundaries, Queensland
+status: live
+topics:
+- places
+order: 272
+search_title: Queensland suburb and locality boundaries (Natural Resources and Mines)
+also_known_as:
+- Queensland suburb boundaries map
+- QLD locality boundaries shapefile
+- Official Queensland suburb names and boundaries
+keywords:
+- suburb boundaries
+- locality boundaries
+- suburbs
+- addressing
+- Queensland
+faq:
+- q: What is in each row?
+  a: Each row is one bounded locality, which in a city is a suburb, with its official name, locality code, the local government area it is in, its area in square kilometres and its boundary as a polygon.
+- q: How do these differ from the ABS suburbs and localities?
+  a: These are the Queensland Government's official locality names and boundaries used for addressing, kept up to date as localities are named or changed. The ABS layer is a statistical approximation of them built for one census.
+summary: The official boundary, name and code of every suburb and locality in Queensland, with its local government area.
+description: The spatial representation of the bounded localities of Queensland, including suburbs, which are the official locality names and boundaries used for addressing. Each feature carries the locality name, its code, its local government area and its area in square kilometres. The layer is read from the Queensland Government's administrative boundaries map service.
+publisher:
+  name: Department of Natural Resources and Mines, Manufacturing and Regional and Rural Development
+  short: Natural Resources and Mines
+  jurisdiction: Qld
+  url: https://www.nrmmrrd.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/locality-boundaries-queensland
+  attribution: Department of Natural Resources and Mines, Manufacturing and Regional and Rural Development, Queensland Government, Locality boundaries - Queensland, sourced {sourced}, https://www.data.qld.gov.au/dataset/locality-boundaries-queensland, licensed under CC BY 4.0.
+example:
+  group: lga
+  metric: count
+  label: Localities in each local government area
+source:
+  adapter: arcgis-feature
+  portal: https://www.data.qld.gov.au
+  package: locality-boundaries-queensland
+  url: https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Boundaries/AdministrativeBoundaries/MapServer/2
+  cadence: as localities change
+key:
+- loc_code
+geometry:
+  kind: polygon
+  crs: EPSG:4326
+  crs_note: The map service projects the boundaries to WGS84 (EPSG:4326) on request. They are moved to GDA2020 for publication.
+  maxzoom: 10
+row_label: Localities
+fields:
+- name: objectid
+  label: Object id
+  source: objectid
+  type: integer
+- name: locality
+  label: Locality
+  source: locality
+  type: string
+- name: loc_code
+  label: Locality code
+  source: loc_code
+  type: string
+- name: lga
+  label: Council area
+  source: lga
+  type: string
+- name: ca_area_sqkm
+  label: Area (km2)
+  source: ca_area_sqkm
+  type: number

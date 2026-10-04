@@ -1,0 +1,223 @@
+slug: qld-land-valuation-trends
+title: Change in land values by council area, Queensland, 2010 onwards
+status: live
+topics:
+- housing
+order: 251
+collection: qld-land-valuation-trends
+collection_title: Historical trends in land valuations, Queensland
+collection_search_title: Queensland land valuation trends by council (Valuer-General)
+collection_description: 'The Queensland Valuer-General issues statutory land valuations each year for the local
+  government areas due for one. The department publishes the overall change in land values in each area at
+  each valuation as two tables, one for 2002 to 2009 and one from 2010.
+
+
+  The tables are split at the 2008 council amalgamations. The earlier table names the pre-amalgamation councils
+  with the council each became part of. The publisher notes that Douglas, Livingstone, Mareeba and Noosa de-amalgamated
+  from Cairns, Rockhampton, Tablelands and Sunshine Coast from 2014.'
+temporal_start: '2010-01-01'
+search_title: Queensland land valuation change by council area, 2010 onwards
+also_known_as:
+- Queensland statutory land valuation trends
+- QLD land value change by LGA
+- Valuer-General annual valuation results Queensland
+keywords:
+- land valuation
+- land values
+- statutory valuation
+- Valuer-General
+- local government area
+- Queensland
+faq:
+- q: What does each figure mean?
+  a: Each figure is the overall percentage change in statutory land values in a local government area at that
+    year's annual valuation, compared with its previous valuation. A council area is not valued every year,
+    and the publisher writes NV for a year it was not valued. NV is kept as a null value here.
+- q: What are the total rows?
+  a: The publisher puts rows counting the local government areas, and those valued, at the top of the table.
+    They are kept as published.
+summary: The overall percentage change in statutory land values in each Queensland local government area at
+  each annual valuation from 2010.
+description: 'One row per local government area, with the overall percentage change in statutory land values
+  at its annual valuation for each year from 2010, beside the area''s code. Each year is one column, as the
+  publisher lays it out. A year in which the area was not valued is null. Two rows at the top count the areas
+  and those valued each year.
+
+
+  The publisher adds a column when a new valuation is issued. A new year column is reported and held until
+  the register names it.'
+publisher:
+  name: Department of Natural Resources and Mines, Manufacturing and Regional and Rural Development
+  short: Natural Resources and Mines
+  jurisdiction: Qld
+  url: https://www.nrmmrrd.qld.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/historical-trends-in-land-valuations
+  attribution: Department of Natural Resources and Mines, Manufacturing and Regional and Rural Development,
+    Queensland Government, Historical trends in land valuations, sourced {sourced}, https://www.data.qld.gov.au/dataset/historical-trends-in-land-valuations,
+    licensed under CC BY 3.0 AU.
+  portal_id: CC-BY-3.0
+example:
+  where: {lga_code: {gt: 0}, change_2026: {gt: -1000}}
+  group: local_government_area
+  metric: max.change_2026
+  label: Change in land values in per cent at the 2026 valuation, in each council area valued that year
+sample:
+  where: {lga_code: {gt: 0}}
+  label: Council areas in the publisher's order, leaving out the two rows at the top that count the areas.
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: historical-trends-in-land-valuations
+  resource: 2fd7c102-cafc-4d16-a6a5-ff4ed7c61c16
+  url: https://www.data.qld.gov.au/dataset/historical-trends-in-land-valuations
+  cadence: annually, in March
+row_label: Council areas
+fields:
+- name: lga_code
+  label: LGA code
+  source: LGA_Code
+  type: integer
+  description: Blank on the two total rows.
+- name: local_government_area
+  label: Council area
+  source: Local Government Area
+  type: string
+- name: change_2026
+  label: 2026 change (%)
+  source: '2026'
+  type: number
+  null_values:
+  - NV
+  description: Overall change in statutory land values at the 2026 valuation since the previous one, in per
+    cent. Null where the publisher writes NV, the area not being valued that year.
+- name: change_2025
+  label: 2025 change (%)
+  source: '2025'
+  type: number
+  null_values:
+  - NV
+  description: Overall change in statutory land values at the 2025 valuation since the previous one, in per
+    cent. Null where the publisher writes NV, the area not being valued that year.
+- name: change_2024
+  label: 2024 change (%)
+  source: '2024'
+  type: number
+  null_values:
+  - NV
+  description: Overall change in statutory land values at the 2024 valuation since the previous one, in per
+    cent. Null where the publisher writes NV, the area not being valued that year.
+- name: change_2023
+  label: 2023 change (%)
+  source: '2023'
+  type: number
+  null_values:
+  - NV
+  description: Overall change in statutory land values at the 2023 valuation since the previous one, in per
+    cent. Null where the publisher writes NV, the area not being valued that year.
+- name: change_2022
+  label: 2022 change (%)
+  source: '2022'
+  type: number
+  null_values:
+  - NV
+  description: Overall change in statutory land values at the 2022 valuation since the previous one, in per
+    cent. Null where the publisher writes NV, the area not being valued that year.
+- name: change_2021
+  label: 2021 change (%)
+  source: '2021'
+  type: number
+  null_values:
+  - NV
+  description: Overall change in statutory land values at the 2021 valuation since the previous one, in per
+    cent. Null where the publisher writes NV, the area not being valued that year.
+- name: change_2020
+  label: 2020 change (%)
+  source: '2020'
+  type: number
+  null_values:
+  - NV
+  description: Overall change in statutory land values at the 2020 valuation since the previous one, in per
+    cent. Null where the publisher writes NV, the area not being valued that year.
+- name: change_2019
+  label: 2019 change (%)
+  source: '2019'
+  type: number
+  null_values:
+  - NV
+  description: Overall change in statutory land values at the 2019 valuation since the previous one, in per
+    cent. Null where the publisher writes NV, the area not being valued that year.
+- name: change_2018
+  label: 2018 change (%)
+  source: '2018'
+  type: number
+  null_values:
+  - NV
+  description: Overall change in statutory land values at the 2018 valuation since the previous one, in per
+    cent. Null where the publisher writes NV, the area not being valued that year.
+- name: change_2017
+  label: 2017 change (%)
+  source: '2017'
+  type: number
+  null_values:
+  - NV
+  description: Overall change in statutory land values at the 2017 valuation since the previous one, in per
+    cent. Null where the publisher writes NV, the area not being valued that year.
+- name: change_2016
+  label: 2016 change (%)
+  source: '2016'
+  type: number
+  null_values:
+  - NV
+  description: Overall change in statutory land values at the 2016 valuation since the previous one, in per
+    cent. Null where the publisher writes NV, the area not being valued that year.
+- name: change_2015
+  label: 2015 change (%)
+  source: '2015'
+  type: number
+  null_values:
+  - NV
+  description: Overall change in statutory land values at the 2015 valuation since the previous one, in per
+    cent. Null where the publisher writes NV, the area not being valued that year.
+- name: change_2014
+  label: 2014 change (%)
+  source: '2014'
+  type: number
+  null_values:
+  - NV
+  description: Overall change in statutory land values at the 2014 valuation since the previous one, in per
+    cent. Null where the publisher writes NV, the area not being valued that year.
+- name: change_2013
+  label: 2013 change (%)
+  source: '2013'
+  type: number
+  null_values:
+  - NV
+  description: Overall change in statutory land values at the 2013 valuation since the previous one, in per
+    cent. Null where the publisher writes NV, the area not being valued that year.
+- name: change_2012
+  label: 2012 change (%)
+  source: '2012'
+  type: number
+  null_values:
+  - NV
+  description: Overall change in statutory land values at the 2012 valuation since the previous one, in per
+    cent. Null where the publisher writes NV, the area not being valued that year.
+- name: change_2011
+  label: 2011 change (%)
+  source: '2011'
+  type: number
+  null_values:
+  - NV
+  description: Overall change in statutory land values at the 2011 valuation since the previous one, in per
+    cent. Null where the publisher writes NV, the area not being valued that year.
+- name: change_2010
+  label: 2010 change (%)
+  source: '2010'
+  type: number
+  null_values:
+  - NV
+  description: Overall change in statutory land values at the 2010 valuation since the previous one, in per
+    cent. Null where the publisher writes NV, the area not being valued that year.

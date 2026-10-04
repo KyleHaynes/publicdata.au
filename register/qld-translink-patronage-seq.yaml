@@ -1,0 +1,91 @@
+slug: qld-translink-patronage-seq
+title: Translink patronage by mode, South East Queensland
+status: live
+topics:
+- roads
+order: 290
+collection: qld-translink-performance
+collection_title: Translink monthly performance data
+collection_search_title: Translink performance data, Queensland public transport
+collection_description: 'Translink, part of the Department of Transport and Main Roads, publishes a set of
+  small monthly tables on Queensland public transport. They count passenger trips by mode in South East Queensland
+  and the rest of the state, measure train, bus and tram punctuality and reliability, and report complaints,
+  passenger fines and warnings, injuries and the Taxi Subsidy Scheme.
+
+
+  Each table here is one of the publisher''s files. At review each file held about 30 months, starting in late
+  2023.
+
+  '
+search_title: South East Queensland public transport patronage by month (Translink)
+also_known_as:
+- Translink SEQ patronage
+- Brisbane public transport passenger trips
+- Translink passenger numbers
+keywords:
+- patronage
+- passenger trips
+- bus
+- train
+- ferry
+- tram
+- Translink
+faq:
+- q: What is in each row?
+  a: Each row is the number of passenger trips on one mode of Translink public transport in South East Queensland
+    in one month.
+- q: How far back does it go?
+  a: At review the file held about 30 months, starting in late 2023. Each fetch here is kept as a version,
+    so a month the publisher later drops stays in an earlier version.
+summary: Monthly passenger trips on Translink bus, train, tram and ferry services in South East Queensland.
+description: 'One row per month and mode of the passenger trips on Translink services in South East Queensland,
+  as published in Translink''s monthly performance data. At review the file started in late 2023.
+
+  '
+publisher:
+  name: Department of Transport and Main Roads
+  short: Transport and Main Roads
+  jurisdiction: Qld
+  url: https://www.tmr.qld.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/translink-monthly-performance-data
+  attribution: Department of Transport and Main Roads, Queensland Government, Translink monthly performance
+    data, sourced {sourced}, https://www.data.qld.gov.au/dataset/translink-monthly-performance-data, licensed
+    under CC BY 3.0 AU.
+  portal_id: CC-BY-3.0
+example:
+  where: {month: newest}
+  group: mode
+  metric: sum.passenger_trips
+  label: Passenger trips by mode in the newest month
+chart:
+  where: {month: {gte: '2024-01-01'}}
+  label: Passenger trips
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: translink-monthly-performance-data
+  resource: c49df919-5c0d-4bd2-9e43-776509b95ef6
+  url: https://www.data.qld.gov.au/dataset/translink-monthly-performance-data
+  cadence: monthly
+key:
+- month
+- mode
+row_label: Patronage
+fields:
+- name: month
+  label: Month
+  source: Month-Year
+  type: date
+  date_format: '%b-%Y'
+  description: First day of the month reported.
+- name: mode
+  label: Mode
+  source: Mode
+  type: string
+- name: passenger_trips
+  label: Passenger trips
+  source: Passenger trips
+  type: integer

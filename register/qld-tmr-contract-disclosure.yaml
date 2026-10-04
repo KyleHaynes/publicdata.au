@@ -1,0 +1,169 @@
+slug: qld-tmr-contract-disclosure
+title: Contracts awarded by Transport and Main Roads, Queensland, current financial year
+status: live
+topics:
+- government
+- economy
+order: 233
+collection: qld-contract-disclosure
+collection_title: Contract disclosure reports, Queensland Government agencies
+search_title: Transport and Main Roads contracts awarded, contract disclosure report (Queensland)
+collection_search_title: Queensland Government contract disclosure reports (contracts over $10,000)
+also_known_as:
+- TMR contract disclosure
+- Queensland transport contracts awarded
+- TMR suppliers and contract values
+keywords:
+- contract disclosure
+- government contracts
+- procurement
+- suppliers
+- TMR
+- Queensland
+collection_description: |
+  Queensland Government agencies publish a contract disclosure report listing each contract worth $10,000 or more that they award, with the supplier, value, award date and procurement method. Each agency publishes its own report on the Queensland open data portal, and most add a file for each financial year.
+
+  These tables cover four agencies' current reports. The columns follow the government's disclosure template, with small differences between agencies that are kept as each publishes them.
+faq:
+- q: What is in each row?
+  a: One contract the Department of Transport and Main Roads awarded or varied, with its reference, description,
+    award date, value, supplier name, ABN and postcode, whether it was varied, the procurement method
+    and the extra fields for large contracts. The supplier ABN is blank in almost every row.
+- q: Why do some award dates fall years before the report's financial year?
+  a: Those rows are marked as varied. The report lists older contracts that the department varied during
+    the year under their original award date.
+- q: What is a contract disclosure report?
+  a: Queensland Government agencies must publish details of each contract they award worth $10,000 or
+    more, including GST. Contracts over $500,000 carry extra fields such as the form of contract, evaluation
+    criteria and deliverables, so those columns are blank for smaller contracts.
+- q: Which year does it cover?
+  a: The newest financial year file the department has published, 2026-27 in the first version here. The
+    department adds a file each year and updates it during the year, and this table follows the newest.
+summary: Every contract worth $10,000 or more that the Queensland Department of Transport and Main Roads
+  awarded or varied in the current financial year, with supplier, value, date and procurement method.
+description: The contract disclosure report of the Department of Transport and Main Roads for the newest
+  financial year, one row per contract, with the reference, category, parent arrangement, description,
+  award date, value, supplier ABN, name and postcode, variation, confidentiality, procurement method,
+  limited tender reason and the fields required for contracts over $500,000.
+publisher:
+  name: Department of Transport and Main Roads
+  short: Transport and Main Roads
+  jurisdiction: Qld
+  url: https://www.tmr.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/tmr-contract-disclosure
+  attribution: Department of Transport and Main Roads, Queensland Government, Department of Transport
+    and Main Roads Contract Disclosure, sourced {sourced}, https://www.data.qld.gov.au/dataset/tmr-contract-disclosure,
+    licensed under CC BY 4.0.
+example:
+  group: procurement_method
+  metric: count
+  label: Contracts
+chart: none
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: tmr-contract-disclosure
+  url: https://www.data.qld.gov.au/dataset/tmr-contract-disclosure
+  resource_match: ^Contract Disclosure report \d{4}-\d{4}$
+  cadence: monthly
+row_label: Contracts
+fields:
+- name: contract_reference
+  label: Contract reference
+  source: Contract reference number
+  type: string
+- name: agency
+  label: Agency
+  source: Agency name
+  type: string
+- name: agency_address
+  label: Agency address
+  source: Agency address
+  type: string
+- name: contract_category
+  label: Contract category
+  source: Contract category group
+  type: string
+- name: parent_contract
+  label: Parent contract or supply arrangement
+  source: Parent contract/Head agremeent/Common-use supply arrangement number
+  type: string
+- name: contract_description
+  label: Contract description
+  source: Contract description/name
+  type: string
+- name: award_date
+  label: Award date
+  source: Award contract date
+  type: date
+  date_format: '%d/%m/%Y'
+- name: contract_value
+  label: Contract value ($)
+  source: Contract value
+  type: number
+  description: Including GST, as published.
+- name: supplier_abn
+  label: Supplier ABN
+  source: Supplier ABN
+  type: string
+- name: supplier_name
+  label: Supplier
+  source: Supplier name
+  type: string
+- name: supplier_address
+  label: Supplier postcode
+  source: Supplier address
+  type: string
+  description: The department gives the supplier's postcode only.
+- name: variation
+  label: Varied
+  source: Variation to contract (Yes/No)
+  type: string
+- name: confidentiality_provision
+  label: Confidentiality provision used
+  source: Specific confidentiality provision used
+  type: string
+- name: procurement_method
+  label: Procurement method
+  source: Procurement method
+  type: string
+- name: limited_tender_reason
+  label: Reason for limited tender
+  source: Reason for use of limited tendering
+  type: string
+- name: form_of_contract
+  label: Form of contract
+  source: Form of contract
+  type: string
+- name: offers_sought
+  label: Offers sought
+  source: Number of offers sought
+  type: string
+- name: evaluation_criteria
+  label: Evaluation criteria
+  source: Evaluation criteria and weightings
+  type: string
+- name: deliverables
+  label: Deliverables
+  source: Deliverables
+  type: string
+- name: milestones
+  label: Milestones
+  source: Contract milestones
+  type: string
+- name: performance_management
+  label: Performance management
+  source: Contract performance management
+  type: string
+- name: additional_details
+  label: Additional details
+  source: Additional details
+  type: string
+- name: consultancy
+  label: Consultancy
+  source: Consultancy (Yes/No)
+  type: string
+note: Cells were typed and headers were made snake_case. Rows were left alone.

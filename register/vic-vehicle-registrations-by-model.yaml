@@ -1,0 +1,85 @@
+slug: vic-vehicle-registrations-by-model
+title: Registered vehicles by make, model and colour, Victoria
+status: live
+topics:
+- roads
+example:
+  group: make
+  metric: sum.vehicles
+  label: Registered vehicles
+sample:
+  order: [vehicles.desc]
+  label: The ten make, model and colour combinations with the most vehicles on the register, most first.
+order: 393
+collection: vic-vehicle-registrations
+collection_title: Victorian vehicle registration counts
+publisher:
+  name: Department of Transport and Planning
+  short: Transport and Planning
+  jurisdiction: Vic
+  url: https://www.vic.gov.au/department-transport-and-planning
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://discover.data.vic.gov.au/dataset/whole-fleet-vehicle-registration-snapshot-by-model
+  attribution: Department of Transport and Planning, Victorian Government, Whole Fleet Vehicle Registration Snapshot by Model, sourced {sourced}, https://discover.data.vic.gov.au/dataset/whole-fleet-vehicle-registration-snapshot-by-model,
+    licensed under CC BY 4.0.
+search_title: Number of registered vehicles by make and model, Victoria (whole fleet snapshot)
+also_known_as:
+- Whole Fleet Vehicle Registration Snapshot by Model
+- VicRoads registered vehicles by model
+- Most common car models registered in Victoria
+keywords:
+- vehicle registrations
+- car models
+- registered vehicles
+- VicRoads
+- car colour
+- Victoria
+faq:
+- q: What does each row hold?
+  a: A count of vehicles on the Victorian register at the end of the quarter that share one make, model
+    and body colour. Boats and trailers are not included.
+- q: What do the codes mean?
+  a: Make and model are the register's codes of up to six characters, such as TOYOTA and RANGER, and colour
+    is a three letter code such as WHI or BLK. Some models are blank or read UNK, as the register holds
+    them, and a few combinations appear on more than one row.
+- q: Which quarter is it?
+  a: Each version is the newest quarterly snapshot the department has released. The portal lists earlier
+    quarters back to the second quarter of 2023 as separate files.
+summary: The number of vehicles registered in Victoria at the end of the quarter for each make, model and
+  body colour, from the VicRoads register.
+description: The whole fleet vehicle registration snapshot by model from the Department of Transport and
+  Planning. Each row is the count of registered vehicles that share a make, model and body colour at the
+  end of a quarter. Boats and trailers are not included. The publisher notes that some words may be
+  misspelt or attributes incorrect.
+source:
+  adapter: ckan-resource
+  portal: https://discover.data.vic.gov.au
+  package: whole-fleet-vehicle-registration-snapshot-by-model
+  resource_match: ^Whole Fleet Vehicle Registration Snapshot by Model Q\d \d{4}$
+  url: https://discover.data.vic.gov.au/dataset/whole-fleet-vehicle-registration-snapshot-by-model
+  cadence: quarterly
+  encoding: utf-8-sig
+row_label: Vehicle counts
+fields:
+- name: make
+  label: Make
+  source: CD_MAKE_VEH1
+  type: string
+  description: The register's make code, up to six characters.
+- name: model
+  label: Model
+  source: CD_MODEL_VEH
+  type: string
+  description: The register's model code, up to six characters. Blank on some rows.
+- name: colour
+  label: Body colour
+  source: CD_CLR_BDY_VEH_P
+  type: string
+  description: The register's three letter colour code.
+- name: vehicles
+  label: Registered vehicles
+  source: TOTAL1
+  type: integer

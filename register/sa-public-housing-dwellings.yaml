@@ -1,0 +1,135 @@
+slug: sa-public-housing-dwellings
+title: Public housing dwellings by council area, South Australia
+status: live
+topics:
+- housing
+example:
+  where:
+    lga:
+      neq: Total - dwellings
+  group: lga
+  metric: sum.number_of_dwellings
+  label: Dwellings
+sample:
+  where:
+    lga:
+      neq: Total - dwellings
+  order: [number_of_dwellings.desc]
+  label: The ten council areas with the most public housing dwellings, most first.
+order: 444
+collection: sa-public-housing
+collection_title: Public housing by council area, South Australia
+collection_description: Public housing in South Australia by council area, from the SA Housing Trust's
+  contribution to the national Public Housing data collection. The tables count the dwellings the Trust held, the
+  households living in them and the households newly housed in the year, with counts rounded to the nearest 5.
+collection_search_title: SA public housing data by council area (SA Housing Trust)
+search_title: South Australia public housing dwellings by council area (SA Housing Trust)
+also_known_as:
+- Social Housing dwellings SA
+- SA public housing stock by LGA
+- Number of Housing Trust homes by council
+keywords:
+- public housing
+- social housing
+- Housing Trust homes
+- dwellings by council
+- SA Housing Trust
+- South Australia
+faq:
+- q: What is in each row?
+  a: One council area, with the publisher's counts of dwellings and their characteristics in the columns named.
+- q: What does n.p. mean?
+  a: The publisher replaces every count for a council area with n.p. where the area has one to three dwellings. Those
+    cells are nulls here, flagged as suppressed.
+- q: Are the counts exact?
+  a: No. The publisher rounds counts to the nearest multiple of 5, so rows and columns may not add to the totals.
+    The publisher's Total and percentage of total rows are kept as published at the end of the table, and
+    because the percentage row holds fractions, every count column is typed as a number.
+- q: Which date does the table cover?
+  a: The newest file the publisher has released, 30 June 2021 at the first version. The files for 2019-20 stay on the portal,
+    and each new file becomes a version here.
+summary: The number of public housing dwellings the SA Housing Trust held in each South Australian council area at 30 June, with tenancy, occupancy, rent, bedrooms and dwelling type.
+description: Public housing dwellings by Local Government Area from the South Australian Housing Trust, from South Australia's contribution to the national Public Housing data collection. Each row is one council area with the number of dwellings, the publisher's rate per 10,000 residential dwellings, the numbers tenantable, untenantable and occupied, the share of tenantable dwellings occupied, the average market rent, and the dwellings by number of bedrooms and by dwelling type.
+publisher:
+  name: South Australian Housing Trust
+  short: SA Housing Trust
+  jurisdiction: SA
+  url: https://www.housing.sa.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.sa.gov.au/data/dataset/social-housing-dwellings
+  attribution: South Australian Housing Trust, Government of South Australia, Social Housing – dwellings,
+    https://data.sa.gov.au/data/dataset/social-housing-dwellings, accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: ckan-resource
+  portal: https://data.sa.gov.au/data
+  package: social-housing-dwellings
+  resource_match: ^Dwellings Public Housing 30 June \d{4}$
+  url: https://data.sa.gov.au/data/dataset/social-housing-dwellings
+  cadence: yearly
+  header_row: 13
+suppression:
+- n.p.
+row_label: Dwellings
+fields:
+- name: lga
+  label: Local Government Area
+  source: Local Government Area
+  type: string
+- name: number_of_dwellings
+  label: Number of Dwellings
+  source: Number of Dwellings
+  type: number
+- name: rate_per_10_000_of_all_residential_dwellings
+  label: Rate per 10,000 of all residential dwellings
+  source: Rate per 10,000 of all residential dwellings
+  type: number
+  description: The publisher's figure, as published.
+- name: tenantable_dwellings
+  label: Tenantable Dwellings
+  source: Tenantable Dwellings
+  type: number
+- name: untenantable_dwellings_or_undergoing_major_redevelopment
+  label: Untenantable Dwellings or undergoing major redevelopment
+  source: Untenantable Dwellings or undergoing major redevelopment
+  type: number
+- name: number_of_occupied_dwellings
+  label: Number of Occupied Dwellings
+  source: Number of Occupied Dwellings
+  type: number
+- name: pct_of_tenantable_dwellings_that_are_occupied
+  label: '% of Tenantable dwellings that are Occupied'
+  source: '% of Tenantable dwellings that are Occupied'
+  type: number
+  description: The publisher's figure, as published, written as a fraction, such as 0.96 for 96 per cent.
+- name: average_market_rent_of_dwelling_30_june
+  label: Average market rent of dwelling, 30 June
+  source: Average market rent of dwelling, 30 June
+  type: number
+  description: The publisher's figure, as published.
+- name: bedrooms_1_or_2
+  label: 1 or 2 bedrooms
+  source: 1 or 2 bedrooms
+  type: number
+- name: bedrooms_3
+  label: 3 bedrooms
+  source: 3 bedrooms
+  type: number
+- name: bedrooms_4_or_more
+  label: 4 or more bedrooms
+  source: 4 or more bedrooms
+  type: number
+- name: separate_houses
+  label: Separate houses
+  source: Separate houses
+  type: number
+- name: semi_detached
+  label: Semi-detached
+  source: Semi-detached
+  type: number
+- name: flat_unit_or_apartment
+  label: Flat, unit or apartment
+  source: Flat, unit or apartment
+  type: number

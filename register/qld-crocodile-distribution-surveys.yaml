@@ -1,0 +1,143 @@
+slug: qld-crocodile-distribution-surveys
+title: Crocodile distribution surveys, Queensland, 2000 to 2012
+status: live
+topics:
+- nature
+order: 297
+collection: qld-crocodiles
+collection_title: Crocodiles in Queensland
+temporal_start: '2000-01-01'
+search_title: Queensland crocodile distribution survey data 2000 to 2012
+also_known_as:
+- Crocodile distribution data 2000-2012
+- Queensland estuarine crocodile survey records
+keywords:
+- crocodile
+- crocodile survey
+- crocodile distribution
+- estuarine crocodile
+- freshwater crocodile
+- Queensland
+faq:
+- q: What is in each row?
+  a: Each row is one crocodile seen on a departmental survey of a Queensland river between 2000 and 2012, with
+    the river, the date, the species, how it was seen, its estimated size, where it was in the channel, the
+    habitat, the bank and its coordinates.
+- q: What do the codes mean?
+  a: The sighting, location and habitat columns use the publisher's codes, which are explained in the legend
+    workbook on the same portal page. They are kept as published.
+- q: Why does one river appear under several names?
+  a: The surveyors wrote river names in different ways, such as Hull_River and Hull_R., and the file keeps
+    each spelling. Add the spellings together for a river's full count.
+- q: Why do some points fall north of the equator?
+  a: Rows from Gulf of Carpentaria rivers, such as the Norman and the Staaten, give the latitude without
+    its minus sign. The coordinates are kept as published.
+summary: Each crocodile recorded on Queensland Government river surveys from 2000 to 2012, with species, estimated
+  size, habitat and coordinates.
+description: 'One row per crocodile recorded on the Queensland environment department''s crocodile distribution
+  surveys of rivers from 2000 to 2012. Each row gives the river, the survey date, the species, how the animal
+  was seen, its estimated size in feet or metres, its position in the channel, the habitat, the bank and its
+  latitude and longitude. The coded columns follow the publisher''s legend workbook, published beside the data.
+
+  '
+publisher:
+  name: Department of the Environment, Tourism, Science and Innovation
+  short: DETSI
+  jurisdiction: Qld
+  url: https://www.detsi.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/crocodile-sightings-in-queensland
+  attribution: Department of the Environment, Tourism, Science and Innovation, Queensland Government, Crocodiles
+    in Queensland, sourced {sourced}, https://www.data.qld.gov.au/dataset/crocodile-sightings-in-queensland,
+    licensed under CC BY 4.0.
+example:
+  group: river
+  metric: count
+  label: Crocodiles recorded on each surveyed river, as the river is written in the file
+chart:
+  split: species
+  metric: count
+  label: Crocodiles recorded
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: crocodile-sightings-in-queensland
+  resource: 5e00a61d-f92c-4889-b57b-ce1da777eb8f
+  url: https://www.data.qld.gov.au/dataset/crocodile-sightings-in-queensland
+  cadence: no longer updated
+  manual: true
+geometry:
+  lon: longitude
+  lat: latitude
+  crs: EPSG:4326
+  crs_note: The publisher names no datum. The coordinates are decimal degrees, read as WGS84 (EPSG:4326) and
+    published as given.
+row_label: Crocodiles recorded
+fields:
+- name: river
+  label: River
+  source: river
+  type: string
+  description: The river or survey area, written with underscores as published.
+- name: date
+  label: Survey date
+  source: date
+  type: date
+  date_format: '%d/%m/%Y'
+- name: species
+  label: Species
+  source: species
+  type: string
+- name: sightings
+  label: Sighting code
+  source: sightings
+  type: string
+  description: The way the animal was seen, coded as in the publisher's legend, such as P or EO.
+- name: size_a_lower_ft
+  label: Lower size estimate (ft)
+  source: size_a_lower_ft
+  type: string
+  description: Feet. Kept as text because some cells hold codes or spaces.
+- name: size_b_upper_ft
+  label: Upper size estimate (ft)
+  source: size_b__upper_ft
+  type: string
+  description: Feet. Kept as text because some cells hold codes or spaces.
+- name: size_c_accurate_ft
+  label: Accurate size (ft)
+  source: size_c_accurate_ft
+  type: string
+  description: Feet.
+- name: size_d_m_if_ft_not_provided
+  label: Size (m) when feet not given
+  source: size_d_m_if_ft_not_provided
+  type: string
+  description: Metres, or a code such as EO as published.
+- name: location
+  label: Location code
+  source: location
+  type: string
+  description: Where the animal was in the channel, coded as in the publisher's legend.
+- name: habitat
+  label: Habitat code
+  source: habitat
+  type: string
+  description: Coded as in the publisher's legend.
+- name: bank
+  label: Bank
+  source: bank
+  type: string
+- name: latitude
+  label: Latitude
+  source: latitude
+  type: number
+- name: longitude
+  label: Longitude
+  source: longitude
+  type: number
+- name: comments
+  label: Comments
+  source: comments
+  type: string

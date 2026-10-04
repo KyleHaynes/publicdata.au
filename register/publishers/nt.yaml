@@ -1,0 +1,20 @@
+# Publishers placed in Northern Territory that no portal of its own lists, or that one portal lists twice.
+# Generated from 'publicdata catalogue publishers', then reviewed. Edit by hand.
+- slug: department-of-corporate-and-information-services
+  name: Department of Corporate and Information Services
+  jurisdiction: NT
+  level: state
+  orgs:
+  - gov:northern-territory-government-department-of-corporate-and-information-services-australian-urban-rese
+- slug: department-of-infrastructure-planning-and-logistics
+  name: Department of Infrastructure, Planning and Logistics
+  jurisdiction: NT
+  level: state
+  orgs:
+  - gov:northern-territory-government-department-of-infrastructure-planning-and-logistics-australian-urban-r
+- slug: northern-territory-electoral-commission
+  name: Northern Territory Electoral Commission
+  jurisdiction: NT
+  level: state
+  orgs:
+  - gov:northern-territory-electoral-commission-australian-urban-research-infrastructure-network

@@ -1,0 +1,32 @@
+{
+  "dataset": "nsw-road-crashes",
+  "version": "2025-10-10",
+  "as_at": "",
+  "fetched_at": "2026-09-29T13:50:13+00:00",
+  "sha256": "7345189f017d9c842429674ecf2196cee728de46c0572ce2a85220f9bef49aa9",
+  "bytes": 24466182,
+  "filename": "nsw_road_crash_data_2020-2024_crash.xlsx",
+  "encoding": "xlsx",
+  "source": {
+    "url": "https://opendata.transport.nsw.gov.au/data/dataset/06f9cf3d-0a9d-4098-b0f0-fa9efbdd3921/resource/c6351d27-b1b0-48e9-93a6-a612cba88f99/download/nsw_road_crash_data_2020-2024_crash.xlsx",
+    "portal": "https://data.nsw.gov.au/data",
+    "package": "2-nsw-crash-data",
+    "package_id": "e88ed6cd-de24-47dd-9f76-956a17aff39a",
+    "resource": "ba660006-ec78-42a0-863e-69a5fbd3afbc",
+    "resource_name": "NSW Road Crash Data - 2020-2024 - CRASH.xlsx",
+    "resource_last_modified": null,
+    "package_modified": "2025-10-09T22:24:59.672357",
+    "package_version": null,
+    "etag": "1759969967.67-24466182-1965888143",
+    "http_last_modified": "Thu, 09 Oct 2025 00:32:47 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution",
+    "url": "http://www.opendefinition.org/licenses/cc-by",
+    "read_at": "2026-09-29T13:50:12+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": []
+}

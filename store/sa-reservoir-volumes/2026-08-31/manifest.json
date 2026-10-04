@@ -1,0 +1,34 @@
+{
+  "dataset": "sa-reservoir-volumes",
+  "version": "2026-08-31",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:10:23+00:00",
+  "sha256": "804a4815d5d1255964f5f3d573f467839fa4db716eef3da1c25257dc43480a17",
+  "bytes": 996,
+  "filename": "reservoirvolumesforaugust2026.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://data.sa.gov.au/data/dataset/987a4cd9-e95e-43f1-9fb0-e3f629e06190/resource/c98f91a2-a776-4761-a0d1-1360f1a3b3af/download/reservoirvolumesforaugust2026.csv",
+    "portal": "https://data.sa.gov.au/data",
+    "package": "reservoir-volumes-2018",
+    "package_id": "987a4cd9-e95e-43f1-9fb0-e3f629e06190",
+    "resource": "c98f91a2-a776-4761-a0d1-1360f1a3b3af",
+    "resource_name": "Reservoir Volumes for August 2026",
+    "resource_last_modified": "2026-08-31T05:37:46.059143",
+    "package_modified": "2026-08-31T05:37:51.645527",
+    "package_version": null,
+    "etag": "1788154667.643-996-1118443817",
+    "http_last_modified": "Mon, 31 Aug 2026 05:37:47 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution",
+    "url": "http://creativecommons.org/licenses/by/4.0",
+    "read_from": "https://data.sa.gov.au/data/api/3/action/package_show?id=reservoir-volumes-2018",
+    "read_at": "2026-10-03T03:10:23+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "460c58e1e133708c349e8ebeeeb6b590cd7b80285a5bd9c928445b5a95cb6e07"
+}

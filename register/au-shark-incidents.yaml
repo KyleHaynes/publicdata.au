@@ -1,0 +1,327 @@
+slug: au-shark-incidents
+title: Australian Shark-Incident Database
+status: live
+topics:
+- nature
+example:
+  where:
+    victim_injury: fatal
+  group: shark_common_name
+  label: Fatal incidents by shark species since 1791
+chart:
+  split: provoked_unprovoked
+order: 69
+publisher:
+  name: Taronga Conservation Society Australia
+  short: Taronga
+  jurisdiction: NSW
+  url: https://taronga.org.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://zenodo.org/records/22262542
+  attribution: Taronga Conservation Society Australia, with Flinders University and the NSW Department
+    of Primary Industries, Australian Shark-Incident Database, sourced {sourced}, https://doi.org/10.5281/zenodo.5612259,
+    licensed under CC BY 4.0.
+temporal_start: '1791-01-01'
+search_title: 'Shark attacks in Australia since 1791: every recorded incident with location, species and
+  outcome (Australian Shark-Incident Database)'
+also_known_as:
+- Australian Shark Attack File
+- Shark attack database Australia
+- Shark attacks by year and state
+- ASID Taronga
+keywords:
+- shark attacks
+- shark incidents
+- shark bite
+- Australian Shark-Incident Database
+- Taronga
+- sharks
+- Australia
+faq:
+- q: What is an incident?
+  a: Any recorded interaction in Australian waters where a shark bit or attempted to bite a person, or
+    a person's equipment with the person present, from 1791 to today, with the outcome, location, activity,
+    species and the conditions where they are known. The database is maintained by Taronga with Flinders
+    University and the NSW Department of Primary Industries, and grew out of the Australian Shark Attack
+    File kept since 1984.
+- q: Why are so many cells blank?
+  a: The record for an old incident may hold no more than a date, a place and an outcome, and even recent
+    records are compiled from reports that vary in detail. A blank cell means the detail was not recorded.
+- q: Where does the file come from?
+  a: The database is published on Zenodo under CC BY 4.0, with a new version roughly twice a year. Each
+    version here follows the newest Zenodo version of the concept record, and its DOI is in the provenance.
+summary: Every recorded shark incident in Australian waters since 1791, about 1,300 rows, with date, state,
+  location and coordinates, the shark species and size, the person's activity and injury, and the conditions.
+  Updated with each Zenodo release.
+description: The public version of the Australian Shark-Incident Database, one row per incident from 1791,
+  maintained by Taronga Conservation Society Australia with Flinders University and the NSW Department
+  of Primary Industries. Each row records the month and year, injury outcome, state, location and coordinates,
+  site category, shark species and length, whether provoked, the victim's activity, injury location and
+  severity, gender and age, clothing and equipment, the time, depth, distance to shore, water and weather
+  conditions, and the source of the record.
+source:
+  adapter: zenodo
+  url: https://zenodo.org/api/records
+  package: '5612259'
+  resource_match: \.xlsx$
+  sheet: ASID
+  cadence: yearly
+key:
+- uin
+enrich:
+- sa2
+- lga
+- suburb
+- postcode
+- state_electorate
+- federal_electorate
+geometry:
+  lon: longitude
+  lat: latitude
+  crs: EPSG:4326
+  crs_note: Coordinates as recorded, in decimal degrees; many are approximate.
+row_label: Incidents
+fields:
+- name: uin
+  label: UIN
+  source: UIN
+  type: string
+- name: incident_month
+  label: Incident (m)onth
+  source: Incident.month
+  type: integer
+- name: incident_year
+  label: Incident year
+  source: Incident.year
+  type: integer
+- name: victim_injury
+  label: Victim injury
+  source: Victim.injury
+  type: string
+- name: state
+  label: State
+  source: State
+  type: string
+  description: As recorded; the file mixes Qld and QLD and other spellings, kept as published.
+- name: location
+  label: Location
+  source: Location
+  type: string
+- name: latitude
+  label: Latitude
+  source: Latitude
+  type: number
+- name: longitude
+  label: Longitude
+  source: Longitude
+  type: number
+- name: site_category
+  label: Site category
+  source: Site.category
+  type: string
+- name: site_category_comment
+  label: Site category comment
+  source: Site.category.comment
+  type: string
+- name: shark_common_name
+  label: Shark common name
+  source: Shark.common.name
+  type: string
+- name: shark_scientific_name
+  label: Shark scientific name
+  source: Shark.scientific.name
+  type: string
+- name: shark_identification_method
+  label: Shark identification (m)ethod
+  source: Shark.identification.method
+  type: string
+- name: shark_identification_source
+  label: Shark identification source
+  source: Shark.identification.source
+  type: string
+- name: shark_length_m
+  label: Shark length (m)
+  source: Shark.length.m
+  type: string
+  description: As recorded, sometimes a range or a word rather than a figure.
+- name: basis_for_length
+  label: Basis for length
+  source: Basis.for.length
+  type: string
+- name: provoked_unprovoked
+  label: Provoked or unprovoked
+  source: Provoked/unprovoked
+  type: string
+- name: provocative_act
+  label: Provocative act
+  source: Provocative.act
+  type: string
+- name: no_sharks
+  label: No sharks
+  source: No.sharks
+  type: integer
+- name: victim_activity
+  label: Victim activity
+  source: Victim.activity
+  type: string
+- name: fish_speared
+  label: Fish speared?
+  source: Fish.speared?
+  type: string
+- name: commercial_dive_activity
+  label: Commercial dive activity
+  source: Commercial.dive.activity
+  type: string
+- name: object_of_bite
+  label: Object of bite
+  source: Object.of.bite
+  type: string
+- name: present_at_time_of_bite
+  label: Present at time of bite
+  source: Present.at.time.of.bite
+  type: string
+- name: direction_first_strike
+  label: Direction first strike
+  source: Direction.first.strike
+  type: string
+- name: shark_behaviour
+  label: Shark behaviour
+  source: Shark.behaviour
+  type: string
+- name: victim_aware_of_shark
+  label: Victim aware of shark
+  source: Victim.aware.of.shark
+  type: string
+- name: shark_captured
+  label: Shark captured
+  source: Shark.captured
+  type: string
+- name: injury_location
+  label: Injury location
+  source: Injury.location
+  type: string
+- name: injury_severity
+  label: Injury severity
+  source: Injury.severity
+  type: string
+- name: victim_gender
+  label: Victim gender
+  source: Victim.gender
+  type: string
+- name: victim_age
+  label: Victim age
+  source: Victim.age
+  type: string
+- name: victim_clothing
+  label: Victim clothing
+  source: Victim.clothing
+  type: string
+- name: clothing_coverage
+  label: Clothing coverage
+  source: Clothing.coverage
+  type: string
+- name: dominant_clothing_colour
+  label: Dominant clothing colour
+  source: Dominant.clothing.colour
+  type: string
+- name: other_clothing_colour
+  label: Other clothing colour
+  source: Other.clothing.colour
+  type: string
+- name: clothing_pattern
+  label: Clothing pattern
+  source: Clothing.pattern
+  type: string
+- name: fin_colour
+  label: Fin colour
+  source: Fin.colour
+  type: string
+- name: diversionary_action_taken
+  label: Diversionary action taken
+  source: Diversionary.action.taken
+  type: string
+- name: diversionary_action_outcome
+  label: Diversionary action outcome
+  source: Diversionary.action.outcome
+  type: string
+- name: people_under_3m
+  label: People <3m
+  source: People <3m
+  type: integer
+- name: people_3_15m
+  label: People 3-15m
+  source: People 3-15m
+  type: integer
+- name: time_of_incident
+  label: Time of incident
+  source: Time.of.incident
+  type: string
+- name: depth_of_incident_m
+  label: Depth of incident (m)
+  source: Depth.of.incident.m
+  type: string
+  description: As recorded, sometimes a range or a word rather than a figure.
+- name: teeth_recovered
+  label: Teeth recovered
+  source: Teeth.recovered
+  type: string
+- name: time_in_water_min
+  label: Time in water (m)in
+  source: Time.in.water.min
+  type: string
+  description: As recorded, sometimes a range or a word rather than a figure.
+- name: water_temperature_c
+  label: Water temperature (°C)
+  source: Water.temperature.°C
+  type: number
+- name: total_water_depth_m
+  label: Total water depth (m)
+  source: Total.water.depth.m
+  type: string
+  description: As recorded, sometimes a range or a word rather than a figure.
+- name: water_visability_m
+  label: Water visability (m)
+  source: Water.visability.m
+  type: number
+- name: distance_to_shore_m
+  label: Distance to shore (m)
+  source: Distance.to.shore.m
+  type: number
+- name: spring_or_neap_tide
+  label: Spring or neap tide
+  source: Spring.or.neap.tide
+  type: string
+- name: tidal_cycle
+  label: Tidal cycle
+  source: Tidal.cycle
+  type: string
+- name: wind_condition
+  label: Wind condition
+  source: Wind.condition
+  type: string
+- name: weather_condition
+  label: Weather condition
+  source: Weather.condition
+  type: string
+- name: air_temperature_c
+  label: Air temperature (°C)
+  source: Air.temperature.°C
+  type: number
+- name: personal_protective_device
+  label: Personal protective device
+  source: Personal.protective.device
+  type: string
+- name: deterrent_brand_and_type
+  label: Deterrent brand and type
+  source: Deterrent.brand.and.type
+  type: string
+- name: data_source
+  label: Data source
+  source: Data.source
+  type: string
+- name: reference
+  label: Reference
+  source: Reference
+  type: string

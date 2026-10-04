@@ -1,0 +1,41 @@
+{
+  "dataset": "qld-flood-extent-2017-fitzroy",
+  "version": "2017-03-30",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:00:41+00:00",
+  "sha256": "72d5deb5178df5c02cf51d933ee7891e064a9ea803c7fbbb720696a7a5516124",
+  "bytes": 4519363,
+  "filename": "qld-flood-extent-2017-fitzroy.geojson",
+  "encoding": "utf-8",
+  "source": {
+    "url": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/InlandWaters/FloodLines/MapServer/18",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "flood-extent-series",
+    "package_id": "0ed82e91-e856-49f5-a844-2674e51d63c4",
+    "package_modified": "2025-07-22T15:22:55.461073",
+    "layer_name": "2017 Floodline Fitzroy River",
+    "object_id_field": "objectid",
+    "last_edit_date": null,
+    "newest_record": 1490832000000,
+    "features": 15,
+    "date_fields": [
+      "featurereliability",
+      "attributereliability"
+    ]
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "stated": "CC-BY-4.0",
+    "normalised": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=flood-extent-series",
+    "read_at": "2026-10-03T03:00:40+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [
+    "The layer states no edit date, so this version is dated by the newest record it holds.",
+    "The publisher offers no file. These bytes are every feature of the layer as the service returned them in WGS84, ordered by its object id, so the same layer gives the same bytes."
+  ]
+}

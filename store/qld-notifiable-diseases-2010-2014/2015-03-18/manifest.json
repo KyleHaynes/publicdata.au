@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-notifiable-diseases-2010-2014",
+  "version": "2015-03-18",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:02:25+00:00",
+  "sha256": "8e727e084fd7fc113451af7f76d6bd8ab51d44623ae11263ddb779b9fd7fbbf0",
+  "bytes": 29148,
+  "filename": "2010-2014-notifiabledisease-cdu.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "http://www.health.qld.gov.au/opendata/docs/2010-2014-notifiabledisease-cdu.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "notifiable-diseases-2010-2014",
+    "package_id": "30024e9c-31ad-429b-abec-f058bd2a32da",
+    "resource": "6d48590c-e3a8-494c-9e5f-b7df87a77fff",
+    "resource_name": "Number of cases of communicable diseases reported by Quarter",
+    "resource_last_modified": "2015-03-17T23:34:51.157681",
+    "package_modified": "2021-11-01T04:52:56.670740",
+    "package_version": "1.0",
+    "etag": "",
+    "http_last_modified": ""
+  },
+  "licence": {
+    "id": "CC-BY-3.0",
+    "title": "Creative Commons Attribution 3.0",
+    "url": "https://creativecommons.org/licenses/by/3.0/au/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=notifiable-diseases-2010-2014",
+    "read_at": "2026-10-03T03:02:23+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "a60ff70cddad0f825c16452fc7a94ec78b6f17527eaa29388110be1706e4cb68"
+}

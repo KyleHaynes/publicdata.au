@@ -1,0 +1,455 @@
+slug: qld-traffic-census
+title: Traffic census of state-controlled roads, Queensland
+status: live
+topics:
+- roads
+order: 289
+collection: qld-traffic-volumes
+collection_title: Traffic volumes on Queensland state-controlled roads
+collection_search_title: Queensland traffic count data
+collection_description: |
+  The Department of Transport and Main Roads (TMR) counts traffic at sites across the state-declared road network and publishes annual estimates from the counts.
+
+  Traffic census has the annual average daily traffic at each count site for the latest eleven years, with counts by vehicle class. Traffic by hour and day of week has the average volume at each site for each hour of each day of the week in the latest year.
+temporal_start: '2015-01-01'
+search_title: Queensland traffic counts, AADT by site (TMR traffic census)
+also_known_as:
+- Traffic census for the Queensland state-declared road network
+- Queensland annual average daily traffic
+- TMR AADT data
+- Queensland heavy vehicle counts by road
+keywords:
+- traffic volume
+- traffic count
+- AADT
+- heavy vehicles
+- state-controlled roads
+- TMR
+- Queensland
+faq:
+- q: What is in each row?
+  a: One traffic count site, year and direction of travel, with the estimated annual average daily traffic, the daily traffic and share in each vehicle class, and growth over one, five and ten years. Each row also gives the road, the segment of road the site represents, the speed limit, the coordinates and the TMR district, TMR region and council area.
+- q: Why do three rows share one site and year?
+  a: Each site has a row for traffic with the gazetted direction of the road, a row against it and a row for both directions combined. Add only the rows for one direction, or use the BOTH DIRECTIONS row.
+- q: Is every figure counted in the year it is for?
+  a: No. A coverage site is not counted every year, and the publisher then estimates the year's traffic from an earlier count. The year counted column gives when the count was made.
+summary: The annual average daily traffic at every count site on Queensland's state-controlled roads for the latest eleven years, with heavy vehicle and vehicle class counts.
+description: One row per count site, traffic year and travel direction on the Queensland state-declared road network, from the Department of Transport and Main Roads traffic census. Each row has the annual average daily traffic (AADT), AADT and percentage for each Austroads vehicle class grouping, growth over one, five and ten years, the road section, the segment the site represents, the posted speed limit, the site's coordinates and the TMR district, region and council area. The publisher's workbook covers the latest eleven traffic years.
+publisher:
+  name: Department of Transport and Main Roads
+  short: Transport and Main Roads
+  jurisdiction: Qld
+  url: https://www.tmr.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/traffic-census-for-the-queensland-state-declared-road-network
+  attribution: Department of Transport and Main Roads, Queensland Government, Traffic census for the Queensland
+    state-declared road network, sourced {sourced}, https://www.data.qld.gov.au/dataset/traffic-census-for-the-queensland-state-declared-road-network,
+    licensed under CC BY 4.0.
+example:
+  where:
+    traffic_year: newest
+    travel_direction: BOTH DIRECTIONS
+  group: road_name
+  metric: max.aadt
+  label: Highest average daily traffic at one site
+chart:
+  where:
+    travel_direction: BOTH DIRECTIONS
+  split: none
+  metric: avg.aadt
+  label: Average daily traffic per count site
+sample:
+  where:
+    traffic_year: newest
+    travel_direction: BOTH DIRECTIONS
+  order: [aadt.desc]
+  spread: region_name
+  label: The busiest count sites in each TMR region in the newest traffic year, both directions combined,
+    each region in turn, busiest first.
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: traffic-census-for-the-queensland-state-declared-road-network
+  resource: b856deab-ab20-48f1-85c6-2715e3a1d42c
+  url: https://www.data.qld.gov.au/dataset/traffic-census-for-the-queensland-state-declared-road-network
+  sheet: aadt_2015_2025
+  cadence: annually
+key:
+- traffic_year
+- site_id
+- travel_direction
+- road_section_id
+- seg_start_through_distance
+partition_by:
+- traffic_year
+geometry:
+  lon: site_longitude
+  lat: site_latitude
+  crs: EPSG:4326
+  crs_note: The publisher names no datum for the site coordinates. They are decimal degrees, read as WGS84 (EPSG:4326), the datum of the publisher's own KML of the same sites, and published as given.
+row_label: Site years
+fields:
+- name: traffic_year
+  label: Traffic year
+  source: TRAFFIC_YEAR
+  type: integer
+  description: The year this traffic estimate represents.
+- name: collection_year
+  label: Year counted
+  source: COLLECTION_YEAR
+  type: integer
+  description: The year data for this AADT estimate was actually collected at this site (may be different
+    from TRAFFIC YEAR).
+- name: road_section_id
+  label: Road section
+  source: ROAD_SECTION_ID
+  type: string
+  description: The TMR identifier for the section of road.
+- name: road_name
+  label: Road
+  source: ROAD_NAME
+  type: string
+  description: The gazetted name of the section of road.
+- name: site_id
+  label: Count site
+  source: SITE_ID
+  type: integer
+  description: The TMR identifier for the traffic counting site.
+- name: site_type
+  label: Site type
+  source: SITE_TYPE
+  type: string
+  description: P is a permanent site, C a coverage or temporary site.
+- name: description
+  label: Site description
+  source: DESCRIPTION
+  type: string
+  description: The description of the physical location of the traffic count site.
+- name: site_through_distance
+  label: Site distance (km)
+  source: SITE_THROUGH_DISTANCE
+  type: number
+  description: The distance in km from the gazetted start of the road section at which the traffic count
+    site is located.
+- name: seg_start_through_distance
+  label: Segment start (km)
+  source: SEG_START_THROUGH_DISTANCE
+  type: number
+  description: The distance in km from the gazetted start of the road section to the start of the segment
+    of road for which traffic count data from this site is representative.
+- name: seg_end_through_distance
+  label: Segment end (km)
+  source: SEG_END_THROUGH_DISTANCE
+  type: number
+  description: The distance in km from the gazetted start of the road section to the end of the segment
+    of road for which traffic count data from this site is representative.
+- name: speed_limit
+  label: Speed limit (km/h)
+  source: SPEED_LIMIT
+  type: integer
+  description: The posted speed limit at this site.
+- name: site_latitude
+  label: Latitude
+  source: SITE_LATITUDE
+  type: number
+- name: site_longitude
+  label: Longitude
+  source: SITE_LONGITUDE
+  type: number
+- name: seg_longitude_start
+  label: Segment start longitude
+  source: SEG_LONGITUDE_START
+  type: number
+  description: The longitude of the start of the segment of road for which traffic count data from this
+    site is representative (in decimal degrees).
+- name: seg_latitude_start
+  label: Segment start latitude
+  source: SEG_LATITUDE_START
+  type: number
+  description: The latitude of the start of the segment of road for which traffic count data from this
+    site is representative (in decimal degrees).
+- name: seg_longitude_end
+  label: Segment end longitude
+  source: SEG_LONGITUDE_END
+  type: number
+  description: The longitude of the end of the segment of road for which traffic count data from this
+    site is representative (in decimal degrees).
+- name: seg_latitude_end
+  label: Segment end latitude
+  source: SEG_LATITUDE_END
+  type: number
+  description: The latitude of the end of the segment of road for which traffic count data from this site
+    is representative (in decimal degrees).
+- name: district_id
+  label: District code
+  source: DISTRICT_ID
+  type: integer
+  description: The TMR identifier for the district.
+- name: district_name
+  label: TMR district
+  source: DISTRICT_NAME
+  type: string
+  description: The TMR District of the site.
+- name: region_id
+  label: Region code
+  source: REGION_ID
+  type: integer
+  description: The TMR identifier for the region.
+- name: region_name
+  label: TMR region
+  source: REGION_NAME
+  type: string
+  description: The TMR Region of the site.
+- name: lga_id
+  label: Council code
+  source: LGA_ID
+  type: integer
+  description: The Local Government Authority identifier.
+- name: lga_name
+  label: Council area
+  source: LGA_NAME
+  type: string
+  description: The Local Government Authority name.
+- name: travel_direction
+  label: Direction
+  source: TRAVEL_DIRECTION
+  type: string
+  description: AGAINST GAZETTAL, WITH GAZETTAL or BOTH DIRECTIONS, relative to the gazetted direction
+    of the road.
+- name: aadt
+  label: Average daily traffic
+  source: AADT
+  type: integer
+  description: The total estimated Annual Average Daily Traffic for this site.
+- name: aadt_class_0a
+  label: Daily light vehicles
+  source: AADT_CLASS_0A
+  type: number
+  description: The Annual Average Daily Traffic for vehicles in the light category (0A) corresponding
+    to Austroads Vehicle Classes 1 and 2.
+- name: aadt_class_0b
+  label: Daily heavy vehicles
+  source: AADT_CLASS_0B
+  type: number
+  description: The Annual Average Daily Traffic for vehicles in the heavy category (0B) corresponding
+    to Austroads Vehicle Classes 3 through 12.
+- name: aadt_class_1a
+  label: Daily light vehicles (1A)
+  source: AADT_CLASS_1A
+  type: number
+  description: The Annual Average Daily Traffic for vehicles in the light category (1A). Note the same
+    as 0A.
+- name: aadt_class_1b
+  label: Daily rigid trucks
+  source: AADT_CLASS_1B
+  type: number
+  description: The Annual Average Daily Traffic for vehicles in the rigid truck category (1B), corresponding
+    to Austroads Vehicle Classes 3, 4 and 5.
+- name: aadt_class_1c
+  label: Daily articulated trucks
+  source: AADT_CLASS_1C
+  type: number
+  description: The Annual Average Daily Traffic for vehicles in the articulated category (1C), corresponding
+    to Austroads Vehicle Classes 6, 7, 8 and 9.
+- name: aadt_class_1d
+  label: Daily B-doubles and road trains
+  source: AADT_CLASS_1D
+  type: number
+  description: The Annual Average Daily Traffic for vehicles in the b-double / road train category (1D),
+    corresponding to Austroads Vehicle Classes 10,11 and 12.
+- name: aadt_class_2a
+  label: Daily short vehicles
+  source: AADT_CLASS_2A
+  type: number
+  description: The Annual Average Daily Traffic for vehicles in the short vehicle category (2A), corresponding
+    to Austroads Vehicle Class 1.
+- name: aadt_class_2b
+  label: Daily short vehicles towing
+  source: AADT_CLASS_2B
+  type: number
+  description: The Annual Average Daily Traffic for vehicles in the short vehicle towing category (2B),
+    corresponding to Austroads Vehicle Class 2.
+- name: aadt_class_2c
+  label: Daily two axle trucks
+  source: AADT_CLASS_2C
+  type: number
+  description: The Annual Average Daily Traffic for vehicles in the two axle truck category (2C), corresponding
+    to Austroads Vehicle Class 3.
+- name: aadt_class_2d
+  label: Daily three axle trucks
+  source: AADT_CLASS_2D
+  type: number
+  description: The Annual Average Daily Traffic for vehicles in the three axle truck category (2D), corresponding
+    to Austroads Vehicle Class 4.
+- name: aadt_class_2e
+  label: Daily four axle trucks
+  source: AADT_CLASS_2E
+  type: number
+  description: The Annual Average Daily Traffic for vehicles in the four axle truck category (2E), corresponding
+    to Austroads Vehicle Class 5.
+- name: aadt_class_2f
+  label: Daily three axle articulated
+  source: AADT_CLASS_2F
+  type: number
+  description: The Annual Average Daily Traffic for vehicles in the three axle articulated category (2F),
+    corresponding to Austroads Vehicle Class 6.
+- name: aadt_class_2g
+  label: Daily four axle articulated
+  source: AADT_CLASS_2G
+  type: number
+  description: The Annual Average Daily Traffic for vehicles in the four axle articulated category (2G),
+    corresponding to Austroads Vehicle Class 7.
+- name: aadt_class_2h
+  label: Daily five axle articulated
+  source: AADT_CLASS_2H
+  type: number
+  description: The Annual Average Daily Traffic for vehicles in the five axle articulated category (2H),
+    corresponding to Austroads Vehicle Class 8.
+- name: aadt_class_2i
+  label: Daily six axle articulated
+  source: AADT_CLASS_2I
+  type: number
+  description: The Annual Average Daily Traffic for vehicles in the six axle articulated category (2I),
+    corresponding to Austroads Vehicle Class 9.
+- name: aadt_class_2j
+  label: Daily B-doubles
+  source: AADT_CLASS_2J
+  type: number
+  description: The Annual Average Daily Traffic for vehicles in the B-double category (2J), corresponding
+    to Austroads Vehicle Class 10.
+- name: aadt_class_2k
+  label: Daily double road trains
+  source: AADT_CLASS_2K
+  type: number
+  description: The Annual Average Daily Traffic for vehicles in the double road train category (2K), corresponding
+    to Austroads Vehicle Class 11.
+- name: aadt_class_2l
+  label: Daily triple road trains
+  source: AADT_CLASS_2L
+  type: number
+  description: The Annual Average Daily Traffic for vehicles in the triple road train category (2L), corresponding
+    to Austroads Vehicle Class 12.
+- name: pc_class_0a
+  label: Share, light vehicles
+  source: PC_CLASS_0A
+  type: number
+  description: Proportion of vehicles in the light category (0A) corresponding to Austroads Vehicle Classes
+    1 and 2.
+- name: pc_class_0b
+  label: Share, heavy vehicles
+  source: PC_CLASS_0B
+  type: number
+  description: Proportion of vehicles in the heavy category (0B) corresponding to Austroads Vehicle Classes
+    3 through 12.
+- name: pc_class_1a
+  label: Share, light vehicles (1A)
+  source: PC_CLASS_1A
+  type: number
+  description: Proportion of vehicles in the light category (1A). Note the same as 0A.
+- name: pc_class_1b
+  label: Share, rigid trucks
+  source: PC_CLASS_1B
+  type: number
+  description: Proportion of vehicles in the rigid truck category (1B), corresponding to Austroads Vehicle
+    Classes 3, 4 and 5.
+- name: pc_class_1c
+  label: Share, articulated trucks
+  source: PC_CLASS_1C
+  type: number
+  description: Proportion of vehicles in the articulated category (1C), corresponding to Austroads Vehicle
+    Classes 6, 7, 8 and 9.
+- name: pc_class_1d
+  label: Share, B-doubles and road trains
+  source: PC_CLASS_1D
+  type: number
+  description: Proportion of vehicles in the b-double / road train category (1D), corresponding to Austroads
+    Vehicle Classes 10,11 and 12.
+- name: pc_class_2a
+  label: Share, short vehicles
+  source: PC_CLASS_2A
+  type: number
+  description: Proportion of vehicles in the short vehicle category (2A), corresponding to Austroads Vehicle
+    Class 1.
+- name: pc_class_2b
+  label: Share, short vehicles towing
+  source: PC_CLASS_2B
+  type: number
+  description: Proportion of vehicles in the short vehicle towing category (2B), corresponding to Austroads
+    Vehicle Class 2.
+- name: pc_class_2c
+  label: Share, two axle trucks
+  source: PC_CLASS_2C
+  type: number
+  description: Proportion of vehicles in the two axle truck category (2C), corresponding to Austroads
+    Vehicle Class 3.
+- name: pc_class_2d
+  label: Share, three axle trucks
+  source: PC_CLASS_2D
+  type: number
+  description: Proportion of vehicles in the three axle truck category (2D), corresponding to Austroads
+    Vehicle Class 4.
+- name: pc_class_2e
+  label: Share, four axle trucks
+  source: PC_CLASS_2E
+  type: number
+  description: Proportion of vehicles in the four axle truck category (2E), corresponding to Austroads
+    Vehicle Class 5.
+- name: pc_class_2f
+  label: Share, three axle articulated
+  source: PC_CLASS_2F
+  type: number
+  description: Proportion of vehicles in the three axle articulated category (2F), corresponding to Austroads
+    Vehicle Class 6.
+- name: pc_class_2g
+  label: Share, four axle articulated
+  source: PC_CLASS_2G
+  type: number
+  description: Proportion of vehicles in the four axle articulated category (2G), corresponding to Austroads
+    Vehicle Class 7.
+- name: pc_class_2h
+  label: Share, five axle articulated
+  source: PC_CLASS_2H
+  type: number
+  description: Proportion of vehicles in the five axle articulated category (2H), corresponding to Austroads
+    Vehicle Class 8.
+- name: pc_class_2i
+  label: Share, six axle articulated
+  source: PC_CLASS_2I
+  type: number
+  description: Proportion of vehicles in the six axle articulated category (2I), corresponding to Austroads
+    Vehicle Class 9.
+- name: pc_class_2j
+  label: Share, B-doubles
+  source: PC_CLASS_2J
+  type: number
+  description: Proportion of vehicles in the B-double category (2J), corresponding to Austroads Vehicle
+    Class 10.
+- name: pc_class_2k
+  label: Share, double road trains
+  source: PC_CLASS_2K
+  type: number
+  description: Proportion of vehicles in the double road train category (2K), corresponding to Austroads
+    Vehicle Class 11.
+- name: pc_class_2l
+  label: Share, triple road trains
+  source: PC_CLASS_2L
+  type: number
+  description: Proportion of vehicles in the triple road train category (2L), corresponding to Austroads
+    Vehicle Class 12.
+- name: growth_pc_1yr
+  label: Growth over 1 year (%)
+  source: GROWTH_PC_1YR
+  type: number
+  description: Annual Growth (%) from one year previous to this count.
+- name: growth_pc_5yr
+  label: Annual growth over 5 years (%)
+  source: GROWTH_PC_5YR
+  type: number
+  description: Annual Growth (%) from five years previous to this count.
+- name: growth_pc_10yr
+  label: Annual growth over 10 years (%)
+  source: GROWTH_PC_10YR
+  type: number
+  description: Annual Growth (%) from 10 years previous to this count.

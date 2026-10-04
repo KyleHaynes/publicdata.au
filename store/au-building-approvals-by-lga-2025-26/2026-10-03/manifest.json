@@ -1,0 +1,30 @@
+{
+  "dataset": "au-building-approvals-by-lga-2025-26",
+  "version": "2026-10-03",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:15:23+00:00",
+  "sha256": "80a1b9dcb849b1ef76f8c89305e9cd3f2fcafb50e03d299eb49cd0b1b1bd4772",
+  "bytes": 93992122,
+  "filename": "au-building-approvals-by-lga-2025-26.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://data.api.abs.gov.au/rest/data/ABS,BA_LGA2025,1.0.0/.9..100+110+120+130+150+200+300+400+700+TOT.LGA2025..M?format=csvfilewithlabels",
+    "etag": "",
+    "http_last_modified": ""
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "stated": "All material presented on this website is provided under a Creative Commons Attribution 4.0 International licence",
+    "normalised": "CC-BY-4.0",
+    "title": "CC BY 4.0",
+    "url": "https://www.abs.gov.au/website-privacy-copyright-and-disclaimer",
+    "read_from": "https://www.abs.gov.au/website-privacy-copyright-and-disclaimer",
+    "read_at": "2026-10-03T03:15:11+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [
+    "The publisher's server states no change date, so this version is dated by the fetch."
+  ],
+  "rows_sha256": "eb5a00723588e39c8ad9adf2455b761ccf2ed193965a3ae1e1397d22f4ceb571"
+}

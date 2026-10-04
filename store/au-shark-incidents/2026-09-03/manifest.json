@@ -1,0 +1,31 @@
+{
+  "dataset": "au-shark-incidents",
+  "version": "2026-09-03",
+  "as_at": "2026-09-02",
+  "fetched_at": "2026-09-30T19:39:59+00:00",
+  "sha256": "801b9b4d1317211285e643f354d675a88fde5faec66f0b1f440dec88244dffbf",
+  "bytes": 449041,
+  "filename": "Australian Shark-Incident Database Public Version.xlsx",
+  "encoding": "xlsx",
+  "source": {
+    "url": "https://zenodo.org/api/records/22262542/files/Australian%20Shark-Incident%20Database%20Public%20Version.xlsx/content",
+    "record": 22262542,
+    "concept_record": "5612259",
+    "record_url": "https://zenodo.org/records/22262542",
+    "doi": "10.5281/zenodo.22262542",
+    "record_updated": "2026-09-02T23:31:28.421133+00:00",
+    "resource_name": "Australian Shark-Incident Database Public Version.xlsx",
+    "stated_checksum": "md5:1298b866d9f1e9309a521934954c42fb"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "stated": "cc-by-4.0",
+    "normalised": "CC-BY-4.0",
+    "title": "cc-by-4.0",
+    "url": "",
+    "read_at": "2026-09-30T19:39:56+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": []
+}

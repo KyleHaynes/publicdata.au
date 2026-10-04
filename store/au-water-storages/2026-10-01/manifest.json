@@ -1,0 +1,28 @@
+{
+  "dataset": "au-water-storages",
+  "version": "2026-10-01",
+  "as_at": "",
+  "fetched_at": "2026-09-30T19:39:46+00:00",
+  "sha256": "36aea5c833d4b7de79029512839ec634dc0454c91a3578fb375969dad3f99b63",
+  "bytes": 82921,
+  "filename": "au-water-storages.csv",
+  "encoding": "utf-8",
+  "source": {
+    "url": "https://www.bom.gov.au/waterdata/services",
+    "parameter": "Storage Volume",
+    "stations": 568
+  },
+  "licence": {
+    "id": "CC-BY-3.0-AU",
+    "stated": "all material on this page is licensed under the Creative Commons Attribution Australia Licence",
+    "normalised": "CC-BY-3.0-AU",
+    "title": "CC BY 3.0 AU",
+    "url": "https://www.bom.gov.au/waterdata/",
+    "read_at": "2026-09-30T19:39:37+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [
+    "The publisher offers no file and states no change date for its station list, so this version is dated by the fetch. An unchanged list is no version."
+  ]
+}

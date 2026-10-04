@@ -1,0 +1,190 @@
+slug: sa-public-housing-households
+title: Public housing households by council area, South Australia
+status: live
+topics:
+- housing
+example:
+  where:
+    lga:
+      neq: Total - households
+  group: lga
+  metric: sum.total_households
+  label: Public housing households
+sample:
+  where:
+    lga:
+      neq: Total - households
+  order: [total_households.desc]
+  label: The ten council areas with the most public housing households, most first.
+order: 445
+collection: sa-public-housing
+collection_title: Public housing by council area, South Australia
+search_title: South Australia public housing tenants by council area, household type and income (SA Housing Trust)
+also_known_as:
+- Social Housing households SA
+- SA public housing tenants by LGA
+- Housing Trust households by council
+keywords:
+- public housing
+- social housing
+- tenants
+- households by council
+- SA Housing Trust
+- South Australia
+faq:
+- q: What is in each row?
+  a: One council area, with the publisher's counts of households and their characteristics in the columns named.
+- q: What does n.p. mean?
+  a: The publisher replaces every count for a council area with n.p. where the area has one to three households. Those
+    cells are nulls here, flagged as suppressed.
+- q: Are the counts exact?
+  a: No. The publisher rounds counts to the nearest multiple of 5, so rows and columns may not add to the totals.
+    The publisher's Total and percentage of total rows are kept as published at the end of the table, and
+    because the percentage row holds fractions, every count column is typed as a number.
+- q: Which date does the table cover?
+  a: The newest file the publisher has released, 30 June 2021 at the first version. The files for 2019-20 stay on the portal,
+    and each new file becomes a version here.
+summary: The number of households living in public housing in each South Australian council area at 30 June, by composition, tenure length, main source of income and other characteristics.
+description: Public housing households by Local Government Area from the South Australian Housing Trust, from South Australia's contribution to the national Public Housing data collection. Each row is one council area with the number of households and household members, Aboriginal households and households with a person with disability, average market and charged rents, the households paying less than market rent, and counts by household composition, children and older members, match of dwelling to household size, tenure length and main source of income.
+publisher:
+  name: South Australian Housing Trust
+  short: SA Housing Trust
+  jurisdiction: SA
+  url: https://www.housing.sa.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.sa.gov.au/data/dataset/social-housing-households
+  attribution: South Australian Housing Trust, Government of South Australia, Social Housing – households,
+    https://data.sa.gov.au/data/dataset/social-housing-households, accessed {sourced}, licensed under CC BY 4.0.
+source:
+  adapter: ckan-resource
+  portal: https://data.sa.gov.au/data
+  package: social-housing-households
+  resource_match: ^Households Public Housing 30 June \d{4}$
+  url: https://data.sa.gov.au/data/dataset/social-housing-households
+  cadence: yearly
+  header_row: 13
+suppression:
+- n.p.
+row_label: Households
+fields:
+- name: lga
+  label: Local Government Area
+  source: Local Government Area
+  type: string
+- name: total_households
+  label: Total households
+  source: Total households
+  type: number
+- name: number_of_household_members
+  label: Number of household members
+  source: Number of household members
+  type: number
+- name: aboriginal_households
+  label: Aboriginal households
+  source: Aboriginal households
+  type: number
+- name: households_with_person_with_disability
+  label: Households with person with disability
+  source: Households with person with disability
+  type: number
+- name: average_market_rent_of_occupied_dwellings_30_june
+  label: Average market rent of occupied dwellings, 30 June
+  source: Average market rent of occupied dwellings, 30 June
+  type: number
+  description: The publisher's figure, as published.
+- name: average_rent_changed_30_june
+  label: Average rent charged, 30 June
+  source: Average rent changed, 30 June
+  type: number
+  description: The publisher's figure, as published.
+- name: paying_less_than_market_rent
+  label: Paying less than market rent
+  source: Paying less than market rent
+  type: number
+- name: single_person
+  label: Single person
+  source: Single person
+  type: number
+- name: single_parent_with_dependent_children
+  label: Single parent with dependent children
+  source: Single parent with dependent children
+  type: number
+- name: couple_only
+  label: Couple only
+  source: Couple only
+  type: number
+- name: couple_with_dependent_children
+  label: Couple with dependent children
+  source: Couple with dependent children
+  type: number
+- name: group_or_mixed_composition
+  label: Group or mixed composition
+  source: Group or mixed composition
+  type: number
+- name: has_child_under_15_years
+  label: Has child under 15 years
+  source: Has child under 15 years
+  type: number
+- name: has_child_under_5_years
+  label: Has child under 5 years
+  source: Has child under 5 years
+  type: number
+- name: has_adult_65_years_or_more
+  label: Has adult 65 years or more
+  source: Has adult 65 years or more
+  type: number
+- name: younger_person_main_tenant_under_25_years
+  label: Younger person (main tenant under 25 years)
+  source: Younger person (main tenant under 25 years)
+  type: number
+- name: overcrowded_households
+  label: Overcrowded households
+  source: Overcrowded households
+  type: number
+- name: underutilised_households
+  label: Underutilised households
+  source: Underutilised households
+  type: number
+- name: tenure_under_3_years
+  label: Tenure under 3 years
+  source: under 3 years
+  type: number
+- name: tenure_3_to_9_years
+  label: Tenure 3 to 9 years
+  source: 3 to 9 years
+  type: number
+- name: tenure_10_or_more_years
+  label: Tenure 10 or more years
+  source: 10 or more years
+  type: number
+- name: aged_pension
+  label: Aged Pension
+  source: Aged Pension
+  type: number
+- name: disability_support_pension
+  label: Disability Support Pension
+  source: Disability Support Pension
+  type: number
+- name: job_seeker
+  label: Job Seeker
+  source: Job Seeker
+  type: number
+- name: other_government_payment
+  label: Other Government payment
+  source: Other Government payment
+  type: number
+- name: employee_cash_income_wages
+  label: Employee cash income / wages
+  source: Employee cash income / wages
+  type: number
+- name: other_cash_income
+  label: Other cash income
+  source: Other cash income
+  type: number
+- name: income_not_stated
+  label: Income not stated
+  source: Income not stated
+  type: number

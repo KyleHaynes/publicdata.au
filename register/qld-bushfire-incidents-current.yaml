@@ -1,0 +1,186 @@
+slug: qld-bushfire-incidents-current
+title: Current bushfire incidents and warnings, Queensland, daily snapshot
+status: live
+topics:
+- emergencies
+order: 240
+search_title: Queensland current bushfires and fire warnings feed (Queensland Fire Department)
+also_known_as:
+- QFD current bushfire incidents
+- Queensland bushfire warnings
+- Fires near me Queensland data
+- Queensland vegetation fires now
+keywords:
+- bushfires
+- fire warnings
+- vegetation fires
+- permitted burns
+- emergency alerts
+- QFD
+- Queensland
+faq:
+- q: What is in each row?
+  a: One current vegetation fire, permitted burn or fire warning in the Queensland Fire Department feed
+    at the time of the daily read, with its id, title, warning level, call to action, warning text, area,
+    the point the publisher gives for it, its type and the times it was issued, published and expires.
+- q: Does the point show where the fire is?
+  a: No. The publisher says each point marks the general area of the fire. The point does not follow the
+    fire's current location or spread. Warnings also carry a drawn warning area in the feed, which is
+    not kept in this table.
+- q: How often does it change?
+  a: The publisher updates the feed every 30 minutes. This site reads it once a day and keeps a version
+    for each day it changes, so the archive is a daily snapshot and fires that start and end between reads
+    are not in it.
+- q: Why are some columns missing?
+  a: Some details, such as vehicles on scene and locality, appear only on incidents, and others, such
+    as what to do, only on warnings. On a day with none of one kind those columns are absent, so this
+    table keeps the columns every item carries.
+summary: A daily snapshot of every current vegetation fire, permitted burn and fire warning in the Queensland
+  Fire Department feed, with title, warning level, text, area, point and times.
+description: The Queensland Fire Department current bushfire incidents feed, read once a day, one row
+  per item in the feed at that time. Each row has the item id, title, warning level and its sort order,
+  call to action, warning text and header, warning area, latitude and longitude, grouped type, event type
+  and the times the item was issued, published and expires. Use the publisher's own warnings for safety
+  decisions.
+publisher:
+  name: Queensland Fire Department
+  short: QFD
+  jurisdiction: Qld
+  url: https://www.fire.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  evidence: https://www.data.qld.gov.au/dataset/queensland-fire-and-rescue-current-bushfire-incidents
+  reviewed: '2026-10-01'
+  attribution: Queensland Fire Department, Queensland Government, Queensland Fire Department current bushfire
+    incidents, sourced {sourced}, https://www.data.qld.gov.au/dataset/queensland-fire-and-rescue-current-bushfire-incidents,
+    licensed under CC BY 4.0.
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: queensland-fire-and-rescue-current-bushfire-incidents
+  resource: 0b2a4ad3-e82b-4096-b800-7c3ebcdd0078
+  url: https://www.data.qld.gov.au/dataset/queensland-fire-and-rescue-current-bushfire-incidents
+  cadence: every 30 minutes
+  feed: true
+key:
+- unique_id
+partition_by:
+- grouped_type
+geometry:
+  lon: longitude
+  lat: latitude
+  crs: EPSG:4326
+  crs_note: Longitude and latitude as the feed gives them in each item's properties. GeoJSON coordinates
+    are WGS84 by the format's definition.
+row_label: Fires and warnings
+fields:
+- name: object_id
+  label: Object ID
+  source: OBJECTID
+  type: integer
+- name: unique_id
+  label: Item ID
+  source: UniqueID
+  type: string
+- name: warning_title
+  label: Title
+  source: WarningTitle
+  type: string
+- name: warning_level
+  label: Warning level
+  source: WarningLevel
+  type: string
+  description: Information, Advice, Watch and Act or Emergency Warning.
+- name: call_to_action
+  label: Call to action
+  source: CallToAction
+  type: string
+- name: warning_text
+  label: Warning text
+  source: WarningText
+  type: string
+- name: header
+  label: Header
+  source: Header
+  type: string
+- name: warning_level_sort
+  label: Warning level order
+  source: WarningLevelSort
+  type: integer
+- name: warning_area
+  label: Area
+  source: WarningArea
+  type: string
+- name: latitude
+  label: Latitude
+  source: Latitude
+  type: number
+- name: longitude
+  label: Longitude
+  source: Longitude
+  type: number
+- name: grouped_type
+  label: Type
+  source: GroupedType
+  type: string
+  description: FIRE VEGETATION or FIRE PERMITTED BURN.
+- name: item_time_utc
+  label: Issued (UTC, as published)
+  source: ItemDateTimeUTM
+  type: string
+  description: The publisher's compact UTC timestamp, such as 20261001034343.693000, kept as text.
+- name: item_time_local
+  label: Issued
+  source: ItemDateTimeLocal_ISO
+  type: string
+  description: ISO 8601 with the Queensland offset, kept as text.
+- name: publish_time_local
+  label: Published
+  source: PublishDateLocal_ISO
+  type: string
+  description: ISO 8601 with the Queensland offset, kept as text.
+- name: expiry_time_local
+  label: Expires
+  source: ItemExpiryDateTimeLocal_ISO
+  type: string
+  description: ISO 8601 with the Queensland offset, kept as text.
+- name: event_type
+  label: Event type
+  source: EventType
+  type: string
+omit:
+  Impacts: Present only on warnings or only on incidents, so absent from the feed on a day without that
+    kind of item; a declared column must be present on every read.
+  LeaveSafely: Present only on warnings or only on incidents, so absent from the feed on a day without
+    that kind of item; a declared column must be present on every read.
+  FurtherInformation: Present only on warnings or only on incidents, so absent from the feed on a day
+    without that kind of item; a declared column must be present on every read.
+  ShouldDo: Present only on warnings or only on incidents, so absent from the feed on a day without that
+    kind of item; a declared column must be present on every read.
+  MultipleWarnings: Present only on warnings or only on incidents, so absent from the feed on a day without
+    that kind of item; a declared column must be present on every read.
+  MessageSent: Present only on warnings or only on incidents, so absent from the feed on a day without
+    that kind of item; a declared column must be present on every read.
+  SendEmailSubscription: Present only on warnings or only on incidents, so absent from the feed on a day
+    without that kind of item; a declared column must be present on every read.
+  WarningType_Level: Present only on warnings or only on incidents, so absent from the feed on a day without
+    that kind of item; a declared column must be present on every read.
+  CurrentStatus: Present only on warnings or only on incidents, so absent from the feed on a day without
+    that kind of item; a declared column must be present on every read.
+  Location: Present only on warnings or only on incidents, so absent from the feed on a day without that
+    kind of item; a declared column must be present on every read.
+  Jurisdiction: Present only on warnings or only on incidents, so absent from the feed on a day without
+    that kind of item; a declared column must be present on every read.
+  VehiclesAssigned: Present only on warnings or only on incidents, so absent from the feed on a day without
+    that kind of item; a declared column must be present on every read.
+  VehiclesOnRoute: Present only on warnings or only on incidents, so absent from the feed on a day without
+    that kind of item; a declared column must be present on every read.
+  VehiclesOnScene: Present only on warnings or only on incidents, so absent from the feed on a day without
+    that kind of item; a declared column must be present on every read.
+  Locality: Present only on warnings or only on incidents, so absent from the feed on a day without that
+    kind of item; a declared column must be present on every read.
+  (longitude): The point geometry of a feature, which repeats the Longitude property; polygon warning
+    areas have none.
+  (latitude): The point geometry of a feature, which repeats the Latitude property; polygon warning areas
+    have none.
+note: Cells were typed and headers were made snake_case. Rows were left alone.

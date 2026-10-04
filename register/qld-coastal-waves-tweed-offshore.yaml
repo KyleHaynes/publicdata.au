@@ -1,0 +1,21 @@
+slug: qld-coastal-waves-tweed-offshore
+title: Coastal wave monitoring, Tweed offshore
+status: blocked
+topics:
+- nature
+order: 91
+summary: Half-hourly wave height, period and direction from the Tweed offshore buoy, one CSV per year.
+publisher:
+  name: Department of the Environment, Tourism, Science and Innovation
+  short: DETSI
+  jurisdiction: Qld
+  url: https://www.detsi.qld.gov.au/
+licence:
+  id: CC-BY-ND-4.0
+  reviewed: '2026-09-25'
+  evidence: https://www.data.qld.gov.au/dataset/coastal-data-system-waves-tweed-offshore
+source:
+  adapter: none
+  url: https://www.data.qld.gov.au/dataset/coastal-data-system-waves-tweed-offshore
+blocked_reason: CC BY-ND 4.0 does not allow derivative works. Most of the department's other datasets
+  are CC BY 4.0, so one relicensing decision would unblock this and its sibling buoys.

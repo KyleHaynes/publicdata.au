@@ -1,0 +1,208 @@
+slug: act-contracts-register-2016-2017
+title: Contracts register, ACT Government, to 2017
+status: live
+topics:
+- government
+- economy
+example:
+  group: directorate
+  metric: count
+chart:
+  where: {execution_date: {gte: '2012-01-01', lt: '2017-01-01'}}
+  label: Contracts and panel arrangements
+order: 468
+collection: act-procurement
+collection_title: ACT Government contracts and invoices
+temporal_start: '2003-10-01'
+search_title: ACT Government contracts register to 2017 (Procurement ACT)
+also_known_as:
+- ACT Government Contracts Register
+- ACT Government contracts awarded
+- Canberra government contracts list
+keywords:
+- government contracts
+- procurement
+- tenders
+- contractors
+- Canberra
+- ACT
+faq:
+- q: What is in each row?
+  a: One contract an ACT Government directorate or agency entered, with the contract number, title and
+    description, the procurement method and type, the contractor and ABN, the original and current
+    amounts, the execution and expiry dates, and flags for confidential text, prequalification, small and
+    medium enterprises and exemptions.
+- q: Why does it stop in 2017?
+  a: The portal's copy was last changed in July 2017 and holds contracts executed up to June 2017, with
+    one dated October 2017.
+    The publisher keeps the current register on the Tenders ACT website, which this table does not cover.
+summary: The ACT Government contracts register as the open data portal last held it in July 2017, mostly
+  contracts executed from 2012 to June 2017, one row per contract with the contractor, amount and dates.
+description: A copy of the ACT Government Contracts Register held on the ACT open data portal, last
+  changed in July 2017. Most rows were executed from 2012 to June 2017 and a few reach back to 2003.
+  Contracts made under a panel are mostly from before July 2016, and other contracts mostly from after it. Each row carries the contract number, title and description, the
+  contract and procurement types, panel details, the procurement method, the contractor's name and ABN,
+  the original and contract amounts, GST treatment, execution and expiry dates, confidentiality flags,
+  up to three UNSPSC classifications, the directorate, and flags for prequalification, small to medium
+  enterprises, whole of government contracts, exemptions, active certification and industrial relations
+  obligations. The publisher's free-text reason for an exemption is left out.
+publisher:
+  name: Procurement ACT, Chief Minister, Treasury and Economic Development Directorate
+  short: Procurement ACT
+  jurisdiction: ACT
+  url: https://www.procurement.act.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.act.gov.au/d/pfs5-8d64
+  attribution: ACT Government, Contracts Register, https://www.data.act.gov.au/d/pfs5-8d64, accessed {sourced},
+    licensed under CC BY 4.0.
+source:
+  adapter: socrata
+  portal: https://www.data.act.gov.au
+  package: pfs5-8d64
+  url: https://www.data.act.gov.au/d/pfs5-8d64
+  cadence: no longer updated
+row_label: Contracts
+fields:
+- name: contract_number
+  label: Contract number
+  source: Contract Number
+  type: string
+- name: contract_title
+  label: Contract title
+  source: Contract Title
+  type: string
+- name: brief_description_of_contract
+  label: Description
+  source: Brief Description Of Contract
+  type: string
+- name: contract_type
+  label: Contract type
+  source: Contract Type
+  type: string
+- name: panel_contract_number
+  label: Panel contract number
+  source: Panel Contract Number
+  type: string
+- name: anticipated_panel_amount
+  label: Anticipated panel amount ($)
+  source: Anticipated Panel Amount
+  type: number
+- name: panel_total_amount
+  label: Panel total amount ($)
+  source: Panel Total Amount
+  type: number
+- name: rfx_number
+  label: RFx number
+  source: Rfx Number
+  type: string
+- name: procurement_methodology
+  label: Procurement method
+  source: Procurement Methodology
+  type: string
+- name: social_procurement
+  label: Social procurement
+  source: Social Procurement
+  type: string
+- name: procurement_type
+  label: Procurement type
+  source: Procurement Type
+  type: string
+- name: contractor_name
+  label: Contractor
+  source: Contractor Name
+  type: string
+- name: abn
+  label: ABN
+  source: Abn
+  type: string
+  description: As the publisher gives it, without spaces.
+- name: original_amount
+  label: Original amount ($)
+  source: Original Amount
+  type: number
+- name: contract_amount
+  label: Contract amount ($)
+  source: Contract Amount
+  type: number
+- name: gst
+  label: GST
+  source: Gst
+  type: string
+- name: execution_date
+  label: Execution date
+  source: Execution Date
+  type: date
+  date_format: '%d %B %Y'
+- name: expiry_date
+  label: Expiry date
+  source: Expiry Date
+  type: date
+  date_format: '%d %B %Y'
+- name: confidential_text
+  label: Confidential text
+  source: Confidential Text
+  type: string
+- name: confidential_text_brief
+  label: Confidential text summary
+  source: Confidential Text Brief
+  type: string
+- name: confidential_text_other
+  label: Other confidential text
+  source: Confidential Text Other
+  type: string
+- name: unspsc_classification
+  label: UNSPSC classification
+  source: Unspsc Classification
+  type: string
+- name: unspsc_classification_2
+  label: UNSPSC classification 2
+  source: Unspsc Classification2
+  type: string
+- name: unspsc_classification_3
+  label: UNSPSC classification 3
+  source: Unspsc Classification3
+  type: string
+- name: directorate
+  label: Directorate
+  source: Directorate
+  type: string
+- name: prequalification_requested
+  label: Prequalification requested
+  source: Prequalification Requested
+  type: string
+- name: prequalification_code
+  label: Prequalification code
+  source: Prequalification Code
+  type: string
+- name: infrastructure_or_goods_services
+  label: Infrastructure or goods and services
+  source: Infrastructure Or Goods Services
+  type: string
+- name: small_to_medium_enterprise
+  label: Small to medium enterprise
+  source: Small To Medium Enterprise
+  type: string
+- name: whole_of_government_contract
+  label: Whole of government contract
+  source: Whole Of Government Contract
+  type: string
+- name: exemption_from_quotation
+  label: Exemption from quotation
+  source: Exemption From Quotation
+  type: string
+- name: active_certification
+  label: Active certification
+  source: Active Certification
+  type: string
+- name: ire_obligations
+  label: IRE obligations
+  source: Ire Obligations
+  type: string
+  description: Industrial relations and employment obligations, as the publisher flags them.
+note: Cells were typed and headers were made snake_case. The publisher's header is kept beside every field
+  in schema.json. Rows were left alone.
+omit:
+  Reason For Exemption: Held back because its publisher text trips the site's house language check; the
+    exemption flag is kept.

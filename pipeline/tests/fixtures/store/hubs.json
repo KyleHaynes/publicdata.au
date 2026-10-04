@@ -1,0 +1,13 @@
+{
+  "accounts": {
+    "huggingface": "https://huggingface.co/National-Digital",
+    "kaggle": "https://www.kaggle.com/NationalDigitalAU"
+  },
+  "datasets": {
+    "qld-road-crash-factors": {
+      "huggingface": "https://huggingface.co/datasets/National-Digital/qld-road-crash-factors",
+      "kaggle": "https://www.kaggle.com/datasets/NationalDigitalAU/qld-road-crash-factors",
+      "zenodo": "10.5281/zenodo.1000001"
+    }
+  }
+}

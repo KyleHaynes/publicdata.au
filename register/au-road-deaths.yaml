@@ -1,0 +1,167 @@
+slug: au-road-deaths
+title: Australian Road Deaths Database, fatalities
+status: live
+topics:
+- roads
+example:
+  where:
+    year: 2025
+  group: road_user
+  label: People killed in 2025 by road user
+chart:
+  split: road_user
+order: 20
+publisher:
+  name: Bureau of Infrastructure and Transport Research Economics
+  short: BITRE
+  jurisdiction: Cth
+  url: https://www.bitre.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-09-28'
+  portal_id: cc-by
+  evidence: https://www.infrastructure.gov.au/copyright
+  attribution: Bureau of Infrastructure and Transport Research Economics, Australian Road Deaths Database,
+    https://catalogue.data.infrastructure.gov.au/dataset/australian-road-deaths-database, accessed {sourced},
+    licensed under CC BY 4.0.
+temporal_start: '1989-01-01'
+search_title: Australian road deaths data (road toll)
+also_known_as:
+- Australian Road Deaths Database (ARDD)
+- BITRE road deaths
+- Australian road toll statistics
+- National road fatality data
+keywords:
+- road toll
+- road deaths
+- road fatalities
+- fatal crashes
+- road safety
+- Australia
+- BITRE
+- ARDD
+faq:
+- q: Does this include the road toll for the current year?
+  a: Yes. The database is updated monthly and runs to the latest month the publisher has released. Deaths
+    from recent months are preliminary and the publisher revises them, so a later version can change a
+    recent count.
+- q: Why do some crashes appear on more than one row?
+  a: Each row is one person killed. A crash that killed three people appears as three rows with the same
+    crash_id. Count distinct crash_id values to count fatal crashes.
+- q: Why do many rows say Unknown for remoteness area, council area and road type?
+  a: The publisher codes remoteness area, SA4, council area and road type only for recent years. Earlier
+    rows carry Unknown in those columns, which is the publisher's own value and is kept as published.
+summary: Every person killed in a road crash in Australia since 1989, one row per death, with state,
+  date, time, road user, age, gender, speed limit and vehicles involved.
+description: The Australian Road Deaths Database lists each road crash death reported by police to the
+  state and territory road safety authorities since January 1989. Each row is one person killed, with
+  the crash date and time, state, crash type, the vehicles involved, the speed limit, the road user,
+  gender and age, and for recent years the remoteness area, SA4, council area and road type.
+source:
+  adapter: ckan-resource
+  portal: https://catalogue.data.infrastructure.gov.au
+  package: australian-road-deaths-database
+  resource: 80091814-9a39-444c-a329-b27561d8fcc6
+  url: https://catalogue.data.infrastructure.gov.au/dataset/australian-road-deaths-database
+  cadence: monthly
+  sheet: BITRE_Fatality
+  header_row: 5
+partition_by:
+- state
+- year
+row_label: People killed
+fields:
+- name: crash_id
+  label: Crash ID
+  source: Crash ID
+  type: string
+  description: The publisher's crash identifier. Every person killed in one crash shares it.
+- name: state
+  label: State
+  source: State
+  type: string
+  description: NSW, VIC, QLD, SA, WA, TAS, NT or ACT.
+- name: month
+  label: Month
+  source: Month
+  type: integer
+- name: year
+  label: Year
+  source: Year
+  type: integer
+- name: day_of_week
+  label: Day of week
+  source: Dayweek
+  type: string
+- name: time
+  label: Time
+  source: Time
+  type: string
+  description: Time of the crash as HH:MM:SS.
+- name: crash_type
+  label: Crash type
+  source: Crash Type
+  type: string
+  description: Single or Multiple vehicle, or Unknown.
+- name: bus_involvement
+  label: Bus involved
+  source: Bus Involvement
+  type: boolean
+  null_values: [Unknown, "-9"]
+- name: heavy_rigid_truck_involvement
+  label: Heavy rigid truck involved
+  source: Heavy Rigid Truck Involvement
+  type: boolean
+  null_values: [Unknown, "-9"]
+- name: articulated_truck_involvement
+  label: Articulated truck involved
+  source: Articulated Truck Involvement
+  type: boolean
+  null_values: [Unknown, "-9"]
+- name: speed_limit
+  label: Speed limit (km/h)
+  source: Speed Limit
+  type: integer
+  description: Posted speed limit in km/h. The publisher's -9 for unknown is null here.
+  null_values: ['-9']
+- name: road_user
+  label: Road user
+  source: Road User
+  type: string
+  description: Driver, Passenger, Pedestrian, Motorcycle rider, Motorcycle pillion passenger, Pedal cyclist
+    or Unknown.
+- name: gender
+  label: Gender
+  source: Gender
+  type: string
+- name: age
+  label: Age
+  source: Age
+  type: integer
+  description: Age in years. The publisher's -9 for unknown is null here.
+  null_values: ['-9']
+- name: national_remoteness_areas_2021
+  label: Remoteness
+  source: National Remoteness Areas 2021
+  type: string
+- name: sa4_name_2021
+  label: ABS area (SA4)
+  source: SA4 Name 2021
+  type: string
+- name: national_lga_name_2021
+  label: Council area
+  source: National LGA Name 2021
+  type: string
+  description: Council area on the 2021 boundaries.
+- name: national_road_type
+  label: Road type
+  source: National Road Type
+  type: string
+- name: christmas_period
+  label: Christmas period
+  source: Christmas Period
+  type: boolean
+- name: easter_period
+  label: Easter period
+  source: Easter Period
+  type: boolean

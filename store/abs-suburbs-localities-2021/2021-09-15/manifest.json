@@ -1,0 +1,27 @@
+{
+  "dataset": "abs-suburbs-localities-2021",
+  "version": "2021-09-15",
+  "as_at": "",
+  "fetched_at": "2026-10-01T14:36:20+00:00",
+  "sha256": "1284f6aa4a5eedbe6d0b8c71099494f634d59f1500532c1944b8227b4d1474ca",
+  "bytes": 104064114,
+  "filename": "SAL_2021_AUST_GDA2020_SHP.zip",
+  "encoding": "zip",
+  "source": {
+    "url": "https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-3-july-2021-june-2026/access-and-downloads/digital-boundary-files/SAL_2021_AUST_GDA2020_SHP.zip",
+    "etag": "",
+    "http_last_modified": "Wed, 15 Sep 2021 01:56:59 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "stated": "Copyright Commonwealth of Australia administered by the ABS. Unless otherwise noted, content is licensed under a Creative Commons Attribution 4.0 International licence.",
+    "normalised": "CC-BY-4.0",
+    "title": "CC BY 4.0",
+    "url": "https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-3-july-2021-june-2026/access-and-downloads/digital-boundary-files",
+    "read_from": "https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-3-july-2021-june-2026/access-and-downloads/digital-boundary-files",
+    "read_at": "2026-10-01T14:36:17+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": []
+}

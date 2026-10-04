@@ -1,0 +1,100 @@
+slug: qld-emergency-department-busyness
+title: Emergency department busyness by day and hour, Queensland
+status: live
+topics:
+- health
+example:
+  group: time_band
+  metric: avg.value
+  label: Average busyness
+sample:
+  order: [value.desc]
+  label: The ten facility, day and time band rows with the highest busyness value, highest first.
+order: 231
+collection: qld-hospital-performance
+collection_title: Emergency department live data, Queensland
+search_title: Queensland emergency department busiest times by day and hour (Queensland Health)
+also_known_as:
+- Busiest times at Queensland emergency departments
+- QLD ED busyness trends
+- When is the emergency department least busy Queensland
+keywords:
+- emergency department
+- busy times
+- hospital demand
+- ED trends
+- Queensland Health
+faq:
+- q: What is in each row?
+  a: One emergency department or clinic, one day of the week and one time band, with the value the publisher
+    uses to chart how busy that facility usually is at that time.
+- q: What does the value measure?
+  a: The publisher does not document it in the data. It is the figure behind the busyness chart on its
+    wait time pages and is kept as published. Time bands are numbered 0 to 23.
+summary: How busy each Queensland public emergency department usually is by day of the week and time band,
+  the figures behind Queensland Health's busyness charts.
+description: The busyness trends behind Queensland Health's emergency department wait time pages, one
+  row per facility, day of week and time band, with the publisher's busyness value. Join to the facilities
+  table on facility_code for names and locations.
+publisher:
+  name: Queensland Health
+  short: Queensland Health
+  jurisdiction: Qld
+  url: https://www.health.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  evidence: https://www.data.qld.gov.au/dataset/hospital-performance
+  statement: Creative Commons Attribution 4.0
+  reviewed: '2026-10-01'
+  attribution: Queensland Health, Queensland Government, Hospital Performance, sourced {sourced}, https://www.data.qld.gov.au/dataset/hospital-performance,
+    licensed under CC BY 4.0.
+source:
+  adapter: file
+  url: https://www.data.qld.gov.au/datastore/dump/1cc1494d-1df3-4428-a6b7-16853a347e51
+  format: csv
+  feed: true
+  cadence: live
+key:
+- facility_code
+- day_of_week
+- time_band
+row_label: Facility hours
+fields:
+- name: row_id
+  label: Row ID
+  source: _id
+  type: integer
+  description: The portal's row number.
+- name: facility_code
+  label: Facility code
+  source: FacilityCode
+  type: string
+  description: Kept as text to keep the leading zeros.
+- name: day_of_week
+  label: Day number
+  source: DayOfWeekNo
+  type: integer
+  description: 1 for Monday to 7 for Sunday.
+- name: day_name
+  label: Day
+  source: DayName
+  type: string
+- name: day_name_long
+  label: Day in full
+  source: DayNameLong
+  type: string
+- name: time_band
+  label: Time band
+  source: TimeBandNumber
+  type: integer
+- name: value
+  label: Busyness value
+  source: DataValue
+  type: number
+- name: data_uploaded
+  label: Uploaded
+  source: DataUploadedTimestamp
+  type: datetime
+  date_format: '%Y-%m-%dT%H:%M:%S'
+  description: In Queensland time.
+note: Cells were typed and headers were made snake_case. Rows were left alone.

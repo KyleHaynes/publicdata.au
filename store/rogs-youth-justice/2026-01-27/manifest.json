@@ -1,0 +1,26 @@
+{
+  "dataset": "rogs-youth-justice",
+  "version": "2026-01-27",
+  "as_at": "",
+  "fetched_at": "2026-09-30T19:39:48+00:00",
+  "sha256": "8a811f13e0217124c190b8618b6a7eb3a6bf17bc43fd35b5d43b0b527a3978a7",
+  "bytes": 903506,
+  "filename": "rogs-2026-partf-section17-youth-justice-dataset.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://assets.pc.gov.au/2026-01/rogs-2026-partf-section17-youth-justice-dataset.csv",
+    "etag": "7f9a1e0c5a507e95a4028bb24baeeb79",
+    "http_last_modified": "Tue, 27 Jan 2026 01:53:49 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "stated": "licensed under a Creative Commons Attribution 4.0 International licence",
+    "normalised": "CC-BY-4.0",
+    "title": "CC BY 4.0",
+    "url": "https://www.pc.gov.au/copyright",
+    "read_at": "2026-09-30T19:39:48+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": []
+}

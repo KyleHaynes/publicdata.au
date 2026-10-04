@@ -1,0 +1,34 @@
+{
+  "dataset": "vic-unclaimed-money-payments",
+  "version": "2026-04-20",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:09:28+00:00",
+  "sha256": "b37ed12df71166e91e8e88f682ab235a313c5893012b44dcd1a49be003d92de9",
+  "bytes": 359,
+  "filename": "unclaimed-money-payments-2025.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.sro.vic.gov.au/sites/default/files/2025-11/unclaimed-money-payments-2025.csv",
+    "portal": "https://discover.data.vic.gov.au",
+    "package": "https-www-sro-vic-gov-au-sites-default-files-2025-11-unclaimed-money-payments-2025-csv",
+    "package_id": "22edf1fa-cd0e-4ffb-a0ff-d937af8e2c4d",
+    "resource": "0c267411-26b1-499c-99b1-70a34a336ac7",
+    "resource_name": "Unclaimed money payments (made by SRO) - from 2004/05 ",
+    "resource_last_modified": null,
+    "package_modified": "2026-04-20T02:31:53.831541",
+    "package_version": null,
+    "etag": "167-644c1b612ac9f",
+    "http_last_modified": "Sat, 29 Nov 2025 20:37:14 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution 4.0 International",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://discover.data.vic.gov.au/api/3/action/package_show?id=https-www-sro-vic-gov-au-sites-default-files-2025-11-unclaimed-money-payments-2025-csv",
+    "read_at": "2026-10-03T03:09:27+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "d3c8a4b96318d351dfc43a4e599b2a4a8e3abaf22389e1079d0d3f4f48fcf0d1"
+}

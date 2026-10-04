@@ -1,0 +1,34 @@
+{
+  "dataset": "wa-public-housing-dwelling-age-by-suburb",
+  "version": "2015-06-29",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:14:30+00:00",
+  "sha256": "0e656ee541ee138403926955dd39c8bb7c15d44328aa18cbd7da00e71af36162",
+  "bytes": 20269,
+  "filename": "dwelling-suburb-age-by-bedroom.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://data.gov.au/data/dataset/30e20783-12ba-47bd-896d-69131943de75/resource/3c3a969d-9161-4397-93b4-75a04cee5c32/download/dwelling-suburb-age-by-bedroom.csv",
+    "portal": "https://data.gov.au/data",
+    "package": "dwelling-suburb-age-by-bedroom",
+    "package_id": "30e20783-12ba-47bd-896d-69131943de75",
+    "resource": "3c3a969d-9161-4397-93b4-75a04cee5c32",
+    "resource_name": "Dwelling Suburb Age By Bedroom",
+    "resource_last_modified": "2015-06-28T00:00:00",
+    "package_modified": "2023-08-11T06:19:41.406775",
+    "package_version": null,
+    "etag": "W/\"1435538554.0-20269-3326873424",
+    "http_last_modified": "Mon, 29 Jun 2015 00:42:34 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution 3.0 Australia",
+    "url": "http://creativecommons.org/licenses/by/3.0/au/",
+    "read_from": "https://data.gov.au/data/api/3/action/package_show?id=dwelling-suburb-age-by-bedroom",
+    "read_at": "2026-10-03T03:14:30+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "c4d2693de1c1b47f1e7f719be115cde661e0397ac532c44913972cce7aba73a3"
+}

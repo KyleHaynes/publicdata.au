@@ -1,0 +1,88 @@
+slug: au-humanitarian-program-grants
+title: Humanitarian Program visa grants, Australia, 1977-78 onwards
+status: live
+topics:
+- migration
+example:
+  where:
+    year: newest
+    category:
+      neq: Total
+  group: category
+  metric: sum.grants
+  label: Humanitarian visas granted in the newest year by category
+sample:
+  order:
+  - year.desc
+  label: The newest years first, with every category and the publisher's total.
+order: 47
+publisher:
+  name: Department of Home Affairs
+  short: Home Affairs
+  jurisdiction: Cth
+  url: https://www.homeaffairs.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-09-29'
+  portal_id: cc-by
+  evidence: https://data.gov.au/data/dataset/historical-migration-statistics
+  attribution: Department of Home Affairs, Australian Government, Historical Migration Statistics, sourced
+    {sourced}, https://data.gov.au/data/dataset/historical-migration-statistics, licensed under CC BY 3.0
+    AU.
+collection: au-historical-migration
+collection_title: Historical Migration Statistics
+temporal_start: '1977-07-01'
+search_title: Australian refugee and humanitarian visa grants by year
+also_known_as:
+- Australia refugee intake by year
+- Humanitarian Program statistics
+- Refugee and Special Humanitarian Program visas granted
+keywords:
+- refugees
+- humanitarian visas
+- Humanitarian Program
+- refugee intake
+- immigration statistics
+- Australia
+faq:
+- q: What does a blank mean?
+  a: The publisher shows n/a for some categories in some years. Each n/a is kept here as a null value.
+- q: Why are the counts decimals?
+  a: One cell in the publisher's table holds a value with a floating point remainder, such as 16193.000000000002.
+    Values here are copied as published, so the column is typed as a number.
+summary: Visas granted under Australia's Humanitarian Program each financial year since 1977-78, by category.
+description: Humanitarian Program visa grants for each financial year since 1977-78, by category, from
+  table 4.1 of Historical Migration Statistics. Each row is one year and one category, including the publisher's
+  total.
+source:
+  adapter: ckan-resource
+  portal: https://data.gov.au/data
+  package: historical-migration-statistics
+  resource: b59a15df-86ea-4c4c-95be-4dd9fc9f8ac4
+  url: https://data.gov.au/data/dataset/historical-migration-statistics
+  cadence: yearly
+wide:
+  sheets:
+  - '4.1'
+  header_row: 2
+  header_rows: 1
+  first_column: 2
+  row_headers: 1
+key:
+- year
+- category
+fields:
+- name: year
+  label: Financial year
+  source: (row header 1)
+  type: string
+- name: category
+  label: Category
+  source: (column header 1)
+  type: string
+- name: grants
+  label: Visas granted
+  source: (cell)
+  type: number
+  null_values:
+  - n/a

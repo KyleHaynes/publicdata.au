@@ -1,0 +1,33 @@
+{
+  "dataset": "qld-school-catchments-senior-secondary",
+  "version": "2026-04-02",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:02:18+00:00",
+  "sha256": "c031b347b4ad33fc3a2bedf368bfecc704e4d11c27178f9d9094d761c16ca58d",
+  "bytes": 13898346,
+  "filename": "senior_secondary_catchments_2026.kml",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/b01b50fc-b8ab-4c88-bc4a-34d42930fea8/resource/930ba950-9661-4edb-bb04-8cdfb3305d33/download/senior_secondary_catchments_2026.kml",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "queensland-state-schools-geographic-information",
+    "package_id": "b01b50fc-b8ab-4c88-bc4a-34d42930fea8",
+    "resource": "930ba950-9661-4edb-bb04-8cdfb3305d33",
+    "resource_name": "Senior Secondary catchments - 2026",
+    "resource_last_modified": "2026-04-01T23:35:22.772172",
+    "package_modified": "2026-04-01T23:46:19.027666",
+    "package_version": "4.0",
+    "etag": "0ecb788fc3f7e9d73603ced0058ff894",
+    "http_last_modified": "Wed, 01 Apr 2026 23:35:24 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=queensland-state-schools-geographic-information",
+    "read_at": "2026-10-03T03:02:17+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": []
+}

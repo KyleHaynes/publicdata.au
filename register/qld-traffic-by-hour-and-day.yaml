@@ -1,0 +1,185 @@
+slug: qld-traffic-by-hour-and-day
+title: Traffic by hour of day and day of week, Queensland, 2025
+status: live
+topics:
+- roads
+order: 289
+collection: qld-traffic-volumes
+collection_title: Traffic volumes on Queensland state-controlled roads
+temporal_start: '2025-01-01'
+search_title: Queensland hourly traffic volumes by day of week (TMR)
+also_known_as:
+- Queensland traffic data averaged by hour of day and day of week
+- TMR hourly traffic counts
+- Queensland peak hour traffic by road
+keywords:
+- traffic volume
+- hourly traffic
+- peak hour
+- traffic count
+- state-controlled roads
+- TMR
+- Queensland
+faq:
+- q: What is in each row?
+  a: One traffic count site, direction of travel and hour of the day, with the average number of vehicles in
+    that hour on each day of the week across 2025, the weekday and weekend averages, the site's road and location,
+    and its TMR district and region.
+- q: Why is this table for 2025 only?
+  a: The publisher adds one workbook for each year, and each workbook names its sheet after its year. This
+    entry reads the 2025 workbook. Earlier years are on the portal as separate files.
+- q: Why are some day columns blank?
+  a: The publisher leaves a day blank where a site has no average for that hour and day. The blank is kept
+    as a null.
+summary: The average number of vehicles in each hour of each day of the week at every count site on Queensland's
+  state-controlled roads in 2025.
+description: One row per count site, direction of travel and hour of the day on the Queensland state-declared
+  road network for 2025, from the Department of Transport and Main Roads. Each row has the average volume in
+  that hour on each day from Monday to Sunday, the weekday and weekend averages, the site's description, road
+  section, through distance, segment, coordinates and TMR district and region.
+publisher:
+  name: Department of Transport and Main Roads
+  short: Transport and Main Roads
+  jurisdiction: Qld
+  url: https://www.tmr.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/queensland-traffic-data-averaged-by-hour-of-day-and-day-of-week
+  attribution: Department of Transport and Main Roads, Queensland Government, Queensland traffic data averaged
+    by hour of day and day of week, sourced {sourced}, https://www.data.qld.gov.au/dataset/queensland-traffic-data-averaged-by-hour-of-day-and-day-of-week,
+    licensed under CC BY 4.0.
+example:
+  group: hour
+  metric: avg.weekday_average
+  label: Average weekday vehicles per site and direction
+sample:
+  where:
+    hour: 16 to 17
+  order: [weekday_average.desc]
+  spread: region_name
+  label: The busiest count sites in each TMR region between 4 pm and 5 pm on an average weekday, each region
+    in turn, busiest first.
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: queensland-traffic-data-averaged-by-hour-of-day-and-day-of-week
+  resource: e10dd7b1-b521-4267-b946-66c2c1b98fd3
+  url: https://www.data.qld.gov.au/dataset/queensland-traffic-data-averaged-by-hour-of-day-and-day-of-week
+  sheet: 2025 Avg Volumes
+  cadence: annually
+key:
+- site_id
+- gazettal_direction
+- hour
+- road_section_id
+- tdist_start
+partition_by:
+- region_name
+geometry:
+  lon: longitude
+  lat: latitude
+  crs: EPSG:4326
+  crs_note: The publisher gives longitude and latitude in decimal degrees on the WGS datum (EPSG:4326). They
+    are published as given.
+row_label: Site hours
+fields:
+- name: site_id
+  label: Count site
+  source: SITE_ID
+  type: integer
+- name: description
+  label: Site description
+  source: DESCRIPTION
+  type: string
+- name: site_distance
+  label: Site distance (km)
+  source: SITE_DISTANCE
+  type: number
+  description: Through distance of the site from the start of the road section.
+- name: longitude
+  label: Longitude
+  source: LONGITUDE
+  type: number
+- name: latitude
+  label: Latitude
+  source: LATITUDE
+  type: number
+- name: road_section_id
+  label: Road section
+  source: ROAD_SECTION_ID
+  type: string
+- name: road_name
+  label: Road
+  source: ROAD_NAME
+  type: string
+- name: tdist_start
+  label: Segment start (km)
+  source: TDIST_START
+  type: number
+- name: tdist_end
+  label: Segment end (km)
+  source: TDIST_END
+  type: number
+- name: gazettal_direction
+  label: Direction
+  source: GAZETTAL_DIRECTION
+  type: string
+  description: GAZETTAL for traffic in the gazetted direction of the road, AGAINST GAZETTAL for the other way.
+- name: hour
+  label: Hour
+  source: HOUR
+  type: string
+  description: The hour of the day, such as 7 to 8.
+- name: mon
+  label: Monday
+  source: MON
+  type: integer
+- name: tue
+  label: Tuesday
+  source: TUE
+  type: integer
+- name: wed
+  label: Wednesday
+  source: WED
+  type: integer
+- name: thu
+  label: Thursday
+  source: THU
+  type: integer
+- name: fri
+  label: Friday
+  source: FRI
+  type: integer
+- name: sat
+  label: Saturday
+  source: SAT
+  type: integer
+- name: sun
+  label: Sunday
+  source: SUN
+  type: integer
+- name: weekday_average
+  label: Weekday average
+  source: WEEKDAY_AVERAGE
+  type: integer
+- name: weekend_average
+  label: Weekend average
+  source: WEEKEND_AVERAGE
+  type: integer
+- name: district
+  label: District code
+  source: DISTRICT
+  type: integer
+- name: district_name
+  label: TMR district
+  source: DISTRICT_NAME
+  type: string
+- name: region
+  label: Region code
+  source: REGION
+  type: integer
+- name: region_name
+  label: TMR region
+  source: REGION_NAME
+  type: string

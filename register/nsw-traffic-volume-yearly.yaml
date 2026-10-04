@@ -1,0 +1,202 @@
+slug: nsw-traffic-volume-yearly
+title: Yearly traffic counts by station, New South Wales
+status: live
+topics:
+- roads
+example:
+  where:
+    period: ALL DAYS
+    year: newest
+    classification_type:
+      neq: UNCLASSIFIED
+    traffic_direction_seq: 2
+  group: classification_type
+  metric: avg.traffic_count
+  label: Average daily vehicles at a classifying station, both directions together
+chart:
+  where:
+    period: ALL DAYS
+    traffic_direction_seq: 2
+    classification_seq:
+      lte: 1
+  split: none
+  metric: avg.traffic_count
+  label: Average daily vehicles, both directions, across the stations counted in the year
+order: 320
+publisher:
+  name: Transport for NSW
+  short: TfNSW
+  jurisdiction: NSW
+  url: https://www.transport.nsw.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.nsw.gov.au/data/dataset/2-nsw-roads-traffic-volume-counts-api
+  attribution: Transport for NSW, NSW Government, NSW Roads Traffic Volume Counts API, sourced {sourced}, https://data.nsw.gov.au/data/dataset/2-nsw-roads-traffic-volume-counts-api,
+    licensed under CC BY 4.0.
+collection: nsw-traffic-volume-counts
+collection_title: NSW Roads Traffic Volume Counts
+temporal_start: '2006-01-01'
+search_title: NSW traffic volume counts by year and station (Transport for NSW)
+also_known_as:
+- NSW annual average daily traffic by station
+- TfNSW traffic count yearly summary
+- NSW road traffic volumes by year
+keywords:
+- traffic volume
+- traffic counts
+- average daily traffic
+- heavy vehicles
+- Transport for NSW
+- New South Wales
+faq:
+- q: What is in each row?
+  a: One station, year, direction, vehicle class and period of the week, such as weekdays or the AM peak, with
+    the traffic count Transport for NSW reports for it and its flags for a partial year, data availability,
+    reliability and quality.
+- q: How is the traffic count formed?
+  a: The count is the figure Transport for NSW reports for the station, year, direction, vehicle class and
+    period named. Its documentation on the dataset page explains how counts are built. Note the partial year
+    flag and the quality indicators before comparing stations or years.
+- q: Where is each station?
+  a: Join on the station key to the station table in this collection, which has the road, suburb and coordinates.
+summary: The yearly traffic count at each Transport for NSW counting station since 2006, by direction, vehicle
+  class and period of the week.
+description: The Road Traffic Counts Yearly Summary table from Transport for NSW's NSW Roads Traffic Volume
+  Counts dataset, as the publisher exports it from its traffic volume API. Each row is one station, year, traffic
+  and cardinal direction, vehicle classification and period, with the traffic count, a partial year flag and
+  the publisher's availability, reliability and quality indicators. The publisher's row number is kept as the
+  key.
+source:
+  adapter: ckan-resource
+  portal: https://data.nsw.gov.au/data
+  package: 2-nsw-roads-traffic-volume-counts-api
+  resource: f9e3216d-6f91-406e-935e-e3fd9423b9e3
+  url: https://data.nsw.gov.au/data/dataset/2-nsw-roads-traffic-volume-counts-api
+  cadence: irregular
+key:
+- cartodb_id
+partition_by:
+- year
+row_label: Yearly counts
+fields:
+- name: cartodb_id
+  label: Row ID
+  source: cartodb_id
+  type: integer
+- name: station_key
+  label: Station key
+  source: station_key
+  type: integer
+- name: station_id
+  label: Station ID
+  source: station_id
+  type: string
+  null_values:
+  - 'NULL'
+- name: traffic_direction_seq
+  label: Traffic direction seq
+  source: traffic_direction_seq
+  type: integer
+- name: traffic_direction_name
+  label: Traffic direction name
+  source: traffic_direction_name
+  type: string
+  null_values:
+  - 'NULL'
+- name: cardinal_direction_seq
+  label: Cardinal direction seq
+  source: cardinal_direction_seq
+  type: integer
+- name: cardinal_direction_name
+  label: Cardinal direction name
+  source: cardinal_direction_name
+  type: string
+  null_values:
+  - 'NULL'
+- name: classification_seq
+  label: Classification seq
+  source: classification_seq
+  type: integer
+- name: classification_type
+  label: Classification type
+  source: classification_type
+  type: string
+  null_values:
+  - 'NULL'
+- name: count_type
+  label: Type
+  source: count_type
+  type: string
+  null_values:
+  - 'NULL'
+- name: year
+  label: Year
+  source: year
+  type: integer
+- name: period
+  label: Period
+  source: period
+  type: string
+  null_values:
+  - 'NULL'
+- name: partial_year
+  label: Partial year
+  source: partial_year
+  type: boolean
+- name: latest_date
+  label: Latest date
+  source: latest_date
+  type: string
+  null_values:
+  - 'NULL'
+- name: traffic_count
+  label: Traffic count
+  source: traffic_count
+  type: integer
+- name: data_start_date
+  label: Start date
+  source: data_start_date
+  type: string
+  null_values:
+  - 'NULL'
+- name: data_end_date
+  label: End date
+  source: data_end_date
+  type: string
+  null_values:
+  - 'NULL'
+- name: data_duration
+  label: Duration
+  source: data_duration
+  type: integer
+- name: data_availability
+  label: Availability
+  source: data_availability
+  type: integer
+- name: data_reliability
+  label: Reliability
+  source: data_reliability
+  type: integer
+- name: data_quality_indicator
+  label: Quality indicator
+  source: data_quality_indicator
+  type: integer
+- name: updated_on
+  label: Updated on
+  source: updated_on
+  type: string
+  null_values:
+  - 'NULL'
+omit:
+  the_geom: A column the publisher's Carto service adds for its own maps and records; the station coordinates are
+    kept in their own columns.
+  the_geom_webmercator: A column the publisher's Carto service adds for its own maps and records; the station coordinates
+    are kept in their own columns.
+  record_id: A column the publisher's Carto service adds for its own maps and records; the station coordinates are
+    kept in their own columns.
+  publish: A column the publisher's Carto service adds for its own maps and records; the station coordinates are
+    kept in their own columns.
+  md5: A column the publisher's Carto service adds for its own maps and records; the station coordinates are kept
+    in their own columns.

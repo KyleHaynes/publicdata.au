@@ -1,0 +1,97 @@
+slug: nsw-rental-bond-refunds-2021
+title: Rental bond refunds, New South Wales, 2021
+status: live
+topics:
+- housing
+example:
+  where:
+    bedrooms:
+      lte: 5
+  group: bedrooms
+  metric: avg.days_bond_held
+  label: Average days bond held
+order: 326
+publisher:
+  name: NSW Fair Trading
+  short: Fair Trading
+  jurisdiction: NSW
+  url: https://www.fairtrading.nsw.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.nsw.gov.au/nsw-government/copyright
+  statement: All material on this website is licensed under the Creative Commons Attribution 4.0 licence
+  attribution: NSW Fair Trading, NSW Government, Rental bond data, Residential Rental Bond Refunds Year 2021,
+    sourced {sourced}, https://www.nsw.gov.au/housing-and-construction/rental-forms-surveys-and-data/rental-bond-data,
+    licensed under CC BY 4.0.
+collection: nsw-rental-bonds
+collection_title: Rental bond data, NSW Fair Trading
+temporal_start: '2021-01-01'
+search_title: NSW rental bond refunds 2021, every bond by postcode (NSW Fair Trading)
+also_known_as:
+- NSW rental bond refund data 2021
+- Rental bond refunds by postcode NSW 2021
+- Fair Trading rental bond refunds year 2021
+keywords:
+- rental bonds
+- rent
+- postcode
+- rental market
+- tenancy
+- NSW Fair Trading
+- New South Wales
+faq:
+- q: What is in each row?
+  a: One residential rental bond refunded by NSW Fair Trading in 2021, with the payment date, the postcode
+    of the rented premises, the dwelling type, the number of bedrooms, the amounts paid to the agent and to
+    the tenant, and the number of days the bond was held.
+- q: What do the dwelling type codes mean?
+  a: Fair Trading defines F as a flat or unit, H as a house, T as a terrace, townhouse or semi-detached, O
+    as other and U as unknown. Every row in this year's
+    file carries one of these five codes.
+- q: What does a null bedroom count mean?
+  a: Fair Trading writes U where the bedroom count was not given. It is a null value here.
+summary: Every residential rental bond refunded by NSW Fair Trading in 2021, one row per bond, with the postcode,
+  dwelling type, bedrooms, amounts paid to agent and tenant and days held.
+description: The Residential Rental Bond Refunds workbook for 2021 from NSW Fair Trading. Each row is one bond
+  refunded in the year, with the payment date, the postcode of the rented premises, the dwelling type and number
+  of bedrooms, the dollars paid to the agent and to the tenant, and the days the bond was held.
+source:
+  adapter: file
+  url: https://www.nsw.gov.au/sites/default/files/noindex/2023-12/Rental-bond-refunds-year-2021.xlsx
+  cadence: closed year
+  sheet: Sheet1
+  header_row: 3
+row_label: Bonds
+fields:
+- name: payment_date
+  label: Payment date
+  source: Payment Date
+  type: date
+  date_format: '%Y-%m-%d'
+- name: postcode
+  label: Postcode
+  source: Postcode
+  type: string
+- name: dwelling_type
+  label: Dwelling type
+  source: Dwelling Type
+  type: string
+- name: bedrooms
+  label: Bedrooms
+  source: Bedrooms
+  type: integer
+  null_values:
+  - U
+- name: payment_to_agent
+  label: Paid to agent ($)
+  source: Payment To Agent
+  type: number
+- name: payment_to_tenant
+  label: Paid to tenant ($)
+  source: Payment To Tenant
+  type: number
+- name: days_bond_held
+  label: Days bond held
+  source: Days Bond Held
+  type: integer

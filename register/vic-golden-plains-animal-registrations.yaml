@@ -1,0 +1,106 @@
+slug: vic-golden-plains-animal-registrations
+title: Registered dogs and cats, Golden Plains Shire
+status: live
+topics:
+- community
+example:
+  where:
+    type: DOG
+  group: breed
+  metric: count
+  label: Dogs
+order: 357
+collection: vic-council-pet-registrations
+collection_title: Victorian council dog and cat registrations
+publisher:
+  name: Golden Plains Shire Council
+  short: Golden Plains Shire
+  jurisdiction: Local
+  url: https://www.goldenplains.vic.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.gov.au/data/dataset/animal-registrations
+  attribution: Golden Plains Shire Council, Golden Plains animal registrations, sourced {sourced}, https://data.gov.au/data/dataset/animal-registrations, licensed under CC BY 3.0 AU.
+search_title: Registered dogs and cats in Golden Plains Shire by town and breed (council register)
+also_known_as:
+- Golden Plains Shire animal registrations
+- Bannockburn registered dogs and cats
+- Golden Plains pet names and breeds
+keywords:
+- registered dogs
+- registered cats
+- pet names
+- pet registration
+- Golden Plains
+- council
+faq:
+- q: What does each row hold?
+  a: One dog or cat on Golden Plains Shire's register when the file was published, with its name, breed,
+    colour, sex, whether it is desexed and microchipped, the council's registration reference, the suburb
+    and postcode, and the registration class. Owners and addresses are not in the file.
+- q: What is the class?
+  a: The council's registration category, such as Category 1, Category 2 or Category 2 Pensioner, which
+    sets the fee. Some values carry a trailing space in the file, and the text is kept as published.
+- q: Is it current?
+  a: The portal dates the file March 2016. It is a single snapshot of the register and has not been updated since.
+summary: About 6,400 dogs and cats on the Golden Plains Shire register, with name, breed, colour, sex,
+  desexing, microchip, town and registration class.
+description: Golden Plains Shire's animal registrations as published on data.gov.au, one row per
+  registered dog or cat with the animal's name, type, breed, colour, sex, desexed and microchip flags,
+  registration reference, suburb, postcode and registration class. The council notes that no warranty is
+  given on the data.
+source:
+  adapter: ckan-resource
+  portal: https://data.gov.au/data
+  package: animal-registrations
+  resource: e90f7fb2-fdeb-4f11-817e-4a70d2090ed3
+  url: https://data.gov.au/data/dataset/animal-registrations
+  cadence: no longer updated
+row_label: Animals
+fields:
+- name: name
+  label: Animal's name
+  source: name
+  type: string
+- name: type
+  label: Animal
+  source: type
+  type: string
+- name: breed
+  label: Breed
+  source: breed
+  type: string
+- name: colour
+  label: Colour
+  source: colour
+  type: string
+- name: sex
+  label: Sex
+  source: sex
+  type: string
+- name: desexed
+  label: Desexed
+  source: desexed
+  type: boolean
+- name: ref
+  label: Registration reference
+  source: ref
+  type: string
+- name: microchip
+  label: Microchipped
+  source: microchip
+  type: boolean
+- name: suburb
+  label: Suburb
+  source: suburb
+  type: string
+- name: postcode
+  label: Postcode
+  source: postcode
+  type: string
+- name: class
+  label: Registration class
+  source: class
+  type: string

@@ -1,0 +1,34 @@
+{
+  "dataset": "sa-baby-names-girls",
+  "version": "2026-01-02",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:10:09+00:00",
+  "sha256": "32820a62583ed1ad524fee77afb17f9ed9694940763fd55ba9486f9c41a567e0",
+  "bytes": 12283,
+  "filename": "female-top-100-2025.xlsx",
+  "encoding": "xlsx",
+  "source": {
+    "url": "https://data.sa.gov.au/data/dataset/9849aa7f-e316-426e-8ab5-74658a62c7e6/resource/4cf818b0-7af2-411d-bec3-ead451c3ce8b/download/female-top-100-2025.xlsx",
+    "portal": "https://data.sa.gov.au/data",
+    "package": "popular-baby-names",
+    "package_id": "9849aa7f-e316-426e-8ab5-74658a62c7e6",
+    "resource": "4cf818b0-7af2-411d-bec3-ead451c3ce8b",
+    "resource_name": "Top 100 Baby Names 2025 - Female",
+    "resource_last_modified": "2026-01-02T03:48:59.327853",
+    "package_modified": "2026-01-02T03:50:03.485782",
+    "package_version": null,
+    "etag": "1767325739.875-12283-1365121559",
+    "http_last_modified": "Fri, 02 Jan 2026 03:48:59 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution",
+    "url": "http://creativecommons.org/licenses/by/4.0",
+    "read_from": "https://data.sa.gov.au/data/api/3/action/package_show?id=popular-baby-names",
+    "read_at": "2026-10-03T03:10:09+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "a78fbce1e2d625bb5ad64c80d0834fd25911ee0ee837c973d1fcd6345de19e6e"
+}

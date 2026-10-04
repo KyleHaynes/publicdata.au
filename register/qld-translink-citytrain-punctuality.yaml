@@ -1,0 +1,81 @@
+slug: qld-translink-citytrain-punctuality
+title: Citytrain on-time running and reliability
+status: live
+topics:
+- roads
+order: 290
+collection: qld-translink-performance
+collection_title: Translink monthly performance data
+search_title: Citytrain on-time running and reliability by month (Translink)
+also_known_as:
+- Brisbane train punctuality
+- Queensland Rail Citytrain on-time performance
+keywords:
+- punctuality
+- on-time running
+- reliability
+- Citytrain
+- train
+- Translink
+faq:
+- q: What is in each row?
+  a: Each row is one month. On-time running is the proportion of Citytrain services in the combined peaks that
+    ran on time, and reliability is the proportion of scheduled services that ran. Both are written as a fraction
+    of 1.
+- q: How far back does it go?
+  a: At review the file held about 30 months, starting in late 2023. Each fetch here is kept as a version,
+    so a month the publisher later drops stays in an earlier version.
+summary: The monthly share of Citytrain services that ran on time in the combined peaks, and the share that
+  ran at all.
+description: 'One row per month with the on-time running of Citytrain services in the combined peaks and their
+  reliability, as published in Translink''s monthly performance data. Both are proportions between 0 and 1.
+  At review the file started in late 2023.
+
+  '
+publisher:
+  name: Department of Transport and Main Roads
+  short: Transport and Main Roads
+  jurisdiction: Qld
+  url: https://www.tmr.qld.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/translink-monthly-performance-data
+  attribution: Department of Transport and Main Roads, Queensland Government, Translink monthly performance
+    data, sourced {sourced}, https://www.data.qld.gov.au/dataset/translink-monthly-performance-data, licensed
+    under CC BY 3.0 AU.
+  portal_id: CC-BY-3.0
+chart:
+  where:
+    month:
+      gte: '2024-01-01'
+  split: none
+  metric: avg.on_time_running_combined_peaks
+  label: Average monthly on-time running, combined peaks
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: translink-monthly-performance-data
+  resource: d6b9ce31-dd07-4ea2-ac1a-848fa638cd90
+  url: https://www.data.qld.gov.au/dataset/translink-monthly-performance-data
+  cadence: monthly
+key:
+- month
+row_label: Months
+fields:
+- name: month
+  label: Month
+  source: Month-Year
+  type: date
+  date_format: '%b-%Y'
+  description: First day of the month reported.
+- name: on_time_running_combined_peaks
+  label: On-time running, combined peaks
+  source: 'Citytrain: On-time running (combined peaks)'
+  type: number
+  description: Proportion, 0 to 1.
+- name: reliability
+  label: Reliability
+  source: 'Citytrain: Reliability'
+  type: number
+  description: Proportion of scheduled services that ran, 0 to 1.

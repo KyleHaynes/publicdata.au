@@ -1,0 +1,266 @@
+slug: qld-jp-signing-locations
+title: Justice of the Peace and Commissioner for Declarations signing locations, Queensland
+status: live
+topics:
+- community
+- government
+order: 220
+search_title: JP signing locations in Queensland (Department of Justice)
+also_known_as:
+- Where to find a JP in Queensland
+- Justice of the Peace near me Queensland
+- JPs in the Community locations
+- Commissioner for Declarations signing sites QLD
+keywords:
+- Justice of the Peace
+- JP
+- Commissioner for Declarations
+- statutory declaration
+- witness documents
+- Queensland
+faq:
+- q: What is in each row?
+  a: One place where volunteer Justices of the Peace or Commissioners for Declarations sit to witness
+    and certify documents under the JPs in the Community program, with its address, coordinates, phone
+    and the session times for each morning and afternoon of the week.
+- q: Do I need an appointment?
+  a: The file does not say. The sessions it lists are the times volunteers are rostered at each place,
+    and the publisher notes some exceptions in the services and closures columns, such as no sessions
+    on public holidays.
+- q: What datum are the coordinates in?
+  a: The publisher does not name one. They are published as given, and on a map they are read as WGS84.
+summary: Every place in Queensland where volunteer Justices of the Peace and Commissioners for Declarations
+  sit to witness documents, with address, coordinates and weekly session times.
+description: The signing locations of the JPs in the Community program run by the Queensland Department
+  of Justice, one row per location, such as a library or shopping centre. Each row has the address and
+  postal address, latitude and longitude, phone, the session times for each morning and afternoon from
+  Monday to Sunday, closures and the date the row was last updated. The department refreshes the file
+  often.
+publisher:
+  name: Department of Justice
+  short: Justice
+  jurisdiction: Qld
+  url: https://www.justice.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/jp-or-cdec-location
+  attribution: Department of Justice, Queensland Government, Justice of the Peace and Commissioner of
+    Declarations signing locations, sourced {sourced}, https://www.data.qld.gov.au/dataset/jp-or-cdec-location,
+    licensed under CC BY 4.0.
+example:
+  group: region
+  metric: count
+  label: Signing locations in each region
+chart: none
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: jp-or-cdec-location
+  resource: 652252e9-e21a-43fd-b761-3592b365fb28
+  url: https://www.data.qld.gov.au/dataset/jp-or-cdec-location
+  encoding: utf-8-sig
+  cadence: weekly
+key:
+- name
+partition_by:
+- region
+geometry:
+  lon: longitude
+  lat: latitude
+  crs: EPSG:4326
+  crs_note: Latitude and longitude in decimal degrees as published. The publisher does not name the datum;
+    GDA2020 and WGS84 differ by under 2 metres.
+row_label: Signing locations
+fields:
+- name: name
+  label: Signing location
+  source: Title
+  type: string
+- name: region
+  label: Region
+  source: Location
+  type: string
+- name: services
+  label: Services
+  source: Services
+  type: string
+- name: office_type
+  label: Office type
+  source: Office type
+  type: string
+- name: counter_type
+  label: Program
+  source: Counter type
+  type: string
+- name: address_1
+  label: Address line 1
+  source: Address 1
+  type: string
+- name: address_2
+  label: Address line 2
+  source: Address 2
+  type: string
+- name: suburb
+  label: Suburb
+  source: Suburb
+  type: string
+- name: postcode
+  label: Postcode
+  source: Postcode
+  type: string
+  description: Kept as text.
+- name: postal_address_1
+  label: Postal address line 1
+  source: Postal address 1
+  type: string
+- name: postal_address_2
+  label: Postal address line 2
+  source: Postal address 2
+  type: string
+- name: postal_suburb
+  label: Postal suburb
+  source: Postal suburb
+  type: string
+- name: postal_postcode
+  label: Postal postcode
+  source: Postal postcode
+  type: string
+- name: latitude
+  label: Latitude
+  source: Latitude
+  type: number
+- name: longitude
+  label: Longitude
+  source: Longitude
+  type: number
+- name: phone
+  label: Phone
+  source: Phone
+  type: string
+- name: fax
+  label: Fax
+  source: Fax
+  type: string
+- name: email
+  label: Email
+  source: Email
+  type: string
+- name: mon_am
+  label: Monday morning
+  source: Mon am
+  type: string
+  description: Session times as the publisher writes them, such as 17:30-19:30. Blank when there is no
+    session.
+- name: mon_pm
+  label: Monday afternoon
+  source: Mon pm
+  type: string
+  description: Session times as the publisher writes them, such as 17:30-19:30. Blank when there is no
+    session.
+- name: tues_am
+  label: Tuesday morning
+  source: Tues am
+  type: string
+  description: Session times as the publisher writes them, such as 17:30-19:30. Blank when there is no
+    session.
+- name: tues_pm
+  label: Tuesday afternoon
+  source: Tues pm
+  type: string
+  description: Session times as the publisher writes them, such as 17:30-19:30. Blank when there is no
+    session.
+- name: wed_am
+  label: Wednesday morning
+  source: Wed am
+  type: string
+  description: Session times as the publisher writes them, such as 17:30-19:30. Blank when there is no
+    session.
+- name: wed_pm
+  label: Wednesday afternoon
+  source: Wed pm
+  type: string
+  description: Session times as the publisher writes them, such as 17:30-19:30. Blank when there is no
+    session.
+- name: thurs_am
+  label: Thursday morning
+  source: Thurs am
+  type: string
+  description: Session times as the publisher writes them, such as 17:30-19:30. Blank when there is no
+    session.
+- name: thurs_pm
+  label: Thursday afternoon
+  source: Thurs pm
+  type: string
+  description: Session times as the publisher writes them, such as 17:30-19:30. Blank when there is no
+    session.
+- name: fri_am
+  label: Friday morning
+  source: Fri am
+  type: string
+  description: Session times as the publisher writes them, such as 17:30-19:30. Blank when there is no
+    session.
+- name: fri_pm
+  label: Friday afternoon
+  source: Fri pm
+  type: string
+  description: Session times as the publisher writes them, such as 17:30-19:30. Blank when there is no
+    session.
+- name: sat_am
+  label: Saturday morning
+  source: Sat am
+  type: string
+  description: Session times as the publisher writes them, such as 17:30-19:30. Blank when there is no
+    session.
+- name: sat_pm
+  label: Saturday afternoon
+  source: Sat pm
+  type: string
+  description: Session times as the publisher writes them, such as 17:30-19:30. Blank when there is no
+    session.
+- name: sun_am
+  label: Sunday morning
+  source: Sun am
+  type: string
+  description: Session times as the publisher writes them, such as 17:30-19:30. Blank when there is no
+    session.
+- name: sun_pm
+  label: Sunday afternoon
+  source: Sun pm
+  type: string
+  description: Session times as the publisher writes them, such as 17:30-19:30. Blank when there is no
+    session.
+- name: closure
+  label: Closures
+  source: Closure
+  type: string
+  description: Dates or notes of closures, as the publisher writes them.
+- name: agency
+  label: Agency
+  source: Agency
+  type: string
+  description: The department code the publisher records, DJAG or DoJ.
+- name: facilities
+  label: Facilities
+  source: Facilities
+  type: string
+- name: description
+  label: Description
+  source: Description
+  type: string
+- name: operating_hours
+  label: Operating hours
+  source: Operating hours
+  type: string
+- name: operating_days
+  label: Operating days
+  source: Operating days
+  type: string
+- name: updated
+  label: Last updated
+  source: Updated
+  type: datetime
+  date_format: '%Y-%m-%d %H:%M:%S'
+  description: When the publisher last changed the row.
+note: Cells were typed and headers were made snake_case. The publisher's header is kept beside every field
+  in schema.json. Rows were left alone.

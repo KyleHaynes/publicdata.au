@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-pool-safety-register-pools",
+  "version": "2024-09-02",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:01:53+00:00",
+  "sha256": "6c98b1b99d3ab0e2401bacdbb11a5559f766c31dd678021867c92fa65f34d7a0",
+  "bytes": 77972178,
+  "filename": "pools_registered_at_2024-08-012024-08-01-06.41.50.747.csv",
+  "encoding": "utf-16",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/1b4c7d46-7e52-4c77-ab79-6e935dd5c691/resource/bb059c35-d826-4ccd-af31-24de4716864a/download/pools_registered_at_2024-08-012024-08-01-06.41.50.747.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "poolsafetyregister",
+    "package_id": "1b4c7d46-7e52-4c77-ab79-6e935dd5c691",
+    "resource": "bb059c35-d826-4ccd-af31-24de4716864a",
+    "resource_name": "Register of regulated pools in Queensland",
+    "resource_last_modified": "2024-09-02T05:29:30.087330",
+    "package_modified": "2024-09-02T05:45:34.235091",
+    "package_version": "22016",
+    "etag": "c231cc7466660639d98c4083d8147240",
+    "http_last_modified": "Mon, 02 Sep 2024 05:29:33 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=poolsafetyregister",
+    "read_at": "2026-10-03T03:01:52+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "c157c04a08fe503a01c69821b472a496f9b3f483c0298c1b469f74d8189bcd82"
+}

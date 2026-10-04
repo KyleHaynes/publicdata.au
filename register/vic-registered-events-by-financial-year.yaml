@@ -1,0 +1,91 @@
+slug: vic-registered-events-by-financial-year
+title: Registrable life events by financial year, Victoria
+status: live
+topics:
+- people
+example:
+  where:
+    financial_year: newest
+    event:
+      neq: Total
+  group: event
+  metric: sum.registrations
+  label: Registrations
+sample:
+  where: {financial_year: newest}
+  label: Every kind of event in the newest financial year, with the publisher's total, in the publisher's order.
+order: 375
+collection: vic-bdm-registrations
+collection_title: Births, deaths and marriages registered in Victoria
+publisher:
+  name: Registry of Births, Deaths and Marriages Victoria
+  short: BDM Victoria
+  jurisdiction: Vic
+  url: https://www.bdm.vic.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://discover.data.vic.gov.au/dataset/births-deaths-and-marriages-registered-events-registered-events-by-financial-year
+  attribution: Registry of Births, Deaths and Marriages Victoria, Victorian Government, Births, Deaths
+    and Marriages - registered events by financial year, sourced {sourced}, https://discover.data.vic.gov.au/dataset/births-deaths-and-marriages-registered-events-registered-events-by-financial-year,
+    licensed under CC BY 4.0.
+temporal_start: '2009-07-01'
+search_title: Victorian births, deaths, name changes and adoptions registered by financial year (BDM)
+also_known_as:
+- BDM Victoria registered events by financial year
+- Victorian change of name registrations per year
+- Registered relationships Victoria per year
+keywords:
+- births
+- deaths
+- marriages
+- change of name
+- registered relationships
+- adoptions
+- stillbirths
+- Victoria
+faq:
+- q: What does each row hold?
+  a: The number of one kind of life event the registry registered in one financial year, from 2009/10.
+    The kinds are births, changes of name, marriages, deaths, registered and revoked relationships,
+    adoptions and stillbirths, and the publisher's own total of them all, kept as published.
+- q: Have past figures changed?
+  a: The publisher states it found and corrected an issue with the registrations first published for
+    2022-23. Earlier versions kept here show the figures as they were published at the time.
+summary: The number of births, deaths, marriages, changes of name, registered relationships, adoptions
+  and stillbirths registered in Victoria in each financial year from 2009/10.
+description: Registrable events by financial year from the Registry of Births, Deaths and Marriages
+  Victoria. Each row is one kind of event and one financial year, with the number the registry
+  registered in it. Events are counted when registered, which may differ from when they occurred. The
+  publisher's Total row is kept.
+source:
+  adapter: ckan-resource
+  portal: https://discover.data.vic.gov.au
+  package: births-deaths-and-marriages-registered-events-registered-events-by-financial-year
+  resource: af06fcdf-c07c-4598-a55c-0f4aa04bbf37
+  url: https://discover.data.vic.gov.au/dataset/births-deaths-and-marriages-registered-events-registered-events-by-financial-year
+  cadence: yearly
+wide:
+  header_row: 3
+  header_rows: 1
+  row_headers: 1
+  column_match: ^\d{4}/\d{2}$
+key:
+- event
+- financial_year
+row_label: Event years
+fields:
+- name: event
+  label: Event
+  source: (row header 1)
+  type: string
+- name: financial_year
+  label: Financial year
+  source: (column header 1)
+  type: string
+  description: The financial year as the publisher writes it, for example 2024/25.
+- name: registrations
+  label: Events registered
+  source: (cell)
+  type: integer

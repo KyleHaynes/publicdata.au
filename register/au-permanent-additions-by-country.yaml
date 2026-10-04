@@ -1,0 +1,112 @@
+slug: au-permanent-additions-by-country
+title: Permanent additions by country of birth, Australia, 1996-97 to 2016-17
+status: live
+topics:
+- migration
+example:
+  where:
+    table: '2.2'
+    year: newest
+  group: region
+  metric: max.permanent_additions
+  label: Permanent additions in the newest year by region of birth, from each region's total row
+sample:
+  where:
+    table: '2.2'
+    year: newest
+    region: Southern and Central Asia
+  order:
+  - permanent_additions.desc
+  spread: none
+  label: Southern and Central Asia in the newest year, the region's total first and then each country of
+    birth, most first.
+order: 49
+publisher:
+  name: Department of Home Affairs
+  short: Home Affairs
+  jurisdiction: Cth
+  url: https://www.homeaffairs.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-09-29'
+  portal_id: cc-by
+  evidence: https://data.gov.au/data/dataset/historical-migration-statistics
+  attribution: Department of Home Affairs, Australian Government, Historical Migration Statistics, sourced
+    {sourced}, https://data.gov.au/data/dataset/historical-migration-statistics, licensed under CC BY 3.0
+    AU.
+collection: au-historical-migration
+collection_title: Historical Migration Statistics
+temporal_start: '1996-07-01'
+search_title: Permanent additions to Australia's population by country of birth, 1996-97 to 2016-17
+also_known_as:
+- Australian permanent migration by country of birth
+- Settler arrivals and onshore grants by birthplace
+- Permanent additions statistics
+keywords:
+- immigration statistics
+- migration by country of birth
+- country of birth
+- settlers
+- migration history
+- Australia
+faq:
+- q: What is a permanent addition?
+  a: The publisher counts settler arrivals from overseas together with people already in Australia who were
+    granted a permanent visa. The workbook's notes set out the definition and the revisions for 2008-09
+    to 2013-14.
+- q: What does a suppressed value mean?
+  a: The publisher shows fewer than 5 people as "<5", and a small negative figure as "> -5". Each is kept
+    here as a null value with a suppressed flag, and never as 0 or 5.
+summary: People added to Australia's permanent population each financial year from 1996-97 to 2016-17, by
+  region and country of birth.
+description: Permanent additions for each financial year from 1996-97 to 2016-17, by region and country of birth,
+  from tables 2.1 and 2.2 of Historical Migration Statistics. Each row is one year and one country, including
+  the publisher's regional totals.
+source:
+  adapter: ckan-resource
+  portal: https://data.gov.au/data
+  package: historical-migration-statistics
+  resource: b59a15df-86ea-4c4c-95be-4dd9fc9f8ac4
+  url: https://data.gov.au/data/dataset/historical-migration-statistics
+  cadence: yearly
+wide:
+  sheets:
+  - '2.1'
+  - '2.2'
+  header_row: 3
+  header_rows: 2
+  first_column: 2
+  row_headers: 1
+suppression:
+- '<5'
+- '>-5'
+- '> -5'
+key:
+- table
+- year
+- region
+- country
+partition_by:
+- table
+fields:
+- name: table
+  label: Table
+  source: (sheet)
+  type: string
+- name: year
+  label: Period
+  source: (row header 1)
+  type: string
+  description: A financial year, or the part year the publisher names.
+- name: region
+  label: Region
+  source: (column header 1)
+  type: string
+- name: country
+  label: Country of birth
+  source: (column header 2)
+  type: string
+- name: permanent_additions
+  label: Permanent additions
+  source: (cell)
+  type: integer

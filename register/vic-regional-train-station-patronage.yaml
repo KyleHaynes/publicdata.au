@@ -1,0 +1,94 @@
+slug: vic-regional-train-station-patronage
+title: Annual patronage by regional train station, Victoria
+status: live
+topics:
+- roads
+example:
+  group: stop_name
+  metric: sum.pax_annual
+  label: Annual entries
+order: 397
+publisher:
+  name: Department of Transport and Planning
+  short: Transport and Planning
+  jurisdiction: Vic
+  url: https://www.vic.gov.au/department-transport-and-planning
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://discover.data.vic.gov.au/dataset/annual-regional-train-station-patronage-station-entries
+  attribution: Department of Transport and Planning, Victorian Government, Annual regional train station
+    patronage (station entries), sourced {sourced}, https://discover.data.vic.gov.au/dataset/annual-regional-train-station-patronage-station-entries,
+    licensed under CC BY 4.0.
+search_title: V/Line regional train station patronage by year (station entries, DTP)
+also_known_as:
+- V/Line station patronage
+- Regional Victoria train station entries
+- Regional train station usage Victoria
+keywords:
+- V/Line
+- regional trains
+- station patronage
+- station entries
+- Victoria
+faq:
+- q: What does each row hold?
+  a: One regional train station for one financial year, with its stop id, name, coordinates and the
+    estimated number of station entries in the year.
+- q: How are the figures estimated?
+  a: At myki stations they come from ticketing data scaled by a transaction rate from conductor and
+    barrier counts, and elsewhere from conductor counts. The publisher rounds each to the nearest 50 and
+    rounds anything under 50 up to 50. Southern Cross counts only the gates to platforms 1 to 8.
+- q: Which years are here?
+  a: Each version is the newest financial year the department has released, starting with 2024-25. The
+    portal also lists earlier years back to 2018-19 as separate files.
+summary: Estimated station entries at each Victorian regional train station for the financial year, rounded
+  to the nearest 50, with each station's coordinates.
+description: Annual regional train station patronage from the Department of Transport and Planning, one
+  row per V/Line station with its stop id, name, coordinates and total station entries for the financial
+  year. Estimates come from myki data and conductor counts and are rounded to the nearest 50.
+source:
+  adapter: ckan-resource
+  portal: https://discover.data.vic.gov.au
+  package: annual-regional-train-station-patronage-station-entries
+  resource_match: ^Annual regional train station patronage \(station entries\) - \d{4}-\d{4}$
+  url: https://discover.data.vic.gov.au/dataset/annual-regional-train-station-patronage-station-entries
+  cadence: yearly
+  encoding: utf-8-sig
+geometry:
+  lon: stop_long
+  lat: stop_lat
+  crs: EPSG:4326
+  crs_note: Coordinates are longitude and latitude in decimal degrees as published; the publisher names
+    no datum, and WGS84 (EPSG:4326) is assumed as for its timetable data.
+key:
+- fin_year
+- stop_id
+row_label: Stations
+fields:
+- name: fin_year
+  label: Financial year
+  source: Fin_year
+  type: string
+  description: The financial year, written as the publisher does, for example FY24-25.
+- name: stop_id
+  label: Stop id
+  source: Stop_ID
+  type: string
+- name: stop_name
+  label: Station
+  source: Stop_name
+  type: string
+- name: stop_lat
+  label: Latitude
+  source: Stop_lat
+  type: number
+- name: stop_long
+  label: Longitude
+  source: Stop_long
+  type: number
+- name: pax_annual
+  label: Entries in the year
+  source: Pax_annual
+  type: integer

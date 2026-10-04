@@ -1,0 +1,104 @@
+slug: vic-southern-grampians-animal-registrations
+title: Registered dogs and cats, Southern Grampians Shire
+status: live
+topics:
+- community
+example:
+  group: suburb
+  metric: count
+  label: Registered animals
+order: 358
+collection: vic-council-pet-registrations
+collection_title: Victorian council dog and cat registrations
+publisher:
+  name: Southern Grampians Shire Council
+  short: Southern Grampians Shire
+  jurisdiction: Local
+  url: https://www.sthgrampians.vic.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.gov.au/data/dataset/southern-grampians-animal-registrations
+  attribution: Southern Grampians Shire Council, Southern Grampians Animal Registrations, sourced {sourced}, https://data.gov.au/data/dataset/southern-grampians-animal-registrations, licensed under CC BY 3.0 AU.
+search_title: Registered dogs and cats in Southern Grampians Shire by town (council register)
+also_known_as:
+- Southern Grampians animal registrations
+- Hamilton Victoria registered dogs and cats
+- Southern Grampians pet registrations
+keywords:
+- registered dogs
+- registered cats
+- pet registration
+- Hamilton
+- Southern Grampians
+- council
+faq:
+- q: What does each row hold?
+  a: One dog or cat on Southern Grampians Shire's register when the file was published, with the
+    council's registration reference, type, whether it is microchipped and desexed, sex, the town and the
+    ABS mesh block it is registered in. Names, owners and addresses are not in the file.
+- q: Which columns are left out?
+  a: The file's name column is empty, and its row id, council code, property assessment number and
+    feature id are not republished. The assessment number points to a rated property, so it is held back.
+- q: Is it current?
+  a: The portal dates the file June 2021. It is a single snapshot of the register and has not been updated since.
+summary: About 2,800 dogs and cats on the Southern Grampians Shire register, with type, sex, desexing,
+  microchip, town and ABS mesh block.
+description: Southern Grampians Shire's animal registrations as published on data.gov.au, one row per
+  registered dog or cat with its registration reference, type, microchip and desexed flags, sex, town in
+  lower case as published and the ABS mesh block code of its registered address.
+source:
+  adapter: ckan-resource
+  portal: https://data.gov.au/data
+  package: southern-grampians-animal-registrations
+  resource: 2398fac9-c3b5-4623-9b15-9d1b9fd4d689
+  url: https://data.gov.au/data/dataset/southern-grampians-animal-registrations
+  cadence: no longer updated
+row_label: Animals
+fields:
+- name: ref
+  label: Registration reference
+  source: ref
+  type: string
+  description: The council's registration reference. Some references are on two to four rows with the
+    same details, as published.
+- name: type
+  label: Animal
+  source: type
+  type: string
+- name: microchip
+  label: Microchipped
+  source: microchip
+  type: boolean
+  true_values:
+  - y
+  false_values:
+  - n
+- name: sex
+  label: Sex
+  source: sex
+  type: string
+  description: f, m or u as the council records it. Blank on a few rows.
+- name: desexed
+  label: Desexed
+  source: desexed
+  type: boolean
+  true_values:
+  - y
+  false_values:
+  - n
+- name: suburb
+  label: Town
+  source: suburb
+  type: string
+- name: meshblock
+  label: ABS mesh block
+  source: meshblock
+  type: string
+omit:
+  _id: The portal's row number.
+  name: Empty on every row.
+  PR_LGAC: The council's code, the same on every row.
+  usr_ass: The council's property assessment number, held back because it points to a rated property.
+  FID: A feature id tied to the property, held back for the same reason.

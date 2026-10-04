@@ -1,0 +1,28 @@
+{
+  "dataset": "au-emergency-services-facilities",
+  "version": "2024-02-13",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:15:33+00:00",
+  "sha256": "ce6869941900da81bf27fdacba71266e65a6b39c4a86c582fe8edbbc36434cd2",
+  "bytes": 3922920,
+  "filename": "147776_01_2.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://d28rz98at9flks.cloudfront.net/147776/147776_01_2.csv",
+    "etag": "fd8d6e5aa40a8fd99563f4836fa9c8b0",
+    "http_last_modified": "Tue, 13 Feb 2024 04:35:57 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "stated": "Creative Commons Attribution 4.0 International Licence",
+    "normalised": "CC-BY-4.0",
+    "title": "CC BY 4.0",
+    "url": "https://ecat.ga.gov.au/geonetwork/srv/api/records/015c1b8c-7b47-4780-8206-1bd39ad2120b/formatters/xml",
+    "read_from": "https://ecat.ga.gov.au/geonetwork/srv/api/records/015c1b8c-7b47-4780-8206-1bd39ad2120b/formatters/xml",
+    "read_at": "2026-10-03T03:15:32+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "f830e459ff45f2efc240e1403df71fd856ae320072c1f7b419522fee93da6fa6"
+}

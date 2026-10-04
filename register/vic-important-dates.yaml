@@ -1,0 +1,109 @@
+slug: vic-important-dates
+title: Victorian public holidays, school terms and other important dates
+status: live
+topics:
+- government
+- community
+order: 376
+publisher:
+  name: Department of Government Services
+  short: Government Services
+  jurisdiction: Vic
+  url: https://www.vic.gov.au/department-government-services
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://discover.data.vic.gov.au/dataset/government-dates-api-data
+  attribution: Department of Government Services, Victorian Government, Victorian Government Important
+    Dates API data, sourced {sourced}, https://discover.data.vic.gov.au/dataset/government-dates-api-data,
+    licensed under CC BY 4.0.
+temporal_start: '2018-10-07'
+search_title: Victorian public holidays and school term dates as data (Important Dates API)
+also_known_as:
+- Victoria public holidays list
+- Victorian school term dates
+- Victorian Government Important Dates API
+- Parliament of Victoria sitting dates
+keywords:
+- public holidays
+- school terms
+- school holidays
+- daylight saving
+- parliament sitting dates
+- multifaith calendar
+- Victoria
+faq:
+- q: What does each row hold?
+  a: One date and what falls on it, with its kind, its name, the body the date comes from and a link to
+    that body's page. The kinds are public holidays, school terms and school holidays, daylight saving,
+    Parliament of Victoria sitting days and the Faith Communities Council of Victoria's multifaith
+    calendar.
+- q: Why does one event appear on several rows?
+  a: An event that lasts more than a day, such as Lent or a school holiday, has a row for each day the
+    publisher lists, and those rows share one identifier. The file also repeats some rows exactly, and
+    they are kept as published.
+- q: How far ahead does it go?
+  a: The file runs from October 2018 to December 2030, but each kind is only as complete as its source.
+    Public holidays are listed for the years Business Victoria has declared them, and a school term row
+    may note the years its source publishes. The school holiday rows name no source body, and the
+    publisher describes them as the days between the terms.
+summary: Public holidays, school terms and holidays, daylight saving changes, parliamentary sitting days
+  and multifaith calendar dates for Victoria, one row per date, from 2018 to 2030.
+description: The data behind the Victorian Government Important Dates API, published monthly by the
+  Department of Government Services. Each row is one date with its kind, name, description and the
+  publisher and web page it comes from. The sources are Business Victoria, the Department of Education,
+  the Parliament of Victoria and the Faith Communities Council of Victoria.
+example:
+  group: date_type
+  metric: count
+  label: Dates by kind
+chart:
+  where: {date_type: PUBLIC_HOLIDAY}
+  split: none
+  metric: count
+  label: Public holidays
+source:
+  adapter: ckan-resource
+  portal: https://discover.data.vic.gov.au
+  package: government-dates-api-data
+  resource_match: ^Important Dates
+  url: https://discover.data.vic.gov.au/dataset/government-dates-api-data
+  cadence: monthly
+  encoding: utf-8-sig
+partition_by:
+- date_type
+row_label: Dates
+fields:
+- name: date_id
+  label: Event identifier
+  source: arun
+  type: string
+  description: The publisher's identifier for the event. A multi-day event repeats it on each of its rows.
+- name: date_type
+  label: Kind of date
+  source: dateType
+  type: string
+  description: PUBLIC_HOLIDAY, SCHOOL_TERM, SCHOOL_HOLIDAY, DAYLIGHT_SAVING, PARLIAMENT_SITTING or MULTI_FAITH.
+- name: name
+  label: Name
+  source: name
+  type: string
+- name: date
+  label: Date
+  source: important_date
+  type: date
+  date_format: '%d/%m/%Y'
+- name: source_body
+  label: Source body
+  source: publisher
+  type: string
+  description: The body the date comes from, as the publisher names it.
+- name: description
+  label: Description
+  source: description
+  type: string
+- name: source_url
+  label: Source page
+  source: source
+  type: string

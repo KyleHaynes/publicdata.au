@@ -1,0 +1,99 @@
+slug: sa-metro-median-house-prices
+title: Median house sale prices by suburb, metropolitan Adelaide
+status: live
+topics:
+- housing
+example:
+  where:
+    measure:
+      gte: Median
+      lt: Sales
+  group: measure
+  metric: avg.value
+  label: Average suburb median house price ($)
+order: 416
+search_title: Adelaide median house prices by suburb, quarterly (Housing and Urban Development)
+also_known_as:
+- Metro median house sales
+- Adelaide house prices by suburb
+- South Australian median house price by suburb
+- LSG median house sales statistics
+keywords:
+- median house price
+- house prices by suburb
+- property sales
+- Adelaide
+- housing market
+- Department for Housing and Urban Development
+- South Australia
+faq:
+- q: What is in each row?
+  a: One figure for one suburb of metropolitan Adelaide, with its council area. The measure column names the
+    figure as the publisher heads it, either Sales, the number of house sales in the quarter, or Median, the
+    median sale price in dollars, followed by the quarter, such as Sales 2Q 2026.
+- q: Which quarters does the table cover?
+  a: The newest quarterly file, which compares one quarter with the same quarter a year earlier, 2Q 2025 and
+    2Q 2026 at the first version. The publisher adds a file each quarter, and each becomes a version here. The
+    files back to 2015 stay on the portal.
+- q: Why is the median change column missing?
+  a: The publisher's Median Change column is the percentage change between the two medians, worked out from
+    figures already in the table, so it is left out.
+- q: Why do some suburbs have no figure?
+  a: The publisher leaves the cells blank for a suburb with no house sales in the quarter, and a suburb with no
+    figure in either quarter has no rows here.
+summary: The number of house sales and the median sale price in each suburb of metropolitan Adelaide for the
+  newest quarter and the same quarter a year earlier. Updated quarterly.
+description: Quarterly median house sale prices for metropolitan Adelaide by suburb from the Department for
+  Housing and Urban Development. Each row is one suburb and one of the publisher's columns, the number of sales
+  or the median price for a quarter, with the council area the suburb is in.
+publisher:
+  name: Department for Housing and Urban Development
+  short: Housing and Urban Development
+  jurisdiction: SA
+  url: https://www.dhud.sa.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.sa.gov.au/data/dataset/metro-median-house-sales
+  attribution: Department for Housing and Urban Development, Government of South Australia, Metro median house
+    sales, https://data.sa.gov.au/data/dataset/metro-median-house-sales, accessed {sourced}, licensed under CC BY
+    4.0.
+source:
+  adapter: ckan-resource
+  portal: https://data.sa.gov.au/data
+  package: metro-median-house-sales
+  resource_match: ^Metropolitan Median House Sales Q\d \d{4}$
+  url: https://data.sa.gov.au/data/dataset/metro-median-house-sales
+  cadence: quarterly
+wide:
+  header_row: 1
+  header_rows: 1
+  row_headers: 2
+  column_match: ^(Sales|Median) \dQ \d{4}$
+key:
+- council
+- suburb
+- measure
+row_label: Suburb figures
+fields:
+- name: council
+  label: Council area
+  source: (row header 1)
+  type: string
+- name: suburb
+  label: Suburb
+  source: (row header 2)
+  type: string
+- name: measure
+  label: Measure and quarter
+  source: (column header 1)
+  type: string
+  description: The publisher's column heading, Sales or Median and the quarter, such as Median 2Q 2026.
+- name: value
+  label: Value
+  source: (cell)
+  type: integer
+  description: The number of house sales, or the median sale price in dollars, as the measure names.
+omit:
+  Median Change: The percentage change between the two medians, worked out from figures in the table.

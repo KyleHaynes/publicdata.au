@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-vehicle-registrations-by-suburb",
+  "version": "2022-10-14",
+  "as_at": "",
+  "fetched_at": "2026-10-03T02:59:35+00:00",
+  "sha256": "b4be2e06b3cc4d5d1a6afcea1be509b58768149b2dfda09ad983ab72813f4b19",
+  "bytes": 388293,
+  "filename": "r44066_vehicle_trailers_reg_by_operator_add.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/6632a3a0-8cb2-41b6-9435-50f762850d72/resource/9c479cfb-8c19-4759-ad34-bc3123079b94/download/r44066_vehicle_trailers_reg_by_operator_add.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "vehicle-registrations",
+    "package_id": "6632a3a0-8cb2-41b6-9435-50f762850d72",
+    "resource": "9c479cfb-8c19-4759-ad34-bc3123079b94",
+    "resource_name": "Vehicle registrations — by Suburb",
+    "resource_last_modified": "2022-10-14T07:49:37.083150",
+    "package_modified": "2022-10-14T09:40:51.618344",
+    "package_version": "October 2022",
+    "etag": "W/\"a77992ef8c79bd202b3cef1a05da021f",
+    "http_last_modified": "Fri, 14 Oct 2022 07:49:42 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=vehicle-registrations",
+    "read_at": "2026-10-03T02:59:34+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "653723158cdc8cd467a5dba12365beed25802a4fe29e8e3f59809e906d89cb7a"
+}

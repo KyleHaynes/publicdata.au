@@ -1,0 +1,157 @@
+slug: qld-shark-control-catch-lengths
+title: Shark Control Program catches by length and sex, Queensland
+status: live
+topics:
+- nature
+order: 296
+collection: qld-shark-control-program
+collection_title: Queensland Shark Control Program catches
+temporal_start: '1996-01-01'
+search_title: Queensland shark catch lengths and sex (Shark Control Program)
+place_field: area
+also_known_as:
+- Queensland Shark Control Program biological information
+- Size of sharks caught in Queensland shark nets
+keywords:
+- shark
+- shark size
+- shark nets
+- drumlines
+- Shark Control Program
+- Queensland
+faq:
+- q: What is in each row?
+  a: Each row is one animal caught by the Shark Control Program, with the year and month, area, beach, gear,
+    marine park, species, whether it was alive or deceased, its fate, its length in metres and its sex.
+- q: What do the sex codes mean?
+  a: F is female, M is male and U is unknown. The publisher writes NULL where no sex was recorded, which is
+    null here.
+summary: The length and sex of each shark and other animal caught by Queensland's shark nets and drumlines
+  since 1996.
+description: 'One row per animal caught by the Queensland Shark Control Program''s nets and drumlines from
+  1996, from the biological information the Department of Primary Industries publishes. Each row gives the
+  year and month, area, beach, gear, marine park, species group, CAAB code, common and scientific names, whether
+  the animal was alive or deceased, its fate and the reason, its length in metres and its sex.
+
+
+  The cells the publisher writes as NULL are null here.
+
+  '
+publisher:
+  name: Department of Primary Industries
+  short: DPI
+  jurisdiction: Qld
+  url: https://www.dpi.qld.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/fisheries-queensland-s-shark-control-program-information-and-data
+  attribution: Department of Primary Industries, Queensland Government, Queensland's Shark Control Program
+    Data and Information, sourced {sourced}, https://www.data.qld.gov.au/dataset/fisheries-queensland-s-shark-control-program-information-and-data,
+    licensed under CC BY 4.0.
+example:
+  where:
+    species_group: SHARK
+  group: common_name
+  metric: count
+  label: Sharks caught
+chart:
+  split: gear
+  metric: count
+  label: Animals caught
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: fisheries-queensland-s-shark-control-program-information-and-data
+  resource: a9dbdcb4-cb23-4ba0-af66-017d28fcac96
+  url: https://www.data.qld.gov.au/dataset/fisheries-queensland-s-shark-control-program-information-and-data
+  cadence: irregular, about twice a year
+partition_by:
+- area
+row_label: Animals
+fields:
+- name: year
+  label: Year
+  source: Year
+  type: integer
+- name: month
+  label: Month number
+  source: Month
+  type: integer
+- name: month_name
+  label: Month name
+  source: MonthName
+  type: string
+- name: area
+  label: Area
+  source: Area
+  type: string
+- name: beach
+  label: Beach
+  source: BeachName
+  type: string
+- name: gear
+  label: Gear
+  source: Gear
+  type: string
+  description: Drum (drumline), Net or Other.
+- name: marine_park
+  label: Marine park
+  source: MarinePark
+  type: string
+  null_values:
+  - 'NULL'
+  description: The marine park the gear lies in. Null outside a marine park.
+- name: species_group
+  label: Species group
+  source: SpeciesGroup
+  type: string
+  description: SHARK, TURTLE, MAMMAL or OTHER.
+- name: caab_code
+  label: CAAB code
+  source: CaabCode
+  type: string
+  description: Codes for Australian Aquatic Biota species code.
+- name: common_name
+  label: Common name
+  source: CommonName
+  type: string
+- name: scientific_name
+  label: Scientific name
+  source: ScientificName
+  type: string
+  null_values:
+  - 'NULL'
+- name: alive_deceased
+  label: Alive or deceased
+  source: Alive/Deceased
+  type: string
+- name: fate
+  label: Fate
+  source: Fate
+  type: string
+  null_values:
+  - 'NULL'
+  description: What happened to an animal found alive, such as Released Alive or Euthanised. Null when no fate
+    is recorded.
+- name: fate_reason
+  label: Fate reason
+  source: FateReason
+  type: string
+  null_values:
+  - 'NULL'
+  description: The reason for the fate, such as Target Species or Safety. The publisher writes NA where it
+    does not apply, kept as published.
+- name: length_m
+  label: Length (m)
+  source: Length(m)
+  type: number
+  description: Length in metres. A few values look like centimetres, such as 90 for a humpback whale and
+    84.5 for a loggerhead turtle.
+- name: sex
+  label: Sex
+  source: Sex
+  type: string
+  null_values:
+  - 'NULL'
+  description: F female, M male, U unknown.

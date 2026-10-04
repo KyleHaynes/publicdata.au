@@ -1,0 +1,19 @@
+name: Feature request
+description: A format, an API or client feature, or a change to the site
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        To ask for a dataset, vote for it on [publicdata.au](https://publicdata.au/) instead.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: The task, and what gets in the way today.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would help?

@@ -1,0 +1,34 @@
+{
+  "dataset": "wa-public-libraries",
+  "version": "2022-05-26",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:14:30+00:00",
+  "sha256": "99428ca804fe015b1028281383ed781560bd1df2d9520e7b4976944c99adede2",
+  "bytes": 31830,
+  "filename": "libraries20210203.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://catalogue.data.wa.gov.au/dataset/f451a2a7-00a1-44fa-8c6f-f7f98651c234/resource/31eabe52-d241-4f21-b9c7-3e3fef6c0bcb/download/libraries20210203.csv",
+    "portal": "https://catalogue.data.wa.gov.au",
+    "package": "wa-public-libraries",
+    "package_id": "f451a2a7-00a1-44fa-8c6f-f7f98651c234",
+    "resource": "31eabe52-d241-4f21-b9c7-3e3fef6c0bcb",
+    "resource_name": "WA_Public_Libraries_2021",
+    "resource_last_modified": null,
+    "package_modified": "2022-05-25T18:46:14.381862",
+    "package_version": null,
+    "etag": "d91448bc79e92797cd7fe3b8812b5d1b-1",
+    "http_last_modified": "Thu, 04 Feb 2021 06:38:55 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://catalogue.data.wa.gov.au/api/3/action/package_show?id=wa-public-libraries",
+    "read_at": "2026-10-03T03:14:29+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "85ec0ba72189730c862a777d02d822050da4e4a774317638d3035b93a9cde206"
+}

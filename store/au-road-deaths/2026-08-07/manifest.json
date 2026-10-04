@@ -1,0 +1,32 @@
+{
+  "dataset": "au-road-deaths",
+  "version": "2026-08-07",
+  "as_at": "",
+  "fetched_at": "2026-09-28T03:10:37+00:00",
+  "sha256": "245947df7e2e44a49b71956f69a39d68925fc78d4d2d6ae79e892185721b8744",
+  "bytes": 5977491,
+  "filename": "bitre_fatalities_jun2026.xlsx",
+  "encoding": "xlsx",
+  "source": {
+    "url": "https://aueprod01ckanstg.blob.core.windows.net/public-catalogue/492f9d30-b9c2-4124-99ad-383928105496/bitre_fatalities_jun2026.xlsx",
+    "portal": "https://catalogue.data.infrastructure.gov.au",
+    "package": "australian-road-deaths-database",
+    "package_id": "279ee848-55c0-4d7a-a926-02fb8fb93b0b",
+    "resource": "80091814-9a39-444c-a329-b27561d8fcc6",
+    "resource_name": "Fatalities 2026-06",
+    "resource_last_modified": null,
+    "package_modified": "2026-08-07T01:18:27.760985",
+    "package_version": null,
+    "etag": "0x8DEF421C87715E6",
+    "http_last_modified": "Fri, 07 Aug 2026 01:18:26 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution",
+    "url": "http://www.opendefinition.org/licenses/cc-by",
+    "read_at": "2026-09-28T03:10:32+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": []
+}

@@ -1,0 +1,32 @@
+{
+  "dataset": "vic-median-house-prices-by-suburb",
+  "version": "2026-09-29",
+  "as_at": "",
+  "fetched_at": "2026-10-01T04:24:25+00:00",
+  "sha256": "b6220620f5ac4a586625d0d2adfbab4e82925531b34abfbefb67f926986e6249",
+  "bytes": 137891,
+  "filename": "houses-by-suburb-2015-2025.xlsx",
+  "encoding": "xlsx",
+  "source": {
+    "url": "https://www.land.vic.gov.au/__data/assets/excel_doc/0033/775617/houses-by-suburb-2015-2025.xlsx",
+    "portal": "https://discover.data.vic.gov.au",
+    "package": "victorian-property-sales-report-median-house-by-suburb-time-series",
+    "package_id": "a0eab9e7-4143-47ee-99a6-27341dc52651",
+    "resource": "32d17ee8-34b1-4079-8b5d-16f155b9e45d",
+    "resource_name": " Houses by suburb 2015-2025",
+    "resource_last_modified": null,
+    "package_modified": "2026-09-29T00:40:11.381098",
+    "package_version": null,
+    "etag": "",
+    "http_last_modified": ""
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution 4.0 International",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_at": "2026-10-01T04:24:24+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": []
+}

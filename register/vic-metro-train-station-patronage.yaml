@@ -1,0 +1,144 @@
+slug: vic-metro-train-station-patronage
+title: Annual patronage by metropolitan train station, Melbourne
+status: live
+topics:
+- roads
+example:
+  group: stop_name
+  metric: sum.pax_annual
+  label: Annual entries
+sample:
+  order: [pax_annual.desc]
+  label: The ten busiest stations by entries in the year, busiest first.
+order: 396
+publisher:
+  name: Department of Transport and Planning
+  short: Transport and Planning
+  jurisdiction: Vic
+  url: https://www.vic.gov.au/department-transport-and-planning
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://discover.data.vic.gov.au/dataset/annual-metropolitan-train-station-patronage-station-entries
+  attribution: Department of Transport and Planning, Victorian Government, Annual metropolitan train station
+    patronage (station entries), sourced {sourced}, https://discover.data.vic.gov.au/dataset/annual-metropolitan-train-station-patronage-station-entries,
+    licensed under CC BY 4.0.
+search_title: Busiest Melbourne train stations by annual patronage (station entries, DTP)
+also_known_as:
+- Melbourne train station patronage
+- Metro train station entries by station
+- Melbourne station usage figures
+keywords:
+- train station patronage
+- station entries
+- Melbourne trains
+- Metro Trains
+- myki
+- Victoria
+faq:
+- q: What does each row hold?
+  a: One metropolitan train station for one financial year, with its total station entries for the year,
+    its average daily entries on weekdays, school holiday weekdays, Saturdays and Sundays, and its average
+    weekday entries in each time band from before the morning peak to late evening.
+- q: How exact are the figures?
+  a: The publisher rounds each estimate to the nearest 50 and rounds anything under 50 up to 50. The
+    estimates come from myki data scaled by a transaction rate, so the department says they are less
+    precise at station level than for the network as a whole.
+- q: Does Southern Cross include V/Line passengers?
+  a: No. Entries through the gates to platforms 1 to 8, where regional trains leave, are in the regional
+    station dataset. Other metropolitan stations do count people entering to board a regional train.
+- q: Which years are here?
+  a: Each version is the newest financial year the department has released, starting with 2024-25. The
+    portal also lists earlier years back to 2018-19 as separate files.
+summary: Station entries at every Melbourne metropolitan train station for the financial year, in total
+  and as daily averages by day type and time of day, rounded to the nearest 50.
+description: Annual metropolitan train station patronage from the Department of Transport and Planning,
+  one row per station with its stop id, name and coordinates, total station entries for the financial
+  year, and average daily entries by day type and by time band. Estimates are derived from myki data and
+  barrier counts and rounded to the nearest 50.
+source:
+  adapter: ckan-resource
+  portal: https://discover.data.vic.gov.au
+  package: annual-metropolitan-train-station-patronage-station-entries
+  resource_match: ^Annual metropolitan train station patronage \(station entries\) - \d{4}-\d{4}$
+  url: https://discover.data.vic.gov.au/dataset/annual-metropolitan-train-station-patronage-station-entries
+  cadence: yearly
+  encoding: utf-8-sig
+geometry:
+  lon: stop_long
+  lat: stop_lat
+  crs: EPSG:4326
+  crs_note: Coordinates are longitude and latitude in decimal degrees as published; the publisher names
+    no datum, and WGS84 (EPSG:4326) is assumed as for its timetable data.
+key:
+- fin_year
+- stop_id
+row_label: Stations
+fields:
+- name: fin_year
+  label: Financial year
+  source: Fin_year
+  type: string
+  description: The financial year, written as the publisher does, for example FY24-25.
+- name: stop_id
+  label: Stop id
+  source: Stop_ID
+  type: string
+  description: The station's stop id in the public transport timetable.
+- name: stop_name
+  label: Station
+  source: Stop_name
+  type: string
+- name: stop_lat
+  label: Latitude
+  source: Stop_lat
+  type: number
+- name: stop_long
+  label: Longitude
+  source: Stop_long
+  type: number
+- name: pax_annual
+  label: Entries in the year
+  source: Pax_annual
+  type: integer
+- name: pax_weekday
+  label: Average weekday entries
+  source: Pax_weekday
+  type: integer
+- name: pax_norm_weekday
+  label: Average school term weekday entries
+  source: Pax_norm_weekday
+  type: integer
+- name: pax_sch_hol_weekday
+  label: Average school holiday weekday entries
+  source: Pax_sch_hol_weekday
+  type: integer
+- name: pax_saturday
+  label: Average Saturday entries
+  source: Pax_Saturday
+  type: integer
+- name: pax_sunday
+  label: Average Sunday entries
+  source: Pax_Sunday
+  type: integer
+- name: pax_pre_am_peak
+  label: Average weekday entries before the morning peak
+  source: Pax_pre_AM_peak
+  type: integer
+- name: pax_am_peak
+  label: Average weekday entries in the morning peak
+  source: Pax_AM_peak
+  type: integer
+- name: pax_interpeak
+  label: Average weekday entries between peaks
+  source: Pax_interpeak
+  type: integer
+- name: pax_pm_peak
+  label: Average weekday entries in the evening peak
+  source: Pax_PM_peak
+  type: integer
+- name: pax_pm_late
+  label: Average weekday entries late in the evening
+  source: Pax_PM_late
+  type: integer

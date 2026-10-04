@@ -1,0 +1,229 @@
+slug: nsw-liquor-licence-premises
+title: Liquor licensed premises, New South Wales
+status: live
+topics:
+- economy
+example:
+  where:
+    status: Current
+  group: licence_type
+  metric: count
+  label: Current licences by licence type
+chart:
+  split: licence_type
+  metric: count
+  label: Licences on the list by the year they started
+order: 317
+publisher:
+  name: Liquor and Gaming NSW
+  short: Liquor and Gaming NSW
+  jurisdiction: NSW
+  url: https://www.liquorandgaming.nsw.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.nsw.gov.au/data/dataset/liquor-licence-premises-list
+  attribution: Liquor and Gaming NSW, NSW Government, Liquor licence premises list, sourced {sourced},
+    https://data.nsw.gov.au/data/dataset/liquor-licence-premises-list, licensed under CC BY 4.0.
+search_title: List of licensed venues in NSW with gaming machine numbers (Liquor and Gaming NSW)
+also_known_as:
+- NSW liquor licence premises list
+- NSW pubs and clubs list with poker machines
+- Liquor licences by venue NSW
+- NSW gaming machine numbers by venue
+keywords:
+- liquor licences
+- licensed venues
+- pokies
+- gaming machines
+- pubs and clubs
+- Liquor and Gaming NSW
+- New South Wales
+faq:
+- q: What is in each row?
+  a: One liquor licence and its premises, with the licence number, type, status and start date, the
+    venue's name, address, council area and coordinates, the licensee type and ABN or ACN, the trading
+    hours it is authorised for, and for venues that keep gaming machines the number of entitlements and
+    of machines operating.
+- q: Why are licensee names not here?
+  a: The publisher's list names each licensee, many of whom are private people. That column is held back,
+    and the licensee type, ABN and ACN are published.
+- q: How current is it?
+  a: Liquor and Gaming NSW added a list to the portal each month until June 2024. This entry follows the
+    newest list there, so the latest version is the list as at 7 June 2024.
+summary: Every liquor licence in New South Wales in June 2024 with the venue's address and coordinates, licence type,
+  trading hours and gaming machine numbers, from Liquor and Gaming NSW's monthly premises list.
+description: The Liquor licence premises list from Liquor and Gaming NSW, one row per licence, from the
+  newest monthly list on the NSW Government open data portal. Each row has the licence number, type, start
+  date and status, the licence name and venue address, latitude and longitude, council area, precinct
+  and region, the licensee type, ABN and ACN, the business type, the trading authorisations, the SA2 area
+  and band, and the gaming machine entitlements, permits, threshold and operating machines.
+source:
+  adapter: ckan-resource
+  portal: https://data.nsw.gov.au/data
+  package: liquor-licence-premises-list
+  resource_match: '^Premises list'
+  url: https://data.nsw.gov.au/data/dataset/liquor-licence-premises-list
+  cadence: monthly until June 2024
+  encoding: utf-8-sig
+geometry:
+  lon: longitude
+  lat: latitude
+  crs: EPSG:4283
+  crs_note: Latitude and longitude in decimal degrees as published. The publisher does not state the
+    datum; GDA94 is the NSW Government's standard and differs from GDA2020 and WGS84 by under 2 metres.
+partition_by:
+- licence_type
+row_label: Licences
+fields:
+- name: licence_number
+  label: Licence number
+  source: Licence number
+  type: string
+- name: licence_type
+  label: Licence type
+  source: Licence type
+  type: string
+- name: start_date
+  label: Start date
+  source: Start date
+  type: datetime
+  date_format: '%Y-%m-%d %H:%M:%S'
+- name: status
+  label: Status
+  source: Status
+  type: string
+- name: status_date
+  label: Status date
+  source: Status date
+  type: datetime
+  date_format: '%Y-%m-%d %H:%M:%S'
+- name: trading_status
+  label: Trading status
+  source: Trading Status
+  type: string
+- name: licence_name
+  label: Licence name
+  source: Licence name
+  type: string
+- name: address
+  label: Address
+  source: Address
+  type: string
+- name: suburb
+  label: Suburb
+  source: Suburb
+  type: string
+- name: postcode
+  label: Postcode
+  source: Postcode
+  type: string
+- name: latitude
+  label: Latitude
+  source: Latitude
+  type: number
+  description: As published. The publisher does not state the datum.
+- name: longitude
+  label: Longitude
+  source: Longitude
+  type: number
+  description: As published. The publisher does not state the datum.
+- name: lga
+  label: Council area
+  source: LGA
+  type: string
+- name: precinct
+  label: Precinct
+  source: Precinct
+  type: string
+- name: region
+  label: Region
+  source: Region
+  type: string
+- name: licensee_type
+  label: Licensee type
+  source: Licensee Type
+  type: string
+- name: licensee_abn
+  label: Licensee ABN
+  source: Licensee ABN
+  type: string
+- name: licensee_acn
+  label: Licensee ACN
+  source: Licensee ACN
+  type: string
+- name: business_type
+  label: Business type
+  source: Business type
+  type: string
+- name: authorisation_restriction_name
+  label: Authorisation restriction name
+  source: Authorisation restriction name
+  type: string
+- name: extended_trading
+  label: Extended trading
+  source: Extended trading
+  type: boolean
+- name: reduced_trading
+  label: Reduced trading
+  source: Reduced trading
+  type: boolean
+- name: primary_service
+  label: Primary service
+  source: Primary service
+  type: boolean
+- name: right_to_keep_gaming
+  label: Right to keep gaming
+  source: Right to keep gaming
+  type: boolean
+- name: unrestricted
+  label: Unrestricted
+  source: Unrestricted
+  type: boolean
+- name: to_12am
+  label: Trading to midnight
+  source: To 12am
+  type: boolean
+- name: to_3am
+  label: Trading to 3am
+  source: To 3am
+  type: boolean
+- name: to_5am
+  label: Trading to 5am
+  source: To 5am
+  type: boolean
+- name: sa2
+  label: SA2
+  source: SA2
+  type: string
+- name: band
+  label: SA2 band
+  source: Band
+  type: integer
+- name: gmes
+  label: Gaming machine entitlements
+  source: GMEs
+  type: integer
+- name: pmps
+  label: Poker machine permits
+  source: PMPs
+  type: integer
+- name: auth_limit
+  label: Auth limit
+  source: Auth limit
+  type: integer
+- name: unfulfilled_quota
+  label: Unfulfilled quota
+  source: Unfulfilled Quota
+  type: integer
+- name: gmt
+  label: Gaming machine threshold
+  source: GMT
+  type: integer
+- name: egms
+  label: Operating gaming machines
+  source: EGMs
+  type: integer
+omit:
+  Licensee: The licensee's name, which for many venues is a person; the venue and licence are kept.

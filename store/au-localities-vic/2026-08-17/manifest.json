@@ -1,0 +1,33 @@
+{
+  "dataset": "au-localities-vic",
+  "version": "2026-08-17",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:15:35+00:00",
+  "sha256": "1ac91f520b2001feb3f2f052e016bca5a330fa439298171f2c26548038734341",
+  "bytes": 23132666,
+  "filename": "vic_loc_gda2020.zip",
+  "encoding": "zip",
+  "source": {
+    "url": "https://data.gov.au/data/dataset/af33dd8c-0534-4e18-9245-fc64440f742e/resource/1266e841-89fb-4005-95cd-54113212378b/download/vic_loc_gda2020.zip",
+    "portal": "https://data.gov.au/data",
+    "package": "vic-suburb-locality-boundaries-geoscape-administrative-boundaries",
+    "package_id": "af33dd8c-0534-4e18-9245-fc64440f742e",
+    "resource": "1266e841-89fb-4005-95cd-54113212378b",
+    "resource_name": "AUG26 - VIC - Geoscape Localities - Esri Shapefiles - GDA2020",
+    "resource_last_modified": "2026-08-17T03:51:58.401239",
+    "package_modified": "2026-08-17T04:37:12.049082",
+    "package_version": null,
+    "etag": "1786938720.14-23132666-3204517556",
+    "http_last_modified": "Mon, 17 Aug 2026 03:52:00 GMT"
+  },
+  "licence": {
+    "id": "cc-by-4.0",
+    "title": "Creative Commons Attribution 4.0 International",
+    "url": "http://creativecommons.org/licenses/by/4.0",
+    "read_from": "https://data.gov.au/data/api/3/action/package_show?id=vic-suburb-locality-boundaries-geoscape-administrative-boundaries",
+    "read_at": "2026-10-03T03:15:35+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": []
+}

@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-road-crash-factors",
+  "version": "2026-04-24",
+  "as_at": "2025-06-30",
+  "fetched_at": "2026-09-24T14:15:50+00:00",
+  "sha256": "35813538985c9d861b6e1897f682873ebdfc841128d75c969bac2fef567a5682",
+  "bytes": 321882,
+  "filename": "_e_alcohol_speed_fatigue_defect.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/f3e0ca94-2d7b-44ee-abef-d6b06e9b0729/resource/18ee2911-992f-40ed-b6ae-e756859786e6/download/_e_alcohol_speed_fatigue_defect.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "crash-data-from-queensland-roads",
+    "package_id": "f3e0ca94-2d7b-44ee-abef-d6b06e9b0729",
+    "resource": "18ee2911-992f-40ed-b6ae-e756859786e6",
+    "resource_name": "Factors in road crashes",
+    "resource_last_modified": "2026-04-24T03:00:48.432419",
+    "package_modified": "2026-04-24T03:16:39.760744",
+    "package_version": "rqC45037- June 2025",
+    "etag": "fdee1c18d25fc4abb6bad06958bc96fc",
+    "http_last_modified": "Fri, 24 Apr 2026 03:00:50 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_at": "2026-09-24T14:15:50+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [
+    "Files rebuilt on 25 September 2026 so every one carries the operator and a ready-made cite string in its provenance header, and to add the Excel, Arrow, GeoPackage, gzipped CSV, SQL and CSVW files. Rows unchanged."
+  ]
+}

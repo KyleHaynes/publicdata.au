@@ -1,0 +1,34 @@
+{
+  "dataset": "nsw-primary-class-sizes",
+  "version": "2024-06-13",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:05:48+00:00",
+  "sha256": "1f12422b62a0d3867b87ab0c7eeb099a1257de660c50afe0fa7b0719fdf904f8",
+  "bytes": 1309,
+  "filename": "average-class-size-by-year-2024-final.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://data.nsw.gov.au/data/dataset/43438137-084e-4d50-81c0-ce741ea3b37b/resource/7616001d-e4cb-4e4a-9a4f-76b166df5d37/download/average-class-size-by-year-2024-final.csv",
+    "portal": "https://data.nsw.gov.au/data",
+    "package": "nsw-education-average-government-primary-school-class-sizes-by-year",
+    "package_id": "43438137-084e-4d50-81c0-ce741ea3b37b",
+    "resource": "7616001d-e4cb-4e4a-9a4f-76b166df5d37",
+    "resource_name": "Average class size by year 1997-2024",
+    "resource_last_modified": "2024-06-13T01:01:21.953039",
+    "package_modified": "2026-02-09T01:06:19.701672",
+    "package_version": null,
+    "etag": "1718240482.0-1309-1149245798",
+    "http_last_modified": "Thu, 13 Jun 2024 01:01:22 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution",
+    "url": "http://www.opendefinition.org/licenses/cc-by",
+    "read_from": "https://data.nsw.gov.au/data/api/3/action/package_show?id=nsw-education-average-government-primary-school-class-sizes-by-year",
+    "read_at": "2026-10-03T03:05:46+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "3d53b3bc4ed8dbc4811d83a440286092266e9f35df27ce4be297e846ea09b73b"
+}

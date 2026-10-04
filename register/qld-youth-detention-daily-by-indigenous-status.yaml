@@ -1,0 +1,89 @@
+slug: qld-youth-detention-daily-by-indigenous-status
+title: Young people in youth detention each day by Indigenous status, Queensland 2011 to 2016
+status: live
+topics:
+- crime
+order: 273
+collection: qld-youth-detention-daily
+collection_title: Young people in youth detention each day, Queensland 2011 to 2016
+temporal_start: '2011-07-01'
+search_title: Indigenous young people in youth detention, Queensland daily numbers (Youth Justice)
+also_known_as:
+- Aboriginal and Torres Strait Islander children in youth detention Queensland
+- Queensland youth detention by Indigenous status
+keywords:
+- youth detention
+- young offenders
+- youth justice
+- juvenile detention
+- Queensland
+faq:
+- q: What is in each row?
+  a: Each row is one day from 1 July 2011 to 30 June 2016, with the number of young people in youth detention
+    that day split by Aboriginal and Torres Strait Islander status, and the total.
+- q: Who is counted?
+  a: Young people in youth detention who were remanded in custody or serving a sentenced detention order. Young
+    people held on pre-court custody are not counted.
+- q: Is there data after June 2016?
+  a: The publisher has not extended these tables past 30 June 2016.
+summary: The number of young people in Queensland youth detention on each day from July 2011 to June 2016,
+  by Aboriginal and Torres Strait Islander status.
+description: One row per day from 1 July 2011 to 30 June 2016, with the financial year, the date, the number
+  of young people in youth detention that day in each Indigenous status group and the total in detention. The
+  count covers young people remanded in custody or sentenced, and leaves out pre-court custody.
+publisher:
+  name: Department of Youth Justice and Victim Support
+  short: Youth Justice
+  jurisdiction: Qld
+  url: https://www.youthjustice.qld.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-10-01'
+  evidence: https://www.data.qld.gov.au/dataset/youth-justice-young-offenders-in-youth-detention
+  attribution: Department of Youth Justice and Victim Support, Queensland Government, Youth Justice - Young
+    offenders in youth detention, sourced {sourced}, https://www.data.qld.gov.au/dataset/youth-justice-young-offenders-in-youth-detention,
+    licensed under CC BY 3.0 AU.
+  portal_id: CC-BY-3.0
+example:
+  group: financial_year
+  metric: avg.aboriginal_torres_strait_islander
+  label: Average number of Aboriginal and Torres Strait Islander young people in detention each day, by financial year
+chart:
+  split: none
+  metric: avg.total
+  label: Average number of young people in detention each day
+source:
+  adapter: ckan-resource
+  portal: https://www.data.qld.gov.au
+  package: youth-justice-young-offenders-in-youth-detention
+  resource: b89e5823-44c5-420d-9be3-56e9b74e91d6
+  url: https://www.data.qld.gov.au/dataset/youth-justice-young-offenders-in-youth-detention
+  cadence: not updated since 2017
+  manual: true
+key:
+- date
+partition_by:
+- financial_year
+row_label: Days
+fields:
+- name: financial_year
+  label: Financial year
+  source: Financial year
+  type: string
+- name: date
+  label: Date
+  source: Date
+  type: date
+  date_format: '%d/%m/%Y'
+- name: aboriginal_torres_strait_islander
+  label: Aboriginal and Torres Strait Islander
+  source: Daily number of Aboriginal and Torres Strait Islander young people
+  type: integer
+- name: non_indigenous_or_unknown
+  label: Non-Indigenous or unknown
+  source: Daily number of non-Indigenous (incl unknown Indigenous status) young people
+  type: integer
+- name: total
+  label: Total in detention
+  source: Total daily number in detention
+  type: integer

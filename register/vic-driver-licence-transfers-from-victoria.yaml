@@ -1,0 +1,82 @@
+slug: vic-driver-licence-transfers-from-victoria
+title: Driver licences transferred from Victoria each quarter
+status: live
+topics:
+- migration
+example:
+  where:
+    year:
+      lte: 2025
+  group: year
+  metric: sum.licences_transferred
+  label: Licences transferred out
+chart:
+  split: none
+  metric: sum.licences_transferred
+  label: Licences transferred out
+order: 351
+publisher:
+  name: Department of Transport and Planning
+  short: Transport and Planning
+  jurisdiction: Vic
+  url: https://www.vic.gov.au/department-transport-and-planning
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://discover.data.vic.gov.au/dataset/quarterly-driver-licence-transfers-from-victoria
+  attribution: Department of Transport and Planning, Victorian Government, Quarterly Driver Licence Transfers
+    from Victoria, sourced {sourced}, https://discover.data.vic.gov.au/dataset/quarterly-driver-licence-transfers-from-victoria,
+    licensed under CC BY 4.0.
+temporal_start: '2023-01-01'
+search_title: Driver licences transferred out of Victoria to other states, by quarter (DTP)
+also_known_as:
+- Quarterly Driver Licence Transfers from Victoria
+- People leaving Victoria by driver licence transfer
+- Victorian licences transferred interstate
+keywords:
+- driver licence transfers
+- interstate migration
+- leaving Victoria
+- VicRoads
+- Victoria
+faq:
+- q: What does each row hold?
+  a: One calendar quarter from the first quarter of 2023, with the number of Victorian driver licences
+    the department recorded as transferred to another jurisdiction in that quarter.
+- q: Is this a count of people leaving Victoria?
+  a: It counts licences transferred away, which is one sign of people moving. People who do not hold a
+    licence, or who do not transfer it, are not counted. The file gives no breakdown by destination.
+- q: How often is it updated?
+  a: Quarterly. Each release adds a quarter to the file and becomes a new version here.
+summary: The number of Victorian driver licences transferred to another jurisdiction in each quarter
+  since the start of 2023.
+description: Quarterly driver licence transfers from Victoria, published by the Department of Transport
+  and Planning, one row per calendar quarter with the count of licences transferred away from Victoria.
+  The companion table of transfers to Victoria gives the origin of licences coming in.
+source:
+  adapter: ckan-resource
+  portal: https://discover.data.vic.gov.au
+  package: quarterly-driver-licence-transfers-from-victoria
+  resource: 0770c646-487b-467a-b5d7-1dc9ecc82a9a
+  url: https://discover.data.vic.gov.au/dataset/quarterly-driver-licence-transfers-from-victoria
+  cadence: quarterly
+  encoding: utf-8-sig
+key:
+- year
+- quarter
+row_label: Quarters
+fields:
+- name: year
+  label: Year
+  source: YEAR
+  type: integer
+- name: quarter
+  label: Quarter
+  source: QUARTER
+  type: integer
+  description: The calendar quarter, 1 to 4.
+- name: licences_transferred
+  label: Licences transferred from Victoria
+  source: FROM_VICTORIA_COUNT
+  type: integer

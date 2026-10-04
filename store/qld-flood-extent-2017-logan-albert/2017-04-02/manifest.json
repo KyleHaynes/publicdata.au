@@ -1,0 +1,41 @@
+{
+  "dataset": "qld-flood-extent-2017-logan-albert",
+  "version": "2017-04-02",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:00:42+00:00",
+  "sha256": "390feb9382853abee1db91266e682bb2a56b2b8d63c522a9c2869240c833d432",
+  "bytes": 7734157,
+  "filename": "qld-flood-extent-2017-logan-albert.geojson",
+  "encoding": "utf-8",
+  "source": {
+    "url": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/InlandWaters/FloodLines/MapServer/19",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "flood-extent-series",
+    "package_id": "0ed82e91-e856-49f5-a844-2674e51d63c4",
+    "package_modified": "2025-07-22T15:22:55.461073",
+    "layer_name": "2017 Floodline Logan and Albert Rivers",
+    "object_id_field": "objectid",
+    "last_edit_date": null,
+    "newest_record": 1491091200000,
+    "features": 40,
+    "date_fields": [
+      "featurereliability",
+      "attributereliability"
+    ]
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "stated": "CC-BY-4.0",
+    "normalised": "CC-BY-4.0",
+    "title": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=flood-extent-series",
+    "read_at": "2026-10-03T03:00:41+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [
+    "The layer states no edit date, so this version is dated by the newest record it holds.",
+    "The publisher offers no file. These bytes are every feature of the layer as the service returned them in WGS84, ordered by its object id, so the same layer gives the same bytes."
+  ]
+}

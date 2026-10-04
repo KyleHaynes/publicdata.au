@@ -1,0 +1,33 @@
+{
+  "dataset": "au-localities-sa",
+  "version": "2026-08-17",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:15:36+00:00",
+  "sha256": "0ea80b18d996fd4f473b55cd4ac159fc44bb3cc51a3b61c6ffb39166f4786f21",
+  "bytes": 12567382,
+  "filename": "sa_loc_gda2020.zip",
+  "encoding": "zip",
+  "source": {
+    "url": "https://data.gov.au/data/dataset/bcfcfc9a-7c8d-479a-9bdf-b95ca66ad29a/resource/cb118876-5e7a-497f-86f3-8fd820292016/download/sa_loc_gda2020.zip",
+    "portal": "https://data.gov.au/data",
+    "package": "sa-suburb-locality-boundaries-geoscape-administrative-boundaries",
+    "package_id": "bcfcfc9a-7c8d-479a-9bdf-b95ca66ad29a",
+    "resource": "cb118876-5e7a-497f-86f3-8fd820292016",
+    "resource_name": "AUG26 - SA - Geoscape Localities - Esri Shapefiles - GDA2020",
+    "resource_last_modified": "2026-08-17T03:46:37.983696",
+    "package_modified": "2026-08-17T04:31:55.459497",
+    "package_version": null,
+    "etag": "1786938399.95-12567382-3443920684",
+    "http_last_modified": "Mon, 17 Aug 2026 03:46:39 GMT"
+  },
+  "licence": {
+    "id": "cc-by-4.0",
+    "title": "Creative Commons Attribution 4.0 International",
+    "url": "http://creativecommons.org/licenses/by/4.0",
+    "read_from": "https://data.gov.au/data/api/3/action/package_show?id=sa-suburb-locality-boundaries-geoscape-administrative-boundaries",
+    "read_at": "2026-10-03T03:15:36+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": []
+}

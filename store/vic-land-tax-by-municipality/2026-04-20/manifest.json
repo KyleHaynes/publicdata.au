@@ -1,0 +1,34 @@
+{
+  "dataset": "vic-land-tax-by-municipality",
+  "version": "2026-04-20",
+  "as_at": "",
+  "fetched_at": "2026-10-03T03:09:27+00:00",
+  "sha256": "0a511209860a2c8e38dead1915f1923622c48f2dd141c9088d9574ba3237eb26",
+  "bytes": 4740,
+  "filename": "Land-tax-by-municipality-2024.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.sro.vic.gov.au/sites/default/files/Land-tax-by-municipality-2024.csv",
+    "portal": "https://discover.data.vic.gov.au",
+    "package": "land-tax-by-municipality-2024",
+    "package_id": "782bd33f-c113-48d6-b72d-5b0eb01a29d1",
+    "resource": "7b8291f8-6c6a-442a-90ca-14f7e4aab2a8",
+    "resource_name": "Land-tax-by-municipality-2024",
+    "resource_last_modified": null,
+    "package_modified": "2026-04-20T00:38:42.184372",
+    "package_version": null,
+    "etag": "1284-644c1b6193484",
+    "http_last_modified": "Sat, 29 Nov 2025 20:37:14 GMT"
+  },
+  "licence": {
+    "id": "cc-by",
+    "title": "Creative Commons Attribution 4.0 International",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "read_from": "https://discover.data.vic.gov.au/api/3/action/package_show?id=land-tax-by-municipality-2024",
+    "read_at": "2026-10-03T03:09:27+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "9dceabc654f3e783f143514e379ca056022778d9d31f42d61204f217fd39a507"
+}

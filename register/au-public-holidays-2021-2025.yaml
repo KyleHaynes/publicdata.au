@@ -1,0 +1,93 @@
+slug: au-public-holidays-2021-2025
+title: Public holiday dates by state and territory, Australia, 2021 to 2025
+status: live
+topics:
+- government
+example:
+  group: jurisdiction
+  metric: count
+  label: Public holidays listed for each state and territory, 2021 to 2025
+order: 504
+publisher:
+  name: Department of the Prime Minister and Cabinet
+  short: PM&C
+  jurisdiction: Cth
+  url: https://www.pmc.gov.au/
+licence:
+  id: CC-BY-3.0-AU
+  reviewed: '2026-10-01'
+  portal_id: cc-by
+  evidence: https://data.gov.au/data/dataset/australian-holidays-machine-readable-dataset
+  attribution: Department of the Prime Minister and Cabinet, Australian Government, Australian Public
+    Holidays Dates Machine Readable Dataset, sourced {sourced}, https://data.gov.au/data/dataset/australian-holidays-machine-readable-dataset,
+    licensed under CC BY 3.0 AU.
+temporal_start: '2021-01-01'
+search_title: Australian public holidays 2021 to 2025 by state, as a CSV of dates (PM&C)
+also_known_as:
+- Public holidays Australia machine readable
+- Australian public holidays CSV
+- Public holiday dates NSW, Victoria, Queensland
+- Australian Public Holidays Dates Machine Readable Dataset
+keywords:
+- public holidays
+- holiday dates
+- long weekends
+- calendar
+- state holidays
+- Australia
+faq:
+- q: What is in each row?
+  a: One public holiday in one state or territory, with its date, its name, a sentence about it and a link
+    to the state or territory page the department took it from. A holiday kept in every state has one row
+    for each.
+- q: Is this kept up to date?
+  a: The department marked the dataset inactive in January 2026 and said it will release no further updates,
+    so the last year here is 2025. It points readers to each state and territory government's own public
+    holiday page for later years.
+- q: How are states named?
+  a: By the lower-case abbreviation the department uses, such as act, nsw or vic.
+- q: Why does one holiday have no date?
+  a: The department listed the 2025 Friday before the AFL Grand Final in Victoria before the date was set,
+    and never added it. The row is kept with a blank date.
+summary: Every gazetted public holiday in each Australian state and territory from 2021 to 2025, one row
+  per holiday and state, from the Department of the Prime Minister and Cabinet.
+description: The combined 2021 to 2025 file of the Australian Public Holidays Dates Machine Readable Dataset.
+  Each row is one public holiday in one jurisdiction, with its date, name, a description and the source
+  link the department gives. The department no longer maintains the dataset.
+source:
+  adapter: ckan-resource
+  portal: https://data.gov.au/data
+  package: australian-holidays-machine-readable-dataset
+  resource: 33673aca-0857-42e5-b8f0-9981b4755686
+  url: https://data.gov.au/data/dataset/australian-holidays-machine-readable-dataset
+  encoding: utf-8-sig
+  cadence: no longer updated
+key:
+- id
+row_label: Holidays
+fields:
+- name: id
+  label: ID
+  source: ID
+  type: integer
+- name: date
+  label: Date
+  source: Date
+  type: date
+  date_format: '%Y%m%d'
+- name: holiday_name
+  label: Holiday
+  source: Holiday Name
+  type: string
+- name: information
+  label: Information
+  source: Information
+  type: string
+- name: more_information
+  label: More information
+  source: More Information
+  type: string
+- name: jurisdiction
+  label: State or territory
+  source: Jurisdiction
+  type: string

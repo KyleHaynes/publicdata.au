@@ -1,0 +1,34 @@
+{
+  "dataset": "qld-births-by-month",
+  "version": "2026-03-30",
+  "as_at": "",
+  "fetched_at": "2026-10-03T02:59:28+00:00",
+  "sha256": "142f90b5801bd423e7f46db3c7fb255bfe45e1f7b811e6bc18a0a1d9857cf319",
+  "bytes": 119,
+  "filename": "2025-births-by-month.csv",
+  "encoding": "utf-8-sig",
+  "source": {
+    "url": "https://www.data.qld.gov.au/dataset/8b024f56-ff33-425d-b2f2-e864a0319153/resource/ba4fe176-21b1-4fbe-bb70-c0c936e233fe/download/2025-births-by-month.csv",
+    "portal": "https://www.data.qld.gov.au",
+    "package": "births-by-month",
+    "package_id": "8b024f56-ff33-425d-b2f2-e864a0319153",
+    "resource": "ba4fe176-21b1-4fbe-bb70-c0c936e233fe",
+    "resource_name": "2025 Births by Month",
+    "resource_last_modified": "2026-03-30T04:05:32.858527",
+    "package_modified": "2026-03-30T04:05:10.410594",
+    "package_version": "1.0",
+    "etag": "32526a7809e6db5fab6cf6e10f376ce7",
+    "http_last_modified": "Mon, 30 Mar 2026 04:04:58 GMT"
+  },
+  "licence": {
+    "id": "CC-BY-3.0",
+    "title": "Creative Commons Attribution 3.0",
+    "url": "https://creativecommons.org/licenses/by/3.0/au/",
+    "read_from": "https://www.data.qld.gov.au/api/3/action/package_show?id=births-by-month",
+    "read_at": "2026-10-03T02:59:28+00:00"
+  },
+  "backfilled": false,
+  "tombstone": null,
+  "notes": [],
+  "rows_sha256": "137efe30ec841750dd4ec3813e92cd8239874da833293b5c99c280f06be337dc"
+}

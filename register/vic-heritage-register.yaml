@@ -1,0 +1,110 @@
+slug: vic-heritage-register
+title: Victorian Heritage Register places, boundaries
+status: live
+topics:
+- places
+order: 350
+publisher:
+  name: Department of Transport and Planning
+  short: Transport and Planning
+  jurisdiction: Vic
+  url: https://www.planning.vic.gov.au/
+licence:
+  id: CC-BY-4.0
+  reviewed: '2026-10-01'
+  evidence: https://discover.data.vic.gov.au/dataset/victorian-heritage-register
+  statement: Creative Commons Attribution 4.0 International
+  attribution: Department of Transport and Planning, Victorian Government, Victorian Heritage Register
+    (Vicmap layer heritage_register), sourced {sourced}, https://discover.data.vic.gov.au/dataset/victorian-heritage-register,
+    licensed under CC BY 4.0.
+search_title: Victorian Heritage Register map of heritage listed places (Vicmap)
+also_known_as:
+- VHR boundaries
+- Victorian Heritage Register map
+- Heritage listed places in Victoria
+- Vicmap heritage_register layer
+keywords:
+- Victorian Heritage Register
+- heritage listed
+- heritage places
+- Heritage Act 2017
+- VHR number
+- Heritage Victoria
+- Victoria
+faq:
+- q: What does each row hold?
+  a: Each row is one mapped shape of a place or object on the Victorian Heritage Register, the State's
+    list of its most significant heritage places and objects protected under the Heritage Act 2017. It
+    carries the register number, such as H2381, the site name and the identifiers the publisher uses, with
+    the shape in the GeoParquet, GeoJSON, GeoPackage and PMTiles files. A place mapped in separate parts
+    has a row for each part under one register number, and the Coliban Water Supply, H1021, has 50.
+- q: How do I find the statement of significance for a place?
+  a: The register number in each row is the number the Victorian Heritage Database uses, so a search there
+    for the number gives the place's full listing. This layer holds the boundaries and names only.
+- q: What is the heritage object flag?
+  a: The publisher marks a row Y where the listing is a heritage object rather than a place, and N for a
+    place. Both are kept as published.
+- q: Does it include places protected only by a council heritage overlay?
+  a: No. Places in a local planning scheme's heritage overlay are listed by councils and are not in this
+    layer unless they are also on the State register.
+summary: The mapped boundaries of about 2,400 places and objects on the Victorian Heritage Register, in
+  about 2,700 shapes, each with its register number and name, from the Vicmap heritage_register layer.
+description: The Victorian Heritage Register layer from Vicmap, one row per mapped shape of a registered place or
+  object, with its register number, site name and the publisher's feature identifiers. The register lists the
+  places and objects protected under the Heritage Act 2017 at State level. Shapes are in GDA2020 as the
+  publisher serves them.
+source:
+  adapter: file
+  url: https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform:heritage_register&outputFormat=application/json&sortBy=id
+  format: geojson
+  cadence: as the register changes
+key:
+- ufi
+geometry:
+  kind: polygon
+  crs: EPSG:7844
+  crs_note: Shapes in GDA2020 (EPSG:7844), as the Vicmap service publishes them.
+  maxzoom: 10
+row_label: Heritage places
+fields:
+- name: vhr_num
+  label: Heritage Register number
+  source: vhr_num
+  type: string
+  description: The Victorian Heritage Register number, such as H2381.
+- name: site_name
+  label: Site name
+  source: site_name
+  type: string
+  description: The place or object's name, in the publisher's capitals.
+- name: heritage_object
+  label: Heritage object
+  source: heritage_object
+  type: string
+  description: Y where the listing is a heritage object, N for a place.
+- name: vhi_num
+  label: Heritage Inventory number
+  source: vhi_num
+  type: string
+  description: A Heritage Inventory number where the publisher gives one; blank on most rows.
+- name: hermes_num
+  label: HERMES number
+  source: hermes_num
+  type: integer
+  description: The place's record number in the HERMES heritage database behind the Victorian Heritage
+    Database.
+- name: ufi
+  label: Feature identifier (UFI)
+  source: ufi
+  type: integer
+  description: Vicmap's unique feature identifier for the shape.
+- name: vdpid
+  label: Vicmap data product id
+  source: vdpid
+  type: integer
+- name: id
+  label: Layer row id
+  source: id
+  type: integer
+omit:
+  ufi_created: The shape's creation time, which the service returns in the reading machine's time zone.
